@@ -1,0 +1,698 @@
+{
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\code": {
+    "time": 1722940191995.0725,
+    "uuid": "abd6ddc4-6374-49c0-a69c-b492add321b5",
+    "missing": false
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources": {
+    "time": 1722940191988.0725,
+    "uuid": "36fed204-5ef1-48db-a022-26bf358ddd97",
+    "missing": false
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\scene": {
+    "time": 1722940191837.2424,
+    "uuid": "c24907dc-445f-4ac1-bc94-b6f8d4af6beb",
+    "missing": false
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\code\\genPlant.ts": {
+    "time": 1722940191525.1992,
+    "uuid": "8d18ba6e-e9c9-4311-a9db-07bead0944c5",
+    "missing": false
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\code\\loadData.ts": {
+    "time": 1722940191527.1995,
+    "uuid": "23eafa10-d97f-4874-812a-16c12e0efced",
+    "missing": false
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\code\\main.ts": {
+    "time": 1722940191529.1975,
+    "uuid": "ad534c45-313f-494a-9f0a-10a9c7f79cb4",
+    "missing": false
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\code\\scaleAction.ts": {
+    "time": 1722940191533.2002,
+    "uuid": "086261dd-eb9f-4452-a523-7f59d60ae7e2",
+    "missing": false
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\code\\timer.ts": {
+    "time": 1722940191536.1973,
+    "uuid": "1cceaba6-6929-4cc1-9c8a-3fbc8a345bc8",
+    "missing": false
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\code.meta": {
+    "time": 1722940191537.1992
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources.meta": {
+    "time": 1722940191746.4763
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\scene.meta": {
+    "time": 1722940191755.4763
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\code\\genPlant.ts.meta": {
+    "time": 1722940191526.199
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\code\\loadData.ts.meta": {
+    "time": 1722940191527.1995
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\code\\main.ts.meta": {
+    "time": 1722940191530.197
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\code\\scaleAction.ts.meta": {
+    "time": 1722940191535.1985
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\code\\timer.ts.meta": {
+    "time": 1722940191536.1973
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\1.png": {
+    "time": 1722940191538.1992,
+    "uuid": "5f2902d9-b2b0-43e2-8dad-f95e60a89318",
+    "missing": false
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\1937.mp3": {
+    "time": 1722940191548.1975,
+    "uuid": "91deefff-cd4e-4a18-9372-6ba10308ea8b",
+    "missing": false
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\2.png": {
+    "time": 1722940191550.199,
+    "uuid": "80f56750-ac15-4cca-92f6-f2e4d3591f32",
+    "missing": false
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\3.png": {
+    "time": 1722940191552.1982,
+    "uuid": "95e9a59b-6a08-491e-b20e-6120bbd04c7b",
+    "missing": false
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\5929e8.png": {
+    "time": 1722940191553.1987,
+    "uuid": "819dd823-30a2-4f99-94af-b4d1e8d660fe",
+    "missing": false
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\5eafd15f0e05a.png": {
+    "time": 1722940191556.1995,
+    "uuid": "c5b2bddb-c2bd-4044-9354-981934703cf3",
+    "missing": false
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\6fcfce02.png": {
+    "time": 1722940191558.199,
+    "uuid": "469e001d-178c-4690-a097-a2cbd1e5b608",
+    "missing": false
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\bbb.png": {
+    "time": 1722940191560.198,
+    "uuid": "e7da49b2-fb99-4d9f-ba54-97f85afd8735",
+    "missing": false
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\bbbbb.png": {
+    "time": 1722940191565.1985,
+    "uuid": "fef044bd-3178-421e-bf80-4037d25c99a5",
+    "missing": false
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\bg.png": {
+    "time": 1722940191587.1934,
+    "uuid": "edde6dcd-c781-448d-bb34-0847d76bf269",
+    "missing": false
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\box.png": {
+    "time": 1722940191588.1946,
+    "uuid": "7f1a8161-c724-44e7-9a5f-d462615a2204",
+    "missing": false
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\box1.png": {
+    "time": 1722940191590.1956,
+    "uuid": "c8b942eb-7152-4d4b-97ca-c22a056d96e7",
+    "missing": false
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\btn.mp3": {
+    "time": 1722940191594.1948,
+    "uuid": "6d23b755-c220-439e-8e85-8e72bb5f876d",
+    "missing": false
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\buy.png": {
+    "time": 1722940191596.1953,
+    "uuid": "b35178e5-e1e0-4ba5-9a62-696336181ef5",
+    "missing": false
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\close.png": {
+    "time": 1722940191597.1963,
+    "uuid": "17375e7a-5ea5-4da9-b43c-24044b82edcd",
+    "missing": false
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\daijinquan.png": {
+    "time": 1722940191600.1956,
+    "uuid": "078bc43a-8862-4c9c-afee-8b9c61662595",
+    "missing": false
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\ddd.png": {
+    "time": 1722940191602.195,
+    "uuid": "be356193-4a87-4484-a55d-573e9a9ff74e",
+    "missing": false
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\di.png": {
+    "time": 1722940191604.1956,
+    "uuid": "31fd49b7-a0bd-4727-aa32-d459995ec251",
+    "missing": false
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\e35ffe27-1121-4ca3-b927-b0394bd4c870.png": {
+    "time": 1722940191606.1956,
+    "uuid": "51057c3f-a341-45f0-9810-184b05381d26",
+    "missing": false
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\e5180a14.png": {
+    "time": 1722940191609.829,
+    "uuid": "96161ab0-c444-4e85-9fbb-c84fd8aefcb8",
+    "missing": false
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\f7c4e88f.png": {
+    "time": 1722940191611.8281,
+    "uuid": "d965648e-b166-4f93-b064-c5500ef4add5",
+    "missing": false
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\fanqie.png": {
+    "time": 1722940191613.8293,
+    "uuid": "a5d5767a-7e8e-48de-a3b7-535f1fb21956",
+    "missing": false
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\fanqiezz.png": {
+    "time": 1722940191615.8298,
+    "uuid": "0c20fc1b-fa26-4858-8791-9796cec92f92",
+    "missing": false
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\fenxiang.png": {
+    "time": 1722940191617.829,
+    "uuid": "874a12c0-9d84-4805-b1d3-d9e0a3291912",
+    "missing": false
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\finger1.png": {
+    "time": 1722940191619.8281,
+    "uuid": "e1e7cc72-de18-4c6b-a4bd-3d90c08bead0",
+    "missing": false
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\finger2.png": {
+    "time": 1722940191621.8298,
+    "uuid": "8c81cfe1-093f-4b28-b522-330efc51d494",
+    "missing": false
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\gongxi.png": {
+    "time": 1722940191626.8293,
+    "uuid": "15315bdb-c4a9-40ab-993e-7dbcd5b03f1e",
+    "missing": false
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\hdqr_btn.png": {
+    "time": 1722940191627.8281,
+    "uuid": "60d9fb2a-bcf9-4eca-9e51-bd3deb838cfc",
+    "missing": false
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\hongbao.png": {
+    "time": 1722940191629.8276,
+    "uuid": "bbc1a08b-caf2-4078-b67c-79a22e9dba44",
+    "missing": false
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\huluobo.png": {
+    "time": 1722940191631.8286,
+    "uuid": "e89b6cf7-b760-4cb5-81e9-452fd2ab5251",
+    "missing": false
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\huluobozz.png": {
+    "time": 1722940191633.8298,
+    "uuid": "9d2870bc-7d23-4d90-b796-24dddc4c16d1",
+    "missing": false
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\ic_contact@2x.png": {
+    "time": 1722940191635.83,
+    "uuid": "42c066de-15a2-4aab-8c98-1111848639ab",
+    "missing": false
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\ic_fuzhi@2x.png": {
+    "time": 1722940191637.83,
+    "uuid": "6dc5a84c-c4fb-45a1-8554-21ad6280fb8b",
+    "missing": false
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\ic_increase_xiao@2x.png": {
+    "time": 1722940191639.831,
+    "uuid": "e8036eb2-3aa1-4ae3-907b-f66cecbe4d94",
+    "missing": false
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\ic_jine1@2x.png": {
+    "time": 1722940191643.8276,
+    "uuid": "0a2994fb-c6d2-4193-b1ec-a9a95d32d582",
+    "missing": false
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\jiasu_img.png": {
+    "time": 1722940191644.8274,
+    "uuid": "e650f42f-80ed-4704-8be3-1bc438dc85f9",
+    "missing": false
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\jijin.png": {
+    "time": 1722940191646.8284,
+    "uuid": "ba2889b3-9a93-4274-9fc6-74eb633a4d6d",
+    "missing": false
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\jinbi.png": {
+    "time": 1722940191648.828,
+    "uuid": "f62ff82b-1dd6-45df-8340-25df5edafdb2",
+    "missing": false
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\jindou.png": {
+    "time": 1722940191650.829,
+    "uuid": "4801d56f-ddc2-4ccf-a2e9-9d3b44a720b9",
+    "missing": false
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\juzheng.png": {
+    "time": 1722940191652.8281,
+    "uuid": "d4d45a6f-5422-4b19-b144-e90f58d514b6",
+    "missing": false
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\lingqu.png": {
+    "time": 1722940191654.8276,
+    "uuid": "5ec15c7d-f3de-4f7f-a91a-efd06159c2b9",
+    "missing": false
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\morejinbi.png": {
+    "time": 1722940191658.8286,
+    "uuid": "60d76287-2e95-48b9-8b3e-9238d716ba1d",
+    "missing": false
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\music.png": {
+    "time": 1722940191660.8284,
+    "uuid": "fdeeaa2c-c40e-48d7-9e2d-b447871e2ab8",
+    "missing": false
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\musicclose.png": {
+    "time": 1722940191662.828,
+    "uuid": "a0a5a0c4-d578-4eff-a4da-26c552741859",
+    "missing": false
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\pack.png": {
+    "time": 1722940191664.8271,
+    "uuid": "58833c99-e2b3-468c-829c-01f0ac781ba4",
+    "missing": false
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\package.png": {
+    "time": 1722940191665.827,
+    "uuid": "dd069d67-6cd3-4b01-ae4e-3de86ee11ab9",
+    "missing": false
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\paihangtou.png": {
+    "time": 1722940191668.829,
+    "uuid": "3495054c-7aaa-4dd9-8190-edb0981cbbcf",
+    "missing": false
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\pengyouquan.png": {
+    "time": 1722940191672.8281,
+    "uuid": "00e49146-ca9a-46ec-8d27-88efe7b25b20",
+    "missing": false
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\phone.png": {
+    "time": 1722940191674.828,
+    "uuid": "89260042-94cd-4864-a816-63eedf1ca980",
+    "missing": false
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\pingguo.png": {
+    "time": 1722940191676.8274,
+    "uuid": "672e10a5-30cd-421b-80ac-893de921c47e",
+    "missing": false
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\pingguozz.png": {
+    "time": 1722940191678.8264,
+    "uuid": "1596f979-8b2f-4b21-87ff-bfae6750a9d3",
+    "missing": false
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\ppp.png": {
+    "time": 1722940191680.8281,
+    "uuid": "bd90898b-1464-40a3-90c7-e4b6a7ce6ead",
+    "missing": false
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\qiezi.png": {
+    "time": 1722940191682.8281,
+    "uuid": "44c42f64-381f-4214-acb8-f44123965e8a",
+    "missing": false
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\qiezizz.png": {
+    "time": 1722940191684.828,
+    "uuid": "87952bd7-47ba-49ea-a5b3-4759e401b6d4",
+    "missing": false
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\qipao.png": {
+    "time": 1722940191686.8289,
+    "uuid": "2171352c-77d6-4f32-acd4-1a93b642844c",
+    "missing": false
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\queding.png": {
+    "time": 1722940191690.8262,
+    "uuid": "3026f1fe-d226-4e7a-abd5-8718dca52097",
+    "missing": false
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\rongyaobang.png": {
+    "time": 1722940191692.8274,
+    "uuid": "37b2825a-bbeb-4ade-9ad3-d4577c8029a1",
+    "missing": false
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\shangdian.png": {
+    "time": 1722940191694.827,
+    "uuid": "098314ba-62c7-489c-be15-51c1501fa896",
+    "missing": false
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\shouhuo.png": {
+    "time": 1722940191696.8271,
+    "uuid": "4c93c476-1c0f-4f7d-a399-3bc5350056b9",
+    "missing": false
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\sjdlsrk_bg.png": {
+    "time": 1722940191698.826,
+    "uuid": "2837803b-47ad-4022-9684-d72880971f6e",
+    "missing": false
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\splash.png": {
+    "time": 1722940191700.8286,
+    "uuid": "d6c46ca1-df8c-46bf-a329-f8e6e837cccc",
+    "missing": false
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\start.png": {
+    "time": 1722940191704.8274,
+    "uuid": "a6d58d89-d766-4055-b284-7f70097932ad",
+    "missing": false
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\store.png": {
+    "time": 1722940191706.8286,
+    "uuid": "4304bfe9-bbc2-4360-96e0-11860411aaaf",
+    "missing": false
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\time.png": {
+    "time": 1722940191708.8264,
+    "uuid": "9dc8f04b-b0e3-40a6-bfe2-3e8733c7d452",
+    "missing": false
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\timebox.png": {
+    "time": 1722940191710.827,
+    "uuid": "da1197f8-62e8-4700-9e8f-12c8d294c57c",
+    "missing": false
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\tixianbtn.png": {
+    "time": 1722940191713.827,
+    "uuid": "22441c28-6ed9-4d9b-b37e-7ad8cb303678",
+    "missing": false
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\touxiangkuang.png": {
+    "time": 1722940191716.827,
+    "uuid": "be876d6f-d046-4966-b260-76c9fdb3e7f0",
+    "missing": false
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\tudi.png": {
+    "time": 1722940191721.8262,
+    "uuid": "b45dbdf3-53f5-4a16-a8c0-b9f2c1b9054f",
+    "missing": false
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\tujian.png": {
+    "time": 1722940191723.8264,
+    "uuid": "aab5ef10-e89b-4b33-b06f-8e18b21fd2f3",
+    "missing": false
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\txqran_btn@2x.png": {
+    "time": 1722940191727.8262,
+    "uuid": "4dcc6762-ac8e-4cf5-b219-4809da958314",
+    "missing": false
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\txtt_img@2x.png": {
+    "time": 1722940191729.827,
+    "uuid": "f1307465-fc72-4d4b-9c23-c18258678721",
+    "missing": false
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\wanfa.png": {
+    "time": 1722940191731.8262,
+    "uuid": "e87596ff-47e2-42ff-ba6d-5a23a3e29005",
+    "missing": false
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\weixin.png": {
+    "time": 1722940191736.4788,
+    "uuid": "f2422d05-a8a3-45fa-b7bc-a60fb30a0c95",
+    "missing": false
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\xianjin.png": {
+    "time": 1722940191738.4758,
+    "uuid": "e02ed89c-cc09-4061-9af3-2312d2cf8b71",
+    "missing": false
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\yinying.png": {
+    "time": 1722940191740.4753,
+    "uuid": "7f8297da-9ff5-4f1a-bf5c-cd5779d65788",
+    "missing": false
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\zacibuy.png": {
+    "time": 1722940191742.477,
+    "uuid": "41814ee5-2ffc-4e82-8dad-23a444023ff0",
+    "missing": false
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\zhishipai.png": {
+    "time": 1722940191744.4768,
+    "uuid": "dfca23a3-72b7-492b-8dd5-cc494ff022ca",
+    "missing": false
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\scene\\login.scene": {
+    "time": 1722940191747.4763,
+    "uuid": "06d29b3c-c3f1-4104-824c-0060dfcb1f92",
+    "missing": false
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\scene\\main.scene": {
+    "time": 1722940191754.4756,
+    "uuid": "5a6f4efe-edd1-4c9d-adc3-c28f8d58012d",
+    "missing": false
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\1937.mp3.meta": {
+    "time": 1722940191549.1987
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\5929e8.png.meta": {
+    "time": 1722940191555.1992
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\1.png.meta": {
+    "time": 1722940191540.1968
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\3.png.meta": {
+    "time": 1722940191552.1982
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\2.png.meta": {
+    "time": 1722940191551.198
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\bbbbb.png.meta": {
+    "time": 1722940191566.1978
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\5eafd15f0e05a.png.meta": {
+    "time": 1722940191557.1992
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\bbb.png.meta": {
+    "time": 1722940191561.1975
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\6fcfce02.png.meta": {
+    "time": 1722940191559.1987
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\btn.mp3.meta": {
+    "time": 1722940191595.1956
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\box.png.meta": {
+    "time": 1722940191589.1953
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\box1.png.meta": {
+    "time": 1722940191591.1958
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\close.png.meta": {
+    "time": 1722940191598.1953
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\buy.png.meta": {
+    "time": 1722940191596.1953
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\bg.png.meta": {
+    "time": 1722940191587.1934
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\daijinquan.png.meta": {
+    "time": 1722940191601.1963
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\ddd.png.meta": {
+    "time": 1722940191603.195
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\e35ffe27-1121-4ca3-b927-b0394bd4c870.png.meta": {
+    "time": 1722940191607.1956
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\di.png.meta": {
+    "time": 1722940191605.1975
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\e5180a14.png.meta": {
+    "time": 1722940191610.8284
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\fanqie.png.meta": {
+    "time": 1722940191614.8289
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\fanqiezz.png.meta": {
+    "time": 1722940191616.829
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\f7c4e88f.png.meta": {
+    "time": 1722940191613.8293
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\fenxiang.png.meta": {
+    "time": 1722940191619.8281
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\finger1.png.meta": {
+    "time": 1722940191620.8281
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\finger2.png.meta": {
+    "time": 1722940191622.8293
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\hdqr_btn.png.meta": {
+    "time": 1722940191628.828
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\hongbao.png.meta": {
+    "time": 1722940191630.828
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\gongxi.png.meta": {
+    "time": 1722940191627.8281
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\huluobo.png.meta": {
+    "time": 1722940191632.828
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\huluobozz.png.meta": {
+    "time": 1722940191634.831
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\ic_contact@2x.png.meta": {
+    "time": 1722940191636.8281
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\ic_fuzhi@2x.png.meta": {
+    "time": 1722940191638.8315
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\ic_increase_xiao@2x.png.meta": {
+    "time": 1722940191642.8298
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\ic_jine1@2x.png.meta": {
+    "time": 1722940191643.8276
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\jiasu_img.png.meta": {
+    "time": 1722940191645.8284
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\jinbi.png.meta": {
+    "time": 1722940191649.8274
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\jindou.png.meta": {
+    "time": 1722940191651.831
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\jijin.png.meta": {
+    "time": 1722940191647.8274
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\juzheng.png.meta": {
+    "time": 1722940191654.8276
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\lingqu.png.meta": {
+    "time": 1722940191658.8286
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\morejinbi.png.meta": {
+    "time": 1722940191659.828
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\music.png.meta": {
+    "time": 1722940191661.8293
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\musicclose.png.meta": {
+    "time": 1722940191663.827
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\pack.png.meta": {
+    "time": 1722940191665.827
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\package.png.meta": {
+    "time": 1722940191666.8289
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\pengyouquan.png.meta": {
+    "time": 1722940191673.827
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\paihangtou.png.meta": {
+    "time": 1722940191669.8271
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\phone.png.meta": {
+    "time": 1722940191675.8286
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\pingguo.png.meta": {
+    "time": 1722940191677.828
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\pingguozz.png.meta": {
+    "time": 1722940191679.8262
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\qiezi.png.meta": {
+    "time": 1722940191683.8271
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\ppp.png.meta": {
+    "time": 1722940191681.8274
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\qiezizz.png.meta": {
+    "time": 1722940191685.8271
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\qipao.png.meta": {
+    "time": 1722940191689.827
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\queding.png.meta": {
+    "time": 1722940191691.8276
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\shangdian.png.meta": {
+    "time": 1722940191695.827
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\shouhuo.png.meta": {
+    "time": 1722940191697.826
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\rongyaobang.png.meta": {
+    "time": 1722940191693.8267
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\sjdlsrk_bg.png.meta": {
+    "time": 1722940191699.8274
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\splash.png.meta": {
+    "time": 1722940191701.827
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\time.png.meta": {
+    "time": 1722940191709.8276
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\store.png.meta": {
+    "time": 1722940191707.8328
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\start.png.meta": {
+    "time": 1722940191705.827
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\timebox.png.meta": {
+    "time": 1722940191712.8254
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\tixianbtn.png.meta": {
+    "time": 1722940191714.8276
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\touxiangkuang.png.meta": {
+    "time": 1722940191718.8274
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\tujian.png.meta": {
+    "time": 1722940191726.8245
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\tudi.png.meta": {
+    "time": 1722940191722.8271
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\txqran_btn@2x.png.meta": {
+    "time": 1722940191728.8254
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\wanfa.png.meta": {
+    "time": 1722940191732.827
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\xianjin.png.meta": {
+    "time": 1722940191739.4756
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\txtt_img@2x.png.meta": {
+    "time": 1722940191730.8267
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\weixin.png.meta": {
+    "time": 1722940191738.4758
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\scene\\login.scene.meta": {
+    "time": 1722940191748.4766
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\yinying.png.meta": {
+    "time": 1722940191741.4763
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\scene\\main.scene.meta": {
+    "time": 1722940191754.4756
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\zacibuy.png.meta": {
+    "time": 1722940191743.4766
+  },
+  "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\resources\\zhishipai.png.meta": {
+    "time": 1722940191745.4768
+  }
+}

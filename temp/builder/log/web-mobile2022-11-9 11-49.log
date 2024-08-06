@@ -1,0 +1,969 @@
+2024-8-6 18:41:47-debug: =================================== Build Task (web-mobile) Start ================================
+2024-8-6 18:41:47-debug: Build with Cocos Creator 3.6.1
+2024-8-6 18:41:47-debug: // ---- build task cocos-service：onBeforeBuild ----
+2024-8-6 18:41:47-debug: cocos-service:(onBeforeBuild) start...0%
+2024-8-6 18:41:47-debug: Process: heapTotal 202.30MB heapUsed 178.56MB rss 303.85MB
+2024-8-6 18:41:47-debug: Start build task, options:{"name":"PlantStore","platform":"web-mobile","buildPath":"project://build","debug":false,"md5Cache":false,"skipCompressTexture":false,"sourceMaps":false,"polyfills":{"asyncFunctions":true,"coreJs":true},"experimentalEraseModules":false,"useBuiltinServer":false,"mainBundleIsRemote":false,"mainBundleCompressionType":"none","replaceSplashScreen":false,"startScene":"5a6f4efe-edd1-4c9d-adc3-c28f8d58012d","outputName":"web-mobile","scenes":[{"url":"db://assets/scene/main.scene","uuid":"5a6f4efe-edd1-4c9d-adc3-c28f8d58012d","inBundle":false}],"windows":[],"packages":{"web-mobile":{"orientation":"portrait","__version__":"1.0.1","embedWebDebugger":false},"cocos-service":{"configID":"d16383","services":[{"service_id":"278","service_component_name":"service-sdkhub","builder":"C:\\Users\\admin\\.CocosCreator\\.service\\sdkhub\\builder\\builder.js","enable":false,"params":{"configId":"5c53db","plugin_version":"2.0.7_0.2.0"}}],"__version__":"3.0.4","sdkHubConfigID":"5c53db","sdkHubConfig":{"id":"5c53db","name":"HUAWEI  AppGallery Connect","platform":"3","channelID":"161221","channelName":"HUAWEI  AppGallery Connect","remarks":"HUAWEI  AppGallery Connect","plugins":[{"hasParam":false,"pParam":{},"pId":"2412","pName":"HUAWEI HMS","packageName":"huawei-hms","pType":30,"pUseType":30,"hasLocal":true,"hasUpdate":false,"requireParam":true,"pVersion":"2.0.3_6.3.0","isInstall":false,"installProgress":true}]}}},"__version__":"1.3.3","web-mobile":[]}
+2024-8-6 18:41:47-debug: // ---- build task cocos-service：onBeforeBuild ---- (20ms)
+2024-8-6 18:41:47-debug: Query all assets info in project
+2024-8-6 18:41:47-debug: cocos-service:(onBeforeBuild) in 20 ms2%
+2024-8-6 18:41:47-debug: init custom config: keepNodeUuid: false, useCache: true
+2024-8-6 18:41:47-debug: BuildAssetLibrary query-assets with assets 395
+2024-8-6 18:41:47-debug:   Number of all scripts: 5
+2024-8-6 18:41:47-debug: BuildAssetLibrary initialized with asset 636!
+2024-8-6 18:41:47-debug:   Number of other assets: 759
+2024-8-6 18:41:47-debug: web-mobile:(onAfterInit) start...2%
+2024-8-6 18:41:47-debug:   Number of all scenes: 2
+2024-8-6 18:41:47-debug: // ---- build task web-mobile：onAfterInit ----
+2024-8-6 18:41:47-debug: Process: heapTotal 202.70MB heapUsed 180.57MB rss 303.19MB
+2024-8-6 18:41:47-debug: web-mobile:(onAfterInit) in 0 ms4%
+2024-8-6 18:41:47-debug: cocos-service:(onAfterInit) start...4%
+2024-8-6 18:41:47-debug: Process: heapTotal 202.70MB heapUsed 180.61MB rss 303.23MB
+2024-8-6 18:41:47-debug: // ---- build task cocos-service：onAfterInit ----
+2024-8-6 18:41:47-debug: // ---- build task cocos-service：onAfterInit ---- (14ms)
+2024-8-6 18:41:47-debug: cocos-service:(onAfterInit) in 14 ms7%
+2024-8-6 18:41:47-debug: localization-editor:(onAfterInit) start...7%
+2024-8-6 18:41:47-debug: Process: heapTotal 202.70MB heapUsed 180.67MB rss 303.24MB
+2024-8-6 18:41:47-debug: // ---- build task localization-editor：onAfterInit ----
+2024-8-6 18:41:47-debug: // ---- build task localization-editor：onAfterInit ---- (11ms)
+2024-8-6 18:41:47-debug: Reload project scripts start9%
+2024-8-6 18:41:47-debug: Process: heapTotal 202.70MB heapUsed 180.72MB rss 303.25MB
+2024-8-6 18:41:47-debug: localization-editor:(onAfterInit) in 11 ms9%
+2024-8-6 18:41:47-debug: // ---- build task Reload project scripts ----
+2024-8-6 18:41:47-debug: reload all scripts.
+2024-8-6 18:41:47-debug: Incremental keys: 
+2024-8-6 18:41:47-debug: Set detail map pack:///resolution-detail-map.json: {}
+2024-8-6 18:41:47-debug: E:\lianlukeji\frontend\cocos\menghuanfarm\temp\programming\packer-driver\targets\editor\chunks\d0\d0b282b9748ef7fc7d2e7bd647d71b0f7e84da53.js resolved to E:\lianlukeji\frontend\cocos\menghuanfarm\temp\programming\packer-driver\targets\editor\chunks\d0\d0b282b9748ef7fc7d2e7bd647d71b0f7e84da53.js is not in module cache!
+2024-8-6 18:41:47-debug: [[Executor]] Module "cce:/internal/x/cc-fu/base" loaded.
+2024-8-6 18:41:47-debug: [[Executor]] Module "cce:/internal/x/cc-fu/gfx-webgl" loaded.
+2024-8-6 18:41:47-debug: [[Executor]] Module "cce:/internal/x/cc-fu/animation" loaded.
+2024-8-6 18:41:47-debug: [[Executor]] Module "cce:/internal/x/cc-fu/gfx-webgl2" loaded.
+2024-8-6 18:41:47-debug: [[Executor]] Module "cce:/internal/x/cc-fu/skeletal-animation" loaded.
+2024-8-6 18:41:47-debug: [[Executor]] Module "cce:/internal/x/cc-fu/2d" loaded.
+2024-8-6 18:41:47-debug: [[Executor]] Module "cce:/internal/x/cc-fu/ui" loaded.
+2024-8-6 18:41:47-debug: [[Executor]] Module "cce:/internal/x/cc-fu/particle" loaded.
+2024-8-6 18:41:47-debug: [[Executor]] Module "cce:/internal/x/cc-fu/particle-2d" loaded.
+2024-8-6 18:41:47-debug: [[Executor]] Module "cce:/internal/x/cc-fu/physics-framework" loaded.
+2024-8-6 18:41:47-debug: [[Executor]] Module "cce:/internal/x/cc-fu/physics-2d-framework" loaded.
+2024-8-6 18:41:47-debug: [[Executor]] Module "cce:/internal/x/cc-fu/3d" loaded.
+2024-8-6 18:41:47-debug: [[Executor]] Module "cce:/internal/x/cc-fu/intersection-2d" loaded.
+2024-8-6 18:41:47-debug: [[Executor]] Module "cce:/internal/x/cc-fu/profiler" loaded.
+2024-8-6 18:41:47-debug: [[Executor]] Module "cce:/internal/x/cc-fu/primitive" loaded.
+2024-8-6 18:41:47-debug: [[Executor]] Module "cce:/internal/x/cc-fu/video" loaded.
+2024-8-6 18:41:47-debug: [[Executor]] Module "cce:/internal/x/cc-fu/geometry-renderer" loaded.
+2024-8-6 18:41:47-debug: [[Executor]] Module "cce:/internal/x/cc-fu/xr" loaded.
+2024-8-6 18:41:47-debug: [[Executor]] Module "cce:/internal/x/cc-fu/audio" loaded.
+2024-8-6 18:41:47-debug: [[Executor]] Module "cce:/internal/x/cc-fu/terrain" loaded.
+2024-8-6 18:41:47-debug: [[Executor]] Module "cce:/internal/x/cc-fu/tiled-map" loaded.
+2024-8-6 18:41:47-debug: [[Executor]] Module "cce:/internal/x/cc-fu/webview" loaded.
+2024-8-6 18:41:47-debug: [[Executor]] Module "cce:/internal/x/cc-fu/spine" loaded.
+2024-8-6 18:41:47-debug: [[Executor]] Module "cce:/internal/x/cc-fu/dragon-bones" loaded.
+2024-8-6 18:41:47-debug: [[Executor]] Module "cce:/internal/x/cc-fu/custom-pipeline" loaded.
+2024-8-6 18:41:47-debug: [[Executor]] Module "cce:/internal/x/cc-fu/base" loaded.
+2024-8-6 18:41:47-debug: [[Executor]] Module "cce:/internal/x/cc-fu/tween" loaded.
+2024-8-6 18:41:47-debug: [[Executor]] Module "cce:/internal/x/cc-fu/gfx-webgl2" loaded.
+2024-8-6 18:41:47-debug: [[Executor]] Module "cce:/internal/x/cc-fu/animation" loaded.
+2024-8-6 18:41:47-debug: [[Executor]] Module "cce:/internal/x/cc-fu/3d" loaded.
+2024-8-6 18:41:47-debug: [[Executor]] Module "cce:/internal/x/cc-fu/gfx-webgl" loaded.
+2024-8-6 18:41:47-debug: [[Executor]] Module "cce:/internal/x/cc-fu/skeletal-animation" loaded.
+2024-8-6 18:41:47-debug: [[Executor]] Module "cce:/internal/x/cc-fu/particle" loaded.
+2024-8-6 18:41:47-debug: [[Executor]] Module "cce:/internal/x/cc-fu/ui" loaded.
+2024-8-6 18:41:47-debug: [[Executor]] Module "cce:/internal/x/cc-fu/particle-2d" loaded.
+2024-8-6 18:41:47-debug: [[Executor]] Module "cce:/internal/x/cc-fu/physics-framework" loaded.
+2024-8-6 18:41:47-debug: [[Executor]] Module "cce:/internal/x/cc-fu/physics-2d-framework" loaded.
+2024-8-6 18:41:47-debug: [[Executor]] Module "cce:/internal/x/cc-fu/primitive" loaded.
+2024-8-6 18:41:47-debug: [[Executor]] Module "cce:/internal/x/cc-fu/intersection-2d" loaded.
+2024-8-6 18:41:47-debug: [[Executor]] Module "cce:/internal/x/cc-fu/profiler" loaded.
+2024-8-6 18:41:47-debug: [[Executor]] Module "cce:/internal/x/cc-fu/2d" loaded.
+2024-8-6 18:41:47-debug: [[Executor]] Module "cce:/internal/x/cc-fu/geometry-renderer" loaded.
+2024-8-6 18:41:47-debug: [[Executor]] Module "cce:/internal/x/cc-fu/xr" loaded.
+2024-8-6 18:41:47-debug: [[Executor]] Module "cce:/internal/x/cc-fu/audio" loaded.
+2024-8-6 18:41:47-debug: [[Executor]] Module "cce:/internal/x/cc-fu/terrain" loaded.
+2024-8-6 18:41:47-debug: [[Executor]] Module "cce:/internal/x/cc-fu/webview" loaded.
+2024-8-6 18:41:47-debug: [[Executor]] Module "cce:/internal/x/cc-fu/video" loaded.
+2024-8-6 18:41:47-debug: [[Executor]] Module "cce:/internal/x/cc-fu/tiled-map" loaded.
+2024-8-6 18:41:47-debug: [[Executor]] Module "cce:/internal/x/cc-fu/tween" loaded.
+2024-8-6 18:41:47-debug: [[Executor]] Module "cce:/internal/x/cc-fu/spine" loaded.
+2024-8-6 18:41:47-debug: [[Executor]] Module "cce:/internal/x/cc-fu/dragon-bones" loaded.
+2024-8-6 18:41:47-debug: [[Executor]] Module "pack:///chunks/d0/d0b282b9748ef7fc7d2e7bd647d71b0f7e84da53.js" loaded.
+2024-8-6 18:41:47-debug: [[Executor]] Module "pack:///chunks/d0/d0b282b9748ef7fc7d2e7bd647d71b0f7e84da53.js" loaded.
+2024-8-6 18:41:47-debug: Invalidating 'pack:///chunks/d0/d0b282b9748ef7fc7d2e7bd647d71b0f7e84da53.js'
+2024-8-6 18:41:47-debug: [[Executor]] Module "cce:/internal/x/cc-fu/custom-pipeline" loaded.
+2024-8-6 18:41:47-debug: E:\lianlukeji\frontend\cocos\menghuanfarm\temp\programming\packer-driver\targets\editor\chunks\7c\7c5545d0f1257a8181a07a5db294710fcae0d363.js resolved to E:\lianlukeji\frontend\cocos\menghuanfarm\temp\programming\packer-driver\targets\editor\chunks\7c\7c5545d0f1257a8181a07a5db294710fcae0d363.js is not in module cache!
+2024-8-6 18:41:47-debug: [[Executor]] Module "pack:///chunks/7c/7c5545d0f1257a8181a07a5db294710fcae0d363.js" loaded.
+2024-8-6 18:41:47-debug: E:\lianlukeji\frontend\cocos\menghuanfarm\temp\programming\packer-driver\targets\editor\chunks\e9\e9133a6c3f9d1bb537e37718e48cd3d2079a4ce9.js resolved to E:\lianlukeji\frontend\cocos\menghuanfarm\temp\programming\packer-driver\targets\editor\chunks\e9\e9133a6c3f9d1bb537e37718e48cd3d2079a4ce9.js is not in module cache!
+2024-8-6 18:41:47-debug: E:\lianlukeji\frontend\cocos\menghuanfarm\temp\programming\packer-driver\targets\editor\chunks\84\84741ad843cea9a440c5d8c2d379669b6551400d.js resolved to E:\lianlukeji\frontend\cocos\menghuanfarm\temp\programming\packer-driver\targets\editor\chunks\84\84741ad843cea9a440c5d8c2d379669b6551400d.js is not in module cache!
+2024-8-6 18:41:47-debug: E:\lianlukeji\frontend\cocos\menghuanfarm\temp\programming\packer-driver\targets\editor\chunks\57\57aa3a73746d22d6e6fea20d4c04eb5fca3e2f83.js resolved to E:\lianlukeji\frontend\cocos\menghuanfarm\temp\programming\packer-driver\targets\editor\chunks\57\57aa3a73746d22d6e6fea20d4c04eb5fca3e2f83.js is not in module cache!
+2024-8-6 18:41:47-debug: E:\lianlukeji\frontend\cocos\menghuanfarm\temp\programming\packer-driver\targets\editor\chunks\26\26600e29beefbc76c5117e0e3dc5c6b5ba21e66b.js resolved to E:\lianlukeji\frontend\cocos\menghuanfarm\temp\programming\packer-driver\targets\editor\chunks\26\26600e29beefbc76c5117e0e3dc5c6b5ba21e66b.js is not in module cache!
+2024-8-6 18:41:47-debug: E:\lianlukeji\frontend\cocos\menghuanfarm\temp\programming\packer-driver\targets\editor\chunks\35\35a27f3d1725ee4b4a910b166a9876852bbc7831.js resolved to E:\lianlukeji\frontend\cocos\menghuanfarm\temp\programming\packer-driver\targets\editor\chunks\35\35a27f3d1725ee4b4a910b166a9876852bbc7831.js is not in module cache!
+2024-8-6 18:41:47-debug: [[Executor]] Module "pack:///chunks/35/35a27f3d1725ee4b4a910b166a9876852bbc7831.js" loaded.
+2024-8-6 18:41:47-debug: [[Executor]] Register timer
+2024-8-6 18:41:47-debug: [[Executor]] Module "pack:///chunks/84/84741ad843cea9a440c5d8c2d379669b6551400d.js" loaded.
+2024-8-6 18:41:47-debug: [[Executor]] Module "pack:///chunks/26/26600e29beefbc76c5117e0e3dc5c6b5ba21e66b.js" loaded.
+2024-8-6 18:41:47-debug: [[Executor]] Module "pack:///chunks/57/57aa3a73746d22d6e6fea20d4c04eb5fca3e2f83.js" loaded.
+2024-8-6 18:41:47-debug: [[Executor]] Module "pack:///chunks/e9/e9133a6c3f9d1bb537e37718e48cd3d2079a4ce9.js" loaded.
+2024-8-6 18:41:47-debug: [[Executor]] Register main
+2024-8-6 18:41:47-debug: [[Executor]] Register genPlant
+2024-8-6 18:41:47-debug: E:\lianlukeji\frontend\cocos\menghuanfarm\temp\programming\packer-driver\targets\editor\chunks\0d\0d5541f1fd3a71e0d0240c5e19547531a0a3f398.js resolved to E:\lianlukeji\frontend\cocos\menghuanfarm\temp\programming\packer-driver\targets\editor\chunks\0d\0d5541f1fd3a71e0d0240c5e19547531a0a3f398.js is not in module cache!
+2024-8-6 18:41:47-warn: The type of "scaleAction.isChild" must be CCBoolean, not Boolean.
+2024-8-6 18:41:47-debug: [[Executor]] Module "pack:///chunks/0d/0d5541f1fd3a71e0d0240c5e19547531a0a3f398.js" loaded.
+2024-8-6 18:41:47-debug: [[Executor]] Module "pack:///chunks/7c/7c5545d0f1257a8181a07a5db294710fcae0d363.js" loaded.
+2024-8-6 18:41:47-debug: [[Executor]] Register scaleAction
+2024-8-6 18:41:47-debug: // ---- build task Reload project scripts ---- (86ms)
+2024-8-6 18:41:47-debug: run build task Reload project scripts success in 86 ms √10%
+2024-8-6 18:41:47-debug: // ---- build task Query asset bundle ----
+2024-8-6 18:41:47-debug: Process: heapTotal 222.50MB heapUsed 200.49MB rss 352.52MB
+2024-8-6 18:41:47-debug: Query asset bundle start10%
+2024-8-6 18:41:48-debug: // ---- build task Query asset bundle ---- (12ms)
+2024-8-6 18:41:48-debug: run build task Query asset bundle success in 12 ms √11%
+2024-8-6 18:41:48-debug: // ---- build task Query and organize assets ----
+2024-8-6 18:41:48-debug: Process: heapTotal 222.50MB heapUsed 200.55MB rss 352.52MB
+2024-8-6 18:41:48-debug: Query and organize assets start11%
+2024-8-6 18:41:48-debug: Query preload assets from cc.config.json: 60f7195c-ec2a-45eb-ba94-8955f60e81d0,1c02ae6f-4492-4915-b8f8-7492a3b1e4cd,810e96e4-e456-4468-9b59-f4e8f39732c0,efe8e2a3-eace-427b-b4f1-cb8a937ec77d,e9aa9a3e-5b2b-4ac7-a2c7-073de2b2b24f,8bbdbcdd-5cd4-4100-b6d5-b7c9625b6107,50f4348b-c883-4e2f-8f11-ce233b859fa1,fda095cb-831d-4601-ad94-846013963de8,f92806d7-1768-443f-afe8-12bcde84d0f0,dd3a144d-ab7f-41f0-82b8-2e43a090d496,f0416e68-0200-4b77-a926-4f9d16e494da,ff9be190-20a4-4e48-b68c-76e3c7cff085,970b0598-bcb0-4714-91fb-2e81440dccd8,bcd64cc6-2dd9-43f6-abbe-66318d332032,d930590d-bb92-4cc8-8bd1-23cd027f9edf,a3cd009f-0ab0-420d-9278-b9fdab939bbc,9361fd90-ba52-4f84-aa93-6e878fd576ca,871c3b6c-7379-419d-bda3-794b239ab90d,c27215d8-6835-4b68-bfbb-bdeac6100c04,b5d6115f-0370-4d7c-aad3-c194cc71cf98
+2024-8-6 18:41:48-debug: Number of scenes: 1
+2024-8-6 18:41:48-debug: Number of assets: 249
+2024-8-6 18:41:48-debug: Number of asset bundle: 3
+2024-8-6 18:41:48-debug: // ---- build task Query and organize assets ---- (78ms)
+2024-8-6 18:41:48-debug: run build task Query and organize assets success in 78 ms √13%
+2024-8-6 18:41:48-debug: Organize scripts start13%
+2024-8-6 18:41:48-debug: // ---- build task Organize scripts ----
+2024-8-6 18:41:48-debug: Process: heapTotal 223.35MB heapUsed 203.42MB rss 350.57MB
+2024-8-6 18:41:48-debug: sort script group...
+2024-8-6 18:41:48-debug: // ---- build task Organize scripts ---- (1ms)
+2024-8-6 18:41:48-debug: // ---- build task Organize texture compression tasks ----
+2024-8-6 18:41:48-debug: Organize texture compression tasks start14%
+2024-8-6 18:41:48-debug: run build task Organize scripts success in 1 ms √14%
+2024-8-6 18:41:48-debug: Process: heapTotal 223.35MB heapUsed 203.54MB rss 348.73MB
+2024-8-6 18:41:48-debug: Number of image-compress task: 0
+2024-8-6 18:41:48-debug: // ---- build task Organize texture compression tasks ---- (49ms)
+2024-8-6 18:41:48-debug: run build task Organize texture compression tasks success in 49 ms √15%
+2024-8-6 18:41:48-debug: Group json start15%
+2024-8-6 18:41:48-debug: Process: heapTotal 223.35MB heapUsed 204.18MB rss 349.24MB
+2024-8-6 18:41:48-debug: Number of json group: 75
+2024-8-6 18:41:48-debug: // ---- build task Group json ----
+2024-8-6 18:41:48-debug: // ---- build task Group json ---- (1ms)
+2024-8-6 18:41:48-debug: run build task Group json success in 1 ms √16%
+2024-8-6 18:41:48-debug: Process: heapTotal 223.35MB heapUsed 204.63MB rss 349.25MB
+2024-8-6 18:41:48-debug: // ---- build task Merging Texture2D json ----
+2024-8-6 18:41:48-debug: Merging Texture2D json start16%
+2024-8-6 18:41:48-debug: // ---- build task Merging Texture2D json ---- (2ms)
+2024-8-6 18:41:48-debug: Sort import-map.json start18%
+2024-8-6 18:41:48-debug: Process: heapTotal 223.35MB heapUsed 204.79MB rss 349.53MB
+2024-8-6 18:41:48-debug: run build task Merging Texture2D json success in 2 ms √18%
+2024-8-6 18:41:48-debug: // ---- build task Sort import-map.json ----
+2024-8-6 18:41:48-debug: run build task Sort import-map.json success in 0 ms √19%
+2024-8-6 18:41:48-debug: web-mobile:(onBeforeBuildAssets) start...19%
+2024-8-6 18:41:48-debug: // ---- build task web-mobile：onBeforeBuildAssets ----
+2024-8-6 18:41:48-debug: Process: heapTotal 223.35MB heapUsed 204.84MB rss 349.46MB
+2024-8-6 18:41:48-debug: // ---- build task web-mobile：onBeforeBuildAssets ---- (1ms)
+2024-8-6 18:41:48-debug: web-mobile:(onBeforeBuildAssets) in 1 ms21%
+2024-8-6 18:41:48-debug: // ---- build task localization-editor：onBeforeBuildAssets ----
+2024-8-6 18:41:48-debug: Process: heapTotal 223.35MB heapUsed 204.89MB rss 349.36MB
+2024-8-6 18:41:48-debug: localization-editor:(onBeforeBuildAssets) start...21%
+2024-8-6 18:41:48-debug: // ---- build task localization-editor：onBeforeBuildAssets ---- (12ms)
+2024-8-6 18:41:48-debug: // ---- build task Build auto-atlas ----
+2024-8-6 18:41:48-debug: localization-editor:(onBeforeBuildAssets) in 12 ms23%
+2024-8-6 18:41:48-debug: Process: heapTotal 223.35MB heapUsed 204.94MB rss 349.36MB
+2024-8-6 18:41:48-debug: Start collect pack info
+2024-8-6 18:41:48-debug: Build auto-atlas start23%
+2024-8-6 18:41:48-debug: // ---- build task Build auto-atlas ---- (1ms)
+2024-8-6 18:41:48-debug: // ---- build task Compress Image ----
+2024-8-6 18:41:48-debug: run build task Build auto-atlas success in 1 ms √30%
+2024-8-6 18:41:48-debug: Process: heapTotal 223.35MB heapUsed 205.00MB rss 349.36MB
+2024-8-6 18:41:48-debug: Compress Image start30%
+2024-8-6 18:41:48-debug: run build task Compress Image success in 0 ms √37%
+2024-8-6 18:41:48-debug: Process: heapTotal 223.35MB heapUsed 205.04MB rss 349.36MB
+2024-8-6 18:41:48-debug: // ---- build task Copy the resource ----
+2024-8-6 18:41:48-debug: Copy the resource start37%
+2024-8-6 18:41:48-debug: Asset Bundle(internal) handle assets: 20
+2024-8-6 18:41:48-debug: Asset Bundle(resources) handle assets: 227
+2024-8-6 18:41:48-debug: Asset Bundle(main) handle assets: 37
+2024-8-6 18:41:48-debug: // ---- build task Copy the resource ---- (39ms)
+2024-8-6 18:41:48-debug: run build task Copy the resource success in 39 ms √43%
+2024-8-6 18:41:48-debug: Process: heapTotal 223.35MB heapUsed 207.35MB rss 351.93MB
+2024-8-6 18:41:48-debug: Build the grouped json and scatter files to the specified location start43%
+2024-8-6 18:41:48-debug: // ---- build task Build the grouped json and scatter files to the specified location ----
+2024-8-6 18:41:48-debug: // ---- build task Build the grouped json and scatter files to the specified location ---- (342ms)
+2024-8-6 18:41:48-debug: run build task Build the grouped json and scatter files to the specified location success in 342 ms √50%
+2024-8-6 18:41:48-debug: Process: heapTotal 223.75MB heapUsed 204.21MB rss 354.08MB
+2024-8-6 18:41:48-debug: Compress zip bundle start50%
+2024-8-6 18:41:48-debug: // ---- build task Compress zip bundle ----
+2024-8-6 18:41:48-debug: run build task Compress zip bundle success in 0 ms √57%
+2024-8-6 18:41:48-debug: // ---- build task Build script ----
+2024-8-6 18:41:48-debug: Process: heapTotal 223.75MB heapUsed 204.25MB rss 354.08MB
+2024-8-6 18:41:48-debug: Build script start57%
+2024-8-6 18:41:48-warn: Browserslist: caniuse-lite is outdated. Please run:npx browserslist@latest --update-db
+2024-8-6 18:41:49-warn: Browserslist: caniuse-lite is outdated. Please run:npx browserslist@latest --update-dbWhy you should do it regularly:https://github.com/browserslist/browserslist#browsers-data-updating
+2024-8-6 18:48:31-debug: =================================== Build Task (web-mobile) Start ================================
+2024-8-6 18:48:31-debug: Start build task, options:{"name":"PlantStore","platform":"web-mobile","buildPath":"project://build","debug":false,"md5Cache":false,"skipCompressTexture":false,"sourceMaps":false,"polyfills":{"asyncFunctions":true,"coreJs":true},"experimentalEraseModules":false,"useBuiltinServer":false,"mainBundleIsRemote":false,"mainBundleCompressionType":"none","replaceSplashScreen":false,"startScene":"5a6f4efe-edd1-4c9d-adc3-c28f8d58012d","outputName":"web-mobile","scenes":[{"url":"db://assets/scene/main.scene","uuid":"5a6f4efe-edd1-4c9d-adc3-c28f8d58012d","inBundle":false}],"windows":[],"packages":{"web-mobile":{"orientation":"portrait","__version__":"1.0.1","embedWebDebugger":false},"cocos-service":{"configID":"d16383","services":[{"service_id":"278","service_component_name":"service-sdkhub","builder":"C:\\Users\\admin\\.CocosCreator\\.service\\sdkhub\\builder\\builder.js","enable":false,"params":{"configId":"5c53db","plugin_version":"2.0.7_0.2.0"}}],"__version__":"3.0.4","sdkHubConfigID":"5c53db","sdkHubConfig":{"id":"5c53db","name":"HUAWEI  AppGallery Connect","platform":"3","channelID":"161221","channelName":"HUAWEI  AppGallery Connect","remarks":"HUAWEI  AppGallery Connect","plugins":[{"hasParam":false,"pParam":{},"pId":"2412","pName":"HUAWEI HMS","packageName":"huawei-hms","pType":30,"pUseType":30,"hasLocal":true,"hasUpdate":false,"requireParam":true,"pVersion":"2.0.3_6.3.0","isInstall":false,"installProgress":true}]}}},"__version__":"1.3.3","web-mobile":[]}
+2024-8-6 18:48:31-debug: // ---- build task cocos-service：onBeforeBuild ----
+2024-8-6 18:48:31-debug: Build with Cocos Creator 3.6.1
+2024-8-6 18:48:31-debug: cocos-service:(onBeforeBuild) start...0%
+2024-8-6 18:48:31-debug: Process: heapTotal 189.89MB heapUsed 181.48MB rss 494.04MB
+2024-8-6 18:48:31-debug: // ---- build task cocos-service：onBeforeBuild ---- (27ms)
+2024-8-6 18:48:31-debug: cocos-service:(onBeforeBuild) in 27 ms2%
+2024-8-6 18:48:31-debug: Query all assets info in project
+2024-8-6 18:48:31-debug: init custom config: keepNodeUuid: false, useCache: true
+2024-8-6 18:48:31-debug: BuildAssetLibrary query-assets with assets 395
+2024-8-6 18:48:31-debug: BuildAssetLibrary initialized with asset 636!
+2024-8-6 18:48:31-debug:   Number of all scenes: 2
+2024-8-6 18:48:31-debug: web-mobile:(onAfterInit) start...2%
+2024-8-6 18:48:31-debug: // ---- build task web-mobile：onAfterInit ----
+2024-8-6 18:48:31-debug:   Number of other assets: 759
+2024-8-6 18:48:31-debug: Process: heapTotal 195.04MB heapUsed 182.46MB rss 494.57MB
+2024-8-6 18:48:31-debug:   Number of all scripts: 5
+2024-8-6 18:48:32-debug: // ---- build task web-mobile：onAfterInit ---- (110ms)
+2024-8-6 18:48:32-debug: web-mobile:(onAfterInit) in 110 ms4%
+2024-8-6 18:48:32-debug: // ---- build task cocos-service：onAfterInit ----
+2024-8-6 18:48:32-debug: Process: heapTotal 195.04MB heapUsed 183.22MB rss 495.24MB
+2024-8-6 18:48:32-debug: cocos-service:(onAfterInit) start...4%
+2024-8-6 18:48:32-debug: // ---- build task cocos-service：onAfterInit ---- (15ms)
+2024-8-6 18:48:32-debug: cocos-service:(onAfterInit) in 15 ms7%
+2024-8-6 18:48:32-debug: Process: heapTotal 195.04MB heapUsed 183.28MB rss 495.30MB
+2024-8-6 18:48:32-debug: localization-editor:(onAfterInit) start...7%
+2024-8-6 18:48:32-debug: // ---- build task localization-editor：onAfterInit ----
+2024-8-6 18:48:32-debug: // ---- build task localization-editor：onAfterInit ---- (14ms)
+2024-8-6 18:48:32-debug: localization-editor:(onAfterInit) in 14 ms9%
+2024-8-6 18:48:32-debug: Reload project scripts start9%
+2024-8-6 18:48:32-debug: reload all scripts.
+2024-8-6 18:48:32-debug: Process: heapTotal 195.04MB heapUsed 183.33MB rss 495.36MB
+2024-8-6 18:48:32-debug: // ---- build task Reload project scripts ----
+2024-8-6 18:48:32-debug: Incremental keys: 
+2024-8-6 18:48:32-debug: Set detail map pack:///resolution-detail-map.json: {}
+2024-8-6 18:48:32-debug: E:\lianlukeji\frontend\cocos\menghuanfarm\temp\programming\packer-driver\targets\editor\chunks\d0\d0b282b9748ef7fc7d2e7bd647d71b0f7e84da53.js resolved to E:\lianlukeji\frontend\cocos\menghuanfarm\temp\programming\packer-driver\targets\editor\chunks\d0\d0b282b9748ef7fc7d2e7bd647d71b0f7e84da53.js is not in module cache!
+2024-8-6 18:48:32-debug: [[Executor]] Module "cce:/internal/x/cc-fu/base" loaded.
+2024-8-6 18:48:32-debug: [[Executor]] Module "cce:/internal/x/cc-fu/gfx-webgl" loaded.
+2024-8-6 18:48:32-debug: [[Executor]] Module "cce:/internal/x/cc-fu/animation" loaded.
+2024-8-6 18:48:32-debug: [[Executor]] Module "cce:/internal/x/cc-fu/gfx-webgl2" loaded.
+2024-8-6 18:48:32-debug: [[Executor]] Module "cce:/internal/x/cc-fu/skeletal-animation" loaded.
+2024-8-6 18:48:32-debug: [[Executor]] Module "cce:/internal/x/cc-fu/2d" loaded.
+2024-8-6 18:48:32-debug: [[Executor]] Module "cce:/internal/x/cc-fu/3d" loaded.
+2024-8-6 18:48:32-debug: [[Executor]] Module "cce:/internal/x/cc-fu/particle" loaded.
+2024-8-6 18:48:32-debug: [[Executor]] Module "cce:/internal/x/cc-fu/particle-2d" loaded.
+2024-8-6 18:48:32-debug: [[Executor]] Module "cce:/internal/x/cc-fu/physics-framework" loaded.
+2024-8-6 18:48:32-debug: [[Executor]] Module "cce:/internal/x/cc-fu/physics-2d-framework" loaded.
+2024-8-6 18:48:32-debug: [[Executor]] Module "cce:/internal/x/cc-fu/primitive" loaded.
+2024-8-6 18:48:32-debug: [[Executor]] Module "cce:/internal/x/cc-fu/ui" loaded.
+2024-8-6 18:48:32-debug: [[Executor]] Module "cce:/internal/x/cc-fu/profiler" loaded.
+2024-8-6 18:48:32-debug: [[Executor]] Module "cce:/internal/x/cc-fu/geometry-renderer" loaded.
+2024-8-6 18:48:32-debug: [[Executor]] Module "cce:/internal/x/cc-fu/video" loaded.
+2024-8-6 18:48:32-debug: [[Executor]] Module "cce:/internal/x/cc-fu/intersection-2d" loaded.
+2024-8-6 18:48:32-debug: [[Executor]] Module "cce:/internal/x/cc-fu/xr" loaded.
+2024-8-6 18:48:32-debug: [[Executor]] Module "cce:/internal/x/cc-fu/terrain" loaded.
+2024-8-6 18:48:32-debug: [[Executor]] Module "cce:/internal/x/cc-fu/audio" loaded.
+2024-8-6 18:48:32-debug: [[Executor]] Module "cce:/internal/x/cc-fu/webview" loaded.
+2024-8-6 18:48:32-debug: [[Executor]] Module "cce:/internal/x/cc-fu/tiled-map" loaded.
+2024-8-6 18:48:32-debug: [[Executor]] Module "cce:/internal/x/cc-fu/dragon-bones" loaded.
+2024-8-6 18:48:32-debug: [[Executor]] Module "cce:/internal/x/cc-fu/custom-pipeline" loaded.
+2024-8-6 18:48:32-debug: [[Executor]] Module "cce:/internal/x/cc-fu/tween" loaded.
+2024-8-6 18:48:32-debug: [[Executor]] Module "cce:/internal/x/cc-fu/base" loaded.
+2024-8-6 18:48:32-debug: [[Executor]] Module "cce:/internal/x/cc-fu/gfx-webgl" loaded.
+2024-8-6 18:48:32-debug: [[Executor]] Module "cce:/internal/x/cc-fu/gfx-webgl2" loaded.
+2024-8-6 18:48:32-debug: [[Executor]] Module "cce:/internal/x/cc-fu/spine" loaded.
+2024-8-6 18:48:32-debug: [[Executor]] Module "cce:/internal/x/cc-fu/animation" loaded.
+2024-8-6 18:48:32-debug: [[Executor]] Module "cce:/internal/x/cc-fu/skeletal-animation" loaded.
+2024-8-6 18:48:32-debug: [[Executor]] Module "cce:/internal/x/cc-fu/3d" loaded.
+2024-8-6 18:48:32-debug: [[Executor]] Module "cce:/internal/x/cc-fu/particle" loaded.
+2024-8-6 18:48:32-debug: [[Executor]] Module "cce:/internal/x/cc-fu/particle-2d" loaded.
+2024-8-6 18:48:32-debug: [[Executor]] Module "cce:/internal/x/cc-fu/ui" loaded.
+2024-8-6 18:48:32-debug: [[Executor]] Module "cce:/internal/x/cc-fu/physics-framework" loaded.
+2024-8-6 18:48:32-debug: [[Executor]] Module "cce:/internal/x/cc-fu/physics-2d-framework" loaded.
+2024-8-6 18:48:32-debug: [[Executor]] Module "cce:/internal/x/cc-fu/primitive" loaded.
+2024-8-6 18:48:32-debug: [[Executor]] Module "cce:/internal/x/cc-fu/intersection-2d" loaded.
+2024-8-6 18:48:32-debug: [[Executor]] Module "cce:/internal/x/cc-fu/profiler" loaded.
+2024-8-6 18:48:32-debug: [[Executor]] Module "cce:/internal/x/cc-fu/geometry-renderer" loaded.
+2024-8-6 18:48:32-debug: [[Executor]] Module "cce:/internal/x/cc-fu/video" loaded.
+2024-8-6 18:48:32-debug: [[Executor]] Module "cce:/internal/x/cc-fu/2d" loaded.
+2024-8-6 18:48:32-debug: [[Executor]] Module "cce:/internal/x/cc-fu/xr" loaded.
+2024-8-6 18:48:32-debug: [[Executor]] Module "cce:/internal/x/cc-fu/terrain" loaded.
+2024-8-6 18:48:32-debug: [[Executor]] Module "cce:/internal/x/cc-fu/webview" loaded.
+2024-8-6 18:48:32-debug: [[Executor]] Module "cce:/internal/x/cc-fu/tiled-map" loaded.
+2024-8-6 18:48:32-debug: [[Executor]] Module "cce:/internal/x/cc-fu/tween" loaded.
+2024-8-6 18:48:32-debug: [[Executor]] Module "cce:/internal/x/cc-fu/dragon-bones" loaded.
+2024-8-6 18:48:32-debug: [[Executor]] Module "cce:/internal/x/cc-fu/custom-pipeline" loaded.
+2024-8-6 18:48:32-debug: [[Executor]] Module "pack:///chunks/d0/d0b282b9748ef7fc7d2e7bd647d71b0f7e84da53.js" loaded.
+2024-8-6 18:48:32-debug: [[Executor]] Module "cce:/internal/x/cc-fu/spine" loaded.
+2024-8-6 18:48:32-debug: Invalidating 'pack:///chunks/d0/d0b282b9748ef7fc7d2e7bd647d71b0f7e84da53.js'
+2024-8-6 18:48:32-debug: [[Executor]] Module "pack:///chunks/d0/d0b282b9748ef7fc7d2e7bd647d71b0f7e84da53.js" loaded.
+2024-8-6 18:48:32-debug: [[Executor]] Module "cce:/internal/x/cc-fu/audio" loaded.
+2024-8-6 18:48:32-debug: E:\lianlukeji\frontend\cocos\menghuanfarm\temp\programming\packer-driver\targets\editor\chunks\7c\7c5545d0f1257a8181a07a5db294710fcae0d363.js resolved to E:\lianlukeji\frontend\cocos\menghuanfarm\temp\programming\packer-driver\targets\editor\chunks\7c\7c5545d0f1257a8181a07a5db294710fcae0d363.js is not in module cache!
+2024-8-6 18:48:32-debug: [[Executor]] Module "pack:///chunks/7c/7c5545d0f1257a8181a07a5db294710fcae0d363.js" loaded.
+2024-8-6 18:48:32-debug: E:\lianlukeji\frontend\cocos\menghuanfarm\temp\programming\packer-driver\targets\editor\chunks\e9\e9133a6c3f9d1bb537e37718e48cd3d2079a4ce9.js resolved to E:\lianlukeji\frontend\cocos\menghuanfarm\temp\programming\packer-driver\targets\editor\chunks\e9\e9133a6c3f9d1bb537e37718e48cd3d2079a4ce9.js is not in module cache!
+2024-8-6 18:48:32-debug: E:\lianlukeji\frontend\cocos\menghuanfarm\temp\programming\packer-driver\targets\editor\chunks\84\84741ad843cea9a440c5d8c2d379669b6551400d.js resolved to E:\lianlukeji\frontend\cocos\menghuanfarm\temp\programming\packer-driver\targets\editor\chunks\84\84741ad843cea9a440c5d8c2d379669b6551400d.js is not in module cache!
+2024-8-6 18:48:32-debug: E:\lianlukeji\frontend\cocos\menghuanfarm\temp\programming\packer-driver\targets\editor\chunks\26\26600e29beefbc76c5117e0e3dc5c6b5ba21e66b.js resolved to E:\lianlukeji\frontend\cocos\menghuanfarm\temp\programming\packer-driver\targets\editor\chunks\26\26600e29beefbc76c5117e0e3dc5c6b5ba21e66b.js is not in module cache!
+2024-8-6 18:48:32-debug: E:\lianlukeji\frontend\cocos\menghuanfarm\temp\programming\packer-driver\targets\editor\chunks\57\57aa3a73746d22d6e6fea20d4c04eb5fca3e2f83.js resolved to E:\lianlukeji\frontend\cocos\menghuanfarm\temp\programming\packer-driver\targets\editor\chunks\57\57aa3a73746d22d6e6fea20d4c04eb5fca3e2f83.js is not in module cache!
+2024-8-6 18:48:32-debug: E:\lianlukeji\frontend\cocos\menghuanfarm\temp\programming\packer-driver\targets\editor\chunks\35\35a27f3d1725ee4b4a910b166a9876852bbc7831.js resolved to E:\lianlukeji\frontend\cocos\menghuanfarm\temp\programming\packer-driver\targets\editor\chunks\35\35a27f3d1725ee4b4a910b166a9876852bbc7831.js is not in module cache!
+2024-8-6 18:48:32-debug: [[Executor]] Module "pack:///chunks/84/84741ad843cea9a440c5d8c2d379669b6551400d.js" loaded.
+2024-8-6 18:48:32-debug: [[Executor]] Module "pack:///chunks/35/35a27f3d1725ee4b4a910b166a9876852bbc7831.js" loaded.
+2024-8-6 18:48:32-debug: [[Executor]] Register timer
+2024-8-6 18:48:32-debug: [[Executor]] Module "pack:///chunks/57/57aa3a73746d22d6e6fea20d4c04eb5fca3e2f83.js" loaded.
+2024-8-6 18:48:32-debug: [[Executor]] Register main
+2024-8-6 18:48:32-debug: [[Executor]] Module "pack:///chunks/26/26600e29beefbc76c5117e0e3dc5c6b5ba21e66b.js" loaded.
+2024-8-6 18:48:32-debug: [[Executor]] Module "pack:///chunks/e9/e9133a6c3f9d1bb537e37718e48cd3d2079a4ce9.js" loaded.
+2024-8-6 18:48:32-debug: [[Executor]] Register genPlant
+2024-8-6 18:48:32-debug: E:\lianlukeji\frontend\cocos\menghuanfarm\temp\programming\packer-driver\targets\editor\chunks\0d\0d5541f1fd3a71e0d0240c5e19547531a0a3f398.js resolved to E:\lianlukeji\frontend\cocos\menghuanfarm\temp\programming\packer-driver\targets\editor\chunks\0d\0d5541f1fd3a71e0d0240c5e19547531a0a3f398.js is not in module cache!
+2024-8-6 18:48:32-debug: [[Executor]] Register scaleAction
+2024-8-6 18:48:32-warn: The type of "scaleAction.isChild" must be CCBoolean, not Boolean.
+2024-8-6 18:48:32-debug: [[Executor]] Module "pack:///chunks/0d/0d5541f1fd3a71e0d0240c5e19547531a0a3f398.js" loaded.
+2024-8-6 18:48:32-debug: [[Executor]] Module "pack:///chunks/7c/7c5545d0f1257a8181a07a5db294710fcae0d363.js" loaded.
+2024-8-6 18:48:32-debug: // ---- build task Reload project scripts ---- (129ms)
+2024-8-6 18:48:32-debug: run build task Reload project scripts success in 129 ms √10%
+2024-8-6 18:48:32-debug: Process: heapTotal 215.08MB heapUsed 203.91MB rss 526.98MB
+2024-8-6 18:48:32-debug: // ---- build task Query asset bundle ----
+2024-8-6 18:48:32-debug: Query asset bundle start10%
+2024-8-6 18:48:32-debug: // ---- build task Query asset bundle ---- (15ms)
+2024-8-6 18:48:32-debug: run build task Query asset bundle success in 15 ms √11%
+2024-8-6 18:48:32-debug: Process: heapTotal 215.08MB heapUsed 203.98MB rss 527.05MB
+2024-8-6 18:48:32-debug: Query and organize assets start11%
+2024-8-6 18:48:32-debug: // ---- build task Query and organize assets ----
+2024-8-6 18:48:32-debug: Query preload assets from cc.config.json: 60f7195c-ec2a-45eb-ba94-8955f60e81d0,1c02ae6f-4492-4915-b8f8-7492a3b1e4cd,810e96e4-e456-4468-9b59-f4e8f39732c0,efe8e2a3-eace-427b-b4f1-cb8a937ec77d,e9aa9a3e-5b2b-4ac7-a2c7-073de2b2b24f,8bbdbcdd-5cd4-4100-b6d5-b7c9625b6107,50f4348b-c883-4e2f-8f11-ce233b859fa1,fda095cb-831d-4601-ad94-846013963de8,f92806d7-1768-443f-afe8-12bcde84d0f0,dd3a144d-ab7f-41f0-82b8-2e43a090d496,f0416e68-0200-4b77-a926-4f9d16e494da,ff9be190-20a4-4e48-b68c-76e3c7cff085,970b0598-bcb0-4714-91fb-2e81440dccd8,bcd64cc6-2dd9-43f6-abbe-66318d332032,d930590d-bb92-4cc8-8bd1-23cd027f9edf,a3cd009f-0ab0-420d-9278-b9fdab939bbc,9361fd90-ba52-4f84-aa93-6e878fd576ca,871c3b6c-7379-419d-bda3-794b239ab90d,c27215d8-6835-4b68-bfbb-bdeac6100c04,b5d6115f-0370-4d7c-aad3-c194cc71cf98
+2024-8-6 18:48:32-debug: Number of scenes: 1
+2024-8-6 18:48:32-debug: Number of assets: 249
+2024-8-6 18:48:32-debug: Number of asset bundle: 3
+2024-8-6 18:48:32-debug: // ---- build task Query and organize assets ---- (312ms)
+2024-8-6 18:48:32-debug: run build task Query and organize assets success in 312 ms √13%
+2024-8-6 18:48:32-debug: // ---- build task Organize scripts ----
+2024-8-6 18:48:32-debug: Process: heapTotal 210.00MB heapUsed 199.90MB rss 513.18MB
+2024-8-6 18:48:32-debug: sort script group...
+2024-8-6 18:48:32-debug: Organize scripts start13%
+2024-8-6 18:48:32-debug: // ---- build task Organize scripts ---- (1ms)
+2024-8-6 18:48:32-debug: run build task Organize scripts success in 1 ms √14%
+2024-8-6 18:48:32-debug: Process: heapTotal 210.00MB heapUsed 199.96MB rss 513.18MB
+2024-8-6 18:48:32-debug: Organize texture compression tasks start14%
+2024-8-6 18:48:32-debug: // ---- build task Organize texture compression tasks ----
+2024-8-6 18:48:32-debug: Number of image-compress task: 0
+2024-8-6 18:48:32-debug: // ---- build task Organize texture compression tasks ---- (49ms)
+2024-8-6 18:48:32-debug: Group json start15%
+2024-8-6 18:48:32-debug: run build task Organize texture compression tasks success in 49 ms √15%
+2024-8-6 18:48:32-debug: Number of json group: 75
+2024-8-6 18:48:32-debug: // ---- build task Group json ----
+2024-8-6 18:48:32-debug: Process: heapTotal 210.00MB heapUsed 200.61MB rss 513.79MB
+2024-8-6 18:48:32-debug: // ---- build task Group json ---- (2ms)
+2024-8-6 18:48:32-debug: run build task Group json success in 2 ms √16%
+2024-8-6 18:48:32-debug: Process: heapTotal 210.00MB heapUsed 201.08MB rss 514.20MB
+2024-8-6 18:48:32-debug: Merging Texture2D json start16%
+2024-8-6 18:48:32-debug: // ---- build task Merging Texture2D json ----
+2024-8-6 18:48:32-debug: // ---- build task Merging Texture2D json ---- (5ms)
+2024-8-6 18:48:32-debug: run build task Merging Texture2D json success in 5 ms √18%
+2024-8-6 18:48:32-debug: // ---- build task Sort import-map.json ----
+2024-8-6 18:48:32-debug: Process: heapTotal 210.00MB heapUsed 201.23MB rss 514.70MB
+2024-8-6 18:48:32-debug: Sort import-map.json start18%
+2024-8-6 18:48:32-debug: run build task Sort import-map.json success in 0 ms √19%
+2024-8-6 18:48:32-debug: Process: heapTotal 210.00MB heapUsed 201.28MB rss 514.70MB
+2024-8-6 18:48:32-debug: web-mobile:(onBeforeBuildAssets) start...19%
+2024-8-6 18:48:32-debug: // ---- build task web-mobile：onBeforeBuildAssets ----
+2024-8-6 18:48:32-debug: web-mobile:(onBeforeBuildAssets) in 0 ms21%
+2024-8-6 18:48:32-debug: localization-editor:(onBeforeBuildAssets) start...21%
+2024-8-6 18:48:32-debug: // ---- build task localization-editor：onBeforeBuildAssets ----
+2024-8-6 18:48:32-debug: Process: heapTotal 210.00MB heapUsed 201.33MB rss 514.65MB
+2024-8-6 18:48:32-debug: // ---- build task localization-editor：onBeforeBuildAssets ---- (14ms)
+2024-8-6 18:48:32-debug: // ---- build task Build auto-atlas ----
+2024-8-6 18:48:32-debug: localization-editor:(onBeforeBuildAssets) in 14 ms23%
+2024-8-6 18:48:32-debug: Process: heapTotal 210.00MB heapUsed 201.37MB rss 514.61MB
+2024-8-6 18:48:32-debug: Start collect pack info
+2024-8-6 18:48:32-debug: Build auto-atlas start23%
+2024-8-6 18:48:32-debug: // ---- build task Build auto-atlas ---- (1ms)
+2024-8-6 18:48:32-debug: run build task Build auto-atlas success in 1 ms √30%
+2024-8-6 18:48:32-debug: Process: heapTotal 210.00MB heapUsed 201.44MB rss 514.67MB
+2024-8-6 18:48:32-debug: // ---- build task Compress Image ----
+2024-8-6 18:48:32-debug: Compress Image start30%
+2024-8-6 18:48:32-debug: // ---- build task Compress Image ---- (1ms)
+2024-8-6 18:48:32-debug: run build task Compress Image success in 1 ms √37%
+2024-8-6 18:48:32-debug: // ---- build task Copy the resource ----
+2024-8-6 18:48:32-debug: Process: heapTotal 210.00MB heapUsed 201.48MB rss 514.72MB
+2024-8-6 18:48:32-debug: Copy the resource start37%
+2024-8-6 18:48:32-debug: Asset Bundle(internal) handle assets: 20
+2024-8-6 18:48:32-debug: Asset Bundle(resources) handle assets: 227
+2024-8-6 18:48:32-debug: Asset Bundle(main) handle assets: 37
+2024-8-6 18:48:32-debug: // ---- build task Copy the resource ---- (53ms)
+2024-8-6 18:48:32-debug: run build task Copy the resource success in 53 ms √43%
+2024-8-6 18:48:32-debug: Process: heapTotal 210.25MB heapUsed 200.65MB rss 514.79MB
+2024-8-6 18:48:32-debug: // ---- build task Build the grouped json and scatter files to the specified location ----
+2024-8-6 18:48:32-debug: Build the grouped json and scatter files to the specified location start43%
+2024-8-6 18:48:32-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/ic_jine1@2x.png)})
+2024-8-6 18:48:32-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/fanqiezz.png)})
+2024-8-6 18:48:32-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/pengyouquan.png)})
+2024-8-6 18:48:32-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/shouhuo.png)})
+2024-8-6 18:48:32-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/txqran_btn@2x.png)})
+2024-8-6 18:48:32-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/lingqu.png)})
+2024-8-6 18:48:32-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/1.png)})
+2024-8-6 18:48:32-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/ic_fuzhi@2x.png)})
+2024-8-6 18:48:32-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/box.png)})
+2024-8-6 18:48:32-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/yinying.png)})
+2024-8-6 18:48:32-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/finger2.png)})
+2024-8-6 18:48:32-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/huluobozz.png)})
+2024-8-6 18:48:32-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/di.png)})
+2024-8-6 18:48:32-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/time.png)})
+2024-8-6 18:48:32-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/ic_contact@2x.png)})
+2024-8-6 18:48:32-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/rongyaobang.png)})
+2024-8-6 18:48:32-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/hdqr_btn.png)})
+2024-8-6 18:48:32-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/qiezi.png)})
+2024-8-6 18:48:32-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/morejinbi.png)})
+2024-8-6 18:48:32-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/daijinquan.png)})
+2024-8-6 18:48:32-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/2.png)})
+2024-8-6 18:48:32-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/3.png)})
+2024-8-6 18:48:32-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/6fcfce02.png)})
+2024-8-6 18:48:32-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/pingguo.png)})
+2024-8-6 18:48:32-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/5929e8.png)})
+2024-8-6 18:48:32-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/fenxiang.png)})
+2024-8-6 18:48:32-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/pingguozz.png)})
+2024-8-6 18:48:32-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/queding.png)})
+2024-8-6 18:48:32-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/store.png)})
+2024-8-6 18:48:32-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/jindou.png)})
+2024-8-6 18:48:32-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/gongxi.png)})
+2024-8-6 18:48:32-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/close.png)})
+2024-8-6 18:48:32-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/tixianbtn.png)})
+2024-8-6 18:48:32-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/zacibuy.png)})
+2024-8-6 18:48:32-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/e35ffe27-1121-4ca3-b927-b0394bd4c870.png)})
+2024-8-6 18:48:32-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/pack.png)})
+2024-8-6 18:48:32-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/qiezizz.png)})
+2024-8-6 18:48:32-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/e5180a14.png)})
+2024-8-6 18:48:32-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/shangdian.png)})
+2024-8-6 18:48:32-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/sjdlsrk_bg.png)})
+2024-8-6 18:48:32-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/paihangtou.png)})
+2024-8-6 18:48:32-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/phone.png)})
+2024-8-6 18:48:32-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/musicclose.png)})
+2024-8-6 18:48:32-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/qipao.png)})
+2024-8-6 18:48:32-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/start.png)})
+2024-8-6 18:48:32-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/tujian.png)})
+2024-8-6 18:48:32-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/buy.png)})
+2024-8-6 18:48:32-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/fanqie.png)})
+2024-8-6 18:48:32-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/hongbao.png)})
+2024-8-6 18:48:32-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/jijin.png)})
+2024-8-6 18:48:32-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/ppp.png)})
+2024-8-6 18:48:32-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/touxiangkuang.png)})
+2024-8-6 18:48:32-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/ddd.png)})
+2024-8-6 18:48:32-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/tudi.png)})
+2024-8-6 18:48:32-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/5eafd15f0e05a.png)})
+2024-8-6 18:48:32-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/splash.png)})
+2024-8-6 18:48:32-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/juzheng.png)})
+2024-8-6 18:48:32-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/f7c4e88f.png)})
+2024-8-6 18:48:32-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/timebox.png)})
+2024-8-6 18:48:32-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/package.png)})
+2024-8-6 18:48:32-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/zhishipai.png)})
+2024-8-6 18:48:32-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/finger1.png)})
+2024-8-6 18:48:32-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/xianjin.png)})
+2024-8-6 18:48:32-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/bbb.png)})
+2024-8-6 18:48:32-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/huluobo.png)})
+2024-8-6 18:48:32-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/jiasu_img.png)})
+2024-8-6 18:48:32-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/ic_increase_xiao@2x.png)})
+2024-8-6 18:48:32-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/wanfa.png)})
+2024-8-6 18:48:32-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/bg.png)})
+2024-8-6 18:48:32-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/jinbi.png)})
+2024-8-6 18:48:32-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/weixin.png)})
+2024-8-6 18:48:32-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/txtt_img@2x.png)})
+2024-8-6 18:48:32-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/box1.png)})
+2024-8-6 18:48:32-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/bbbbb.png)})
+2024-8-6 18:48:32-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/music.png)})
+2024-8-6 18:48:32-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/btn.mp3)})
+2024-8-6 18:48:32-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/1937.mp3)})
+2024-8-6 18:48:33-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/scene/main.scene)})
+2024-8-6 18:48:33-debug: // ---- build task Build the grouped json and scatter files to the specified location ---- (342ms)
+2024-8-6 18:48:33-debug: run build task Build the grouped json and scatter files to the specified location success in 342 ms √50%
+2024-8-6 18:48:33-debug: // ---- build task Compress zip bundle ----
+2024-8-6 18:48:33-debug: Compress zip bundle start50%
+2024-8-6 18:48:33-debug: Process: heapTotal 210.87MB heapUsed 201.35MB rss 515.72MB
+2024-8-6 18:48:33-debug: // ---- build task Compress zip bundle ---- (1ms)
+2024-8-6 18:48:33-debug: run build task Compress zip bundle success in 1 ms √57%
+2024-8-6 18:48:33-debug: Process: heapTotal 210.87MB heapUsed 201.40MB rss 515.72MB
+2024-8-6 18:48:33-debug: // ---- build task Build script ----
+2024-8-6 18:48:33-debug: Build script start57%
+2024-8-6 18:48:33-warn: Browserslist: caniuse-lite is outdated. Please run:npx browserslist@latest --update-db
+2024-8-6 18:48:33-warn: Browserslist: caniuse-lite is outdated. Please run:npx browserslist@latest --update-dbWhy you should do it regularly:https://github.com/browserslist/browserslist#browsers-data-updating
+2024-8-6 18:48:46-debug: Build project script start...57%
+2024-8-6 18:48:46-debug: Process: heapTotal 220.02MB heapUsed 213.25MB rss 525.68MB
+2024-8-6 18:48:46-log: Run build task(build-script) in child, see: chrome://inspect/#devices
+2024-8-6 18:48:47-log: [build-script]enter sub process 3008, D:\cocos-dashboard-editors\Creator\3.6.1\CocosCreator.exe,D:\cocos-dashboard-editors\Creator\3.6.1\resources\app.asar\builtin\builder\static\sub-process-index
+2024-8-6 18:48:51-warn: [build-script][[Build.Script.Rollup]] Circular dependency: file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/genPlant.ts -> file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/main.ts -> file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/genPlant.ts
+2024-8-6 18:48:51-warn: [build-script]Browserslist: caniuse-lite is outdated. Please run:npx browserslist@latest --update-dbWhy you should do it regularly:https://github.com/browserslist/browserslist#browsers-data-updating
+2024-8-6 18:48:55-debug: excute-script over with build-script 9313ms
+2024-8-6 18:48:55-debug: Copy externalScripts success!
+2024-8-6 18:48:55-debug: Build project script in (9338 ms) √57%
+2024-8-6 18:48:55-debug: Process: heapTotal 221.02MB heapUsed 212.84MB rss 526.13MB
+2024-8-6 18:48:55-debug: Build engine start...57%
+2024-8-6 18:48:55-debug: Engine cache ({link(C:\Users\ADMINI~1\AppData\Local\Temp\CocosCreator\3.6.1\builder\engine\fde329c401c641771bff368eaccc979a)}) does not exist.
+2024-8-6 18:48:55-log: Run build task(build-engine) in child, see: chrome://inspect/#devices
+2024-8-6 18:48:56-log: [build-engine]enter sub process 17248, D:\cocos-dashboard-editors\Creator\3.6.1\CocosCreator.exe,D:\cocos-dashboard-editors\Creator\3.6.1\resources\app.asar\builtin\builder\static\sub-process-index
+2024-8-6 18:48:59-log: [build-engine]Build-engine options: {  "engine": "D:\\cocos-dashboard-editors\\Creator\\3.6.1\\resources\\resources\\3d\\engine",  "platform": "HTML5",  "moduleFormat": 2,  "compress": true,  "split": false,  "ammoJsWasm": "fallback",  "assetURLFormat": "runtime-resolved",  "noDeprecatedFeatures": false,  "engineName": "cocos-js",  "sourceMaps": false,  "features": [    "2d",    "animation",    "audio",    "base",    "dragon-bones",    "gfx-webgl",    "gfx-webgl2",    "intersection-2d",    "marionette",    "particle-2d",    "physics-2d-box2d",    "profiler",    "skeletal-animation",    "spine",    "tiled-map",    "tween",    "ui",    "video",    "webview",    "xr"  ],  "loose": true,  "mode": "BUILD",  "flags": {    "DEBUG": false,    "UI_GPU_DRIVEN": false  },  "name": "cocos-js",  "incremental": "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\CocosCreator\\3.6.1\\builder\\engine\\fde329c401c641771bff368eaccc979a.watch-files.json",  "out": "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\CocosCreator\\3.6.1\\builder\\engine\\fde329c401c641771bff368eaccc979a",  "buildTimeConstants": {    "HTML5": true,    "NATIVE": false,    "WECHAT": false,    "BAIDU": false,    "XIAOMI": false,    "ALIPAY": false,    "BYTEDANCE": false,    "OPPO": false,    "VIVO": false,    "HUAWEI": false,    "COCOSPLAY": false,    "QTT": false,    "LINKSURE": false,    "EDITOR": false,    "PREVIEW": false,    "BUILD": true,    "TEST": false,    "DEBUG": false,    "SERVER_MODE": false,    "DEV": false,    "MINIGAME": false,    "RUNTIME_BASED": false,    "SUPPORT_JIT": true,    "JSB": false,    "NOT_PACK_PHYSX_LIBS": false,    "NET_MODE": 0  },  "metaFile": "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\CocosCreator\\3.6.1\\builder\\engine\\fde329c401c641771bff368eaccc979a.meta\\meta.json"}
+2024-8-6 18:48:59-log: [build-engine]Module source "internal-constants":function tryDefineGlobal (name, value) {    const _global = typeof window === 'undefined' ? global : window;    if (typeof _global[name] === 'undefined') {        return (_global[name] = value);    } else {        // eslint-disable-next-line @typescript-eslint/no-unsafe-return        return _global[name];    }}export const HTML5 = true;export const NATIVE = false;export const WECHAT = false;tryDefineGlobal('CC_WECHAT', false);export const BAIDU = false;tryDefineGlobal('CC_BAIDU', false);export const XIAOMI = false;tryDefineGlobal('CC_XIAOMI', false);export const ALIPAY = false;tryDefineGlobal('CC_ALIPAY', false);export const BYTEDANCE = false;tryDefineGlobal('CC_BYTEDANCE', false);export const OPPO = false;tryDefineGlobal('CC_OPPO', false);export const VIVO = false;tryDefineGlobal('CC_VIVO', false);export const HUAWEI = false;tryDefineGlobal('CC_HUAWEI', false);export const COCOSPLAY = false;tryDefineGlobal('CC_COCOSPLAY', false);export const QTT = false;tryDefineGlobal('CC_QTT', false);export const LINKSURE = false;tryDefineGlobal('CC_LINKSURE', false);export const EDITOR = false;tryDefineGlobal('CC_EDITOR', false);export const PREVIEW = false;tryDefineGlobal('CC_PREVIEW', false);export const BUILD = true;tryDefineGlobal('CC_BUILD', true);export const TEST = false;tryDefineGlobal('CC_TEST', false);export const DEBUG = false;tryDefineGlobal('CC_DEBUG', false);export const SERVER_MODE = false;export const DEV = false;tryDefineGlobal('CC_DEV', false);export const MINIGAME = false;tryDefineGlobal('CC_MINIGAME', false);export const RUNTIME_BASED = false;tryDefineGlobal('CC_RUNTIME_BASED', false);export const SUPPORT_JIT = true;tryDefineGlobal('CC_SUPPORT_JIT', true);export const JSB = false;tryDefineGlobal('CC_JSB', false);export const NOT_PACK_PHYSX_LIBS = false;export const NET_MODE = 0;
+2024-8-6 18:48:59-log: [build-engine]Module source "cc":export * from 'D:\\cocos-dashboard-editors\\Creator\\3.6.1\\resources\\resources\\3d\\engine\\exports\\2d.ts';export * from 'D:\\cocos-dashboard-editors\\Creator\\3.6.1\\resources\\resources\\3d\\engine\\exports\\animation.ts';export * from 'D:\\cocos-dashboard-editors\\Creator\\3.6.1\\resources\\resources\\3d\\engine\\exports\\audio.ts';export * from 'D:\\cocos-dashboard-editors\\Creator\\3.6.1\\resources\\resources\\3d\\engine\\exports\\base.ts';export * from 'D:\\cocos-dashboard-editors\\Creator\\3.6.1\\resources\\resources\\3d\\engine\\exports\\dragon-bones.ts';export * from 'D:\\cocos-dashboard-editors\\Creator\\3.6.1\\resources\\resources\\3d\\engine\\exports\\gfx-webgl.ts';export * from 'D:\\cocos-dashboard-editors\\Creator\\3.6.1\\resources\\resources\\3d\\engine\\exports\\gfx-webgl2.ts';export * from 'D:\\cocos-dashboard-editors\\Creator\\3.6.1\\resources\\resources\\3d\\engine\\exports\\intersection-2d.ts';export * from 'D:\\cocos-dashboard-editors\\Creator\\3.6.1\\resources\\resources\\3d\\engine\\exports\\particle-2d.ts';export * from 'D:\\cocos-dashboard-editors\\Creator\\3.6.1\\resources\\resources\\3d\\engine\\exports\\physics-2d-box2d.ts';export * from 'D:\\cocos-dashboard-editors\\Creator\\3.6.1\\resources\\resources\\3d\\engine\\exports\\physics-2d-framework.ts';export * from 'D:\\cocos-dashboard-editors\\Creator\\3.6.1\\resources\\resources\\3d\\engine\\exports\\profiler.ts';export * from 'D:\\cocos-dashboard-editors\\Creator\\3.6.1\\resources\\resources\\3d\\engine\\exports\\skeletal-animation.ts';export * from 'D:\\cocos-dashboard-editors\\Creator\\3.6.1\\resources\\resources\\3d\\engine\\exports\\spine.ts';export * from 'D:\\cocos-dashboard-editors\\Creator\\3.6.1\\resources\\resources\\3d\\engine\\exports\\tiled-map.ts';export * from 'D:\\cocos-dashboard-editors\\Creator\\3.6.1\\resources\\resources\\3d\\engine\\exports\\tween.ts';export * from 'D:\\cocos-dashboard-editors\\Creator\\3.6.1\\resources\\resources\\3d\\engine\\exports\\ui.ts';export * from 'D:\\cocos-dashboard-editors\\Creator\\3.6.1\\resources\\resources\\3d\\engine\\exports\\video.ts';export * from 'D:\\cocos-dashboard-editors\\Creator\\3.6.1\\resources\\resources\\3d\\engine\\exports\\webview.ts';export * from 'D:\\cocos-dashboard-editors\\Creator\\3.6.1\\resources\\resources\\3d\\engine\\exports\\xr.ts';
+2024-8-6 18:48:59-warn: [build-engine]Browserslist: caniuse-lite is outdated. Please run:npx browserslist@latest --update-dbWhy you should do it regularly:https://github.com/browserslist/browserslist#browsers-data-updating
+2024-8-6 18:49:00-log: [build-engine]Redirect module internal:native to D:\cocos-dashboard-editors\Creator\3.6.1\resources\resources\3d\engine\cocos\native-binding\impl.ts
+2024-8-6 18:49:02-log: [build-engine]Redirect module pal/system-info to D:\cocos-dashboard-editors\Creator\3.6.1\resources\resources\3d\engine\pal\system-info\web\system-info.ts
+2024-8-6 18:49:03-log: [build-engine]Redirect module pal/env to D:\cocos-dashboard-editors\Creator\3.6.1\resources\resources\3d\engine\pal\env\web\env.ts
+2024-8-6 18:49:03-log: [build-engine]Redirect module pal/pacer to D:\cocos-dashboard-editors\Creator\3.6.1\resources\resources\3d\engine\pal\pacer\pacer-web.ts
+2024-8-6 18:49:04-log: [build-engine]Redirect module pal/input to D:\cocos-dashboard-editors\Creator\3.6.1\resources\resources\3d\engine\pal\input\web\index.ts
+2024-8-6 18:49:04-log: [build-engine]Redirect module pal/audio to D:\cocos-dashboard-editors\Creator\3.6.1\resources\resources\3d\engine\pal\audio\web\player.ts
+2024-8-6 18:49:07-log: [build-engine]Redirect module pal/screen-adapter to D:\cocos-dashboard-editors\Creator\3.6.1\resources\resources\3d\engine\pal\screen-adapter\web\screen-adapter.ts
+2024-8-6 18:49:07-log: [build-engine]Redirect module pal/minigame to D:\cocos-dashboard-editors\Creator\3.6.1\resources\resources\3d\engine\pal\minigame\non-minigame.ts
+2024-8-6 18:49:08-log: [build-engine]Rollup warning 'THIS_IS_UNDEFINED' is omitted for D:\cocos-dashboard-editors\Creator\3.6.1\resources\resources\3d\engine\cocos\spine\lib\spine-core.js
+2024-8-6 18:49:08-log: [build-engine]Rollup warning 'THIS_IS_UNDEFINED' is omitted for D:\cocos-dashboard-editors\Creator\3.6.1\resources\resources\3d\engine\cocos\spine\lib\spine-core.js
+2024-8-6 18:49:16-log: [build-engine]Rollup warning 'THIS_IS_UNDEFINED' is omitted for D:\cocos-dashboard-editors\Creator\3.6.1\resources\resources\3d\engine\node_modules\@cocos\dragonbones-js\out\dragonBones.js
+2024-8-6 18:49:16-log: [build-engine]Rollup warning 'THIS_IS_UNDEFINED' is omitted for D:\cocos-dashboard-editors\Creator\3.6.1\resources\resources\3d\engine\node_modules\@cocos\dragonbones-js\out\dragonBones.js
+2024-8-6 18:49:18-log: [build-engine]Redirect module D:\cocos-dashboard-editors\Creator\3.6.1\resources\resources\3d\engine\cocos\2d\renderer\native-2d.ts to D:\cocos-dashboard-editors\Creator\3.6.1\resources\resources\3d\engine\cocos\2d\renderer\native-2d-empty.ts
+2024-8-6 18:49:38-log: [build-engine]==== Performance ===={"# BUILD":[38400.98,326674848,423070756],"## generate module graph":[36445.364,307523440,403922408],"- plugin 0 (@cocos/build-engine|code-asset) - resolveId":[10.76330000000036,304104,819664280],"- plugin 1 (@cocos/build-engine|load-asset) - resolveId":[14.929400000000113,-4678796,819665516],"- plugin 1 (@cocos/build-engine|load-asset) - resolveId (async)":[56.430500000000336,3340772,819665904],"- plugin 2 (@cocos/build-engine|module-overrides) - resolveId":[12.65650000000019,317972,819666688],"- plugin 3 (virtual) - resolveId":[38.03980000000013,-6374124,819669984],"load modules":[387561.80309999984,12152188316,819690084],"- plugin 0 (@cocos/build-engine|code-asset) - load":[12.12250000000002,652736,798242796],"- plugin 0 (@cocos/build-engine|code-asset) - load (async)":[2.541499999999999,171092,798243080],"- plugin 1 (@cocos/build-engine|load-asset) - load":[2.650399999999996,182696,798243636],"- plugin 1 (@cocos/build-engine|load-asset) - load (async)":[2.2419999999999822,167564,798243920],"- plugin 2 (@cocos/build-engine|module-overrides) - load":[7.4956000000000005,249108,798244544],"- plugin 3 (virtual) - load":[2.335699999999989,57456,798244936],"- plugin 6 (json) - transform":[5.4173999999999936,625628,819695084],"- plugin 7 (commonjs) - transform":[654.4125000000003,14980468,819698000],"- plugin 8 (babel) - transform":[372.9813,8759448,819732448],"generate ast":[1289.0919000000004,28355168,819578824],"analyse ast":[1148.1735999999994,86845512,819657468],"- plugin 4 (ts-paths) - resolveId":[10.061200000000103,290068,819670768],"- plugin 5 (node-resolve) - resolveId":[59.80560000000006,9752968,819675080],"- plugin 5 (node-resolve) - resolveId (async)":[227341.03250000006,-52059770512,819675364],"- plugin 5 (node-resolve) - load":[2.13869999999999,56780,798245368],"- plugin 7 (commonjs) - load":[6.449700000000003,628904,798246564],"- plugin 8 (babel) - load":[312.0884000000001,5044840,798246956],"- plugin 8 (babel) - transform (async)":[27754.04029999997,719674612,819531516],"- plugin 7 (commonjs) - resolveId":[3.268000000000001,41588,819680308],"- plugin 8 (babel) - resolveId":[1.3933999999999973,26196,819680700],"- plugin 7 (commonjs) - resolveId (async)":[10795.0689,-189056840,657422384],"- plugin 7 (commonjs) - load (async)":[639.1559,13718700,671150240],"## sort modules":[403.1321,14204336,418127180],"## mark included statements":[1552.3031,4942076,423069644],"treeshaking pass 1":[614.5643,4770352,425686488],"treeshaking pass 2":[345.7169,2484420,428171288],"treeshaking pass 3":[172.2339,-6577440,421594228],"treeshaking pass 4":[109.6311,2685052,424279660],"treeshaking pass 5":[82.3874,-399320,423880720],"treeshaking pass 6":[71.8671,5461636,429342736],"treeshaking pass 7":[71.8305,-3108488,426234628],"treeshaking pass 8":[73.3729,-3165736,423069272]}====             ====
+2024-8-6 18:50:05-debug: excute-script over with build-engine 69800ms
+2024-8-6 18:50:05-debug: Build engine in (69828 ms) √57%
+2024-8-6 18:50:05-debug: // ---- build task Build script ---- (92141ms)
+2024-8-6 18:50:05-debug: run build task Build script success in 92141 ms √63%
+2024-8-6 18:50:05-debug: // ---- build task Add md5 suffix to assets ----
+2024-8-6 18:50:05-debug: Process: heapTotal 220.02MB heapUsed 212.59MB rss 520.88MB
+2024-8-6 18:50:05-debug: Add md5 suffix to assets start63%
+2024-8-6 18:50:05-debug: // ---- build task Add md5 suffix to assets ---- (2ms)
+2024-8-6 18:50:05-debug: run build task Add md5 suffix to assets success in 2 ms √73%
+2024-8-6 18:50:05-debug: Init settings and config start73%
+2024-8-6 18:50:05-debug: Process: heapTotal 220.02MB heapUsed 212.64MB rss 520.91MB
+2024-8-6 18:50:05-debug: // ---- build task Init settings and config ----
+2024-8-6 18:50:05-debug: // ---- build task Init settings and config ---- (1ms)
+2024-8-6 18:50:05-debug: run build task Init settings and config success in 1 ms √74%
+2024-8-6 18:50:05-debug: // ---- build task builder.tasks.settings.macro ----
+2024-8-6 18:50:05-debug: Process: heapTotal 220.02MB heapUsed 212.70MB rss 520.91MB
+2024-8-6 18:50:05-debug: builder.tasks.settings.macro does not defined in i18n
+2024-8-6 18:50:05-debug: builder.tasks.settings.macro start74%
+2024-8-6 18:50:05-debug: // ---- build task builder.tasks.settings.macro ---- (14ms)
+2024-8-6 18:50:05-debug: run build task builder.tasks.settings.macro success in 14 ms √74%
+2024-8-6 18:50:05-debug: Sort some build options to settings.json start74%
+2024-8-6 18:50:05-debug: // ---- build task Sort some build options to settings.json ----
+2024-8-6 18:50:05-debug: Process: heapTotal 220.02MB heapUsed 212.75MB rss 520.92MB
+2024-8-6 18:50:05-debug: // ---- build task Sort some build options to settings.json ---- (17ms)
+2024-8-6 18:50:05-debug: run build task Sort some build options to settings.json success in 17 ms √75%
+2024-8-6 18:50:05-debug: // ---- build task custom joint texture layouts ----
+2024-8-6 18:50:05-debug: custom joint texture layouts start75%
+2024-8-6 18:50:05-debug: Process: heapTotal 220.02MB heapUsed 212.83MB rss 520.93MB
+2024-8-6 18:50:05-debug: // ---- build task custom joint texture layouts ---- (12ms)
+2024-8-6 18:50:05-debug: run build task custom joint texture layouts success in 12 ms √76%
+2024-8-6 18:50:05-debug: Process: heapTotal 220.02MB heapUsed 212.88MB rss 520.94MB
+2024-8-6 18:50:05-debug: custom joint physics start76%
+2024-8-6 18:50:05-debug: // ---- build task custom joint physics ----
+2024-8-6 18:50:05-debug: run build task custom joint physics success in 0 ms √76%
+2024-8-6 18:50:05-debug: Fill script data to settings start76%
+2024-8-6 18:50:05-debug: // ---- build task Fill script data to settings ----
+2024-8-6 18:50:05-debug: Process: heapTotal 220.02MB heapUsed 212.92MB rss 520.94MB
+2024-8-6 18:50:05-debug: // ---- build task Fill script data to settings ---- (1ms)
+2024-8-6 18:50:05-debug: run build task Fill script data to settings success in 1 ms √77%
+2024-8-6 18:50:05-debug: Fill scene data to settings start77%
+2024-8-6 18:50:05-debug: // ---- build task Fill scene data to settings ----
+2024-8-6 18:50:05-debug: Process: heapTotal 220.02MB heapUsed 212.97MB rss 520.95MB
+2024-8-6 18:50:05-debug: // ---- build task Fill scene data to settings ---- (1ms)
+2024-8-6 18:50:05-debug: run build task Fill scene data to settings success in 1 ms √77%
+2024-8-6 18:50:05-debug: Process: heapTotal 220.02MB heapUsed 213.01MB rss 520.95MB
+2024-8-6 18:50:05-debug: Organize assets groups，generate packedAssets and rawAssets data start77%
+2024-8-6 18:50:05-debug: // ---- build task Organize assets groups，generate packedAssets and rawAssets data ----
+2024-8-6 18:50:05-debug: // ---- build task Organize assets groups，generate packedAssets and rawAssets data ---- (1ms)
+2024-8-6 18:50:05-debug: run build task Organize assets groups，generate packedAssets and rawAssets data success in 1 ms √78%
+2024-8-6 18:50:05-debug: Generate md5AssetsMap from suffixMap to settings start78%
+2024-8-6 18:50:05-debug: // ---- build task Generate md5AssetsMap from suffixMap to settings ----
+2024-8-6 18:50:05-debug: options.md5Cache is false.
+2024-8-6 18:50:05-debug: Process: heapTotal 220.02MB heapUsed 213.17MB rss 520.96MB
+2024-8-6 18:50:05-debug: // ---- build task Generate md5AssetsMap from suffixMap to settings ---- (1ms)
+2024-8-6 18:50:05-debug: run build task Generate md5AssetsMap from suffixMap to settings success in 1 ms √78%
+2024-8-6 18:50:05-debug: // ---- build task web-mobile：onBeforeCompressSettings ----
+2024-8-6 18:50:05-debug: web-mobile:(onBeforeCompressSettings) start...78%
+2024-8-6 18:50:05-debug: Process: heapTotal 220.02MB heapUsed 213.22MB rss 520.97MB
+2024-8-6 18:50:05-debug: web-mobile:(onBeforeCompressSettings) in 0 ms81%
+2024-8-6 18:50:05-debug: cocos-service:(onBeforeCompressSettings) start...81%
+2024-8-6 18:50:05-debug: Process: heapTotal 220.02MB heapUsed 213.27MB rss 520.97MB
+2024-8-6 18:50:05-debug: // ---- build task cocos-service：onBeforeCompressSettings ----
+2024-8-6 18:50:05-debug: // ---- build task cocos-service：onBeforeCompressSettings ---- (16ms)
+2024-8-6 18:50:05-debug: cocos-service:(onBeforeCompressSettings) in 16 ms83%
+2024-8-6 18:50:05-debug: Process: heapTotal 220.02MB heapUsed 213.33MB rss 520.97MB
+2024-8-6 18:50:05-debug: Build import-map.json start83%
+2024-8-6 18:50:05-debug: // ---- build task Build import-map.json ----
+2024-8-6 18:50:05-debug: // ---- build task Build import-map.json ---- (2ms)
+2024-8-6 18:50:05-debug: run build task Build import-map.json success in 2 ms √84%
+2024-8-6 18:50:05-debug: // ---- build task Compress settings.json and config.json ----
+2024-8-6 18:50:05-debug: Process: heapTotal 220.02MB heapUsed 213.38MB rss 520.97MB
+2024-8-6 18:50:05-debug: Compress settings.json and config.json start84%
+2024-8-6 18:50:05-debug: // ---- build task Compress settings.json and config.json ---- (5ms)
+2024-8-6 18:50:05-debug: run build task Compress settings.json and config.json success in 5 ms √85%
+2024-8-6 18:50:05-debug: Save config.json start85%
+2024-8-6 18:50:05-debug: // ---- build task Save config.json ----
+2024-8-6 18:50:05-debug: Process: heapTotal 220.27MB heapUsed 212.92MB rss 520.55MB
+2024-8-6 18:50:05-debug: // ---- build task Save config.json ---- (2ms)
+2024-8-6 18:50:05-debug: run build task Save config.json success in 2 ms √86%
+2024-8-6 18:50:05-debug: Process: heapTotal 220.27MB heapUsed 213.02MB rss 520.63MB
+2024-8-6 18:50:05-debug: Save Settings.json start86%
+2024-8-6 18:50:05-debug: // ---- build task Save Settings.json ----
+2024-8-6 18:50:05-debug: // ---- build task Save Settings.json ---- (1ms)
+2024-8-6 18:50:05-debug: Sort build template start87%
+2024-8-6 18:50:05-debug: run build task Save Settings.json success in 1 ms √87%
+2024-8-6 18:50:05-debug: Process: heapTotal 220.27MB heapUsed 213.17MB rss 520.77MB
+2024-8-6 18:50:05-debug: // ---- build task Sort build template ----
+2024-8-6 18:50:05-debug: // ---- build task Sort build template ---- (103ms)
+2024-8-6 18:50:05-debug: run build task Sort build template success in 103 ms √88%
+2024-8-6 18:50:05-debug: // ---- build task cocos-service：onAfterCompressSettings ----
+2024-8-6 18:50:05-debug: cocos-service:(onAfterCompressSettings) start...88%
+2024-8-6 18:50:05-debug: Process: heapTotal 221.02MB heapUsed 214.21MB rss 521.64MB
+2024-8-6 18:50:05-debug: // ---- build task cocos-service：onAfterCompressSettings ---- (11ms)
+2024-8-6 18:50:05-debug: cocos-service:(onAfterCompressSettings) in 11 ms90%
+2024-8-6 18:50:05-debug: Process: heapTotal 221.02MB heapUsed 214.19MB rss 521.49MB
+2024-8-6 18:50:05-debug: // ---- build task web-mobile：onAfterBuild ----
+2024-8-6 18:50:05-debug: web-mobile:(onAfterBuild) start...90%
+2024-8-6 18:50:05-debug: // ---- build task web-mobile：onAfterBuild ---- (65ms)
+2024-8-6 18:50:05-debug: // ---- build task cocos-service：onAfterBuild ----
+2024-8-6 18:50:05-debug: Process: heapTotal 221.02MB heapUsed 214.38MB rss 521.69MB
+2024-8-6 18:50:05-debug: cocos-service:(onAfterBuild) start...92%
+2024-8-6 18:50:05-debug: web-mobile:(onAfterBuild) in 65 ms92%
+2024-8-6 18:50:05-debug: // ---- build task cocos-service：onAfterBuild ---- (14ms)
+2024-8-6 18:50:05-debug: cocos-service:(onAfterBuild) in 14 ms94%
+2024-8-6 18:50:05-debug: builder:build-project-total (94668ms)
+2024-8-6 18:50:05-debug: build success in 94668 ms!
+2024-8-6 18:50:05-debug: ================================ Build Task (web-mobile) Finished in (94687)ms ================================
+2024-8-6 18:50:09-debug: // ---- builder:run-build-stage-run ----
+2024-8-6 18:50:09-debug: web-mobile:(run) start...
+2024-8-6 18:50:09-debug: init options success
+2024-8-6 18:50:09-debug: // ---- build task web-mobile：run ----
+2024-8-6 18:50:09-debug: web-mobile:(run) in null ms √
+2024-8-6 18:50:09-log: [task:run]: success!
+2024-8-6 18:50:47-debug: // ---- builder:run-build-stage-run ----
+2024-8-6 18:50:47-debug: web-mobile:(run) start...
+2024-8-6 18:50:47-debug: // ---- build task web-mobile：run ----
+2024-8-6 18:50:47-debug: init options success
+2024-8-6 18:50:47-debug: web-mobile:(run) in null ms √
+2024-8-6 18:50:47-log: [task:run]: success!
+2024-8-6 18:53:32-debug: =================================== Build Task (web-mobile) Start ================================
+2024-8-6 18:53:32-debug: Start build task, options:{"name":"PlantStore","platform":"web-mobile","buildPath":"project://build","debug":false,"md5Cache":false,"skipCompressTexture":false,"sourceMaps":false,"polyfills":{"asyncFunctions":true,"coreJs":true},"experimentalEraseModules":false,"useBuiltinServer":false,"mainBundleIsRemote":false,"mainBundleCompressionType":"none","replaceSplashScreen":false,"startScene":"5a6f4efe-edd1-4c9d-adc3-c28f8d58012d","outputName":"web-mobile","scenes":[{"url":"db://assets/scene/main.scene","uuid":"5a6f4efe-edd1-4c9d-adc3-c28f8d58012d","inBundle":false}],"windows":[],"packages":{"web-mobile":{"orientation":"portrait","__version__":"1.0.1","embedWebDebugger":false},"cocos-service":{"configID":"d16383","services":[{"service_id":"278","service_component_name":"service-sdkhub","builder":"C:\\Users\\admin\\.CocosCreator\\.service\\sdkhub\\builder\\builder.js","enable":false,"params":{"configId":"5c53db","plugin_version":"2.0.7_0.2.0"}}],"__version__":"3.0.4","sdkHubConfigID":"5c53db","sdkHubConfig":{"id":"5c53db","name":"HUAWEI  AppGallery Connect","platform":"3","channelID":"161221","channelName":"HUAWEI  AppGallery Connect","remarks":"HUAWEI  AppGallery Connect","plugins":[{"hasParam":false,"pParam":{},"pId":"2412","pName":"HUAWEI HMS","packageName":"huawei-hms","pType":30,"pUseType":30,"hasLocal":true,"hasUpdate":false,"requireParam":true,"pVersion":"2.0.3_6.3.0","isInstall":false,"installProgress":true}]}}},"__version__":"1.3.3","web-mobile":[]}
+2024-8-6 18:53:32-debug: Build with Cocos Creator 3.6.1
+2024-8-6 18:53:32-debug: // ---- build task cocos-service：onBeforeBuild ----
+2024-8-6 18:53:32-debug: cocos-service:(onBeforeBuild) start...0%
+2024-8-6 18:53:32-debug: Process: heapTotal 222.60MB heapUsed 214.56MB rss 524.51MB
+2024-8-6 18:53:32-debug: // ---- build task cocos-service：onBeforeBuild ---- (14ms)
+2024-8-6 18:53:32-debug: cocos-service:(onBeforeBuild) in 14 ms2%
+2024-8-6 18:53:32-debug: Query all assets info in project
+2024-8-6 18:53:32-debug: init custom config: keepNodeUuid: false, useCache: true
+2024-8-6 18:53:32-debug: BuildAssetLibrary query-assets with assets 395
+2024-8-6 18:53:32-debug:   Number of all scenes: 2
+2024-8-6 18:53:32-debug:   Number of all scripts: 5
+2024-8-6 18:53:32-debug: BuildAssetLibrary initialized with asset 636!
+2024-8-6 18:53:32-debug:   Number of other assets: 759
+2024-8-6 18:53:32-debug: // ---- build task web-mobile：onAfterInit ----
+2024-8-6 18:53:32-debug: Process: heapTotal 223.00MB heapUsed 215.74MB rss 526.60MB
+2024-8-6 18:53:32-debug: web-mobile:(onAfterInit) start...2%
+2024-8-6 18:53:33-debug: // ---- build task web-mobile：onAfterInit ---- (77ms)
+2024-8-6 18:53:33-debug: // ---- build task cocos-service：onAfterInit ----
+2024-8-6 18:53:33-debug: Process: heapTotal 223.50MB heapUsed 215.95MB rss 526.41MB
+2024-8-6 18:53:33-debug: cocos-service:(onAfterInit) start...4%
+2024-8-6 18:53:33-debug: web-mobile:(onAfterInit) in 77 ms4%
+2024-8-6 18:53:33-debug: // ---- build task cocos-service：onAfterInit ---- (13ms)
+2024-8-6 18:53:33-debug: cocos-service:(onAfterInit) in 13 ms7%
+2024-8-6 18:53:33-debug: localization-editor:(onAfterInit) start...7%
+2024-8-6 18:53:33-debug: // ---- build task localization-editor：onAfterInit ----
+2024-8-6 18:53:33-debug: Process: heapTotal 223.50MB heapUsed 216.01MB rss 526.47MB
+2024-8-6 18:53:33-debug: // ---- build task localization-editor：onAfterInit ---- (10ms)
+2024-8-6 18:53:33-debug: localization-editor:(onAfterInit) in 10 ms9%
+2024-8-6 18:53:33-debug: // ---- build task Reload project scripts ----
+2024-8-6 18:53:33-debug: Process: heapTotal 223.50MB heapUsed 216.06MB rss 526.52MB
+2024-8-6 18:53:33-debug: Reload project scripts start9%
+2024-8-6 18:53:33-debug: reload all scripts.
+2024-8-6 18:53:33-debug: Incremental keys: 
+2024-8-6 18:53:33-debug: Set detail map pack:///resolution-detail-map.json: {}
+2024-8-6 18:53:33-debug: Unregister timer
+2024-8-6 18:53:33-debug: Unregister genPlant
+2024-8-6 18:53:33-debug: Unregister scaleAction
+2024-8-6 18:53:33-debug: Invalidating 'pack:///chunks/d0/d0b282b9748ef7fc7d2e7bd647d71b0f7e84da53.js'
+2024-8-6 18:53:33-debug: Invalidating 'pack:///chunks/e9/e9133a6c3f9d1bb537e37718e48cd3d2079a4ce9.js'
+2024-8-6 18:53:33-debug: Invalidating 'pack:///chunks/7c/7c5545d0f1257a8181a07a5db294710fcae0d363.js'
+2024-8-6 18:53:33-debug: Invalidating 'pack:///chunks/57/57aa3a73746d22d6e6fea20d4c04eb5fca3e2f83.js'
+2024-8-6 18:53:33-debug: Invalidating 'pack:///chunks/35/35a27f3d1725ee4b4a910b166a9876852bbc7831.js'
+2024-8-6 18:53:33-debug: Invalidating 'pack:///chunks/0d/0d5541f1fd3a71e0d0240c5e19547531a0a3f398.js'
+2024-8-6 18:53:33-debug: [[Executor]] Module "pack:///chunks/d0/d0b282b9748ef7fc7d2e7bd647d71b0f7e84da53.js" loaded.
+2024-8-6 18:53:33-debug: [[Executor]] Module "pack:///chunks/7c/7c5545d0f1257a8181a07a5db294710fcae0d363.js" loaded.
+2024-8-6 18:53:33-debug: Invalidating 'pack:///chunks/84/84741ad843cea9a440c5d8c2d379669b6551400d.js'
+2024-8-6 18:53:33-debug: [[Executor]] Module "pack:///chunks/84/84741ad843cea9a440c5d8c2d379669b6551400d.js" loaded.
+2024-8-6 18:53:33-debug: [[Executor]] Module "pack:///chunks/35/35a27f3d1725ee4b4a910b166a9876852bbc7831.js" loaded.
+2024-8-6 18:53:33-debug: [[Executor]] Register timer
+2024-8-6 18:53:33-debug: [[Executor]] Module "pack:///chunks/57/57aa3a73746d22d6e6fea20d4c04eb5fca3e2f83.js" loaded.
+2024-8-6 18:53:33-debug: [[Executor]] Register main
+2024-8-6 18:53:33-debug: [[Executor]] Module "pack:///chunks/26/26600e29beefbc76c5117e0e3dc5c6b5ba21e66b.js" loaded.
+2024-8-6 18:53:33-debug: [[Executor]] Register genPlant
+2024-8-6 18:53:33-debug: Unregister main
+2024-8-6 18:53:33-debug: [[Executor]] Module "pack:///chunks/e9/e9133a6c3f9d1bb537e37718e48cd3d2079a4ce9.js" loaded.
+2024-8-6 18:53:33-debug: Invalidating 'pack:///chunks/26/26600e29beefbc76c5117e0e3dc5c6b5ba21e66b.js'
+2024-8-6 18:53:33-debug: [[Executor]] Module "pack:///chunks/0d/0d5541f1fd3a71e0d0240c5e19547531a0a3f398.js" loaded.
+2024-8-6 18:53:33-debug: [[Executor]] Module "pack:///chunks/7c/7c5545d0f1257a8181a07a5db294710fcae0d363.js" loaded.
+2024-8-6 18:53:33-warn: The type of "scaleAction.isChild" must be CCBoolean, not Boolean.
+2024-8-6 18:53:33-debug: [[Executor]] Register scaleAction
+2024-8-6 18:53:33-debug: // ---- build task Reload project scripts ---- (21ms)
+2024-8-6 18:53:33-debug: Query asset bundle start10%
+2024-8-6 18:53:33-debug: run build task Reload project scripts success in 21 ms √10%
+2024-8-6 18:53:33-debug: // ---- build task Query asset bundle ----
+2024-8-6 18:53:33-debug: Process: heapTotal 223.75MB heapUsed 216.07MB rss 526.48MB
+2024-8-6 18:53:33-debug: // ---- build task Query asset bundle ---- (12ms)
+2024-8-6 18:53:33-debug: run build task Query asset bundle success in 12 ms √11%
+2024-8-6 18:53:33-debug: Process: heapTotal 223.75MB heapUsed 216.14MB rss 526.53MB
+2024-8-6 18:53:33-debug: Query and organize assets start11%
+2024-8-6 18:53:33-debug: // ---- build task Query and organize assets ----
+2024-8-6 18:53:33-debug: Query preload assets from cc.config.json: 60f7195c-ec2a-45eb-ba94-8955f60e81d0,1c02ae6f-4492-4915-b8f8-7492a3b1e4cd,810e96e4-e456-4468-9b59-f4e8f39732c0,efe8e2a3-eace-427b-b4f1-cb8a937ec77d,e9aa9a3e-5b2b-4ac7-a2c7-073de2b2b24f,8bbdbcdd-5cd4-4100-b6d5-b7c9625b6107,50f4348b-c883-4e2f-8f11-ce233b859fa1,fda095cb-831d-4601-ad94-846013963de8,f92806d7-1768-443f-afe8-12bcde84d0f0,dd3a144d-ab7f-41f0-82b8-2e43a090d496,f0416e68-0200-4b77-a926-4f9d16e494da,ff9be190-20a4-4e48-b68c-76e3c7cff085,970b0598-bcb0-4714-91fb-2e81440dccd8,bcd64cc6-2dd9-43f6-abbe-66318d332032,d930590d-bb92-4cc8-8bd1-23cd027f9edf,a3cd009f-0ab0-420d-9278-b9fdab939bbc,9361fd90-ba52-4f84-aa93-6e878fd576ca,871c3b6c-7379-419d-bda3-794b239ab90d,c27215d8-6835-4b68-bfbb-bdeac6100c04,b5d6115f-0370-4d7c-aad3-c194cc71cf98
+2024-8-6 18:53:33-debug: Number of scenes: 1
+2024-8-6 18:53:33-debug: Number of assets: 249
+2024-8-6 18:53:33-debug: Number of asset bundle: 3
+2024-8-6 18:53:33-debug: // ---- build task Query and organize assets ---- (49ms)
+2024-8-6 18:53:33-debug: run build task Query and organize assets success in 49 ms √13%
+2024-8-6 18:53:33-debug: Organize scripts start13%
+2024-8-6 18:53:33-debug: // ---- build task Organize scripts ----
+2024-8-6 18:53:33-debug: Process: heapTotal 224.50MB heapUsed 217.08MB rss 528.64MB
+2024-8-6 18:53:33-debug: sort script group...
+2024-8-6 18:53:33-debug: run build task Organize scripts success in 0 ms √14%
+2024-8-6 18:53:33-debug: Process: heapTotal 224.50MB heapUsed 217.12MB rss 528.65MB
+2024-8-6 18:53:33-debug: Organize texture compression tasks start14%
+2024-8-6 18:53:33-debug: // ---- build task Organize texture compression tasks ----
+2024-8-6 18:53:33-debug: Number of image-compress task: 0
+2024-8-6 18:53:33-debug: // ---- build task Organize texture compression tasks ---- (43ms)
+2024-8-6 18:53:33-debug: Group json start15%
+2024-8-6 18:53:33-debug: run build task Organize texture compression tasks success in 43 ms √15%
+2024-8-6 18:53:33-debug: // ---- build task Group json ----
+2024-8-6 18:53:33-debug: Process: heapTotal 224.50MB heapUsed 217.09MB rss 528.93MB
+2024-8-6 18:53:33-debug: Number of json group: 75
+2024-8-6 18:53:33-debug: // ---- build task Group json ---- (2ms)
+2024-8-6 18:53:33-debug: run build task Group json success in 2 ms √16%
+2024-8-6 18:53:33-debug: Process: heapTotal 224.50MB heapUsed 216.80MB rss 528.28MB
+2024-8-6 18:53:33-debug: Merging Texture2D json start16%
+2024-8-6 18:53:33-debug: // ---- build task Merging Texture2D json ----
+2024-8-6 18:53:33-debug: // ---- build task Merging Texture2D json ---- (4ms)
+2024-8-6 18:53:33-debug: run build task Merging Texture2D json success in 4 ms √18%
+2024-8-6 18:53:33-debug: Process: heapTotal 224.50MB heapUsed 216.95MB rss 528.43MB
+2024-8-6 18:53:33-debug: Sort import-map.json start18%
+2024-8-6 18:53:33-debug: // ---- build task Sort import-map.json ----
+2024-8-6 18:53:33-debug: // ---- build task Sort import-map.json ---- (1ms)
+2024-8-6 18:53:33-debug: run build task Sort import-map.json success in 1 ms √19%
+2024-8-6 18:53:33-debug: Process: heapTotal 224.50MB heapUsed 217.00MB rss 528.48MB
+2024-8-6 18:53:33-debug: web-mobile:(onBeforeBuildAssets) start...19%
+2024-8-6 18:53:33-debug: // ---- build task web-mobile：onBeforeBuildAssets ----
+2024-8-6 18:53:33-debug: web-mobile:(onBeforeBuildAssets) in 0 ms21%
+2024-8-6 18:53:33-debug: localization-editor:(onBeforeBuildAssets) start...21%
+2024-8-6 18:53:33-debug: // ---- build task localization-editor：onBeforeBuildAssets ----
+2024-8-6 18:53:33-debug: Process: heapTotal 224.50MB heapUsed 217.05MB rss 528.54MB
+2024-8-6 18:53:33-debug: // ---- build task localization-editor：onBeforeBuildAssets ---- (11ms)
+2024-8-6 18:53:33-debug: // ---- build task Build auto-atlas ----
+2024-8-6 18:53:33-debug: localization-editor:(onBeforeBuildAssets) in 11 ms23%
+2024-8-6 18:53:33-debug: Process: heapTotal 224.50MB heapUsed 217.10MB rss 528.59MB
+2024-8-6 18:53:33-debug: Build auto-atlas start23%
+2024-8-6 18:53:33-debug: Start collect pack info
+2024-8-6 18:53:33-debug: run build task Build auto-atlas success in 0 ms √30%
+2024-8-6 18:53:33-debug: Process: heapTotal 224.50MB heapUsed 217.16MB rss 528.64MB
+2024-8-6 18:53:33-debug: // ---- build task Compress Image ----
+2024-8-6 18:53:33-debug: Compress Image start30%
+2024-8-6 18:53:33-debug: // ---- build task Compress Image ---- (1ms)
+2024-8-6 18:53:33-debug: run build task Compress Image success in 1 ms √37%
+2024-8-6 18:53:33-debug: Copy the resource start37%
+2024-8-6 18:53:33-debug: // ---- build task Copy the resource ----
+2024-8-6 18:53:33-debug: Process: heapTotal 224.50MB heapUsed 217.20MB rss 528.69MB
+2024-8-6 18:53:33-debug: Asset Bundle(internal) handle assets: 20
+2024-8-6 18:53:33-debug: Asset Bundle(resources) handle assets: 227
+2024-8-6 18:53:33-debug: Asset Bundle(main) handle assets: 37
+2024-8-6 18:53:33-debug: // ---- build task Copy the resource ---- (53ms)
+2024-8-6 18:53:33-debug: run build task Copy the resource success in 53 ms √43%
+2024-8-6 18:53:33-debug: // ---- build task Build the grouped json and scatter files to the specified location ----
+2024-8-6 18:53:33-debug: Process: heapTotal 228.25MB heapUsed 217.07MB rss 530.51MB
+2024-8-6 18:53:33-debug: Build the grouped json and scatter files to the specified location start43%
+2024-8-6 18:53:33-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/ic_jine1@2x.png)})
+2024-8-6 18:53:33-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/fanqiezz.png)})
+2024-8-6 18:53:33-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/pengyouquan.png)})
+2024-8-6 18:53:33-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/txqran_btn@2x.png)})
+2024-8-6 18:53:33-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/1.png)})
+2024-8-6 18:53:33-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/lingqu.png)})
+2024-8-6 18:53:33-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/ic_fuzhi@2x.png)})
+2024-8-6 18:53:33-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/box.png)})
+2024-8-6 18:53:33-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/yinying.png)})
+2024-8-6 18:53:33-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/huluobozz.png)})
+2024-8-6 18:53:33-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/shouhuo.png)})
+2024-8-6 18:53:33-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/di.png)})
+2024-8-6 18:53:33-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/time.png)})
+2024-8-6 18:53:33-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/rongyaobang.png)})
+2024-8-6 18:53:33-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/ic_contact@2x.png)})
+2024-8-6 18:53:33-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/qiezi.png)})
+2024-8-6 18:53:33-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/hdqr_btn.png)})
+2024-8-6 18:53:33-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/morejinbi.png)})
+2024-8-6 18:53:33-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/daijinquan.png)})
+2024-8-6 18:53:33-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/2.png)})
+2024-8-6 18:53:33-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/3.png)})
+2024-8-6 18:53:33-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/6fcfce02.png)})
+2024-8-6 18:53:33-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/pingguo.png)})
+2024-8-6 18:53:33-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/5929e8.png)})
+2024-8-6 18:53:33-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/fenxiang.png)})
+2024-8-6 18:53:33-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/pingguozz.png)})
+2024-8-6 18:53:33-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/queding.png)})
+2024-8-6 18:53:33-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/store.png)})
+2024-8-6 18:53:33-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/jindou.png)})
+2024-8-6 18:53:33-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/gongxi.png)})
+2024-8-6 18:53:33-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/close.png)})
+2024-8-6 18:53:33-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/tixianbtn.png)})
+2024-8-6 18:53:33-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/zacibuy.png)})
+2024-8-6 18:53:33-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/e35ffe27-1121-4ca3-b927-b0394bd4c870.png)})
+2024-8-6 18:53:33-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/qiezizz.png)})
+2024-8-6 18:53:33-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/finger2.png)})
+2024-8-6 18:53:33-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/e5180a14.png)})
+2024-8-6 18:53:33-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/shangdian.png)})
+2024-8-6 18:53:33-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/pack.png)})
+2024-8-6 18:53:33-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/sjdlsrk_bg.png)})
+2024-8-6 18:53:33-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/paihangtou.png)})
+2024-8-6 18:53:33-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/phone.png)})
+2024-8-6 18:53:33-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/musicclose.png)})
+2024-8-6 18:53:33-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/fanqie.png)})
+2024-8-6 18:53:33-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/start.png)})
+2024-8-6 18:53:33-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/tujian.png)})
+2024-8-6 18:53:33-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/tudi.png)})
+2024-8-6 18:53:33-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/buy.png)})
+2024-8-6 18:53:33-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/jijin.png)})
+2024-8-6 18:53:33-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/hongbao.png)})
+2024-8-6 18:53:33-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/ppp.png)})
+2024-8-6 18:53:33-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/touxiangkuang.png)})
+2024-8-6 18:53:33-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/ddd.png)})
+2024-8-6 18:53:33-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/5eafd15f0e05a.png)})
+2024-8-6 18:53:33-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/box1.png)})
+2024-8-6 18:53:33-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/juzheng.png)})
+2024-8-6 18:53:33-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/splash.png)})
+2024-8-6 18:53:33-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/f7c4e88f.png)})
+2024-8-6 18:53:33-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/timebox.png)})
+2024-8-6 18:53:33-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/package.png)})
+2024-8-6 18:53:33-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/zhishipai.png)})
+2024-8-6 18:53:33-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/finger1.png)})
+2024-8-6 18:53:33-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/xianjin.png)})
+2024-8-6 18:53:33-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/qipao.png)})
+2024-8-6 18:53:33-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/bbb.png)})
+2024-8-6 18:53:33-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/huluobo.png)})
+2024-8-6 18:53:33-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/jiasu_img.png)})
+2024-8-6 18:53:33-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/bg.png)})
+2024-8-6 18:53:33-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/ic_increase_xiao@2x.png)})
+2024-8-6 18:53:33-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/jinbi.png)})
+2024-8-6 18:53:33-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/weixin.png)})
+2024-8-6 18:53:33-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/txtt_img@2x.png)})
+2024-8-6 18:53:33-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/music.png)})
+2024-8-6 18:53:33-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/wanfa.png)})
+2024-8-6 18:53:33-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/bbbbb.png)})
+2024-8-6 18:53:33-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/btn.mp3)})
+2024-8-6 18:53:33-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/resources/1937.mp3)})
+2024-8-6 18:53:33-debug: getSerializedJSON: Use cache serialized JSON of asset ({asset(db://assets/scene/main.scene)})
+2024-8-6 18:53:33-debug: // ---- build task Build the grouped json and scatter files to the specified location ---- (284ms)
+2024-8-6 18:53:33-debug: run build task Build the grouped json and scatter files to the specified location success in 284 ms √50%
+2024-8-6 18:53:33-debug: Process: heapTotal 228.62MB heapUsed 217.87MB rss 532.66MB
+2024-8-6 18:53:33-debug: Compress zip bundle start50%
+2024-8-6 18:53:33-debug: // ---- build task Compress zip bundle ----
+2024-8-6 18:53:33-debug: // ---- build task Compress zip bundle ---- (1ms)
+2024-8-6 18:53:33-debug: run build task Compress zip bundle success in 1 ms √57%
+2024-8-6 18:53:33-debug: Process: heapTotal 228.62MB heapUsed 218.12MB rss 532.66MB
+2024-8-6 18:53:33-debug: // ---- build task Build script ----
+2024-8-6 18:53:33-debug: Build script start57%
+2024-8-6 18:53:45-debug: Build project script start...57%
+2024-8-6 18:53:45-debug: Process: heapTotal 222.02MB heapUsed 214.32MB rss 526.77MB
+2024-8-6 18:53:45-log: Run build task(build-script) in child, see: chrome://inspect/#devices
+2024-8-6 18:53:46-warn: [build-script][[Build.Script.Rollup]] Circular dependency: file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/genPlant.ts -> file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/main.ts -> file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/genPlant.ts
+2024-8-6 18:53:51-debug: excute-script over with build-script 5298ms
+2024-8-6 18:53:51-debug: Copy externalScripts success!
+2024-8-6 18:53:51-debug: Build project script in (5308 ms) √57%
+2024-8-6 18:53:51-debug: Build engine start...57%
+2024-8-6 18:53:51-debug: Process: heapTotal 220.77MB heapUsed 210.49MB rss 524.62MB
+2024-8-6 18:53:51-debug: Use cache engine: {link(C:\Users\ADMINI~1\AppData\Local\Temp\CocosCreator\3.6.1\builder\engine\fde329c401c641771bff368eaccc979a)}
+2024-8-6 18:53:51-debug: {"debug":false,"sourceMaps":false,"includeModules":["2d","animation","audio","base","dragon-bones","gfx-webgl","gfx-webgl2","intersection-2d","marionette","particle-2d","physics-2d-box2d","profiler","skeletal-animation","spine","tiled-map","tween","ui","video","webview","xr"],"engineVersion":"3.6.1","platform":"HTML5","md5Map":[],"engineName":"cocos-js","useCache":true,"split":false,"ammoJsWasm":"fallback","assetURLFormat":"runtime-resolved","flags":{"DEBUG":false},"entry":"D:\\cocos-dashboard-editors\\Creator\\3.6.1\\resources\\resources\\3d\\engine"}
+2024-8-6 18:53:51-debug: Build engine in (140 ms) √57%
+2024-8-6 18:53:51-debug: // ---- build task Build script ---- (17636ms)
+2024-8-6 18:53:51-debug: run build task Build script success in 17636 ms √63%
+2024-8-6 18:53:51-debug: Add md5 suffix to assets start63%
+2024-8-6 18:53:51-debug: // ---- build task Add md5 suffix to assets ----
+2024-8-6 18:53:51-debug: Process: heapTotal 220.77MB heapUsed 211.13MB rss 524.37MB
+2024-8-6 18:53:51-debug: run build task Add md5 suffix to assets success in 0 ms √73%
+2024-8-6 18:53:51-debug: // ---- build task Init settings and config ----
+2024-8-6 18:53:51-debug: Init settings and config start73%
+2024-8-6 18:53:51-debug: Process: heapTotal 220.77MB heapUsed 211.17MB rss 524.41MB
+2024-8-6 18:53:51-debug: // ---- build task Init settings and config ---- (1ms)
+2024-8-6 18:53:51-debug: builder.tasks.settings.macro does not defined in i18n
+2024-8-6 18:53:51-debug: builder.tasks.settings.macro start74%
+2024-8-6 18:53:51-debug: // ---- build task builder.tasks.settings.macro ----
+2024-8-6 18:53:51-debug: run build task Init settings and config success in 1 ms √74%
+2024-8-6 18:53:51-debug: Process: heapTotal 220.77MB heapUsed 211.23MB rss 524.47MB
+2024-8-6 18:53:51-debug: // ---- build task builder.tasks.settings.macro ---- (13ms)
+2024-8-6 18:53:51-debug: run build task builder.tasks.settings.macro success in 13 ms √74%
+2024-8-6 18:53:51-debug: Process: heapTotal 220.77MB heapUsed 211.28MB rss 524.52MB
+2024-8-6 18:53:51-debug: // ---- build task Sort some build options to settings.json ----
+2024-8-6 18:53:51-debug: Sort some build options to settings.json start74%
+2024-8-6 18:53:51-debug: // ---- build task Sort some build options to settings.json ---- (12ms)
+2024-8-6 18:53:51-debug: run build task Sort some build options to settings.json success in 12 ms √75%
+2024-8-6 18:53:51-debug: // ---- build task custom joint texture layouts ----
+2024-8-6 18:53:51-debug: Process: heapTotal 220.77MB heapUsed 211.37MB rss 524.63MB
+2024-8-6 18:53:51-debug: custom joint texture layouts start75%
+2024-8-6 18:53:51-debug: // ---- build task custom joint texture layouts ---- (12ms)
+2024-8-6 18:53:51-debug: run build task custom joint texture layouts success in 12 ms √76%
+2024-8-6 18:53:51-debug: custom joint physics start76%
+2024-8-6 18:53:51-debug: // ---- build task custom joint physics ----
+2024-8-6 18:53:51-debug: Process: heapTotal 220.77MB heapUsed 211.42MB rss 524.67MB
+2024-8-6 18:53:51-debug: run build task custom joint physics success in 0 ms √76%
+2024-8-6 18:53:51-debug: Fill script data to settings start76%
+2024-8-6 18:53:51-debug: // ---- build task Fill script data to settings ----
+2024-8-6 18:53:51-debug: Process: heapTotal 220.77MB heapUsed 211.46MB rss 524.71MB
+2024-8-6 18:53:51-debug: // ---- build task Fill script data to settings ---- (1ms)
+2024-8-6 18:53:51-debug: run build task Fill script data to settings success in 1 ms √77%
+2024-8-6 18:53:51-debug: Process: heapTotal 220.77MB heapUsed 211.50MB rss 524.76MB
+2024-8-6 18:53:51-debug: Fill scene data to settings start77%
+2024-8-6 18:53:51-debug: // ---- build task Fill scene data to settings ----
+2024-8-6 18:53:51-debug: run build task Fill scene data to settings success in 0 ms √77%
+2024-8-6 18:53:51-debug: Organize assets groups，generate packedAssets and rawAssets data start77%
+2024-8-6 18:53:51-debug: // ---- build task Organize assets groups，generate packedAssets and rawAssets data ----
+2024-8-6 18:53:51-debug: Process: heapTotal 220.77MB heapUsed 211.54MB rss 524.80MB
+2024-8-6 18:53:51-debug: // ---- build task Organize assets groups，generate packedAssets and rawAssets data ---- (1ms)
+2024-8-6 18:53:51-debug: run build task Organize assets groups，generate packedAssets and rawAssets data success in 1 ms √78%
+2024-8-6 18:53:51-debug: Process: heapTotal 220.77MB heapUsed 211.70MB rss 525.00MB
+2024-8-6 18:53:51-debug: Generate md5AssetsMap from suffixMap to settings start78%
+2024-8-6 18:53:51-debug: // ---- build task Generate md5AssetsMap from suffixMap to settings ----
+2024-8-6 18:53:51-debug: options.md5Cache is false.
+2024-8-6 18:53:51-debug: // ---- build task Generate md5AssetsMap from suffixMap to settings ---- (1ms)
+2024-8-6 18:53:51-debug: run build task Generate md5AssetsMap from suffixMap to settings success in 1 ms √78%
+2024-8-6 18:53:51-debug: Process: heapTotal 220.77MB heapUsed 211.76MB rss 525.05MB
+2024-8-6 18:53:51-debug: web-mobile:(onBeforeCompressSettings) start...78%
+2024-8-6 18:53:51-debug: // ---- build task web-mobile：onBeforeCompressSettings ----
+2024-8-6 18:53:51-debug: // ---- build task web-mobile：onBeforeCompressSettings ---- (1ms)
+2024-8-6 18:53:51-debug: web-mobile:(onBeforeCompressSettings) in 1 ms81%
+2024-8-6 18:53:51-debug: cocos-service:(onBeforeCompressSettings) start...81%
+2024-8-6 18:53:51-debug: Process: heapTotal 220.77MB heapUsed 211.81MB rss 525.10MB
+2024-8-6 18:53:51-debug: // ---- build task cocos-service：onBeforeCompressSettings ----
+2024-8-6 18:53:51-debug: // ---- build task cocos-service：onBeforeCompressSettings ---- (15ms)
+2024-8-6 18:53:51-debug: cocos-service:(onBeforeCompressSettings) in 15 ms83%
+2024-8-6 18:53:51-debug: Process: heapTotal 220.77MB heapUsed 211.25MB rss 524.46MB
+2024-8-6 18:53:51-debug: Build import-map.json start83%
+2024-8-6 18:53:51-debug: // ---- build task Build import-map.json ----
+2024-8-6 18:53:51-debug: // ---- build task Build import-map.json ---- (2ms)
+2024-8-6 18:53:51-debug: run build task Build import-map.json success in 2 ms √84%
+2024-8-6 18:53:51-debug: // ---- build task Compress settings.json and config.json ----
+2024-8-6 18:53:51-debug: Process: heapTotal 220.77MB heapUsed 211.30MB rss 524.50MB
+2024-8-6 18:53:51-debug: Compress settings.json and config.json start84%
+2024-8-6 18:53:51-debug: // ---- build task Compress settings.json and config.json ---- (2ms)
+2024-8-6 18:53:51-debug: run build task Compress settings.json and config.json success in 2 ms √85%
+2024-8-6 18:53:51-debug: Process: heapTotal 220.77MB heapUsed 211.58MB rss 524.79MB
+2024-8-6 18:53:51-debug: Save config.json start85%
+2024-8-6 18:53:51-debug: // ---- build task Save config.json ----
+2024-8-6 18:53:51-debug: // ---- build task Save config.json ---- (2ms)
+2024-8-6 18:53:51-debug: run build task Save config.json success in 2 ms √86%
+2024-8-6 18:53:51-debug: Save Settings.json start86%
+2024-8-6 18:53:51-debug: Process: heapTotal 220.77MB heapUsed 211.68MB rss 524.91MB
+2024-8-6 18:53:51-debug: // ---- build task Save Settings.json ----
+2024-8-6 18:53:51-debug: // ---- build task Save Settings.json ---- (2ms)
+2024-8-6 18:53:51-debug: run build task Save Settings.json success in 2 ms √87%
+2024-8-6 18:53:51-debug: Process: heapTotal 220.77MB heapUsed 211.84MB rss 525.05MB
+2024-8-6 18:53:51-debug: Sort build template start87%
+2024-8-6 18:53:51-debug: // ---- build task Sort build template ----
+2024-8-6 18:53:51-debug: // ---- build task Sort build template ---- (63ms)
+2024-8-6 18:53:51-debug: run build task Sort build template success in 63 ms √88%
+2024-8-6 18:53:51-debug: cocos-service:(onAfterCompressSettings) start...88%
+2024-8-6 18:53:51-debug: // ---- build task cocos-service：onAfterCompressSettings ----
+2024-8-6 18:53:51-debug: Process: heapTotal 222.02MB heapUsed 212.05MB rss 527.66MB
+2024-8-6 18:53:51-debug: // ---- build task cocos-service：onAfterCompressSettings ---- (11ms)
+2024-8-6 18:53:51-debug: cocos-service:(onAfterCompressSettings) in 11 ms90%
+2024-8-6 18:53:51-debug: Process: heapTotal 224.02MB heapUsed 211.97MB rss 526.92MB
+2024-8-6 18:53:51-debug: web-mobile:(onAfterBuild) start...90%
+2024-8-6 18:53:51-debug: // ---- build task web-mobile：onAfterBuild ----
+2024-8-6 18:53:51-debug: Use build-template {link(E:\lianlukeji\frontend\cocos\menghuanfarm\build-templates\web-mobile)}.
+2024-8-6 18:53:51-debug: // ---- build task web-mobile：onAfterBuild ---- (48ms)
+2024-8-6 18:53:51-debug: web-mobile:(onAfterBuild) in 48 ms92%
+2024-8-6 18:53:51-debug: cocos-service:(onAfterBuild) start...92%
+2024-8-6 18:53:51-debug: // ---- build task cocos-service：onAfterBuild ----
+2024-8-6 18:53:51-debug: Process: heapTotal 224.02MB heapUsed 212.29MB rss 527.83MB
+2024-8-6 18:53:51-debug: // ---- build task cocos-service：onAfterBuild ---- (14ms)
+2024-8-6 18:53:51-debug: cocos-service:(onAfterBuild) in 14 ms94%
+2024-8-6 18:53:51-debug: builder:build-project-total (18730ms)
+2024-8-6 18:53:51-debug: build success in 18730 ms!
+2024-8-6 18:53:51-debug: ================================ Build Task (web-mobile) Finished in (18737)ms ================================
+2024-8-6 18:55:55-debug: // ---- builder:run-build-stage-run ----
+2024-8-6 18:55:55-debug: init options success
+2024-8-6 18:55:55-debug: web-mobile:(run) start...
+2024-8-6 18:55:55-debug: // ---- build task web-mobile：run ----
+2024-8-6 18:55:55-debug: web-mobile:(run) in null ms √
+2024-8-6 18:55:55-log: [task:run]: success!

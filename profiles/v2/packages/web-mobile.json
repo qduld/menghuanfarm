@@ -1,0 +1,19 @@
+{
+  "common": {
+    "outputName": "web-mobile",
+    "polyfills": {
+      "asyncFunctions": true,
+      "coreJs": true
+    },
+    "mainBundleCompressionType": "none",
+    "platform": "web-mobile",
+    "replaceSplashScreen": false
+  },
+  "options": {
+    "web-mobile": {
+      "orientation": "portrait",
+      "__version__": "1.0.1",
+      "embedWebDebugger": false
+    }
+  }
+}

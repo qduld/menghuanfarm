@@ -1,0 +1,141 @@
+{
+  "options": {
+    "web-desktop": {
+      "configID": "8defd1",
+      "services": []
+    },
+    "web-mobile": {
+      "configID": "d16383",
+      "services": [
+        {
+          "service_id": "278",
+          "service_component_name": "service-sdkhub",
+          "builder": "C:\\Users\\admin\\.CocosCreator\\.service\\sdkhub\\builder\\builder.js",
+          "enable": false,
+          "params": {
+            "configId": "5c53db",
+            "plugin_version": "2.0.7_0.2.0"
+          }
+        }
+      ],
+      "__version__": "3.0.4",
+      "sdkHubConfigID": "5c53db",
+      "sdkHubConfig": {
+        "id": "5c53db",
+        "name": "HUAWEI  AppGallery Connect",
+        "platform": "3",
+        "channelID": "161221",
+        "channelName": "HUAWEI  AppGallery Connect",
+        "remarks": "HUAWEI  AppGallery Connect",
+        "plugins": [
+          {
+            "hasParam": false,
+            "pParam": {},
+            "pId": "2412",
+            "pName": "HUAWEI HMS",
+            "packageName": "huawei-hms",
+            "pType": 30,
+            "pUseType": 30,
+            "hasLocal": true,
+            "hasUpdate": false,
+            "requireParam": true,
+            "pVersion": "2.0.3_6.3.0",
+            "isInstall": false,
+            "installProgress": true
+          }
+        ]
+      }
+    },
+    "android": {
+      "configID": "8defd1",
+      "services": []
+    },
+    "windows": {
+      "configID": "8defd1",
+      "services": []
+    },
+    "wechatgame": {
+      "sdkHubConfigID": "5c53db",
+      "sdkHubConfig": {
+        "id": "5c53db",
+        "name": "HUAWEI  AppGallery Connect",
+        "platform": "3",
+        "channelID": "161221",
+        "channelName": "HUAWEI  AppGallery Connect",
+        "remarks": "HUAWEI  AppGallery Connect",
+        "plugins": [
+          {
+            "hasParam": false,
+            "pParam": {},
+            "pId": "2412",
+            "pName": "HUAWEI HMS",
+            "packageName": "huawei-hms",
+            "pType": 30,
+            "pUseType": 30,
+            "hasLocal": true,
+            "hasUpdate": false,
+            "requireParam": true,
+            "pVersion": "2.0.3_6.3.0",
+            "isInstall": false,
+            "installProgress": true
+          }
+        ]
+      },
+      "configID": "d16383",
+      "services": [
+        {
+          "service_id": "278",
+          "service_component_name": "service-sdkhub",
+          "builder": "C:\\Users\\admin\\.CocosCreator\\.service\\sdkhub\\builder\\builder.js",
+          "enable": false,
+          "params": {
+            "configId": "5c53db",
+            "plugin_version": "2.0.7_0.2.0"
+          }
+        }
+      ]
+    }
+  },
+  "builder-options": {
+    "sdkHubConfigID": "5c53db",
+    "sdkHubConfig": {
+      "id": "5c53db",
+      "name": "HUAWEI  AppGallery Connect",
+      "platform": "3",
+      "channelID": "161221",
+      "channelName": "HUAWEI  AppGallery Connect",
+      "remarks": "HUAWEI  AppGallery Connect",
+      "plugins": [
+        {
+          "hasParam": false,
+          "pParam": {},
+          "pId": "2412",
+          "pName": "HUAWEI HMS",
+          "packageName": "huawei-hms",
+          "pType": 30,
+          "pUseType": 30,
+          "hasLocal": true,
+          "hasUpdate": false,
+          "requireParam": true,
+          "pVersion": "2.0.3_6.3.0",
+          "isInstall": false,
+          "installProgress": true
+        }
+      ]
+    },
+    "configID": "d16383",
+    "services": [
+      {
+        "service_id": "278",
+        "service_component_name": "service-sdkhub",
+        "builder": "C:\\Users\\admin\\.CocosCreator\\.service\\sdkhub\\builder\\builder.js",
+        "enable": false,
+        "params": {
+          "configId": "5c53db",
+          "plugin_version": "2.0.7_0.2.0"
+        }
+      }
+    ],
+    "__version__": "3.0.4"
+  }
+}
