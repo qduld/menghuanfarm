@@ -16,6 +16,11 @@
         "url": "db://assets/scene/main.scene",
         "uuid": "5a6f4efe-edd1-4c9d-adc3-c28f8d58012d",
         "inBundle": false
+      },
+      {
+        "url": "db://assets/scene/login.scene",
+        "uuid": "06d29b3c-c3f1-4104-824c-0060dfcb1f92",
+        "inBundle": false
       }
     ],
     "startScene": "06d29b3c-c3f1-4104-824c-0060dfcb1f92",
@@ -29,7 +34,7 @@
         "progress": 1,
         "state": "success",
         "stage": "build",
-        "message": "2024-8-6 18:53:51 Build success in 18730 ms!",
+        "message": "2024-8-18 21:39:03 Build success in 22407 ms!",
         "options": {
           "name": "PlantStore",
           "platform": "web-mobile",
@@ -47,12 +52,17 @@
           "mainBundleIsRemote": false,
           "mainBundleCompressionType": "none",
           "replaceSplashScreen": false,
-          "startScene": "5a6f4efe-edd1-4c9d-adc3-c28f8d58012d",
+          "startScene": "06d29b3c-c3f1-4104-824c-0060dfcb1f92",
           "outputName": "web-mobile",
           "scenes": [
             {
               "url": "db://assets/scene/main.scene",
               "uuid": "5a6f4efe-edd1-4c9d-adc3-c28f8d58012d",
+              "inBundle": false
+            },
+            {
+              "url": "db://assets/scene/login.scene",
+              "uuid": "06d29b3c-c3f1-4104-824c-0060dfcb1f92",
               "inBundle": false
             }
           ],
@@ -64,20 +74,9 @@
               "embedWebDebugger": false
             },
             "cocos-service": {
-              "configID": "d16383",
-              "services": [
-                {
-                  "service_id": "278",
-                  "service_component_name": "service-sdkhub",
-                  "builder": "C:\\Users\\admin\\.CocosCreator\\.service\\sdkhub\\builder\\builder.js",
-                  "enable": false,
-                  "params": {
-                    "configId": "5c53db",
-                    "plugin_version": "2.0.7_0.2.0"
-                  }
-                }
-              ],
-              "__version__": "3.0.4",
+              "configID": "8defd1",
+              "services": [],
+              "__version__": "3.0.7",
               "sdkHubConfigID": "5c53db",
               "sdkHubConfig": {
                 "id": "5c53db",
@@ -109,7 +108,7 @@
           "__version__": "1.3.3",
           "web-mobile": []
         },
-        "time": "2024-8-6 18:53",
+        "time": "2024-8-18 21:38",
         "dirty": false
       },
       "1668068042719": {
@@ -191,7 +190,7 @@
                   }
                 }
               ],
-              "__version__": "3.0.4"
+              "__version__": "3.0.7"
             },
             "wechatgame": {
               "startSceneAssetBundle": true,

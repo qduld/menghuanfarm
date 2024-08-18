@@ -5,20 +5,9 @@
       "services": []
     },
     "web-mobile": {
-      "configID": "d16383",
-      "services": [
-        {
-          "service_id": "278",
-          "service_component_name": "service-sdkhub",
-          "builder": "C:\\Users\\admin\\.CocosCreator\\.service\\sdkhub\\builder\\builder.js",
-          "enable": false,
-          "params": {
-            "configId": "5c53db",
-            "plugin_version": "2.0.7_0.2.0"
-          }
-        }
-      ],
-      "__version__": "3.0.4",
+      "configID": "8defd1",
+      "services": [],
+      "__version__": "3.0.7",
       "sdkHubConfigID": "5c53db",
       "sdkHubConfig": {
         "id": "5c53db",
@@ -81,22 +70,15 @@
           }
         ]
       },
-      "configID": "d16383",
-      "services": [
-        {
-          "service_id": "278",
-          "service_component_name": "service-sdkhub",
-          "builder": "C:\\Users\\admin\\.CocosCreator\\.service\\sdkhub\\builder\\builder.js",
-          "enable": false,
-          "params": {
-            "configId": "5c53db",
-            "plugin_version": "2.0.7_0.2.0"
-          }
-        }
-      ]
+      "configID": "8defd1",
+      "services": [],
+      "__version__": "3.0.4"
     }
   },
   "builder-options": {
+    "configID": "8defd1",
+    "services": [],
+    "__version__": "3.0.7",
     "sdkHubConfigID": "5c53db",
     "sdkHubConfig": {
       "id": "5c53db",
@@ -122,20 +104,6 @@
           "installProgress": true
         }
       ]
-    },
-    "configID": "d16383",
-    "services": [
-      {
-        "service_id": "278",
-        "service_component_name": "service-sdkhub",
-        "builder": "C:\\Users\\admin\\.CocosCreator\\.service\\sdkhub\\builder\\builder.js",
-        "enable": false,
-        "params": {
-          "configId": "5c53db",
-          "plugin_version": "2.0.7_0.2.0"
-        }
-      }
-    ],
-    "__version__": "3.0.4"
+    }
   }
 }
