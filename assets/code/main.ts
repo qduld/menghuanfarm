@@ -47,65 +47,12 @@ export class main extends Component {
   public static saleBox: Node = null;
   // @property([Node])
   // fingerFlows
-  start() {
-    // director.loadScene("login");
+  protected onLoad(): void {
     director.preloadScene("main");
-    //login顶部banner广告
-    if (
-      sys.platform === sys.Platform.WECHAT_GAME &&
-      director.getScene().name === "login"
-    ) {
-      let { screenWidth } = wx.getSystemInfoSync();
-      mainAd1 = wx.createBannerAd({
-        adUnitId: wechatAd[0].adid,
-        style: {
-          left: 0,
-          top: 0,
-          width: screenWidth,
-        },
-        //自动刷新
-        adIntervals: 30,
-      });
-      if (mainAd1 !== null) {
-        mainAd1.show();
-        mainAd1.onError((err) => {
-          console.log(err);
-        });
-      }
-    }
-    if (
-      sys.platform === sys.Platform.WECHAT_GAME &&
-      director.getScene().name === "main"
-    ) {
-      let { screenWidth, screenHeight } = wx.getSystemInfoSync();
-      //main场景插屏广告
-      mainAd3 = wx.createInterstitialAd({
-        adUnitId: wechatAd[2].adid,
-      });
-      if (mainAd3 !== null) {
-        mainAd3.show();
-        mainAd3.onError((err) => {
-          console.log(err);
-        });
-      }
-      //main场景底部banner广告
-      mainAd2 = wx.createBannerAd({
-        adUnitId: wechatAd[1].adid,
-        style: {
-          left: 0,
-          top: screenHeight - 60,
-          width: screenWidth,
-        },
-        //自动刷新
-        adIntervals: 30,
-      });
-      if (mainAd2 !== null) {
-        mainAd2.show();
-        mainAd2.onError((err) => {
-          console.log(err);
-        });
-      }
-    }
+    // this.requestFarmLand();
+    this.login();
+  }
+  start() {
     //手指跟随
     // const finger = find("MainCanvas/op/finger");
     // this.fingerFlows.forEach(item => {
@@ -115,7 +62,6 @@ export class main extends Component {
     //         finger.setPosition(new Vec3(position.x + 30, position.y - 30, 0));
     //     }, this);
     // });
-    this.requestFarmLand();
   }
   async requestFarmLand() {
     try {
@@ -130,35 +76,35 @@ export class main extends Component {
       console.error("Error:", error);
     }
   }
-  clickLoginBtn() {
-    const btn = find("Canvas/btnClick");
-    btn.getComponent(AudioSource).play();
-  }
-  clickBtn() {
-    const btn = find("MainCanvas/btnClick");
-    btn.getComponent(AudioSource).play();
-  }
+  // clickLoginBtn() {
+  //   const btn = find("Canvas/btnClick");
+  //   btn.getComponent(AudioSource).play();
+  // }
+  // clickBtn() {
+  //   const btn = find("MainCanvas/btnClick");
+  //   btn.getComponent(AudioSource).play();
+  // }
   login() {
-    director.loadScene("main", () => {
-      //游戏开始倒计时
-      timer.isStart = true;
-      this.init();
-      nickName.getComponent(Label).string = param.nickname;
-      resources.load(param.avata, SpriteFrame, (err, spriteFrame) => {
-        userAvata.getComponent(Sprite).sizeMode = Sprite.SizeMode.CUSTOM;
-        userAvata.getComponent(Sprite).spriteFrame = spriteFrame;
-      });
-      jinbi.getComponent(Label).string = param.money.toString();
-      timer.time = param.levelTime;
-      if (sys.platform === sys.Platform.WECHAT_GAME) {
-        if (mainAd1 !== null) {
-          mainAd1.hide();
-        }
-        if (mainAd2 !== null) {
-          mainAd2.hide();
-        }
-      }
+    // director.loadScene("main", () => {
+    //游戏开始倒计时
+    timer.isStart = true;
+    this.init();
+    nickName.getComponent(Label).string = param.nickname;
+    resources.load(param.avata, SpriteFrame, (err, spriteFrame) => {
+      userAvata.getComponent(Sprite).sizeMode = Sprite.SizeMode.CUSTOM;
+      userAvata.getComponent(Sprite).spriteFrame = spriteFrame;
     });
+    jinbi.getComponent(Label).string = param.money.toString();
+    timer.time = param.levelTime;
+    if (sys.platform === sys.Platform.WECHAT_GAME) {
+      if (mainAd1 !== null) {
+        mainAd1.hide();
+      }
+      if (mainAd2 !== null) {
+        mainAd2.hide();
+      }
+    }
+    // });
   }
   //类型，索引
   static addSalePack(type: number) {

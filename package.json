@@ -2,9 +2,21 @@
   "name": "menghuanfarm",
   "uuid": "72b4febd-85ee-4b5d-9a4d-145189196bc5",
   "version": "3.6.1",
+  "type": "module",
   "creator": {
     "version": "3.6.1"
   },
+  "scripts": {
+    "build": "gulp cp-src concat-css htmlmin resRev default"
+  },
   "_sourceId": "6f2e8da6-9a98-420c-9b19-9aba44e8c162",
-  "_storeId": "077548df4d3a1ccb981dccac68e9ea78"
+  "_storeId": "077548df4d3a1ccb981dccac68e9ea78",
+  "dependencies": {
+    "gulp": "^5.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-file-inline": "^2.2.3",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-rev": "^11.0.0",
+    "gulp-rev-collector": "^1.3.3"
+  }
 }
