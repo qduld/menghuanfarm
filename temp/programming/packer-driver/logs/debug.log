@@ -935,3 +935,141 @@ debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/mai
 debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/scaleAction.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/scaleAction.ts.
 debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/timer.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/timer.ts.
 debug: Target(preview) ends with cost 2506.1881999969482ms.
+debug: Dispatch build request for time accumulated 1 asset changes.
+debug: Build iteration starts.
+Number of accumulated asset changes: 1
+Feature changed: false
+debug: Target(editor) build started.
+debug: Detected change: cce:/internal/x/prerequisite-imports. Last mtime: Fri Jan 02 1970 11:44:08 GMT+0800 (中国标准时间), Current mtime: Fri Jan 02 1970 12:09:07 GMT+0800 (中国标准时间)
+debug: Inspect cce:/internal/x/prerequisite-imports
+debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/genPlant.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/genPlant.ts.
+debug: Detected change: file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/main.ts. Last mtime: Fri Aug 23 2024 18:39:54 GMT+0800 (中国标准时间)@ad534c45-313f-494a-9f0a-10a9c7f79cb4, Current mtime: Fri Aug 23 2024 18:41:26 GMT+0800 (中国标准时间)@ad534c45-313f-494a-9f0a-10a9c7f79cb4
+debug: Inspect file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/main.ts
+debug: Resolve cce:/internal/code-quality/cr.mjs from file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/main.ts as cce:/internal/code-quality/cr.mjs.
+debug: Resolve cc from file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/main.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/main.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/main.ts as cce:/internal/x/cc.
+debug: Resolve ./genPlant from file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/main.ts as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/genPlant.ts.
+debug: Resolve ./timer from file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/main.ts as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/timer.ts.
+debug: Resolve ./loadData from file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/main.ts as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/loadData.ts.
+debug: Resolve ./http from file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/main.ts as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/http.ts.
+debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/http.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/http.ts.
+debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/interface.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/interface.ts.
+debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/loadData.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/loadData.ts.
+debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/main.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/main.ts.
+debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/scaleAction.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/scaleAction.ts.
+debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/timer.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/timer.ts.
+debug: Target(editor) ends with cost 781.1074000000954ms.
+debug: Target(preview) build started.
+debug: Detected change: cce:/internal/x/prerequisite-imports. Last mtime: Fri Jan 02 1970 11:44:09 GMT+0800 (中国标准时间), Current mtime: Fri Jan 02 1970 12:09:08 GMT+0800 (中国标准时间)
+debug: Inspect cce:/internal/x/prerequisite-imports
+debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/genPlant.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/genPlant.ts.
+debug: Detected change: file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/main.ts. Last mtime: Fri Aug 23 2024 18:39:54 GMT+0800 (中国标准时间)@ad534c45-313f-494a-9f0a-10a9c7f79cb4, Current mtime: Fri Aug 23 2024 18:41:26 GMT+0800 (中国标准时间)@ad534c45-313f-494a-9f0a-10a9c7f79cb4
+debug: Inspect file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/main.ts
+debug: Resolve cce:/internal/code-quality/cr.mjs from file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/main.ts as cce:/internal/code-quality/cr.mjs.
+debug: Resolve cc from file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/main.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/main.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/main.ts as cce:/internal/x/cc.
+debug: Resolve ./genPlant from file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/main.ts as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/genPlant.ts.
+debug: Resolve ./timer from file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/main.ts as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/timer.ts.
+debug: Resolve ./loadData from file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/main.ts as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/loadData.ts.
+debug: Resolve ./http from file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/main.ts as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/http.ts.
+debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/http.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/http.ts.
+debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/interface.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/interface.ts.
+debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/loadData.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/loadData.ts.
+debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/main.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/main.ts.
+debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/scaleAction.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/scaleAction.ts.
+debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/timer.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/timer.ts.
+debug: Target(preview) ends with cost 780.98140001297ms.
+debug: Dispatch build request for time accumulated 1 asset changes.
+debug: Build iteration starts.
+Number of accumulated asset changes: 1
+Feature changed: false
+debug: Target(editor) build started.
+debug: Detected change: cce:/internal/x/prerequisite-imports. Last mtime: Fri Jan 02 1970 12:09:07 GMT+0800 (中国标准时间), Current mtime: Sun Jan 04 1970 07:46:09 GMT+0800 (中国标准时间)
+debug: Inspect cce:/internal/x/prerequisite-imports
+debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/genPlant.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/genPlant.ts.
+debug: Detected change: file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/main.ts. Last mtime: Fri Aug 23 2024 18:41:26 GMT+0800 (中国标准时间)@ad534c45-313f-494a-9f0a-10a9c7f79cb4, Current mtime: Sun Aug 25 2024 14:41:53 GMT+0800 (中国标准时间)@ad534c45-313f-494a-9f0a-10a9c7f79cb4
+debug: Inspect file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/main.ts
+debug: Resolve cce:/internal/code-quality/cr.mjs from file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/main.ts as cce:/internal/code-quality/cr.mjs.
+debug: Resolve cc from file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/main.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/main.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/main.ts as cce:/internal/x/cc.
+debug: Resolve ./genPlant from file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/main.ts as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/genPlant.ts.
+debug: Resolve ./timer from file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/main.ts as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/timer.ts.
+debug: Resolve ./loadData from file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/main.ts as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/loadData.ts.
+debug: Resolve ./http from file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/main.ts as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/http.ts.
+debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/http.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/http.ts.
+debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/interface.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/interface.ts.
+debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/loadData.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/loadData.ts.
+debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/main.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/main.ts.
+debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/scaleAction.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/scaleAction.ts.
+debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/timer.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/timer.ts.
+debug: Target(editor) ends with cost 823.7775999903679ms.
+debug: Target(preview) build started.
+debug: Detected change: cce:/internal/x/prerequisite-imports. Last mtime: Fri Jan 02 1970 12:09:08 GMT+0800 (中国标准时间), Current mtime: Sun Jan 04 1970 07:46:10 GMT+0800 (中国标准时间)
+debug: Inspect cce:/internal/x/prerequisite-imports
+debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/genPlant.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/genPlant.ts.
+debug: Detected change: file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/main.ts. Last mtime: Fri Aug 23 2024 18:41:26 GMT+0800 (中国标准时间)@ad534c45-313f-494a-9f0a-10a9c7f79cb4, Current mtime: Sun Aug 25 2024 14:41:53 GMT+0800 (中国标准时间)@ad534c45-313f-494a-9f0a-10a9c7f79cb4
+debug: Inspect file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/main.ts
+debug: Resolve cce:/internal/code-quality/cr.mjs from file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/main.ts as cce:/internal/code-quality/cr.mjs.
+debug: Resolve cc from file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/main.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/main.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/main.ts as cce:/internal/x/cc.
+debug: Resolve ./genPlant from file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/main.ts as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/genPlant.ts.
+debug: Resolve ./timer from file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/main.ts as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/timer.ts.
+debug: Resolve ./loadData from file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/main.ts as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/loadData.ts.
+debug: Resolve ./http from file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/main.ts as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/http.ts.
+debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/http.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/http.ts.
+debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/interface.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/interface.ts.
+debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/loadData.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/loadData.ts.
+debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/main.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/main.ts.
+debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/scaleAction.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/scaleAction.ts.
+debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/timer.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/timer.ts.
+debug: Target(preview) ends with cost 399.97269999980927ms.
+debug: Dispatch build request for time accumulated 1 asset changes.
+debug: Build iteration starts.
+Number of accumulated asset changes: 1
+Feature changed: false
+debug: Target(editor) build started.
+debug: Detected change: cce:/internal/x/prerequisite-imports. Last mtime: Sun Jan 04 1970 07:46:09 GMT+0800 (中国标准时间), Current mtime: Sun Jan 04 1970 07:47:38 GMT+0800 (中国标准时间)
+debug: Inspect cce:/internal/x/prerequisite-imports
+debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/genPlant.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/genPlant.ts.
+debug: Detected change: file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/main.ts. Last mtime: Sun Aug 25 2024 14:41:53 GMT+0800 (中国标准时间)@ad534c45-313f-494a-9f0a-10a9c7f79cb4, Current mtime: Sun Aug 25 2024 14:42:47 GMT+0800 (中国标准时间)@ad534c45-313f-494a-9f0a-10a9c7f79cb4
+debug: Inspect file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/main.ts
+debug: Resolve cce:/internal/code-quality/cr.mjs from file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/main.ts as cce:/internal/code-quality/cr.mjs.
+debug: Resolve cc from file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/main.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/main.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/main.ts as cce:/internal/x/cc.
+debug: Resolve ./genPlant from file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/main.ts as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/genPlant.ts.
+debug: Resolve ./timer from file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/main.ts as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/timer.ts.
+debug: Resolve ./loadData from file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/main.ts as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/loadData.ts.
+debug: Resolve ./http from file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/main.ts as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/http.ts.
+debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/http.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/http.ts.
+debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/interface.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/interface.ts.
+debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/loadData.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/loadData.ts.
+debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/main.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/main.ts.
+debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/scaleAction.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/scaleAction.ts.
+debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/timer.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/timer.ts.
+debug: Target(editor) ends with cost 392.1588000059128ms.
+debug: Target(preview) build started.
+debug: Detected change: cce:/internal/x/prerequisite-imports. Last mtime: Sun Jan 04 1970 07:46:10 GMT+0800 (中国标准时间), Current mtime: Sun Jan 04 1970 07:47:39 GMT+0800 (中国标准时间)
+debug: Inspect cce:/internal/x/prerequisite-imports
+debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/genPlant.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/genPlant.ts.
+debug: Detected change: file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/main.ts. Last mtime: Sun Aug 25 2024 14:41:53 GMT+0800 (中国标准时间)@ad534c45-313f-494a-9f0a-10a9c7f79cb4, Current mtime: Sun Aug 25 2024 14:42:47 GMT+0800 (中国标准时间)@ad534c45-313f-494a-9f0a-10a9c7f79cb4
+debug: Inspect file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/main.ts
+debug: Resolve cce:/internal/code-quality/cr.mjs from file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/main.ts as cce:/internal/code-quality/cr.mjs.
+debug: Resolve cc from file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/main.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/main.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/main.ts as cce:/internal/x/cc.
+debug: Resolve ./genPlant from file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/main.ts as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/genPlant.ts.
+debug: Resolve ./timer from file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/main.ts as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/timer.ts.
+debug: Resolve ./loadData from file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/main.ts as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/loadData.ts.
+debug: Resolve ./http from file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/main.ts as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/http.ts.
+debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/http.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/http.ts.
+debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/interface.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/interface.ts.
+debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/loadData.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/loadData.ts.
+debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/main.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/main.ts.
+debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/scaleAction.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/scaleAction.ts.
+debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/timer.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/timer.ts.
+debug: Target(preview) ends with cost 401.3565000295639ms.

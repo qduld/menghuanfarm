@@ -8,13 +8,13 @@ export const param = {
   //初始金钱
   money: 900,
   //看广告单次奖励金币数量
-  adGiveMoney: 50
-}
+  adGiveMoney: 50,
+};
 //排行榜数据
 export const paiHang = [
   { nickName: "甜蜜蜜", top: 1, userAvata: "ppp/spriteFrame" },
   { nickName: "举高高", top: 2, userAvata: "ddd/spriteFrame" },
-  { nickName: "打屁屁", top: 3, userAvata: "bbb/spriteFrame" }
+  { nickName: "打屁屁", top: 3, userAvata: "bbb/spriteFrame" },
 ];
 
 export const wechatAd = [
@@ -37,5 +37,8 @@ export const wechatAd = [
   //种子背包原生模板广告
   { type: "custom ", adid: "adunit-a75a38bf1901f5b5" },
   //果实背包原生模板广告
-  { type: "custom ", adid: "adunit-8e9a24da85808431" }
+  { type: "custom ", adid: "adunit-8e9a24da85808431" },
 ];
+
+export const tokenMock =
+  "user=%7B%22id%22%3A5418325938%2C%22first_name%22%3A%22fff%22%2C%22last_name%22%3A%22%22%2C%22username%22%3A%22kkkkkkkykyyyyyyyy%22%2C%22language_code%22%3A%22zh-hans%22%2C%22allows_write_to_pm%22%3Atrue%7D&chat_instance=-4022452127639754575&chat_type=private&auth_date=1723811494&hash=2076a7a2ad61896f70961d27a826bd45f4c949a0a6ba716f9f16491ab2c65325";

@@ -16960,3 +16960,1279 @@
 2024-8-23 18:41:03-debug: // ---- build task web-mobile：run ----
 2024-8-23 18:41:03-debug: web-mobile:(run) in null ms √
 2024-8-23 18:41:03-log: [task:run]: success!
+2024-8-23 19:05:01-debug: // ---- builder:run-build-stage-run ----
+2024-8-23 19:05:01-debug: init options success
+2024-8-23 19:05:01-debug: // ---- build task web-mobile：run ----
+2024-8-23 19:05:01-debug: web-mobile:(run) start...
+2024-8-23 19:05:01-debug: web-mobile:(run) in null ms √
+2024-8-23 19:05:01-log: [task:run]: success!
+2024-8-25 14:44:01-debug: =================================== Build Task (web-mobile) Start ================================
+2024-8-25 14:44:01-debug: Start build task, options:{"name":"PlantStore","platform":"web-mobile","buildPath":"project://build","debug":false,"md5Cache":false,"skipCompressTexture":true,"sourceMaps":false,"polyfills":{"asyncFunctions":true,"coreJs":true},"experimentalEraseModules":false,"useBuiltinServer":false,"mainBundleIsRemote":false,"mainBundleCompressionType":"none","replaceSplashScreen":true,"startScene":"5a6f4efe-edd1-4c9d-adc3-c28f8d58012d","outputName":"web-mobile","scenes":[{"url":"db://assets/scene/main.scene","uuid":"5a6f4efe-edd1-4c9d-adc3-c28f8d58012d","inBundle":false}],"windows":[],"packages":{"web-mobile":{"orientation":"portrait","__version__":"1.0.1","embedWebDebugger":false},"cocos-service":{"configID":"8defd1","services":[],"__version__":"3.0.7","sdkHubConfigID":"5c53db","sdkHubConfig":{"id":"5c53db","name":"HUAWEI  AppGallery Connect","platform":"3","channelID":"161221","channelName":"HUAWEI  AppGallery Connect","remarks":"HUAWEI  AppGallery Connect","plugins":[{"hasParam":false,"pParam":{},"pId":"2412","pName":"HUAWEI HMS","packageName":"huawei-hms","pType":30,"pUseType":30,"hasLocal":true,"hasUpdate":false,"requireParam":true,"pVersion":"2.0.3_6.3.0","isInstall":false,"installProgress":true}]}}},"__version__":"1.3.3","web-mobile":[]}
+2024-8-25 14:44:01-debug: cocos-service:(onBeforeBuild) start...0%
+2024-8-25 14:44:01-debug: Build with Cocos Creator 3.6.1
+2024-8-25 14:44:01-debug: Process: heapTotal 254.73MB heapUsed 246.18MB rss 38.19MB
+2024-8-25 14:44:01-debug: // ---- build task cocos-service：onBeforeBuild ----
+2024-8-25 14:44:02-debug: // ---- build task cocos-service：onBeforeBuild ---- (500ms)
+2024-8-25 14:44:02-debug: cocos-service:(onBeforeBuild) in 500 ms2%
+2024-8-25 14:44:02-debug: Query all assets info in project
+2024-8-25 14:44:02-debug: init custom config: keepNodeUuid: false, useCache: true
+2024-8-25 14:44:02-debug: BuildAssetLibrary query-assets with assets 397
+2024-8-25 14:44:02-debug:   Number of other assets: 759
+2024-8-25 14:44:02-debug: BuildAssetLibrary initialized with asset 638!
+2024-8-25 14:44:02-debug:   Number of all scripts: 7
+2024-8-25 14:44:02-debug: // ---- build task web-mobile：onAfterInit ----
+2024-8-25 14:44:02-debug: Process: heapTotal 255.63MB heapUsed 247.37MB rss 40.71MB
+2024-8-25 14:44:02-debug: web-mobile:(onAfterInit) start...2%
+2024-8-25 14:44:02-debug:   Number of all scenes: 2
+2024-8-25 14:44:02-debug: // ---- build task web-mobile：onAfterInit ---- (493ms)
+2024-8-25 14:44:02-debug: cocos-service:(onAfterInit) start...4%
+2024-8-25 14:44:02-debug: // ---- build task cocos-service：onAfterInit ----
+2024-8-25 14:44:02-debug: Process: heapTotal 255.88MB heapUsed 247.52MB rss 41.90MB
+2024-8-25 14:44:02-debug: web-mobile:(onAfterInit) in 493 ms4%
+2024-8-25 14:44:04-debug: // ---- build task cocos-service：onAfterInit ---- (1387ms)
+2024-8-25 14:44:04-debug: cocos-service:(onAfterInit) in 1387 ms7%
+2024-8-25 14:44:04-debug: localization-editor:(onAfterInit) start...7%
+2024-8-25 14:44:04-debug: Process: heapTotal 255.88MB heapUsed 247.58MB rss 41.71MB
+2024-8-25 14:44:04-debug: // ---- build task localization-editor：onAfterInit ----
+2024-8-25 14:44:04-debug: localization-editor:(onAfterInit) in 15 ms9%
+2024-8-25 14:44:04-debug: Reload project scripts start9%
+2024-8-25 14:44:04-debug: // ---- build task Reload project scripts ----
+2024-8-25 14:44:04-debug: Process: heapTotal 255.88MB heapUsed 247.63MB rss 41.42MB
+2024-8-25 14:44:04-debug: reload all scripts.
+2024-8-25 14:44:04-debug: // ---- build task localization-editor：onAfterInit ---- (15ms)
+2024-8-25 14:44:04-debug: Incremental keys: 
+2024-8-25 14:44:04-debug: Set detail map pack:///resolution-detail-map.json: {}
+2024-8-25 14:44:04-debug: Unregister timer
+2024-8-25 14:44:04-debug: Unregister genPlant
+2024-8-25 14:44:04-debug: Unregister main
+2024-8-25 14:44:04-debug: Invalidating 'pack:///chunks/d0/d0b282b9748ef7fc7d2e7bd647d71b0f7e84da53.js'
+2024-8-25 14:44:04-debug: Invalidating 'pack:///chunks/09/09e496b395f3362281c93269a29d6d47678870a4.js'
+2024-8-25 14:44:04-debug: Invalidating 'pack:///chunks/b0/b02df7dbd12a416e5ab2ccdb1f7fac565e85be68.js'
+2024-8-25 14:44:04-debug: Invalidating 'pack:///chunks/84/84741ad843cea9a440c5d8c2d379669b6551400d.js'
+2024-8-25 14:44:04-debug: Invalidating 'pack:///chunks/57/57aa3a73746d22d6e6fea20d4c04eb5fca3e2f83.js'
+2024-8-25 14:44:04-debug: Invalidating 'pack:///chunks/35/35a27f3d1725ee4b4a910b166a9876852bbc7831.js'
+2024-8-25 14:44:04-debug: Invalidating 'pack:///chunks/76/76eeef4b7b8bf5434ddf299b4885711ea4fb0f67.js'
+2024-8-25 14:44:04-debug: Invalidating 'pack:///chunks/29/29e40d128d8d3561568c2c75d80aa86e50036658.js'
+2024-8-25 14:44:04-debug: Invalidating 'pack:///chunks/e9/e91872bed1ce02ef8c0b8a1bd97039426629c4c6.js'
+2024-8-25 14:44:04-debug: Unregister scaleAction
+2024-8-25 14:44:04-debug: Invalidating 'pack:///chunks/0d/0d5541f1fd3a71e0d0240c5e19547531a0a3f398.js'
+2024-8-25 14:44:04-debug: [[Executor]] Module "pack:///chunks/d0/d0b282b9748ef7fc7d2e7bd647d71b0f7e84da53.js" loaded.
+2024-8-25 14:44:04-debug: E:\lianlukeji\frontend\cocos\menghuanfarm\temp\programming\packer-driver\targets\editor\chunks\09\09e496b395f3362281c93269a29d6d47678870a4.js resolved to E:\lianlukeji\frontend\cocos\menghuanfarm\temp\programming\packer-driver\targets\editor\chunks\09\09e496b395f3362281c93269a29d6d47678870a4.js is not in module cache!
+2024-8-25 14:44:04-debug: [[Executor]] Module "pack:///chunks/09/09e496b395f3362281c93269a29d6d47678870a4.js" loaded.
+2024-8-25 14:44:04-debug: E:\lianlukeji\frontend\cocos\menghuanfarm\temp\programming\packer-driver\targets\editor\chunks\db\db9b2d87e06505ca55a31452b084b84e24c39fbe.js resolved to E:\lianlukeji\frontend\cocos\menghuanfarm\temp\programming\packer-driver\targets\editor\chunks\db\db9b2d87e06505ca55a31452b084b84e24c39fbe.js is not in module cache!
+2024-8-25 14:44:04-debug: [[Executor]] Module "pack:///chunks/84/84741ad843cea9a440c5d8c2d379669b6551400d.js" loaded.
+2024-8-25 14:44:04-debug: [[Executor]] Module "pack:///chunks/35/35a27f3d1725ee4b4a910b166a9876852bbc7831.js" loaded.
+2024-8-25 14:44:04-debug: [[Executor]] Module "pack:///chunks/57/57aa3a73746d22d6e6fea20d4c04eb5fca3e2f83.js" loaded.
+2024-8-25 14:44:04-debug: [[Executor]] Register timer
+2024-8-25 14:44:04-debug: [[Executor]] Module "pack:///chunks/29/29e40d128d8d3561568c2c75d80aa86e50036658.js" loaded.
+2024-8-25 14:44:04-debug: [[Executor]] Register genPlant
+2024-8-25 14:44:04-debug: [[Executor]] Module "pack:///chunks/db/db9b2d87e06505ca55a31452b084b84e24c39fbe.js" loaded.
+2024-8-25 14:44:04-debug: [[Executor]] Register main
+2024-8-25 14:44:04-debug: [[Executor]] Module "pack:///chunks/e9/e91872bed1ce02ef8c0b8a1bd97039426629c4c6.js" loaded.
+2024-8-25 14:44:04-debug: [[Executor]] Module "pack:///chunks/0d/0d5541f1fd3a71e0d0240c5e19547531a0a3f398.js" loaded.
+2024-8-25 14:44:04-debug: [[Executor]] Module "pack:///chunks/09/09e496b395f3362281c93269a29d6d47678870a4.js" loaded.
+2024-8-25 14:44:04-debug: [[Executor]] Register scaleAction
+2024-8-25 14:44:04-debug: [[Executor]] Module "pack:///chunks/b0/b02df7dbd12a416e5ab2ccdb1f7fac565e85be68.js" loaded.
+2024-8-25 14:44:04-warn: The type of "scaleAction.isChild" must be CCBoolean, not Boolean.
+2024-8-25 14:44:04-debug: // ---- build task Reload project scripts ---- (229ms)
+2024-8-25 14:44:04-debug: run build task Reload project scripts success in 229 ms √10%
+2024-8-25 14:44:04-debug: Process: heapTotal 256.38MB heapUsed 247.92MB rss 48.02MB
+2024-8-25 14:44:04-debug: // ---- build task Query asset bundle ----
+2024-8-25 14:44:04-debug: Query asset bundle start10%
+2024-8-25 14:44:04-debug: run build task Query asset bundle success in 14 ms √11%
+2024-8-25 14:44:04-debug: Query and organize assets start11%
+2024-8-25 14:44:04-debug: // ---- build task Query and organize assets ----
+2024-8-25 14:44:04-debug: Process: heapTotal 256.38MB heapUsed 247.98MB rss 48.10MB
+2024-8-25 14:44:04-debug: // ---- build task Query asset bundle ---- (14ms)
+2024-8-25 14:44:04-debug: Query preload assets from cc.config.json: 60f7195c-ec2a-45eb-ba94-8955f60e81d0,1c02ae6f-4492-4915-b8f8-7492a3b1e4cd,810e96e4-e456-4468-9b59-f4e8f39732c0,efe8e2a3-eace-427b-b4f1-cb8a937ec77d,e9aa9a3e-5b2b-4ac7-a2c7-073de2b2b24f,8bbdbcdd-5cd4-4100-b6d5-b7c9625b6107,50f4348b-c883-4e2f-8f11-ce233b859fa1,fda095cb-831d-4601-ad94-846013963de8,f92806d7-1768-443f-afe8-12bcde84d0f0,dd3a144d-ab7f-41f0-82b8-2e43a090d496,f0416e68-0200-4b77-a926-4f9d16e494da,ff9be190-20a4-4e48-b68c-76e3c7cff085,970b0598-bcb0-4714-91fb-2e81440dccd8,bcd64cc6-2dd9-43f6-abbe-66318d332032,d930590d-bb92-4cc8-8bd1-23cd027f9edf,a3cd009f-0ab0-420d-9278-b9fdab939bbc,9361fd90-ba52-4f84-aa93-6e878fd576ca,871c3b6c-7379-419d-bda3-794b239ab90d,c27215d8-6835-4b68-bfbb-bdeac6100c04,b5d6115f-0370-4d7c-aad3-c194cc71cf98
+2024-8-25 14:44:04-debug: Number of scenes: 1
+2024-8-25 14:44:04-debug: Number of assets: 249
+2024-8-25 14:44:04-debug: Number of asset bundle: 3
+2024-8-25 14:44:04-debug: // ---- build task Query and organize assets ---- (375ms)
+2024-8-25 14:44:04-debug: run build task Query and organize assets success in 375 ms √13%
+2024-8-25 14:44:04-debug: Process: heapTotal 259.48MB heapUsed 250.13MB rss 56.60MB
+2024-8-25 14:44:04-debug: Organize scripts start13%
+2024-8-25 14:44:04-debug: sort script group...
+2024-8-25 14:44:04-debug: // ---- build task Organize scripts ----
+2024-8-25 14:44:04-debug: // ---- build task Organize scripts ---- (1ms)
+2024-8-25 14:44:04-debug: run build task Organize scripts success in 1 ms √14%
+2024-8-25 14:44:04-debug: Process: heapTotal 259.48MB heapUsed 250.18MB rss 56.67MB
+2024-8-25 14:44:04-debug: // ---- build task Organize texture compression tasks ----
+2024-8-25 14:44:04-debug: Organize texture compression tasks start14%
+2024-8-25 14:44:04-debug: Number of image-compress task: 0
+2024-8-25 14:44:04-debug: // ---- build task Group json ----
+2024-8-25 14:44:04-debug: // ---- build task Organize texture compression tasks ---- (59ms)
+2024-8-25 14:44:04-debug: run build task Organize texture compression tasks success in 59 ms √15%
+2024-8-25 14:44:04-debug: Process: heapTotal 259.98MB heapUsed 250.12MB rss 58.14MB
+2024-8-25 14:44:04-debug: Group json start15%
+2024-8-25 14:44:04-debug: Number of json group: 75
+2024-8-25 14:44:04-debug: // ---- build task Group json ---- (2ms)
+2024-8-25 14:44:04-debug: run build task Group json success in 2 ms √16%
+2024-8-25 14:44:04-debug: Process: heapTotal 259.98MB heapUsed 250.53MB rss 58.16MB
+2024-8-25 14:44:04-debug: Merging Texture2D json start16%
+2024-8-25 14:44:04-debug: // ---- build task Merging Texture2D json ----
+2024-8-25 14:44:04-debug: // ---- build task Merging Texture2D json ---- (6ms)
+2024-8-25 14:44:04-debug: run build task Merging Texture2D json success in 6 ms √18%
+2024-8-25 14:44:04-debug: Sort import-map.json start18%
+2024-8-25 14:44:04-debug: // ---- build task Sort import-map.json ----
+2024-8-25 14:44:04-debug: Process: heapTotal 259.98MB heapUsed 250.68MB rss 58.42MB
+2024-8-25 14:44:04-debug: // ---- build task Sort import-map.json ---- (2ms)
+2024-8-25 14:44:04-debug: run build task Sort import-map.json success in 2 ms √19%
+2024-8-25 14:44:04-debug: web-mobile:(onBeforeBuildAssets) start...19%
+2024-8-25 14:44:04-debug: // ---- build task web-mobile：onBeforeBuildAssets ----
+2024-8-25 14:44:04-debug: Process: heapTotal 259.98MB heapUsed 250.72MB rss 58.40MB
+2024-8-25 14:44:04-debug: // ---- build task web-mobile：onBeforeBuildAssets ---- (1ms)
+2024-8-25 14:44:04-debug: // ---- build task localization-editor：onBeforeBuildAssets ----
+2024-8-25 14:44:04-debug: localization-editor:(onBeforeBuildAssets) start...21%
+2024-8-25 14:44:04-debug: Process: heapTotal 259.98MB heapUsed 250.78MB rss 58.42MB
+2024-8-25 14:44:04-debug: web-mobile:(onBeforeBuildAssets) in 1 ms21%
+2024-8-25 14:44:04-debug: // ---- build task localization-editor：onBeforeBuildAssets ---- (42ms)
+2024-8-25 14:44:04-debug: localization-editor:(onBeforeBuildAssets) in 42 ms23%
+2024-8-25 14:44:04-debug: Build auto-atlas start23%
+2024-8-25 14:44:04-debug: // ---- build task Build auto-atlas ----
+2024-8-25 14:44:04-debug: Process: heapTotal 259.98MB heapUsed 250.82MB rss 58.42MB
+2024-8-25 14:44:04-debug: Start collect pack info
+2024-8-25 14:44:04-debug: // ---- build task Build auto-atlas ---- (1ms)
+2024-8-25 14:44:04-debug: run build task Build auto-atlas success in 1 ms √30%
+2024-8-25 14:44:04-debug: Compress Image start30%
+2024-8-25 14:44:04-debug: Process: heapTotal 259.98MB heapUsed 250.86MB rss 58.46MB
+2024-8-25 14:44:04-debug: skip compress texture
+2024-8-25 14:44:04-debug: // ---- build task Compress Image ----
+2024-8-25 14:44:04-debug: // ---- build task Compress Image ---- (2ms)
+2024-8-25 14:44:04-debug: run build task Compress Image success in 2 ms √37%
+2024-8-25 14:44:04-debug: // ---- build task Copy the resource ----
+2024-8-25 14:44:04-debug: Copy the resource start37%
+2024-8-25 14:44:04-debug: Process: heapTotal 262.23MB heapUsed 250.12MB rss 58.67MB
+2024-8-25 14:44:04-debug: Asset Bundle(internal) handle assets: 20
+2024-8-25 14:44:05-debug: Asset Bundle(resources) handle assets: 227
+2024-8-25 14:44:05-debug: Asset Bundle(main) handle assets: 36
+2024-8-25 14:44:05-debug: // ---- build task Copy the resource ---- (126ms)
+2024-8-25 14:44:05-debug: run build task Copy the resource success in 126 ms √43%
+2024-8-25 14:44:05-debug: Process: heapTotal 262.23MB heapUsed 250.48MB rss 60.34MB
+2024-8-25 14:44:05-debug: // ---- build task Build the grouped json and scatter files to the specified location ----
+2024-8-25 14:44:05-debug: Build the grouped json and scatter files to the specified location start43%
+2024-8-25 14:44:06-debug: // ---- build task Build the grouped json and scatter files to the specified location ---- (1363ms)
+2024-8-25 14:44:06-debug: run build task Build the grouped json and scatter files to the specified location success in 1363 ms √50%
+2024-8-25 14:44:06-debug: Compress zip bundle start50%
+2024-8-25 14:44:06-debug: // ---- build task Compress zip bundle ----
+2024-8-25 14:44:06-debug: Process: heapTotal 263.23MB heapUsed 252.35MB rss 68.26MB
+2024-8-25 14:44:06-debug: // ---- build task Compress zip bundle ---- (3ms)
+2024-8-25 14:44:06-debug: run build task Compress zip bundle success in 3 ms √57%
+2024-8-25 14:44:06-debug: Process: heapTotal 263.23MB heapUsed 252.39MB rss 68.17MB
+2024-8-25 14:44:06-debug: // ---- build task Build script ----
+2024-8-25 14:44:06-debug: Build script start57%
+2024-8-25 14:44:21-debug: Build project script start...57%
+2024-8-25 14:44:21-debug: Process: heapTotal 272.85MB heapUsed 238.57MB rss 187.72MB
+2024-8-25 14:44:21-log: Run build task(build-script) in child, see: chrome://inspect/#devices
+2024-8-25 14:44:22-warn: [build-script][[Build.Script.Rollup]] Circular dependency: file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/genPlant.ts -> file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/main.ts -> file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/genPlant.ts
+2024-8-25 14:44:27-debug: excute-script over with build-script 6820ms
+2024-8-25 14:44:27-debug: Copy externalScripts success!
+2024-8-25 14:44:27-debug: Build project script in (6844 ms) √57%
+2024-8-25 14:44:27-debug: Process: heapTotal 223.77MB heapUsed 215.05MB rss 153.50MB
+2024-8-25 14:44:27-debug: Build engine start...57%
+2024-8-25 14:44:28-debug: Use cache engine: {link(C:\Users\ADMINI~1\AppData\Local\Temp\CocosCreator\3.6.1\builder\engine\fde329c401c641771bff368eaccc979a)}
+2024-8-25 14:44:28-debug: {"debug":false,"sourceMaps":false,"includeModules":["2d","animation","audio","base","dragon-bones","gfx-webgl","gfx-webgl2","intersection-2d","marionette","particle-2d","physics-2d-box2d","profiler","skeletal-animation","spine","tiled-map","tween","ui","video","webview","xr"],"engineVersion":"3.6.1","platform":"HTML5","md5Map":[],"engineName":"cocos-js","useCache":true,"split":false,"ammoJsWasm":"fallback","assetURLFormat":"runtime-resolved","flags":{"DEBUG":false},"entry":"D:\\cocos-dashboard-editors\\Creator\\3.6.1\\resources\\resources\\3d\\engine"}
+2024-8-25 14:44:28-debug: Build engine in (472 ms) √57%
+2024-8-25 14:44:28-debug: // ---- build task Build script ---- (22070ms)
+2024-8-25 14:44:28-debug: run build task Build script success in 22070 ms √63%
+2024-8-25 14:44:28-debug: Add md5 suffix to assets start63%
+2024-8-25 14:44:28-debug: // ---- build task Add md5 suffix to assets ----
+2024-8-25 14:44:28-debug: Process: heapTotal 224.02MB heapUsed 216.30MB rss 154.68MB
+2024-8-25 14:44:28-debug: // ---- build task Add md5 suffix to assets ---- (1ms)
+2024-8-25 14:44:28-debug: run build task Add md5 suffix to assets success in 1 ms √73%
+2024-8-25 14:44:28-debug: // ---- build task Init settings and config ----
+2024-8-25 14:44:28-debug: Process: heapTotal 224.02MB heapUsed 215.75MB rss 153.96MB
+2024-8-25 14:44:28-debug: Init settings and config start73%
+2024-8-25 14:44:28-debug: // ---- build task Init settings and config ---- (1ms)
+2024-8-25 14:44:28-debug: run build task Init settings and config success in 1 ms √74%
+2024-8-25 14:44:28-debug: Process: heapTotal 224.02MB heapUsed 215.81MB rss 154.08MB
+2024-8-25 14:44:28-debug: builder.tasks.settings.macro does not defined in i18n
+2024-8-25 14:44:28-debug: // ---- build task builder.tasks.settings.macro ----
+2024-8-25 14:44:28-debug: builder.tasks.settings.macro start74%
+2024-8-25 14:44:28-debug: // ---- build task builder.tasks.settings.macro ---- (13ms)
+2024-8-25 14:44:28-debug: run build task builder.tasks.settings.macro success in 13 ms √74%
+2024-8-25 14:44:28-debug: // ---- build task Sort some build options to settings.json ----
+2024-8-25 14:44:28-debug: Sort some build options to settings.json start74%
+2024-8-25 14:44:28-debug: Process: heapTotal 224.02MB heapUsed 215.85MB rss 154.12MB
+2024-8-25 14:44:28-debug: // ---- build task Sort some build options to settings.json ---- (20ms)
+2024-8-25 14:44:28-debug: run build task Sort some build options to settings.json success in 20 ms √75%
+2024-8-25 14:44:28-debug: custom joint texture layouts start75%
+2024-8-25 14:44:28-debug: Process: heapTotal 225.00MB heapUsed 216.87MB rss 155.87MB
+2024-8-25 14:44:28-debug: // ---- build task custom joint texture layouts ----
+2024-8-25 14:44:28-debug: // ---- build task custom joint texture layouts ---- (12ms)
+2024-8-25 14:44:28-debug: run build task custom joint texture layouts success in 12 ms √76%
+2024-8-25 14:44:28-debug: custom joint physics start76%
+2024-8-25 14:44:28-debug: // ---- build task custom joint physics ----
+2024-8-25 14:44:28-debug: Process: heapTotal 225.00MB heapUsed 216.91MB rss 155.91MB
+2024-8-25 14:44:28-debug: run build task custom joint physics success in 0 ms √76%
+2024-8-25 14:44:28-debug: // ---- build task Fill script data to settings ----
+2024-8-25 14:44:28-debug: Process: heapTotal 225.00MB heapUsed 216.95MB rss 155.95MB
+2024-8-25 14:44:28-debug: Fill script data to settings start76%
+2024-8-25 14:44:28-debug: // ---- build task Fill script data to settings ---- (1ms)
+2024-8-25 14:44:28-debug: run build task Fill script data to settings success in 1 ms √77%
+2024-8-25 14:44:28-debug: Process: heapTotal 225.00MB heapUsed 216.99MB rss 155.99MB
+2024-8-25 14:44:28-debug: // ---- build task Fill scene data to settings ----
+2024-8-25 14:44:28-debug: Fill scene data to settings start77%
+2024-8-25 14:44:28-debug: // ---- build task Fill scene data to settings ---- (1ms)
+2024-8-25 14:44:28-debug: run build task Fill scene data to settings success in 1 ms √77%
+2024-8-25 14:44:28-debug: Process: heapTotal 225.00MB heapUsed 217.03MB rss 156.03MB
+2024-8-25 14:44:28-debug: Organize assets groups，generate packedAssets and rawAssets data start77%
+2024-8-25 14:44:28-debug: // ---- build task Organize assets groups，generate packedAssets and rawAssets data ----
+2024-8-25 14:44:28-debug: // ---- build task Organize assets groups，generate packedAssets and rawAssets data ---- (2ms)
+2024-8-25 14:44:28-debug: run build task Organize assets groups，generate packedAssets and rawAssets data success in 2 ms √78%
+2024-8-25 14:44:28-debug: Process: heapTotal 225.00MB heapUsed 217.18MB rss 156.14MB
+2024-8-25 14:44:28-debug: Generate md5AssetsMap from suffixMap to settings start78%
+2024-8-25 14:44:28-debug: // ---- build task Generate md5AssetsMap from suffixMap to settings ----
+2024-8-25 14:44:28-debug: options.md5Cache is false.
+2024-8-25 14:44:28-debug: // ---- build task Generate md5AssetsMap from suffixMap to settings ---- (1ms)
+2024-8-25 14:44:28-debug: run build task Generate md5AssetsMap from suffixMap to settings success in 1 ms √78%
+2024-8-25 14:44:28-debug: Process: heapTotal 225.00MB heapUsed 217.23MB rss 156.20MB
+2024-8-25 14:44:28-debug: // ---- build task web-mobile：onBeforeCompressSettings ----
+2024-8-25 14:44:28-debug: web-mobile:(onBeforeCompressSettings) start...78%
+2024-8-25 14:44:28-debug: // ---- build task web-mobile：onBeforeCompressSettings ---- (1ms)
+2024-8-25 14:44:28-debug: web-mobile:(onBeforeCompressSettings) in 1 ms81%
+2024-8-25 14:44:28-debug: cocos-service:(onBeforeCompressSettings) start...81%
+2024-8-25 14:44:28-debug: Process: heapTotal 225.00MB heapUsed 217.28MB rss 156.24MB
+2024-8-25 14:44:28-debug: // ---- build task cocos-service：onBeforeCompressSettings ----
+2024-8-25 14:44:29-debug: // ---- build task cocos-service：onBeforeCompressSettings ---- (386ms)
+2024-8-25 14:44:29-debug: cocos-service:(onBeforeCompressSettings) in 386 ms83%
+2024-8-25 14:44:29-debug: Process: heapTotal 225.00MB heapUsed 217.34MB rss 156.30MB
+2024-8-25 14:44:29-debug: Build import-map.json start83%
+2024-8-25 14:44:29-debug: // ---- build task Build import-map.json ----
+2024-8-25 14:44:29-debug: // ---- build task Build import-map.json ---- (6ms)
+2024-8-25 14:44:29-debug: run build task Build import-map.json success in 6 ms √84%
+2024-8-25 14:44:29-debug: // ---- build task Compress settings.json and config.json ----
+2024-8-25 14:44:29-debug: Process: heapTotal 225.00MB heapUsed 217.39MB rss 156.34MB
+2024-8-25 14:44:29-debug: Compress settings.json and config.json start84%
+2024-8-25 14:44:29-debug: // ---- build task Compress settings.json and config.json ---- (5ms)
+2024-8-25 14:44:29-debug: run build task Compress settings.json and config.json success in 5 ms √85%
+2024-8-25 14:44:29-debug: Save config.json start85%
+2024-8-25 14:44:29-debug: // ---- build task Save config.json ----
+2024-8-25 14:44:29-debug: Process: heapTotal 225.00MB heapUsed 216.96MB rss 155.74MB
+2024-8-25 14:44:29-debug: // ---- build task Save config.json ---- (3ms)
+2024-8-25 14:44:29-debug: run build task Save config.json success in 3 ms √86%
+2024-8-25 14:44:29-debug: Save Settings.json start86%
+2024-8-25 14:44:29-debug: // ---- build task Save Settings.json ----
+2024-8-25 14:44:29-debug: Process: heapTotal 225.00MB heapUsed 217.06MB rss 155.86MB
+2024-8-25 14:44:29-debug: // ---- build task Save Settings.json ---- (11ms)
+2024-8-25 14:44:29-debug: run build task Save Settings.json success in 11 ms √87%
+2024-8-25 14:44:29-debug: Process: heapTotal 227.44MB heapUsed 219.76MB rss 159.50MB
+2024-8-25 14:44:29-debug: Sort build template start87%
+2024-8-25 14:44:29-debug: // ---- build task Sort build template ----
+2024-8-25 14:44:29-debug: // ---- build task Sort build template ---- (113ms)
+2024-8-25 14:44:29-debug: run build task Sort build template success in 113 ms √88%
+2024-8-25 14:44:29-debug: // ---- build task cocos-service：onAfterCompressSettings ----
+2024-8-25 14:44:29-debug: Process: heapTotal 230.97MB heapUsed 220.43MB rss 160.79MB
+2024-8-25 14:44:29-debug: cocos-service:(onAfterCompressSettings) start...88%
+2024-8-25 14:44:30-debug: // ---- build task cocos-service：onAfterCompressSettings ---- (872ms)
+2024-8-25 14:44:30-debug: web-mobile:(onAfterBuild) start...90%
+2024-8-25 14:44:30-debug: // ---- build task web-mobile：onAfterBuild ----
+2024-8-25 14:44:30-debug: Process: heapTotal 231.47MB heapUsed 219.56MB rss 161.43MB
+2024-8-25 14:44:30-debug: cocos-service:(onAfterCompressSettings) in 872 ms90%
+2024-8-25 14:44:30-debug: Use build-template {link(E:\lianlukeji\frontend\cocos\menghuanfarm\build-templates\web-mobile)}.
+2024-8-25 14:44:30-debug: // ---- build task web-mobile：onAfterBuild ---- (159ms)
+2024-8-25 14:44:30-debug: web-mobile:(onAfterBuild) in 159 ms92%
+2024-8-25 14:44:30-debug: // ---- build task cocos-service：onAfterBuild ----
+2024-8-25 14:44:30-debug: cocos-service:(onAfterBuild) start...92%
+2024-8-25 14:44:30-debug: Process: heapTotal 232.22MB heapUsed 219.24MB rss 163.07MB
+2024-8-25 14:44:30-debug: // ---- build task cocos-service：onAfterBuild ---- (176ms)
+2024-8-25 14:44:30-debug: cocos-service:(onAfterBuild) in 176 ms94%
+2024-8-25 14:44:30-debug: builder:build-project-total (28856ms)
+2024-8-25 14:44:30-debug: build success in 28856 ms!
+2024-8-25 14:44:30-debug: ================================ Build Task (web-mobile) Finished in (28875)ms ================================
+2024-8-25 19:29:05-debug: =================================== Build Task (web-mobile) Start ================================
+2024-8-25 19:29:05-debug: cocos-service:(onBeforeBuild) start...0%
+2024-8-25 19:29:05-debug: Build with Cocos Creator 3.6.1
+2024-8-25 19:29:05-debug: Start build task, options:{"name":"PlantStore","platform":"web-mobile","buildPath":"project://build","debug":false,"md5Cache":false,"skipCompressTexture":true,"sourceMaps":false,"polyfills":{"asyncFunctions":true,"coreJs":true},"experimentalEraseModules":false,"useBuiltinServer":false,"mainBundleIsRemote":false,"mainBundleCompressionType":"none","replaceSplashScreen":true,"startScene":"5a6f4efe-edd1-4c9d-adc3-c28f8d58012d","outputName":"web-mobile","scenes":[{"url":"db://assets/scene/main.scene","uuid":"5a6f4efe-edd1-4c9d-adc3-c28f8d58012d","inBundle":false}],"windows":[],"packages":{"web-mobile":{"orientation":"portrait","__version__":"1.0.1","embedWebDebugger":false},"cocos-service":{"configID":"8defd1","services":[],"__version__":"3.0.7","sdkHubConfigID":"5c53db","sdkHubConfig":{"id":"5c53db","name":"HUAWEI  AppGallery Connect","platform":"3","channelID":"161221","channelName":"HUAWEI  AppGallery Connect","remarks":"HUAWEI  AppGallery Connect","plugins":[{"hasParam":false,"pParam":{},"pId":"2412","pName":"HUAWEI HMS","packageName":"huawei-hms","pType":30,"pUseType":30,"hasLocal":true,"hasUpdate":false,"requireParam":true,"pVersion":"2.0.3_6.3.0","isInstall":false,"installProgress":true}]}}},"__version__":"1.3.3","web-mobile":[]}
+2024-8-25 19:29:05-debug: // ---- build task cocos-service：onBeforeBuild ----
+2024-8-25 19:29:05-debug: Process: heapTotal 230.41MB heapUsed 222.86MB rss 23.18MB
+2024-8-25 19:29:06-debug: // ---- build task cocos-service：onBeforeBuild ---- (552ms)
+2024-8-25 19:29:06-debug: cocos-service:(onBeforeBuild) in 552 ms2%
+2024-8-25 19:29:06-debug: Query all assets info in project
+2024-8-25 19:29:06-debug: init custom config: keepNodeUuid: false, useCache: true
+2024-8-25 19:29:06-debug: BuildAssetLibrary query-assets with assets 397
+2024-8-25 19:29:06-debug:   Number of all scenes: 2
+2024-8-25 19:29:06-debug:   Number of all scripts: 7
+2024-8-25 19:29:06-debug:   Number of other assets: 759
+2024-8-25 19:29:06-debug: web-mobile:(onAfterInit) start...2%
+2024-8-25 19:29:06-debug: Process: heapTotal 231.56MB heapUsed 223.70MB rss 37.91MB
+2024-8-25 19:29:06-debug: BuildAssetLibrary initialized with asset 638!
+2024-8-25 19:29:06-debug: // ---- build task web-mobile：onAfterInit ----
+2024-8-25 19:29:07-debug: // ---- build task web-mobile：onAfterInit ---- (406ms)
+2024-8-25 19:29:07-debug: web-mobile:(onAfterInit) in 406 ms4%
+2024-8-25 19:29:07-debug: cocos-service:(onAfterInit) start...4%
+2024-8-25 19:29:07-debug: // ---- build task cocos-service：onAfterInit ----
+2024-8-25 19:29:07-debug: Process: heapTotal 231.56MB heapUsed 223.65MB rss 39.33MB
+2024-8-25 19:29:08-debug: // ---- build task cocos-service：onAfterInit ---- (1532ms)
+2024-8-25 19:29:08-debug: cocos-service:(onAfterInit) in 1532 ms7%
+2024-8-25 19:29:08-debug: localization-editor:(onAfterInit) start...7%
+2024-8-25 19:29:08-debug: // ---- build task localization-editor：onAfterInit ----
+2024-8-25 19:29:08-debug: Process: heapTotal 231.56MB heapUsed 223.72MB rss 39.17MB
+2024-8-25 19:29:08-debug: // ---- build task localization-editor：onAfterInit ---- (26ms)
+2024-8-25 19:29:08-debug: localization-editor:(onAfterInit) in 26 ms9%
+2024-8-25 19:29:08-debug: // ---- build task Reload project scripts ----
+2024-8-25 19:29:08-debug: reload all scripts.
+2024-8-25 19:29:08-debug: Reload project scripts start9%
+2024-8-25 19:29:08-debug: Process: heapTotal 231.56MB heapUsed 223.76MB rss 39.46MB
+2024-8-25 19:29:08-debug: Incremental keys: 
+2024-8-25 19:29:08-debug: Set detail map pack:///resolution-detail-map.json: {}
+2024-8-25 19:29:08-debug: Unregister main
+2024-8-25 19:29:08-debug: Unregister timer
+2024-8-25 19:29:08-debug: Unregister genPlant
+2024-8-25 19:29:08-debug: Unregister scaleAction
+2024-8-25 19:29:08-debug: Invalidating 'pack:///chunks/d0/d0b282b9748ef7fc7d2e7bd647d71b0f7e84da53.js'
+2024-8-25 19:29:08-debug: Invalidating 'pack:///chunks/09/09e496b395f3362281c93269a29d6d47678870a4.js'
+2024-8-25 19:29:08-debug: Invalidating 'pack:///chunks/57/57aa3a73746d22d6e6fea20d4c04eb5fca3e2f83.js'
+2024-8-25 19:29:08-debug: Invalidating 'pack:///chunks/84/84741ad843cea9a440c5d8c2d379669b6551400d.js'
+2024-8-25 19:29:08-debug: Invalidating 'pack:///chunks/35/35a27f3d1725ee4b4a910b166a9876852bbc7831.js'
+2024-8-25 19:29:08-debug: Invalidating 'pack:///chunks/db/db9b2d87e06505ca55a31452b084b84e24c39fbe.js'
+2024-8-25 19:29:08-debug: Invalidating 'pack:///chunks/29/29e40d128d8d3561568c2c75d80aa86e50036658.js'
+2024-8-25 19:29:08-debug: Invalidating 'pack:///chunks/e9/e91872bed1ce02ef8c0b8a1bd97039426629c4c6.js'
+2024-8-25 19:29:08-debug: Invalidating 'pack:///chunks/0d/0d5541f1fd3a71e0d0240c5e19547531a0a3f398.js'
+2024-8-25 19:29:09-debug: [[Executor]] Module "pack:///chunks/d0/d0b282b9748ef7fc7d2e7bd647d71b0f7e84da53.js" loaded.
+2024-8-25 19:29:08-debug: Invalidating 'pack:///chunks/b0/b02df7dbd12a416e5ab2ccdb1f7fac565e85be68.js'
+2024-8-25 19:29:09-debug: E:\lianlukeji\frontend\cocos\menghuanfarm\temp\programming\packer-driver\targets\editor\chunks\09\09e496b395f3362281c93269a29d6d47678870a4.js resolved to E:\lianlukeji\frontend\cocos\menghuanfarm\temp\programming\packer-driver\targets\editor\chunks\09\09e496b395f3362281c93269a29d6d47678870a4.js is not in module cache!
+2024-8-25 19:29:09-debug: [[Executor]] Module "pack:///chunks/09/09e496b395f3362281c93269a29d6d47678870a4.js" loaded.
+2024-8-25 19:29:09-debug: E:\lianlukeji\frontend\cocos\menghuanfarm\temp\programming\packer-driver\targets\editor\chunks\26\26a649bb2fe4851e2f1c916775a60b49595da7fd.js resolved to E:\lianlukeji\frontend\cocos\menghuanfarm\temp\programming\packer-driver\targets\editor\chunks\26\26a649bb2fe4851e2f1c916775a60b49595da7fd.js is not in module cache!
+2024-8-25 19:29:09-debug: E:\lianlukeji\frontend\cocos\menghuanfarm\temp\programming\packer-driver\targets\editor\chunks\8d\8dfeddacc4c82b4252bb02a2538d5f5a60f5d03c.js resolved to E:\lianlukeji\frontend\cocos\menghuanfarm\temp\programming\packer-driver\targets\editor\chunks\8d\8dfeddacc4c82b4252bb02a2538d5f5a60f5d03c.js is not in module cache!
+2024-8-25 19:29:09-debug: [[Executor]] Module "pack:///chunks/84/84741ad843cea9a440c5d8c2d379669b6551400d.js" loaded.
+2024-8-25 19:29:09-debug: [[Executor]] Register timer
+2024-8-25 19:29:09-debug: [[Executor]] Module "pack:///chunks/8d/8dfeddacc4c82b4252bb02a2538d5f5a60f5d03c.js" loaded.
+2024-8-25 19:29:09-debug: [[Executor]] Module "pack:///chunks/29/29e40d128d8d3561568c2c75d80aa86e50036658.js" loaded.
+2024-8-25 19:29:09-debug: [[Executor]] Module "pack:///chunks/57/57aa3a73746d22d6e6fea20d4c04eb5fca3e2f83.js" loaded.
+2024-8-25 19:29:09-debug: [[Executor]] Register main
+2024-8-25 19:29:09-debug: [[Executor]] Module "pack:///chunks/35/35a27f3d1725ee4b4a910b166a9876852bbc7831.js" loaded.
+2024-8-25 19:29:09-debug: [[Executor]] Module "pack:///chunks/26/26a649bb2fe4851e2f1c916775a60b49595da7fd.js" loaded.
+2024-8-25 19:29:09-debug: [[Executor]] Module "pack:///chunks/e9/e91872bed1ce02ef8c0b8a1bd97039426629c4c6.js" loaded.
+2024-8-25 19:29:09-debug: [[Executor]] Register genPlant
+2024-8-25 19:29:09-warn: The type of "scaleAction.isChild" must be CCBoolean, not Boolean.
+2024-8-25 19:29:09-debug: [[Executor]] Module "pack:///chunks/b0/b02df7dbd12a416e5ab2ccdb1f7fac565e85be68.js" loaded.
+2024-8-25 19:29:09-debug: [[Executor]] Module "pack:///chunks/0d/0d5541f1fd3a71e0d0240c5e19547531a0a3f398.js" loaded.
+2024-8-25 19:29:09-debug: [[Executor]] Register scaleAction
+2024-8-25 19:29:09-debug: [[Executor]] Module "pack:///chunks/09/09e496b395f3362281c93269a29d6d47678870a4.js" loaded.
+2024-8-25 19:29:09-debug: // ---- build task Reload project scripts ---- (234ms)
+2024-8-25 19:29:09-debug: run build task Reload project scripts success in 234 ms √10%
+2024-8-25 19:29:09-debug: Query asset bundle start10%
+2024-8-25 19:29:09-debug: Process: heapTotal 232.26MB heapUsed 224.44MB rss 47.49MB
+2024-8-25 19:29:09-debug: // ---- build task Query asset bundle ----
+2024-8-25 19:29:09-debug: // ---- build task Query asset bundle ---- (15ms)
+2024-8-25 19:29:09-debug: run build task Query asset bundle success in 15 ms √11%
+2024-8-25 19:29:09-debug: Query and organize assets start11%
+2024-8-25 19:29:09-debug: // ---- build task Query and organize assets ----
+2024-8-25 19:29:09-debug: Process: heapTotal 232.26MB heapUsed 224.50MB rss 47.72MB
+2024-8-25 19:29:09-debug: Query preload assets from cc.config.json: 60f7195c-ec2a-45eb-ba94-8955f60e81d0,1c02ae6f-4492-4915-b8f8-7492a3b1e4cd,810e96e4-e456-4468-9b59-f4e8f39732c0,efe8e2a3-eace-427b-b4f1-cb8a937ec77d,e9aa9a3e-5b2b-4ac7-a2c7-073de2b2b24f,8bbdbcdd-5cd4-4100-b6d5-b7c9625b6107,50f4348b-c883-4e2f-8f11-ce233b859fa1,fda095cb-831d-4601-ad94-846013963de8,f92806d7-1768-443f-afe8-12bcde84d0f0,dd3a144d-ab7f-41f0-82b8-2e43a090d496,f0416e68-0200-4b77-a926-4f9d16e494da,ff9be190-20a4-4e48-b68c-76e3c7cff085,970b0598-bcb0-4714-91fb-2e81440dccd8,bcd64cc6-2dd9-43f6-abbe-66318d332032,d930590d-bb92-4cc8-8bd1-23cd027f9edf,a3cd009f-0ab0-420d-9278-b9fdab939bbc,9361fd90-ba52-4f84-aa93-6e878fd576ca,871c3b6c-7379-419d-bda3-794b239ab90d,c27215d8-6835-4b68-bfbb-bdeac6100c04,b5d6115f-0370-4d7c-aad3-c194cc71cf98
+2024-8-25 19:29:09-debug: Number of scenes: 1
+2024-8-25 19:29:09-debug: Number of assets: 249
+2024-8-25 19:29:09-debug: Number of asset bundle: 3
+2024-8-25 19:29:09-debug: run build task Query and organize assets success in 178 ms √13%
+2024-8-25 19:29:09-debug: // ---- build task Query and organize assets ---- (178ms)
+2024-8-25 19:29:09-debug: Organize scripts start13%
+2024-8-25 19:29:09-debug: // ---- build task Organize scripts ----
+2024-8-25 19:29:09-debug: Process: heapTotal 236.76MB heapUsed 226.36MB rss 56.28MB
+2024-8-25 19:29:09-debug: sort script group...
+2024-8-25 19:29:09-debug: // ---- build task Organize scripts ---- (1ms)
+2024-8-25 19:29:09-debug: run build task Organize scripts success in 1 ms √14%
+2024-8-25 19:29:09-debug: Process: heapTotal 236.76MB heapUsed 226.41MB rss 56.31MB
+2024-8-25 19:29:09-debug: // ---- build task Organize texture compression tasks ----
+2024-8-25 19:29:09-debug: Organize texture compression tasks start14%
+2024-8-25 19:29:09-debug: Number of image-compress task: 0
+2024-8-25 19:29:09-debug: // ---- build task Group json ----
+2024-8-25 19:29:09-debug: Process: heapTotal 236.76MB heapUsed 227.01MB rss 57.34MB
+2024-8-25 19:29:09-debug: Number of json group: 75
+2024-8-25 19:29:09-debug: // ---- build task Organize texture compression tasks ---- (60ms)
+2024-8-25 19:29:09-debug: run build task Organize texture compression tasks success in 60 ms √15%
+2024-8-25 19:29:09-debug: Group json start15%
+2024-8-25 19:29:09-debug: // ---- build task Group json ---- (3ms)
+2024-8-25 19:29:09-debug: run build task Group json success in 3 ms √16%
+2024-8-25 19:29:09-debug: // ---- build task Merging Texture2D json ----
+2024-8-25 19:29:09-debug: Process: heapTotal 236.76MB heapUsed 225.94MB rss 57.65MB
+2024-8-25 19:29:09-debug: Merging Texture2D json start16%
+2024-8-25 19:29:09-debug: // ---- build task Merging Texture2D json ---- (4ms)
+2024-8-25 19:29:09-debug: run build task Merging Texture2D json success in 4 ms √18%
+2024-8-25 19:29:09-debug: Process: heapTotal 236.76MB heapUsed 226.09MB rss 57.68MB
+2024-8-25 19:29:09-debug: Sort import-map.json start18%
+2024-8-25 19:29:09-debug: // ---- build task Sort import-map.json ----
+2024-8-25 19:29:09-debug: // ---- build task Sort import-map.json ---- (1ms)
+2024-8-25 19:29:09-debug: run build task Sort import-map.json success in 1 ms √19%
+2024-8-25 19:29:09-debug: web-mobile:(onBeforeBuildAssets) start...19%
+2024-8-25 19:29:09-debug: // ---- build task web-mobile：onBeforeBuildAssets ----
+2024-8-25 19:29:09-debug: Process: heapTotal 236.76MB heapUsed 226.13MB rss 57.67MB
+2024-8-25 19:29:09-debug: // ---- build task web-mobile：onBeforeBuildAssets ---- (2ms)
+2024-8-25 19:29:09-debug: // ---- build task localization-editor：onBeforeBuildAssets ----
+2024-8-25 19:29:09-debug: web-mobile:(onBeforeBuildAssets) in 2 ms21%
+2024-8-25 19:29:09-debug: localization-editor:(onBeforeBuildAssets) start...21%
+2024-8-25 19:29:09-debug: Process: heapTotal 236.76MB heapUsed 226.18MB rss 57.72MB
+2024-8-25 19:29:09-debug: // ---- build task localization-editor：onBeforeBuildAssets ---- (8ms)
+2024-8-25 19:29:09-debug: Build auto-atlas start23%
+2024-8-25 19:29:09-debug: localization-editor:(onBeforeBuildAssets) in 8 ms23%
+2024-8-25 19:29:09-debug: Process: heapTotal 236.76MB heapUsed 226.23MB rss 57.74MB
+2024-8-25 19:29:09-debug: // ---- build task Build auto-atlas ----
+2024-8-25 19:29:09-debug: Start collect pack info
+2024-8-25 19:29:09-debug: // ---- build task Build auto-atlas ---- (2ms)
+2024-8-25 19:29:09-debug: run build task Build auto-atlas success in 2 ms √30%
+2024-8-25 19:29:09-debug: Process: heapTotal 236.76MB heapUsed 226.27MB rss 57.78MB
+2024-8-25 19:29:09-debug: skip compress texture
+2024-8-25 19:29:09-debug: // ---- build task Compress Image ----
+2024-8-25 19:29:09-debug: Compress Image start30%
+2024-8-25 19:29:09-debug: // ---- build task Compress Image ---- (1ms)
+2024-8-25 19:29:09-debug: run build task Compress Image success in 1 ms √37%
+2024-8-25 19:29:09-debug: Process: heapTotal 236.76MB heapUsed 226.32MB rss 57.80MB
+2024-8-25 19:29:09-debug: Asset Bundle(internal) handle assets: 20
+2024-8-25 19:29:09-debug: // ---- build task Copy the resource ----
+2024-8-25 19:29:09-debug: Copy the resource start37%
+2024-8-25 19:29:09-debug: Asset Bundle(resources) handle assets: 227
+2024-8-25 19:29:09-debug: Asset Bundle(main) handle assets: 36
+2024-8-25 19:29:09-debug: // ---- build task Copy the resource ---- (178ms)
+2024-8-25 19:29:09-debug: run build task Copy the resource success in 178 ms √43%
+2024-8-25 19:29:09-debug: Build the grouped json and scatter files to the specified location start43%
+2024-8-25 19:29:09-debug: // ---- build task Build the grouped json and scatter files to the specified location ----
+2024-8-25 19:29:09-debug: Process: heapTotal 237.26MB heapUsed 227.26MB rss 59.51MB
+2024-8-25 19:29:11-debug: // ---- build task Build the grouped json and scatter files to the specified location ---- (1491ms)
+2024-8-25 19:29:11-debug: run build task Build the grouped json and scatter files to the specified location success in 1491 ms √50%
+2024-8-25 19:29:11-debug: // ---- build task Compress zip bundle ----
+2024-8-25 19:29:11-debug: Process: heapTotal 242.26MB heapUsed 230.01MB rss 67.02MB
+2024-8-25 19:29:11-debug: Compress zip bundle start50%
+2024-8-25 19:29:11-debug: // ---- build task Compress zip bundle ---- (1ms)
+2024-8-25 19:29:11-debug: run build task Compress zip bundle success in 1 ms √57%
+2024-8-25 19:29:11-debug: Build script start57%
+2024-8-25 19:29:11-debug: // ---- build task Build script ----
+2024-8-25 19:29:11-debug: Process: heapTotal 242.26MB heapUsed 230.05MB rss 67.09MB
+2024-8-25 19:29:27-debug: Build project script start...57%
+2024-8-25 19:29:27-debug: Process: heapTotal 226.97MB heapUsed 219.54MB rss 157.31MB
+2024-8-25 19:29:27-log: Run build task(build-script) in child, see: chrome://inspect/#devices
+2024-8-25 19:29:30-warn: [build-script][[Build.Script.Rollup]] Circular dependency: file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/genPlant.ts -> file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/main.ts -> file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/genPlant.ts
+2024-8-25 19:29:36-debug: excute-script over with build-script 8660ms
+2024-8-25 19:29:36-debug: Copy externalScripts success!
+2024-8-25 19:29:36-debug: Build project script in (8712 ms) √57%
+2024-8-25 19:29:36-debug: Build engine start...57%
+2024-8-25 19:29:36-debug: Process: heapTotal 226.97MB heapUsed 218.93MB rss 100.70MB
+2024-8-25 19:29:37-debug: Use cache engine: {link(C:\Users\ADMINI~1\AppData\Local\Temp\CocosCreator\3.6.1\builder\engine\fde329c401c641771bff368eaccc979a)}
+2024-8-25 19:29:37-debug: {"debug":false,"sourceMaps":false,"includeModules":["2d","animation","audio","base","dragon-bones","gfx-webgl","gfx-webgl2","intersection-2d","marionette","particle-2d","physics-2d-box2d","profiler","skeletal-animation","spine","tiled-map","tween","ui","video","webview","xr"],"engineVersion":"3.6.1","platform":"HTML5","md5Map":[],"engineName":"cocos-js","useCache":true,"split":false,"ammoJsWasm":"fallback","assetURLFormat":"runtime-resolved","flags":{"DEBUG":false},"entry":"D:\\cocos-dashboard-editors\\Creator\\3.6.1\\resources\\resources\\3d\\engine"}
+2024-8-25 19:29:37-debug: Build engine in (563 ms) √57%
+2024-8-25 19:29:37-debug: // ---- build task Build script ---- (25888ms)
+2024-8-25 19:29:37-debug: run build task Build script success in 25888 ms √63%
+2024-8-25 19:29:37-debug: Add md5 suffix to assets start63%
+2024-8-25 19:29:37-debug: // ---- build task Add md5 suffix to assets ----
+2024-8-25 19:29:37-debug: Process: heapTotal 227.47MB heapUsed 219.73MB rss 109.04MB
+2024-8-25 19:29:37-debug: // ---- build task Add md5 suffix to assets ---- (1ms)
+2024-8-25 19:29:37-debug: run build task Add md5 suffix to assets success in 1 ms √73%
+2024-8-25 19:29:37-debug: Init settings and config start73%
+2024-8-25 19:29:37-debug: // ---- build task Init settings and config ----
+2024-8-25 19:29:37-debug: Process: heapTotal 227.47MB heapUsed 219.77MB rss 109.27MB
+2024-8-25 19:29:37-debug: run build task Init settings and config success in 2 ms √74%
+2024-8-25 19:29:37-debug: builder.tasks.settings.macro does not defined in i18n
+2024-8-25 19:29:37-debug: // ---- build task builder.tasks.settings.macro ----
+2024-8-25 19:29:37-debug: Process: heapTotal 227.47MB heapUsed 219.83MB rss 110.04MB
+2024-8-25 19:29:37-debug: // ---- build task Init settings and config ---- (2ms)
+2024-8-25 19:29:37-debug: builder.tasks.settings.macro start74%
+2024-8-25 19:29:37-debug: // ---- build task builder.tasks.settings.macro ---- (15ms)
+2024-8-25 19:29:37-debug: run build task builder.tasks.settings.macro success in 15 ms √74%
+2024-8-25 19:29:37-debug: Sort some build options to settings.json start74%
+2024-8-25 19:29:37-debug: // ---- build task Sort some build options to settings.json ----
+2024-8-25 19:29:37-debug: Process: heapTotal 227.47MB heapUsed 219.87MB rss 110.00MB
+2024-8-25 19:29:37-debug: // ---- build task Sort some build options to settings.json ---- (28ms)
+2024-8-25 19:29:37-debug: run build task Sort some build options to settings.json success in 28 ms √75%
+2024-8-25 19:29:37-debug: custom joint texture layouts start75%
+2024-8-25 19:29:37-debug: // ---- build task custom joint texture layouts ----
+2024-8-25 19:29:37-debug: Process: heapTotal 228.45MB heapUsed 220.88MB rss 111.73MB
+2024-8-25 19:29:37-debug: // ---- build task custom joint texture layouts ---- (15ms)
+2024-8-25 19:29:37-debug: run build task custom joint texture layouts success in 15 ms √76%
+2024-8-25 19:29:37-debug: custom joint physics start76%
+2024-8-25 19:29:37-debug: // ---- build task custom joint physics ----
+2024-8-25 19:29:37-debug: Process: heapTotal 228.45MB heapUsed 220.92MB rss 111.81MB
+2024-8-25 19:29:37-debug: run build task custom joint physics success in 1 ms √76%
+2024-8-25 19:29:37-debug: Fill script data to settings start76%
+2024-8-25 19:29:37-debug: // ---- build task custom joint physics ---- (1ms)
+2024-8-25 19:29:37-debug: // ---- build task Fill script data to settings ----
+2024-8-25 19:29:37-debug: Process: heapTotal 228.45MB heapUsed 220.96MB rss 111.89MB
+2024-8-25 19:29:37-debug: // ---- build task Fill script data to settings ---- (4ms)
+2024-8-25 19:29:37-debug: run build task Fill script data to settings success in 4 ms √77%
+2024-8-25 19:29:37-debug: Fill scene data to settings start77%
+2024-8-25 19:29:37-debug: // ---- build task Fill scene data to settings ----
+2024-8-25 19:29:37-debug: Process: heapTotal 228.45MB heapUsed 221.01MB rss 111.97MB
+2024-8-25 19:29:37-debug: // ---- build task Fill scene data to settings ---- (1ms)
+2024-8-25 19:29:37-debug: run build task Fill scene data to settings success in 1 ms √77%
+2024-8-25 19:29:37-debug: Organize assets groups，generate packedAssets and rawAssets data start77%
+2024-8-25 19:29:37-debug: // ---- build task Organize assets groups，generate packedAssets and rawAssets data ----
+2024-8-25 19:29:37-debug: Process: heapTotal 228.45MB heapUsed 221.05MB rss 112.04MB
+2024-8-25 19:29:37-debug: // ---- build task Organize assets groups，generate packedAssets and rawAssets data ---- (2ms)
+2024-8-25 19:29:37-debug: run build task Organize assets groups，generate packedAssets and rawAssets data success in 2 ms √78%
+2024-8-25 19:29:37-debug: Generate md5AssetsMap from suffixMap to settings start78%
+2024-8-25 19:29:37-debug: // ---- build task Generate md5AssetsMap from suffixMap to settings ----
+2024-8-25 19:29:37-debug: Process: heapTotal 228.45MB heapUsed 221.20MB rss 112.45MB
+2024-8-25 19:29:37-debug: options.md5Cache is false.
+2024-8-25 19:29:37-debug: // ---- build task Generate md5AssetsMap from suffixMap to settings ---- (8ms)
+2024-8-25 19:29:37-debug: run build task Generate md5AssetsMap from suffixMap to settings success in 8 ms √78%
+2024-8-25 19:29:37-debug: web-mobile:(onBeforeCompressSettings) start...78%
+2024-8-25 19:29:37-debug: // ---- build task web-mobile：onBeforeCompressSettings ----
+2024-8-25 19:29:37-debug: Process: heapTotal 228.45MB heapUsed 220.56MB rss 112.05MB
+2024-8-25 19:29:37-debug: // ---- build task web-mobile：onBeforeCompressSettings ---- (1ms)
+2024-8-25 19:29:37-debug: web-mobile:(onBeforeCompressSettings) in 1 ms81%
+2024-8-25 19:29:37-debug: cocos-service:(onBeforeCompressSettings) start...81%
+2024-8-25 19:29:37-debug: // ---- build task cocos-service：onBeforeCompressSettings ----
+2024-8-25 19:29:37-debug: Process: heapTotal 228.45MB heapUsed 220.60MB rss 112.11MB
+2024-8-25 19:29:37-debug: // ---- build task cocos-service：onBeforeCompressSettings ---- (360ms)
+2024-8-25 19:29:37-debug: cocos-service:(onBeforeCompressSettings) in 360 ms83%
+2024-8-25 19:29:37-debug: Build import-map.json start83%
+2024-8-25 19:29:37-debug: // ---- build task Build import-map.json ----
+2024-8-25 19:29:37-debug: Process: heapTotal 228.45MB heapUsed 220.66MB rss 112.22MB
+2024-8-25 19:29:37-debug: // ---- build task Build import-map.json ---- (11ms)
+2024-8-25 19:29:37-debug: run build task Build import-map.json success in 11 ms √84%
+2024-8-25 19:29:37-debug: Compress settings.json and config.json start84%
+2024-8-25 19:29:37-debug: // ---- build task Compress settings.json and config.json ----
+2024-8-25 19:29:37-debug: Process: heapTotal 228.45MB heapUsed 220.71MB rss 112.32MB
+2024-8-25 19:29:37-debug: // ---- build task Compress settings.json and config.json ---- (6ms)
+2024-8-25 19:29:37-debug: run build task Compress settings.json and config.json success in 6 ms √85%
+2024-8-25 19:29:37-debug: Save config.json start85%
+2024-8-25 19:29:37-debug: // ---- build task Save config.json ----
+2024-8-25 19:29:37-debug: Process: heapTotal 228.45MB heapUsed 220.98MB rss 112.84MB
+2024-8-25 19:29:37-debug: // ---- build task Save config.json ---- (8ms)
+2024-8-25 19:29:37-debug: run build task Save config.json success in 8 ms √86%
+2024-8-25 19:29:37-debug: Save Settings.json start86%
+2024-8-25 19:29:37-debug: // ---- build task Save Settings.json ----
+2024-8-25 19:29:37-debug: Process: heapTotal 228.45MB heapUsed 221.08MB rss 112.98MB
+2024-8-25 19:29:37-debug: // ---- build task Save Settings.json ---- (14ms)
+2024-8-25 19:29:37-debug: Sort build template start87%
+2024-8-25 19:29:37-debug: // ---- build task Sort build template ----
+2024-8-25 19:29:37-debug: Process: heapTotal 231.39MB heapUsed 223.51MB rss 116.50MB
+2024-8-25 19:29:37-debug: run build task Save Settings.json success in 14 ms √87%
+2024-8-25 19:29:38-debug: // ---- build task Sort build template ---- (475ms)
+2024-8-25 19:29:38-debug: run build task Sort build template success in 475 ms √88%
+2024-8-25 19:29:38-debug: cocos-service:(onAfterCompressSettings) start...88%
+2024-8-25 19:29:38-debug: // ---- build task cocos-service：onAfterCompressSettings ----
+2024-8-25 19:29:38-debug: Process: heapTotal 230.42MB heapUsed 223.03MB rss 121.04MB
+2024-8-25 19:29:38-debug: // ---- build task cocos-service：onAfterCompressSettings ---- (160ms)
+2024-8-25 19:29:38-debug: cocos-service:(onAfterCompressSettings) in 160 ms90%
+2024-8-25 19:29:38-debug: Process: heapTotal 231.42MB heapUsed 222.93MB rss 122.89MB
+2024-8-25 19:29:38-debug: web-mobile:(onAfterBuild) start...90%
+2024-8-25 19:29:38-debug: // ---- build task web-mobile：onAfterBuild ----
+2024-8-25 19:29:38-debug: Use build-template {link(E:\lianlukeji\frontend\cocos\menghuanfarm\build-templates\web-mobile)}.
+2024-8-25 19:29:38-debug: // ---- build task web-mobile：onAfterBuild ---- (128ms)
+2024-8-25 19:29:38-debug: // ---- build task cocos-service：onAfterBuild ----
+2024-8-25 19:29:38-debug: Process: heapTotal 231.67MB heapUsed 223.26MB rss 123.61MB
+2024-8-25 19:29:38-debug: web-mobile:(onAfterBuild) in 128 ms92%
+2024-8-25 19:29:38-debug: cocos-service:(onAfterBuild) start...92%
+2024-8-25 19:29:39-debug: // ---- build task cocos-service：onAfterBuild ---- (675ms)
+2024-8-25 19:29:39-debug: cocos-service:(onAfterBuild) in 675 ms94%
+2024-8-25 19:29:39-debug: builder:build-project-total (33335ms)
+2024-8-25 19:29:39-debug: build success in 33335 ms!
+2024-8-25 19:29:39-debug: ================================ Build Task (web-mobile) Finished in (33404)ms ================================
+2024-8-25 19:38:35-debug: // ---- builder:run-build-stage-run ----
+2024-8-25 19:38:35-debug: web-mobile:(run) start...
+2024-8-25 19:38:35-debug: // ---- build task web-mobile：run ----
+2024-8-25 19:38:35-debug: init options success
+2024-8-25 19:38:35-log: [task:run]: success!
+2024-8-25 19:38:35-debug: web-mobile:(run) in null ms √
+2024-8-25 19:50:05-debug: Build with Cocos Creator 3.6.1
+2024-8-25 19:50:05-debug: =================================== Build Task (web-mobile) Start ================================
+2024-8-25 19:50:05-debug: cocos-service:(onBeforeBuild) start...0%
+2024-8-25 19:50:05-debug: // ---- build task cocos-service：onBeforeBuild ----
+2024-8-25 19:50:05-debug: Process: heapTotal 234.36MB heapUsed 227.09MB rss 16.40MB
+2024-8-25 19:50:05-debug: Query all assets info in project
+2024-8-25 19:50:05-debug: Query all assets info in project
+2024-8-25 19:50:05-debug: Start build task, options:{"name":"PlantStore","platform":"web-mobile","buildPath":"project://build","debug":false,"md5Cache":false,"skipCompressTexture":true,"sourceMaps":false,"polyfills":{"asyncFunctions":true,"coreJs":true},"experimentalEraseModules":false,"useBuiltinServer":false,"mainBundleIsRemote":false,"mainBundleCompressionType":"none","replaceSplashScreen":true,"startScene":"5a6f4efe-edd1-4c9d-adc3-c28f8d58012d","outputName":"web-mobile","scenes":[{"url":"db://assets/scene/main.scene","uuid":"5a6f4efe-edd1-4c9d-adc3-c28f8d58012d","inBundle":false}],"windows":[],"packages":{"web-mobile":{"orientation":"portrait","__version__":"1.0.1","embedWebDebugger":false},"cocos-service":{"configID":"8defd1","services":[],"__version__":"3.0.7","sdkHubConfigID":"5c53db","sdkHubConfig":{"id":"5c53db","name":"HUAWEI  AppGallery Connect","platform":"3","channelID":"161221","channelName":"HUAWEI  AppGallery Connect","remarks":"HUAWEI  AppGallery Connect","plugins":[{"hasParam":false,"pParam":{},"pId":"2412","pName":"HUAWEI HMS","packageName":"huawei-hms","pType":30,"pUseType":30,"hasLocal":true,"hasUpdate":false,"requireParam":true,"pVersion":"2.0.3_6.3.0","isInstall":false,"installProgress":true}]}}},"__version__":"1.3.3","web-mobile":[]}
+2024-8-25 19:50:05-warn: Preview in build may make some errors
+2024-8-25 19:50:05-warn: Preview in build may make some errors
+2024-8-25 19:50:05-warn: Preview in build may make some errors
+2024-8-25 19:50:05-debug: init custom config: keepNodeUuid: false, useCache: true
+2024-8-25 19:50:05-debug: init custom config: keepNodeUuid: false, useCache: true
+2024-8-25 19:50:05-debug: init custom config: keepNodeUuid: false, useCache: true
+2024-8-25 19:50:05-debug: BuildAssetLibrary query-assets with assets 397
+2024-8-25 19:50:05-debug: BuildAssetLibrary initialized with asset 638!
+2024-8-25 19:50:05-debug:   Number of other assets: 759
+2024-8-25 19:50:05-debug: // ---- build task Query asset bundle ----
+2024-8-25 19:50:05-debug: Process: heapTotal 235.76MB heapUsed 227.83MB rss 30.67MB
+2024-8-25 19:50:05-debug: Query asset bundle start0%
+2024-8-25 19:50:05-debug: BuildAssetLibrary query-assets with assets 397
+2024-8-25 19:50:05-debug: BuildAssetLibrary initialized with asset 638!
+2024-8-25 19:50:05-debug:   Number of all scripts: 7
+2024-8-25 19:50:05-debug:   Number of all scenes: 2
+2024-8-25 19:50:05-debug:   Number of other assets: 759
+2024-8-25 19:50:05-debug:   Number of all scenes: 2
+2024-8-25 19:50:05-debug:   Number of all scripts: 7
+2024-8-25 19:50:05-debug: Process: heapTotal 236.91MB heapUsed 229.03MB rss 32.41MB
+2024-8-25 19:50:05-debug: BuildAssetLibrary query-assets with assets 397
+2024-8-25 19:50:05-debug: BuildAssetLibrary initialized with asset 638!
+2024-8-25 19:50:05-debug: // ---- build task Query asset bundle ----
+2024-8-25 19:50:05-debug:   Number of other assets: 759
+2024-8-25 19:50:05-debug:   Number of all scenes: 2
+2024-8-25 19:50:05-debug: Query asset bundle start0%
+2024-8-25 19:50:05-debug:   Number of all scripts: 7
+2024-8-25 19:50:05-debug: // ---- build task Query asset bundle ----
+2024-8-25 19:50:05-debug: Query asset bundle start0%
+2024-8-25 19:50:05-debug: Process: heapTotal 237.81MB heapUsed 230.18MB rss 33.59MB
+2024-8-25 19:50:05-debug: // ---- build task Query asset bundle ---- (20ms)
+2024-8-25 19:50:05-debug: run build task Query asset bundle success in 20 ms √3%
+2024-8-25 19:50:05-debug: Query and organize assets start3%
+2024-8-25 19:50:05-debug: Process: heapTotal 237.81MB heapUsed 229.94MB rss 33.67MB
+2024-8-25 19:50:05-debug: // ---- build task Query and organize assets ----
+2024-8-25 19:50:05-debug: run build task Query asset bundle success in null ms √3%
+2024-8-25 19:50:05-debug: Query and organize assets start3%
+2024-8-25 19:50:05-debug: // ---- build task Query and organize assets ----
+2024-8-25 19:50:05-debug: Process: heapTotal 237.81MB heapUsed 229.96MB rss 33.75MB
+2024-8-25 19:50:05-debug: run build task Query asset bundle success in null ms √3%
+2024-8-25 19:50:05-debug: Query and organize assets start3%
+2024-8-25 19:50:05-debug: // ---- build task Query and organize assets ----
+2024-8-25 19:50:05-debug: Process: heapTotal 237.81MB heapUsed 229.98MB rss 33.39MB
+2024-8-25 19:50:06-debug: Query preload assets from cc.config.json: 60f7195c-ec2a-45eb-ba94-8955f60e81d0,1c02ae6f-4492-4915-b8f8-7492a3b1e4cd,810e96e4-e456-4468-9b59-f4e8f39732c0,efe8e2a3-eace-427b-b4f1-cb8a937ec77d,e9aa9a3e-5b2b-4ac7-a2c7-073de2b2b24f,8bbdbcdd-5cd4-4100-b6d5-b7c9625b6107,50f4348b-c883-4e2f-8f11-ce233b859fa1,fda095cb-831d-4601-ad94-846013963de8,f92806d7-1768-443f-afe8-12bcde84d0f0,dd3a144d-ab7f-41f0-82b8-2e43a090d496,f0416e68-0200-4b77-a926-4f9d16e494da,ff9be190-20a4-4e48-b68c-76e3c7cff085,970b0598-bcb0-4714-91fb-2e81440dccd8,bcd64cc6-2dd9-43f6-abbe-66318d332032,d930590d-bb92-4cc8-8bd1-23cd027f9edf,a3cd009f-0ab0-420d-9278-b9fdab939bbc,9361fd90-ba52-4f84-aa93-6e878fd576ca,871c3b6c-7379-419d-bda3-794b239ab90d,c27215d8-6835-4b68-bfbb-bdeac6100c04,b5d6115f-0370-4d7c-aad3-c194cc71cf98
+2024-8-25 19:50:06-debug: Number of scenes: 2
+2024-8-25 19:50:06-debug: Query preload assets from cc.config.json: 60f7195c-ec2a-45eb-ba94-8955f60e81d0,1c02ae6f-4492-4915-b8f8-7492a3b1e4cd,810e96e4-e456-4468-9b59-f4e8f39732c0,efe8e2a3-eace-427b-b4f1-cb8a937ec77d,e9aa9a3e-5b2b-4ac7-a2c7-073de2b2b24f,8bbdbcdd-5cd4-4100-b6d5-b7c9625b6107,50f4348b-c883-4e2f-8f11-ce233b859fa1,fda095cb-831d-4601-ad94-846013963de8,f92806d7-1768-443f-afe8-12bcde84d0f0,dd3a144d-ab7f-41f0-82b8-2e43a090d496,f0416e68-0200-4b77-a926-4f9d16e494da,ff9be190-20a4-4e48-b68c-76e3c7cff085,970b0598-bcb0-4714-91fb-2e81440dccd8,bcd64cc6-2dd9-43f6-abbe-66318d332032,d930590d-bb92-4cc8-8bd1-23cd027f9edf,a3cd009f-0ab0-420d-9278-b9fdab939bbc,9361fd90-ba52-4f84-aa93-6e878fd576ca,871c3b6c-7379-419d-bda3-794b239ab90d,c27215d8-6835-4b68-bfbb-bdeac6100c04,b5d6115f-0370-4d7c-aad3-c194cc71cf98
+2024-8-25 19:50:06-debug: Number of scenes: 2
+2024-8-25 19:50:06-debug: Query preload assets from cc.config.json: 60f7195c-ec2a-45eb-ba94-8955f60e81d0,1c02ae6f-4492-4915-b8f8-7492a3b1e4cd,810e96e4-e456-4468-9b59-f4e8f39732c0,efe8e2a3-eace-427b-b4f1-cb8a937ec77d,e9aa9a3e-5b2b-4ac7-a2c7-073de2b2b24f,8bbdbcdd-5cd4-4100-b6d5-b7c9625b6107,50f4348b-c883-4e2f-8f11-ce233b859fa1,fda095cb-831d-4601-ad94-846013963de8,f92806d7-1768-443f-afe8-12bcde84d0f0,dd3a144d-ab7f-41f0-82b8-2e43a090d496,f0416e68-0200-4b77-a926-4f9d16e494da,ff9be190-20a4-4e48-b68c-76e3c7cff085,970b0598-bcb0-4714-91fb-2e81440dccd8,bcd64cc6-2dd9-43f6-abbe-66318d332032,d930590d-bb92-4cc8-8bd1-23cd027f9edf,a3cd009f-0ab0-420d-9278-b9fdab939bbc,9361fd90-ba52-4f84-aa93-6e878fd576ca,871c3b6c-7379-419d-bda3-794b239ab90d,c27215d8-6835-4b68-bfbb-bdeac6100c04,b5d6115f-0370-4d7c-aad3-c194cc71cf98
+2024-8-25 19:50:06-debug: Number of scenes: 2
+2024-8-25 19:50:06-debug: // ---- build task Query and organize assets ---- (15ms)
+2024-8-25 19:50:06-debug: run build task Query and organize assets success in 15 ms √7%
+2024-8-25 19:50:06-debug: Organize scripts start7%
+2024-8-25 19:50:06-debug: // ---- build task Organize scripts ----
+2024-8-25 19:50:06-debug: Process: heapTotal 237.81MB heapUsed 230.60MB rss 34.64MB
+2024-8-25 19:50:06-debug: sort script group...
+2024-8-25 19:50:06-debug: run build task Query and organize assets success in null ms √7%
+2024-8-25 19:50:06-debug: Organize scripts start7%
+2024-8-25 19:50:06-debug: // ---- build task Organize scripts ----
+2024-8-25 19:50:06-debug: Process: heapTotal 238.31MB heapUsed 229.95MB rss 34.00MB
+2024-8-25 19:50:06-debug: sort script group...
+2024-8-25 19:50:06-debug: run build task Query and organize assets success in null ms √7%
+2024-8-25 19:50:06-debug: Organize scripts start7%
+2024-8-25 19:50:06-debug: // ---- build task Organize scripts ----
+2024-8-25 19:50:06-debug: Process: heapTotal 238.31MB heapUsed 229.98MB rss 34.04MB
+2024-8-25 19:50:06-debug: sort script group...
+2024-8-25 19:50:06-debug: // ---- build task Organize scripts ---- (20ms)
+2024-8-25 19:50:06-debug: run build task Organize scripts success in 20 ms √10%
+2024-8-25 19:50:06-debug: Process: heapTotal 238.31MB heapUsed 230.09MB rss 34.11MB
+2024-8-25 19:50:06-debug: run build task Organize scripts success in null ms √10%
+2024-8-25 19:50:06-debug: Init settings and config start10%
+2024-8-25 19:50:06-debug: // ---- build task Init settings and config ----
+2024-8-25 19:50:06-debug: Process: heapTotal 238.31MB heapUsed 230.11MB rss 34.16MB
+2024-8-25 19:50:06-debug: Init settings and config start10%
+2024-8-25 19:50:06-debug: // ---- build task Init settings and config ----
+2024-8-25 19:50:06-debug: run build task Organize scripts success in null ms √10%
+2024-8-25 19:50:06-debug: Process: heapTotal 238.31MB heapUsed 230.14MB rss 34.22MB
+2024-8-25 19:50:06-debug: Init settings and config start10%
+2024-8-25 19:50:06-debug: // ---- build task Init settings and config ----
+2024-8-25 19:50:06-debug: // ---- build task Init settings and config ---- (1ms)
+2024-8-25 19:50:06-debug: builder.tasks.settings.macro does not defined in i18n
+2024-8-25 19:50:06-debug: // ---- build task builder.tasks.settings.macro ----
+2024-8-25 19:50:06-debug: Process: heapTotal 238.31MB heapUsed 230.18MB rss 34.35MB
+2024-8-25 19:50:06-debug: // ---- build task Init settings and config ---- (1ms)
+2024-8-25 19:50:06-debug: run build task Init settings and config success in 1 ms √11%
+2024-8-25 19:50:06-debug: builder.tasks.settings.macro does not defined in i18n
+2024-8-25 19:50:06-debug: builder.tasks.settings.macro start11%
+2024-8-25 19:50:06-debug: // ---- build task builder.tasks.settings.macro ----
+2024-8-25 19:50:06-debug: Process: heapTotal 238.31MB heapUsed 230.21MB rss 34.41MB
+2024-8-25 19:50:06-debug: // ---- build task Init settings and config ---- (1ms)
+2024-8-25 19:50:06-debug: run build task Init settings and config success in 1 ms √11%
+2024-8-25 19:50:06-debug: builder.tasks.settings.macro does not defined in i18n
+2024-8-25 19:50:06-debug: builder.tasks.settings.macro start11%
+2024-8-25 19:50:06-debug: // ---- build task builder.tasks.settings.macro ----
+2024-8-25 19:50:06-debug: run build task Init settings and config success in 1 ms √11%
+2024-8-25 19:50:06-debug: Process: heapTotal 238.31MB heapUsed 230.24MB rss 34.46MB
+2024-8-25 19:50:06-debug: builder.tasks.settings.macro start11%
+2024-8-25 19:50:06-debug: // ---- build task builder.tasks.settings.macro ---- (16ms)
+2024-8-25 19:50:06-debug: run build task builder.tasks.settings.macro success in 16 ms √11%
+2024-8-25 19:50:06-debug: Sort some build options to settings.json start11%
+2024-8-25 19:50:06-debug: // ---- build task Sort some build options to settings.json ----
+2024-8-25 19:50:06-debug: Process: heapTotal 238.31MB heapUsed 230.29MB rss 34.58MB
+2024-8-25 19:50:06-debug: run build task builder.tasks.settings.macro success in null ms √11%
+2024-8-25 19:50:06-debug: Sort some build options to settings.json start11%
+2024-8-25 19:50:06-debug: // ---- build task Sort some build options to settings.json ----
+2024-8-25 19:50:06-debug: Process: heapTotal 238.31MB heapUsed 230.32MB rss 34.63MB
+2024-8-25 19:50:06-debug: run build task builder.tasks.settings.macro success in null ms √11%
+2024-8-25 19:50:06-debug: Sort some build options to settings.json start11%
+2024-8-25 19:50:06-debug: // ---- build task Sort some build options to settings.json ----
+2024-8-25 19:50:06-debug: Process: heapTotal 238.31MB heapUsed 230.34MB rss 34.66MB
+2024-8-25 19:50:06-debug: // ---- build task Sort some build options to settings.json ---- (10ms)
+2024-8-25 19:50:06-debug: run build task Sort some build options to settings.json success in 10 ms √12%
+2024-8-25 19:50:06-debug: run build task Sort some build options to settings.json success in null ms √12%
+2024-8-25 19:50:06-debug: custom joint texture layouts start12%
+2024-8-25 19:50:06-debug: // ---- build task custom joint texture layouts ----
+2024-8-25 19:50:06-debug: Process: heapTotal 238.31MB heapUsed 230.50MB rss 35.15MB
+2024-8-25 19:50:06-debug: run build task Sort some build options to settings.json success in null ms √12%
+2024-8-25 19:50:06-debug: custom joint texture layouts start12%
+2024-8-25 19:50:06-debug: // ---- build task custom joint texture layouts ----
+2024-8-25 19:50:06-debug: Process: heapTotal 238.31MB heapUsed 230.52MB rss 35.18MB
+2024-8-25 19:50:06-debug: Process: heapTotal 238.31MB heapUsed 230.48MB rss 35.12MB
+2024-8-25 19:50:06-debug: // ---- build task custom joint texture layouts ----
+2024-8-25 19:50:06-debug: custom joint texture layouts start12%
+2024-8-25 19:50:06-debug: custom joint physics start12%
+2024-8-25 19:50:06-debug: // ---- build task custom joint physics ----
+2024-8-25 19:50:06-debug: Process: heapTotal 238.31MB heapUsed 230.56MB rss 35.21MB
+2024-8-25 19:50:06-debug: run build task custom joint texture layouts success in null ms √12%
+2024-8-25 19:50:06-debug: custom joint physics start12%
+2024-8-25 19:50:06-debug: // ---- build task custom joint physics ----
+2024-8-25 19:50:06-debug: run build task custom joint texture layouts success in 2 ms √12%
+2024-8-25 19:50:06-debug: // ---- build task custom joint texture layouts ---- (2ms)
+2024-8-25 19:50:06-debug: Process: heapTotal 238.31MB heapUsed 230.58MB rss 35.25MB
+2024-8-25 19:50:06-debug: run build task custom joint texture layouts success in null ms √12%
+2024-8-25 19:50:06-debug: custom joint physics start12%
+2024-8-25 19:50:06-debug: // ---- build task custom joint physics ----
+2024-8-25 19:50:06-debug: Process: heapTotal 238.31MB heapUsed 230.60MB rss 35.29MB
+2024-8-25 19:50:06-debug: // ---- build task custom joint physics ---- (1ms)
+2024-8-25 19:50:06-debug: run build task custom joint physics success in 1 ms √13%
+2024-8-25 19:50:06-debug: Fill script data to settings start13%
+2024-8-25 19:50:06-debug: // ---- build task Fill script data to settings ----
+2024-8-25 19:50:06-debug: Process: heapTotal 238.31MB heapUsed 230.63MB rss 35.36MB
+2024-8-25 19:50:06-debug: // ---- build task custom joint physics ---- (1ms)
+2024-8-25 19:50:06-debug: run build task custom joint physics success in 1 ms √13%
+2024-8-25 19:50:06-debug: Fill script data to settings start13%
+2024-8-25 19:50:06-debug: // ---- build task Fill script data to settings ----
+2024-8-25 19:50:06-debug: Process: heapTotal 238.31MB heapUsed 230.65MB rss 35.41MB
+2024-8-25 19:50:06-debug: // ---- build task custom joint physics ---- (1ms)
+2024-8-25 19:50:06-debug: run build task custom joint physics success in 1 ms √13%
+2024-8-25 19:50:06-debug: Fill script data to settings start13%
+2024-8-25 19:50:06-debug: // ---- build task Fill script data to settings ----
+2024-8-25 19:50:06-debug: Process: heapTotal 238.31MB heapUsed 230.69MB rss 35.46MB
+2024-8-25 19:50:06-debug: // ---- build task Fill script data to settings ---- (2ms)
+2024-8-25 19:50:06-debug: run build task Fill script data to settings success in 2 ms √13%
+2024-8-25 19:50:06-debug: Process: heapTotal 238.31MB heapUsed 230.72MB rss 35.51MB
+2024-8-25 19:50:06-debug: run build task Fill script data to settings success in 0 ms √13%
+2024-8-25 19:50:06-debug: Fill scene data to settings start13%
+2024-8-25 19:50:06-debug: // ---- build task Fill scene data to settings ----
+2024-8-25 19:50:06-debug: Process: heapTotal 238.31MB heapUsed 230.75MB rss 35.55MB
+2024-8-25 19:50:06-debug: // ---- build task Fill script data to settings ---- (1ms)
+2024-8-25 19:50:06-debug: run build task Fill script data to settings success in 1 ms √13%
+2024-8-25 19:50:06-debug: Fill scene data to settings start13%
+2024-8-25 19:50:06-debug: // ---- build task Fill scene data to settings ----
+2024-8-25 19:50:06-debug: Process: heapTotal 238.31MB heapUsed 230.77MB rss 35.59MB
+2024-8-25 19:50:06-debug: Fill scene data to settings start13%
+2024-8-25 19:50:06-debug: // ---- build task Fill scene data to settings ----
+2024-8-25 19:50:06-debug: // ---- build task Fill scene data to settings ---- (3ms)
+2024-8-25 19:50:06-debug: run build task Fill scene data to settings success in 3 ms √14%
+2024-8-25 19:50:06-debug: Process: heapTotal 238.31MB heapUsed 230.81MB rss 36.33MB
+2024-8-25 19:50:06-debug: run build task Fill scene data to settings success in 1 ms √14%
+2024-8-25 19:50:06-debug: Organize assets groups，generate packedAssets and rawAssets data start14%
+2024-8-25 19:50:06-debug: // ---- build task Organize assets groups，generate packedAssets and rawAssets data ----
+2024-8-25 19:50:06-debug: Organize assets groups，generate packedAssets and rawAssets data start14%
+2024-8-25 19:50:06-debug: // ---- build task Organize assets groups，generate packedAssets and rawAssets data ----
+2024-8-25 19:50:06-debug: Process: heapTotal 238.31MB heapUsed 230.13MB rss 36.29MB
+2024-8-25 19:50:06-debug: Organize assets groups，generate packedAssets and rawAssets data start14%
+2024-8-25 19:50:06-debug: run build task Fill scene data to settings success in 0 ms √14%
+2024-8-25 19:50:06-debug: // ---- build task Organize assets groups，generate packedAssets and rawAssets data ----
+2024-8-25 19:50:06-debug: Process: heapTotal 238.31MB heapUsed 230.22MB rss 36.38MB
+2024-8-25 19:50:06-debug: // ---- build task Fill scene data to settings ---- (1ms)
+2024-8-25 19:50:06-debug: // ---- build task Organize assets groups，generate packedAssets and rawAssets data ---- (14ms)
+2024-8-25 19:50:06-debug: run build task Organize assets groups，generate packedAssets and rawAssets data success in 14 ms √14%
+2024-8-25 19:50:06-debug: Process: heapTotal 238.31MB heapUsed 230.33MB rss 36.30MB
+2024-8-25 19:50:06-debug: // ---- build task Generate md5AssetsMap from suffixMap to settings ----
+2024-8-25 19:50:06-debug: // ---- build task Organize assets groups，generate packedAssets and rawAssets data ---- (1ms)
+2024-8-25 19:50:06-debug: options.md5Cache is false.
+2024-8-25 19:50:06-debug: run build task Organize assets groups，generate packedAssets and rawAssets data success in 1 ms √14%
+2024-8-25 19:50:06-debug: // ---- build task Generate md5AssetsMap from suffixMap to settings ----
+2024-8-25 19:50:06-debug: Process: heapTotal 238.31MB heapUsed 230.36MB rss 36.36MB
+2024-8-25 19:50:06-debug: Generate md5AssetsMap from suffixMap to settings start14%
+2024-8-25 19:50:06-debug: // ---- build task Organize assets groups，generate packedAssets and rawAssets data ---- (1ms)
+2024-8-25 19:50:06-debug: run build task Organize assets groups，generate packedAssets and rawAssets data success in 1 ms √14%
+2024-8-25 19:50:06-debug: Generate md5AssetsMap from suffixMap to settings start14%
+2024-8-25 19:50:06-debug: Generate md5AssetsMap from suffixMap to settings start14%
+2024-8-25 19:50:06-debug: Process: heapTotal 238.31MB heapUsed 230.39MB rss 36.41MB
+2024-8-25 19:50:06-debug: // ---- build task Generate md5AssetsMap from suffixMap to settings ----
+2024-8-25 19:50:06-debug: options.md5Cache is false.
+2024-8-25 19:50:06-debug: options.md5Cache is false.
+2024-8-25 19:50:06-debug: // ---- build task Generate md5AssetsMap from suffixMap to settings ---- (1ms)
+2024-8-25 19:50:06-debug: run build task Generate md5AssetsMap from suffixMap to settings success in 1 ms √15%
+2024-8-25 19:50:06-debug: // ---- build task Generate md5AssetsMap from suffixMap to settings ---- (1ms)
+2024-8-25 19:50:06-debug: run build task Generate md5AssetsMap from suffixMap to settings success in 1 ms √15%
+2024-8-25 19:50:06-debug: // ---- build task Generate md5AssetsMap from suffixMap to settings ---- (1ms)
+2024-8-25 19:50:06-debug: run build task Generate md5AssetsMap from suffixMap to settings success in 1 ms √15%
+2024-8-25 19:50:06-debug: // ---- build task cocos-service：onBeforeBuild ---- (1453ms)
+2024-8-25 19:50:06-debug: cocos-service:(onBeforeBuild) in 1453 ms2%
+2024-8-25 19:50:06-debug: Query all assets info in project
+2024-8-25 19:50:06-debug: init custom config: keepNodeUuid: false, useCache: true
+2024-8-25 19:50:06-debug: BuildAssetLibrary initialized with asset 638!
+2024-8-25 19:50:06-debug: BuildAssetLibrary query-assets with assets 397
+2024-8-25 19:50:06-debug:   Number of all scenes: 2
+2024-8-25 19:50:06-debug:   Number of all scripts: 7
+2024-8-25 19:50:06-debug:   Number of other assets: 759
+2024-8-25 19:50:06-debug: web-mobile:(onAfterInit) start...2%
+2024-8-25 19:50:06-debug: // ---- build task web-mobile：onAfterInit ----
+2024-8-25 19:50:06-debug: Process: heapTotal 241.96MB heapUsed 231.38MB rss 39.65MB
+2024-8-25 19:50:11-debug: // ---- build task web-mobile：onAfterInit ---- (4907ms)
+2024-8-25 19:50:11-debug: web-mobile:(onAfterInit) in 4907 ms4%
+2024-8-25 19:50:11-debug: cocos-service:(onAfterInit) start...4%
+2024-8-25 19:50:11-debug: // ---- build task cocos-service：onAfterInit ----
+2024-8-25 19:50:11-debug: Process: heapTotal 241.96MB heapUsed 232.09MB rss 40.75MB
+2024-8-25 19:50:12-debug: // ---- build task cocos-service：onAfterInit ---- (449ms)
+2024-8-25 19:50:12-debug: Process: heapTotal 241.96MB heapUsed 232.15MB rss 40.55MB
+2024-8-25 19:50:12-debug: cocos-service:(onAfterInit) in 449 ms7%
+2024-8-25 19:50:12-debug: localization-editor:(onAfterInit) start...7%
+2024-8-25 19:50:12-debug: // ---- build task localization-editor：onAfterInit ----
+2024-8-25 19:50:12-debug: // ---- build task localization-editor：onAfterInit ---- (156ms)
+2024-8-25 19:50:12-debug: localization-editor:(onAfterInit) in 156 ms9%
+2024-8-25 19:50:12-debug: Reload project scripts start9%
+2024-8-25 19:50:12-debug: // ---- build task Reload project scripts ----
+2024-8-25 19:50:12-debug: Process: heapTotal 241.96MB heapUsed 232.19MB rss 40.24MB
+2024-8-25 19:50:12-debug: reload all scripts.
+2024-8-25 19:50:13-debug: Incremental keys: 
+2024-8-25 19:50:13-debug: Set detail map pack:///resolution-detail-map.json: {}
+2024-8-25 19:50:13-debug: Unregister timer
+2024-8-25 19:50:13-debug: Unregister main
+2024-8-25 19:50:13-debug: Unregister genPlant
+2024-8-25 19:50:13-debug: Unregister scaleAction
+2024-8-25 19:50:13-debug: Invalidating 'pack:///chunks/d0/d0b282b9748ef7fc7d2e7bd647d71b0f7e84da53.js'
+2024-8-25 19:50:13-debug: Invalidating 'pack:///chunks/09/09e496b395f3362281c93269a29d6d47678870a4.js'
+2024-8-25 19:50:13-debug: Invalidating 'pack:///chunks/b0/b02df7dbd12a416e5ab2ccdb1f7fac565e85be68.js'
+2024-8-25 19:50:13-debug: Invalidating 'pack:///chunks/84/84741ad843cea9a440c5d8c2d379669b6551400d.js'
+2024-8-25 19:50:13-debug: Invalidating 'pack:///chunks/57/57aa3a73746d22d6e6fea20d4c04eb5fca3e2f83.js'
+2024-8-25 19:50:13-debug: Invalidating 'pack:///chunks/35/35a27f3d1725ee4b4a910b166a9876852bbc7831.js'
+2024-8-25 19:50:13-debug: Invalidating 'pack:///chunks/26/26a649bb2fe4851e2f1c916775a60b49595da7fd.js'
+2024-8-25 19:50:13-debug: Invalidating 'pack:///chunks/29/29e40d128d8d3561568c2c75d80aa86e50036658.js'
+2024-8-25 19:50:13-debug: Invalidating 'pack:///chunks/8d/8dfeddacc4c82b4252bb02a2538d5f5a60f5d03c.js'
+2024-8-25 19:50:13-debug: Invalidating 'pack:///chunks/e9/e91872bed1ce02ef8c0b8a1bd97039426629c4c6.js'
+2024-8-25 19:50:13-debug: Invalidating 'pack:///chunks/0d/0d5541f1fd3a71e0d0240c5e19547531a0a3f398.js'
+2024-8-25 19:50:13-debug: [[Executor]] Module "pack:///chunks/d0/d0b282b9748ef7fc7d2e7bd647d71b0f7e84da53.js" loaded.
+2024-8-25 19:50:13-debug: E:\lianlukeji\frontend\cocos\menghuanfarm\temp\programming\packer-driver\targets\editor\chunks\09\09e496b395f3362281c93269a29d6d47678870a4.js resolved to E:\lianlukeji\frontend\cocos\menghuanfarm\temp\programming\packer-driver\targets\editor\chunks\09\09e496b395f3362281c93269a29d6d47678870a4.js is not in module cache!
+2024-8-25 19:50:13-debug: [[Executor]] Module "pack:///chunks/09/09e496b395f3362281c93269a29d6d47678870a4.js" loaded.
+2024-8-25 19:50:13-debug: E:\lianlukeji\frontend\cocos\menghuanfarm\temp\programming\packer-driver\targets\editor\chunks\7c\7c0c9dee076ab519641890e15dc9e1ee6e0b0047.js resolved to E:\lianlukeji\frontend\cocos\menghuanfarm\temp\programming\packer-driver\targets\editor\chunks\7c\7c0c9dee076ab519641890e15dc9e1ee6e0b0047.js is not in module cache!
+2024-8-25 19:50:13-debug: E:\lianlukeji\frontend\cocos\menghuanfarm\temp\programming\packer-driver\targets\editor\chunks\1b\1bc318220c7c11d2cd88444d7655ae66922b6c9f.js resolved to E:\lianlukeji\frontend\cocos\menghuanfarm\temp\programming\packer-driver\targets\editor\chunks\1b\1bc318220c7c11d2cd88444d7655ae66922b6c9f.js is not in module cache!
+2024-8-25 19:50:13-debug: [[Executor]] Module "pack:///chunks/84/84741ad843cea9a440c5d8c2d379669b6551400d.js" loaded.
+2024-8-25 19:50:13-debug: [[Executor]] Module "pack:///chunks/8d/8dfeddacc4c82b4252bb02a2538d5f5a60f5d03c.js" loaded.
+2024-8-25 19:50:13-debug: [[Executor]] Module "pack:///chunks/7c/7c0c9dee076ab519641890e15dc9e1ee6e0b0047.js" loaded.
+2024-8-25 19:50:13-debug: [[Executor]] Register timer
+2024-8-25 19:50:13-debug: [[Executor]] Module "pack:///chunks/57/57aa3a73746d22d6e6fea20d4c04eb5fca3e2f83.js" loaded.
+2024-8-25 19:50:13-debug: [[Executor]] Module "pack:///chunks/29/29e40d128d8d3561568c2c75d80aa86e50036658.js" loaded.
+2024-8-25 19:50:13-debug: [[Executor]] Register main
+2024-8-25 19:50:13-debug: [[Executor]] Module "pack:///chunks/1b/1bc318220c7c11d2cd88444d7655ae66922b6c9f.js" loaded.
+2024-8-25 19:50:13-debug: [[Executor]] Register genPlant
+2024-8-25 19:50:13-debug: [[Executor]] Module "pack:///chunks/b0/b02df7dbd12a416e5ab2ccdb1f7fac565e85be68.js" loaded.
+2024-8-25 19:50:13-debug: [[Executor]] Module "pack:///chunks/e9/e91872bed1ce02ef8c0b8a1bd97039426629c4c6.js" loaded.
+2024-8-25 19:50:13-debug: [[Executor]] Register scaleAction
+2024-8-25 19:50:13-warn: The type of "scaleAction.isChild" must be CCBoolean, not Boolean.
+2024-8-25 19:50:13-debug: [[Executor]] Module "pack:///chunks/0d/0d5541f1fd3a71e0d0240c5e19547531a0a3f398.js" loaded.
+2024-8-25 19:50:13-debug: [[Executor]] Module "pack:///chunks/09/09e496b395f3362281c93269a29d6d47678870a4.js" loaded.
+2024-8-25 19:50:13-debug: // ---- build task Reload project scripts ---- (585ms)
+2024-8-25 19:50:13-debug: run build task Reload project scripts success in 585 ms √10%
+2024-8-25 19:50:13-debug: Query asset bundle start10%
+2024-8-25 19:50:13-debug: // ---- build task Query asset bundle ----
+2024-8-25 19:50:13-debug: Process: heapTotal 239.46MB heapUsed 231.81MB rss 46.02MB
+2024-8-25 19:50:13-debug: // ---- build task Query asset bundle ---- (16ms)
+2024-8-25 19:50:13-debug: run build task Query asset bundle success in 16 ms √11%
+2024-8-25 19:50:13-debug: Query and organize assets start11%
+2024-8-25 19:50:13-debug: // ---- build task Query and organize assets ----
+2024-8-25 19:50:13-debug: Process: heapTotal 239.46MB heapUsed 231.87MB rss 46.05MB
+2024-8-25 19:50:13-debug: Query preload assets from cc.config.json: 60f7195c-ec2a-45eb-ba94-8955f60e81d0,1c02ae6f-4492-4915-b8f8-7492a3b1e4cd,810e96e4-e456-4468-9b59-f4e8f39732c0,efe8e2a3-eace-427b-b4f1-cb8a937ec77d,e9aa9a3e-5b2b-4ac7-a2c7-073de2b2b24f,8bbdbcdd-5cd4-4100-b6d5-b7c9625b6107,50f4348b-c883-4e2f-8f11-ce233b859fa1,fda095cb-831d-4601-ad94-846013963de8,f92806d7-1768-443f-afe8-12bcde84d0f0,dd3a144d-ab7f-41f0-82b8-2e43a090d496,f0416e68-0200-4b77-a926-4f9d16e494da,ff9be190-20a4-4e48-b68c-76e3c7cff085,970b0598-bcb0-4714-91fb-2e81440dccd8,bcd64cc6-2dd9-43f6-abbe-66318d332032,d930590d-bb92-4cc8-8bd1-23cd027f9edf,a3cd009f-0ab0-420d-9278-b9fdab939bbc,9361fd90-ba52-4f84-aa93-6e878fd576ca,871c3b6c-7379-419d-bda3-794b239ab90d,c27215d8-6835-4b68-bfbb-bdeac6100c04,b5d6115f-0370-4d7c-aad3-c194cc71cf98
+2024-8-25 19:50:13-debug: Number of scenes: 1
+2024-8-25 19:50:13-debug: Number of assets: 249
+2024-8-25 19:50:13-debug: Number of asset bundle: 3
+2024-8-25 19:50:13-debug: // ---- build task Query and organize assets ---- (237ms)
+2024-8-25 19:50:13-debug: run build task Query and organize assets success in 237 ms √13%
+2024-8-25 19:50:13-debug: Organize scripts start13%
+2024-8-25 19:50:13-debug: // ---- build task Organize scripts ----
+2024-8-25 19:50:13-debug: Process: heapTotal 243.71MB heapUsed 233.68MB rss 55.09MB
+2024-8-25 19:50:13-debug: sort script group...
+2024-8-25 19:50:13-debug: // ---- build task Organize scripts ---- (1ms)
+2024-8-25 19:50:13-debug: run build task Organize scripts success in 1 ms √14%
+2024-8-25 19:50:13-debug: Process: heapTotal 243.71MB heapUsed 233.73MB rss 55.05MB
+2024-8-25 19:50:13-debug: // ---- build task Organize texture compression tasks ----
+2024-8-25 19:50:13-debug: Organize texture compression tasks start14%
+2024-8-25 19:50:13-debug: Number of image-compress task: 0
+2024-8-25 19:50:13-debug: // ---- build task Organize texture compression tasks ---- (99ms)
+2024-8-25 19:50:13-debug: Group json start15%
+2024-8-25 19:50:13-debug: // ---- build task Group json ----
+2024-8-25 19:50:13-debug: run build task Organize texture compression tasks success in 99 ms √15%
+2024-8-25 19:50:13-debug: Process: heapTotal 243.71MB heapUsed 234.33MB rss 56.53MB
+2024-8-25 19:50:13-debug: Number of json group: 75
+2024-8-25 19:50:13-debug: // ---- build task Group json ---- (5ms)
+2024-8-25 19:50:13-debug: run build task Group json success in 5 ms √16%
+2024-8-25 19:50:13-debug: Process: heapTotal 244.46MB heapUsed 233.38MB rss 56.78MB
+2024-8-25 19:50:13-debug: // ---- build task Merging Texture2D json ----
+2024-8-25 19:50:13-debug: Merging Texture2D json start16%
+2024-8-25 19:50:13-debug: // ---- build task Merging Texture2D json ---- (6ms)
+2024-8-25 19:50:13-debug: run build task Merging Texture2D json success in 6 ms √18%
+2024-8-25 19:50:13-debug: Process: heapTotal 244.46MB heapUsed 233.52MB rss 57.20MB
+2024-8-25 19:50:13-debug: // ---- build task Sort import-map.json ----
+2024-8-25 19:50:13-debug: Sort import-map.json start18%
+2024-8-25 19:50:13-debug: run build task Sort import-map.json success in 3 ms √19%
+2024-8-25 19:50:13-debug: // ---- build task Sort import-map.json ---- (3ms)
+2024-8-25 19:50:13-debug: // ---- build task web-mobile：onBeforeBuildAssets ----
+2024-8-25 19:50:13-debug: Process: heapTotal 244.46MB heapUsed 233.57MB rss 57.09MB
+2024-8-25 19:50:13-debug: web-mobile:(onBeforeBuildAssets) start...19%
+2024-8-25 19:50:13-debug: // ---- build task web-mobile：onBeforeBuildAssets ---- (1ms)
+2024-8-25 19:50:13-debug: web-mobile:(onBeforeBuildAssets) in 1 ms21%
+2024-8-25 19:50:13-debug: localization-editor:(onBeforeBuildAssets) start...21%
+2024-8-25 19:50:13-debug: // ---- build task localization-editor：onBeforeBuildAssets ----
+2024-8-25 19:50:13-debug: Process: heapTotal 244.46MB heapUsed 233.62MB rss 57.03MB
+2024-8-25 19:50:13-debug: // ---- build task localization-editor：onBeforeBuildAssets ---- (18ms)
+2024-8-25 19:50:13-debug: localization-editor:(onBeforeBuildAssets) in 18 ms23%
+2024-8-25 19:50:13-debug: Process: heapTotal 244.46MB heapUsed 233.66MB rss 56.89MB
+2024-8-25 19:50:13-debug: Start collect pack info
+2024-8-25 19:50:13-debug: Build auto-atlas start23%
+2024-8-25 19:50:13-debug: // ---- build task Build auto-atlas ----
+2024-8-25 19:50:13-debug: // ---- build task Build auto-atlas ---- (1ms)
+2024-8-25 19:50:13-debug: run build task Build auto-atlas success in 1 ms √30%
+2024-8-25 19:50:13-debug: Process: heapTotal 244.46MB heapUsed 233.71MB rss 56.87MB
+2024-8-25 19:50:13-debug: skip compress texture
+2024-8-25 19:50:13-debug: // ---- build task Compress Image ----
+2024-8-25 19:50:13-debug: Compress Image start30%
+2024-8-25 19:50:13-debug: // ---- build task Compress Image ---- (1ms)
+2024-8-25 19:50:13-debug: run build task Compress Image success in 1 ms √37%
+2024-8-25 19:50:13-debug: Process: heapTotal 244.46MB heapUsed 233.75MB rss 56.89MB
+2024-8-25 19:50:13-debug: Asset Bundle(internal) handle assets: 20
+2024-8-25 19:50:13-debug: // ---- build task Copy the resource ----
+2024-8-25 19:50:13-debug: Copy the resource start37%
+2024-8-25 19:50:14-debug: Query all assets info in project
+2024-8-25 19:50:14-warn: Preview in build may make some errors
+2024-8-25 19:50:14-debug: init custom config: keepNodeUuid: false, useCache: true
+2024-8-25 19:50:14-debug: BuildAssetLibrary initialized with asset 638!
+2024-8-25 19:50:14-debug:   Number of all scenes: 2
+2024-8-25 19:50:14-debug:   Number of all scripts: 7
+2024-8-25 19:50:14-debug:   Number of other assets: 759
+2024-8-25 19:50:14-debug: Query asset bundle start0%
+2024-8-25 19:50:14-debug: // ---- build task Query asset bundle ----
+2024-8-25 19:50:14-debug: Process: heapTotal 244.86MB heapUsed 234.78MB rss 58.50MB
+2024-8-25 19:50:14-debug: BuildAssetLibrary query-assets with assets 397
+2024-8-25 19:50:14-debug: // ---- build task Query asset bundle ---- (10ms)
+2024-8-25 19:50:14-debug: run build task Query asset bundle success in 10 ms √3%
+2024-8-25 19:50:14-debug: Query and organize assets start3%
+2024-8-25 19:50:14-debug: // ---- build task Query and organize assets ----
+2024-8-25 19:50:14-debug: Process: heapTotal 244.86MB heapUsed 234.84MB rss 58.50MB
+2024-8-25 19:50:14-debug: Asset Bundle(resources) handle assets: 227
+2024-8-25 19:50:14-debug: Asset Bundle(main) handle assets: 36
+2024-8-25 19:50:14-debug: Query preload assets from cc.config.json: 60f7195c-ec2a-45eb-ba94-8955f60e81d0,1c02ae6f-4492-4915-b8f8-7492a3b1e4cd,810e96e4-e456-4468-9b59-f4e8f39732c0,efe8e2a3-eace-427b-b4f1-cb8a937ec77d,e9aa9a3e-5b2b-4ac7-a2c7-073de2b2b24f,8bbdbcdd-5cd4-4100-b6d5-b7c9625b6107,50f4348b-c883-4e2f-8f11-ce233b859fa1,fda095cb-831d-4601-ad94-846013963de8,f92806d7-1768-443f-afe8-12bcde84d0f0,dd3a144d-ab7f-41f0-82b8-2e43a090d496,f0416e68-0200-4b77-a926-4f9d16e494da,ff9be190-20a4-4e48-b68c-76e3c7cff085,970b0598-bcb0-4714-91fb-2e81440dccd8,bcd64cc6-2dd9-43f6-abbe-66318d332032,d930590d-bb92-4cc8-8bd1-23cd027f9edf,a3cd009f-0ab0-420d-9278-b9fdab939bbc,9361fd90-ba52-4f84-aa93-6e878fd576ca,871c3b6c-7379-419d-bda3-794b239ab90d,c27215d8-6835-4b68-bfbb-bdeac6100c04,b5d6115f-0370-4d7c-aad3-c194cc71cf98
+2024-8-25 19:50:14-debug: Number of scenes: 2
+2024-8-25 19:50:14-debug: run build task Copy the resource success in 491 ms √43%
+2024-8-25 19:50:14-debug: // ---- build task Copy the resource ---- (491ms)
+2024-8-25 19:50:14-debug: Build the grouped json and scatter files to the specified location start43%
+2024-8-25 19:50:14-debug: // ---- build task Build the grouped json and scatter files to the specified location ----
+2024-8-25 19:50:14-debug: Process: heapTotal 244.86MB heapUsed 235.19MB rss 58.60MB
+2024-8-25 19:50:14-debug: // ---- build task Query and organize assets ---- (151ms)
+2024-8-25 19:50:14-debug: run build task Query and organize assets success in 151 ms √7%
+2024-8-25 19:50:14-debug: Organize scripts start7%
+2024-8-25 19:50:14-debug: // ---- build task Organize scripts ----
+2024-8-25 19:50:14-debug: Process: heapTotal 244.86MB heapUsed 235.22MB rss 58.68MB
+2024-8-25 19:50:14-debug: sort script group...
+2024-8-25 19:50:14-debug: // ---- build task Organize scripts ---- (53ms)
+2024-8-25 19:50:14-debug: run build task Organize scripts success in 53 ms √10%
+2024-8-25 19:50:14-debug: Init settings and config start10%
+2024-8-25 19:50:14-debug: // ---- build task Init settings and config ----
+2024-8-25 19:50:14-debug: Process: heapTotal 244.86MB heapUsed 235.37MB rss 58.65MB
+2024-8-25 19:50:14-debug: // ---- build task Init settings and config ---- (2ms)
+2024-8-25 19:50:14-debug: run build task Init settings and config success in 2 ms √11%
+2024-8-25 19:50:14-debug: builder.tasks.settings.macro does not defined in i18n
+2024-8-25 19:50:14-debug: builder.tasks.settings.macro start11%
+2024-8-25 19:50:14-debug: // ---- build task builder.tasks.settings.macro ----
+2024-8-25 19:50:14-debug: Process: heapTotal 244.86MB heapUsed 235.41MB rss 58.65MB
+2024-8-25 19:50:14-debug: // ---- build task builder.tasks.settings.macro ---- (5ms)
+2024-8-25 19:50:14-debug: run build task builder.tasks.settings.macro success in 5 ms √11%
+2024-8-25 19:50:14-debug: Sort some build options to settings.json start11%
+2024-8-25 19:50:14-debug: // ---- build task Sort some build options to settings.json ----
+2024-8-25 19:50:14-debug: Process: heapTotal 244.86MB heapUsed 235.45MB rss 58.65MB
+2024-8-25 19:50:14-debug: run build task Sort some build options to settings.json success in 7 ms √12%
+2024-8-25 19:50:14-debug: custom joint texture layouts start12%
+2024-8-25 19:50:14-debug: // ---- build task custom joint texture layouts ----
+2024-8-25 19:50:14-debug: Process: heapTotal 249.36MB heapUsed 234.44MB rss 59.59MB
+2024-8-25 19:50:14-debug: // ---- build task Sort some build options to settings.json ---- (7ms)
+2024-8-25 19:50:14-debug: // ---- build task custom joint texture layouts ---- (2ms)
+2024-8-25 19:50:14-debug: run build task custom joint texture layouts success in 2 ms √12%
+2024-8-25 19:50:14-debug: Process: heapTotal 249.36MB heapUsed 234.48MB rss 59.60MB
+2024-8-25 19:50:14-debug: custom joint physics start12%
+2024-8-25 19:50:14-debug: // ---- build task custom joint physics ----
+2024-8-25 19:50:14-debug: // ---- build task custom joint physics ---- (4ms)
+2024-8-25 19:50:14-debug: run build task custom joint physics success in 4 ms √13%
+2024-8-25 19:50:14-debug: Fill script data to settings start13%
+2024-8-25 19:50:14-debug: // ---- build task Fill script data to settings ----
+2024-8-25 19:50:14-debug: Process: heapTotal 249.36MB heapUsed 234.50MB rss 59.61MB
+2024-8-25 19:50:14-debug: // ---- build task Fill script data to settings ---- (1ms)
+2024-8-25 19:50:14-debug: run build task Fill script data to settings success in 1 ms √13%
+2024-8-25 19:50:14-debug: Fill scene data to settings start13%
+2024-8-25 19:50:14-debug: // ---- build task Fill scene data to settings ----
+2024-8-25 19:50:14-debug: Process: heapTotal 249.36MB heapUsed 234.53MB rss 59.49MB
+2024-8-25 19:50:14-debug: // ---- build task Fill scene data to settings ---- (5ms)
+2024-8-25 19:50:14-debug: run build task Fill scene data to settings success in 5 ms √14%
+2024-8-25 19:50:14-debug: Organize assets groups，generate packedAssets and rawAssets data start14%
+2024-8-25 19:50:14-debug: // ---- build task Organize assets groups，generate packedAssets and rawAssets data ----
+2024-8-25 19:50:14-debug: Process: heapTotal 249.36MB heapUsed 234.56MB rss 59.46MB
+2024-8-25 19:50:14-debug: // ---- build task Organize assets groups，generate packedAssets and rawAssets data ---- (4ms)
+2024-8-25 19:50:14-debug: run build task Organize assets groups，generate packedAssets and rawAssets data success in 4 ms √14%
+2024-8-25 19:50:14-debug: Generate md5AssetsMap from suffixMap to settings start14%
+2024-8-25 19:50:14-debug: // ---- build task Generate md5AssetsMap from suffixMap to settings ----
+2024-8-25 19:50:14-debug: Process: heapTotal 249.36MB heapUsed 234.67MB rss 59.47MB
+2024-8-25 19:50:14-debug: options.md5Cache is false.
+2024-8-25 19:50:14-debug: // ---- build task Generate md5AssetsMap from suffixMap to settings ---- (1ms)
+2024-8-25 19:50:14-debug: run build task Generate md5AssetsMap from suffixMap to settings success in 1 ms √15%
+2024-8-25 19:50:14-debug: EBUSY: resource busy or locked, unlink 'E:\lianlukeji\frontend\cocos\menghuanfarm\temp\asset-db\assets\09\098314ba-62c7-489c-be15-51c1501fa896\build1.0.1\release.json'43%
+2024-8-25 19:50:14-error: Error: EBUSY: resource busy or locked, unlink 'E:\lianlukeji\frontend\cocos\menghuanfarm\temp\asset-db\assets\09\098314ba-62c7-489c-be15-51c1501fa896\build1.0.1\release.json'
+2024-8-25 19:50:15-error: Error: EBUSY: resource busy or locked, unlink 'E:\lianlukeji\frontend\cocos\menghuanfarm\temp\asset-db\assets\09\098314ba-62c7-489c-be15-51c1501fa896\build1.0.1\release.json'
+2024-8-25 19:50:15-debug: ================================ Build Task (web-mobile) Finished in (10063)ms ================================
+2024-8-25 20:17:59-debug: Build with Cocos Creator 3.6.1
+2024-8-25 20:17:59-debug: cocos-service:(onBeforeBuild) start...0%
+2024-8-25 20:17:59-debug: // ---- build task cocos-service：onBeforeBuild ----
+2024-8-25 20:17:59-debug: Start build task, options:{"name":"PlantStore","platform":"web-mobile","buildPath":"project://build","debug":false,"md5Cache":false,"skipCompressTexture":true,"sourceMaps":false,"polyfills":{"asyncFunctions":true,"coreJs":true},"experimentalEraseModules":false,"useBuiltinServer":false,"mainBundleIsRemote":false,"mainBundleCompressionType":"none","replaceSplashScreen":true,"startScene":"5a6f4efe-edd1-4c9d-adc3-c28f8d58012d","outputName":"web-mobile","scenes":[{"url":"db://assets/scene/main.scene","uuid":"5a6f4efe-edd1-4c9d-adc3-c28f8d58012d","inBundle":false}],"windows":[],"packages":{"web-mobile":{"orientation":"portrait","__version__":"1.0.1","embedWebDebugger":false},"cocos-service":{"configID":"8defd1","services":[],"__version__":"3.0.7","sdkHubConfigID":"5c53db","sdkHubConfig":{"id":"5c53db","name":"HUAWEI  AppGallery Connect","platform":"3","channelID":"161221","channelName":"HUAWEI  AppGallery Connect","remarks":"HUAWEI  AppGallery Connect","plugins":[{"hasParam":false,"pParam":{},"pId":"2412","pName":"HUAWEI HMS","packageName":"huawei-hms","pType":30,"pUseType":30,"hasLocal":true,"hasUpdate":false,"requireParam":true,"pVersion":"2.0.3_6.3.0","isInstall":false,"installProgress":true}]}}},"__version__":"1.3.3","web-mobile":[]}
+2024-8-25 20:17:59-debug: Process: heapTotal 244.25MB heapUsed 229.07MB rss 29.79MB
+2024-8-25 20:17:59-debug: =================================== Build Task (web-mobile) Start ================================
+2024-8-25 20:18:00-debug: // ---- build task cocos-service：onBeforeBuild ---- (409ms)
+2024-8-25 20:18:00-debug: cocos-service:(onBeforeBuild) in 409 ms2%
+2024-8-25 20:18:00-debug: Query all assets info in project
+2024-8-25 20:18:00-debug: init custom config: keepNodeUuid: false, useCache: true
+2024-8-25 20:18:00-debug: BuildAssetLibrary query-assets with assets 397
+2024-8-25 20:18:00-debug:   Number of all scripts: 7
+2024-8-25 20:18:00-debug: BuildAssetLibrary initialized with asset 638!
+2024-8-25 20:18:00-debug: web-mobile:(onAfterInit) start...2%
+2024-8-25 20:18:00-debug:   Number of other assets: 759
+2024-8-25 20:18:00-debug: // ---- build task web-mobile：onAfterInit ----
+2024-8-25 20:18:00-debug: Process: heapTotal 244.65MB heapUsed 230.13MB rss 35.70MB
+2024-8-25 20:18:00-debug:   Number of all scenes: 2
+2024-8-25 20:18:00-debug: // ---- build task web-mobile：onAfterInit ---- (119ms)
+2024-8-25 20:18:00-debug: web-mobile:(onAfterInit) in 119 ms4%
+2024-8-25 20:18:00-debug: Process: heapTotal 244.65MB heapUsed 230.22MB rss 36.49MB
+2024-8-25 20:18:00-debug: cocos-service:(onAfterInit) start...4%
+2024-8-25 20:18:00-debug: // ---- build task cocos-service：onAfterInit ----
+2024-8-25 20:18:00-debug: // ---- build task cocos-service：onAfterInit ---- (180ms)
+2024-8-25 20:18:00-debug: localization-editor:(onAfterInit) start...7%
+2024-8-25 20:18:00-debug: Process: heapTotal 244.65MB heapUsed 230.28MB rss 36.60MB
+2024-8-25 20:18:00-debug: // ---- build task localization-editor：onAfterInit ----
+2024-8-25 20:18:00-debug: cocos-service:(onAfterInit) in 180 ms7%
+2024-8-25 20:18:00-debug: // ---- build task localization-editor：onAfterInit ---- (24ms)
+2024-8-25 20:18:00-debug: // ---- build task Reload project scripts ----
+2024-8-25 20:18:00-debug: localization-editor:(onAfterInit) in 24 ms9%
+2024-8-25 20:18:00-debug: Process: heapTotal 244.65MB heapUsed 230.33MB rss 36.68MB
+2024-8-25 20:18:00-debug: reload all scripts.
+2024-8-25 20:18:00-debug: Reload project scripts start9%
+2024-8-25 20:18:00-debug: Incremental keys: 
+2024-8-25 20:18:00-debug: Set detail map pack:///resolution-detail-map.json: {}
+2024-8-25 20:18:00-debug: Unregister timer
+2024-8-25 20:18:00-debug: Unregister main
+2024-8-25 20:18:00-debug: Unregister genPlant
+2024-8-25 20:18:00-debug: Unregister scaleAction
+2024-8-25 20:18:00-debug: Invalidating 'pack:///chunks/d0/d0b282b9748ef7fc7d2e7bd647d71b0f7e84da53.js'
+2024-8-25 20:18:00-debug: Invalidating 'pack:///chunks/09/09e496b395f3362281c93269a29d6d47678870a4.js'
+2024-8-25 20:18:00-debug: Invalidating 'pack:///chunks/b0/b02df7dbd12a416e5ab2ccdb1f7fac565e85be68.js'
+2024-8-25 20:18:00-debug: Invalidating 'pack:///chunks/84/84741ad843cea9a440c5d8c2d379669b6551400d.js'
+2024-8-25 20:18:00-debug: Invalidating 'pack:///chunks/57/57aa3a73746d22d6e6fea20d4c04eb5fca3e2f83.js'
+2024-8-25 20:18:00-debug: Invalidating 'pack:///chunks/7c/7c0c9dee076ab519641890e15dc9e1ee6e0b0047.js'
+2024-8-25 20:18:00-debug: Invalidating 'pack:///chunks/1b/1bc318220c7c11d2cd88444d7655ae66922b6c9f.js'
+2024-8-25 20:18:00-debug: Invalidating 'pack:///chunks/8d/8dfeddacc4c82b4252bb02a2538d5f5a60f5d03c.js'
+2024-8-25 20:18:00-debug: Invalidating 'pack:///chunks/29/29e40d128d8d3561568c2c75d80aa86e50036658.js'
+2024-8-25 20:18:00-debug: Invalidating 'pack:///chunks/e9/e91872bed1ce02ef8c0b8a1bd97039426629c4c6.js'
+2024-8-25 20:18:00-debug: Invalidating 'pack:///chunks/0d/0d5541f1fd3a71e0d0240c5e19547531a0a3f398.js'
+2024-8-25 20:18:01-debug: [[Executor]] Module "pack:///chunks/d0/d0b282b9748ef7fc7d2e7bd647d71b0f7e84da53.js" loaded.
+2024-8-25 20:18:01-debug: E:\lianlukeji\frontend\cocos\menghuanfarm\temp\programming\packer-driver\targets\editor\chunks\09\09e496b395f3362281c93269a29d6d47678870a4.js resolved to E:\lianlukeji\frontend\cocos\menghuanfarm\temp\programming\packer-driver\targets\editor\chunks\09\09e496b395f3362281c93269a29d6d47678870a4.js is not in module cache!
+2024-8-25 20:18:01-debug: [[Executor]] Module "pack:///chunks/09/09e496b395f3362281c93269a29d6d47678870a4.js" loaded.
+2024-8-25 20:18:01-debug: E:\lianlukeji\frontend\cocos\menghuanfarm\temp\programming\packer-driver\targets\editor\chunks\db\db85415a257b0fba088602f6c4345b60c89ea169.js resolved to E:\lianlukeji\frontend\cocos\menghuanfarm\temp\programming\packer-driver\targets\editor\chunks\db\db85415a257b0fba088602f6c4345b60c89ea169.js is not in module cache!
+2024-8-25 20:18:01-debug: E:\lianlukeji\frontend\cocos\menghuanfarm\temp\programming\packer-driver\targets\editor\chunks\7c\7c0c9dee076ab519641890e15dc9e1ee6e0b0047.js resolved to E:\lianlukeji\frontend\cocos\menghuanfarm\temp\programming\packer-driver\targets\editor\chunks\7c\7c0c9dee076ab519641890e15dc9e1ee6e0b0047.js is not in module cache!
+2024-8-25 20:18:01-debug: E:\lianlukeji\frontend\cocos\menghuanfarm\temp\programming\packer-driver\targets\editor\chunks\29\29e40d128d8d3561568c2c75d80aa86e50036658.js resolved to E:\lianlukeji\frontend\cocos\menghuanfarm\temp\programming\packer-driver\targets\editor\chunks\29\29e40d128d8d3561568c2c75d80aa86e50036658.js is not in module cache!
+2024-8-25 20:18:01-debug: [[Executor]] Module "pack:///chunks/84/84741ad843cea9a440c5d8c2d379669b6551400d.js" loaded.
+2024-8-25 20:18:01-debug: [[Executor]] Module "pack:///chunks/8d/8dfeddacc4c82b4252bb02a2538d5f5a60f5d03c.js" loaded.
+2024-8-25 20:18:01-debug: [[Executor]] Module "pack:///chunks/7c/7c0c9dee076ab519641890e15dc9e1ee6e0b0047.js" loaded.
+2024-8-25 20:18:01-debug: [[Executor]] Register timer
+2024-8-25 20:18:01-debug: [[Executor]] Module "pack:///chunks/57/57aa3a73746d22d6e6fea20d4c04eb5fca3e2f83.js" loaded.
+2024-8-25 20:18:01-debug: [[Executor]] Register genPlant
+2024-8-25 20:18:01-debug: [[Executor]] Module "pack:///chunks/b0/b02df7dbd12a416e5ab2ccdb1f7fac565e85be68.js" loaded.
+2024-8-25 20:18:01-debug: [[Executor]] Module "pack:///chunks/e9/e91872bed1ce02ef8c0b8a1bd97039426629c4c6.js" loaded.
+2024-8-25 20:18:01-debug: [[Executor]] Register scaleAction
+2024-8-25 20:18:01-debug: [[Executor]] Module "pack:///chunks/29/29e40d128d8d3561568c2c75d80aa86e50036658.js" loaded.
+2024-8-25 20:18:01-debug: [[Executor]] Module "pack:///chunks/0d/0d5541f1fd3a71e0d0240c5e19547531a0a3f398.js" loaded.
+2024-8-25 20:18:01-debug: [[Executor]] Module "pack:///chunks/09/09e496b395f3362281c93269a29d6d47678870a4.js" loaded.
+2024-8-25 20:18:01-debug: [[Executor]] Module "pack:///chunks/db/db85415a257b0fba088602f6c4345b60c89ea169.js" loaded.
+2024-8-25 20:18:01-warn: The type of "scaleAction.isChild" must be CCBoolean, not Boolean.
+2024-8-25 20:18:01-debug: [[Executor]] Register main
+2024-8-25 20:18:01-debug: run build task Reload project scripts success in 714 ms √10%
+2024-8-25 20:18:01-debug: // ---- build task Reload project scripts ---- (714ms)
+2024-8-25 20:18:01-debug: Query asset bundle start10%
+2024-8-25 20:18:01-debug: // ---- build task Query asset bundle ----
+2024-8-25 20:18:01-debug: Process: heapTotal 244.65MB heapUsed 230.78MB rss 43.59MB
+2024-8-25 20:18:01-debug: // ---- build task Query asset bundle ---- (28ms)
+2024-8-25 20:18:01-debug: run build task Query asset bundle success in 28 ms √11%
+2024-8-25 20:18:01-debug: Query and organize assets start11%
+2024-8-25 20:18:01-debug: // ---- build task Query and organize assets ----
+2024-8-25 20:18:01-debug: Process: heapTotal 244.65MB heapUsed 230.85MB rss 43.69MB
+2024-8-25 20:18:01-debug: Query preload assets from cc.config.json: 60f7195c-ec2a-45eb-ba94-8955f60e81d0,1c02ae6f-4492-4915-b8f8-7492a3b1e4cd,810e96e4-e456-4468-9b59-f4e8f39732c0,efe8e2a3-eace-427b-b4f1-cb8a937ec77d,e9aa9a3e-5b2b-4ac7-a2c7-073de2b2b24f,8bbdbcdd-5cd4-4100-b6d5-b7c9625b6107,50f4348b-c883-4e2f-8f11-ce233b859fa1,fda095cb-831d-4601-ad94-846013963de8,f92806d7-1768-443f-afe8-12bcde84d0f0,dd3a144d-ab7f-41f0-82b8-2e43a090d496,f0416e68-0200-4b77-a926-4f9d16e494da,ff9be190-20a4-4e48-b68c-76e3c7cff085,970b0598-bcb0-4714-91fb-2e81440dccd8,bcd64cc6-2dd9-43f6-abbe-66318d332032,d930590d-bb92-4cc8-8bd1-23cd027f9edf,a3cd009f-0ab0-420d-9278-b9fdab939bbc,9361fd90-ba52-4f84-aa93-6e878fd576ca,871c3b6c-7379-419d-bda3-794b239ab90d,c27215d8-6835-4b68-bfbb-bdeac6100c04,b5d6115f-0370-4d7c-aad3-c194cc71cf98
+2024-8-25 20:18:01-debug: Number of scenes: 1
+2024-8-25 20:18:01-debug: Number of assets: 249
+2024-8-25 20:18:01-debug: Number of asset bundle: 3
+2024-8-25 20:18:01-debug: // ---- build task Query and organize assets ---- (430ms)
+2024-8-25 20:18:01-debug: run build task Query and organize assets success in 430 ms √13%
+2024-8-25 20:18:01-debug: Organize scripts start13%
+2024-8-25 20:18:01-debug: // ---- build task Organize scripts ----
+2024-8-25 20:18:01-debug: Process: heapTotal 246.50MB heapUsed 232.85MB rss 54.81MB
+2024-8-25 20:18:01-debug: sort script group...
+2024-8-25 20:18:01-debug: // ---- build task Organize scripts ---- (1ms)
+2024-8-25 20:18:01-debug: run build task Organize scripts success in 1 ms √14%
+2024-8-25 20:18:01-debug: Organize texture compression tasks start14%
+2024-8-25 20:18:01-debug: // ---- build task Organize texture compression tasks ----
+2024-8-25 20:18:01-debug: Process: heapTotal 246.50MB heapUsed 232.90MB rss 54.88MB
+2024-8-25 20:18:02-debug: Number of image-compress task: 0
+2024-8-25 20:18:02-debug: // ---- build task Organize texture compression tasks ---- (83ms)
+2024-8-25 20:18:02-debug: run build task Organize texture compression tasks success in 83 ms √15%
+2024-8-25 20:18:02-debug: Group json start15%
+2024-8-25 20:18:02-debug: // ---- build task Group json ----
+2024-8-25 20:18:02-debug: Process: heapTotal 246.50MB heapUsed 232.86MB rss 56.20MB
+2024-8-25 20:18:02-debug: Number of json group: 75
+2024-8-25 20:18:02-debug: // ---- build task Group json ---- (2ms)
+2024-8-25 20:18:02-debug: run build task Group json success in 2 ms √16%
+2024-8-25 20:18:02-debug: Merging Texture2D json start16%
+2024-8-25 20:18:02-debug: // ---- build task Merging Texture2D json ----
+2024-8-25 20:18:02-debug: Process: heapTotal 246.50MB heapUsed 233.28MB rss 56.25MB
+2024-8-25 20:18:02-debug: // ---- build task Merging Texture2D json ---- (5ms)
+2024-8-25 20:18:02-debug: run build task Merging Texture2D json success in 5 ms √18%
+2024-8-25 20:18:02-debug: Sort import-map.json start18%
+2024-8-25 20:18:02-debug: // ---- build task Sort import-map.json ----
+2024-8-25 20:18:02-debug: Process: heapTotal 246.50MB heapUsed 233.42MB rss 56.69MB
+2024-8-25 20:18:02-debug: // ---- build task Sort import-map.json ---- (1ms)
+2024-8-25 20:18:02-debug: run build task Sort import-map.json success in 1 ms √19%
+2024-8-25 20:18:02-debug: Process: heapTotal 246.50MB heapUsed 233.47MB rss 56.70MB
+2024-8-25 20:18:02-debug: web-mobile:(onBeforeBuildAssets) start...19%
+2024-8-25 20:18:02-debug: // ---- build task web-mobile：onBeforeBuildAssets ----
+2024-8-25 20:18:02-debug: // ---- build task web-mobile：onBeforeBuildAssets ---- (1ms)
+2024-8-25 20:18:02-debug: localization-editor:(onBeforeBuildAssets) start...21%
+2024-8-25 20:18:02-debug: // ---- build task localization-editor：onBeforeBuildAssets ----
+2024-8-25 20:18:02-debug: Process: heapTotal 246.50MB heapUsed 233.52MB rss 56.71MB
+2024-8-25 20:18:02-debug: web-mobile:(onBeforeBuildAssets) in 1 ms21%
+2024-8-25 20:18:02-debug: // ---- build task localization-editor：onBeforeBuildAssets ---- (13ms)
+2024-8-25 20:18:02-debug: Process: heapTotal 248.50MB heapUsed 232.80MB rss 57.09MB
+2024-8-25 20:18:02-debug: Start collect pack info
+2024-8-25 20:18:02-debug: localization-editor:(onBeforeBuildAssets) in 13 ms23%
+2024-8-25 20:18:02-debug: Build auto-atlas start23%
+2024-8-25 20:18:02-debug: // ---- build task Build auto-atlas ----
+2024-8-25 20:18:02-debug: // ---- build task Build auto-atlas ---- (2ms)
+2024-8-25 20:18:02-debug: run build task Build auto-atlas success in 2 ms √30%
+2024-8-25 20:18:02-debug: // ---- build task Compress Image ----
+2024-8-25 20:18:02-debug: Process: heapTotal 248.50MB heapUsed 232.85MB rss 56.80MB
+2024-8-25 20:18:02-debug: skip compress texture
+2024-8-25 20:18:02-debug: Compress Image start30%
+2024-8-25 20:18:02-debug: // ---- build task Compress Image ---- (2ms)
+2024-8-25 20:18:02-debug: run build task Compress Image success in 2 ms √37%
+2024-8-25 20:18:02-debug: Copy the resource start37%
+2024-8-25 20:18:02-debug: // ---- build task Copy the resource ----
+2024-8-25 20:18:02-debug: Process: heapTotal 248.50MB heapUsed 232.89MB rss 56.70MB
+2024-8-25 20:18:02-debug: Asset Bundle(internal) handle assets: 20
+2024-8-25 20:18:02-debug: Asset Bundle(resources) handle assets: 227
+2024-8-25 20:18:02-debug: Asset Bundle(main) handle assets: 36
+2024-8-25 20:18:02-debug: // ---- build task Copy the resource ---- (743ms)
+2024-8-25 20:18:02-debug: run build task Copy the resource success in 743 ms √43%
+2024-8-25 20:18:02-debug: Build the grouped json and scatter files to the specified location start43%
+2024-8-25 20:18:02-debug: // ---- build task Build the grouped json and scatter files to the specified location ----
+2024-8-25 20:18:02-debug: Process: heapTotal 248.50MB heapUsed 233.30MB rss 58.33MB
+2024-8-25 20:18:05-debug: // ---- build task Build the grouped json and scatter files to the specified location ---- (2357ms)
+2024-8-25 20:18:05-debug: run build task Build the grouped json and scatter files to the specified location success in 2357 ms √50%
+2024-8-25 20:18:05-debug: Process: heapTotal 249.25MB heapUsed 235.23MB rss 63.96MB
+2024-8-25 20:18:05-debug: // ---- build task Compress zip bundle ----
+2024-8-25 20:18:05-debug: Compress zip bundle start50%
+2024-8-25 20:18:05-debug: // ---- build task Compress zip bundle ---- (1ms)
+2024-8-25 20:18:05-debug: run build task Compress zip bundle success in 1 ms √57%
+2024-8-25 20:18:05-debug: Build script start57%
+2024-8-25 20:18:05-debug: // ---- build task Build script ----
+2024-8-25 20:18:05-debug: Process: heapTotal 249.25MB heapUsed 235.27MB rss 63.95MB
+2024-8-25 20:18:20-debug: Build project script start...57%
+2024-8-25 20:18:20-debug: Process: heapTotal 227.47MB heapUsed 219.68MB rss 157.83MB
+2024-8-25 20:18:20-log: Run build task(build-script) in child, see: chrome://inspect/#devices
+2024-8-25 20:18:23-warn: [build-script][[Build.Script.Rollup]] Circular dependency: file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/genPlant.ts -> file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/main.ts -> file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/genPlant.ts
+2024-8-25 20:18:28-debug: excute-script over with build-script 7652ms
+2024-8-25 20:18:28-debug: Process: heapTotal 227.47MB heapUsed 219.28MB rss 157.37MB
+2024-8-25 20:18:28-debug: Copy externalScripts success!
+2024-8-25 20:18:28-debug: Build project script in (7668 ms) √57%
+2024-8-25 20:18:28-debug: Build engine start...57%
+2024-8-25 20:18:28-debug: {"debug":false,"sourceMaps":false,"includeModules":["2d","animation","audio","base","dragon-bones","gfx-webgl","gfx-webgl2","intersection-2d","marionette","particle-2d","physics-2d-box2d","profiler","skeletal-animation","spine","tiled-map","tween","ui","video","webview","xr"],"engineVersion":"3.6.1","platform":"HTML5","md5Map":[],"engineName":"cocos-js","useCache":true,"split":false,"ammoJsWasm":"fallback","assetURLFormat":"runtime-resolved","flags":{"DEBUG":false},"entry":"D:\\cocos-dashboard-editors\\Creator\\3.6.1\\resources\\resources\\3d\\engine"}
+2024-8-25 20:18:28-debug: Use cache engine: {link(C:\Users\ADMINI~1\AppData\Local\Temp\CocosCreator\3.6.1\builder\engine\fde329c401c641771bff368eaccc979a)}
+2024-8-25 20:18:28-debug: Build engine in (335 ms) √57%
+2024-8-25 20:18:28-debug: // ---- build task Build script ---- (23590ms)
+2024-8-25 20:18:28-debug: run build task Build script success in 23590 ms √63%
+2024-8-25 20:18:28-debug: // ---- build task Add md5 suffix to assets ----
+2024-8-25 20:18:28-debug: Process: heapTotal 227.97MB heapUsed 219.95MB rss 157.64MB
+2024-8-25 20:18:28-debug: Add md5 suffix to assets start63%
+2024-8-25 20:18:28-debug: // ---- build task Add md5 suffix to assets ---- (1ms)
+2024-8-25 20:18:28-debug: run build task Add md5 suffix to assets success in 1 ms √73%
+2024-8-25 20:18:28-debug: // ---- build task Init settings and config ----
+2024-8-25 20:18:28-debug: Process: heapTotal 227.97MB heapUsed 219.99MB rss 157.68MB
+2024-8-25 20:18:28-debug: Init settings and config start73%
+2024-8-25 20:18:28-debug: run build task Init settings and config success in 0 ms √74%
+2024-8-25 20:18:28-debug: builder.tasks.settings.macro does not defined in i18n
+2024-8-25 20:18:28-debug: builder.tasks.settings.macro start74%
+2024-8-25 20:18:28-debug: // ---- build task builder.tasks.settings.macro ----
+2024-8-25 20:18:28-debug: Process: heapTotal 227.97MB heapUsed 220.04MB rss 157.80MB
+2024-8-25 20:18:28-debug: // ---- build task builder.tasks.settings.macro ---- (14ms)
+2024-8-25 20:18:28-debug: run build task builder.tasks.settings.macro success in 14 ms √74%
+2024-8-25 20:18:28-debug: Sort some build options to settings.json start74%
+2024-8-25 20:18:28-debug: // ---- build task Sort some build options to settings.json ----
+2024-8-25 20:18:28-debug: Process: heapTotal 227.97MB heapUsed 220.09MB rss 157.85MB
+2024-8-25 20:18:28-debug: // ---- build task Sort some build options to settings.json ---- (20ms)
+2024-8-25 20:18:28-debug: run build task Sort some build options to settings.json success in 20 ms √75%
+2024-8-25 20:18:28-debug: custom joint texture layouts start75%
+2024-8-25 20:18:28-debug: Process: heapTotal 228.95MB heapUsed 221.10MB rss 159.60MB
+2024-8-25 20:18:28-debug: // ---- build task custom joint texture layouts ----
+2024-8-25 20:18:28-debug: // ---- build task custom joint texture layouts ---- (9ms)
+2024-8-25 20:18:28-debug: run build task custom joint texture layouts success in 9 ms √76%
+2024-8-25 20:18:28-debug: Process: heapTotal 228.95MB heapUsed 221.14MB rss 159.64MB
+2024-8-25 20:18:28-debug: custom joint physics start76%
+2024-8-25 20:18:28-debug: // ---- build task custom joint physics ----
+2024-8-25 20:18:28-debug: // ---- build task custom joint physics ---- (1ms)
+2024-8-25 20:18:28-debug: run build task custom joint physics success in 1 ms √76%
+2024-8-25 20:18:28-debug: Fill script data to settings start76%
+2024-8-25 20:18:28-debug: Process: heapTotal 228.95MB heapUsed 221.18MB rss 159.68MB
+2024-8-25 20:18:28-debug: // ---- build task Fill script data to settings ----
+2024-8-25 20:18:28-debug: // ---- build task Fill script data to settings ---- (1ms)
+2024-8-25 20:18:28-debug: run build task Fill script data to settings success in 1 ms √77%
+2024-8-25 20:18:28-debug: Fill scene data to settings start77%
+2024-8-25 20:18:28-debug: // ---- build task Fill scene data to settings ----
+2024-8-25 20:18:28-debug: Process: heapTotal 228.95MB heapUsed 221.22MB rss 159.73MB
+2024-8-25 20:18:28-debug: // ---- build task Fill scene data to settings ---- (1ms)
+2024-8-25 20:18:28-debug: run build task Fill scene data to settings success in 1 ms √77%
+2024-8-25 20:18:28-debug: Organize assets groups，generate packedAssets and rawAssets data start77%
+2024-8-25 20:18:28-debug: // ---- build task Organize assets groups，generate packedAssets and rawAssets data ----
+2024-8-25 20:18:28-debug: Process: heapTotal 228.95MB heapUsed 221.26MB rss 159.77MB
+2024-8-25 20:18:29-debug: // ---- build task Organize assets groups，generate packedAssets and rawAssets data ---- (1ms)
+2024-8-25 20:18:29-debug: run build task Organize assets groups，generate packedAssets and rawAssets data success in 1 ms √78%
+2024-8-25 20:18:29-debug: Generate md5AssetsMap from suffixMap to settings start78%
+2024-8-25 20:18:29-debug: // ---- build task Generate md5AssetsMap from suffixMap to settings ----
+2024-8-25 20:18:29-debug: options.md5Cache is false.
+2024-8-25 20:18:29-debug: Process: heapTotal 228.95MB heapUsed 221.42MB rss 159.92MB
+2024-8-25 20:18:29-debug: // ---- build task Generate md5AssetsMap from suffixMap to settings ---- (1ms)
+2024-8-25 20:18:29-debug: run build task Generate md5AssetsMap from suffixMap to settings success in 1 ms √78%
+2024-8-25 20:18:29-debug: web-mobile:(onBeforeCompressSettings) start...78%
+2024-8-25 20:18:29-debug: // ---- build task web-mobile：onBeforeCompressSettings ----
+2024-8-25 20:18:29-debug: Process: heapTotal 228.95MB heapUsed 220.70MB rss 158.88MB
+2024-8-25 20:18:29-debug: // ---- build task web-mobile：onBeforeCompressSettings ---- (1ms)
+2024-8-25 20:18:29-debug: cocos-service:(onBeforeCompressSettings) start...81%
+2024-8-25 20:18:29-debug: web-mobile:(onBeforeCompressSettings) in 1 ms81%
+2024-8-25 20:18:29-debug: // ---- build task cocos-service：onBeforeCompressSettings ----
+2024-8-25 20:18:29-debug: Process: heapTotal 228.95MB heapUsed 220.74MB rss 158.93MB
+2024-8-25 20:18:29-debug: // ---- build task cocos-service：onBeforeCompressSettings ---- (213ms)
+2024-8-25 20:18:29-debug: cocos-service:(onBeforeCompressSettings) in 213 ms83%
+2024-8-25 20:18:29-debug: Build import-map.json start83%
+2024-8-25 20:18:29-debug: // ---- build task Build import-map.json ----
+2024-8-25 20:18:29-debug: Process: heapTotal 228.95MB heapUsed 220.81MB rss 158.99MB
+2024-8-25 20:18:29-debug: // ---- build task Build import-map.json ---- (12ms)
+2024-8-25 20:18:29-debug: Compress settings.json and config.json start84%
+2024-8-25 20:18:29-debug: run build task Build import-map.json success in 12 ms √84%
+2024-8-25 20:18:29-debug: // ---- build task Compress settings.json and config.json ----
+2024-8-25 20:18:29-debug: Process: heapTotal 228.95MB heapUsed 220.85MB rss 159.04MB
+2024-8-25 20:18:29-debug: // ---- build task Compress settings.json and config.json ---- (3ms)
+2024-8-25 20:18:29-debug: run build task Compress settings.json and config.json success in 3 ms √85%
+2024-8-25 20:18:29-debug: Save config.json start85%
+2024-8-25 20:18:29-debug: // ---- build task Save config.json ----
+2024-8-25 20:18:29-debug: Process: heapTotal 228.95MB heapUsed 221.13MB rss 159.31MB
+2024-8-25 20:18:29-debug: // ---- build task Save config.json ---- (5ms)
+2024-8-25 20:18:29-debug: run build task Save config.json success in 5 ms √86%
+2024-8-25 20:18:29-debug: Save Settings.json start86%
+2024-8-25 20:18:29-debug: // ---- build task Save Settings.json ----
+2024-8-25 20:18:29-debug: Process: heapTotal 228.95MB heapUsed 221.23MB rss 159.45MB
+2024-8-25 20:18:29-debug: // ---- build task Save Settings.json ---- (12ms)
+2024-8-25 20:18:29-debug: run build task Save Settings.json success in 12 ms √87%
+2024-8-25 20:18:29-debug: // ---- build task Sort build template ----
+2024-8-25 20:18:29-debug: Sort build template start87%
+2024-8-25 20:18:29-debug: Process: heapTotal 231.39MB heapUsed 223.65MB rss 162.76MB
+2024-8-25 20:18:29-debug: // ---- build task Sort build template ---- (117ms)
+2024-8-25 20:18:29-debug: run build task Sort build template success in 117 ms √88%
+2024-8-25 20:18:29-debug: // ---- build task cocos-service：onAfterCompressSettings ----
+2024-8-25 20:18:29-debug: cocos-service:(onAfterCompressSettings) start...88%
+2024-8-25 20:18:29-debug: Process: heapTotal 231.92MB heapUsed 222.42MB rss 162.95MB
+2024-8-25 20:18:29-debug: // ---- build task cocos-service：onAfterCompressSettings ---- (191ms)
+2024-8-25 20:18:29-debug: cocos-service:(onAfterCompressSettings) in 191 ms90%
+2024-8-25 20:18:29-debug: web-mobile:(onAfterBuild) start...90%
+2024-8-25 20:18:29-debug: // ---- build task web-mobile：onAfterBuild ----
+2024-8-25 20:18:29-debug: Process: heapTotal 234.42MB heapUsed 222.87MB rss 163.02MB
+2024-8-25 20:18:29-debug: Use build-template {link(E:\lianlukeji\frontend\cocos\menghuanfarm\build-templates\web-mobile)}.
+2024-8-25 20:18:29-debug: // ---- build task web-mobile：onAfterBuild ---- (149ms)
+2024-8-25 20:18:29-debug: web-mobile:(onAfterBuild) in 149 ms92%
+2024-8-25 20:18:29-debug: cocos-service:(onAfterBuild) start...92%
+2024-8-25 20:18:29-debug: // ---- build task cocos-service：onAfterBuild ----
+2024-8-25 20:18:29-debug: Process: heapTotal 234.42MB heapUsed 222.64MB rss 164.37MB
+2024-8-25 20:18:30-debug: // ---- build task cocos-service：onAfterBuild ---- (215ms)
+2024-8-25 20:18:30-debug: cocos-service:(onAfterBuild) in 215 ms94%
+2024-8-25 20:18:30-debug: builder:build-project-total (30110ms)
+2024-8-25 20:18:30-debug: build success in 30110 ms!
+2024-8-25 20:18:30-debug: ================================ Build Task (web-mobile) Finished in (30141)ms ================================
+2024-8-25 20:18:33-debug: // ---- builder:run-build-stage-run ----
+2024-8-25 20:18:33-debug: init options success
+2024-8-25 20:18:33-debug: web-mobile:(run) start...
+2024-8-25 20:18:33-debug: // ---- build task web-mobile：run ----
+2024-8-25 20:18:33-debug: web-mobile:(run) in null ms √
+2024-8-25 20:18:33-log: [task:run]: success!

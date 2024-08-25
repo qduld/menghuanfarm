@@ -22,9 +22,10 @@ import {
   AudioClip,
   AudioSource,
 } from "cc";
+import { retrieveLaunchParams } from "@telegram-apps/sdk";
 import { genPlant } from "./genPlant";
 import { timer } from "./timer";
-import { paiHang, param, wechatAd } from "./loadData";
+import { paiHang, param, wechatAd, tokenMock } from "./loadData";
 import { httpRequest } from "./http";
 
 const { ccclass, property } = _decorator;
@@ -45,12 +46,47 @@ export class main extends Component {
   public static addSalePackCount: number = 0;
   public static addPackCount: number = 0;
   public static saleBox: Node = null;
+  public static token: string | null = null;
   // @property([Node])
   // fingerFlows
   protected onLoad(): void {
     director.preloadScene("main");
-    // this.requestFarmLand();
+    const windowLocal = window as any;
+
+    if (windowLocal.Telegram && windowLocal.Telegram.WebApp) {
+      windowLocal.Telegram.WebApp.onEvent("ready", () => {
+        const initData = windowLocal.Telegram.WebApp.initData;
+        console.log("Telegram WebApp initialized with initData:", initData);
+
+        // 处理 initData 数据，执行你需要的逻辑
+        // 假设 token 在 initData 中
+        const token = this.parseTokenFromInitData(initData);
+        if (token) {
+          // 存储 token
+          main.token = token;
+          // 可选择使用 localStorage 存储
+          sys.localStorage.setItem("token", token);
+        } else {
+          console.error("Token not found in initData.");
+        }
+      });
+    } else {
+      main.token = tokenMock;
+      console.error("Telegram WebApp not found.");
+    }
+    this.requestFarmLand();
+    // const { initDataRaw, initData } = retrieveLaunchParams();
+    // console.log(initData);
+    // console.log(initDataRaw);
     this.login();
+  }
+
+  // 假设 token 以某种方式存在于 initData 中，解析并返回 token
+  private parseTokenFromInitData(initData: string): string | null {
+    // 实际实现中你需要根据 initData 的格式解析 token
+    // 例如，假设 initData 是一个 query string
+    const params = new URLSearchParams(initData);
+    return params.get("token");
   }
   start() {
     //手指跟随
@@ -67,6 +103,9 @@ export class main extends Component {
     try {
       const response = await httpRequest("/api/v1/farmland", {
         method: "GET",
+        headers: {
+          Authorization: tokenMock,
+        },
       });
       if (response.ok) {
       } else {
