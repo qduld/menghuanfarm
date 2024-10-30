@@ -24,6 +24,7 @@ import {
 } from "cc";
 import { retrieveLaunchParams } from "@telegram-apps/sdk";
 import { genPlant } from "./genPlant";
+import { GenBlock } from "./genBlock";
 import { timer } from "./timer";
 import { paiHang, param, wechatAd, tokenMock } from "./loadData";
 import { httpRequest } from "./http";
@@ -33,13 +34,12 @@ let myPackBox: Node,
   mySaleBox: Node,
   storeBox: Node,
   paiHangBox: Node,
+  bagBox: Node,
+  shopBox: Node,
   msgBox: Node = null;
 let userAvata: Node,
   nickName: Node,
   jinbi: Node = null;
-let mainAd1,
-  mainAd2,
-  mainAd3 = null;
 //0 橘子香蕉西红柿幼苗，1 红富士苹果幼苗,2 紫金冠茄幼苗,3 红森胡萝卜幼苗
 @ccclass("main")
 export class main extends Component {
@@ -47,64 +47,22 @@ export class main extends Component {
   public static addPackCount: number = 0;
   public static saleBox: Node = null;
   public static token: string | null = null;
-  // @property([Node])
-  // fingerFlows
+  @property(Node)
+  genBlock: GenBlock = new GenBlock(); // block实例
+
   protected onLoad(): void {
-    director.preloadScene("main");
-    const windowLocal = window as any;
-
-    if (windowLocal.Telegram && windowLocal.Telegram.WebApp) {
-      windowLocal.Telegram.WebApp.onEvent("ready", () => {
-        const initData = windowLocal.Telegram.WebApp.initData;
-        console.log("Telegram WebApp initialized with initData:", initData);
-
-        // 处理 initData 数据，执行你需要的逻辑
-        // 假设 token 在 initData 中
-        const token = this.parseTokenFromInitData(initData);
-        if (token) {
-          // 存储 token
-          main.token = token;
-          // 可选择使用 localStorage 存储
-          sys.localStorage.setItem("token", token);
-        } else {
-          console.error("Token not found in initData.");
-        }
-      });
-    } else {
-      main.token = tokenMock;
-      console.error("Telegram WebApp not found.");
-    }
-    this.requestFarmLand();
-    // const { initDataRaw, initData } = retrieveLaunchParams();
-    // console.log(initData);
-    // console.log(initDataRaw);
-    this.login();
+    this.init();
+    // this.requestFarmLandPlant();
   }
 
-  // 假设 token 以某种方式存在于 initData 中，解析并返回 token
-  private parseTokenFromInitData(initData: string): string | null {
-    // 实际实现中你需要根据 initData 的格式解析 token
-    // 例如，假设 initData 是一个 query string
-    const params = new URLSearchParams(initData);
-    return params.get("token");
-  }
-  start() {
-    //手指跟随
-    // const finger = find("MainCanvas/op/finger");
-    // this.fingerFlows.forEach(item => {
-    //     item.on(Node.EventType.TOUCH_END, function (event: EventTouch) {
-    //         finger.parent.active = true;
-    //         const position = item.getPosition();
-    //         finger.setPosition(new Vec3(position.x + 30, position.y - 30, 0));
-    //     }, this);
-    // });
-  }
-  async requestFarmLand() {
+  // 播种
+  async requestFarmLandPlant() {
     try {
-      const response = await httpRequest("/api/v1/farmland", {
-        method: "GET",
-        headers: {
-          Authorization: tokenMock,
+      const response = await httpRequest("/api/v1/farmland/plant", {
+        method: "POST",
+        body: {
+          farmlandId: 1,
+          seedId: 2,
         },
       });
       if (response.ok) {
@@ -114,36 +72,6 @@ export class main extends Component {
     } catch (error) {
       console.error("Error:", error);
     }
-  }
-  // clickLoginBtn() {
-  //   const btn = find("Canvas/btnClick");
-  //   btn.getComponent(AudioSource).play();
-  // }
-  // clickBtn() {
-  //   const btn = find("MainCanvas/btnClick");
-  //   btn.getComponent(AudioSource).play();
-  // }
-  login() {
-    // director.loadScene("main", () => {
-    //游戏开始倒计时
-    timer.isStart = true;
-    this.init();
-    nickName.getComponent(Label).string = param.nickname;
-    resources.load(param.avata, SpriteFrame, (err, spriteFrame) => {
-      userAvata.getComponent(Sprite).sizeMode = Sprite.SizeMode.CUSTOM;
-      userAvata.getComponent(Sprite).spriteFrame = spriteFrame;
-    });
-    jinbi.getComponent(Label).string = param.money.toString();
-    timer.time = param.levelTime;
-    if (sys.platform === sys.Platform.WECHAT_GAME) {
-      if (mainAd1 !== null) {
-        mainAd1.hide();
-      }
-      if (mainAd2 !== null) {
-        mainAd2.hide();
-      }
-    }
-    // });
   }
   //类型，索引
   static addSalePack(type: number) {
@@ -268,72 +196,31 @@ export class main extends Component {
     (userAvata = find("MainCanvas/touxiangkuang/userAvata")),
       (nickName = find("MainCanvas/touxiangkuang/nickname")),
       (jinbi = find("MainCanvas/jinbi/boxbg/txt"));
-    //默认添加胡萝卜到商店植物 胡萝卜最便宜
-    genPlant._genPlant.addPlants({
-      name: "huluobo",
-      img: "huluobozz",
-      chengshuImg: "huluobo",
-    });
+
+    bagBox = find("MainCanvas/popBox/Bag");
+    shopBox = find("MainCanvas/popBox/Shop");
+
+    bagBox.active = false;
+    shopBox.active = false;
 
     main.saleBox = mySaleBox;
     main.addPackCount = 0;
     main.addSalePackCount = 0;
   }
-  update(deltaTime: number) {}
   //弹窗
   showDialog(event: EventTouch) {
     switch (event.currentTarget.name) {
+      case "Bag":
+        bagBox.active = true;
+        break;
+      case "Shop":
+        shopBox.active = true;
+        break;
       case "package":
         myPackBox.active = true;
-        if (sys.platform === sys.Platform.WECHAT_GAME) {
-          //种子背包原生模板
-          let mainAd8 = wx.createCustomAd({
-            adUnitId: wechatAd[8].adid,
-            style: {
-              left: 50,
-              top: 550,
-              width: 650,
-            },
-            //自动刷新
-            adIntervals: 30,
-          });
-          if (mainAd8 !== null) {
-            // 用户触发广告后，显示激励视频广告
-            mainAd8.show();
-            mainAd8.onError((err) => {
-              console.log(err);
-            });
-          }
-        }
         break;
       case "package_guoshi":
         mySaleBox.active = true;
-        if (sys.platform === sys.Platform.WECHAT_GAME) {
-          if (mainAd2 !== null) {
-            mainAd2.show();
-            mainAd2.onError((err) => {
-              console.log(err);
-            });
-          }
-          //果实背包原生模板
-          let mainAd9 = wx.createCustomAd({
-            adUnitId: wechatAd[9].adid,
-            style: {
-              left: 50,
-              top: 550,
-              width: 650,
-            },
-            //自动刷新
-            adIntervals: 30,
-          });
-          if (mainAd9 !== null) {
-            // 用户触发广告后，显示激励视频广告
-            mainAd9.show();
-            mainAd9.onError((err) => {
-              console.log(err);
-            });
-          }
-        }
         break;
       case "zhishipai":
         storeBox.active = true;
@@ -344,14 +231,13 @@ export class main extends Component {
         break;
     }
   }
-  closeDialog(event: EventTouch) {
-    let type = event.currentTarget.parent.name + "_" + event.currentTarget.name;
-    switch (type) {
-      case "store_close":
-        storeBox.active = false;
+  closeDialog(event: EventTouch, customData) {
+    switch (customData) {
+      case "Bag":
+        bagBox.active = false;
         break;
-      case "mypack_close":
-        myPackBox.active = false;
+      case "Shop":
+        shopBox.active = false;
         break;
       case "mysalepack_close":
         mySaleBox.active = false;
