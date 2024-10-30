@@ -20446,3 +20446,1349 @@
 2024-10-30 17:42:46-debug: web-mobile:(run) start...
 2024-10-30 17:42:46-debug: web-mobile:(run) in null ms √
 2024-10-30 17:42:46-log: [task:run]: success!
+2024-10-31 01:09:00-debug: =================================== Build Task (web-mobile) Start ================================
+2024-10-31 01:09:00-debug: Start build task, options:{"name":"PlantStore","platform":"web-mobile","buildPath":"project://build","debug":false,"md5Cache":false,"skipCompressTexture":true,"sourceMaps":false,"polyfills":{"asyncFunctions":true,"coreJs":true},"experimentalEraseModules":false,"useBuiltinServer":false,"mainBundleIsRemote":false,"mainBundleCompressionType":"none","replaceSplashScreen":true,"startScene":"5a6f4efe-edd1-4c9d-adc3-c28f8d58012d","outputName":"web-mobile","scenes":[{"url":"db://assets/scene/main.scene","uuid":"5a6f4efe-edd1-4c9d-adc3-c28f8d58012d","inBundle":false}],"windows":[],"packages":{"web-mobile":{"orientation":"portrait","__version__":"1.0.1","embedWebDebugger":false},"cocos-service":{"configID":"8defd1","services":[],"__version__":"3.0.7","sdkHubConfigID":"5c53db","sdkHubConfig":{"id":"5c53db","name":"HUAWEI  AppGallery Connect","platform":"3","channelID":"161221","channelName":"HUAWEI  AppGallery Connect","remarks":"HUAWEI  AppGallery Connect","plugins":[{"hasParam":false,"pParam":{},"pId":"2412","pName":"HUAWEI HMS","packageName":"huawei-hms","pType":30,"pUseType":30,"hasLocal":true,"hasUpdate":false,"requireParam":true,"pVersion":"2.0.3_6.3.0","isInstall":false,"installProgress":true}]}}},"__version__":"1.3.3","web-mobile":[]}
+2024-10-31 01:09:00-debug: Build with Cocos Creator 3.6.1
+2024-10-31 01:09:00-debug: // ---- build task cocos-service：onBeforeBuild ----
+2024-10-31 01:09:00-debug: Process: heapTotal 189.89MB heapUsed 182.36MB rss 496.79MB
+2024-10-31 01:09:00-debug: cocos-service:(onBeforeBuild) start...0%
+2024-10-31 01:09:01-debug: // ---- build task cocos-service：onBeforeBuild ---- (187ms)
+2024-10-31 01:09:01-debug: cocos-service:(onBeforeBuild) in 187 ms2%
+2024-10-31 01:09:01-debug: Query all assets info in project
+2024-10-31 01:09:01-debug: init custom config: keepNodeUuid: false, useCache: true
+2024-10-31 01:09:01-debug: BuildAssetLibrary query-assets with assets 408
+2024-10-31 01:09:01-debug:   Number of all scenes: 2
+2024-10-31 01:09:01-debug:   Number of all scripts: 16
+2024-10-31 01:09:01-debug:   Number of other assets: 741
+2024-10-31 01:09:01-debug: BuildAssetLibrary initialized with asset 639!
+2024-10-31 01:09:01-debug: web-mobile:(onAfterInit) start...2%
+2024-10-31 01:09:01-debug: Process: heapTotal 193.68MB heapUsed 184.12MB rss 500.37MB
+2024-10-31 01:09:01-debug: // ---- build task web-mobile：onAfterInit ----
+2024-10-31 01:09:01-debug: // ---- build task web-mobile：onAfterInit ---- (103ms)
+2024-10-31 01:09:01-debug: // ---- build task cocos-service：onAfterInit ----
+2024-10-31 01:09:01-debug: Process: heapTotal 193.68MB heapUsed 184.01MB rss 501.35MB
+2024-10-31 01:09:01-debug: cocos-service:(onAfterInit) start...4%
+2024-10-31 01:09:01-debug: web-mobile:(onAfterInit) in 103 ms4%
+2024-10-31 01:09:01-debug: // ---- build task cocos-service：onAfterInit ---- (163ms)
+2024-10-31 01:09:01-debug: cocos-service:(onAfterInit) in 163 ms7%
+2024-10-31 01:09:01-debug: localization-editor:(onAfterInit) start...7%
+2024-10-31 01:09:01-debug: // ---- build task localization-editor：onAfterInit ----
+2024-10-31 01:09:01-debug: Process: heapTotal 193.68MB heapUsed 184.07MB rss 501.42MB
+2024-10-31 01:09:01-debug: // ---- build task localization-editor：onAfterInit ---- (4ms)
+2024-10-31 01:09:01-debug: Reload project scripts start9%
+2024-10-31 01:09:01-debug: // ---- build task Reload project scripts ----
+2024-10-31 01:09:01-debug: Process: heapTotal 193.68MB heapUsed 184.12MB rss 501.47MB
+2024-10-31 01:09:01-debug: reload all scripts.
+2024-10-31 01:09:01-debug: localization-editor:(onAfterInit) in 4 ms9%
+2024-10-31 01:09:01-debug: Incremental keys: 
+2024-10-31 01:09:01-debug: Set detail map pack:///resolution-detail-map.json: {}
+2024-10-31 01:09:01-debug: E:\lianlukeji\frontend\cocos\menghuanfarm\temp\programming\packer-driver\targets\editor\chunks\d0\d0b282b9748ef7fc7d2e7bd647d71b0f7e84da53.js resolved to E:\lianlukeji\frontend\cocos\menghuanfarm\temp\programming\packer-driver\targets\editor\chunks\d0\d0b282b9748ef7fc7d2e7bd647d71b0f7e84da53.js is not in module cache!
+2024-10-31 01:09:01-debug: [[Executor]] Module "cce:/internal/x/cc-fu/base" loaded.
+2024-10-31 01:09:01-debug: [[Executor]] Module "cce:/internal/x/cc-fu/gfx-webgl" loaded.
+2024-10-31 01:09:01-debug: [[Executor]] Module "cce:/internal/x/cc-fu/animation" loaded.
+2024-10-31 01:09:01-debug: [[Executor]] Module "cce:/internal/x/cc-fu/gfx-webgl2" loaded.
+2024-10-31 01:09:01-debug: [[Executor]] Module "cce:/internal/x/cc-fu/skeletal-animation" loaded.
+2024-10-31 01:09:01-debug: [[Executor]] Module "cce:/internal/x/cc-fu/2d" loaded.
+2024-10-31 01:09:01-debug: [[Executor]] Module "cce:/internal/x/cc-fu/3d" loaded.
+2024-10-31 01:09:01-debug: [[Executor]] Module "cce:/internal/x/cc-fu/particle" loaded.
+2024-10-31 01:09:01-debug: [[Executor]] Module "cce:/internal/x/cc-fu/particle-2d" loaded.
+2024-10-31 01:09:01-debug: [[Executor]] Module "cce:/internal/x/cc-fu/physics-framework" loaded.
+2024-10-31 01:09:01-debug: [[Executor]] Module "cce:/internal/x/cc-fu/physics-2d-framework" loaded.
+2024-10-31 01:09:01-debug: [[Executor]] Module "cce:/internal/x/cc-fu/intersection-2d" loaded.
+2024-10-31 01:09:01-debug: [[Executor]] Module "cce:/internal/x/cc-fu/primitive" loaded.
+2024-10-31 01:09:01-debug: [[Executor]] Module "cce:/internal/x/cc-fu/profiler" loaded.
+2024-10-31 01:09:01-debug: [[Executor]] Module "cce:/internal/x/cc-fu/geometry-renderer" loaded.
+2024-10-31 01:09:01-debug: [[Executor]] Module "cce:/internal/x/cc-fu/audio" loaded.
+2024-10-31 01:09:01-debug: [[Executor]] Module "cce:/internal/x/cc-fu/xr" loaded.
+2024-10-31 01:09:01-debug: [[Executor]] Module "cce:/internal/x/cc-fu/ui" loaded.
+2024-10-31 01:09:01-debug: [[Executor]] Module "cce:/internal/x/cc-fu/terrain" loaded.
+2024-10-31 01:09:01-debug: [[Executor]] Module "cce:/internal/x/cc-fu/webview" loaded.
+2024-10-31 01:09:01-debug: [[Executor]] Module "cce:/internal/x/cc-fu/tween" loaded.
+2024-10-31 01:09:01-debug: [[Executor]] Module "cce:/internal/x/cc-fu/tiled-map" loaded.
+2024-10-31 01:09:01-debug: [[Executor]] Module "cce:/internal/x/cc-fu/dragon-bones" loaded.
+2024-10-31 01:09:01-debug: [[Executor]] Module "cce:/internal/x/cc-fu/custom-pipeline" loaded.
+2024-10-31 01:09:01-debug: [[Executor]] Module "cce:/internal/x/cc-fu/video" loaded.
+2024-10-31 01:09:01-debug: [[Executor]] Module "cce:/internal/x/cc-fu/base" loaded.
+2024-10-31 01:09:01-debug: [[Executor]] Module "cce:/internal/x/cc-fu/spine" loaded.
+2024-10-31 01:09:01-debug: [[Executor]] Module "cce:/internal/x/cc-fu/gfx-webgl2" loaded.
+2024-10-31 01:09:01-debug: [[Executor]] Module "cce:/internal/x/cc-fu/animation" loaded.
+2024-10-31 01:09:01-debug: [[Executor]] Module "cce:/internal/x/cc-fu/3d" loaded.
+2024-10-31 01:09:01-debug: [[Executor]] Module "cce:/internal/x/cc-fu/skeletal-animation" loaded.
+2024-10-31 01:09:01-debug: [[Executor]] Module "cce:/internal/x/cc-fu/ui" loaded.
+2024-10-31 01:09:01-debug: [[Executor]] Module "cce:/internal/x/cc-fu/gfx-webgl" loaded.
+2024-10-31 01:09:01-debug: [[Executor]] Module "cce:/internal/x/cc-fu/particle" loaded.
+2024-10-31 01:09:01-debug: [[Executor]] Module "cce:/internal/x/cc-fu/particle-2d" loaded.
+2024-10-31 01:09:01-debug: [[Executor]] Module "cce:/internal/x/cc-fu/physics-framework" loaded.
+2024-10-31 01:09:01-debug: [[Executor]] Module "cce:/internal/x/cc-fu/physics-2d-framework" loaded.
+2024-10-31 01:09:01-debug: [[Executor]] Module "cce:/internal/x/cc-fu/primitive" loaded.
+2024-10-31 01:09:01-debug: [[Executor]] Module "cce:/internal/x/cc-fu/intersection-2d" loaded.
+2024-10-31 01:09:01-debug: [[Executor]] Module "cce:/internal/x/cc-fu/profiler" loaded.
+2024-10-31 01:09:01-debug: [[Executor]] Module "cce:/internal/x/cc-fu/geometry-renderer" loaded.
+2024-10-31 01:09:01-debug: [[Executor]] Module "cce:/internal/x/cc-fu/2d" loaded.
+2024-10-31 01:09:01-debug: [[Executor]] Module "cce:/internal/x/cc-fu/audio" loaded.
+2024-10-31 01:09:01-debug: [[Executor]] Module "cce:/internal/x/cc-fu/terrain" loaded.
+2024-10-31 01:09:01-debug: [[Executor]] Module "cce:/internal/x/cc-fu/webview" loaded.
+2024-10-31 01:09:01-debug: [[Executor]] Module "cce:/internal/x/cc-fu/tween" loaded.
+2024-10-31 01:09:01-debug: [[Executor]] Module "cce:/internal/x/cc-fu/xr" loaded.
+2024-10-31 01:09:01-debug: [[Executor]] Module "cce:/internal/x/cc-fu/video" loaded.
+2024-10-31 01:09:01-debug: [[Executor]] Module "cce:/internal/x/cc-fu/tiled-map" loaded.
+2024-10-31 01:09:01-debug: [[Executor]] Module "cce:/internal/x/cc-fu/dragon-bones" loaded.
+2024-10-31 01:09:01-debug: [[Executor]] Module "cce:/internal/x/cc-fu/custom-pipeline" loaded.
+2024-10-31 01:09:01-debug: [[Executor]] Module "pack:///chunks/d0/d0b282b9748ef7fc7d2e7bd647d71b0f7e84da53.js" loaded.
+2024-10-31 01:09:01-debug: [[Executor]] Module "cce:/internal/x/cc-fu/spine" loaded.
+2024-10-31 01:09:01-debug: [[Executor]] Module "pack:///chunks/d0/d0b282b9748ef7fc7d2e7bd647d71b0f7e84da53.js" loaded.
+2024-10-31 01:09:01-debug: Invalidating 'pack:///chunks/d0/d0b282b9748ef7fc7d2e7bd647d71b0f7e84da53.js'
+2024-10-31 01:09:01-debug: E:\lianlukeji\frontend\cocos\menghuanfarm\temp\programming\packer-driver\targets\editor\chunks\68\68dae8f28afcac858439ab8a6555829d6e2eeea0.js resolved to E:\lianlukeji\frontend\cocos\menghuanfarm\temp\programming\packer-driver\targets\editor\chunks\68\68dae8f28afcac858439ab8a6555829d6e2eeea0.js is not in module cache!
+2024-10-31 01:09:01-debug: [[Executor]] Module "pack:///chunks/68/68dae8f28afcac858439ab8a6555829d6e2eeea0.js" loaded.
+2024-10-31 01:09:01-debug: E:\lianlukeji\frontend\cocos\menghuanfarm\temp\programming\packer-driver\targets\editor\chunks\45\4585d44a0ad09ac97ab1d083b6be4c8e668fee17.js resolved to E:\lianlukeji\frontend\cocos\menghuanfarm\temp\programming\packer-driver\targets\editor\chunks\45\4585d44a0ad09ac97ab1d083b6be4c8e668fee17.js is not in module cache!
+2024-10-31 01:09:01-debug: [[Executor]] Module "pack:///chunks/45/4585d44a0ad09ac97ab1d083b6be4c8e668fee17.js" loaded.
+2024-10-31 01:09:01-debug: [[Executor]] Register AudioManager
+2024-10-31 01:09:01-debug: E:\lianlukeji\frontend\cocos\menghuanfarm\temp\programming\packer-driver\targets\editor\chunks\00\00fb00a3d09d59a2caf0a4c6a656b0768df7c940.js resolved to E:\lianlukeji\frontend\cocos\menghuanfarm\temp\programming\packer-driver\targets\editor\chunks\00\00fb00a3d09d59a2caf0a4c6a656b0768df7c940.js is not in module cache!
+2024-10-31 01:09:01-debug: E:\lianlukeji\frontend\cocos\menghuanfarm\temp\programming\packer-driver\targets\editor\chunks\84\84741ad843cea9a440c5d8c2d379669b6551400d.js resolved to E:\lianlukeji\frontend\cocos\menghuanfarm\temp\programming\packer-driver\targets\editor\chunks\84\84741ad843cea9a440c5d8c2d379669b6551400d.js is not in module cache!
+2024-10-31 01:09:01-debug: E:\lianlukeji\frontend\cocos\menghuanfarm\temp\programming\packer-driver\targets\editor\chunks\40\40841bcca050e87db8b878c42154ece44ed3e5ba.js resolved to E:\lianlukeji\frontend\cocos\menghuanfarm\temp\programming\packer-driver\targets\editor\chunks\40\40841bcca050e87db8b878c42154ece44ed3e5ba.js is not in module cache!
+2024-10-31 01:09:01-debug: [[Executor]] Module "pack:///chunks/4e/4ee8315e8f460a527be6fa778d5f4048b98265e1.js" loaded.
+2024-10-31 01:09:01-debug: E:\lianlukeji\frontend\cocos\menghuanfarm\temp\programming\packer-driver\targets\editor\chunks\4e\4ee8315e8f460a527be6fa778d5f4048b98265e1.js resolved to E:\lianlukeji\frontend\cocos\menghuanfarm\temp\programming\packer-driver\targets\editor\chunks\4e\4ee8315e8f460a527be6fa778d5f4048b98265e1.js is not in module cache!
+2024-10-31 01:09:01-debug: [[Executor]] Module "pack:///chunks/40/40841bcca050e87db8b878c42154ece44ed3e5ba.js" loaded.
+2024-10-31 01:09:01-debug: [[Executor]] Register circles
+2024-10-31 01:09:01-debug: [[Executor]] Module "pack:///chunks/84/84741ad843cea9a440c5d8c2d379669b6551400d.js" loaded.
+2024-10-31 01:09:01-debug: [[Executor]] Module "pack:///chunks/00/00fb00a3d09d59a2caf0a4c6a656b0768df7c940.js" loaded.
+2024-10-31 01:09:01-debug: E:\lianlukeji\frontend\cocos\menghuanfarm\temp\programming\packer-driver\targets\editor\chunks\6f\6f32fc724f2005aba45c2b9d3ca9852c2451b9b6.js resolved to E:\lianlukeji\frontend\cocos\menghuanfarm\temp\programming\packer-driver\targets\editor\chunks\6f\6f32fc724f2005aba45c2b9d3ca9852c2451b9b6.js is not in module cache!
+2024-10-31 01:09:01-debug: E:\lianlukeji\frontend\cocos\menghuanfarm\temp\programming\packer-driver\targets\editor\chunks\bd\bd2b48ecca795cd184de9b72bade57e0361ece74.js resolved to E:\lianlukeji\frontend\cocos\menghuanfarm\temp\programming\packer-driver\targets\editor\chunks\bd\bd2b48ecca795cd184de9b72bade57e0361ece74.js is not in module cache!
+2024-10-31 01:09:01-debug: [[Executor]] Module "pack:///chunks/6f/6f32fc724f2005aba45c2b9d3ca9852c2451b9b6.js" loaded.
+2024-10-31 01:09:01-debug: [[Executor]] Module "pack:///chunks/bd/bd2b48ecca795cd184de9b72bade57e0361ece74.js" loaded.
+2024-10-31 01:09:01-debug: [[Executor]] Register GenBag
+2024-10-31 01:09:01-debug: E:\lianlukeji\frontend\cocos\menghuanfarm\temp\programming\packer-driver\targets\editor\chunks\ae\ae69b84bff0384e0c679ba04c685a28bd8ca3343.js resolved to E:\lianlukeji\frontend\cocos\menghuanfarm\temp\programming\packer-driver\targets\editor\chunks\ae\ae69b84bff0384e0c679ba04c685a28bd8ca3343.js is not in module cache!
+2024-10-31 01:09:01-debug: [[Executor]] Register GenBlock
+2024-10-31 01:09:01-debug: [[Executor]] Module "pack:///chunks/ae/ae69b84bff0384e0c679ba04c685a28bd8ca3343.js" loaded.
+2024-10-31 01:09:01-debug: E:\lianlukeji\frontend\cocos\menghuanfarm\temp\programming\packer-driver\targets\editor\chunks\3c\3c02a178cd627d4fd64910d978c93fabe6f313be.js resolved to E:\lianlukeji\frontend\cocos\menghuanfarm\temp\programming\packer-driver\targets\editor\chunks\3c\3c02a178cd627d4fd64910d978c93fabe6f313be.js is not in module cache!
+2024-10-31 01:09:01-debug: [[Executor]] Register GenInfo
+2024-10-31 01:09:01-debug: [[Executor]] Module "pack:///chunks/3c/3c02a178cd627d4fd64910d978c93fabe6f313be.js" loaded.
+2024-10-31 01:09:01-debug: E:\lianlukeji\frontend\cocos\menghuanfarm\temp\programming\packer-driver\targets\editor\chunks\b0\b02df7dbd12a416e5ab2ccdb1f7fac565e85be68.js resolved to E:\lianlukeji\frontend\cocos\menghuanfarm\temp\programming\packer-driver\targets\editor\chunks\b0\b02df7dbd12a416e5ab2ccdb1f7fac565e85be68.js is not in module cache!
+2024-10-31 01:09:01-debug: E:\lianlukeji\frontend\cocos\menghuanfarm\temp\programming\packer-driver\targets\editor\chunks\57\57aa3a73746d22d6e6fea20d4c04eb5fca3e2f83.js resolved to E:\lianlukeji\frontend\cocos\menghuanfarm\temp\programming\packer-driver\targets\editor\chunks\57\57aa3a73746d22d6e6fea20d4c04eb5fca3e2f83.js is not in module cache!
+2024-10-31 01:09:01-debug: E:\lianlukeji\frontend\cocos\menghuanfarm\temp\programming\packer-driver\targets\editor\chunks\27\2701a48d14de7467228223bd6c79ee5ec393dff2.js resolved to E:\lianlukeji\frontend\cocos\menghuanfarm\temp\programming\packer-driver\targets\editor\chunks\27\2701a48d14de7467228223bd6c79ee5ec393dff2.js is not in module cache!
+2024-10-31 01:09:01-debug: [[Executor]] Register main
+2024-10-31 01:09:01-debug: [[Executor]] Register timer
+2024-10-31 01:09:01-debug: [[Executor]] Module "pack:///chunks/27/2701a48d14de7467228223bd6c79ee5ec393dff2.js" loaded.
+2024-10-31 01:09:01-debug: [[Executor]] Module "pack:///chunks/b0/b02df7dbd12a416e5ab2ccdb1f7fac565e85be68.js" loaded.
+2024-10-31 01:09:01-debug: [[Executor]] Register genPlant
+2024-10-31 01:09:01-debug: [[Executor]] Module "pack:///chunks/57/57aa3a73746d22d6e6fea20d4c04eb5fca3e2f83.js" loaded.
+2024-10-31 01:09:01-debug: E:\lianlukeji\frontend\cocos\menghuanfarm\temp\programming\packer-driver\targets\editor\chunks\a7\a77d21d1303f8e9e0be90060b9a1b34a32c4c60d.js resolved to E:\lianlukeji\frontend\cocos\menghuanfarm\temp\programming\packer-driver\targets\editor\chunks\a7\a77d21d1303f8e9e0be90060b9a1b34a32c4c60d.js is not in module cache!
+2024-10-31 01:09:01-debug: [[Executor]] Register GenShop
+2024-10-31 01:09:01-debug: [[Executor]] Module "pack:///chunks/a7/a77d21d1303f8e9e0be90060b9a1b34a32c4c60d.js" loaded.
+2024-10-31 01:09:01-debug: E:\lianlukeji\frontend\cocos\menghuanfarm\temp\programming\packer-driver\targets\editor\chunks\e9\e91872bed1ce02ef8c0b8a1bd97039426629c4c6.js resolved to E:\lianlukeji\frontend\cocos\menghuanfarm\temp\programming\packer-driver\targets\editor\chunks\e9\e91872bed1ce02ef8c0b8a1bd97039426629c4c6.js is not in module cache!
+2024-10-31 01:09:01-debug: [[Executor]] Module "pack:///chunks/e9/e91872bed1ce02ef8c0b8a1bd97039426629c4c6.js" loaded.
+2024-10-31 01:09:01-debug: E:\lianlukeji\frontend\cocos\menghuanfarm\temp\programming\packer-driver\targets\editor\chunks\cd\cdb3eb41f58b0773a35466a0ffdca226ff4c143c.js resolved to E:\lianlukeji\frontend\cocos\menghuanfarm\temp\programming\packer-driver\targets\editor\chunks\cd\cdb3eb41f58b0773a35466a0ffdca226ff4c143c.js is not in module cache!
+2024-10-31 01:09:01-debug: [[Executor]] Register DrawRoundedRect
+2024-10-31 01:09:01-debug: [[Executor]] Module "pack:///chunks/cd/cdb3eb41f58b0773a35466a0ffdca226ff4c143c.js" loaded.
+2024-10-31 01:09:01-debug: E:\lianlukeji\frontend\cocos\menghuanfarm\temp\programming\packer-driver\targets\editor\chunks\0d\0d5541f1fd3a71e0d0240c5e19547531a0a3f398.js resolved to E:\lianlukeji\frontend\cocos\menghuanfarm\temp\programming\packer-driver\targets\editor\chunks\0d\0d5541f1fd3a71e0d0240c5e19547531a0a3f398.js is not in module cache!
+2024-10-31 01:09:01-warn: The type of "scaleAction.isChild" must be CCBoolean, not Boolean.
+2024-10-31 01:09:01-debug: [[Executor]] Module "pack:///chunks/0d/0d5541f1fd3a71e0d0240c5e19547531a0a3f398.js" loaded.
+2024-10-31 01:09:01-debug: [[Executor]] Register scaleAction
+2024-10-31 01:09:01-debug: E:\lianlukeji\frontend\cocos\menghuanfarm\temp\programming\packer-driver\targets\editor\chunks\8d\8d1d8c6c32248b90683bf11c884a686bb510c189.js resolved to E:\lianlukeji\frontend\cocos\menghuanfarm\temp\programming\packer-driver\targets\editor\chunks\8d\8d1d8c6c32248b90683bf11c884a686bb510c189.js is not in module cache!
+2024-10-31 01:09:01-debug: [[Executor]] Module "pack:///chunks/8d/8d1d8c6c32248b90683bf11c884a686bb510c189.js" loaded.
+2024-10-31 01:09:01-debug: [[Executor]] Register SceneSwitcher
+2024-10-31 01:09:01-warn: The type of "SceneSwitcher.sceneName" must be CCString, not String.
+2024-10-31 01:09:01-debug: [[Executor]] Module "pack:///chunks/68/68dae8f28afcac858439ab8a6555829d6e2eeea0.js" loaded.
+2024-10-31 01:09:01-debug: // ---- build task Reload project scripts ---- (160ms)
+2024-10-31 01:09:01-debug: run build task Reload project scripts success in 160 ms √10%
+2024-10-31 01:09:01-debug: Process: heapTotal 217.87MB heapUsed 205.99MB rss 532.32MB
+2024-10-31 01:09:01-debug: // ---- build task Query asset bundle ----
+2024-10-31 01:09:01-debug: Query asset bundle start10%
+2024-10-31 01:09:01-debug: // ---- build task Query asset bundle ---- (16ms)
+2024-10-31 01:09:01-debug: run build task Query asset bundle success in 16 ms √11%
+2024-10-31 01:09:01-debug: Query and organize assets start11%
+2024-10-31 01:09:01-debug: // ---- build task Query and organize assets ----
+2024-10-31 01:09:01-debug: Process: heapTotal 217.87MB heapUsed 206.05MB rss 532.38MB
+2024-10-31 01:09:01-debug: Query preload assets from cc.config.json: 60f7195c-ec2a-45eb-ba94-8955f60e81d0,1c02ae6f-4492-4915-b8f8-7492a3b1e4cd,810e96e4-e456-4468-9b59-f4e8f39732c0,efe8e2a3-eace-427b-b4f1-cb8a937ec77d,e9aa9a3e-5b2b-4ac7-a2c7-073de2b2b24f,8bbdbcdd-5cd4-4100-b6d5-b7c9625b6107,50f4348b-c883-4e2f-8f11-ce233b859fa1,fda095cb-831d-4601-ad94-846013963de8,f92806d7-1768-443f-afe8-12bcde84d0f0,dd3a144d-ab7f-41f0-82b8-2e43a090d496,f0416e68-0200-4b77-a926-4f9d16e494da,ff9be190-20a4-4e48-b68c-76e3c7cff085,970b0598-bcb0-4714-91fb-2e81440dccd8,bcd64cc6-2dd9-43f6-abbe-66318d332032,d930590d-bb92-4cc8-8bd1-23cd027f9edf,a3cd009f-0ab0-420d-9278-b9fdab939bbc,9361fd90-ba52-4f84-aa93-6e878fd576ca,871c3b6c-7379-419d-bda3-794b239ab90d,c27215d8-6835-4b68-bfbb-bdeac6100c04,b5d6115f-0370-4d7c-aad3-c194cc71cf98
+2024-10-31 01:09:01-debug: Number of scenes: 1
+2024-10-31 01:09:01-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mypack/title"Missing uuid: "d4d45a6f-5422-4b19-b144-e90f58d514b6@f9941"
+2024-10-31 01:09:01-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mypack/items/fanqiezz_base/bottom"Missing uuid: "51057c3f-a341-45f0-9810-184b05381d26@f9941"
+2024-10-31 01:09:01-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mypack/items/fanqiezz_base/txtBox/icon"Missing uuid: "e02ed89c-cc09-4061-9af3-2312d2cf8b71@f9941"
+2024-10-31 01:09:01-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mypack/items/fanqiezz_base/pro"Missing uuid: "0c20fc1b-fa26-4858-8791-9796cec92f92@f9941"
+2024-10-31 01:09:01-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mypack/items/pingguozz_base/bottom"Missing uuid: "51057c3f-a341-45f0-9810-184b05381d26@f9941"
+2024-10-31 01:09:01-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mypack/items/pingguozz_base/txtBox/icon"Missing uuid: "e02ed89c-cc09-4061-9af3-2312d2cf8b71@f9941"
+2024-10-31 01:09:01-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mypack/items/pingguozz_base/txtBox"Missing uuid: "0a2994fb-c6d2-4193-b1ec-a9a95d32d582@f9941"
+2024-10-31 01:09:01-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mypack/items/pingguozz_base/pro"Missing uuid: "1596f979-8b2f-4b21-87ff-bfae6750a9d3@f9941"
+2024-10-31 01:09:01-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mypack/items/fanqiezz_base/txtBox"Missing uuid: "0a2994fb-c6d2-4193-b1ec-a9a95d32d582@f9941"
+2024-10-31 01:09:01-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mypack/items/qiezizz_base/pro"Missing uuid: "87952bd7-47ba-49ea-a5b3-4759e401b6d4@f9941"
+2024-10-31 01:09:01-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mypack/items/qiezizz_base/txtBox"Missing uuid: "0a2994fb-c6d2-4193-b1ec-a9a95d32d582@f9941"
+2024-10-31 01:09:01-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mypack/items/huluobozz_base/bottom"Missing uuid: "51057c3f-a341-45f0-9810-184b05381d26@f9941"
+2024-10-31 01:09:01-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mypack/items/qiezizz_base/txtBox/icon"Missing uuid: "e02ed89c-cc09-4061-9af3-2312d2cf8b71@f9941"
+2024-10-31 01:09:01-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mypack/items/huluobozz_base/txtBox/icon"Missing uuid: "e02ed89c-cc09-4061-9af3-2312d2cf8b71@f9941"
+2024-10-31 01:09:01-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mypack/items/huluobozz_base/txtBox"Missing uuid: "0a2994fb-c6d2-4193-b1ec-a9a95d32d582@f9941"
+2024-10-31 01:09:01-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/store/title"Missing uuid: "d4d45a6f-5422-4b19-b144-e90f58d514b6@f9941"
+2024-10-31 01:09:01-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/store/items/fanqiezz/bottom"Missing uuid: "51057c3f-a341-45f0-9810-184b05381d26@f9941"
+2024-10-31 01:09:01-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/store/items/fanqiezz/pro"Missing uuid: "0c20fc1b-fa26-4858-8791-9796cec92f92@f9941"
+2024-10-31 01:09:01-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mypack/items/qiezizz_base/bottom"Missing uuid: "51057c3f-a341-45f0-9810-184b05381d26@f9941"
+2024-10-31 01:09:01-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mypack/items/huluobozz_base/pro"Missing uuid: "9d2870bc-7d23-4d90-b796-24dddc4c16d1@f9941"
+2024-10-31 01:09:01-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/store/items/fanqiezz/txtBox/icon"Missing uuid: "e02ed89c-cc09-4061-9af3-2312d2cf8b71@f9941"
+2024-10-31 01:09:01-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/store/items/pingguozz/bottom"Missing uuid: "51057c3f-a341-45f0-9810-184b05381d26@f9941"
+2024-10-31 01:09:01-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/store/items/pingguozz/txtBox/icon"Missing uuid: "e02ed89c-cc09-4061-9af3-2312d2cf8b71@f9941"
+2024-10-31 01:09:01-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/store/items/pingguozz/txtBox"Missing uuid: "0a2994fb-c6d2-4193-b1ec-a9a95d32d582@f9941"
+2024-10-31 01:09:01-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/store/items/fanqiezz/txtBox"Missing uuid: "0a2994fb-c6d2-4193-b1ec-a9a95d32d582@f9941"
+2024-10-31 01:09:01-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/store/items/qiezizz/pro"Missing uuid: "87952bd7-47ba-49ea-a5b3-4759e401b6d4@f9941"
+2024-10-31 01:09:01-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/store/items/qiezizz/txtBox/icon"Missing uuid: "e02ed89c-cc09-4061-9af3-2312d2cf8b71@f9941"
+2024-10-31 01:09:01-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/store/items/qiezizz/txtBox"Missing uuid: "0a2994fb-c6d2-4193-b1ec-a9a95d32d582@f9941"
+2024-10-31 01:09:01-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/store/items/qiezizz/bottom"Missing uuid: "51057c3f-a341-45f0-9810-184b05381d26@f9941"
+2024-10-31 01:09:01-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/store/items/huluobozz/bottom"Missing uuid: "51057c3f-a341-45f0-9810-184b05381d26@f9941"
+2024-10-31 01:09:01-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/store/items/huluobozz/txtBox/icon"Missing uuid: "e02ed89c-cc09-4061-9af3-2312d2cf8b71@f9941"
+2024-10-31 01:09:01-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/store/items/huluobozz/txtBox"Missing uuid: "0a2994fb-c6d2-4193-b1ec-a9a95d32d582@f9941"
+2024-10-31 01:09:01-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/store/items/huluobozz/pro"Missing uuid: "9d2870bc-7d23-4d90-b796-24dddc4c16d1@f9941"
+2024-10-31 01:09:01-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/store/items/pingguozz/pro"Missing uuid: "1596f979-8b2f-4b21-87ff-bfae6750a9d3@f9941"
+2024-10-31 01:09:01-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/paihang/items/box/txtBox/pro"Missing uuid: "0c20fc1b-fa26-4858-8791-9796cec92f92@f9941"
+2024-10-31 01:09:01-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/paihang/items/box/txtBox/top"Missing uuid: "5f2902d9-b2b0-43e2-8dad-f95e60a89318@f9941"
+2024-10-31 01:09:01-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/paihang/items/box/txtBox/icon"Missing uuid: "42c066de-15a2-4aab-8c98-1111848639ab@f9941"
+2024-10-31 01:09:01-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/paihang/items/box/txtBox"Missing uuid: "0a2994fb-c6d2-4193-b1ec-a9a95d32d582@f9941"
+2024-10-31 01:09:01-warn: The SpriteFrame used by component "cc.Button" is missing. Detailed information:Node path: "MainCanvas/popBox/paihang/sharebtn"Missing uuid: "874a12c0-9d84-4805-b1d3-d9e0a3291912@f9941"
+2024-10-31 01:09:01-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/paihang/title"Missing uuid: "d4d45a6f-5422-4b19-b144-e90f58d514b6@f9941"
+2024-10-31 01:09:01-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/paihang/sharebtn"Missing uuid: "874a12c0-9d84-4805-b1d3-d9e0a3291912@f9941"
+2024-10-31 01:09:01-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mysalepack/items/fanqie_base/bottom"Missing uuid: "51057c3f-a341-45f0-9810-184b05381d26@f9941"
+2024-10-31 01:09:01-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mysalepack/items/fanqie_base/txtBox/icon"Missing uuid: "e02ed89c-cc09-4061-9af3-2312d2cf8b71@f9941"
+2024-10-31 01:09:01-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mysalepack/items/fanqie_base/txtBox"Missing uuid: "0a2994fb-c6d2-4193-b1ec-a9a95d32d582@f9941"
+2024-10-31 01:09:01-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mysalepack/items/pingguo_base/bottom"Missing uuid: "51057c3f-a341-45f0-9810-184b05381d26@f9941"
+2024-10-31 01:09:01-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mysalepack/title"Missing uuid: "d4d45a6f-5422-4b19-b144-e90f58d514b6@f9941"
+2024-10-31 01:09:01-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mysalepack/items/fanqie_base/pro"Missing uuid: "a5d5767a-7e8e-48de-a3b7-535f1fb21956@f9941"
+2024-10-31 01:09:01-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mysalepack/items/pingguo_base/txtBox/icon"Missing uuid: "e02ed89c-cc09-4061-9af3-2312d2cf8b71@f9941"
+2024-10-31 01:09:01-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mysalepack/items/qiezi_base/bottom"Missing uuid: "51057c3f-a341-45f0-9810-184b05381d26@f9941"
+2024-10-31 01:09:01-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mysalepack/items/pingguo_base/txtBox"Missing uuid: "0a2994fb-c6d2-4193-b1ec-a9a95d32d582@f9941"
+2024-10-31 01:09:01-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mysalepack/items/qiezi_base/pro"Missing uuid: "44c42f64-381f-4214-acb8-f44123965e8a@f9941"
+2024-10-31 01:09:01-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mysalepack/items/qiezi_base/txtBox/icon"Missing uuid: "e02ed89c-cc09-4061-9af3-2312d2cf8b71@f9941"
+2024-10-31 01:09:01-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mysalepack/items/huluobo_base/bottom"Missing uuid: "51057c3f-a341-45f0-9810-184b05381d26@f9941"
+2024-10-31 01:09:01-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mysalepack/items/huluobo_base/pro"Missing uuid: "e89b6cf7-b760-4cb5-81e9-452fd2ab5251@f9941"
+2024-10-31 01:09:01-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mysalepack/items/huluobo_base/txtBox/icon"Missing uuid: "e02ed89c-cc09-4061-9af3-2312d2cf8b71@f9941"
+2024-10-31 01:09:01-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mysalepack/items/qiezi_base/txtBox"Missing uuid: "0a2994fb-c6d2-4193-b1ec-a9a95d32d582@f9941"
+2024-10-31 01:09:01-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mysalepack/items/huluobo_base/txtBox"Missing uuid: "0a2994fb-c6d2-4193-b1ec-a9a95d32d582@f9941"
+2024-10-31 01:09:01-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mysalepack/items/pingguo_base/pro"Missing uuid: "672e10a5-30cd-421b-80ac-893de921c47e@f9941"
+2024-10-31 01:09:01-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/msgBox/msgBg"Missing uuid: "d4d45a6f-5422-4b19-b144-e90f58d514b6@f9941"
+2024-10-31 01:09:01-debug: Number of assets: 253
+2024-10-31 01:09:01-debug: Number of asset bundle: 3
+2024-10-31 01:09:01-debug: // ---- build task Query and organize assets ---- (301ms)
+2024-10-31 01:09:01-debug: run build task Query and organize assets success in 301 ms √13%
+2024-10-31 01:09:01-debug: // ---- build task Organize scripts ----
+2024-10-31 01:09:01-debug: Process: heapTotal 215.75MB heapUsed 205.23MB rss 523.45MB
+2024-10-31 01:09:01-debug: sort script group...
+2024-10-31 01:09:01-debug: Organize scripts start13%
+2024-10-31 01:09:01-debug: // ---- build task Organize scripts ---- (1ms)
+2024-10-31 01:09:01-debug: run build task Organize scripts success in 1 ms √14%
+2024-10-31 01:09:01-debug: // ---- build task Organize texture compression tasks ----
+2024-10-31 01:09:01-debug: Organize texture compression tasks start14%
+2024-10-31 01:09:01-debug: Process: heapTotal 215.75MB heapUsed 205.30MB rss 523.48MB
+2024-10-31 01:09:01-debug: Number of image-compress task: 0
+2024-10-31 01:09:01-debug: // ---- build task Organize texture compression tasks ---- (70ms)
+2024-10-31 01:09:01-debug: run build task Organize texture compression tasks success in 70 ms √15%
+2024-10-31 01:09:01-debug: // ---- build task Group json ----
+2024-10-31 01:09:01-debug: Process: heapTotal 216.75MB heapUsed 203.30MB rss 524.16MB
+2024-10-31 01:09:01-debug: Group json start15%
+2024-10-31 01:09:01-debug: Number of json group: 70
+2024-10-31 01:09:01-debug: // ---- build task Group json ---- (2ms)
+2024-10-31 01:09:01-debug: run build task Group json success in 2 ms √16%
+2024-10-31 01:09:01-debug: Process: heapTotal 216.75MB heapUsed 203.74MB rss 524.17MB
+2024-10-31 01:09:01-debug: Merging Texture2D json start16%
+2024-10-31 01:09:01-debug: // ---- build task Merging Texture2D json ----
+2024-10-31 01:09:01-debug: // ---- build task Merging Texture2D json ---- (5ms)
+2024-10-31 01:09:01-debug: run build task Merging Texture2D json success in 5 ms √18%
+2024-10-31 01:09:01-debug: Process: heapTotal 216.75MB heapUsed 203.88MB rss 524.44MB
+2024-10-31 01:09:01-debug: Sort import-map.json start18%
+2024-10-31 01:09:01-debug: // ---- build task Sort import-map.json ----
+2024-10-31 01:09:01-debug: run build task Sort import-map.json success in 0 ms √19%
+2024-10-31 01:09:01-debug: web-mobile:(onBeforeBuildAssets) start...19%
+2024-10-31 01:09:01-debug: Process: heapTotal 216.75MB heapUsed 203.92MB rss 524.34MB
+2024-10-31 01:09:01-debug: // ---- build task web-mobile：onBeforeBuildAssets ----
+2024-10-31 01:09:02-debug: // ---- build task web-mobile：onBeforeBuildAssets ---- (1ms)
+2024-10-31 01:09:02-debug: Process: heapTotal 216.75MB heapUsed 203.98MB rss 524.34MB
+2024-10-31 01:09:02-debug: // ---- build task localization-editor：onBeforeBuildAssets ----
+2024-10-31 01:09:02-debug: web-mobile:(onBeforeBuildAssets) in 1 ms21%
+2024-10-31 01:09:02-debug: localization-editor:(onBeforeBuildAssets) start...21%
+2024-10-31 01:09:02-debug: // ---- build task localization-editor：onBeforeBuildAssets ---- (14ms)
+2024-10-31 01:09:02-debug: localization-editor:(onBeforeBuildAssets) in 14 ms23%
+2024-10-31 01:09:02-debug: Process: heapTotal 216.75MB heapUsed 204.03MB rss 524.34MB
+2024-10-31 01:09:02-debug: Start collect pack info
+2024-10-31 01:09:02-debug: // ---- build task Build auto-atlas ----
+2024-10-31 01:09:02-debug: Build auto-atlas start23%
+2024-10-31 01:09:02-debug: // ---- build task Build auto-atlas ---- (1ms)
+2024-10-31 01:09:02-debug: run build task Build auto-atlas success in 1 ms √30%
+2024-10-31 01:09:02-debug: Process: heapTotal 216.75MB heapUsed 204.09MB rss 524.34MB
+2024-10-31 01:09:02-debug: Compress Image start30%
+2024-10-31 01:09:02-debug: // ---- build task Compress Image ----
+2024-10-31 01:09:02-debug: skip compress texture
+2024-10-31 01:09:02-debug: // ---- build task Compress Image ---- (1ms)
+2024-10-31 01:09:02-debug: run build task Compress Image success in 1 ms √37%
+2024-10-31 01:09:02-debug: Process: heapTotal 216.75MB heapUsed 204.14MB rss 524.34MB
+2024-10-31 01:09:02-debug: // ---- build task Copy the resource ----
+2024-10-31 01:09:02-debug: Copy the resource start37%
+2024-10-31 01:09:02-debug: Asset Bundle(internal) handle assets: 20
+2024-10-31 01:09:02-debug: Asset Bundle(resources) handle assets: 219
+2024-10-31 01:09:02-debug: Asset Bundle(main) handle assets: 45
+2024-10-31 01:09:02-debug: // ---- build task Copy the resource ---- (67ms)
+2024-10-31 01:09:02-debug: run build task Copy the resource success in 67 ms √43%
+2024-10-31 01:09:02-debug: Process: heapTotal 217.00MB heapUsed 203.58MB rss 526.75MB
+2024-10-31 01:09:02-debug: Build the grouped json and scatter files to the specified location start43%
+2024-10-31 01:09:02-debug: // ---- build task Build the grouped json and scatter files to the specified location ----
+2024-10-31 01:09:02-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mypack/title"Missing uuid: "d4d45a6f-5422-4b19-b144-e90f58d514b6@f9941"
+2024-10-31 01:09:02-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mypack/items/fanqiezz_base/bottom"Missing uuid: "51057c3f-a341-45f0-9810-184b05381d26@f9941"
+2024-10-31 01:09:02-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mypack/items/fanqiezz_base/txtBox"Missing uuid: "0a2994fb-c6d2-4193-b1ec-a9a95d32d582@f9941"
+2024-10-31 01:09:02-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mypack/items/pingguozz_base/bottom"Missing uuid: "51057c3f-a341-45f0-9810-184b05381d26@f9941"
+2024-10-31 01:09:02-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mypack/items/fanqiezz_base/txtBox/icon"Missing uuid: "e02ed89c-cc09-4061-9af3-2312d2cf8b71@f9941"
+2024-10-31 01:09:02-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mypack/items/pingguozz_base/pro"Missing uuid: "1596f979-8b2f-4b21-87ff-bfae6750a9d3@f9941"
+2024-10-31 01:09:02-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mypack/items/pingguozz_base/txtBox/icon"Missing uuid: "e02ed89c-cc09-4061-9af3-2312d2cf8b71@f9941"
+2024-10-31 01:09:02-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mypack/items/qiezizz_base/pro"Missing uuid: "87952bd7-47ba-49ea-a5b3-4759e401b6d4@f9941"
+2024-10-31 01:09:02-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mypack/items/qiezizz_base/bottom"Missing uuid: "51057c3f-a341-45f0-9810-184b05381d26@f9941"
+2024-10-31 01:09:02-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mypack/items/pingguozz_base/txtBox"Missing uuid: "0a2994fb-c6d2-4193-b1ec-a9a95d32d582@f9941"
+2024-10-31 01:09:02-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mypack/items/qiezizz_base/txtBox"Missing uuid: "0a2994fb-c6d2-4193-b1ec-a9a95d32d582@f9941"
+2024-10-31 01:09:02-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mypack/items/qiezizz_base/txtBox/icon"Missing uuid: "e02ed89c-cc09-4061-9af3-2312d2cf8b71@f9941"
+2024-10-31 01:09:02-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mypack/items/huluobozz_base/pro"Missing uuid: "9d2870bc-7d23-4d90-b796-24dddc4c16d1@f9941"
+2024-10-31 01:09:02-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mypack/items/huluobozz_base/bottom"Missing uuid: "51057c3f-a341-45f0-9810-184b05381d26@f9941"
+2024-10-31 01:09:02-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mypack/items/huluobozz_base/txtBox/icon"Missing uuid: "e02ed89c-cc09-4061-9af3-2312d2cf8b71@f9941"
+2024-10-31 01:09:02-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/store/title"Missing uuid: "d4d45a6f-5422-4b19-b144-e90f58d514b6@f9941"
+2024-10-31 01:09:02-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mypack/items/huluobozz_base/txtBox"Missing uuid: "0a2994fb-c6d2-4193-b1ec-a9a95d32d582@f9941"
+2024-10-31 01:09:02-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/store/items/fanqiezz/txtBox/icon"Missing uuid: "e02ed89c-cc09-4061-9af3-2312d2cf8b71@f9941"
+2024-10-31 01:09:02-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/store/items/fanqiezz/pro"Missing uuid: "0c20fc1b-fa26-4858-8791-9796cec92f92@f9941"
+2024-10-31 01:09:02-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/store/items/fanqiezz/bottom"Missing uuid: "51057c3f-a341-45f0-9810-184b05381d26@f9941"
+2024-10-31 01:09:02-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mypack/items/fanqiezz_base/pro"Missing uuid: "0c20fc1b-fa26-4858-8791-9796cec92f92@f9941"
+2024-10-31 01:09:02-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/store/items/pingguozz/bottom"Missing uuid: "51057c3f-a341-45f0-9810-184b05381d26@f9941"
+2024-10-31 01:09:02-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/store/items/pingguozz/pro"Missing uuid: "1596f979-8b2f-4b21-87ff-bfae6750a9d3@f9941"
+2024-10-31 01:09:02-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/store/items/pingguozz/txtBox/icon"Missing uuid: "e02ed89c-cc09-4061-9af3-2312d2cf8b71@f9941"
+2024-10-31 01:09:02-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/store/items/fanqiezz/txtBox"Missing uuid: "0a2994fb-c6d2-4193-b1ec-a9a95d32d582@f9941"
+2024-10-31 01:09:02-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/store/items/pingguozz/txtBox"Missing uuid: "0a2994fb-c6d2-4193-b1ec-a9a95d32d582@f9941"
+2024-10-31 01:09:02-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/store/items/qiezizz/bottom"Missing uuid: "51057c3f-a341-45f0-9810-184b05381d26@f9941"
+2024-10-31 01:09:02-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/store/items/qiezizz/txtBox/icon"Missing uuid: "e02ed89c-cc09-4061-9af3-2312d2cf8b71@f9941"
+2024-10-31 01:09:02-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/store/items/qiezizz/pro"Missing uuid: "87952bd7-47ba-49ea-a5b3-4759e401b6d4@f9941"
+2024-10-31 01:09:02-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/store/items/qiezizz/txtBox"Missing uuid: "0a2994fb-c6d2-4193-b1ec-a9a95d32d582@f9941"
+2024-10-31 01:09:02-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/store/items/huluobozz/bottom"Missing uuid: "51057c3f-a341-45f0-9810-184b05381d26@f9941"
+2024-10-31 01:09:02-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/store/items/huluobozz/pro"Missing uuid: "9d2870bc-7d23-4d90-b796-24dddc4c16d1@f9941"
+2024-10-31 01:09:02-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/store/items/huluobozz/txtBox/icon"Missing uuid: "e02ed89c-cc09-4061-9af3-2312d2cf8b71@f9941"
+2024-10-31 01:09:02-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/store/items/huluobozz/txtBox"Missing uuid: "0a2994fb-c6d2-4193-b1ec-a9a95d32d582@f9941"
+2024-10-31 01:09:02-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/paihang/title"Missing uuid: "d4d45a6f-5422-4b19-b144-e90f58d514b6@f9941"
+2024-10-31 01:09:02-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/paihang/items/box/txtBox/pro"Missing uuid: "0c20fc1b-fa26-4858-8791-9796cec92f92@f9941"
+2024-10-31 01:09:02-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/paihang/items/box/txtBox/icon"Missing uuid: "42c066de-15a2-4aab-8c98-1111848639ab@f9941"
+2024-10-31 01:09:02-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/paihang/items/box/txtBox/top"Missing uuid: "5f2902d9-b2b0-43e2-8dad-f95e60a89318@f9941"
+2024-10-31 01:09:02-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/paihang/items/box/txtBox"Missing uuid: "0a2994fb-c6d2-4193-b1ec-a9a95d32d582@f9941"
+2024-10-31 01:09:02-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/paihang/sharebtn"Missing uuid: "874a12c0-9d84-4805-b1d3-d9e0a3291912@f9941"
+2024-10-31 01:09:02-warn: The SpriteFrame used by component "cc.Button" is missing. Detailed information:Node path: "MainCanvas/popBox/paihang/sharebtn"Missing uuid: "874a12c0-9d84-4805-b1d3-d9e0a3291912@f9941"
+2024-10-31 01:09:02-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mysalepack/title"Missing uuid: "d4d45a6f-5422-4b19-b144-e90f58d514b6@f9941"
+2024-10-31 01:09:02-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mysalepack/items/fanqie_base/bottom"Missing uuid: "51057c3f-a341-45f0-9810-184b05381d26@f9941"
+2024-10-31 01:09:02-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mysalepack/items/fanqie_base/pro"Missing uuid: "a5d5767a-7e8e-48de-a3b7-535f1fb21956@f9941"
+2024-10-31 01:09:02-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mysalepack/items/fanqie_base/txtBox/icon"Missing uuid: "e02ed89c-cc09-4061-9af3-2312d2cf8b71@f9941"
+2024-10-31 01:09:02-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mysalepack/items/fanqie_base/txtBox"Missing uuid: "0a2994fb-c6d2-4193-b1ec-a9a95d32d582@f9941"
+2024-10-31 01:09:02-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mysalepack/items/pingguo_base/bottom"Missing uuid: "51057c3f-a341-45f0-9810-184b05381d26@f9941"
+2024-10-31 01:09:02-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mysalepack/items/pingguo_base/txtBox/icon"Missing uuid: "e02ed89c-cc09-4061-9af3-2312d2cf8b71@f9941"
+2024-10-31 01:09:02-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mysalepack/items/pingguo_base/pro"Missing uuid: "672e10a5-30cd-421b-80ac-893de921c47e@f9941"
+2024-10-31 01:09:02-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mysalepack/items/pingguo_base/txtBox"Missing uuid: "0a2994fb-c6d2-4193-b1ec-a9a95d32d582@f9941"
+2024-10-31 01:09:02-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mysalepack/items/qiezi_base/bottom"Missing uuid: "51057c3f-a341-45f0-9810-184b05381d26@f9941"
+2024-10-31 01:09:02-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mysalepack/items/qiezi_base/pro"Missing uuid: "44c42f64-381f-4214-acb8-f44123965e8a@f9941"
+2024-10-31 01:09:02-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mysalepack/items/qiezi_base/txtBox/icon"Missing uuid: "e02ed89c-cc09-4061-9af3-2312d2cf8b71@f9941"
+2024-10-31 01:09:02-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mysalepack/items/qiezi_base/txtBox"Missing uuid: "0a2994fb-c6d2-4193-b1ec-a9a95d32d582@f9941"
+2024-10-31 01:09:02-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mysalepack/items/huluobo_base/bottom"Missing uuid: "51057c3f-a341-45f0-9810-184b05381d26@f9941"
+2024-10-31 01:09:02-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mysalepack/items/huluobo_base/pro"Missing uuid: "e89b6cf7-b760-4cb5-81e9-452fd2ab5251@f9941"
+2024-10-31 01:09:02-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mysalepack/items/huluobo_base/txtBox/icon"Missing uuid: "e02ed89c-cc09-4061-9af3-2312d2cf8b71@f9941"
+2024-10-31 01:09:02-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mysalepack/items/huluobo_base/txtBox"Missing uuid: "0a2994fb-c6d2-4193-b1ec-a9a95d32d582@f9941"
+2024-10-31 01:09:02-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/msgBox/msgBg"Missing uuid: "d4d45a6f-5422-4b19-b144-e90f58d514b6@f9941"
+2024-10-31 01:09:02-debug: // ---- build task Build the grouped json and scatter files to the specified location ---- (581ms)
+2024-10-31 01:09:02-debug: run build task Build the grouped json and scatter files to the specified location success in 581 ms √50%
+2024-10-31 01:09:02-debug: Compress zip bundle start50%
+2024-10-31 01:09:02-debug: // ---- build task Compress zip bundle ----
+2024-10-31 01:09:02-debug: Process: heapTotal 228.14MB heapUsed 210.17MB rss 531.52MB
+2024-10-31 01:09:02-debug: // ---- build task Compress zip bundle ---- (1ms)
+2024-10-31 01:09:02-debug: run build task Compress zip bundle success in 1 ms √57%
+2024-10-31 01:09:02-debug: // ---- build task Build script ----
+2024-10-31 01:09:02-debug: Process: heapTotal 228.14MB heapUsed 210.22MB rss 531.57MB
+2024-10-31 01:09:02-debug: Build script start57%
+2024-10-31 01:09:02-warn: Browserslist: caniuse-lite is outdated. Please run:npx browserslist@latest --update-db
+2024-10-31 01:09:03-warn: Browserslist: caniuse-lite is outdated. Please run:npx browserslist@latest --update-dbWhy you should do it regularly:https://github.com/browserslist/browserslist#browsers-data-updating
+2024-10-31 01:09:19-debug: Build project script start...57%
+2024-10-31 01:09:19-debug: Process: heapTotal 221.77MB heapUsed 214.27MB rss 511.74MB
+2024-10-31 01:09:19-log: Run build task(build-script) in child, see: chrome://inspect/#devices
+2024-10-31 01:09:21-log: [build-script]enter sub process 47460, D:\cocos-dashboard-editors\Creator\3.6.1\CocosCreator.exe,D:\cocos-dashboard-editors\Creator\3.6.1\resources\app.asar\builtin\builder\static\sub-process-index
+2024-10-31 01:09:26-warn: [build-script][[Build.Script.Rollup]] Circular dependency: file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/genPlant.ts -> file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/main.ts -> file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/genPlant.ts
+2024-10-31 01:09:26-warn: [build-script]Browserslist: caniuse-lite is outdated. Please run:npx browserslist@latest --update-dbWhy you should do it regularly:https://github.com/browserslist/browserslist#browsers-data-updating
+2024-10-31 01:09:32-debug: excute-script over with build-script 12341ms
+2024-10-31 01:09:32-debug: Copy externalScripts success!
+2024-10-31 01:09:32-debug: Build project script in (12368 ms) √57%
+2024-10-31 01:09:32-debug: Build engine start...57%
+2024-10-31 01:09:32-debug: Process: heapTotal 222.77MB heapUsed 213.95MB rss 511.95MB
+2024-10-31 01:09:32-debug: Use cache engine: {link(C:\Users\ADMINI~1\AppData\Local\Temp\CocosCreator\3.6.1\builder\engine\fde329c401c641771bff368eaccc979a)}
+2024-10-31 01:09:32-debug: {"debug":false,"sourceMaps":false,"includeModules":["2d","animation","audio","base","dragon-bones","gfx-webgl","gfx-webgl2","intersection-2d","marionette","particle-2d","physics-2d-box2d","profiler","skeletal-animation","spine","tiled-map","tween","ui","video","webview","xr"],"engineVersion":"3.6.1","platform":"HTML5","md5Map":[],"engineName":"cocos-js","useCache":true,"split":false,"ammoJsWasm":"fallback","assetURLFormat":"runtime-resolved","flags":{"DEBUG":false},"entry":"D:\\cocos-dashboard-editors\\Creator\\3.6.1\\resources\\resources\\3d\\engine"}
+2024-10-31 01:09:32-debug: Build engine in (138 ms) √57%
+2024-10-31 01:09:32-debug: // ---- build task Build script ---- (29749ms)
+2024-10-31 01:09:32-debug: run build task Build script success in 29749 ms √63%
+2024-10-31 01:09:32-debug: Process: heapTotal 221.77MB heapUsed 214.62MB rss 511.59MB
+2024-10-31 01:09:32-debug: // ---- build task Add md5 suffix to assets ----
+2024-10-31 01:09:32-debug: Add md5 suffix to assets start63%
+2024-10-31 01:09:32-debug: // ---- build task Add md5 suffix to assets ---- (1ms)
+2024-10-31 01:09:32-debug: run build task Add md5 suffix to assets success in 1 ms √73%
+2024-10-31 01:09:32-debug: Process: heapTotal 221.77MB heapUsed 214.67MB rss 511.63MB
+2024-10-31 01:09:32-debug: Init settings and config start73%
+2024-10-31 01:09:32-debug: // ---- build task Init settings and config ----
+2024-10-31 01:09:32-debug: run build task Init settings and config success in 0 ms √74%
+2024-10-31 01:09:32-debug: // ---- build task builder.tasks.settings.macro ----
+2024-10-31 01:09:32-debug: builder.tasks.settings.macro does not defined in i18n
+2024-10-31 01:09:32-debug: builder.tasks.settings.macro start74%
+2024-10-31 01:09:32-debug: Process: heapTotal 221.77MB heapUsed 214.72MB rss 511.69MB
+2024-10-31 01:09:32-debug: // ---- build task builder.tasks.settings.macro ---- (13ms)
+2024-10-31 01:09:32-debug: run build task builder.tasks.settings.macro success in 13 ms √74%
+2024-10-31 01:09:32-debug: Sort some build options to settings.json start74%
+2024-10-31 01:09:32-debug: // ---- build task Sort some build options to settings.json ----
+2024-10-31 01:09:32-debug: Process: heapTotal 221.77MB heapUsed 214.77MB rss 511.75MB
+2024-10-31 01:09:32-error: Error: ENOENT: no such file or directory, open 'C:\Users\Administrator\Desktop\1d069728-e5a1-4428-8654-4deea60099b1.gif'    at Object.openSync (fs.js:476:3)    at Object.func [as openSync] (electron/js2c/asar_bundle.js:5:1846)    at readFileSync (fs.js:377:35)    at e.readFileSync (electron/js2c/asar_bundle.js:5:8872)    at formatSplashScreen (D:\cocos-dashboard-editors\Creator\3.6.1\resources\app.asar\builtin\builder\dist\worker\builder\setting-task\options.ccc:1:1427)    at BuildTask.handle (D:\cocos-dashboard-editors\Creator\3.6.1\resources\app.asar\builtin\builder\dist\worker\builder\setting-task\options.ccc:1:1010)    at BuildTask.runBuildTask (D:\cocos-dashboard-editors\Creator\3.6.1\resources\app.asar\builtin\builder\dist\worker\builder\index.ccc:1:7774)    at BuildTask.build (D:\cocos-dashboard-editors\Creator\3.6.1\resources\app.asar\builtin\builder\dist\worker\builder\index.ccc:1:3648)    at Ipc.<anonymous> (D:\cocos-dashboard-editors\Creator\3.6.1\resources\app.asar\builtin\builder\dist\worker\index.ccc:1:4492)
+2024-10-31 01:09:32-error: Copy screen image failed, please check whether the splash screen configuration data is normal, splashScreen: {"url":"C:\\Users\\Administrator\\Desktop\\1d069728-e5a1-4428-8654-4deea60099b1.gif","displayRatio":0,"totalTime":0,"effect":"","clearColor":{"x":0,"y":0,"z":0,"w":0},"displayWatermark":false}
+2024-10-31 01:09:32-debug: // ---- build task Sort some build options to settings.json ---- (18ms)
+2024-10-31 01:09:32-debug: run build task Sort some build options to settings.json success in 18 ms √75%
+2024-10-31 01:09:32-debug: // ---- build task custom joint texture layouts ----
+2024-10-31 01:09:32-debug: Process: heapTotal 221.77MB heapUsed 214.41MB rss 511.29MB
+2024-10-31 01:09:32-debug: custom joint texture layouts start75%
+2024-10-31 01:09:32-debug: // ---- build task custom joint texture layouts ---- (12ms)
+2024-10-31 01:09:32-debug: run build task custom joint texture layouts success in 12 ms √76%
+2024-10-31 01:09:32-debug: Process: heapTotal 221.77MB heapUsed 214.46MB rss 511.34MB
+2024-10-31 01:09:32-debug: // ---- build task custom joint physics ----
+2024-10-31 01:09:32-debug: custom joint physics start76%
+2024-10-31 01:09:32-debug: // ---- build task custom joint physics ---- (1ms)
+2024-10-31 01:09:32-debug: run build task custom joint physics success in 1 ms √76%
+2024-10-31 01:09:32-debug: Process: heapTotal 221.77MB heapUsed 214.51MB rss 511.39MB
+2024-10-31 01:09:32-debug: // ---- build task Fill script data to settings ----
+2024-10-31 01:09:32-debug: Fill script data to settings start76%
+2024-10-31 01:09:32-debug: run build task Fill script data to settings success in 0 ms √77%
+2024-10-31 01:09:32-debug: Fill scene data to settings start77%
+2024-10-31 01:09:32-debug: // ---- build task Fill scene data to settings ----
+2024-10-31 01:09:32-debug: Process: heapTotal 221.77MB heapUsed 214.55MB rss 511.43MB
+2024-10-31 01:09:32-debug: // ---- build task Fill scene data to settings ---- (1ms)
+2024-10-31 01:09:32-debug: run build task Fill scene data to settings success in 1 ms √77%
+2024-10-31 01:09:32-debug: Process: heapTotal 221.77MB heapUsed 214.59MB rss 511.47MB
+2024-10-31 01:09:32-debug: // ---- build task Organize assets groups，generate packedAssets and rawAssets data ----
+2024-10-31 01:09:32-debug: Organize assets groups，generate packedAssets and rawAssets data start77%
+2024-10-31 01:09:32-debug: // ---- build task Organize assets groups，generate packedAssets and rawAssets data ---- (1ms)
+2024-10-31 01:09:32-debug: run build task Organize assets groups，generate packedAssets and rawAssets data success in 1 ms √78%
+2024-10-31 01:09:32-debug: Generate md5AssetsMap from suffixMap to settings start78%
+2024-10-31 01:09:32-debug: // ---- build task Generate md5AssetsMap from suffixMap to settings ----
+2024-10-31 01:09:32-debug: Process: heapTotal 221.77MB heapUsed 214.74MB rss 511.76MB
+2024-10-31 01:09:32-debug: options.md5Cache is false.
+2024-10-31 01:09:32-debug: // ---- build task Generate md5AssetsMap from suffixMap to settings ---- (2ms)
+2024-10-31 01:09:32-debug: run build task Generate md5AssetsMap from suffixMap to settings success in 2 ms √78%
+2024-10-31 01:09:32-debug: web-mobile:(onBeforeCompressSettings) start...78%
+2024-10-31 01:09:32-debug: // ---- build task web-mobile：onBeforeCompressSettings ----
+2024-10-31 01:09:32-debug: Process: heapTotal 221.77MB heapUsed 214.79MB rss 512.00MB
+2024-10-31 01:09:32-debug: // ---- build task web-mobile：onBeforeCompressSettings ---- (1ms)
+2024-10-31 01:09:32-debug: web-mobile:(onBeforeCompressSettings) in 1 ms81%
+2024-10-31 01:09:32-debug: cocos-service:(onBeforeCompressSettings) start...81%
+2024-10-31 01:09:32-debug: // ---- build task cocos-service：onBeforeCompressSettings ----
+2024-10-31 01:09:32-debug: Process: heapTotal 221.77MB heapUsed 214.84MB rss 512.05MB
+2024-10-31 01:09:32-debug: // ---- build task cocos-service：onBeforeCompressSettings ---- (171ms)
+2024-10-31 01:09:32-debug: // ---- build task Build import-map.json ----
+2024-10-31 01:09:32-debug: Process: heapTotal 221.77MB heapUsed 214.91MB rss 512.12MB
+2024-10-31 01:09:32-debug: cocos-service:(onBeforeCompressSettings) in 171 ms83%
+2024-10-31 01:09:32-debug: Build import-map.json start83%
+2024-10-31 01:09:32-debug: // ---- build task Build import-map.json ---- (8ms)
+2024-10-31 01:09:32-debug: run build task Build import-map.json success in 8 ms √84%
+2024-10-31 01:09:32-debug: // ---- build task Compress settings.json and config.json ----
+2024-10-31 01:09:32-debug: Compress settings.json and config.json start84%
+2024-10-31 01:09:32-debug: Process: heapTotal 221.77MB heapUsed 214.96MB rss 512.17MB
+2024-10-31 01:09:32-debug: // ---- build task Compress settings.json and config.json ---- (13ms)
+2024-10-31 01:09:32-debug: run build task Compress settings.json and config.json success in 13 ms √85%
+2024-10-31 01:09:32-debug: Save config.json start85%
+2024-10-31 01:09:32-debug: // ---- build task Save config.json ----
+2024-10-31 01:09:32-debug: Process: heapTotal 221.77MB heapUsed 214.58MB rss 511.68MB
+2024-10-31 01:09:32-debug: // ---- build task Save config.json ---- (4ms)
+2024-10-31 01:09:32-debug: run build task Save config.json success in 4 ms √86%
+2024-10-31 01:09:32-debug: Process: heapTotal 221.77MB heapUsed 214.73MB rss 511.75MB
+2024-10-31 01:09:32-debug: // ---- build task Save Settings.json ----
+2024-10-31 01:09:32-debug: Save Settings.json start86%
+2024-10-31 01:09:32-debug: // ---- build task Save Settings.json ---- (1ms)
+2024-10-31 01:09:32-debug: run build task Save Settings.json success in 1 ms √87%
+2024-10-31 01:09:32-debug: Process: heapTotal 221.77MB heapUsed 214.87MB rss 511.90MB
+2024-10-31 01:09:32-debug: // ---- build task Sort build template ----
+2024-10-31 01:09:32-debug: Sort build template start87%
+2024-10-31 01:09:32-debug: // ---- build task Sort build template ---- (102ms)
+2024-10-31 01:09:32-debug: run build task Sort build template success in 102 ms √88%
+2024-10-31 01:09:32-debug: // ---- build task cocos-service：onAfterCompressSettings ----
+2024-10-31 01:09:32-debug: Process: heapTotal 222.52MB heapUsed 215.28MB rss 513.26MB
+2024-10-31 01:09:32-debug: cocos-service:(onAfterCompressSettings) start...88%
+2024-10-31 01:09:33-debug: // ---- build task cocos-service：onAfterCompressSettings ---- (155ms)
+2024-10-31 01:09:33-debug: web-mobile:(onAfterBuild) start...90%
+2024-10-31 01:09:33-debug: cocos-service:(onAfterCompressSettings) in 155 ms90%
+2024-10-31 01:09:33-debug: Process: heapTotal 222.77MB heapUsed 216.27MB rss 512.69MB
+2024-10-31 01:09:33-debug: // ---- build task web-mobile：onAfterBuild ----
+2024-10-31 01:09:33-debug: Use build-template {link(E:\lianlukeji\frontend\cocos\menghuanfarm\build-templates\web-mobile)}.
+2024-10-31 01:09:33-debug: // ---- build task web-mobile：onAfterBuild ---- (115ms)
+2024-10-31 01:09:33-debug: web-mobile:(onAfterBuild) in 115 ms92%
+2024-10-31 01:09:33-debug: cocos-service:(onAfterBuild) start...92%
+2024-10-31 01:09:33-debug: Process: heapTotal 223.77MB heapUsed 215.90MB rss 513.87MB
+2024-10-31 01:09:33-debug: // ---- build task cocos-service：onAfterBuild ----
+2024-10-31 01:09:33-debug: // ---- build task cocos-service：onAfterBuild ---- (171ms)
+2024-10-31 01:09:33-debug: cocos-service:(onAfterBuild) in 171 ms94%
+2024-10-31 01:09:33-debug: builder:build-project-total (33340ms)
+2024-10-31 01:09:33-debug: build success in 33340 ms!
+2024-10-31 01:09:33-debug: ================================ Build Task (web-mobile) Finished in (33354)ms ================================
+2024-10-31 01:10:09-debug: // ---- builder:run-build-stage-run ----
+2024-10-31 01:10:09-debug: init options success
+2024-10-31 01:10:09-debug: web-mobile:(run) start...
+2024-10-31 01:10:09-debug: // ---- build task web-mobile：run ----
+2024-10-31 01:10:09-debug: web-mobile:(run) in null ms √
+2024-10-31 01:10:09-log: [task:run]: success!
+2024-10-31 01:27:14-debug: =================================== Build Task (web-mobile) Start ================================
+2024-10-31 01:27:14-debug: Start build task, options:{"name":"PlantStore","platform":"web-mobile","buildPath":"project://build","debug":false,"md5Cache":false,"skipCompressTexture":true,"sourceMaps":false,"polyfills":{"asyncFunctions":true,"coreJs":true},"experimentalEraseModules":false,"useBuiltinServer":false,"mainBundleIsRemote":false,"mainBundleCompressionType":"none","replaceSplashScreen":true,"startScene":"5a6f4efe-edd1-4c9d-adc3-c28f8d58012d","outputName":"web-mobile","scenes":[{"url":"db://assets/scene/main.scene","uuid":"5a6f4efe-edd1-4c9d-adc3-c28f8d58012d","inBundle":false}],"windows":[],"packages":{"web-mobile":{"orientation":"portrait","__version__":"1.0.1","embedWebDebugger":false},"cocos-service":{"configID":"8defd1","services":[],"__version__":"3.0.7","sdkHubConfigID":"5c53db","sdkHubConfig":{"id":"5c53db","name":"HUAWEI  AppGallery Connect","platform":"3","channelID":"161221","channelName":"HUAWEI  AppGallery Connect","remarks":"HUAWEI  AppGallery Connect","plugins":[{"hasParam":false,"pParam":{},"pId":"2412","pName":"HUAWEI HMS","packageName":"huawei-hms","pType":30,"pUseType":30,"hasLocal":true,"hasUpdate":false,"requireParam":true,"pVersion":"2.0.3_6.3.0","isInstall":false,"installProgress":true}]}}},"__version__":"1.3.3","web-mobile":[]}
+2024-10-31 01:27:14-debug: Build with Cocos Creator 3.6.1
+2024-10-31 01:27:14-debug: cocos-service:(onBeforeBuild) start...0%
+2024-10-31 01:27:14-debug: // ---- build task cocos-service：onBeforeBuild ----
+2024-10-31 01:27:14-debug: Process: heapTotal 236.34MB heapUsed 229.10MB rss 152.01MB
+2024-10-31 01:27:14-debug: // ---- build task cocos-service：onBeforeBuild ---- (382ms)
+2024-10-31 01:27:14-debug: Query all assets info in project
+2024-10-31 01:27:14-debug: cocos-service:(onBeforeBuild) in 382 ms2%
+2024-10-31 01:27:14-debug: init custom config: keepNodeUuid: false, useCache: true
+2024-10-31 01:27:14-debug: BuildAssetLibrary query-assets with assets 410
+2024-10-31 01:27:14-debug:   Number of all scenes: 2
+2024-10-31 01:27:14-debug:   Number of all scripts: 18
+2024-10-31 01:27:14-debug: BuildAssetLibrary initialized with asset 641!
+2024-10-31 01:27:14-debug: // ---- build task web-mobile：onAfterInit ----
+2024-10-31 01:27:14-debug:   Number of other assets: 741
+2024-10-31 01:27:14-debug: Process: heapTotal 237.38MB heapUsed 230.57MB rss 154.39MB
+2024-10-31 01:27:14-debug: web-mobile:(onAfterInit) start...2%
+2024-10-31 01:27:14-debug: // ---- build task web-mobile：onAfterInit ---- (91ms)
+2024-10-31 01:27:14-debug: web-mobile:(onAfterInit) in 91 ms4%
+2024-10-31 01:27:14-debug: cocos-service:(onAfterInit) start...4%
+2024-10-31 01:27:14-debug: // ---- build task cocos-service：onAfterInit ----
+2024-10-31 01:27:14-debug: Process: heapTotal 237.63MB heapUsed 230.75MB rss 154.49MB
+2024-10-31 01:27:14-debug: // ---- build task cocos-service：onAfterInit ---- (168ms)
+2024-10-31 01:27:14-debug: Process: heapTotal 237.63MB heapUsed 230.82MB rss 154.57MB
+2024-10-31 01:27:14-debug: cocos-service:(onAfterInit) in 168 ms7%
+2024-10-31 01:27:14-debug: localization-editor:(onAfterInit) start...7%
+2024-10-31 01:27:14-debug: // ---- build task localization-editor：onAfterInit ----
+2024-10-31 01:27:14-debug: // ---- build task localization-editor：onAfterInit ---- (5ms)
+2024-10-31 01:27:14-debug: // ---- build task Reload project scripts ----
+2024-10-31 01:27:14-debug: Process: heapTotal 237.63MB heapUsed 230.86MB rss 154.65MB
+2024-10-31 01:27:14-debug: reload all scripts.
+2024-10-31 01:27:14-debug: localization-editor:(onAfterInit) in 5 ms9%
+2024-10-31 01:27:14-debug: Reload project scripts start9%
+2024-10-31 01:27:14-debug: Incremental keys: 
+2024-10-31 01:27:14-debug: Set detail map pack:///resolution-detail-map.json: {}
+2024-10-31 01:27:14-debug: Unregister AudioManager
+2024-10-31 01:27:14-debug: Unregister GenBlock
+2024-10-31 01:27:14-debug: Unregister circles
+2024-10-31 01:27:14-debug: Unregister timer
+2024-10-31 01:27:14-debug: Unregister GenBag
+2024-10-31 01:27:14-debug: Unregister genPlant
+2024-10-31 01:27:14-debug: Unregister GenShop
+2024-10-31 01:27:14-debug: Unregister GenInfo
+2024-10-31 01:27:14-debug: Unregister DrawRoundedRect
+2024-10-31 01:27:14-debug: Unregister main
+2024-10-31 01:27:14-debug: Unregister SceneSwitcher
+2024-10-31 01:27:14-debug: Invalidating 'pack:///chunks/d0/d0b282b9748ef7fc7d2e7bd647d71b0f7e84da53.js'
+2024-10-31 01:27:14-debug: Unregister scaleAction
+2024-10-31 01:27:14-debug: Invalidating 'pack:///chunks/45/4585d44a0ad09ac97ab1d083b6be4c8e668fee17.js'
+2024-10-31 01:27:14-debug: Invalidating 'pack:///chunks/84/84741ad843cea9a440c5d8c2d379669b6551400d.js'
+2024-10-31 01:27:14-debug: Invalidating 'pack:///chunks/68/68dae8f28afcac858439ab8a6555829d6e2eeea0.js'
+2024-10-31 01:27:14-debug: Invalidating 'pack:///chunks/40/40841bcca050e87db8b878c42154ece44ed3e5ba.js'
+2024-10-31 01:27:14-debug: Invalidating 'pack:///chunks/4e/4ee8315e8f460a527be6fa778d5f4048b98265e1.js'
+2024-10-31 01:27:14-debug: Invalidating 'pack:///chunks/6f/6f32fc724f2005aba45c2b9d3ca9852c2451b9b6.js'
+2024-10-31 01:27:14-debug: Invalidating 'pack:///chunks/bd/bd2b48ecca795cd184de9b72bade57e0361ece74.js'
+2024-10-31 01:27:14-debug: Invalidating 'pack:///chunks/00/00fb00a3d09d59a2caf0a4c6a656b0768df7c940.js'
+2024-10-31 01:27:14-debug: Invalidating 'pack:///chunks/ae/ae69b84bff0384e0c679ba04c685a28bd8ca3343.js'
+2024-10-31 01:27:14-debug: Invalidating 'pack:///chunks/b0/b02df7dbd12a416e5ab2ccdb1f7fac565e85be68.js'
+2024-10-31 01:27:14-debug: Invalidating 'pack:///chunks/57/57aa3a73746d22d6e6fea20d4c04eb5fca3e2f83.js'
+2024-10-31 01:27:14-debug: Invalidating 'pack:///chunks/3c/3c02a178cd627d4fd64910d978c93fabe6f313be.js'
+2024-10-31 01:27:14-debug: Invalidating 'pack:///chunks/27/2701a48d14de7467228223bd6c79ee5ec393dff2.js'
+2024-10-31 01:27:14-debug: Invalidating 'pack:///chunks/a7/a77d21d1303f8e9e0be90060b9a1b34a32c4c60d.js'
+2024-10-31 01:27:14-debug: Invalidating 'pack:///chunks/0d/0d5541f1fd3a71e0d0240c5e19547531a0a3f398.js'
+2024-10-31 01:27:14-debug: Invalidating 'pack:///chunks/e9/e91872bed1ce02ef8c0b8a1bd97039426629c4c6.js'
+2024-10-31 01:27:14-debug: Invalidating 'pack:///chunks/8d/8d1d8c6c32248b90683bf11c884a686bb510c189.js'
+2024-10-31 01:27:15-debug: [[Executor]] Module "pack:///chunks/d0/d0b282b9748ef7fc7d2e7bd647d71b0f7e84da53.js" loaded.
+2024-10-31 01:27:14-debug: Invalidating 'pack:///chunks/cd/cdb3eb41f58b0773a35466a0ffdca226ff4c143c.js'
+2024-10-31 01:27:15-debug: E:\lianlukeji\frontend\cocos\menghuanfarm\temp\programming\packer-driver\targets\editor\chunks\9b\9b3897730c12b372132a3c203f2f22c69208f515.js resolved to E:\lianlukeji\frontend\cocos\menghuanfarm\temp\programming\packer-driver\targets\editor\chunks\9b\9b3897730c12b372132a3c203f2f22c69208f515.js is not in module cache!
+2024-10-31 01:27:15-debug: [[Executor]] Module "pack:///chunks/9b/9b3897730c12b372132a3c203f2f22c69208f515.js" loaded.
+2024-10-31 01:27:15-debug: E:\lianlukeji\frontend\cocos\menghuanfarm\temp\programming\packer-driver\targets\editor\chunks\83\83fe46e5327bdefafe5cde6e8639da85f39d412a.js resolved to E:\lianlukeji\frontend\cocos\menghuanfarm\temp\programming\packer-driver\targets\editor\chunks\83\83fe46e5327bdefafe5cde6e8639da85f39d412a.js is not in module cache!
+2024-10-31 01:27:15-debug: [[Executor]] Module "pack:///chunks/83/83fe46e5327bdefafe5cde6e8639da85f39d412a.js" loaded.
+2024-10-31 01:27:15-debug: [[Executor]] Register AdaptiveCanvas
+2024-10-31 01:27:15-debug: [[Executor]] Module "pack:///chunks/45/4585d44a0ad09ac97ab1d083b6be4c8e668fee17.js" loaded.
+2024-10-31 01:27:15-debug: [[Executor]] Register AudioManager
+2024-10-31 01:27:15-debug: E:\lianlukeji\frontend\cocos\menghuanfarm\temp\programming\packer-driver\targets\editor\chunks\7b\7b712927d5fe75ea51e960b23175f56ad04f1300.js resolved to E:\lianlukeji\frontend\cocos\menghuanfarm\temp\programming\packer-driver\targets\editor\chunks\7b\7b712927d5fe75ea51e960b23175f56ad04f1300.js is not in module cache!
+2024-10-31 01:27:15-debug: [[Executor]] Register AutoScaleImages
+2024-10-31 01:27:15-debug: [[Executor]] Module "pack:///chunks/4e/4ee8315e8f460a527be6fa778d5f4048b98265e1.js" loaded.
+2024-10-31 01:27:15-debug: [[Executor]] Module "pack:///chunks/40/40841bcca050e87db8b878c42154ece44ed3e5ba.js" loaded.
+2024-10-31 01:27:15-debug: [[Executor]] Module "pack:///chunks/7b/7b712927d5fe75ea51e960b23175f56ad04f1300.js" loaded.
+2024-10-31 01:27:15-debug: [[Executor]] Module "pack:///chunks/84/84741ad843cea9a440c5d8c2d379669b6551400d.js" loaded.
+2024-10-31 01:27:15-debug: [[Executor]] Module "pack:///chunks/bd/bd2b48ecca795cd184de9b72bade57e0361ece74.js" loaded.
+2024-10-31 01:27:15-debug: [[Executor]] Register GenBag
+2024-10-31 01:27:15-debug: [[Executor]] Module "pack:///chunks/6f/6f32fc724f2005aba45c2b9d3ca9852c2451b9b6.js" loaded.
+2024-10-31 01:27:15-debug: [[Executor]] Register GenBlock
+2024-10-31 01:27:15-debug: [[Executor]] Module "pack:///chunks/ae/ae69b84bff0384e0c679ba04c685a28bd8ca3343.js" loaded.
+2024-10-31 01:27:15-debug: [[Executor]] Register GenInfo
+2024-10-31 01:27:15-debug: [[Executor]] Module "pack:///chunks/3c/3c02a178cd627d4fd64910d978c93fabe6f313be.js" loaded.
+2024-10-31 01:27:15-debug: [[Executor]] Register timer
+2024-10-31 01:27:15-debug: [[Executor]] Module "pack:///chunks/57/57aa3a73746d22d6e6fea20d4c04eb5fca3e2f83.js" loaded.
+2024-10-31 01:27:15-debug: [[Executor]] Register main
+2024-10-31 01:27:15-debug: [[Executor]] Module "pack:///chunks/27/2701a48d14de7467228223bd6c79ee5ec393dff2.js" loaded.
+2024-10-31 01:27:15-debug: [[Executor]] Register circles
+2024-10-31 01:27:15-debug: [[Executor]] Module "pack:///chunks/b0/b02df7dbd12a416e5ab2ccdb1f7fac565e85be68.js" loaded.
+2024-10-31 01:27:15-debug: [[Executor]] Register GenShop
+2024-10-31 01:27:15-debug: [[Executor]] Module "pack:///chunks/a7/a77d21d1303f8e9e0be90060b9a1b34a32c4c60d.js" loaded.
+2024-10-31 01:27:15-debug: [[Executor]] Register DrawRoundedRect
+2024-10-31 01:27:15-debug: [[Executor]] Module "pack:///chunks/e9/e91872bed1ce02ef8c0b8a1bd97039426629c4c6.js" loaded.
+2024-10-31 01:27:15-debug: [[Executor]] Register scaleAction
+2024-10-31 01:27:15-warn: The type of "scaleAction.isChild" must be CCBoolean, not Boolean.
+2024-10-31 01:27:15-debug: [[Executor]] Module "pack:///chunks/0d/0d5541f1fd3a71e0d0240c5e19547531a0a3f398.js" loaded.
+2024-10-31 01:27:15-debug: [[Executor]] Register SceneSwitcher
+2024-10-31 01:27:15-warn: The type of "SceneSwitcher.sceneName" must be CCString, not String.
+2024-10-31 01:27:15-debug: [[Executor]] Module "pack:///chunks/8d/8d1d8c6c32248b90683bf11c884a686bb510c189.js" loaded.
+2024-10-31 01:27:15-debug: [[Executor]] Module "pack:///chunks/9b/9b3897730c12b372132a3c203f2f22c69208f515.js" loaded.
+2024-10-31 01:27:15-debug: [[Executor]] Module "pack:///chunks/00/00fb00a3d09d59a2caf0a4c6a656b0768df7c940.js" loaded.
+2024-10-31 01:27:15-debug: [[Executor]] Module "pack:///chunks/cd/cdb3eb41f58b0773a35466a0ffdca226ff4c143c.js" loaded.
+2024-10-31 01:27:15-debug: [[Executor]] Register genPlant
+2024-10-31 01:27:15-debug: // ---- build task Reload project scripts ---- (68ms)
+2024-10-31 01:27:15-debug: run build task Reload project scripts success in 68 ms √10%
+2024-10-31 01:27:15-debug: // ---- build task Query asset bundle ----
+2024-10-31 01:27:15-debug: Process: heapTotal 238.13MB heapUsed 230.94MB rss 155.98MB
+2024-10-31 01:27:15-debug: Query asset bundle start10%
+2024-10-31 01:27:15-debug: // ---- build task Query asset bundle ---- (15ms)
+2024-10-31 01:27:15-debug: run build task Query asset bundle success in 15 ms √11%
+2024-10-31 01:27:15-debug: Query and organize assets start11%
+2024-10-31 01:27:15-debug: Process: heapTotal 238.13MB heapUsed 231.01MB rss 156.03MB
+2024-10-31 01:27:15-debug: // ---- build task Query and organize assets ----
+2024-10-31 01:27:15-debug: Query preload assets from cc.config.json: 60f7195c-ec2a-45eb-ba94-8955f60e81d0,1c02ae6f-4492-4915-b8f8-7492a3b1e4cd,810e96e4-e456-4468-9b59-f4e8f39732c0,efe8e2a3-eace-427b-b4f1-cb8a937ec77d,e9aa9a3e-5b2b-4ac7-a2c7-073de2b2b24f,8bbdbcdd-5cd4-4100-b6d5-b7c9625b6107,50f4348b-c883-4e2f-8f11-ce233b859fa1,fda095cb-831d-4601-ad94-846013963de8,f92806d7-1768-443f-afe8-12bcde84d0f0,dd3a144d-ab7f-41f0-82b8-2e43a090d496,f0416e68-0200-4b77-a926-4f9d16e494da,ff9be190-20a4-4e48-b68c-76e3c7cff085,970b0598-bcb0-4714-91fb-2e81440dccd8,bcd64cc6-2dd9-43f6-abbe-66318d332032,d930590d-bb92-4cc8-8bd1-23cd027f9edf,a3cd009f-0ab0-420d-9278-b9fdab939bbc,9361fd90-ba52-4f84-aa93-6e878fd576ca,871c3b6c-7379-419d-bda3-794b239ab90d,c27215d8-6835-4b68-bfbb-bdeac6100c04,b5d6115f-0370-4d7c-aad3-c194cc71cf98
+2024-10-31 01:27:15-debug: Number of scenes: 1
+2024-10-31 01:27:15-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mypack/title"Missing uuid: "d4d45a6f-5422-4b19-b144-e90f58d514b6@f9941"
+2024-10-31 01:27:15-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mypack/items/fanqiezz_base/pro"Missing uuid: "0c20fc1b-fa26-4858-8791-9796cec92f92@f9941"
+2024-10-31 01:27:15-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mypack/items/fanqiezz_base/txtBox/icon"Missing uuid: "e02ed89c-cc09-4061-9af3-2312d2cf8b71@f9941"
+2024-10-31 01:27:15-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mypack/items/fanqiezz_base/bottom"Missing uuid: "51057c3f-a341-45f0-9810-184b05381d26@f9941"
+2024-10-31 01:27:15-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mypack/items/pingguozz_base/bottom"Missing uuid: "51057c3f-a341-45f0-9810-184b05381d26@f9941"
+2024-10-31 01:27:15-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mypack/items/pingguozz_base/txtBox/icon"Missing uuid: "e02ed89c-cc09-4061-9af3-2312d2cf8b71@f9941"
+2024-10-31 01:27:15-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mypack/items/qiezizz_base/bottom"Missing uuid: "51057c3f-a341-45f0-9810-184b05381d26@f9941"
+2024-10-31 01:27:15-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mypack/items/qiezizz_base/pro"Missing uuid: "87952bd7-47ba-49ea-a5b3-4759e401b6d4@f9941"
+2024-10-31 01:27:15-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mypack/items/pingguozz_base/txtBox"Missing uuid: "0a2994fb-c6d2-4193-b1ec-a9a95d32d582@f9941"
+2024-10-31 01:27:15-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mypack/items/qiezizz_base/txtBox/icon"Missing uuid: "e02ed89c-cc09-4061-9af3-2312d2cf8b71@f9941"
+2024-10-31 01:27:15-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mypack/items/qiezizz_base/txtBox"Missing uuid: "0a2994fb-c6d2-4193-b1ec-a9a95d32d582@f9941"
+2024-10-31 01:27:15-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mypack/items/huluobozz_base/bottom"Missing uuid: "51057c3f-a341-45f0-9810-184b05381d26@f9941"
+2024-10-31 01:27:15-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mypack/items/huluobozz_base/pro"Missing uuid: "9d2870bc-7d23-4d90-b796-24dddc4c16d1@f9941"
+2024-10-31 01:27:15-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mypack/items/huluobozz_base/txtBox/icon"Missing uuid: "e02ed89c-cc09-4061-9af3-2312d2cf8b71@f9941"
+2024-10-31 01:27:15-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mypack/items/huluobozz_base/txtBox"Missing uuid: "0a2994fb-c6d2-4193-b1ec-a9a95d32d582@f9941"
+2024-10-31 01:27:15-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mypack/items/pingguozz_base/pro"Missing uuid: "1596f979-8b2f-4b21-87ff-bfae6750a9d3@f9941"
+2024-10-31 01:27:15-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mypack/items/fanqiezz_base/txtBox"Missing uuid: "0a2994fb-c6d2-4193-b1ec-a9a95d32d582@f9941"
+2024-10-31 01:27:15-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/store/items/fanqiezz/bottom"Missing uuid: "51057c3f-a341-45f0-9810-184b05381d26@f9941"
+2024-10-31 01:27:15-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/store/items/fanqiezz/txtBox/icon"Missing uuid: "e02ed89c-cc09-4061-9af3-2312d2cf8b71@f9941"
+2024-10-31 01:27:15-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/store/items/fanqiezz/txtBox"Missing uuid: "0a2994fb-c6d2-4193-b1ec-a9a95d32d582@f9941"
+2024-10-31 01:27:15-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/store/title"Missing uuid: "d4d45a6f-5422-4b19-b144-e90f58d514b6@f9941"
+2024-10-31 01:27:15-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/store/items/pingguozz/bottom"Missing uuid: "51057c3f-a341-45f0-9810-184b05381d26@f9941"
+2024-10-31 01:27:15-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/store/items/pingguozz/txtBox/icon"Missing uuid: "e02ed89c-cc09-4061-9af3-2312d2cf8b71@f9941"
+2024-10-31 01:27:15-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/store/items/pingguozz/pro"Missing uuid: "1596f979-8b2f-4b21-87ff-bfae6750a9d3@f9941"
+2024-10-31 01:27:15-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/store/items/fanqiezz/pro"Missing uuid: "0c20fc1b-fa26-4858-8791-9796cec92f92@f9941"
+2024-10-31 01:27:15-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/store/items/qiezizz/bottom"Missing uuid: "51057c3f-a341-45f0-9810-184b05381d26@f9941"
+2024-10-31 01:27:15-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/store/items/pingguozz/txtBox"Missing uuid: "0a2994fb-c6d2-4193-b1ec-a9a95d32d582@f9941"
+2024-10-31 01:27:15-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/store/items/qiezizz/txtBox/icon"Missing uuid: "e02ed89c-cc09-4061-9af3-2312d2cf8b71@f9941"
+2024-10-31 01:27:15-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/store/items/huluobozz/bottom"Missing uuid: "51057c3f-a341-45f0-9810-184b05381d26@f9941"
+2024-10-31 01:27:15-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/store/items/huluobozz/txtBox/icon"Missing uuid: "e02ed89c-cc09-4061-9af3-2312d2cf8b71@f9941"
+2024-10-31 01:27:15-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/store/items/huluobozz/pro"Missing uuid: "9d2870bc-7d23-4d90-b796-24dddc4c16d1@f9941"
+2024-10-31 01:27:15-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/store/items/huluobozz/txtBox"Missing uuid: "0a2994fb-c6d2-4193-b1ec-a9a95d32d582@f9941"
+2024-10-31 01:27:15-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/paihang/title"Missing uuid: "d4d45a6f-5422-4b19-b144-e90f58d514b6@f9941"
+2024-10-31 01:27:15-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/paihang/items/box/txtBox/pro"Missing uuid: "0c20fc1b-fa26-4858-8791-9796cec92f92@f9941"
+2024-10-31 01:27:15-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/paihang/items/box/txtBox/icon"Missing uuid: "42c066de-15a2-4aab-8c98-1111848639ab@f9941"
+2024-10-31 01:27:15-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/paihang/items/box/txtBox/top"Missing uuid: "5f2902d9-b2b0-43e2-8dad-f95e60a89318@f9941"
+2024-10-31 01:27:15-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/paihang/items/box/txtBox"Missing uuid: "0a2994fb-c6d2-4193-b1ec-a9a95d32d582@f9941"
+2024-10-31 01:27:15-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/store/items/qiezizz/txtBox"Missing uuid: "0a2994fb-c6d2-4193-b1ec-a9a95d32d582@f9941"
+2024-10-31 01:27:15-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/paihang/sharebtn"Missing uuid: "874a12c0-9d84-4805-b1d3-d9e0a3291912@f9941"
+2024-10-31 01:27:15-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/store/items/qiezizz/pro"Missing uuid: "87952bd7-47ba-49ea-a5b3-4759e401b6d4@f9941"
+2024-10-31 01:27:15-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mysalepack/title"Missing uuid: "d4d45a6f-5422-4b19-b144-e90f58d514b6@f9941"
+2024-10-31 01:27:15-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mysalepack/items/fanqie_base/pro"Missing uuid: "a5d5767a-7e8e-48de-a3b7-535f1fb21956@f9941"
+2024-10-31 01:27:15-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mysalepack/items/fanqie_base/bottom"Missing uuid: "51057c3f-a341-45f0-9810-184b05381d26@f9941"
+2024-10-31 01:27:15-warn: The SpriteFrame used by component "cc.Button" is missing. Detailed information:Node path: "MainCanvas/popBox/paihang/sharebtn"Missing uuid: "874a12c0-9d84-4805-b1d3-d9e0a3291912@f9941"
+2024-10-31 01:27:15-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mysalepack/items/fanqie_base/txtBox/icon"Missing uuid: "e02ed89c-cc09-4061-9af3-2312d2cf8b71@f9941"
+2024-10-31 01:27:15-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mysalepack/items/fanqie_base/txtBox"Missing uuid: "0a2994fb-c6d2-4193-b1ec-a9a95d32d582@f9941"
+2024-10-31 01:27:15-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mysalepack/items/pingguo_base/txtBox/icon"Missing uuid: "e02ed89c-cc09-4061-9af3-2312d2cf8b71@f9941"
+2024-10-31 01:27:15-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mysalepack/items/pingguo_base/bottom"Missing uuid: "51057c3f-a341-45f0-9810-184b05381d26@f9941"
+2024-10-31 01:27:15-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mysalepack/items/qiezi_base/bottom"Missing uuid: "51057c3f-a341-45f0-9810-184b05381d26@f9941"
+2024-10-31 01:27:15-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mysalepack/items/pingguo_base/pro"Missing uuid: "672e10a5-30cd-421b-80ac-893de921c47e@f9941"
+2024-10-31 01:27:15-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mysalepack/items/qiezi_base/txtBox/icon"Missing uuid: "e02ed89c-cc09-4061-9af3-2312d2cf8b71@f9941"
+2024-10-31 01:27:15-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mysalepack/items/pingguo_base/txtBox"Missing uuid: "0a2994fb-c6d2-4193-b1ec-a9a95d32d582@f9941"
+2024-10-31 01:27:15-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mysalepack/items/qiezi_base/pro"Missing uuid: "44c42f64-381f-4214-acb8-f44123965e8a@f9941"
+2024-10-31 01:27:15-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mysalepack/items/huluobo_base/bottom"Missing uuid: "51057c3f-a341-45f0-9810-184b05381d26@f9941"
+2024-10-31 01:27:15-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mysalepack/items/huluobo_base/txtBox/icon"Missing uuid: "e02ed89c-cc09-4061-9af3-2312d2cf8b71@f9941"
+2024-10-31 01:27:15-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mysalepack/items/huluobo_base/txtBox"Missing uuid: "0a2994fb-c6d2-4193-b1ec-a9a95d32d582@f9941"
+2024-10-31 01:27:15-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mysalepack/items/qiezi_base/txtBox"Missing uuid: "0a2994fb-c6d2-4193-b1ec-a9a95d32d582@f9941"
+2024-10-31 01:27:15-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/msgBox/msgBg"Missing uuid: "d4d45a6f-5422-4b19-b144-e90f58d514b6@f9941"
+2024-10-31 01:27:15-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mysalepack/items/huluobo_base/pro"Missing uuid: "e89b6cf7-b760-4cb5-81e9-452fd2ab5251@f9941"
+2024-10-31 01:27:15-debug: Number of assets: 253
+2024-10-31 01:27:15-debug: Number of asset bundle: 3
+2024-10-31 01:27:15-debug: run build task Query and organize assets success in 324 ms √13%
+2024-10-31 01:27:15-debug: // ---- build task Query and organize assets ---- (324ms)
+2024-10-31 01:27:15-debug: Organize scripts start13%
+2024-10-31 01:27:15-debug: sort script group...
+2024-10-31 01:27:15-debug: // ---- build task Organize scripts ----
+2024-10-31 01:27:15-debug: Process: heapTotal 234.77MB heapUsed 213.97MB rss 214.58MB
+2024-10-31 01:27:15-debug: run build task Organize scripts success in 0 ms √14%
+2024-10-31 01:27:15-debug: // ---- build task Organize texture compression tasks ----
+2024-10-31 01:27:15-debug: Process: heapTotal 234.77MB heapUsed 214.03MB rss 214.64MB
+2024-10-31 01:27:15-debug: Organize texture compression tasks start14%
+2024-10-31 01:27:15-debug: Number of image-compress task: 0
+2024-10-31 01:27:15-debug: // ---- build task Organize texture compression tasks ---- (68ms)
+2024-10-31 01:27:15-debug: run build task Organize texture compression tasks success in 68 ms √15%
+2024-10-31 01:27:15-debug: Process: heapTotal 234.77MB heapUsed 213.45MB rss 215.54MB
+2024-10-31 01:27:15-debug: // ---- build task Group json ----
+2024-10-31 01:27:15-debug: Group json start15%
+2024-10-31 01:27:15-debug: Number of json group: 70
+2024-10-31 01:27:15-debug: // ---- build task Group json ---- (2ms)
+2024-10-31 01:27:15-debug: run build task Group json success in 2 ms √16%
+2024-10-31 01:27:15-debug: Process: heapTotal 234.77MB heapUsed 213.89MB rss 215.54MB
+2024-10-31 01:27:15-debug: // ---- build task Merging Texture2D json ----
+2024-10-31 01:27:15-debug: Merging Texture2D json start16%
+2024-10-31 01:27:15-debug: // ---- build task Merging Texture2D json ---- (6ms)
+2024-10-31 01:27:15-debug: run build task Merging Texture2D json success in 6 ms √18%
+2024-10-31 01:27:15-debug: Process: heapTotal 234.77MB heapUsed 214.03MB rss 215.89MB
+2024-10-31 01:27:15-debug: Sort import-map.json start18%
+2024-10-31 01:27:15-debug: // ---- build task Sort import-map.json ----
+2024-10-31 01:27:15-debug: // ---- build task Sort import-map.json ---- (1ms)
+2024-10-31 01:27:15-debug: run build task Sort import-map.json success in 1 ms √19%
+2024-10-31 01:27:15-debug: Process: heapTotal 234.77MB heapUsed 214.08MB rss 215.87MB
+2024-10-31 01:27:15-debug: // ---- build task web-mobile：onBeforeBuildAssets ----
+2024-10-31 01:27:15-debug: web-mobile:(onBeforeBuildAssets) start...19%
+2024-10-31 01:27:15-debug: // ---- build task web-mobile：onBeforeBuildAssets ---- (1ms)
+2024-10-31 01:27:15-debug: // ---- build task localization-editor：onBeforeBuildAssets ----
+2024-10-31 01:27:15-debug: web-mobile:(onBeforeBuildAssets) in 1 ms21%
+2024-10-31 01:27:15-debug: localization-editor:(onBeforeBuildAssets) start...21%
+2024-10-31 01:27:15-debug: Process: heapTotal 234.77MB heapUsed 214.14MB rss 215.88MB
+2024-10-31 01:27:15-debug: // ---- build task localization-editor：onBeforeBuildAssets ---- (15ms)
+2024-10-31 01:27:15-debug: localization-editor:(onBeforeBuildAssets) in 15 ms23%
+2024-10-31 01:27:15-debug: Process: heapTotal 234.77MB heapUsed 214.18MB rss 215.88MB
+2024-10-31 01:27:15-debug: Build auto-atlas start23%
+2024-10-31 01:27:15-debug: // ---- build task Build auto-atlas ----
+2024-10-31 01:27:15-debug: Start collect pack info
+2024-10-31 01:27:15-debug: // ---- build task Build auto-atlas ---- (1ms)
+2024-10-31 01:27:15-debug: run build task Build auto-atlas success in 1 ms √30%
+2024-10-31 01:27:15-debug: Process: heapTotal 234.77MB heapUsed 214.25MB rss 215.88MB
+2024-10-31 01:27:15-debug: skip compress texture
+2024-10-31 01:27:15-debug: Compress Image start30%
+2024-10-31 01:27:15-debug: // ---- build task Compress Image ----
+2024-10-31 01:27:15-debug: run build task Compress Image success in 0 ms √37%
+2024-10-31 01:27:15-debug: Process: heapTotal 234.77MB heapUsed 214.29MB rss 215.89MB
+2024-10-31 01:27:15-debug: Asset Bundle(internal) handle assets: 20
+2024-10-31 01:27:15-debug: Copy the resource start37%
+2024-10-31 01:27:15-debug: // ---- build task Copy the resource ----
+2024-10-31 01:27:15-debug: Asset Bundle(resources) handle assets: 219
+2024-10-31 01:27:15-debug: Asset Bundle(main) handle assets: 45
+2024-10-31 01:27:15-debug: // ---- build task Copy the resource ---- (63ms)
+2024-10-31 01:27:15-debug: run build task Copy the resource success in 63 ms √43%
+2024-10-31 01:27:15-debug: // ---- build task Build the grouped json and scatter files to the specified location ----
+2024-10-31 01:27:15-debug: Process: heapTotal 234.77MB heapUsed 213.24MB rss 215.72MB
+2024-10-31 01:27:15-debug: Build the grouped json and scatter files to the specified location start43%
+2024-10-31 01:27:16-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mypack/title"Missing uuid: "d4d45a6f-5422-4b19-b144-e90f58d514b6@f9941"
+2024-10-31 01:27:16-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mypack/items/fanqiezz_base/bottom"Missing uuid: "51057c3f-a341-45f0-9810-184b05381d26@f9941"
+2024-10-31 01:27:16-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mypack/items/fanqiezz_base/pro"Missing uuid: "0c20fc1b-fa26-4858-8791-9796cec92f92@f9941"
+2024-10-31 01:27:16-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mypack/items/fanqiezz_base/txtBox/icon"Missing uuid: "e02ed89c-cc09-4061-9af3-2312d2cf8b71@f9941"
+2024-10-31 01:27:16-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mypack/items/pingguozz_base/txtBox/icon"Missing uuid: "e02ed89c-cc09-4061-9af3-2312d2cf8b71@f9941"
+2024-10-31 01:27:16-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mypack/items/fanqiezz_base/txtBox"Missing uuid: "0a2994fb-c6d2-4193-b1ec-a9a95d32d582@f9941"
+2024-10-31 01:27:16-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mypack/items/pingguozz_base/txtBox"Missing uuid: "0a2994fb-c6d2-4193-b1ec-a9a95d32d582@f9941"
+2024-10-31 01:27:16-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mypack/items/qiezizz_base/bottom"Missing uuid: "51057c3f-a341-45f0-9810-184b05381d26@f9941"
+2024-10-31 01:27:16-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mypack/items/pingguozz_base/bottom"Missing uuid: "51057c3f-a341-45f0-9810-184b05381d26@f9941"
+2024-10-31 01:27:16-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mypack/items/qiezizz_base/txtBox/icon"Missing uuid: "e02ed89c-cc09-4061-9af3-2312d2cf8b71@f9941"
+2024-10-31 01:27:16-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mypack/items/huluobozz_base/bottom"Missing uuid: "51057c3f-a341-45f0-9810-184b05381d26@f9941"
+2024-10-31 01:27:16-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mypack/items/huluobozz_base/pro"Missing uuid: "9d2870bc-7d23-4d90-b796-24dddc4c16d1@f9941"
+2024-10-31 01:27:16-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mypack/items/huluobozz_base/txtBox/icon"Missing uuid: "e02ed89c-cc09-4061-9af3-2312d2cf8b71@f9941"
+2024-10-31 01:27:16-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mypack/items/huluobozz_base/txtBox"Missing uuid: "0a2994fb-c6d2-4193-b1ec-a9a95d32d582@f9941"
+2024-10-31 01:27:16-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/store/title"Missing uuid: "d4d45a6f-5422-4b19-b144-e90f58d514b6@f9941"
+2024-10-31 01:27:16-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mypack/items/qiezizz_base/txtBox"Missing uuid: "0a2994fb-c6d2-4193-b1ec-a9a95d32d582@f9941"
+2024-10-31 01:27:16-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mypack/items/pingguozz_base/pro"Missing uuid: "1596f979-8b2f-4b21-87ff-bfae6750a9d3@f9941"
+2024-10-31 01:27:16-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/store/items/fanqiezz/pro"Missing uuid: "0c20fc1b-fa26-4858-8791-9796cec92f92@f9941"
+2024-10-31 01:27:16-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mypack/items/qiezizz_base/pro"Missing uuid: "87952bd7-47ba-49ea-a5b3-4759e401b6d4@f9941"
+2024-10-31 01:27:16-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/store/items/fanqiezz/txtBox/icon"Missing uuid: "e02ed89c-cc09-4061-9af3-2312d2cf8b71@f9941"
+2024-10-31 01:27:16-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/store/items/pingguozz/pro"Missing uuid: "1596f979-8b2f-4b21-87ff-bfae6750a9d3@f9941"
+2024-10-31 01:27:16-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/store/items/pingguozz/txtBox/icon"Missing uuid: "e02ed89c-cc09-4061-9af3-2312d2cf8b71@f9941"
+2024-10-31 01:27:16-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/store/items/pingguozz/txtBox"Missing uuid: "0a2994fb-c6d2-4193-b1ec-a9a95d32d582@f9941"
+2024-10-31 01:27:16-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/store/items/qiezizz/bottom"Missing uuid: "51057c3f-a341-45f0-9810-184b05381d26@f9941"
+2024-10-31 01:27:16-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/store/items/pingguozz/bottom"Missing uuid: "51057c3f-a341-45f0-9810-184b05381d26@f9941"
+2024-10-31 01:27:16-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/store/items/fanqiezz/txtBox"Missing uuid: "0a2994fb-c6d2-4193-b1ec-a9a95d32d582@f9941"
+2024-10-31 01:27:16-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/store/items/qiezizz/txtBox"Missing uuid: "0a2994fb-c6d2-4193-b1ec-a9a95d32d582@f9941"
+2024-10-31 01:27:16-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/store/items/qiezizz/txtBox/icon"Missing uuid: "e02ed89c-cc09-4061-9af3-2312d2cf8b71@f9941"
+2024-10-31 01:27:16-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/store/items/qiezizz/pro"Missing uuid: "87952bd7-47ba-49ea-a5b3-4759e401b6d4@f9941"
+2024-10-31 01:27:16-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/store/items/huluobozz/pro"Missing uuid: "9d2870bc-7d23-4d90-b796-24dddc4c16d1@f9941"
+2024-10-31 01:27:16-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/store/items/huluobozz/txtBox/icon"Missing uuid: "e02ed89c-cc09-4061-9af3-2312d2cf8b71@f9941"
+2024-10-31 01:27:16-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/store/items/huluobozz/txtBox"Missing uuid: "0a2994fb-c6d2-4193-b1ec-a9a95d32d582@f9941"
+2024-10-31 01:27:16-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/paihang/title"Missing uuid: "d4d45a6f-5422-4b19-b144-e90f58d514b6@f9941"
+2024-10-31 01:27:16-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/paihang/items/box/txtBox/pro"Missing uuid: "0c20fc1b-fa26-4858-8791-9796cec92f92@f9941"
+2024-10-31 01:27:16-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/paihang/items/box/txtBox/icon"Missing uuid: "42c066de-15a2-4aab-8c98-1111848639ab@f9941"
+2024-10-31 01:27:16-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/paihang/items/box/txtBox/top"Missing uuid: "5f2902d9-b2b0-43e2-8dad-f95e60a89318@f9941"
+2024-10-31 01:27:16-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/paihang/items/box/txtBox"Missing uuid: "0a2994fb-c6d2-4193-b1ec-a9a95d32d582@f9941"
+2024-10-31 01:27:16-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/paihang/sharebtn"Missing uuid: "874a12c0-9d84-4805-b1d3-d9e0a3291912@f9941"
+2024-10-31 01:27:16-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/store/items/fanqiezz/bottom"Missing uuid: "51057c3f-a341-45f0-9810-184b05381d26@f9941"
+2024-10-31 01:27:16-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mysalepack/items/fanqie_base/bottom"Missing uuid: "51057c3f-a341-45f0-9810-184b05381d26@f9941"
+2024-10-31 01:27:16-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mysalepack/items/fanqie_base/pro"Missing uuid: "a5d5767a-7e8e-48de-a3b7-535f1fb21956@f9941"
+2024-10-31 01:27:16-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mysalepack/items/fanqie_base/txtBox/icon"Missing uuid: "e02ed89c-cc09-4061-9af3-2312d2cf8b71@f9941"
+2024-10-31 01:27:16-warn: The SpriteFrame used by component "cc.Button" is missing. Detailed information:Node path: "MainCanvas/popBox/paihang/sharebtn"Missing uuid: "874a12c0-9d84-4805-b1d3-d9e0a3291912@f9941"
+2024-10-31 01:27:16-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mysalepack/items/fanqie_base/txtBox"Missing uuid: "0a2994fb-c6d2-4193-b1ec-a9a95d32d582@f9941"
+2024-10-31 01:27:16-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mysalepack/items/pingguo_base/bottom"Missing uuid: "51057c3f-a341-45f0-9810-184b05381d26@f9941"
+2024-10-31 01:27:16-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mysalepack/items/pingguo_base/txtBox/icon"Missing uuid: "e02ed89c-cc09-4061-9af3-2312d2cf8b71@f9941"
+2024-10-31 01:27:16-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mysalepack/items/pingguo_base/txtBox"Missing uuid: "0a2994fb-c6d2-4193-b1ec-a9a95d32d582@f9941"
+2024-10-31 01:27:16-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mysalepack/title"Missing uuid: "d4d45a6f-5422-4b19-b144-e90f58d514b6@f9941"
+2024-10-31 01:27:16-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mysalepack/items/qiezi_base/bottom"Missing uuid: "51057c3f-a341-45f0-9810-184b05381d26@f9941"
+2024-10-31 01:27:16-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mysalepack/items/qiezi_base/pro"Missing uuid: "44c42f64-381f-4214-acb8-f44123965e8a@f9941"
+2024-10-31 01:27:16-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mysalepack/items/qiezi_base/txtBox"Missing uuid: "0a2994fb-c6d2-4193-b1ec-a9a95d32d582@f9941"
+2024-10-31 01:27:16-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mysalepack/items/qiezi_base/txtBox/icon"Missing uuid: "e02ed89c-cc09-4061-9af3-2312d2cf8b71@f9941"
+2024-10-31 01:27:16-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mysalepack/items/huluobo_base/pro"Missing uuid: "e89b6cf7-b760-4cb5-81e9-452fd2ab5251@f9941"
+2024-10-31 01:27:16-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mysalepack/items/huluobo_base/txtBox/icon"Missing uuid: "e02ed89c-cc09-4061-9af3-2312d2cf8b71@f9941"
+2024-10-31 01:27:16-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mysalepack/items/huluobo_base/txtBox"Missing uuid: "0a2994fb-c6d2-4193-b1ec-a9a95d32d582@f9941"
+2024-10-31 01:27:16-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/msgBox/msgBg"Missing uuid: "d4d45a6f-5422-4b19-b144-e90f58d514b6@f9941"
+2024-10-31 01:27:16-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mysalepack/items/pingguo_base/pro"Missing uuid: "672e10a5-30cd-421b-80ac-893de921c47e@f9941"
+2024-10-31 01:27:16-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mysalepack/items/huluobo_base/bottom"Missing uuid: "51057c3f-a341-45f0-9810-184b05381d26@f9941"
+2024-10-31 01:27:16-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/store/items/huluobozz/bottom"Missing uuid: "51057c3f-a341-45f0-9810-184b05381d26@f9941"
+2024-10-31 01:27:16-debug: // ---- build task Build the grouped json and scatter files to the specified location ---- (558ms)
+2024-10-31 01:27:16-debug: run build task Build the grouped json and scatter files to the specified location success in 558 ms √50%
+2024-10-31 01:27:16-debug: Compress zip bundle start50%
+2024-10-31 01:27:16-debug: // ---- build task Compress zip bundle ----
+2024-10-31 01:27:16-debug: Process: heapTotal 239.67MB heapUsed 219.60MB rss 222.81MB
+2024-10-31 01:27:16-debug: // ---- build task Compress zip bundle ---- (1ms)
+2024-10-31 01:27:16-debug: run build task Compress zip bundle success in 1 ms √57%
+2024-10-31 01:27:16-debug: Process: heapTotal 239.67MB heapUsed 219.65MB rss 222.81MB
+2024-10-31 01:27:16-debug: Build script start57%
+2024-10-31 01:27:16-debug: // ---- build task Build script ----
+2024-10-31 01:27:30-debug: Build project script start...57%
+2024-10-31 01:27:30-debug: Process: heapTotal 222.52MB heapUsed 215.33MB rss 180.26MB
+2024-10-31 01:27:31-log: Run build task(build-script) in child, see: chrome://inspect/#devices
+2024-10-31 01:27:32-warn: [build-script][[Build.Script.Rollup]] Circular dependency: file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/genPlant.ts -> file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/main.ts -> file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/genPlant.ts
+2024-10-31 01:27:37-debug: excute-script over with build-script 6946ms
+2024-10-31 01:27:37-debug: Copy externalScripts success!
+2024-10-31 01:27:37-debug: Build project script in (6976 ms) √57%
+2024-10-31 01:27:37-debug: Build engine start...57%
+2024-10-31 01:27:37-debug: Process: heapTotal 223.52MB heapUsed 214.82MB rss 180.66MB
+2024-10-31 01:27:38-debug: Use cache engine: {link(C:\Users\ADMINI~1\AppData\Local\Temp\CocosCreator\3.6.1\builder\engine\fde329c401c641771bff368eaccc979a)}
+2024-10-31 01:27:38-debug: {"debug":false,"sourceMaps":false,"includeModules":["2d","animation","audio","base","dragon-bones","gfx-webgl","gfx-webgl2","intersection-2d","marionette","particle-2d","physics-2d-box2d","profiler","skeletal-animation","spine","tiled-map","tween","ui","video","webview","xr"],"engineVersion":"3.6.1","platform":"HTML5","md5Map":[],"engineName":"cocos-js","useCache":true,"split":false,"ammoJsWasm":"fallback","assetURLFormat":"runtime-resolved","flags":{"DEBUG":false},"entry":"D:\\cocos-dashboard-editors\\Creator\\3.6.1\\resources\\resources\\3d\\engine"}
+2024-10-31 01:27:38-debug: Build engine in (142 ms) √57%
+2024-10-31 01:27:38-debug: // ---- build task Build script ---- (21936ms)
+2024-10-31 01:27:38-debug: run build task Build script success in 21936 ms √63%
+2024-10-31 01:27:38-debug: Process: heapTotal 222.52MB heapUsed 215.50MB rss 180.29MB
+2024-10-31 01:27:38-debug: // ---- build task Add md5 suffix to assets ----
+2024-10-31 01:27:38-debug: Add md5 suffix to assets start63%
+2024-10-31 01:27:38-debug: // ---- build task Add md5 suffix to assets ---- (1ms)
+2024-10-31 01:27:38-debug: run build task Add md5 suffix to assets success in 1 ms √73%
+2024-10-31 01:27:38-debug: Process: heapTotal 222.52MB heapUsed 215.54MB rss 180.34MB
+2024-10-31 01:27:38-debug: Init settings and config start73%
+2024-10-31 01:27:38-debug: // ---- build task Init settings and config ----
+2024-10-31 01:27:38-debug: run build task Init settings and config success in 0 ms √74%
+2024-10-31 01:27:38-debug: builder.tasks.settings.macro does not defined in i18n
+2024-10-31 01:27:38-debug: Process: heapTotal 222.52MB heapUsed 215.60MB rss 180.40MB
+2024-10-31 01:27:38-debug: builder.tasks.settings.macro start74%
+2024-10-31 01:27:38-debug: // ---- build task builder.tasks.settings.macro ----
+2024-10-31 01:27:38-debug: // ---- build task builder.tasks.settings.macro ---- (12ms)
+2024-10-31 01:27:38-debug: run build task builder.tasks.settings.macro success in 12 ms √74%
+2024-10-31 01:27:38-debug: Sort some build options to settings.json start74%
+2024-10-31 01:27:38-debug: // ---- build task Sort some build options to settings.json ----
+2024-10-31 01:27:38-debug: Process: heapTotal 222.52MB heapUsed 215.64MB rss 180.45MB
+2024-10-31 01:27:38-error: Error: ENOENT: no such file or directory, open 'C:\Users\Administrator\Desktop\1d069728-e5a1-4428-8654-4deea60099b1.gif'    at Object.openSync (fs.js:476:3)    at Object.func [as openSync] (electron/js2c/asar_bundle.js:5:1846)    at readFileSync (fs.js:377:35)    at e.readFileSync (electron/js2c/asar_bundle.js:5:8872)    at formatSplashScreen (D:\cocos-dashboard-editors\Creator\3.6.1\resources\app.asar\builtin\builder\dist\worker\builder\setting-task\options.ccc:1:1427)    at BuildTask.handle (D:\cocos-dashboard-editors\Creator\3.6.1\resources\app.asar\builtin\builder\dist\worker\builder\setting-task\options.ccc:1:1010)    at BuildTask.runBuildTask (D:\cocos-dashboard-editors\Creator\3.6.1\resources\app.asar\builtin\builder\dist\worker\builder\index.ccc:1:7774)    at BuildTask.build (D:\cocos-dashboard-editors\Creator\3.6.1\resources\app.asar\builtin\builder\dist\worker\builder\index.ccc:1:3648)    at Ipc.<anonymous> (D:\cocos-dashboard-editors\Creator\3.6.1\resources\app.asar\builtin\builder\dist\worker\index.ccc:1:4492)
+2024-10-31 01:27:38-error: Copy screen image failed, please check whether the splash screen configuration data is normal, splashScreen: {"url":"C:\\Users\\Administrator\\Desktop\\1d069728-e5a1-4428-8654-4deea60099b1.gif","displayRatio":0,"totalTime":0,"effect":"","clearColor":{"x":0,"y":0,"z":0,"w":0},"displayWatermark":false}
+2024-10-31 01:27:38-debug: // ---- build task Sort some build options to settings.json ---- (14ms)
+2024-10-31 01:27:38-debug: run build task Sort some build options to settings.json success in 14 ms √75%
+2024-10-31 01:27:38-debug: Process: heapTotal 222.52MB heapUsed 215.83MB rss 180.59MB
+2024-10-31 01:27:38-debug: // ---- build task custom joint texture layouts ----
+2024-10-31 01:27:38-debug: custom joint texture layouts start75%
+2024-10-31 01:27:38-debug: // ---- build task custom joint texture layouts ---- (13ms)
+2024-10-31 01:27:38-debug: run build task custom joint texture layouts success in 13 ms √76%
+2024-10-31 01:27:38-debug: custom joint physics start76%
+2024-10-31 01:27:38-debug: // ---- build task custom joint physics ----
+2024-10-31 01:27:38-debug: Process: heapTotal 222.52MB heapUsed 215.88MB rss 180.64MB
+2024-10-31 01:27:38-debug: run build task custom joint physics success in 0 ms √76%
+2024-10-31 01:27:38-debug: Fill script data to settings start76%
+2024-10-31 01:27:38-debug: Process: heapTotal 222.52MB heapUsed 215.92MB rss 180.68MB
+2024-10-31 01:27:38-debug: // ---- build task Fill script data to settings ----
+2024-10-31 01:27:38-debug: // ---- build task Fill script data to settings ---- (1ms)
+2024-10-31 01:27:38-debug: run build task Fill script data to settings success in 1 ms √77%
+2024-10-31 01:27:38-debug: Process: heapTotal 223.02MB heapUsed 215.36MB rss 180.07MB
+2024-10-31 01:27:38-debug: Fill scene data to settings start77%
+2024-10-31 01:27:38-debug: // ---- build task Fill scene data to settings ----
+2024-10-31 01:27:38-debug: // ---- build task Fill scene data to settings ---- (1ms)
+2024-10-31 01:27:38-debug: run build task Fill scene data to settings success in 1 ms √77%
+2024-10-31 01:27:38-debug: Process: heapTotal 223.02MB heapUsed 215.40MB rss 180.12MB
+2024-10-31 01:27:38-debug: Organize assets groups，generate packedAssets and rawAssets data start77%
+2024-10-31 01:27:38-debug: // ---- build task Organize assets groups，generate packedAssets and rawAssets data ----
+2024-10-31 01:27:38-debug: // ---- build task Organize assets groups，generate packedAssets and rawAssets data ---- (1ms)
+2024-10-31 01:27:38-debug: run build task Organize assets groups，generate packedAssets and rawAssets data success in 1 ms √78%
+2024-10-31 01:27:38-debug: Process: heapTotal 223.02MB heapUsed 215.55MB rss 180.26MB
+2024-10-31 01:27:38-debug: Generate md5AssetsMap from suffixMap to settings start78%
+2024-10-31 01:27:38-debug: // ---- build task Generate md5AssetsMap from suffixMap to settings ----
+2024-10-31 01:27:38-debug: options.md5Cache is false.
+2024-10-31 01:27:38-debug: // ---- build task Generate md5AssetsMap from suffixMap to settings ---- (1ms)
+2024-10-31 01:27:38-debug: run build task Generate md5AssetsMap from suffixMap to settings success in 1 ms √78%
+2024-10-31 01:27:38-debug: // ---- build task web-mobile：onBeforeCompressSettings ----
+2024-10-31 01:27:38-debug: Process: heapTotal 223.02MB heapUsed 215.60MB rss 180.32MB
+2024-10-31 01:27:38-debug: web-mobile:(onBeforeCompressSettings) start...78%
+2024-10-31 01:27:38-debug: // ---- build task web-mobile：onBeforeCompressSettings ---- (1ms)
+2024-10-31 01:27:38-debug: web-mobile:(onBeforeCompressSettings) in 1 ms81%
+2024-10-31 01:27:38-debug: cocos-service:(onBeforeCompressSettings) start...81%
+2024-10-31 01:27:38-debug: Process: heapTotal 223.02MB heapUsed 215.65MB rss 180.37MB
+2024-10-31 01:27:38-debug: // ---- build task cocos-service：onBeforeCompressSettings ----
+2024-10-31 01:27:38-debug: // ---- build task cocos-service：onBeforeCompressSettings ---- (175ms)
+2024-10-31 01:27:38-debug: cocos-service:(onBeforeCompressSettings) in 175 ms83%
+2024-10-31 01:27:38-debug: // ---- build task Build import-map.json ----
+2024-10-31 01:27:38-debug: Build import-map.json start83%
+2024-10-31 01:27:38-debug: Process: heapTotal 223.02MB heapUsed 215.72MB rss 180.43MB
+2024-10-31 01:27:38-debug: // ---- build task Build import-map.json ---- (12ms)
+2024-10-31 01:27:38-debug: Compress settings.json and config.json start84%
+2024-10-31 01:27:38-debug: run build task Build import-map.json success in 12 ms √84%
+2024-10-31 01:27:38-debug: // ---- build task Compress settings.json and config.json ----
+2024-10-31 01:27:38-debug: Process: heapTotal 223.02MB heapUsed 215.77MB rss 180.48MB
+2024-10-31 01:27:38-debug: // ---- build task Compress settings.json and config.json ---- (5ms)
+2024-10-31 01:27:38-debug: // ---- build task Save config.json ----
+2024-10-31 01:27:38-debug: Process: heapTotal 223.02MB heapUsed 216.05MB rss 180.88MB
+2024-10-31 01:27:38-debug: Save config.json start85%
+2024-10-31 01:27:38-debug: run build task Compress settings.json and config.json success in 5 ms √85%
+2024-10-31 01:27:38-debug: // ---- build task Save config.json ---- (10ms)
+2024-10-31 01:27:38-debug: run build task Save config.json success in 10 ms √86%
+2024-10-31 01:27:38-debug: Process: heapTotal 223.02MB heapUsed 215.45MB rss 180.30MB
+2024-10-31 01:27:38-debug: // ---- build task Save Settings.json ----
+2024-10-31 01:27:38-debug: Save Settings.json start86%
+2024-10-31 01:27:38-debug: // ---- build task Save Settings.json ---- (1ms)
+2024-10-31 01:27:38-debug: run build task Save Settings.json success in 1 ms √87%
+2024-10-31 01:27:38-debug: Process: heapTotal 223.02MB heapUsed 215.57MB rss 180.44MB
+2024-10-31 01:27:38-debug: Sort build template start87%
+2024-10-31 01:27:38-debug: // ---- build task Sort build template ----
+2024-10-31 01:27:38-debug: // ---- build task Sort build template ---- (78ms)
+2024-10-31 01:27:38-debug: run build task Sort build template success in 78 ms √88%
+2024-10-31 01:27:38-debug: Process: heapTotal 224.77MB heapUsed 216.78MB rss 183.21MB
+2024-10-31 01:27:38-debug: // ---- build task cocos-service：onAfterCompressSettings ----
+2024-10-31 01:27:38-debug: cocos-service:(onAfterCompressSettings) start...88%
+2024-10-31 01:27:38-debug: // ---- build task cocos-service：onAfterCompressSettings ---- (160ms)
+2024-10-31 01:27:38-debug: cocos-service:(onAfterCompressSettings) in 160 ms90%
+2024-10-31 01:27:38-debug: // ---- build task web-mobile：onAfterBuild ----
+2024-10-31 01:27:38-debug: Process: heapTotal 227.02MB heapUsed 217.61MB rss 183.24MB
+2024-10-31 01:27:38-debug: web-mobile:(onAfterBuild) start...90%
+2024-10-31 01:27:38-debug: Use build-template {link(E:\lianlukeji\frontend\cocos\menghuanfarm\build-templates\web-mobile)}.
+2024-10-31 01:27:38-debug: // ---- build task web-mobile：onAfterBuild ---- (90ms)
+2024-10-31 01:27:38-debug: web-mobile:(onAfterBuild) in 90 ms92%
+2024-10-31 01:27:38-debug: // ---- build task cocos-service：onAfterBuild ----
+2024-10-31 01:27:38-debug: Process: heapTotal 227.02MB heapUsed 217.69MB rss 184.32MB
+2024-10-31 01:27:38-debug: cocos-service:(onAfterBuild) start...92%
+2024-10-31 01:27:39-debug: // ---- build task cocos-service：onAfterBuild ---- (162ms)
+2024-10-31 01:27:39-debug: cocos-service:(onAfterBuild) in 162 ms94%
+2024-10-31 01:27:39-debug: builder:build-project-total (24769ms)
+2024-10-31 01:27:39-debug: build success in 24769 ms!
+2024-10-31 01:27:39-debug: ================================ Build Task (web-mobile) Finished in (24775)ms ================================
+2024-10-31 01:29:07-debug: // ---- builder:run-build-stage-run ----
+2024-10-31 01:29:07-debug: web-mobile:(run) start...
+2024-10-31 01:29:07-debug: // ---- build task web-mobile：run ----
+2024-10-31 01:29:07-debug: init options success
+2024-10-31 01:29:07-debug: web-mobile:(run) in null ms √
+2024-10-31 01:29:07-log: [task:run]: success!
+2024-10-31 01:36:48-debug: =================================== Build Task (web-mobile) Start ================================
+2024-10-31 01:36:48-debug: Start build task, options:{"name":"PlantStore","platform":"web-mobile","buildPath":"project://build","debug":false,"md5Cache":false,"skipCompressTexture":true,"sourceMaps":false,"polyfills":{"asyncFunctions":true,"coreJs":true},"experimentalEraseModules":false,"useBuiltinServer":false,"mainBundleIsRemote":false,"mainBundleCompressionType":"none","replaceSplashScreen":true,"startScene":"5a6f4efe-edd1-4c9d-adc3-c28f8d58012d","outputName":"web-mobile","scenes":[{"url":"db://assets/scene/main.scene","uuid":"5a6f4efe-edd1-4c9d-adc3-c28f8d58012d","inBundle":false}],"windows":[],"packages":{"web-mobile":{"orientation":"portrait","__version__":"1.0.1","embedWebDebugger":false},"cocos-service":{"configID":"8defd1","services":[],"__version__":"3.0.7","sdkHubConfigID":"5c53db","sdkHubConfig":{"id":"5c53db","name":"HUAWEI  AppGallery Connect","platform":"3","channelID":"161221","channelName":"HUAWEI  AppGallery Connect","remarks":"HUAWEI  AppGallery Connect","plugins":[{"hasParam":false,"pParam":{},"pId":"2412","pName":"HUAWEI HMS","packageName":"huawei-hms","pType":30,"pUseType":30,"hasLocal":true,"hasUpdate":false,"requireParam":true,"pVersion":"2.0.3_6.3.0","isInstall":false,"installProgress":true}]}}},"__version__":"1.3.3","web-mobile":[]}
+2024-10-31 01:36:48-debug: // ---- build task cocos-service：onBeforeBuild ----
+2024-10-31 01:36:48-debug: Process: heapTotal 238.88MB heapUsed 231.64MB rss 195.53MB
+2024-10-31 01:36:48-debug: cocos-service:(onBeforeBuild) start...0%
+2024-10-31 01:36:48-debug: Build with Cocos Creator 3.6.1
+2024-10-31 01:36:48-debug: // ---- build task cocos-service：onBeforeBuild ---- (207ms)
+2024-10-31 01:36:48-debug: cocos-service:(onBeforeBuild) in 207 ms2%
+2024-10-31 01:36:48-debug: Query all assets info in project
+2024-10-31 01:36:48-debug: init custom config: keepNodeUuid: false, useCache: true
+2024-10-31 01:36:48-debug: BuildAssetLibrary query-assets with assets 410
+2024-10-31 01:36:48-debug:   Number of all scenes: 2
+2024-10-31 01:36:48-debug:   Number of all scripts: 18
+2024-10-31 01:36:48-debug: BuildAssetLibrary initialized with asset 641!
+2024-10-31 01:36:48-debug: // ---- build task web-mobile：onAfterInit ----
+2024-10-31 01:36:48-debug: Process: heapTotal 240.66MB heapUsed 232.87MB rss 197.64MB
+2024-10-31 01:36:48-debug:   Number of other assets: 741
+2024-10-31 01:36:48-debug: web-mobile:(onAfterInit) start...2%
+2024-10-31 01:36:48-debug: // ---- build task web-mobile：onAfterInit ---- (90ms)
+2024-10-31 01:36:48-debug: web-mobile:(onAfterInit) in 90 ms4%
+2024-10-31 01:36:48-debug: cocos-service:(onAfterInit) start...4%
+2024-10-31 01:36:48-debug: Process: heapTotal 240.66MB heapUsed 232.88MB rss 197.61MB
+2024-10-31 01:36:48-debug: // ---- build task cocos-service：onAfterInit ----
+2024-10-31 01:36:48-debug: // ---- build task cocos-service：onAfterInit ---- (159ms)
+2024-10-31 01:36:48-debug: localization-editor:(onAfterInit) start...7%
+2024-10-31 01:36:48-debug: // ---- build task localization-editor：onAfterInit ----
+2024-10-31 01:36:48-debug: Process: heapTotal 240.66MB heapUsed 232.95MB rss 197.68MB
+2024-10-31 01:36:48-debug: cocos-service:(onAfterInit) in 159 ms7%
+2024-10-31 01:36:48-debug: // ---- build task localization-editor：onAfterInit ---- (7ms)
+2024-10-31 01:36:48-debug: localization-editor:(onAfterInit) in 7 ms9%
+2024-10-31 01:36:48-debug: Reload project scripts start9%
+2024-10-31 01:36:48-debug: // ---- build task Reload project scripts ----
+2024-10-31 01:36:48-debug: Process: heapTotal 240.66MB heapUsed 232.99MB rss 197.73MB
+2024-10-31 01:36:48-debug: reload all scripts.
+2024-10-31 01:36:48-debug: Incremental keys: 
+2024-10-31 01:36:48-debug: Set detail map pack:///resolution-detail-map.json: {}
+2024-10-31 01:36:48-debug: Unregister AudioManager
+2024-10-31 01:36:48-debug: Unregister AdaptiveCanvas
+2024-10-31 01:36:48-debug: Unregister AutoScaleImages
+2024-10-31 01:36:48-debug: Unregister GenBlock
+2024-10-31 01:36:48-debug: Unregister GenInfo
+2024-10-31 01:36:48-debug: Unregister circles
+2024-10-31 01:36:48-debug: Unregister main
+2024-10-31 01:36:48-debug: Unregister timer
+2024-10-31 01:36:48-debug: Unregister genPlant
+2024-10-31 01:36:48-debug: Unregister DrawRoundedRect
+2024-10-31 01:36:48-debug: Unregister scaleAction
+2024-10-31 01:36:48-debug: Unregister GenBag
+2024-10-31 01:36:48-debug: Unregister SceneSwitcher
+2024-10-31 01:36:48-debug: Invalidating 'pack:///chunks/d0/d0b282b9748ef7fc7d2e7bd647d71b0f7e84da53.js'
+2024-10-31 01:36:48-debug: Invalidating 'pack:///chunks/83/83fe46e5327bdefafe5cde6e8639da85f39d412a.js'
+2024-10-31 01:36:48-debug: Invalidating 'pack:///chunks/45/4585d44a0ad09ac97ab1d083b6be4c8e668fee17.js'
+2024-10-31 01:36:48-debug: Invalidating 'pack:///chunks/7b/7b712927d5fe75ea51e960b23175f56ad04f1300.js'
+2024-10-31 01:36:48-debug: Invalidating 'pack:///chunks/00/00fb00a3d09d59a2caf0a4c6a656b0768df7c940.js'
+2024-10-31 01:36:48-debug: Invalidating 'pack:///chunks/9b/9b3897730c12b372132a3c203f2f22c69208f515.js'
+2024-10-31 01:36:48-debug: Invalidating 'pack:///chunks/40/40841bcca050e87db8b878c42154ece44ed3e5ba.js'
+2024-10-31 01:36:48-debug: Invalidating 'pack:///chunks/84/84741ad843cea9a440c5d8c2d379669b6551400d.js'
+2024-10-31 01:36:48-debug: Invalidating 'pack:///chunks/4e/4ee8315e8f460a527be6fa778d5f4048b98265e1.js'
+2024-10-31 01:36:48-debug: Invalidating 'pack:///chunks/bd/bd2b48ecca795cd184de9b72bade57e0361ece74.js'
+2024-10-31 01:36:48-debug: Unregister GenShop
+2024-10-31 01:36:48-debug: Invalidating 'pack:///chunks/ae/ae69b84bff0384e0c679ba04c685a28bd8ca3343.js'
+2024-10-31 01:36:48-debug: Invalidating 'pack:///chunks/6f/6f32fc724f2005aba45c2b9d3ca9852c2451b9b6.js'
+2024-10-31 01:36:48-debug: Invalidating 'pack:///chunks/27/2701a48d14de7467228223bd6c79ee5ec393dff2.js'
+2024-10-31 01:36:48-debug: Invalidating 'pack:///chunks/3c/3c02a178cd627d4fd64910d978c93fabe6f313be.js'
+2024-10-31 01:36:48-debug: Invalidating 'pack:///chunks/57/57aa3a73746d22d6e6fea20d4c04eb5fca3e2f83.js'
+2024-10-31 01:36:48-debug: Invalidating 'pack:///chunks/b0/b02df7dbd12a416e5ab2ccdb1f7fac565e85be68.js'
+2024-10-31 01:36:48-debug: Invalidating 'pack:///chunks/cd/cdb3eb41f58b0773a35466a0ffdca226ff4c143c.js'
+2024-10-31 01:36:48-debug: Invalidating 'pack:///chunks/e9/e91872bed1ce02ef8c0b8a1bd97039426629c4c6.js'
+2024-10-31 01:36:48-debug: Invalidating 'pack:///chunks/0d/0d5541f1fd3a71e0d0240c5e19547531a0a3f398.js'
+2024-10-31 01:36:48-debug: [[Executor]] Module "pack:///chunks/d0/d0b282b9748ef7fc7d2e7bd647d71b0f7e84da53.js" loaded.
+2024-10-31 01:36:48-debug: Invalidating 'pack:///chunks/a7/a77d21d1303f8e9e0be90060b9a1b34a32c4c60d.js'
+2024-10-31 01:36:48-debug: Invalidating 'pack:///chunks/8d/8d1d8c6c32248b90683bf11c884a686bb510c189.js'
+2024-10-31 01:36:48-debug: E:\lianlukeji\frontend\cocos\menghuanfarm\temp\programming\packer-driver\targets\editor\chunks\9b\9b3897730c12b372132a3c203f2f22c69208f515.js resolved to E:\lianlukeji\frontend\cocos\menghuanfarm\temp\programming\packer-driver\targets\editor\chunks\9b\9b3897730c12b372132a3c203f2f22c69208f515.js is not in module cache!
+2024-10-31 01:36:48-debug: [[Executor]] Module "pack:///chunks/9b/9b3897730c12b372132a3c203f2f22c69208f515.js" loaded.
+2024-10-31 01:36:48-debug: E:\lianlukeji\frontend\cocos\menghuanfarm\temp\programming\packer-driver\targets\editor\chunks\83\83fe46e5327bdefafe5cde6e8639da85f39d412a.js resolved to E:\lianlukeji\frontend\cocos\menghuanfarm\temp\programming\packer-driver\targets\editor\chunks\83\83fe46e5327bdefafe5cde6e8639da85f39d412a.js is not in module cache!
+2024-10-31 01:36:48-debug: [[Executor]] Register AdaptiveCanvas
+2024-10-31 01:36:48-debug: [[Executor]] Module "pack:///chunks/45/4585d44a0ad09ac97ab1d083b6be4c8e668fee17.js" loaded.
+2024-10-31 01:36:48-debug: [[Executor]] Register AutoScaleImages
+2024-10-31 01:36:48-debug: [[Executor]] Module "pack:///chunks/83/83fe46e5327bdefafe5cde6e8639da85f39d412a.js" loaded.
+2024-10-31 01:36:48-debug: [[Executor]] Module "pack:///chunks/84/84741ad843cea9a440c5d8c2d379669b6551400d.js" loaded.
+2024-10-31 01:36:48-debug: [[Executor]] Register AudioManager
+2024-10-31 01:36:48-debug: [[Executor]] Module "pack:///chunks/7b/7b712927d5fe75ea51e960b23175f56ad04f1300.js" loaded.
+2024-10-31 01:36:48-debug: [[Executor]] Module "pack:///chunks/4e/4ee8315e8f460a527be6fa778d5f4048b98265e1.js" loaded.
+2024-10-31 01:36:48-debug: [[Executor]] Module "pack:///chunks/00/00fb00a3d09d59a2caf0a4c6a656b0768df7c940.js" loaded.
+2024-10-31 01:36:48-debug: [[Executor]] Module "pack:///chunks/40/40841bcca050e87db8b878c42154ece44ed3e5ba.js" loaded.
+2024-10-31 01:36:48-debug: [[Executor]] Module "pack:///chunks/bd/bd2b48ecca795cd184de9b72bade57e0361ece74.js" loaded.
+2024-10-31 01:36:48-debug: [[Executor]] Register GenBlock
+2024-10-31 01:36:48-debug: [[Executor]] Module "pack:///chunks/ae/ae69b84bff0384e0c679ba04c685a28bd8ca3343.js" loaded.
+2024-10-31 01:36:48-debug: [[Executor]] Register GenInfo
+2024-10-31 01:36:48-debug: [[Executor]] Module "pack:///chunks/6f/6f32fc724f2005aba45c2b9d3ca9852c2451b9b6.js" loaded.
+2024-10-31 01:36:48-debug: [[Executor]] Register timer
+2024-10-31 01:36:48-debug: [[Executor]] Module "pack:///chunks/57/57aa3a73746d22d6e6fea20d4c04eb5fca3e2f83.js" loaded.
+2024-10-31 01:36:48-debug: [[Executor]] Register main
+2024-10-31 01:36:48-debug: [[Executor]] Module "pack:///chunks/3c/3c02a178cd627d4fd64910d978c93fabe6f313be.js" loaded.
+2024-10-31 01:36:48-debug: [[Executor]] Register circles
+2024-10-31 01:36:48-debug: [[Executor]] Register genPlant
+2024-10-31 01:36:48-debug: [[Executor]] Module "pack:///chunks/b0/b02df7dbd12a416e5ab2ccdb1f7fac565e85be68.js" loaded.
+2024-10-31 01:36:48-debug: [[Executor]] Register GenBag
+2024-10-31 01:36:48-debug: [[Executor]] Module "pack:///chunks/a7/a77d21d1303f8e9e0be90060b9a1b34a32c4c60d.js" loaded.
+2024-10-31 01:36:48-debug: [[Executor]] Module "pack:///chunks/27/2701a48d14de7467228223bd6c79ee5ec393dff2.js" loaded.
+2024-10-31 01:36:48-debug: [[Executor]] Register DrawRoundedRect
+2024-10-31 01:36:48-debug: [[Executor]] Module "pack:///chunks/cd/cdb3eb41f58b0773a35466a0ffdca226ff4c143c.js" loaded.
+2024-10-31 01:36:48-debug: [[Executor]] Register scaleAction
+2024-10-31 01:36:48-debug: [[Executor]] Module "pack:///chunks/e9/e91872bed1ce02ef8c0b8a1bd97039426629c4c6.js" loaded.
+2024-10-31 01:36:48-warn: The type of "scaleAction.isChild" must be CCBoolean, not Boolean.
+2024-10-31 01:36:48-debug: [[Executor]] Module "pack:///chunks/0d/0d5541f1fd3a71e0d0240c5e19547531a0a3f398.js" loaded.
+2024-10-31 01:36:48-warn: The type of "SceneSwitcher.sceneName" must be CCString, not String.
+2024-10-31 01:36:48-debug: [[Executor]] Module "pack:///chunks/8d/8d1d8c6c32248b90683bf11c884a686bb510c189.js" loaded.
+2024-10-31 01:36:48-debug: [[Executor]] Module "pack:///chunks/9b/9b3897730c12b372132a3c203f2f22c69208f515.js" loaded.
+2024-10-31 01:36:48-debug: [[Executor]] Register GenShop
+2024-10-31 01:36:48-debug: [[Executor]] Register SceneSwitcher
+2024-10-31 01:36:48-debug: // ---- build task Reload project scripts ---- (43ms)
+2024-10-31 01:36:48-debug: run build task Reload project scripts success in 43 ms √10%
+2024-10-31 01:36:48-debug: // ---- build task Query asset bundle ----
+2024-10-31 01:36:48-debug: Process: heapTotal 240.91MB heapUsed 233.16MB rss 197.21MB
+2024-10-31 01:36:48-debug: Query asset bundle start10%
+2024-10-31 01:36:48-debug: // ---- build task Query asset bundle ---- (13ms)
+2024-10-31 01:36:48-debug: run build task Query asset bundle success in 13 ms √11%
+2024-10-31 01:36:48-debug: Process: heapTotal 240.91MB heapUsed 233.23MB rss 197.26MB
+2024-10-31 01:36:48-debug: // ---- build task Query and organize assets ----
+2024-10-31 01:36:48-debug: Query and organize assets start11%
+2024-10-31 01:36:48-debug: Query preload assets from cc.config.json: 60f7195c-ec2a-45eb-ba94-8955f60e81d0,1c02ae6f-4492-4915-b8f8-7492a3b1e4cd,810e96e4-e456-4468-9b59-f4e8f39732c0,efe8e2a3-eace-427b-b4f1-cb8a937ec77d,e9aa9a3e-5b2b-4ac7-a2c7-073de2b2b24f,8bbdbcdd-5cd4-4100-b6d5-b7c9625b6107,50f4348b-c883-4e2f-8f11-ce233b859fa1,fda095cb-831d-4601-ad94-846013963de8,f92806d7-1768-443f-afe8-12bcde84d0f0,dd3a144d-ab7f-41f0-82b8-2e43a090d496,f0416e68-0200-4b77-a926-4f9d16e494da,ff9be190-20a4-4e48-b68c-76e3c7cff085,970b0598-bcb0-4714-91fb-2e81440dccd8,bcd64cc6-2dd9-43f6-abbe-66318d332032,d930590d-bb92-4cc8-8bd1-23cd027f9edf,a3cd009f-0ab0-420d-9278-b9fdab939bbc,9361fd90-ba52-4f84-aa93-6e878fd576ca,871c3b6c-7379-419d-bda3-794b239ab90d,c27215d8-6835-4b68-bfbb-bdeac6100c04,b5d6115f-0370-4d7c-aad3-c194cc71cf98
+2024-10-31 01:36:48-debug: Number of scenes: 1
+2024-10-31 01:36:48-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mypack/title"Missing uuid: "d4d45a6f-5422-4b19-b144-e90f58d514b6@f9941"
+2024-10-31 01:36:48-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mypack/items/fanqiezz_base/pro"Missing uuid: "0c20fc1b-fa26-4858-8791-9796cec92f92@f9941"
+2024-10-31 01:36:48-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mypack/items/fanqiezz_base/txtBox"Missing uuid: "0a2994fb-c6d2-4193-b1ec-a9a95d32d582@f9941"
+2024-10-31 01:36:48-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mypack/items/fanqiezz_base/txtBox/icon"Missing uuid: "e02ed89c-cc09-4061-9af3-2312d2cf8b71@f9941"
+2024-10-31 01:36:48-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mypack/items/pingguozz_base/bottom"Missing uuid: "51057c3f-a341-45f0-9810-184b05381d26@f9941"
+2024-10-31 01:36:48-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mypack/items/fanqiezz_base/bottom"Missing uuid: "51057c3f-a341-45f0-9810-184b05381d26@f9941"
+2024-10-31 01:36:48-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mypack/items/pingguozz_base/txtBox/icon"Missing uuid: "e02ed89c-cc09-4061-9af3-2312d2cf8b71@f9941"
+2024-10-31 01:36:48-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mypack/items/qiezizz_base/bottom"Missing uuid: "51057c3f-a341-45f0-9810-184b05381d26@f9941"
+2024-10-31 01:36:48-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mypack/items/pingguozz_base/txtBox"Missing uuid: "0a2994fb-c6d2-4193-b1ec-a9a95d32d582@f9941"
+2024-10-31 01:36:48-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mypack/items/qiezizz_base/txtBox/icon"Missing uuid: "e02ed89c-cc09-4061-9af3-2312d2cf8b71@f9941"
+2024-10-31 01:36:48-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mypack/items/qiezizz_base/txtBox"Missing uuid: "0a2994fb-c6d2-4193-b1ec-a9a95d32d582@f9941"
+2024-10-31 01:36:48-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mypack/items/qiezizz_base/pro"Missing uuid: "87952bd7-47ba-49ea-a5b3-4759e401b6d4@f9941"
+2024-10-31 01:36:48-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mypack/items/huluobozz_base/bottom"Missing uuid: "51057c3f-a341-45f0-9810-184b05381d26@f9941"
+2024-10-31 01:36:48-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mypack/items/pingguozz_base/pro"Missing uuid: "1596f979-8b2f-4b21-87ff-bfae6750a9d3@f9941"
+2024-10-31 01:36:48-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mypack/items/huluobozz_base/txtBox/icon"Missing uuid: "e02ed89c-cc09-4061-9af3-2312d2cf8b71@f9941"
+2024-10-31 01:36:48-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mypack/items/huluobozz_base/pro"Missing uuid: "9d2870bc-7d23-4d90-b796-24dddc4c16d1@f9941"
+2024-10-31 01:36:48-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mypack/items/huluobozz_base/txtBox"Missing uuid: "0a2994fb-c6d2-4193-b1ec-a9a95d32d582@f9941"
+2024-10-31 01:36:48-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/store/items/fanqiezz/pro"Missing uuid: "0c20fc1b-fa26-4858-8791-9796cec92f92@f9941"
+2024-10-31 01:36:48-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/store/items/fanqiezz/bottom"Missing uuid: "51057c3f-a341-45f0-9810-184b05381d26@f9941"
+2024-10-31 01:36:48-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/store/items/fanqiezz/txtBox/icon"Missing uuid: "e02ed89c-cc09-4061-9af3-2312d2cf8b71@f9941"
+2024-10-31 01:36:48-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/store/items/pingguozz/bottom"Missing uuid: "51057c3f-a341-45f0-9810-184b05381d26@f9941"
+2024-10-31 01:36:48-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/store/items/fanqiezz/txtBox"Missing uuid: "0a2994fb-c6d2-4193-b1ec-a9a95d32d582@f9941"
+2024-10-31 01:36:48-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/store/items/pingguozz/txtBox/icon"Missing uuid: "e02ed89c-cc09-4061-9af3-2312d2cf8b71@f9941"
+2024-10-31 01:36:48-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/store/items/pingguozz/txtBox"Missing uuid: "0a2994fb-c6d2-4193-b1ec-a9a95d32d582@f9941"
+2024-10-31 01:36:48-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/store/title"Missing uuid: "d4d45a6f-5422-4b19-b144-e90f58d514b6@f9941"
+2024-10-31 01:36:48-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/store/items/pingguozz/pro"Missing uuid: "1596f979-8b2f-4b21-87ff-bfae6750a9d3@f9941"
+2024-10-31 01:36:48-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/store/items/qiezizz/txtBox/icon"Missing uuid: "e02ed89c-cc09-4061-9af3-2312d2cf8b71@f9941"
+2024-10-31 01:36:48-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/store/items/qiezizz/bottom"Missing uuid: "51057c3f-a341-45f0-9810-184b05381d26@f9941"
+2024-10-31 01:36:48-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/store/items/huluobozz/bottom"Missing uuid: "51057c3f-a341-45f0-9810-184b05381d26@f9941"
+2024-10-31 01:36:48-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/store/items/qiezizz/pro"Missing uuid: "87952bd7-47ba-49ea-a5b3-4759e401b6d4@f9941"
+2024-10-31 01:36:48-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/store/items/qiezizz/txtBox"Missing uuid: "0a2994fb-c6d2-4193-b1ec-a9a95d32d582@f9941"
+2024-10-31 01:36:48-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/store/items/huluobozz/txtBox/icon"Missing uuid: "e02ed89c-cc09-4061-9af3-2312d2cf8b71@f9941"
+2024-10-31 01:36:48-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/paihang/title"Missing uuid: "d4d45a6f-5422-4b19-b144-e90f58d514b6@f9941"
+2024-10-31 01:36:48-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/store/items/huluobozz/pro"Missing uuid: "9d2870bc-7d23-4d90-b796-24dddc4c16d1@f9941"
+2024-10-31 01:36:48-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/paihang/items/box/txtBox/pro"Missing uuid: "0c20fc1b-fa26-4858-8791-9796cec92f92@f9941"
+2024-10-31 01:36:48-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/store/items/huluobozz/txtBox"Missing uuid: "0a2994fb-c6d2-4193-b1ec-a9a95d32d582@f9941"
+2024-10-31 01:36:48-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/paihang/items/box/txtBox/icon"Missing uuid: "42c066de-15a2-4aab-8c98-1111848639ab@f9941"
+2024-10-31 01:36:48-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/paihang/sharebtn"Missing uuid: "874a12c0-9d84-4805-b1d3-d9e0a3291912@f9941"
+2024-10-31 01:36:48-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/paihang/items/box/txtBox/top"Missing uuid: "5f2902d9-b2b0-43e2-8dad-f95e60a89318@f9941"
+2024-10-31 01:36:48-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mysalepack/title"Missing uuid: "d4d45a6f-5422-4b19-b144-e90f58d514b6@f9941"
+2024-10-31 01:36:48-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/paihang/items/box/txtBox"Missing uuid: "0a2994fb-c6d2-4193-b1ec-a9a95d32d582@f9941"
+2024-10-31 01:36:48-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mysalepack/items/fanqie_base/bottom"Missing uuid: "51057c3f-a341-45f0-9810-184b05381d26@f9941"
+2024-10-31 01:36:48-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mysalepack/items/fanqie_base/txtBox/icon"Missing uuid: "e02ed89c-cc09-4061-9af3-2312d2cf8b71@f9941"
+2024-10-31 01:36:48-warn: The SpriteFrame used by component "cc.Button" is missing. Detailed information:Node path: "MainCanvas/popBox/paihang/sharebtn"Missing uuid: "874a12c0-9d84-4805-b1d3-d9e0a3291912@f9941"
+2024-10-31 01:36:48-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mysalepack/items/fanqie_base/txtBox"Missing uuid: "0a2994fb-c6d2-4193-b1ec-a9a95d32d582@f9941"
+2024-10-31 01:36:48-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mysalepack/items/pingguo_base/bottom"Missing uuid: "51057c3f-a341-45f0-9810-184b05381d26@f9941"
+2024-10-31 01:36:48-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mysalepack/items/pingguo_base/txtBox/icon"Missing uuid: "e02ed89c-cc09-4061-9af3-2312d2cf8b71@f9941"
+2024-10-31 01:36:48-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mysalepack/items/fanqie_base/pro"Missing uuid: "a5d5767a-7e8e-48de-a3b7-535f1fb21956@f9941"
+2024-10-31 01:36:48-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mysalepack/items/pingguo_base/pro"Missing uuid: "672e10a5-30cd-421b-80ac-893de921c47e@f9941"
+2024-10-31 01:36:48-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mysalepack/items/qiezi_base/bottom"Missing uuid: "51057c3f-a341-45f0-9810-184b05381d26@f9941"
+2024-10-31 01:36:48-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mysalepack/items/qiezi_base/pro"Missing uuid: "44c42f64-381f-4214-acb8-f44123965e8a@f9941"
+2024-10-31 01:36:48-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mysalepack/items/qiezi_base/txtBox/icon"Missing uuid: "e02ed89c-cc09-4061-9af3-2312d2cf8b71@f9941"
+2024-10-31 01:36:48-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mysalepack/items/qiezi_base/txtBox"Missing uuid: "0a2994fb-c6d2-4193-b1ec-a9a95d32d582@f9941"
+2024-10-31 01:36:48-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mysalepack/items/huluobo_base/bottom"Missing uuid: "51057c3f-a341-45f0-9810-184b05381d26@f9941"
+2024-10-31 01:36:48-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mysalepack/items/huluobo_base/pro"Missing uuid: "e89b6cf7-b760-4cb5-81e9-452fd2ab5251@f9941"
+2024-10-31 01:36:48-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mysalepack/items/pingguo_base/txtBox"Missing uuid: "0a2994fb-c6d2-4193-b1ec-a9a95d32d582@f9941"
+2024-10-31 01:36:48-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/msgBox/msgBg"Missing uuid: "d4d45a6f-5422-4b19-b144-e90f58d514b6@f9941"
+2024-10-31 01:36:48-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mysalepack/items/huluobo_base/txtBox"Missing uuid: "0a2994fb-c6d2-4193-b1ec-a9a95d32d582@f9941"
+2024-10-31 01:36:48-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mysalepack/items/huluobo_base/txtBox/icon"Missing uuid: "e02ed89c-cc09-4061-9af3-2312d2cf8b71@f9941"
+2024-10-31 01:36:48-debug: Number of assets: 253
+2024-10-31 01:36:48-debug: Number of asset bundle: 3
+2024-10-31 01:36:48-debug: // ---- build task Query and organize assets ---- (261ms)
+2024-10-31 01:36:48-debug: run build task Query and organize assets success in 261 ms √13%
+2024-10-31 01:36:48-debug: Process: heapTotal 235.27MB heapUsed 214.99MB rss 185.67MB
+2024-10-31 01:36:48-debug: // ---- build task Organize scripts ----
+2024-10-31 01:36:48-debug: Organize scripts start13%
+2024-10-31 01:36:48-debug: sort script group...
+2024-10-31 01:36:48-debug: // ---- build task Organize scripts ---- (1ms)
+2024-10-31 01:36:48-debug: run build task Organize scripts success in 1 ms √14%
+2024-10-31 01:36:48-debug: Process: heapTotal 235.27MB heapUsed 215.05MB rss 185.64MB
+2024-10-31 01:36:48-debug: // ---- build task Organize texture compression tasks ----
+2024-10-31 01:36:48-debug: Organize texture compression tasks start14%
+2024-10-31 01:36:48-debug: Number of image-compress task: 0
+2024-10-31 01:36:48-debug: // ---- build task Organize texture compression tasks ---- (59ms)
+2024-10-31 01:36:48-debug: run build task Organize texture compression tasks success in 59 ms √15%
+2024-10-31 01:36:48-debug: Process: heapTotal 235.27MB heapUsed 214.14MB rss 185.84MB
+2024-10-31 01:36:48-debug: Number of json group: 70
+2024-10-31 01:36:48-debug: // ---- build task Group json ----
+2024-10-31 01:36:48-debug: Group json start15%
+2024-10-31 01:36:48-debug: // ---- build task Group json ---- (2ms)
+2024-10-31 01:36:48-debug: run build task Group json success in 2 ms √16%
+2024-10-31 01:36:48-debug: Process: heapTotal 235.27MB heapUsed 214.58MB rss 185.84MB
+2024-10-31 01:36:48-debug: // ---- build task Merging Texture2D json ----
+2024-10-31 01:36:48-debug: Merging Texture2D json start16%
+2024-10-31 01:36:48-debug: // ---- build task Merging Texture2D json ---- (5ms)
+2024-10-31 01:36:48-debug: run build task Merging Texture2D json success in 5 ms √18%
+2024-10-31 01:36:48-debug: Sort import-map.json start18%
+2024-10-31 01:36:48-debug: // ---- build task Sort import-map.json ----
+2024-10-31 01:36:48-debug: Process: heapTotal 235.27MB heapUsed 214.72MB rss 186.06MB
+2024-10-31 01:36:49-debug: run build task Sort import-map.json success in 0 ms √19%
+2024-10-31 01:36:49-debug: web-mobile:(onBeforeBuildAssets) start...19%
+2024-10-31 01:36:49-debug: Process: heapTotal 235.27MB heapUsed 214.76MB rss 186.06MB
+2024-10-31 01:36:49-debug: // ---- build task web-mobile：onBeforeBuildAssets ----
+2024-10-31 01:36:49-debug: // ---- build task web-mobile：onBeforeBuildAssets ---- (1ms)
+2024-10-31 01:36:49-debug: // ---- build task localization-editor：onBeforeBuildAssets ----
+2024-10-31 01:36:49-debug: Process: heapTotal 235.27MB heapUsed 214.82MB rss 186.06MB
+2024-10-31 01:36:49-debug: web-mobile:(onBeforeBuildAssets) in 1 ms21%
+2024-10-31 01:36:49-debug: localization-editor:(onBeforeBuildAssets) start...21%
+2024-10-31 01:36:49-debug: // ---- build task localization-editor：onBeforeBuildAssets ---- (14ms)
+2024-10-31 01:36:49-debug: localization-editor:(onBeforeBuildAssets) in 14 ms23%
+2024-10-31 01:36:49-debug: Process: heapTotal 235.27MB heapUsed 214.86MB rss 186.06MB
+2024-10-31 01:36:49-debug: Start collect pack info
+2024-10-31 01:36:49-debug: Build auto-atlas start23%
+2024-10-31 01:36:49-debug: // ---- build task Build auto-atlas ----
+2024-10-31 01:36:49-debug: // ---- build task Build auto-atlas ---- (1ms)
+2024-10-31 01:36:49-debug: run build task Build auto-atlas success in 1 ms √30%
+2024-10-31 01:36:49-debug: Process: heapTotal 235.27MB heapUsed 214.93MB rss 186.06MB
+2024-10-31 01:36:49-debug: Compress Image start30%
+2024-10-31 01:36:49-debug: // ---- build task Compress Image ----
+2024-10-31 01:36:49-debug: skip compress texture
+2024-10-31 01:36:49-debug: run build task Compress Image success in 0 ms √37%
+2024-10-31 01:36:49-debug: Process: heapTotal 235.27MB heapUsed 214.97MB rss 186.06MB
+2024-10-31 01:36:49-debug: Asset Bundle(internal) handle assets: 20
+2024-10-31 01:36:49-debug: // ---- build task Copy the resource ----
+2024-10-31 01:36:49-debug: Copy the resource start37%
+2024-10-31 01:36:49-debug: Asset Bundle(resources) handle assets: 219
+2024-10-31 01:36:49-debug: Asset Bundle(main) handle assets: 45
+2024-10-31 01:36:49-debug: // ---- build task Copy the resource ---- (68ms)
+2024-10-31 01:36:49-debug: run build task Copy the resource success in 68 ms √43%
+2024-10-31 01:36:49-debug: // ---- build task Build the grouped json and scatter files to the specified location ----
+2024-10-31 01:36:49-debug: Process: heapTotal 239.27MB heapUsed 215.82MB rss 186.23MB
+2024-10-31 01:36:49-debug: Build the grouped json and scatter files to the specified location start43%
+2024-10-31 01:36:49-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mypack/title"Missing uuid: "d4d45a6f-5422-4b19-b144-e90f58d514b6@f9941"
+2024-10-31 01:36:49-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mypack/items/fanqiezz_base/bottom"Missing uuid: "51057c3f-a341-45f0-9810-184b05381d26@f9941"
+2024-10-31 01:36:49-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mypack/items/fanqiezz_base/pro"Missing uuid: "0c20fc1b-fa26-4858-8791-9796cec92f92@f9941"
+2024-10-31 01:36:49-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mypack/items/fanqiezz_base/txtBox/icon"Missing uuid: "e02ed89c-cc09-4061-9af3-2312d2cf8b71@f9941"
+2024-10-31 01:36:49-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mypack/items/fanqiezz_base/txtBox"Missing uuid: "0a2994fb-c6d2-4193-b1ec-a9a95d32d582@f9941"
+2024-10-31 01:36:49-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mypack/items/pingguozz_base/bottom"Missing uuid: "51057c3f-a341-45f0-9810-184b05381d26@f9941"
+2024-10-31 01:36:49-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mypack/items/pingguozz_base/pro"Missing uuid: "1596f979-8b2f-4b21-87ff-bfae6750a9d3@f9941"
+2024-10-31 01:36:49-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mypack/items/pingguozz_base/txtBox/icon"Missing uuid: "e02ed89c-cc09-4061-9af3-2312d2cf8b71@f9941"
+2024-10-31 01:36:49-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mypack/items/pingguozz_base/txtBox"Missing uuid: "0a2994fb-c6d2-4193-b1ec-a9a95d32d582@f9941"
+2024-10-31 01:36:49-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mypack/items/qiezizz_base/bottom"Missing uuid: "51057c3f-a341-45f0-9810-184b05381d26@f9941"
+2024-10-31 01:36:49-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mypack/items/qiezizz_base/pro"Missing uuid: "87952bd7-47ba-49ea-a5b3-4759e401b6d4@f9941"
+2024-10-31 01:36:49-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mypack/items/qiezizz_base/txtBox/icon"Missing uuid: "e02ed89c-cc09-4061-9af3-2312d2cf8b71@f9941"
+2024-10-31 01:36:49-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mypack/items/qiezizz_base/txtBox"Missing uuid: "0a2994fb-c6d2-4193-b1ec-a9a95d32d582@f9941"
+2024-10-31 01:36:49-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mypack/items/huluobozz_base/bottom"Missing uuid: "51057c3f-a341-45f0-9810-184b05381d26@f9941"
+2024-10-31 01:36:49-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mypack/items/huluobozz_base/pro"Missing uuid: "9d2870bc-7d23-4d90-b796-24dddc4c16d1@f9941"
+2024-10-31 01:36:49-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mypack/items/huluobozz_base/txtBox/icon"Missing uuid: "e02ed89c-cc09-4061-9af3-2312d2cf8b71@f9941"
+2024-10-31 01:36:49-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mypack/items/huluobozz_base/txtBox"Missing uuid: "0a2994fb-c6d2-4193-b1ec-a9a95d32d582@f9941"
+2024-10-31 01:36:49-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/store/title"Missing uuid: "d4d45a6f-5422-4b19-b144-e90f58d514b6@f9941"
+2024-10-31 01:36:49-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/store/items/fanqiezz/bottom"Missing uuid: "51057c3f-a341-45f0-9810-184b05381d26@f9941"
+2024-10-31 01:36:49-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/store/items/fanqiezz/pro"Missing uuid: "0c20fc1b-fa26-4858-8791-9796cec92f92@f9941"
+2024-10-31 01:36:49-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/store/items/fanqiezz/txtBox/icon"Missing uuid: "e02ed89c-cc09-4061-9af3-2312d2cf8b71@f9941"
+2024-10-31 01:36:49-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/store/items/fanqiezz/txtBox"Missing uuid: "0a2994fb-c6d2-4193-b1ec-a9a95d32d582@f9941"
+2024-10-31 01:36:49-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/store/items/pingguozz/bottom"Missing uuid: "51057c3f-a341-45f0-9810-184b05381d26@f9941"
+2024-10-31 01:36:49-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/store/items/pingguozz/pro"Missing uuid: "1596f979-8b2f-4b21-87ff-bfae6750a9d3@f9941"
+2024-10-31 01:36:49-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/store/items/pingguozz/txtBox/icon"Missing uuid: "e02ed89c-cc09-4061-9af3-2312d2cf8b71@f9941"
+2024-10-31 01:36:49-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/store/items/pingguozz/txtBox"Missing uuid: "0a2994fb-c6d2-4193-b1ec-a9a95d32d582@f9941"
+2024-10-31 01:36:49-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/store/items/qiezizz/bottom"Missing uuid: "51057c3f-a341-45f0-9810-184b05381d26@f9941"
+2024-10-31 01:36:49-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/store/items/qiezizz/pro"Missing uuid: "87952bd7-47ba-49ea-a5b3-4759e401b6d4@f9941"
+2024-10-31 01:36:49-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/store/items/qiezizz/txtBox/icon"Missing uuid: "e02ed89c-cc09-4061-9af3-2312d2cf8b71@f9941"
+2024-10-31 01:36:49-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/store/items/qiezizz/txtBox"Missing uuid: "0a2994fb-c6d2-4193-b1ec-a9a95d32d582@f9941"
+2024-10-31 01:36:49-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/store/items/huluobozz/bottom"Missing uuid: "51057c3f-a341-45f0-9810-184b05381d26@f9941"
+2024-10-31 01:36:49-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/store/items/huluobozz/pro"Missing uuid: "9d2870bc-7d23-4d90-b796-24dddc4c16d1@f9941"
+2024-10-31 01:36:49-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/store/items/huluobozz/txtBox/icon"Missing uuid: "e02ed89c-cc09-4061-9af3-2312d2cf8b71@f9941"
+2024-10-31 01:36:49-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/store/items/huluobozz/txtBox"Missing uuid: "0a2994fb-c6d2-4193-b1ec-a9a95d32d582@f9941"
+2024-10-31 01:36:49-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/paihang/title"Missing uuid: "d4d45a6f-5422-4b19-b144-e90f58d514b6@f9941"
+2024-10-31 01:36:49-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/paihang/items/box/txtBox/pro"Missing uuid: "0c20fc1b-fa26-4858-8791-9796cec92f92@f9941"
+2024-10-31 01:36:49-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/paihang/items/box/txtBox/icon"Missing uuid: "42c066de-15a2-4aab-8c98-1111848639ab@f9941"
+2024-10-31 01:36:49-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/paihang/items/box/txtBox/top"Missing uuid: "5f2902d9-b2b0-43e2-8dad-f95e60a89318@f9941"
+2024-10-31 01:36:49-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/paihang/items/box/txtBox"Missing uuid: "0a2994fb-c6d2-4193-b1ec-a9a95d32d582@f9941"
+2024-10-31 01:36:49-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/paihang/sharebtn"Missing uuid: "874a12c0-9d84-4805-b1d3-d9e0a3291912@f9941"
+2024-10-31 01:36:49-warn: The SpriteFrame used by component "cc.Button" is missing. Detailed information:Node path: "MainCanvas/popBox/paihang/sharebtn"Missing uuid: "874a12c0-9d84-4805-b1d3-d9e0a3291912@f9941"
+2024-10-31 01:36:49-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mysalepack/title"Missing uuid: "d4d45a6f-5422-4b19-b144-e90f58d514b6@f9941"
+2024-10-31 01:36:49-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mysalepack/items/fanqie_base/bottom"Missing uuid: "51057c3f-a341-45f0-9810-184b05381d26@f9941"
+2024-10-31 01:36:49-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mysalepack/items/fanqie_base/pro"Missing uuid: "a5d5767a-7e8e-48de-a3b7-535f1fb21956@f9941"
+2024-10-31 01:36:49-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mysalepack/items/fanqie_base/txtBox/icon"Missing uuid: "e02ed89c-cc09-4061-9af3-2312d2cf8b71@f9941"
+2024-10-31 01:36:49-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mysalepack/items/fanqie_base/txtBox"Missing uuid: "0a2994fb-c6d2-4193-b1ec-a9a95d32d582@f9941"
+2024-10-31 01:36:49-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mysalepack/items/pingguo_base/bottom"Missing uuid: "51057c3f-a341-45f0-9810-184b05381d26@f9941"
+2024-10-31 01:36:49-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mysalepack/items/pingguo_base/pro"Missing uuid: "672e10a5-30cd-421b-80ac-893de921c47e@f9941"
+2024-10-31 01:36:49-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mysalepack/items/pingguo_base/txtBox/icon"Missing uuid: "e02ed89c-cc09-4061-9af3-2312d2cf8b71@f9941"
+2024-10-31 01:36:49-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mysalepack/items/pingguo_base/txtBox"Missing uuid: "0a2994fb-c6d2-4193-b1ec-a9a95d32d582@f9941"
+2024-10-31 01:36:49-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mysalepack/items/qiezi_base/bottom"Missing uuid: "51057c3f-a341-45f0-9810-184b05381d26@f9941"
+2024-10-31 01:36:49-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mysalepack/items/qiezi_base/pro"Missing uuid: "44c42f64-381f-4214-acb8-f44123965e8a@f9941"
+2024-10-31 01:36:49-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mysalepack/items/qiezi_base/txtBox/icon"Missing uuid: "e02ed89c-cc09-4061-9af3-2312d2cf8b71@f9941"
+2024-10-31 01:36:49-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mysalepack/items/qiezi_base/txtBox"Missing uuid: "0a2994fb-c6d2-4193-b1ec-a9a95d32d582@f9941"
+2024-10-31 01:36:49-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mysalepack/items/huluobo_base/bottom"Missing uuid: "51057c3f-a341-45f0-9810-184b05381d26@f9941"
+2024-10-31 01:36:49-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mysalepack/items/huluobo_base/pro"Missing uuid: "e89b6cf7-b760-4cb5-81e9-452fd2ab5251@f9941"
+2024-10-31 01:36:49-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mysalepack/items/huluobo_base/txtBox/icon"Missing uuid: "e02ed89c-cc09-4061-9af3-2312d2cf8b71@f9941"
+2024-10-31 01:36:49-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/mysalepack/items/huluobo_base/txtBox"Missing uuid: "0a2994fb-c6d2-4193-b1ec-a9a95d32d582@f9941"
+2024-10-31 01:36:49-warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:Node path: "MainCanvas/popBox/msgBox/msgBg"Missing uuid: "d4d45a6f-5422-4b19-b144-e90f58d514b6@f9941"
+2024-10-31 01:36:49-debug: // ---- build task Build the grouped json and scatter files to the specified location ---- (539ms)
+2024-10-31 01:36:49-debug: run build task Build the grouped json and scatter files to the specified location success in 539 ms √50%
+2024-10-31 01:36:49-debug: Compress zip bundle start50%
+2024-10-31 01:36:49-debug: // ---- build task Compress zip bundle ----
+2024-10-31 01:36:49-debug: Process: heapTotal 240.17MB heapUsed 219.27MB rss 193.09MB
+2024-10-31 01:36:49-debug: run build task Compress zip bundle success in 0 ms √57%
+2024-10-31 01:36:49-debug: Process: heapTotal 240.17MB heapUsed 219.30MB rss 193.09MB
+2024-10-31 01:36:49-debug: // ---- build task Build script ----
+2024-10-31 01:36:49-debug: Build script start57%
+2024-10-31 01:37:04-debug: Build project script start...57%
+2024-10-31 01:37:04-debug: Process: heapTotal 222.77MB heapUsed 215.78MB rss 181.18MB
+2024-10-31 01:37:04-log: Run build task(build-script) in child, see: chrome://inspect/#devices
+2024-10-31 01:37:05-warn: [build-script][[Build.Script.Rollup]] Circular dependency: file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/genPlant.ts -> file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/main.ts -> file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/genPlant.ts
+2024-10-31 01:37:11-debug: excute-script over with build-script 6965ms
+2024-10-31 01:37:11-debug: Copy externalScripts success!
+2024-10-31 01:37:11-debug: Build project script in (6979 ms) √57%
+2024-10-31 01:37:11-debug: Process: heapTotal 223.77MB heapUsed 215.38MB rss 181.49MB
+2024-10-31 01:37:11-debug: Build engine start...57%
+2024-10-31 01:37:11-debug: Use cache engine: {link(C:\Users\ADMINI~1\AppData\Local\Temp\CocosCreator\3.6.1\builder\engine\fde329c401c641771bff368eaccc979a)}
+2024-10-31 01:37:11-debug: {"debug":false,"sourceMaps":false,"includeModules":["2d","animation","audio","base","dragon-bones","gfx-webgl","gfx-webgl2","intersection-2d","marionette","particle-2d","physics-2d-box2d","profiler","skeletal-animation","spine","tiled-map","tween","ui","video","webview","xr"],"engineVersion":"3.6.1","platform":"HTML5","md5Map":[],"engineName":"cocos-js","useCache":true,"split":false,"ammoJsWasm":"fallback","assetURLFormat":"runtime-resolved","flags":{"DEBUG":false},"entry":"D:\\cocos-dashboard-editors\\Creator\\3.6.1\\resources\\resources\\3d\\engine"}
+2024-10-31 01:37:11-debug: Build engine in (128 ms) √57%
+2024-10-31 01:37:11-debug: // ---- build task Build script ---- (21461ms)
+2024-10-31 01:37:11-debug: run build task Build script success in 21461 ms √63%
+2024-10-31 01:37:11-debug: // ---- build task Add md5 suffix to assets ----
+2024-10-31 01:37:11-debug: Process: heapTotal 223.27MB heapUsed 215.70MB rss 181.05MB
+2024-10-31 01:37:11-debug: Add md5 suffix to assets start63%
+2024-10-31 01:37:11-debug: run build task Add md5 suffix to assets success in 0 ms √73%
+2024-10-31 01:37:11-debug: Init settings and config start73%
+2024-10-31 01:37:11-debug: Process: heapTotal 223.27MB heapUsed 215.74MB rss 181.09MB
+2024-10-31 01:37:11-debug: // ---- build task Init settings and config ----
+2024-10-31 01:37:11-debug: // ---- build task Init settings and config ---- (1ms)
+2024-10-31 01:37:11-debug: run build task Init settings and config success in 1 ms √74%
+2024-10-31 01:37:11-debug: builder.tasks.settings.macro start74%
+2024-10-31 01:37:11-debug: builder.tasks.settings.macro does not defined in i18n
+2024-10-31 01:37:11-debug: // ---- build task builder.tasks.settings.macro ----
+2024-10-31 01:37:11-debug: Process: heapTotal 223.27MB heapUsed 215.80MB rss 181.14MB
+2024-10-31 01:37:11-debug: // ---- build task builder.tasks.settings.macro ---- (14ms)
+2024-10-31 01:37:11-debug: run build task builder.tasks.settings.macro success in 14 ms √74%
+2024-10-31 01:37:11-debug: // ---- build task Sort some build options to settings.json ----
+2024-10-31 01:37:11-debug: Sort some build options to settings.json start74%
+2024-10-31 01:37:11-debug: Process: heapTotal 223.27MB heapUsed 215.84MB rss 181.19MB
+2024-10-31 01:37:11-error: Error: ENOENT: no such file or directory, open 'C:\Users\Administrator\Desktop\1d069728-e5a1-4428-8654-4deea60099b1.gif'    at Object.openSync (fs.js:476:3)    at Object.func [as openSync] (electron/js2c/asar_bundle.js:5:1846)    at readFileSync (fs.js:377:35)    at e.readFileSync (electron/js2c/asar_bundle.js:5:8872)    at formatSplashScreen (D:\cocos-dashboard-editors\Creator\3.6.1\resources\app.asar\builtin\builder\dist\worker\builder\setting-task\options.ccc:1:1427)    at BuildTask.handle (D:\cocos-dashboard-editors\Creator\3.6.1\resources\app.asar\builtin\builder\dist\worker\builder\setting-task\options.ccc:1:1010)    at BuildTask.runBuildTask (D:\cocos-dashboard-editors\Creator\3.6.1\resources\app.asar\builtin\builder\dist\worker\builder\index.ccc:1:7774)    at BuildTask.build (D:\cocos-dashboard-editors\Creator\3.6.1\resources\app.asar\builtin\builder\dist\worker\builder\index.ccc:1:3648)    at Ipc.<anonymous> (D:\cocos-dashboard-editors\Creator\3.6.1\resources\app.asar\builtin\builder\dist\worker\index.ccc:1:4492)
+2024-10-31 01:37:11-error: Copy screen image failed, please check whether the splash screen configuration data is normal, splashScreen: {"url":"C:\\Users\\Administrator\\Desktop\\1d069728-e5a1-4428-8654-4deea60099b1.gif","displayRatio":0,"totalTime":0,"effect":"","clearColor":{"x":0,"y":0,"z":0,"w":0},"displayWatermark":false}
+2024-10-31 01:37:11-debug: // ---- build task Sort some build options to settings.json ---- (13ms)
+2024-10-31 01:37:11-debug: run build task Sort some build options to settings.json success in 13 ms √75%
+2024-10-31 01:37:11-debug: Process: heapTotal 223.27MB heapUsed 216.03MB rss 181.40MB
+2024-10-31 01:37:11-debug: // ---- build task custom joint texture layouts ----
+2024-10-31 01:37:11-debug: custom joint texture layouts start75%
+2024-10-31 01:37:11-debug: // ---- build task custom joint texture layouts ---- (13ms)
+2024-10-31 01:37:11-debug: run build task custom joint texture layouts success in 13 ms √76%
+2024-10-31 01:37:11-debug: Process: heapTotal 223.27MB heapUsed 216.07MB rss 181.44MB
+2024-10-31 01:37:11-debug: custom joint physics start76%
+2024-10-31 01:37:11-debug: // ---- build task custom joint physics ----
+2024-10-31 01:37:11-debug: run build task custom joint physics success in 0 ms √76%
+2024-10-31 01:37:11-debug: Process: heapTotal 223.27MB heapUsed 216.11MB rss 181.48MB
+2024-10-31 01:37:11-debug: Fill script data to settings start76%
+2024-10-31 01:37:11-debug: // ---- build task Fill script data to settings ----
+2024-10-31 01:37:11-debug: // ---- build task Fill script data to settings ---- (1ms)
+2024-10-31 01:37:11-debug: run build task Fill script data to settings success in 1 ms √77%
+2024-10-31 01:37:11-debug: Fill scene data to settings start77%
+2024-10-31 01:37:11-debug: // ---- build task Fill scene data to settings ----
+2024-10-31 01:37:11-debug: Process: heapTotal 223.27MB heapUsed 215.43MB rss 180.80MB
+2024-10-31 01:37:11-debug: run build task Fill scene data to settings success in 0 ms √77%
+2024-10-31 01:37:11-debug: Organize assets groups，generate packedAssets and rawAssets data start77%
+2024-10-31 01:37:11-debug: Process: heapTotal 223.27MB heapUsed 215.47MB rss 180.84MB
+2024-10-31 01:37:11-debug: // ---- build task Organize assets groups，generate packedAssets and rawAssets data ----
+2024-10-31 01:37:11-debug: // ---- build task Organize assets groups，generate packedAssets and rawAssets data ---- (1ms)
+2024-10-31 01:37:11-debug: Generate md5AssetsMap from suffixMap to settings start78%
+2024-10-31 01:37:11-debug: run build task Organize assets groups，generate packedAssets and rawAssets data success in 1 ms √78%
+2024-10-31 01:37:11-debug: // ---- build task Generate md5AssetsMap from suffixMap to settings ----
+2024-10-31 01:37:11-debug: Process: heapTotal 223.27MB heapUsed 215.62MB rss 180.93MB
+2024-10-31 01:37:11-debug: options.md5Cache is false.
+2024-10-31 01:37:11-debug: // ---- build task Generate md5AssetsMap from suffixMap to settings ---- (2ms)
+2024-10-31 01:37:11-debug: run build task Generate md5AssetsMap from suffixMap to settings success in 2 ms √78%
+2024-10-31 01:37:11-debug: web-mobile:(onBeforeCompressSettings) start...78%
+2024-10-31 01:37:11-debug: Process: heapTotal 223.27MB heapUsed 215.67MB rss 180.99MB
+2024-10-31 01:37:11-debug: // ---- build task web-mobile：onBeforeCompressSettings ----
+2024-10-31 01:37:11-debug: // ---- build task web-mobile：onBeforeCompressSettings ---- (1ms)
+2024-10-31 01:37:11-debug: // ---- build task cocos-service：onBeforeCompressSettings ----
+2024-10-31 01:37:11-debug: web-mobile:(onBeforeCompressSettings) in 1 ms81%
+2024-10-31 01:37:11-debug: cocos-service:(onBeforeCompressSettings) start...81%
+2024-10-31 01:37:11-debug: Process: heapTotal 223.27MB heapUsed 215.72MB rss 181.03MB
+2024-10-31 01:37:11-debug: // ---- build task cocos-service：onBeforeCompressSettings ---- (158ms)
+2024-10-31 01:37:11-debug: // ---- build task Build import-map.json ----
+2024-10-31 01:37:11-debug: Build import-map.json start83%
+2024-10-31 01:37:11-debug: Process: heapTotal 223.27MB heapUsed 215.78MB rss 181.09MB
+2024-10-31 01:37:11-debug: cocos-service:(onBeforeCompressSettings) in 158 ms83%
+2024-10-31 01:37:11-debug: // ---- build task Build import-map.json ---- (5ms)
+2024-10-31 01:37:11-debug: run build task Build import-map.json success in 5 ms √84%
+2024-10-31 01:37:11-debug: Process: heapTotal 223.27MB heapUsed 215.83MB rss 181.14MB
+2024-10-31 01:37:11-debug: // ---- build task Compress settings.json and config.json ----
+2024-10-31 01:37:11-debug: Compress settings.json and config.json start84%
+2024-10-31 01:37:11-debug: // ---- build task Compress settings.json and config.json ---- (6ms)
+2024-10-31 01:37:11-debug: run build task Compress settings.json and config.json success in 6 ms √85%
+2024-10-31 01:37:11-debug: Process: heapTotal 223.27MB heapUsed 216.11MB rss 181.41MB
+2024-10-31 01:37:11-debug: // ---- build task Save config.json ----
+2024-10-31 01:37:11-debug: Save config.json start85%
+2024-10-31 01:37:11-debug: // ---- build task Save config.json ---- (2ms)
+2024-10-31 01:37:11-debug: run build task Save config.json success in 2 ms √86%
+2024-10-31 01:37:11-debug: Process: heapTotal 223.27MB heapUsed 215.49MB rss 180.79MB
+2024-10-31 01:37:11-debug: Save Settings.json start86%
+2024-10-31 01:37:11-debug: // ---- build task Save Settings.json ----
+2024-10-31 01:37:11-debug: // ---- build task Save Settings.json ---- (1ms)
+2024-10-31 01:37:11-debug: run build task Save Settings.json success in 1 ms √87%
+2024-10-31 01:37:11-debug: Process: heapTotal 223.27MB heapUsed 215.60MB rss 180.93MB
+2024-10-31 01:37:11-debug: Sort build template start87%
+2024-10-31 01:37:11-debug: // ---- build task Sort build template ----
+2024-10-31 01:37:11-debug: // ---- build task Sort build template ---- (71ms)
+2024-10-31 01:37:11-debug: run build task Sort build template success in 71 ms √88%
+2024-10-31 01:37:11-debug: // ---- build task cocos-service：onAfterCompressSettings ----
+2024-10-31 01:37:11-debug: cocos-service:(onAfterCompressSettings) start...88%
+2024-10-31 01:37:11-debug: Process: heapTotal 223.52MB heapUsed 216.32MB rss 183.67MB
+2024-10-31 01:37:11-debug: // ---- build task cocos-service：onAfterCompressSettings ---- (156ms)
+2024-10-31 01:37:11-debug: web-mobile:(onAfterBuild) start...90%
+2024-10-31 01:37:11-debug: cocos-service:(onAfterCompressSettings) in 156 ms90%
+2024-10-31 01:37:11-debug: Process: heapTotal 225.02MB heapUsed 216.70MB rss 182.97MB
+2024-10-31 01:37:11-debug: // ---- build task web-mobile：onAfterBuild ----
+2024-10-31 01:37:11-debug: Use build-template {link(E:\lianlukeji\frontend\cocos\menghuanfarm\build-templates\web-mobile)}.
+2024-10-31 01:37:11-debug: // ---- build task web-mobile：onAfterBuild ---- (62ms)
+2024-10-31 01:37:11-debug: web-mobile:(onAfterBuild) in 62 ms92%
+2024-10-31 01:37:11-debug: // ---- build task cocos-service：onAfterBuild ----
+2024-10-31 01:37:11-debug: cocos-service:(onAfterBuild) start...92%
+2024-10-31 01:37:11-debug: Process: heapTotal 225.02MB heapUsed 217.08MB rss 183.27MB
+2024-10-31 01:37:12-debug: // ---- build task cocos-service：onAfterBuild ---- (159ms)
+2024-10-31 01:37:12-debug: cocos-service:(onAfterBuild) in 159 ms94%
+2024-10-31 01:37:12-debug: builder:build-project-total (23950ms)
+2024-10-31 01:37:12-debug: build success in 23950 ms!
+2024-10-31 01:37:12-debug: ================================ Build Task (web-mobile) Finished in (23959)ms ================================
