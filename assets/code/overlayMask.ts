@@ -14,7 +14,7 @@ export class OverlayMask extends Component {
   private uiTransform: UITransform;
 
   onLoad() {
-    this.node.setSiblingIndex(-999);
+    // this.node.setSiblingIndex(-999);
     this.graphics = this.getComponent(Graphics);
     this.drawOverlay();
   }
