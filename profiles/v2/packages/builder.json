@@ -32,10 +32,10 @@
       "1667965779498": {
         "type": "build",
         "id": "1667965779498",
-        "progress": 1,
-        "state": "success",
+        "progress": 0.5666666666666667,
+        "state": "processing",
         "stage": "build",
-        "message": "2024-11-2 01:52:55 Build success in 31144 ms!",
+        "message": "Build project script start...",
         "options": {
           "name": "PlantStore",
           "platform": "web-mobile",
@@ -109,7 +109,7 @@
           "__version__": "1.3.3",
           "web-mobile": []
         },
-        "time": "2024-11-2 01:52",
+        "time": "2024-11-2 02:00",
         "dirty": false
       },
       "1668068042719": {

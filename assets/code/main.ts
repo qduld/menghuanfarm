@@ -53,6 +53,7 @@ export class main extends Component {
 
   protected onLoad(): void {
     this.init();
+    director.preloadScene("circles");
     // this.requestFarmLandPlant();
   }
 
