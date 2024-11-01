@@ -36,6 +36,7 @@ let myPackBox: Node,
   paiHangBox: Node,
   bagBox: Node,
   shopBox: Node,
+  overlayMask: Node,
   msgBox: Node = null;
 let userAvata: Node,
   nickName: Node,
@@ -197,11 +198,13 @@ export class main extends Component {
       (nickName = find("MainCanvas/touxiangkuang/nickname")),
       (jinbi = find("MainCanvas/jinbi/boxbg/txt"));
 
-    bagBox = find("MainCanvas/popBox/Bag");
-    shopBox = find("MainCanvas/popBox/Shop");
+    bagBox = find("popBox/Canvas/Bag");
+    shopBox = find("popBox/Canvas/Shop");
+    overlayMask = find("popBox/Canvas/OverlayMask");
 
     bagBox.active = false;
     shopBox.active = false;
+    overlayMask.active = false;
 
     main.saleBox = mySaleBox;
     main.addPackCount = 0;
@@ -230,6 +233,7 @@ export class main extends Component {
         paiHangBox.active = true;
         break;
     }
+    overlayMask.active = true;
   }
   closeDialog(event: EventTouch, customData) {
     switch (customData) {
@@ -245,6 +249,7 @@ export class main extends Component {
         paiHangBox.active = false;
         break;
     }
+    overlayMask.active = false;
   }
   //弹消息
   showMsg(msg: string) {

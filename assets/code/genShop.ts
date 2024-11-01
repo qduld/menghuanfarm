@@ -49,8 +49,8 @@ export class GenShop extends Component {
   protected onLoad(): void {
     this.seedSpacingY = 80;
     this.requestShopList();
-    this.USeedList = find("MainCanvas/popBox/Shop/Canvas/List");
-    this.USeedSection = find("MainCanvas/popBox/Shop/Canvas/Section");
+    this.USeedList = find("popBox/Canvas/Shop/List");
+    this.USeedSection = find("popBox/Canvas/Shop/Section");
   }
 
   // 生成推荐列表
@@ -64,8 +64,8 @@ export class GenShop extends Component {
         .contentSize.width;
 
     // 计算起始点，以保证整个布局居中
-    const startX = this.USeedSection.position.x;
-    const startY = this.USeedSection.position.y;
+    const startX = this.USeedSection.position.x - 376;
+    const startY = this.USeedSection.position.y - 667;
 
     seedList.forEach((seed, index) => {
       const posY =

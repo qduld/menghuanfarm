@@ -48,13 +48,14 @@ export class GenBag extends Component {
 
   protected onLoad(): void {
     this.requestPackageList();
-    this.USeedList = find("MainCanvas/popBox/Bag/Canvas/List");
-    this.USeedSection = find("MainCanvas/popBox/Bag/Canvas/Section");
+    this.USeedList = find("popBox/Canvas/Bag/List");
+    this.USeedSection = find("popBox/Canvas/Bag/Section");
   }
 
   // 生成推荐列表
   createPackageLayout() {
     // 获取预制体的宽度和高度
+    debugger;
     const sectionHeight =
       this.USeedSection.getChildByName("Bg").getComponent(UITransform)
         .contentSize.height;
@@ -63,8 +64,8 @@ export class GenBag extends Component {
         .contentSize.width;
 
     // 计算起始点，以保证整个布局居中
-    const startX = this.USeedSection.position.x;
-    const startY = this.USeedSection.position.y;
+    const startX = this.USeedSection.position.x - 376;
+    const startY = this.USeedSection.position.y - 667;
 
     seedList.forEach((seed, index) => {
       const posY =
