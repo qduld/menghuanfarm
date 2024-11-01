@@ -31627,3 +31627,117 @@
 2024-11-2 02:00:53-debug: Process: heapTotal 223.27MB heapUsed 215.87MB rss 185.82MB
 2024-11-2 02:00:53-log: Run build task(build-script) in child, see: chrome://inspect/#devices
 2024-11-2 02:00:55-warn: [build-script][[Build.Script.Rollup]] Circular dependency: file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/genPlant.ts -> file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/main.ts -> file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/genPlant.ts
+2024-11-2 02:01:01-debug: excute-script over with build-script 7441ms
+2024-11-2 02:01:01-debug: Copy externalScripts success!
+2024-11-2 02:01:01-debug: Build project script in (7467 ms) √57%
+2024-11-2 02:01:01-debug: Build engine start...57%
+2024-11-2 02:01:01-debug: Process: heapTotal 224.27MB heapUsed 215.37MB rss 185.84MB
+2024-11-2 02:01:01-debug: Use cache engine: {link(C:\Users\ADMINI~1\AppData\Local\Temp\CocosCreator\3.6.1\builder\engine\fde329c401c641771bff368eaccc979a)}
+2024-11-2 02:01:01-debug: {"debug":false,"sourceMaps":false,"includeModules":["2d","animation","audio","base","dragon-bones","gfx-webgl","gfx-webgl2","intersection-2d","marionette","particle-2d","physics-2d-box2d","profiler","skeletal-animation","spine","tiled-map","tween","ui","video","webview","xr"],"engineVersion":"3.6.1","platform":"HTML5","md5Map":[],"engineName":"cocos-js","useCache":true,"split":false,"ammoJsWasm":"fallback","assetURLFormat":"runtime-resolved","flags":{"DEBUG":false},"entry":"D:\\cocos-dashboard-editors\\Creator\\3.6.1\\resources\\resources\\3d\\engine"}
+2024-11-2 02:01:01-debug: Build engine in (139 ms) √57%
+2024-11-2 02:01:01-debug: // ---- build task Build script ---- (24283ms)
+2024-11-2 02:01:01-debug: run build task Build script success in 24283 ms √63%
+2024-11-2 02:01:01-debug: Process: heapTotal 223.77MB heapUsed 215.88MB rss 185.11MB
+2024-11-2 02:01:01-debug: Add md5 suffix to assets start63%
+2024-11-2 02:01:01-debug: // ---- build task Add md5 suffix to assets ----
+2024-11-2 02:01:01-debug: // ---- build task Add md5 suffix to assets ---- (1ms)
+2024-11-2 02:01:01-debug: run build task Add md5 suffix to assets success in 1 ms √73%
+2024-11-2 02:01:01-debug: Process: heapTotal 223.77MB heapUsed 215.93MB rss 185.16MB
+2024-11-2 02:01:01-debug: Init settings and config start73%
+2024-11-2 02:01:01-debug: // ---- build task Init settings and config ----
+2024-11-2 02:01:01-debug: run build task Init settings and config success in 0 ms √74%
+2024-11-2 02:01:01-debug: builder.tasks.settings.macro does not defined in i18n
+2024-11-2 02:01:01-debug: Process: heapTotal 223.77MB heapUsed 215.98MB rss 185.21MB
+2024-11-2 02:01:01-debug: // ---- build task builder.tasks.settings.macro ----
+2024-11-2 02:01:01-debug: builder.tasks.settings.macro start74%
+2024-11-2 02:01:01-debug: // ---- build task builder.tasks.settings.macro ---- (14ms)
+2024-11-2 02:01:01-debug: run build task builder.tasks.settings.macro success in 14 ms √74%
+2024-11-2 02:01:01-debug: Process: heapTotal 223.77MB heapUsed 216.03MB rss 185.26MB
+2024-11-2 02:01:01-debug: // ---- build task Sort some build options to settings.json ----
+2024-11-2 02:01:01-debug: Sort some build options to settings.json start74%
+2024-11-2 02:01:01-debug: // ---- build task Sort some build options to settings.json ---- (13ms)
+2024-11-2 02:01:01-debug: run build task Sort some build options to settings.json success in 13 ms √75%
+2024-11-2 02:01:01-debug: Process: heapTotal 223.77MB heapUsed 216.13MB rss 185.41MB
+2024-11-2 02:01:01-debug: // ---- build task custom joint texture layouts ----
+2024-11-2 02:01:01-debug: custom joint texture layouts start75%
+2024-11-2 02:01:01-debug: // ---- build task custom joint texture layouts ---- (13ms)
+2024-11-2 02:01:01-debug: run build task custom joint texture layouts success in 13 ms √76%
+2024-11-2 02:01:01-debug: custom joint physics start76%
+2024-11-2 02:01:01-debug: // ---- build task custom joint physics ----
+2024-11-2 02:01:01-debug: Process: heapTotal 223.77MB heapUsed 216.17MB rss 185.45MB
+2024-11-2 02:01:01-debug: // ---- build task custom joint physics ---- (1ms)
+2024-11-2 02:01:01-debug: run build task custom joint physics success in 1 ms √76%
+2024-11-2 02:01:01-debug: Process: heapTotal 223.77MB heapUsed 215.52MB rss 184.71MB
+2024-11-2 02:01:01-debug: Fill script data to settings start76%
+2024-11-2 02:01:01-debug: // ---- build task Fill script data to settings ----
+2024-11-2 02:01:01-debug: // ---- build task Fill script data to settings ---- (1ms)
+2024-11-2 02:01:01-debug: run build task Fill script data to settings success in 1 ms √77%
+2024-11-2 02:01:01-debug: Process: heapTotal 223.77MB heapUsed 215.57MB rss 184.76MB
+2024-11-2 02:01:01-debug: Fill scene data to settings start77%
+2024-11-2 02:01:01-debug: // ---- build task Fill scene data to settings ----
+2024-11-2 02:01:01-debug: // ---- build task Fill scene data to settings ---- (1ms)
+2024-11-2 02:01:01-debug: run build task Fill scene data to settings success in 1 ms √77%
+2024-11-2 02:01:01-debug: Process: heapTotal 223.77MB heapUsed 215.61MB rss 184.80MB
+2024-11-2 02:01:01-debug: Organize assets groups，generate packedAssets and rawAssets data start77%
+2024-11-2 02:01:01-debug: // ---- build task Organize assets groups，generate packedAssets and rawAssets data ----
+2024-11-2 02:01:01-debug: // ---- build task Organize assets groups，generate packedAssets and rawAssets data ---- (2ms)
+2024-11-2 02:01:01-debug: run build task Organize assets groups，generate packedAssets and rawAssets data success in 2 ms √78%
+2024-11-2 02:01:01-debug: Process: heapTotal 223.77MB heapUsed 215.77MB rss 184.95MB
+2024-11-2 02:01:01-debug: options.md5Cache is false.
+2024-11-2 02:01:01-debug: Generate md5AssetsMap from suffixMap to settings start78%
+2024-11-2 02:01:01-debug: // ---- build task Generate md5AssetsMap from suffixMap to settings ----
+2024-11-2 02:01:01-debug: // ---- build task Generate md5AssetsMap from suffixMap to settings ---- (1ms)
+2024-11-2 02:01:01-debug: run build task Generate md5AssetsMap from suffixMap to settings success in 1 ms √78%
+2024-11-2 02:01:01-debug: Process: heapTotal 223.77MB heapUsed 215.82MB rss 185.10MB
+2024-11-2 02:01:01-debug: web-mobile:(onBeforeCompressSettings) start...78%
+2024-11-2 02:01:01-debug: // ---- build task web-mobile：onBeforeCompressSettings ----
+2024-11-2 02:01:01-debug: web-mobile:(onBeforeCompressSettings) in 0 ms81%
+2024-11-2 02:01:01-debug: cocos-service:(onBeforeCompressSettings) start...81%
+2024-11-2 02:01:01-debug: // ---- build task cocos-service：onBeforeCompressSettings ----
+2024-11-2 02:01:01-debug: Process: heapTotal 223.77MB heapUsed 215.86MB rss 185.14MB
+2024-11-2 02:01:01-debug: // ---- build task cocos-service：onBeforeCompressSettings ---- (210ms)
+2024-11-2 02:01:01-debug: cocos-service:(onBeforeCompressSettings) in 210 ms83%
+2024-11-2 02:01:01-debug: Build import-map.json start83%
+2024-11-2 02:01:01-debug: // ---- build task Build import-map.json ----
+2024-11-2 02:01:01-debug: Process: heapTotal 223.77MB heapUsed 215.93MB rss 185.20MB
+2024-11-2 02:01:01-debug: run build task Build import-map.json success in 14 ms √84%
+2024-11-2 02:01:01-debug: // ---- build task Compress settings.json and config.json ----
+2024-11-2 02:01:01-debug: Compress settings.json and config.json start84%
+2024-11-2 02:01:01-debug: // ---- build task Build import-map.json ---- (14ms)
+2024-11-2 02:01:01-debug: Process: heapTotal 223.77MB heapUsed 215.98MB rss 185.25MB
+2024-11-2 02:01:01-debug: // ---- build task Compress settings.json and config.json ---- (3ms)
+2024-11-2 02:01:01-debug: run build task Compress settings.json and config.json success in 3 ms √85%
+2024-11-2 02:01:01-debug: Save config.json start85%
+2024-11-2 02:01:01-debug: // ---- build task Save config.json ----
+2024-11-2 02:01:01-debug: Process: heapTotal 223.77MB heapUsed 216.27MB rss 185.55MB
+2024-11-2 02:01:01-debug: // ---- build task Save config.json ---- (3ms)
+2024-11-2 02:01:01-debug: run build task Save config.json success in 3 ms √86%
+2024-11-2 02:01:01-debug: Process: heapTotal 223.77MB heapUsed 215.63MB rss 184.90MB
+2024-11-2 02:01:01-debug: Save Settings.json start86%
+2024-11-2 02:01:01-debug: // ---- build task Save Settings.json ----
+2024-11-2 02:01:01-debug: // ---- build task Save Settings.json ---- (2ms)
+2024-11-2 02:01:01-debug: Sort build template start87%
+2024-11-2 02:01:01-debug: // ---- build task Sort build template ----
+2024-11-2 02:01:01-debug: Process: heapTotal 223.77MB heapUsed 215.79MB rss 185.14MB
+2024-11-2 02:01:01-debug: run build task Save Settings.json success in 2 ms √87%
+2024-11-2 02:01:01-debug: // ---- build task Sort build template ---- (86ms)
+2024-11-2 02:01:01-debug: run build task Sort build template success in 86 ms √88%
+2024-11-2 02:01:01-debug: cocos-service:(onAfterCompressSettings) start...88%
+2024-11-2 02:01:01-debug: // ---- build task cocos-service：onAfterCompressSettings ----
+2024-11-2 02:01:01-debug: Process: heapTotal 223.77MB heapUsed 216.72MB rss 188.42MB
+2024-11-2 02:01:01-debug: // ---- build task cocos-service：onAfterCompressSettings ---- (198ms)
+2024-11-2 02:01:01-debug: cocos-service:(onAfterCompressSettings) in 198 ms90%
+2024-11-2 02:01:01-debug: Process: heapTotal 227.02MB heapUsed 216.95MB rss 186.55MB
+2024-11-2 02:01:01-debug: web-mobile:(onAfterBuild) start...90%
+2024-11-2 02:01:01-debug: // ---- build task web-mobile：onAfterBuild ----
+2024-11-2 02:01:01-debug: Use build-template {link(E:\lianlukeji\frontend\cocos\menghuanfarm\build-templates\web-mobile)}.
+2024-11-2 02:01:01-debug: // ---- build task web-mobile：onAfterBuild ---- (37ms)
+2024-11-2 02:01:01-debug: web-mobile:(onAfterBuild) in 37 ms92%
+2024-11-2 02:01:01-debug: cocos-service:(onAfterBuild) start...92%
+2024-11-2 02:01:01-debug: // ---- build task cocos-service：onAfterBuild ----
+2024-11-2 02:01:01-debug: Process: heapTotal 227.02MB heapUsed 217.12MB rss 187.79MB
+2024-11-2 02:01:02-debug: // ---- build task cocos-service：onAfterBuild ---- (208ms)
+2024-11-2 02:01:02-debug: cocos-service:(onAfterBuild) in 208 ms94%
+2024-11-2 02:01:02-debug: builder:build-project-total (27266ms)
+2024-11-2 02:01:02-debug: build success in 27266 ms!
+2024-11-2 02:01:02-debug: ================================ Build Task (web-mobile) Finished in (27273)ms ================================
