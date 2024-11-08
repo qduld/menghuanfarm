@@ -22,7 +22,7 @@ import {
   AudioClip,
   AudioSource,
 } from "cc";
-import { retrieveLaunchParams } from "@telegram-apps/sdk";
+import { Login } from "./login";
 import { genPlant } from "./genPlant";
 import { GenBlock } from "./genBlock";
 import { timer } from "./timer";
@@ -50,6 +50,9 @@ export class main extends Component {
   public static token: string | null = null;
   @property(Node)
   genBlock: GenBlock = new GenBlock(); // block实例
+
+  @property(Node)
+  login: Login = new Login(); // block实例
 
   protected onLoad(): void {
     this.init();
@@ -195,9 +198,10 @@ export class main extends Component {
       (paiHangBox = find("MainCanvas/popBox/paihang")),
       (msgBox = find("MainCanvas/popBox/msgBox"));
 
-    (userAvata = find("MainCanvas/touxiangkuang/userAvata")),
-      (nickName = find("MainCanvas/touxiangkuang/nickname")),
+    (nickName = find("MainCanvas/touxiangkuang/nickname")),
       (jinbi = find("MainCanvas/jinbi/boxbg/txt"));
+
+    userAvata = find("MainCanvas/TopContent/Avatar/Picture");
 
     bagBox = find("popBox/Canvas/Bag");
     shopBox = find("popBox/Canvas/Shop");
@@ -210,6 +214,38 @@ export class main extends Component {
     main.saleBox = mySaleBox;
     main.addPackCount = 0;
     main.addSalePackCount = 0;
+
+    this.initTelegram();
+    this.initLogin();
+  }
+  initTelegram() {
+    if (typeof window.Telegram === "undefined") {
+      window.Telegram = {
+        WebApp: {
+          initDataUnsafe: {
+            user: {
+              id: "123456789",
+              username: "testuser",
+              first_name: "Test",
+              last_name: "User",
+              photo_url:
+                "http://localhost:7457/assets/resources/native/25/25aa232e-0f5d-4ef1-8322-efdb2fc54520.png",
+            },
+          },
+          ready: () => console.log("Telegram WebApp ready (模拟)"),
+        },
+      };
+    }
+  }
+  initLogin() {
+    this.login.loadUserAvatar((spriteFrame) => {
+      if (spriteFrame) {
+        console.log("头像加载成功，可以在这里使用 spriteFrame", spriteFrame);
+        userAvata.getComponent(Sprite).spriteFrame = spriteFrame;
+      } else {
+        console.log("未能加载头像");
+      }
+    });
   }
   //弹窗
   showDialog(event: EventTouch) {
