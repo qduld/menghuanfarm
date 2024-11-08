@@ -220,10 +220,7 @@ export class main extends Component {
   }
   initTelegram() {
     console.log(window.Telegram);
-    if (
-      typeof window.Telegram === "undefined" ||
-      typeof window.Telegram.WebApp?.initDataUnsafe?.user === "undefined"
-    ) {
+    if (typeof window.Telegram === "undefined") {
       window.Telegram = {
         WebApp: {
           initDataUnsafe: {

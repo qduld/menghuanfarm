@@ -10,7 +10,7 @@ export class ShowTelegramInfo extends Component {
   start() {
     // 获取 window.Telegram 对象
     const telegramInfo = JSON.stringify(
-      window.Telegram.WebApp.initDataUnsafe?.user?.photo_url,
+      window.Telegram.WebApp.initDataUnsafe,
       null,
       2
     ); // 格式化显示对象内容
