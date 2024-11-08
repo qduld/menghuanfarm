@@ -219,7 +219,11 @@ export class main extends Component {
     this.initLogin();
   }
   initTelegram() {
-    if (typeof window.Telegram === "undefined") {
+    console.log(window.Telegram);
+    if (
+      typeof window.Telegram === "undefined" ||
+      typeof window.Telegram.WebApp?.initDataUnsafe?.user === "undefined"
+    ) {
       window.Telegram = {
         WebApp: {
           initDataUnsafe: {
@@ -228,8 +232,7 @@ export class main extends Component {
               username: "testuser",
               first_name: "Test",
               last_name: "User",
-              photo_url:
-                "http://localhost:7457/assets/resources/native/25/25aa232e-0f5d-4ef1-8322-efdb2fc54520.png",
+              photo_url: "home/spriteFrame",
             },
           },
           ready: () => console.log("Telegram WebApp ready (模拟)"),

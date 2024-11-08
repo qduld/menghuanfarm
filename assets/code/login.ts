@@ -3,6 +3,7 @@ import {
   Component,
   assetManager,
   SpriteFrame,
+  resources,
   Texture2D,
 } from "cc";
 const { ccclass, property } = _decorator;
@@ -18,9 +19,20 @@ export class Login extends Component {
       callback(null); // 返回空，表示加载失败
       return;
     }
-    debugger;
     const avatarUrl = window.Telegram.WebApp.initDataUnsafe?.user?.photo_url;
+    console.log(avatarUrl, "avatarUrl");
     if (avatarUrl) {
+      if (avatarUrl.includes("spriteFrame")) {
+        resources.load(avatarUrl, SpriteFrame, (err, spriteFrame) => {
+          if (err) {
+            console.error("加载本地头像图片失败:", err);
+            callback(null); // 头像加载失败，返回空
+            return;
+          }
+
+          callback(spriteFrame); // 返回加载完成的头像 SpriteFrame
+        });
+      }
       assetManager.loadRemote(avatarUrl, (err, imageAsset) => {
         if (err) {
           console.error("头像加载失败:", err);
