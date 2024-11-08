@@ -217,9 +217,9 @@ export class main extends Component {
 
     this.initTelegram();
     this.initLogin();
+    this.getUserInfo();
   }
   initTelegram() {
-    console.log(window.Telegram);
     if (typeof window.Telegram === "undefined") {
       window.Telegram = {
         WebApp: {
@@ -235,6 +235,8 @@ export class main extends Component {
           ready: () => console.log("Telegram WebApp ready (模拟)"),
         },
       };
+    } else {
+      window.Telegram.WebApp.ready();
     }
   }
   initLogin() {
@@ -246,6 +248,34 @@ export class main extends Component {
         console.log("未能加载头像");
       }
     });
+  }
+  getUserInfo() {
+    // Telegram API URL
+    const apiUrl = `https://api.telegram.org/bot7360724156:AAGeBGUrfDuRRYTkL-G4ZWKmi3rIKWH05VU/getUpdates`;
+
+    // 使用 fetch 请求 Telegram Bot API
+    fetch(apiUrl)
+      .then((response) => response.json()) // 解析 JSON 响应
+      .then((data) => {
+        if (data.ok && data.result.length > 0) {
+          // 获取第一个更新的消息
+          const message = data.result[0].message;
+          const userId = message.from.id; // 提取 user_id
+          const userName = message.from.first_name; // 提取用户名字（可选）
+          console.log(`User ID: ${userId}`);
+          console.log(`User Name: ${userName}`);
+
+          const label = find("MainCanvas/TelgramInfo");
+          // 将 `window.Telegram` 的内容显示到 Label 上
+          label.getComponent(Label).string = `Telegram Info:\n${userId}`;
+          // 在这里你可以继续处理用户数据，如获取头像等
+        } else {
+          console.log("没有找到更新或数据为空");
+        }
+      })
+      .catch((error) => {
+        console.error("请求错误: ", error);
+      });
   }
   //弹窗
   showDialog(event: EventTouch) {

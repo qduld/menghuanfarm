@@ -9,14 +9,13 @@ export class ShowTelegramInfo extends Component {
 
   start() {
     // 获取 window.Telegram 对象
-    const telegramInfo = JSON.stringify(
-      window.Telegram.WebApp.initDataUnsafe,
-      null,
-      2
-    ); // 格式化显示对象内容
-
-    this.label = find("MainCanvas/TelgramInfo");
-    // 将 `window.Telegram` 的内容显示到 Label 上
-    this.label.getComponent(Label).string = `Telegram Info:\n${telegramInfo}`;
+    // const telegramInfo = JSON.stringify(
+    //   window.Telegram.WebApp.initDataUnsafe,
+    //   null,
+    //   2
+    // ); // 格式化显示对象内容
+    // this.label = find("MainCanvas/TelgramInfo");
+    // // 将 `window.Telegram` 的内容显示到 Label 上
+    // this.label.getComponent(Label).string = `Telegram Info:\n${telegramInfo}`;
   }
 }
