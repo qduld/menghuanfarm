@@ -20,6 +20,8 @@ export class HoverEffect extends Component {
     // 设置监听事件
     this.targetNode.on(Node.EventType.MOUSE_ENTER, this.onMouseEnter, this);
     this.targetNode.on(Node.EventType.MOUSE_LEAVE, this.onMouseLeave, this);
+    this.targetNode.on(Node.EventType.TOUCH_START, this.onTouchStart, this);
+    this.targetNode.on(Node.EventType.TOUCH_END, this.onTouchEnd, this);
   }
 
   onMouseEnter() {
@@ -29,6 +31,24 @@ export class HoverEffect extends Component {
   }
 
   onMouseLeave() {
+    if (this.targetLevel === 3) {
+      this.targetNode.getChildByName("Receivehand").active = false;
+    }
+  }
+
+  onTouchStart() {
+    const dialog = Dialog.getInstance();
+    if (this.targetLevel === 3) {
+      this.targetNode.getChildByName("Receivehand").active = true;
+    }
+    if (dialog) {
+      if (this.targetLevel === 0) {
+        dialog.showDialog(null, "Bag");
+      }
+    }
+  }
+
+  onTouchEnd() {
     if (this.targetLevel === 3) {
       this.targetNode.getChildByName("Receivehand").active = false;
     }
