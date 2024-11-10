@@ -6,10 +6,13 @@ import {
   Layers,
   UITransform,
   instantiate,
+  EventTouch,
 } from "cc";
 import { blockList } from "./loadData";
 import { IFarmland } from "./interface";
 import { httpRequest } from "./http";
+import { GenPlant } from "./genPlant";
+import { Dialog } from "./dialog";
 const { ccclass, property } = _decorator;
 
 @ccclass("GenBlock")
@@ -94,6 +97,22 @@ export class GenBlock extends Component {
 
         // 设置土地的位置
         newblock.setPosition(posX, posY);
+
+        newblock.on(Node.EventType.TOUCH_END, (event) => {
+          this.onBlockClick(event, this.blockList[i * 3 + j]);
+        });
+
+        const plant = new GenPlant();
+        plant.updatePlantStatus(newblock, this.blockList[i * 3 + j]);
+      }
+    }
+  }
+
+  onBlockClick(event: EventTouch, blockData) {
+    const dialog = Dialog.getInstance();
+    if (dialog) {
+      if (blockData.status === 0) {
+        dialog.showDialog(event, "LockBlock");
       }
     }
   }

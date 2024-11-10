@@ -2,27 +2,14 @@ import {
   _decorator,
   Component,
   Node,
-  tween,
-  CCInteger,
-  Vec3,
-  CCFloat,
   find,
-  EventTouch,
   instantiate,
-  Layers,
   resources,
   Sprite,
   SpriteFrame,
   UITransform,
   Label,
-  director,
-  Scene,
-  sys,
-  assetManager,
-  AudioClip,
-  AudioSource,
 } from "cc";
-import { paiHang, param, wechatAd, tokenMock } from "./loadData";
 import { httpRequest } from "./http";
 import { ISeedList } from "./interface";
 import { seedList } from "./loadData";
@@ -55,7 +42,6 @@ export class GenBag extends Component {
   // 生成推荐列表
   createPackageLayout() {
     // 获取预制体的宽度和高度
-    debugger;
     const sectionHeight =
       this.USeedSection.getChildByName("Bg").getComponent(UITransform)
         .contentSize.height;
@@ -134,6 +120,25 @@ export class GenBag extends Component {
       if (response.ok) {
         this.seedList = response.data.data as ISeedList[];
         this.createPackageLayout();
+      } else {
+        console.error("Request failed with status:", response.status);
+      }
+    } catch (error) {
+      console.error("Error:", error);
+    }
+  }
+
+  // 播种
+  async requestFarmLandPlant() {
+    try {
+      const response = await httpRequest("/api/v1/farmland/plant", {
+        method: "POST",
+        body: {
+          farmlandId: 1,
+          seedId: 2,
+        },
+      });
+      if (response.ok) {
       } else {
         console.error("Request failed with status:", response.status);
       }

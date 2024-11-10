@@ -13,7 +13,6 @@ export class Login extends Component {
   // 这里不再绑定 Sprite 组件，而是返回加载的头像数据
   loadUserAvatar(callback) {
     // 检查 Telegram WebApp API 是否可用
-    debugger;
     if (typeof window.Telegram === "undefined" || !window.Telegram.WebApp) {
       console.warn("Telegram WebApp API 不可用");
       callback(null); // 返回空，表示加载失败

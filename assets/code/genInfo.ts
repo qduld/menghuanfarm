@@ -32,13 +32,15 @@ export class GenInfo extends Component {
   onLoad() {
     this.requestUAgg();
     this.requestUserInfo();
-    this.UUserName = find("MainCanvas/Person/Canvas/Name");
-    this.UPointsBalance = find("MainCanvas/Person/Canvas/Money");
-    this.UAddition = find("MainCanvas/Person/Canvas/Addition");
+    this.UUserName = find("MainCanvas/TopContent/Person/Name");
+    this.UPointsBalance = find("MainCanvas/TopContent/Person/Money");
+    this.UAddition = find("MainCanvas/TopContent/Person/Addition");
 
-    this.UHarvest = find("MainCanvas/Income/Canvas/Section/Harvest");
-    this.UStolenFrom = find("MainCanvas/Income/Canvas/Section/StolenFrom");
-    this.UBeStolen = find("MainCanvas/Income/Canvas/Section/BeStolen");
+    this.UHarvest = find("MainCanvas/TopContent/Income/Mask/Section/Harvest");
+    this.UStolenFrom = find(
+      "MainCanvas/TopContent/Income/Mask/Section/StolenFrom"
+    );
+    this.UBeStolen = find("MainCanvas/TopContent/Income/Mask/Section/BeStolen");
   }
 
   updateUserInfo() {

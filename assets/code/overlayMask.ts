@@ -23,7 +23,7 @@ export class OverlayMask extends Component {
     if (this.graphics) {
       this.uiTransform = this.node.getComponent(UITransform);
       this.graphics.clear(); // 清除之前的绘制
-      this.graphics.fillColor.set(0, 0, 0, 40); // 设置填充颜色为黑色
+      this.graphics.fillColor.set(0, 0, 0, 200); // 设置填充颜色为黑色
       this.graphics.rect(
         -375,
         -667,
