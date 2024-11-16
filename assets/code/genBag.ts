@@ -51,6 +51,7 @@ export class GenBag extends Component {
 
   // 生成推荐列表
   createPackageLayout() {
+    if (this.seedList.length === 0) return;
     // 获取预制体的宽度和高度
     const sectionHeight =
       this.USeedSection.getChildByName("Bg").getComponent(UITransform)
@@ -83,7 +84,7 @@ export class GenBag extends Component {
       seedSection
         .getChildByName("TimeGain")
         .getChildByName("Label")
-        .getComponent(Label).string = `+${seed.quantity}/m²`;
+        .getComponent(Label).string = `+${seed.quantity}/block`;
 
       seedSection.getChildByName("Time").getComponent(Label).string =
         formatSeconds(seed.maturityTime);
@@ -118,7 +119,7 @@ export class GenBag extends Component {
             .getComponent(Sprite).spriteFrame = spriteFrame;
 
           const seedEffect = seedSection.addComponent(SeedEffect);
-          seedEffect.setTargetNode(seedSection.getChildByName("Button"), seed);
+          seedEffect.setTargetNode(seedSection, seed);
         }
       );
     });
