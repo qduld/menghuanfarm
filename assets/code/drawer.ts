@@ -42,7 +42,8 @@ export class Drawer extends Component {
             return;
           }
 
-          drawerBtn.getComponent(Sprite).spriteFrame = spriteFrame;
+          drawerBtn.getChildByName("Sprite").getComponent(Sprite).spriteFrame =
+            spriteFrame;
         }
       );
     } else {
@@ -55,7 +56,8 @@ export class Drawer extends Component {
             return;
           }
 
-          drawerBtn.getComponent(Sprite).spriteFrame = spriteFrame;
+          drawerBtn.getChildByName("Sprite").getComponent(Sprite).spriteFrame =
+            spriteFrame;
         }
       );
     }

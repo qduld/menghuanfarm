@@ -50,6 +50,8 @@ export interface ISeedList {
   price: number;
   status: number;
   unLocked: number;
+  quantity: number;
+  userSeedId: number;
 }
 
 // /api/v1/seed/package 种子商店列表

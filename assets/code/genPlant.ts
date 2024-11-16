@@ -31,6 +31,9 @@ export class GenPlant extends Component {
       // 未种植
       this.plantSpritePath = "awaitingSowing";
       this.plantLevel = 0;
+      block.getChildByName("Countdown").active = false;
+      block.getChildByName("Plant").getChildByName("Receivehand").active =
+        false;
     } else {
       const currentTime = new Date().getTime();
       block.getChildByName("Countdown").active = true; // 临时放这里
@@ -103,10 +106,15 @@ export class GenPlant extends Component {
 
         this.plantSprite.getComponent(Sprite).spriteFrame = spriteFrame;
 
+        if (this.plantLevel === 0) {
+          this.plantSprite.getComponent(UITransform).width = 60;
+          this.plantSprite.getComponent(UITransform).height = 70;
+          this.plantSprite.setPosition(0, 36, 0);
+        }
         if (this.plantLevel === 3) {
-          this.plantSprite.getComponent(UITransform).width = 140;
-          this.plantSprite.getComponent(UITransform).height = 120;
-          this.plantSprite.setPosition(0, 60, 0);
+          this.plantSprite.getComponent(UITransform).width = 160;
+          this.plantSprite.getComponent(UITransform).height = 156;
+          this.plantSprite.setPosition(0, 80, 0);
         }
         const hoverEffect = this.plantSprite.addComponent(HoverEffect);
         hoverEffect.setTargetNode(this.plantSprite, data, this.plantLevel);

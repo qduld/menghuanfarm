@@ -12,8 +12,11 @@ import {
 } from "cc";
 import { httpRequest } from "./http";
 import { ISeedList } from "./interface";
-import { seedList } from "./loadData";
+// import { seedList } from "./loadData";
 import { formatSeconds } from "./utils";
+import { Dialog } from "./dialog";
+import { SeedEffect } from "./seedEffect";
+import { GenBlock } from "./genBlock";
 
 const { ccclass, property } = _decorator;
 @ccclass("GenBag")
@@ -33,7 +36,14 @@ export class GenBag extends Component {
   @property
   seedSpacingX: number = 20; // 种子X间距
 
+  private static _instance: GenBag;
+
+  static getInstance(): GenBag {
+    return GenBag._instance;
+  }
+
   protected onLoad(): void {
+    GenBag._instance = this;
     this.requestPackageList();
     this.USeedList = find("popBox/Canvas/Bag/List");
     this.USeedSection = find("popBox/Canvas/Bag/Section");
@@ -53,7 +63,7 @@ export class GenBag extends Component {
     const startX = this.USeedSection.position.x - 376;
     const startY = this.USeedSection.position.y - 667;
 
-    seedList.forEach((seed, index) => {
+    this.seedList.forEach((seed, index) => {
       const posY =
         startY - Math.floor(index / 3) * (sectionHeight + this.seedSpacingY);
       const posX = startX + (index % 3) * (sectionWidth + this.seedSpacingX);
@@ -106,9 +116,25 @@ export class GenBag extends Component {
             .getChildByName("Fruit")
             .getChildByName("Picture")
             .getComponent(Sprite).spriteFrame = spriteFrame;
+
+          const seedEffect = seedSection.addComponent(SeedEffect);
+          seedEffect.setTargetNode(seedSection.getChildByName("Button"), seed);
         }
       );
     });
+  }
+
+  async farmlandPlant() {
+    const dialog = Dialog.getInstance();
+
+    if (dialog.targetBlockInfo.id) {
+      // 是点击土地进入的背包，直接播种
+      await this.requestFarmLandPlant(
+        dialog.targetBlockInfo.id,
+        dialog.targetSeedInfo.id
+      );
+      dialog.closeDialog(null, "Bag");
+    }
   }
 
   // 获取背包列表
@@ -119,6 +145,7 @@ export class GenBag extends Component {
       });
       if (response.ok) {
         this.seedList = response.data.data as ISeedList[];
+        this.USeedList.removeAllChildren();
         this.createPackageLayout();
       } else {
         console.error("Request failed with status:", response.status);
@@ -129,16 +156,18 @@ export class GenBag extends Component {
   }
 
   // 播种
-  async requestFarmLandPlant() {
+  async requestFarmLandPlant(farmlandId, seedId) {
     try {
       const response = await httpRequest("/api/v1/farmland/plant", {
         method: "POST",
         body: {
-          farmlandId: 1,
-          seedId: 2,
+          farmlandId,
+          seedId,
         },
       });
       if (response.ok) {
+        const genBlock = GenBlock.getInstance();
+        await genBlock.updateFarmLand(farmlandId); // 重新请求farmlandList
       } else {
         console.error("Request failed with status:", response.status);
       }

@@ -2,30 +2,17 @@ import {
   _decorator,
   Component,
   Node,
-  tween,
-  CCInteger,
-  Vec3,
-  CCFloat,
   find,
-  EventTouch,
   instantiate,
-  Layers,
   resources,
   Sprite,
   SpriteFrame,
   UITransform,
   Label,
-  director,
-  Scene,
-  sys,
-  assetManager,
-  AudioClip,
-  AudioSource,
 } from "cc";
-import { paiHang, param, wechatAd, tokenMock } from "./loadData";
 import { httpRequest } from "./http";
 import { ISeedList } from "./interface";
-import { seedList } from "./loadData";
+import { BuySeedEffect } from "./buySeedEffect";
 import { formatSeconds } from "./utils";
 
 const { ccclass, property } = _decorator;
@@ -46,7 +33,14 @@ export class GenShop extends Component {
   @property
   seedSpacingX: number = 20; // 种子X间距
 
+  private static _instance: GenShop;
+
+  static getInstance(): GenShop {
+    return GenShop._instance;
+  }
+
   protected onLoad(): void {
+    GenShop._instance = this;
     this.seedSpacingY = 80;
     this.requestShopList();
     this.USeedList = find("popBox/Canvas/Shop/List");
@@ -67,7 +61,7 @@ export class GenShop extends Component {
     const startX = this.USeedSection.position.x - 376;
     const startY = this.USeedSection.position.y - 667;
 
-    seedList.forEach((seed, index) => {
+    this.seedList.forEach((seed, index) => {
       const posY =
         startY - Math.floor(index / 3) * (sectionHeight + this.seedSpacingY);
       const posX = startX + (index % 3) * (sectionWidth + this.seedSpacingX);
@@ -78,16 +72,16 @@ export class GenShop extends Component {
       seedSection.active = true;
       seedSection.setPosition(posX, posY);
 
-      seedSection
-        .getChildByName("Fruit")
-        .getChildByName("Number")
-        .getChildByName("Label")
-        .getComponent(Label).string = seed.quantity + "";
+      // seedSection
+      //   .getChildByName("Fruit")
+      //   .getChildByName("Number")
+      //   .getChildByName("Label")
+      //   .getComponent(Label).string = seed.quantity + "";
 
       seedSection
         .getChildByName("TimeGain")
         .getChildByName("Label")
-        .getComponent(Label).string = `+${seed.quantity}/m²`;
+        .getComponent(Label).string = `+${seed.points}/block`;
 
       seedSection.getChildByName("Time").getComponent(Label).string =
         formatSeconds(seed.maturityTime);
@@ -122,6 +116,9 @@ export class GenShop extends Component {
             .getComponent(Sprite).spriteFrame = spriteFrame;
         }
       );
+
+      const buySeedEffect = seedSection.addComponent(BuySeedEffect);
+      buySeedEffect.setTargetNode(seedSection.getChildByName("Button"), seed);
     });
   }
 
@@ -136,7 +133,27 @@ export class GenShop extends Component {
       );
       if (response.ok) {
         this.seedList = response.data.data as ISeedList[];
+        this.USeedList.removeAllChildren();
         this.createShopLayout();
+      } else {
+        console.error("Request failed with status:", response.status);
+      }
+    } catch (error) {
+      console.error("Error:", error);
+    }
+  }
+
+  // 购买种子
+  async buySeed(seedId, quantity) {
+    try {
+      const response = await httpRequest("/api/v1/seed/buy", {
+        method: "POST",
+        body: {
+          quantity,
+          seedId,
+        },
+      });
+      if (response.ok) {
       } else {
         console.error("Request failed with status:", response.status);
       }

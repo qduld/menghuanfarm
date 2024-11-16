@@ -1552,7 +1552,6 @@
         "edf946e9-069b-434a-80d1-cbb0ebb91f85@f9941",
         "951249e0-9f16-456d-8b85-a6ca954da16b@f9941",
         "a23bf510-4f33-449d-ba46-53f0d71d2a99",
-        "5da7f357-fe18-46b9-a97a-ec07f034e08a@f9941",
         "a23bf510-4f33-449d-ba46-53f0d71d2a99",
         "a23bf510-4f33-449d-ba46-53f0d71d2a99",
         "5da7f357-fe18-46b9-a97a-ec07f034e08a@f9941",
@@ -1561,6 +1560,7 @@
         "5da7f357-fe18-46b9-a97a-ec07f034e08a@f9941",
         "b5475517-23b9-4873-bc1a-968d96616081",
         "a23bf510-4f33-449d-ba46-53f0d71d2a99",
+        "aa395cda-b3d0-45ae-a2c2-4a440236582d@f9941",
         "aa395cda-b3d0-45ae-a2c2-4a440236582d@f9941",
         "aa395cda-b3d0-45ae-a2c2-4a440236582d@f9941",
         "6cfb57f2-1c8b-46a1-9701-60273ae11a81@f9941",
@@ -1677,9 +1677,6 @@
         "cc35e074-3d5f-4aa7-b34e-515b15da23fc@f9941",
         "49ffcfb5-0522-4c50-9c0a-7ecb8f9bdbad@f9941",
         "49ffcfb5-0522-4c50-9c0a-7ecb8f9bdbad@f9941",
-        "20835ba4-6145-4fbc-a58a-051ce700aa3e@f9941",
-        "544e49d6-3f05-4fa8-9a9e-091f98fc2ce8@f9941",
-        "951249e0-9f16-456d-8b85-a6ca954da16b@f9941",
         "e4e721af-0911-4613-80e7-c4b795a03992@f9941",
         "c5e716b2-bc7a-45bf-913a-f8b23bc98514@f9941",
         "481ffa6f-7a5f-4c16-8653-ac2747ef2353@f9941",
@@ -1701,6 +1698,28 @@
         "a23bf510-4f33-449d-ba46-53f0d71d2a99",
         "a23bf510-4f33-449d-ba46-53f0d71d2a99",
         "cc35e074-3d5f-4aa7-b34e-515b15da23fc@f9941",
+        "a23bf510-4f33-449d-ba46-53f0d71d2a99",
+        "a23bf510-4f33-449d-ba46-53f0d71d2a99",
+        "904be8bc-19da-411a-a624-9e7e106e7c76@f9941",
+        "103c6238-b7cd-48d7-a100-6fb0547adf38@f9941",
+        "103c6238-b7cd-48d7-a100-6fb0547adf38@f9941",
+        "a23bf510-4f33-449d-ba46-53f0d71d2a99",
+        "c5e716b2-bc7a-45bf-913a-f8b23bc98514@f9941",
+        "481ffa6f-7a5f-4c16-8653-ac2747ef2353@f9941",
+        "6d0ccbb2-6e8f-4319-954b-2a26e04ffb68@f9941",
+        "a23bf510-4f33-449d-ba46-53f0d71d2a99",
+        "1cf30073-bb97-404b-ac0b-367f22ceebed",
+        "cc35e074-3d5f-4aa7-b34e-515b15da23fc@f9941",
+        "a23bf510-4f33-449d-ba46-53f0d71d2a99",
+        "1cf30073-bb97-404b-ac0b-367f22ceebed",
+        "a23bf510-4f33-449d-ba46-53f0d71d2a99",
+        "1cf30073-bb97-404b-ac0b-367f22ceebed",
+        "cc35e074-3d5f-4aa7-b34e-515b15da23fc@f9941",
+        "a23bf510-4f33-449d-ba46-53f0d71d2a99",
+        "2f02d51c-7b15-41e9-bc4a-e719fd4d9d54@f9941",
+        "2f02d51c-7b15-41e9-bc4a-e719fd4d9d54@f9941",
+        "716b5b2b-c09d-4381-9aaa-9cd4795305d3@f9941",
+        "716b5b2b-c09d-4381-9aaa-9cd4795305d3@f9941",
         "a23bf510-4f33-449d-ba46-53f0d71d2a99",
         "a23bf510-4f33-449d-ba46-53f0d71d2a99"
       ]
@@ -3682,6 +3701,108 @@
     "value": {
       "depends": [
         "edf946e9-069b-434a-80d1-cbb0ebb91f85@6c48a"
+      ]
+    }
+  },
+  "3e9da917-b9ae-4e62-b9a0-27e91f3f7b35": {
+    "url": "db://assets/code/seedEffect.ts",
+    "value": {}
+  },
+  "1cf30073-bb97-404b-ac0b-367f22ceebed": {
+    "url": "db://assets/resources/Nunito-Regular.ttf",
+    "value": {
+      "depends": []
+    }
+  },
+  "448f2a6a-bfe8-4624-8b36-e1aecc1dc18e": {
+    "url": "db://assets/resources/购买减号@2x.png",
+    "value": {}
+  },
+  "448f2a6a-bfe8-4624-8b36-e1aecc1dc18e@6c48a": {
+    "url": "db://assets/resources/购买减号@2x.png@6c48a",
+    "value": {
+      "depends": [
+        "448f2a6a-bfe8-4624-8b36-e1aecc1dc18e"
+      ]
+    }
+  },
+  "448f2a6a-bfe8-4624-8b36-e1aecc1dc18e@f9941": {
+    "url": "db://assets/resources/购买减号@2x.png@f9941",
+    "value": {
+      "depends": [
+        "448f2a6a-bfe8-4624-8b36-e1aecc1dc18e@6c48a"
+      ]
+    }
+  },
+  "2f02d51c-7b15-41e9-bc4a-e719fd4d9d54": {
+    "url": "db://assets/resources/minimize.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "2f02d51c-7b15-41e9-bc4a-e719fd4d9d54@6c48a": {
+    "url": "db://assets/resources/minimize.png@6c48a",
+    "value": {
+      "depends": [
+        "2f02d51c-7b15-41e9-bc4a-e719fd4d9d54"
+      ]
+    }
+  },
+  "2f02d51c-7b15-41e9-bc4a-e719fd4d9d54@f9941": {
+    "url": "db://assets/resources/minimize.png@f9941",
+    "value": {
+      "depends": [
+        "2f02d51c-7b15-41e9-bc4a-e719fd4d9d54@6c48a"
+      ]
+    }
+  },
+  "da95bd03-ab67-48fe-8084-7f5630e21b75": {
+    "url": "db://assets/resources/plus.png",
+    "value": {}
+  },
+  "da95bd03-ab67-48fe-8084-7f5630e21b75@6c48a": {
+    "url": "db://assets/resources/plus.png@6c48a",
+    "value": {
+      "depends": [
+        "da95bd03-ab67-48fe-8084-7f5630e21b75"
+      ]
+    }
+  },
+  "da95bd03-ab67-48fe-8084-7f5630e21b75@f9941": {
+    "url": "db://assets/resources/plus.png@f9941",
+    "value": {
+      "depends": [
+        "da95bd03-ab67-48fe-8084-7f5630e21b75@6c48a"
+      ]
+    }
+  },
+  "9d93f504-0006-4eea-926b-a79fc10f2e93": {
+    "url": "db://assets/code/buySeedEffect.ts",
+    "value": {}
+  },
+  "bf977087-e733-4542-8ee8-dd3c36664fd0": {
+    "url": "db://assets/code/buySeed.ts",
+    "value": {}
+  },
+  "716b5b2b-c09d-4381-9aaa-9cd4795305d3": {
+    "url": "db://assets/resources/increase.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "716b5b2b-c09d-4381-9aaa-9cd4795305d3@6c48a": {
+    "url": "db://assets/resources/increase.png@6c48a",
+    "value": {
+      "depends": [
+        "716b5b2b-c09d-4381-9aaa-9cd4795305d3"
+      ]
+    }
+  },
+  "716b5b2b-c09d-4381-9aaa-9cd4795305d3@f9941": {
+    "url": "db://assets/resources/increase.png@f9941",
+    "value": {
+      "depends": [
+        "716b5b2b-c09d-4381-9aaa-9cd4795305d3@6c48a"
       ]
     }
   }

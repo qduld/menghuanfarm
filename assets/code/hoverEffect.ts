@@ -1,7 +1,8 @@
 import { _decorator, Component, Node } from "cc";
 import { IFarmland } from "./interface";
 import { Dialog } from "./dialog";
-const { ccclass, property } = _decorator;
+import { GenBlock } from "./genBlock";
+const { ccclass } = _decorator;
 
 @ccclass("HoverEffect")
 export class HoverEffect extends Component {
@@ -37,13 +38,16 @@ export class HoverEffect extends Component {
   }
 
   onTouchStart() {
+    const genBlock = GenBlock.getInstance();
     const dialog = Dialog.getInstance();
     if (this.targetLevel === 3) {
       this.targetNode.getChildByName("Receivehand").active = true;
+      genBlock.harvestFarmland(this.targetData.id);
     }
     if (dialog) {
       if (this.targetLevel === 0) {
         dialog.showDialog(null, "Bag");
+        dialog.setTargetBlock(this.targetNode.parent, this.targetData);
       }
     }
   }
@@ -55,10 +59,15 @@ export class HoverEffect extends Component {
   }
 
   onMouseDown() {
+    const genBlock = GenBlock.getInstance();
     const dialog = Dialog.getInstance();
+    if (this.targetLevel === 3) {
+      genBlock.harvestFarmland(this.targetData.id);
+    }
     if (dialog) {
       if (this.targetLevel === 0) {
         dialog.showDialog(null, "Bag");
+        dialog.setTargetBlock(this.targetNode.parent, this.targetData);
       }
     }
   }
