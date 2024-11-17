@@ -96,7 +96,11 @@ export class GenBlock extends Component {
         newblock.setPosition(posX, posY);
 
         newblock.on(Node.EventType.TOUCH_END, (event) => {
-          this.onBlockClick(event, this.blockList[blockIndex]);
+          this.onBlockClick(event, newblock, this.blockList[blockIndex]);
+        });
+
+        newblock.on(Node.EventType.MOUSE_DOWN, (event) => {
+          this.onBlockClick(event, newblock, this.blockList[blockIndex]);
         });
 
         const plant = new GenPlant();
@@ -112,17 +116,20 @@ export class GenBlock extends Component {
       (block) => block.id === farmlandId
     );
 
+    plant.resetNode(this.blockContainer.children[blockIndex]);
+
     plant.updatePlantStatus(
       this.blockContainer.children[blockIndex],
       this.blockList[blockIndex]
     );
   }
 
-  onBlockClick(event: EventTouch, blockData) {
+  onBlockClick(event: EventTouch, block, blockData) {
     const dialog = Dialog.getInstance();
     if (dialog) {
       if (blockData.status === 0) {
         dialog.showDialog(event, "LockBlock");
+        dialog.setTargetBlock(block, blockData);
       }
     }
   }
@@ -172,6 +179,23 @@ export class GenBlock extends Component {
       });
       if (response.ok) {
         this.updateFarmLand(farmlandId);
+      } else {
+        console.error("Request failed with status:", response.status);
+      }
+    } catch (error) {
+      console.error("Error:", error);
+    }
+  }
+
+  async unLockBlock() {
+    const dialog = Dialog.getInstance();
+    try {
+      const response = await httpRequest("/api/v1/farmland/extend", {
+        method: "POST",
+      });
+      if (response.ok) {
+        this.requestFarmLand();
+        dialog.closeDialog(null, "LockBlock");
       } else {
         console.error("Request failed with status:", response.status);
       }

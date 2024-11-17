@@ -168,7 +168,7 @@ export class GenBag extends Component {
       });
       if (response.ok) {
         const genBlock = GenBlock.getInstance();
-        await genBlock.updateFarmLand(farmlandId); // 重新请求farmlandList
+        genBlock.updateFarmLand(farmlandId); // 重新请求farmlandList
       } else {
         console.error("Request failed with status:", response.status);
       }

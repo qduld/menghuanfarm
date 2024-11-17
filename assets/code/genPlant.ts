@@ -2,16 +2,14 @@ import {
   _decorator,
   Component,
   Node,
-  find,
-  instantiate,
   resources,
   Sprite,
   SpriteFrame,
   UITransform,
   Label,
-  Widget,
 } from "cc";
 import { formatSeconds } from "./utils";
+import { GenBlock } from "./genBlock";
 import { HoverEffect } from "./hoverEffect";
 
 const { ccclass, property } = _decorator;
@@ -20,7 +18,6 @@ export class GenPlant extends Component {
   private plantSprite: Node | null = null;
   private plantSpritePath: string | null = null;
   private plantLevel: number | null = null;
-  private countdownLabel: Node | null = null;
 
   updatePlantStatus(block, data) {
     if (data.status === 0) return; // 不可种植未解锁
@@ -36,38 +33,34 @@ export class GenPlant extends Component {
         false;
     } else {
       const currentTime = new Date().getTime();
+      const maturityTime = data.seed.plantAt + data.seed.maturityTime * 1000;
+      const plantTime = data.seed.plantAt;
       block.getChildByName("Countdown").active = true; // 临时放这里
+      const countdownLabel = block.getChildByName("Countdown");
 
-      if (
-        data.seed.maturityTime - currentTime > 0 &&
-        currentTime - data.seed.ttlSeconds < 0
-      ) {
-        if (
-          data.seed.maturityTime - currentTime >
-          currentTime - data.seed.ttlSeconds
-        ) {
+      if (maturityTime - currentTime > 0 && currentTime - plantTime >= 0) {
+        this.startCountdownForLand(
+          block,
+          countdownLabel,
+          maturityTime - currentTime,
+          data
+        );
+        if (maturityTime - currentTime > currentTime - plantTime) {
           // 如果播种时间没有过半
           this.plantLevel = 1;
         }
-        if (
-          data.seed.maturityTime - currentTime <
-          currentTime - data.seed.ttlSeconds
-        ) {
+        if (maturityTime - currentTime < currentTime - plantTime) {
           // 如果播种时间过半
           this.plantLevel = 2;
         }
-
-        this.countdownLabel = block
-          .getChildByName("Countdown")
-          .getChildByName("Time");
-        this.countdownLabel.getComponent(Label).string = formatSeconds(
-          (data.seed.maturityTime - currentTime) / 1000
-        );
+      } else {
+        countdownLabel["hasSchedule"] = false;
       }
 
-      if (data.seed.maturityTime - currentTime <= 0) {
+      if (maturityTime - currentTime <= 0) {
         // 如果超过成熟时间
         this.plantLevel = 3;
+        countdownLabel.active = false;
       }
 
       if (this.plantLevel === 1) {
@@ -91,10 +84,16 @@ export class GenPlant extends Component {
           case "西红柿":
             this.plantSpritePath = "tomatoLevel3";
             break;
+          default:
+            this.plantSpritePath = "carrotLevel3";
         }
       }
     }
 
+    if (!this.plantSpritePath) {
+      const genBlock = GenBlock.getInstance();
+      genBlock.updateFarmLand(data.id); // 重新请求farmlandList
+    }
     resources.load(
       this.plantSpritePath + "/spriteFrame",
       SpriteFrame,
@@ -111,14 +110,64 @@ export class GenPlant extends Component {
           this.plantSprite.getComponent(UITransform).height = 70;
           this.plantSprite.setPosition(0, 36, 0);
         }
-        if (this.plantLevel === 3) {
-          this.plantSprite.getComponent(UITransform).width = 160;
-          this.plantSprite.getComponent(UITransform).height = 156;
-          this.plantSprite.setPosition(0, 80, 0);
+        if (this.plantLevel === 1) {
+          this.plantSprite.getComponent(UITransform).width = 60;
+          this.plantSprite.getComponent(UITransform).height = 48;
+          this.plantSprite.setPosition(0, 30, 0);
         }
+        if (this.plantLevel === 2) {
+          this.plantSprite.getComponent(UITransform).width = 90;
+          this.plantSprite.getComponent(UITransform).height = 100;
+          this.plantSprite.setPosition(0, 60, 0);
+        }
+        if (this.plantLevel === 3) {
+          if (this.plantSpritePath === "carrotLevel3") {
+            this.plantSprite.getComponent(UITransform).width = 90;
+            this.plantSprite.getComponent(UITransform).height = 120;
+            this.plantSprite.setPosition(0, 60, 0);
+          } else {
+            this.plantSprite.getComponent(UITransform).width = 160;
+            this.plantSprite.getComponent(UITransform).height = 156;
+            this.plantSprite.setPosition(0, 80, 0);
+          }
+        }
+
         const hoverEffect = this.plantSprite.addComponent(HoverEffect);
         hoverEffect.setTargetNode(this.plantSprite, data, this.plantLevel);
       }
     );
+  }
+
+  startCountdownForLand(block: Node, landNode: Node, time: number, data) {
+    // 保存剩余时间
+    let remainingTime = time;
+    let label = landNode.getChildByName("Content").getComponent(Label);
+    landNode.active = true;
+
+    if (!label["hasSchedule"]) {
+      // 定时器
+      this.schedule(() => {
+        label["hasSchedule"] = true;
+        if (remainingTime > 0) {
+          // 设置标志位，防止重复创建定时器
+          remainingTime = remainingTime - 1000;
+          label.string = formatSeconds(Math.ceil(remainingTime / 1000));
+        } else {
+          label.string = "";
+          // 停止定时器
+          this.unschedule(this.updateCountdown(landNode));
+        }
+        this.updatePlantStatus(block, data);
+      }, 1);
+    }
+  }
+
+  updateCountdown(landNode: Node) {
+    landNode.active = false;
+    landNode["hasSchedule"] = false;
+  }
+
+  resetNode(block) {
+    block.getChildByName("Countdown")["hasSchedule"] = false;
   }
 }

@@ -22,20 +22,41 @@ export class HoverEffect extends Component {
     this.targetNode.on(Node.EventType.MOUSE_ENTER, this.onMouseEnter, this);
     this.targetNode.on(Node.EventType.MOUSE_LEAVE, this.onMouseLeave, this);
     this.targetNode.on(Node.EventType.TOUCH_START, this.onTouchStart, this);
+    // this.targetNode.on(Node.EventType.TOUCH_MOVE, this.onTouchMove, this);
     this.targetNode.on(Node.EventType.TOUCH_END, this.onTouchEnd, this);
   }
 
   onMouseEnter() {
     if (this.targetLevel === 3) {
       this.targetNode.getChildByName("Receivehand").active = true;
+    } else {
+      this.targetNode.getChildByName("Receivehand").active = false;
     }
   }
 
   onMouseLeave() {
+    this.targetNode.getChildByName("Receivehand").active = false;
+  }
+
+  onMouseDown() {
+    const genBlock = GenBlock.getInstance();
+    const dialog = Dialog.getInstance();
     if (this.targetLevel === 3) {
-      this.targetNode.getChildByName("Receivehand").active = false;
+      genBlock.harvestFarmland(this.targetData.id);
+    }
+    if (dialog) {
+      if (this.targetLevel === 0) {
+        dialog.showDialog(null, "Bag");
+        dialog.setTargetBlock(this.targetNode.parent, this.targetData);
+      }
     }
   }
+
+  // onTouchMove() {
+  //   if (this.targetLevel === 3) {
+  //     this.targetNode.getChildByName("Receivehand").active = true;
+  //   }
+  // }
 
   onTouchStart() {
     const genBlock = GenBlock.getInstance();
@@ -53,23 +74,7 @@ export class HoverEffect extends Component {
   }
 
   onTouchEnd() {
-    if (this.targetLevel === 3) {
-      this.targetNode.getChildByName("Receivehand").active = false;
-    }
-  }
-
-  onMouseDown() {
-    const genBlock = GenBlock.getInstance();
-    const dialog = Dialog.getInstance();
-    if (this.targetLevel === 3) {
-      genBlock.harvestFarmland(this.targetData.id);
-    }
-    if (dialog) {
-      if (this.targetLevel === 0) {
-        dialog.showDialog(null, "Bag");
-        dialog.setTargetBlock(this.targetNode.parent, this.targetData);
-      }
-    }
+    this.targetNode.getChildByName("Receivehand").active = false;
   }
 
   onDestroy() {
@@ -78,6 +83,9 @@ export class HoverEffect extends Component {
       this.targetNode.off(Node.EventType.MOUSE_DOWN, this.onMouseDown, this);
       this.targetNode.off(Node.EventType.MOUSE_ENTER, this.onMouseEnter, this);
       this.targetNode.off(Node.EventType.MOUSE_LEAVE, this.onMouseLeave, this);
+      this.targetNode.off(Node.EventType.TOUCH_START, this.onTouchStart, this);
+      // this.targetNode.off(Node.EventType.TOUCH_MOVE, this.onTouchMove, this);
+      this.targetNode.off(Node.EventType.TOUCH_END, this.onTouchEnd, this);
     }
   }
 }
