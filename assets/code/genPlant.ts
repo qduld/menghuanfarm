@@ -20,7 +20,7 @@ export class GenPlant extends Component {
   private plantLevel: number | null = null;
 
   updatePlantStatus(block, data) {
-    if (data.status === 0) return; // 不可种植未解锁
+    if (block.children === null || data.status === 0) return; // 不可种植未解锁
 
     this.plantSprite = block.getChildByName("Plant");
     this.plantSprite.active = true;

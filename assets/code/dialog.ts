@@ -20,6 +20,9 @@ export class Dialog extends Component {
   buySeedBox: Node = null; // buySeedBox
 
   @property(Node)
+  buyPropsBox: Node = null; // buyPropsBox
+
+  @property(Node)
   overlayMask: Node = null; // overlayMask
 
   @property
@@ -47,12 +50,14 @@ export class Dialog extends Component {
     this.shopBox = find("popBox/Canvas/Shop");
     this.lockBlockBox = find("popBox/Canvas/LockBlock");
     this.buySeedBox = find("popBox/Canvas/BuySeed");
+    this.buyPropsBox = find("popBox/Canvas/BuyProps");
     this.overlayMask = find("popBox/Canvas/OverlayMask");
 
     this.bagBox.active = false;
     this.shopBox.active = false;
     this.lockBlockBox.active = false;
     this.buySeedBox.active = false;
+    this.buyPropsBox.active = false;
     this.overlayMask.active = false;
   }
   showDialog(event: EventTouch, customData) {
@@ -73,6 +78,9 @@ export class Dialog extends Component {
       case "BuySeed":
         this.buySeedBox.active = true;
         break;
+      case "BuyProps":
+        this.buyPropsBox.active = true;
+        break;
     }
     this.overlayMask.active = true;
   }
@@ -92,6 +100,10 @@ export class Dialog extends Component {
         break;
       case "BuySeed":
         this.buySeedBox.active = false;
+        break;
+      case "BuyProps":
+        this.buyPropsBox.active = false;
+        this.overlayMask.active = false;
         break;
     }
   }

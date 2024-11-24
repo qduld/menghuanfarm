@@ -21,7 +21,8 @@ export interface HttpResponse {
 const defaultServer = "http://182.92.142.17:18000";
 export async function httpRequest<T>(
   url: string,
-  options: HttpRequestOptions = {}
+  options: HttpRequestOptions = {},
+  params?: Record<string, any>
 ): Promise<HttpResponse> {
   const {
     method = "GET",
@@ -33,6 +34,10 @@ export async function httpRequest<T>(
     },
     body = null,
   } = options;
+
+  if (params) {
+    url += objectToQueryString(params);
+  }
 
   try {
     const response = await fetch(`${defaultServer}${url}`, {
@@ -59,4 +64,22 @@ export async function httpRequest<T>(
     // 在这里可以添加更多的错误处理逻辑
     throw new Error(`HTTP request failed: ${error}`);
   }
+}
+
+/**
+ * 将对象转换为查询字符串
+ * @param params 请求的查询参数对象
+ * @returns string 查询字符串
+ */
+function objectToQueryString(params?: Record<string, any>): string {
+  if (!params) return "";
+  return (
+    "?" +
+    Object.entries(params)
+      .map(
+        ([key, value]) =>
+          `${encodeURIComponent(key)}=${encodeURIComponent(value ?? "")}`
+      )
+      .join("&")
+  );
 }

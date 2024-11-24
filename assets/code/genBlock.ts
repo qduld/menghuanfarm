@@ -134,6 +134,14 @@ export class GenBlock extends Component {
     }
   }
 
+  resetAllSchedule() {
+    this.blockContainer.children.forEach((block, index) => {
+      if (block.getChildByName("Countdown")) {
+        block.getChildByName("Countdown")["hasSchedule"] = false;
+      }
+    });
+  }
+
   // 获取农田列表
   async requestFarmLand() {
     try {

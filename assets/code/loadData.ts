@@ -223,6 +223,49 @@ export const squadList = [
   },
 ];
 
+export const membersList = [
+  {
+    id: "1",
+    tgFirstName: "fff1",
+    tgLastName: "",
+    tgUsername: "111",
+    pointsBalance: 2081,
+    level: 4,
+    stealAvailable: 1,
+    totalCollectPoints: 0,
+  },
+  {
+    id: "3",
+    tgFirstName: "fff",
+    tgLastName: "",
+    tgUsername: "333",
+    pointsBalance: 850,
+    level: 1,
+    stealAvailable: 0,
+    totalCollectPoints: 0,
+  },
+  {
+    id: "5418325938",
+    tgFirstName: "fff",
+    tgLastName: "",
+    tgUsername: "kkkkkkkykyyyyyyyy",
+    pointsBalance: 219502696,
+    level: 10,
+    stealAvailable: 1,
+    totalCollectPoints: 605,
+  },
+  {
+    id: "54183259",
+    tgFirstName: "fff",
+    tgLastName: "",
+    tgUsername: "kkkkkkky",
+    pointsBalance: 219502696,
+    level: 10,
+    stealAvailable: 1,
+    totalCollectPoints: 605,
+  },
+];
+
 export const seedList = [
   {
     id: 1,
@@ -275,5 +318,68 @@ export const seedList = [
     status: 1,
     quantity: 9,
     userSeedId: 1,
+  },
+];
+
+export const harvestList = [
+  {
+    createdAt: 1728811268236,
+    updatedAt: 1728811268236,
+    id: 1,
+    userId: 5418325938,
+    skillType: "SOIL",
+    ratio: 10,
+    upNum: 1,
+    cost: 2000,
+  },
+  {
+    createdAt: null,
+    updatedAt: null,
+    id: null,
+    userId: 5418325938,
+    skillType: "IRRIGATE",
+    ratio: 0,
+    upNum: 0,
+    cost: 1000,
+  },
+  {
+    createdAt: null,
+    updatedAt: null,
+    id: null,
+    userId: 5418325938,
+    skillType: "PLANT",
+    ratio: 0,
+    upNum: 0,
+    cost: 1000,
+  },
+  {
+    createdAt: null,
+    updatedAt: null,
+    id: null,
+    userId: 5418325938,
+    skillType: "GROW",
+    ratio: 0,
+    upNum: 0,
+    cost: 1000,
+  },
+  {
+    createdAt: null,
+    updatedAt: null,
+    id: null,
+    userId: 5418325938,
+    skillType: "MANURE",
+    ratio: 0,
+    upNum: 0,
+    cost: 1000,
+  },
+  {
+    createdAt: null,
+    updatedAt: null,
+    id: null,
+    userId: 5418325938,
+    skillType: "DITCH",
+    ratio: 0,
+    upNum: 0,
+    cost: 1000,
   },
 ];

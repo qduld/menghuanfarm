@@ -97,6 +97,7 @@ export interface IUserInfo {
   tgLastName: string;
   tgUsername: string;
   pointsBalance: number; // 金币数量
+  squadId: number; // 组织ID
   level: number; // 等级
   radio: number; // 加成
 }
@@ -116,4 +117,60 @@ export interface ISquadList {
   id: number;
   name: string;
   memberCount: number;
+}
+
+export interface IMembersList {
+  /**
+   * 用户id
+   */
+  id: string;
+  /**
+   * 用户等级
+   */
+  level: number;
+  /**
+   * 用户积分余额
+   */
+  pointsBalance: number;
+  /**
+   * 我是否可以偷取ta: 0-不可以, 1-可以
+   */
+  stealAvailable: number;
+  tgFirstName: string;
+  tgLastName: string;
+  tgUsername: string;
+  /**
+   * 该用户今日收取数量=今日偷取数量+今日收取数量
+   */
+  totalCollectPoints: number;
+}
+
+// /api/v1/skill/list 技能列表
+export interface ISkillList {
+  /**
+   * 下一级升级消耗积分
+   */
+  cost: number;
+  /**
+   * 创建时间
+   */
+  createdAt: number | null;
+  id: number | null;
+  /**
+   * 当前增加比例
+   */
+  ratio: number;
+  /**
+   * 技能类型
+   */
+  skillType: string;
+  /**
+   * 更新时间
+   */
+  updatedAt: number | null;
+  /**
+   * 升级次数
+   */
+  upNum: number;
+  userId: number;
 }

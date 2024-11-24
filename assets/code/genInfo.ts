@@ -2,6 +2,7 @@ import { _decorator, Component, Node, find, Label } from "cc";
 import { blockList } from "./loadData";
 import { httpRequest } from "./http";
 import { IUserInfo, IUagg } from "./interface";
+import { GlobalData } from "./globalData";
 const { ccclass, property } = _decorator;
 
 @ccclass("GenInfo")
@@ -25,9 +26,6 @@ export class GenInfo extends Component {
   UBeStolen: Node = null; // 我的今日被累计收取数量
 
   @property
-  userInfo: IUserInfo; // 用户信息
-
-  @property
   uagg: IUagg; // 今日收益统计
   onLoad() {
     this.requestUAgg();
@@ -44,13 +42,14 @@ export class GenInfo extends Component {
   }
 
   updateUserInfo() {
+    const globalData = GlobalData.getInstance();
     this.UUserName.getChildByName("Label").getComponent(Label).string =
-      this.userInfo.tgUsername;
+      globalData.userInfo.tgUsername;
     this.UPointsBalance.getChildByName("Label").getComponent(Label).string =
-      this.userInfo.pointsBalance + "";
+      globalData.userInfo.pointsBalance + "";
     this.UAddition.getChildByName("Label").getComponent(
       Label
-    ).string = `+${this.userInfo.radio}%`;
+    ).string = `+${globalData.userInfo.radio}%`;
   }
 
   // 获取用户信息
@@ -60,7 +59,8 @@ export class GenInfo extends Component {
         method: "GET",
       });
       if (response.ok) {
-        this.userInfo = response.data.data as IUserInfo;
+        const globalData = GlobalData.getInstance();
+        globalData.userInfo = response.data.data as IUserInfo;
         this.updateUserInfo();
       } else {
         console.error("Request failed with status:", response.status);
