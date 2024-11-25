@@ -21,6 +21,6 @@ export class UserAvatar extends Component {
     debugger;
     const { initData } = retrieveLaunchParams();
     const UInitData = find("MainCanvas/TopContent/Avatar/Picture/Label");
-    UInitData.getComponent(Label).string = JSON.stringify(initData.user);
+    UInitData.getComponent(Label).string = initData.user.photoUrl;
   }
 }
