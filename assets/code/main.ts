@@ -23,9 +23,9 @@ export class main extends Component {
     //种子背包
     userAvata = find("MainCanvas/TopContent/Avatar/Picture");
 
-    this.initTelegram();
-    this.initLogin();
-    this.getUserInfo();
+    // this.initTelegram();
+    // this.initLogin();
+    // this.getUserInfo();
   }
   initTelegram() {
     if (typeof window.Telegram === "undefined") {
