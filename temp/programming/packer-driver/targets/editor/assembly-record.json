@@ -2042,10 +2042,6 @@
       "imports": {},
       "timestamp": 1723823997060
     },
-    "8dfeddacc4c82b4252bb02a2538d5f5a60f5d03c": {
-      "imports": {},
-      "timestamp": 1724569129843
-    },
     "4d88661c6cb98b1a1474b704eae6ed5c416e8ff5": {
       "imports": {
         "cc": {
@@ -2865,17 +2861,9 @@
       },
       "timestamp": 1732455038799
     },
-    "ae99178f3bcc37d2e4a7c0ec95efe2bf12f6ff97": {
-      "imports": {
-        "cc": {
-          "resolved": {
-            "type": "chunk",
-            "id": "d0b282b9748ef7fc7d2e7bd647d71b0f7e84da53"
-          },
-          "messages": []
-        }
-      },
-      "timestamp": 1732455038855
+    "8dfeddacc4c82b4252bb02a2538d5f5a60f5d03c": {
+      "imports": {},
+      "timestamp": 1732517546186
     },
     "d0b282b9748ef7fc7d2e7bd647d71b0f7e84da53": {
       "imports": {
@@ -3062,11 +3050,11 @@
           "messages": []
         }
       },
-      "timestamp": 1732455433598
+      "timestamp": 1732517851458
     },
     "84741ad843cea9a440c5d8c2d379669b6551400d": {
       "imports": {},
-      "timestamp": 1732455433662
+      "timestamp": 1732517851522
     },
     "686f716b2bfb35b93424f89e7d4dd5a93ed25ef1": {
       "imports": {
@@ -3241,7 +3229,7 @@
         "__unresolved_30": {
           "resolved": {
             "type": "chunk",
-            "id": "ae99178f3bcc37d2e4a7c0ec95efe2bf12f6ff97"
+            "id": "fb76763b39ea566adcf340f1bd61f54b86bdd962"
           },
           "messages": []
         },
@@ -3295,7 +3283,33 @@
           "messages": []
         }
       },
-      "timestamp": 1732455435297
+      "timestamp": 1732518131002
+    },
+    "fb76763b39ea566adcf340f1bd61f54b86bdd962": {
+      "imports": {
+        "@telegram-apps/sdk": {
+          "resolved": {
+            "type": "chunk",
+            "id": "8dfeddacc4c82b4252bb02a2538d5f5a60f5d03c"
+          },
+          "messages": []
+        },
+        "__unresolved_0": {
+          "resolved": {
+            "type": "chunk",
+            "id": "84741ad843cea9a440c5d8c2d379669b6551400d"
+          },
+          "messages": []
+        },
+        "cc": {
+          "resolved": {
+            "type": "chunk",
+            "id": "d0b282b9748ef7fc7d2e7bd647d71b0f7e84da53"
+          },
+          "messages": []
+        }
+      },
+      "timestamp": 1732518131156
     }
   },
   "entries": {
@@ -3331,7 +3345,7 @@
     "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/seedEffect.ts": "61239b24260f26dca31b4896deef41f38c491fe6",
     "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/showTelegramInfo.ts": "ecebd06ece957b23719356b88d34d82bea45e75c",
     "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/timer.ts": "57aa3a73746d22d6e6fea20d4c04eb5fca3e2f83",
-    "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/userAvatar.ts": "ae99178f3bcc37d2e4a7c0ec95efe2bf12f6ff97",
-    "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/utils.ts": "86e5aaf7fb4b899cc0ef04ece8aed81203037d3d"
+    "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/utils.ts": "86e5aaf7fb4b899cc0ef04ece8aed81203037d3d",
+    "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/userAvatar.ts": "fb76763b39ea566adcf340f1bd61f54b86bdd962"
   }
 }

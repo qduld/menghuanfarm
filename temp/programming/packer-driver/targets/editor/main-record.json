@@ -1,7 +1,7 @@
 {
   "modules": {
     "cce:/internal/x/cc": {
-      "mTimestamp": 9398.808499991894,
+      "mTimestamp": 6640.672100007534,
       "chunkId": "d0b282b9748ef7fc7d2e7bd647d71b0f7e84da53",
       "imports": [
         {
@@ -556,7 +556,7 @@
       ]
     },
     "cce:/internal/x/prerequisite-imports": {
-      "mTimestamp": 11172.08630001545,
+      "mTimestamp": 286253.4090000391,
       "chunkId": "686f716b2bfb35b93424f89e7d4dd5a93ed25ef1",
       "imports": [
         {
@@ -1363,7 +1363,7 @@
       ]
     },
     "cce:/internal/code-quality/cr.mjs": {
-      "mTimestamp": 1732455424125,
+      "mTimestamp": 1732517844743,
       "chunkId": "84741ad843cea9a440c5d8c2d379669b6551400d",
       "imports": [],
       "type": "esm",
@@ -7329,7 +7329,7 @@
       ]
     },
     "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/node_modules/@telegram-apps/sdk/dist/index.js": {
-      "mTimestamp": 1724569081216.4343,
+      "mTimestamp": 1732517384986.0586,
       "chunkId": "8dfeddacc4c82b4252bb02a2538d5f5a60f5d03c",
       "imports": [],
       "type": "esm",
@@ -9507,11 +9507,15 @@
     },
     "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/userAvatar.ts": {
       "mTimestamp": {
-        "mtime": 1732454512431.5515,
+        "mtime": 1732518125093.2463,
         "uuid": "11f81f04-9e76-48fb-ac7a-2e125f21a855"
       },
-      "chunkId": "ae99178f3bcc37d2e4a7c0ec95efe2bf12f6ff97",
+      "chunkId": "fb76763b39ea566adcf340f1bd61f54b86bdd962",
       "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
         {
           "value": "cc"
         },
@@ -9522,12 +9526,25 @@
           "value": "cc",
           "loc": {
             "start": {
-              "line": 8,
+              "line": 9,
               "column": 7
             },
             "end": {
-              "line": 8,
+              "line": 9,
               "column": 11
+            }
+          }
+        },
+        {
+          "value": "@telegram-apps/sdk",
+          "loc": {
+            "start": {
+              "line": 10,
+              "column": 37
+            },
+            "end": {
+              "line": 10,
+              "column": 57
             }
           }
         }
@@ -9537,7 +9554,7 @@
         {
           "resolved": {
             "type": "module",
-            "url": "cce:/internal/x/cc"
+            "url": "cce:/internal/code-quality/cr.mjs"
           },
           "messages": []
         },
@@ -9552,6 +9569,20 @@
           "resolved": {
             "type": "module",
             "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/node_modules/@telegram-apps/sdk/dist/index.js"
           },
           "messages": []
         }
