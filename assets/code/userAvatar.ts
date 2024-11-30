@@ -18,7 +18,6 @@ export class UserAvatar extends Component {
 
   start() {}
   showInitData() {
-    debugger;
     const { initData } = retrieveLaunchParams();
     const UInitData = find("MainCanvas/TopContent/Avatar/Picture/Label");
     UInitData.getComponent(Label).string = initData.user.photoUrl;

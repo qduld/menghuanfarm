@@ -20,7 +20,6 @@
     "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/globalData.ts": "./chunks/ba/ba13a40511ac04564c0cd1b31ca8adb45aaed78d.js",
     "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/harvest.ts": "./chunks/9b/9b27a109abb8501fdb26b12fe09fcae1c59c73a2.js",
     "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/hoverEffect.ts": "./chunks/fc/fc7d4ca29f295ec6a5ce2f3e0ced13814765bf0e.js",
-    "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/http.ts": "./chunks/fb/fb0a2891d73c1c1c2ffb3b5694f9e94608992655.js",
     "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/interface.ts": "./chunks/e9/e91872bed1ce02ef8c0b8a1bd97039426629c4c6.js",
     "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/loadData.ts": "./chunks/04/047b9ac8fe1401185d2506ae44216ee007f8c84f.js",
     "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/login.ts": "./chunks/3a/3a318d9ade23d586d56fa682cf76b62549f5d2b6.js",
@@ -30,11 +29,12 @@
     "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/sceneSwitcher.ts": "./chunks/e3/e3e0dc1e16d8b614a2a3d782e3ecf48046b9dfa9.js",
     "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/seedEffect.ts": "./chunks/37/379326ef48595afa0390fc739c16f1da72e80d98.js",
     "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/showTelegramInfo.ts": "./chunks/fb/fb2a7d266872b63a27d2edfab25b2748edda2383.js",
+    "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/telegram.ts": "./chunks/1d/1dd2f5ea6eea77715d38f7cacc77a7a1652f8928.js",
     "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/timer.ts": "./chunks/57/57aa3a73746d22d6e6fea20d4c04eb5fca3e2f83.js",
     "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/utils.ts": "./chunks/7a/7a540f870228247c602aff65bfb0370f7f9e9fdc.js",
-    "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/userAvatar.ts": "./chunks/82/826d0ec4f04b06b2dac957046eddb898afdce7b8.js",
-    "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/telegram.ts": "./chunks/1d/1dd2f5ea6eea77715d38f7cacc77a7a1652f8928.js",
-    "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/main.ts": "./chunks/ef/ef22f87af15e4cc9be748b4f8f14d46a317c5a8b.js"
+    "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/http.ts": "./chunks/fb/fb0a2891d73c1c1c2ffb3b5694f9e94608992655.js",
+    "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/main.ts": "./chunks/89/894f50752f7c187f19fc38db75d991704161bcc3.js",
+    "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/userAvatar.ts": "./chunks/d7/d7ec284c5edcf53398cf52c9e173e9319375f1f9.js"
   },
   "scopes": {
     "./chunks/02/02454ce52c24527a6d11792cfd90549c5b418480.js": {
@@ -75,7 +75,7 @@
       "__unresolved_2": "./chunks/11/11d81f12cb7560016332da280278e70286e254ee.js",
       "__unresolved_20": "./chunks/04/047b9ac8fe1401185d2506ae44216ee007f8c84f.js",
       "__unresolved_21": "./chunks/3a/3a318d9ade23d586d56fa682cf76b62549f5d2b6.js",
-      "__unresolved_22": "./chunks/ef/ef22f87af15e4cc9be748b4f8f14d46a317c5a8b.js",
+      "__unresolved_22": "./chunks/89/894f50752f7c187f19fc38db75d991704161bcc3.js",
       "__unresolved_23": "./chunks/3d/3d8e525ace08186392de26240c8e265ecccc865f.js",
       "__unresolved_24": "./chunks/bb/bb8aeb6c9372a292ebcf9f6eb14d543dc1301cd9.js",
       "__unresolved_25": "./chunks/d4/d46025c997c19bf074e85f2bdd2cf7fe1a62121c.js",
@@ -85,7 +85,7 @@
       "__unresolved_29": "./chunks/1d/1dd2f5ea6eea77715d38f7cacc77a7a1652f8928.js",
       "__unresolved_3": "./chunks/35/3581af60561a635a9e95d705895ca1f38b4e709d.js",
       "__unresolved_30": "./chunks/57/57aa3a73746d22d6e6fea20d4c04eb5fca3e2f83.js",
-      "__unresolved_31": "./chunks/82/826d0ec4f04b06b2dac957046eddb898afdce7b8.js",
+      "__unresolved_31": "./chunks/d7/d7ec284c5edcf53398cf52c9e173e9319375f1f9.js",
       "__unresolved_32": "./chunks/7a/7a540f870228247c602aff65bfb0370f7f9e9fdc.js",
       "__unresolved_4": "./chunks/8a/8af255ee146e06c6abca126f1524587489a2c1c7.js",
       "__unresolved_5": "./chunks/1c/1c6d1739890b16b5cae87522a8b1437c880860fa.js",
@@ -185,7 +185,7 @@
       "__unresolved_0": "./chunks/3a/3a1fd7b13056478820ebedd306d3446d1aa408cc.js",
       "cc": "./chunks/02/02454ce52c24527a6d11792cfd90549c5b418480.js"
     },
-    "./chunks/82/826d0ec4f04b06b2dac957046eddb898afdce7b8.js": {
+    "./chunks/d7/d7ec284c5edcf53398cf52c9e173e9319375f1f9.js": {
       "@telegram-apps/sdk": "./chunks/15/15a0fb205d1ea8d613b06b8180be1f760b2af2ca.js",
       "__unresolved_0": "./chunks/3a/3a1fd7b13056478820ebedd306d3446d1aa408cc.js",
       "cc": "./chunks/02/02454ce52c24527a6d11792cfd90549c5b418480.js"
@@ -215,7 +215,7 @@
     "./chunks/3d/3d8e525ace08186392de26240c8e265ecccc865f.js": {
       "cc": "./chunks/02/02454ce52c24527a6d11792cfd90549c5b418480.js"
     },
-    "./chunks/ef/ef22f87af15e4cc9be748b4f8f14d46a317c5a8b.js": {
+    "./chunks/89/894f50752f7c187f19fc38db75d991704161bcc3.js": {
       "__unresolved_0": "./chunks/3a/3a1fd7b13056478820ebedd306d3446d1aa408cc.js",
       "__unresolved_1": "./chunks/3a/3a318d9ade23d586d56fa682cf76b62549f5d2b6.js",
       "__unresolved_2": "./chunks/7a/7a241cd70b0f76ec2e94a7fefbda294a4bfa1830.js",
