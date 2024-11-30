@@ -430,7 +430,7 @@
       ]
     },
     "cce:/internal/x/prerequisite-imports": {
-      "mTimestamp": 48167008.960599996,
+      "mTimestamp": 52581494.6046,
       "chunkId": "9ecadb0870b4e36e8a58cae46c0c1724a4752c40",
       "imports": [
         {
@@ -9402,15 +9402,11 @@
     },
     "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/userAvatar.ts": {
       "mTimestamp": {
-        "mtime": 1732958134415.9346,
+        "mtime": 1732962701036.814,
         "uuid": "11f81f04-9e76-48fb-ac7a-2e125f21a855"
       },
-      "chunkId": "d7ec284c5edcf53398cf52c9e173e9319375f1f9",
+      "chunkId": "568edfeec2d7be22709f9a3858639012915d7d5d",
       "imports": [
-        {
-          "value": "cce:/internal/code-quality/cr.mjs",
-          "resolved": "__unresolved_0"
-        },
         {
           "value": "cc"
         },
@@ -9421,25 +9417,12 @@
           "value": "cc",
           "loc": {
             "start": {
-              "line": 9,
+              "line": 10,
               "column": 7
             },
             "end": {
-              "line": 9,
+              "line": 10,
               "column": 11
-            }
-          }
-        },
-        {
-          "value": "@telegram-apps/sdk",
-          "loc": {
-            "start": {
-              "line": 10,
-              "column": 37
-            },
-            "end": {
-              "line": 10,
-              "column": 57
             }
           }
         }
@@ -9449,13 +9432,6 @@
         {
           "resolved": {
             "type": "module",
-            "url": "cce:/internal/code-quality/cr.mjs"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
             "url": "cce:/internal/x/cc"
           },
           "messages": []
@@ -9471,13 +9447,6 @@
           "resolved": {
             "type": "module",
             "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/node_modules/@telegram-apps/sdk/dist/index.js"
           },
           "messages": []
         }
