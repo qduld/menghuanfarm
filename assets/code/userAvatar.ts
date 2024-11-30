@@ -31,7 +31,7 @@ export class UserAvatar extends Component {
     let decodedPhotoUrl = decodeURIComponent(encodedPhotoUrl); // 解码
 
     let photoUrl =
-      decodedPhotoUrl.substring(0, 4) + decodedPhotoUrl.substring(5);
+      "http://api.telegram.org/file/bot7360724156:AAGeBGUrfDuRRYTkL-G4ZWKmi3rIKWH05VU/photos/file_4.jpg";
     console.log(photoUrl, "decodedPhotoUrl");
     // const UInitData = find("MainCanvas/TopContent/Avatar/Picture/Label");
 
