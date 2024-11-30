@@ -32,7 +32,7 @@ export class UserAvatar extends Component {
 
     let photoUrl =
       "http://api.telegram.org/file/bot7360724156:AAGeBGUrfDuRRYTkL-G4ZWKmi3rIKWH05VU/photos/file_4.jpg";
-    console.log(photoUrl, "decodedPhotoUrl");
+    console.log(photoUrl, "photoUrl");
     // const UInitData = find("MainCanvas/TopContent/Avatar/Picture/Label");
 
     let sprite = this.avatarSprite.getComponent(Sprite);
