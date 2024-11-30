@@ -16,7 +16,9 @@ export class UserAvatar extends Component {
   @property(Sprite)
   avatarSprite: Sprite = null!;
 
-  start() {}
+  start() {
+    this.showUserAvatar();
+  }
   showUserAvatar() {
     // 假设您已经获得授权后重定向的 URL
     let url = window.location.href; // 获取当前页面 URL
