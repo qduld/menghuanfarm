@@ -26,7 +26,12 @@
       }
     ],
     "startScene": "5a6f4efe-edd1-4c9d-adc3-c28f8d58012d",
-    "skipCompressTexture": true
+    "skipCompressTexture": true,
+    "buildStageGroup": {
+      "build": [
+        "run"
+      ]
+    }
   },
   "options": {
     "web-mobile": {
