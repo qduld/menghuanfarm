@@ -30,13 +30,15 @@ export class UserAvatar extends Component {
     let encodedPhotoUrl = params.get("photo_url"); // 获取 encoded photo_url
     let decodedPhotoUrl = decodeURIComponent(encodedPhotoUrl); // 解码
 
-    console.log(decodedPhotoUrl, "decodedPhotoUrl");
+    let photoUrl =
+      decodedPhotoUrl.substring(0, 4) + decodedPhotoUrl.substring(5);
+    console.log(photoUrl, "decodedPhotoUrl");
     // const UInitData = find("MainCanvas/TopContent/Avatar/Picture/Label");
 
     let sprite = this.avatarSprite.getComponent(Sprite);
 
     // 加载头像图片并设置为 Sprite 的纹理
-    assetManager.loadRemote(decodedPhotoUrl, (err, imageAsset) => {
+    assetManager.loadRemote(photoUrl, (err, imageAsset) => {
       if (err) {
         console.error("头像加载失败", err);
         return;
