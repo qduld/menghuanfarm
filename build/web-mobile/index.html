@@ -70,13 +70,14 @@
           }
         }, 2000);
       };
-      // if (window.Telegram && window.Telegram.WebApp) {
-      //   window.Telegram.WebApp.ready();
-      //   console.log(
-      //     "Telegram WebApp is ready:",
-      //     window.Telegram.WebApp.initDataUnsafe
-      //   );
-      // }
+      if (window.Telegram && window.Telegram.WebApp) {
+        window.Telegram.WebApp.init();
+        window.Telegram.WebApp.ready();
+        console.log(
+          "Telegram WebApp is ready:",
+          window.Telegram.WebApp.initDataUnsafe
+        );
+      }
       // Telegram.WebApp.onEvent("ready", function () {
       //   const initData = Telegram.WebApp.initData;
       //   const initDataUnsafe = Telegram.WebApp.initDataUnsafe;
@@ -87,8 +88,8 @@
       //   // 可以在这里使用 initDataUnsafe 进行应用初始化
       // });
     </script>
-    <!-- <script src="https://telegram.org/js/telegram-web-app.js"></script> -->
-    <!-- <script
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script
       async
       src="https://telegram.org/js/telegram-widget.js?22"
       data-telegram-login="BitFarm"
@@ -109,7 +110,7 @@
             ")"
         );
       }
-    </script> -->
+    </script>
   </head>
   <body>
     <div id="splash">
@@ -131,24 +132,19 @@
         ></canvas>
       </div>
     </div>
+    
+<!-- Polyfills bundle. -->
+<script src="src/polyfills.bundle.js" charset="utf-8"> </script>
 
-    <!-- Polyfills bundle. -->
-    <script src="src/polyfills.bundle.js" charset="utf-8"></script>
+<!-- SystemJS support. -->
+<script src="src/system.bundle.js" charset="utf-8"> </script>
 
-    <!-- SystemJS support. -->
-    <script src="src/system.bundle.js" charset="utf-8"></script>
+<!-- Import map -->
+<script src="src/import-map.json" type="systemjs-importmap" charset="utf-8"> </script>
 
-    <!-- Import map -->
-    <script
-      src="src/import-map.json"
-      type="systemjs-importmap"
-      charset="utf-8"
-    ></script>
+<script>
+    System.import('./index.js').catch(function(err) { console.error(err); })
+</script>
 
-    <script>
-      System.import("./index.js").catch(function (err) {
-        console.error(err);
-      });
-    </script>
   </body>
 </html>
