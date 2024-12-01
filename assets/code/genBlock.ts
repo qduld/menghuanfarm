@@ -13,6 +13,7 @@ import { IFarmland } from "./interface";
 import { httpRequest } from "./http";
 import { GenPlant } from "./genPlant";
 import { Dialog } from "./dialog";
+import { GlobalData } from "./globalData";
 const { ccclass, property } = _decorator;
 
 @ccclass("GenBlock")
@@ -59,7 +60,11 @@ export class GenBlock extends Component {
     this.unlockBlock = find("MainCanvas/Block/Unlock");
     this.sprite = find("MainCanvas/Block/Lock/Sprite");
 
-    this.requestFarmLand();
+    if (GlobalData.getInstance().isStolen) {
+      this.requestFriendFarmLand();
+    } else {
+      this.requestFarmLand();
+    }
   }
 
   createblockLayout() {
@@ -204,6 +209,27 @@ export class GenBlock extends Component {
       if (response.ok) {
         this.requestFarmLand();
         dialog.closeDialog(null, "LockBlock");
+      } else {
+        console.error("Request failed with status:", response.status);
+      }
+    } catch (error) {
+      console.error("Error:", error);
+    }
+  }
+
+  async requestFriendFarmLand() {
+    const globalData = GlobalData.getInstance();
+
+    try {
+      const response = await httpRequest(
+        `/api/v1/farmland/userFarmlandList/${globalData.stolenId}`,
+        {
+          method: "GET",
+        }
+      );
+      if (response.ok) {
+        this.blockList = response.data.data as IFarmland[];
+        this.createblockLayout(); // 在加载时调用布局创建方法
       } else {
         console.error("Request failed with status:", response.status);
       }

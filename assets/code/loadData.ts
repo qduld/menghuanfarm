@@ -383,3 +383,36 @@ export const harvestList = [
     cost: 1000,
   },
 ];
+
+export const coinList = [
+  {
+    rebates: 10,
+    coins: 10000,
+    money: 1,
+  },
+  {
+    rebates: 10,
+    coins: 10000,
+    money: 6,
+  },
+  {
+    rebates: 10,
+    coins: 10000,
+    money: 8,
+  },
+  {
+    rebates: 10,
+    coins: 10000,
+    money: 18,
+  },
+  {
+    rebates: 10,
+    coins: 10000,
+    money: 28,
+  },
+  {
+    rebates: 10,
+    coins: 10000,
+    money: 98,
+  },
+];

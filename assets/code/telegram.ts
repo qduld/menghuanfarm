@@ -7,7 +7,6 @@ export class Telegram extends Component {
   tgInitData: Object = null;
 
   protected start(): void {
-    debugger;
     this.initTelegram();
   }
 

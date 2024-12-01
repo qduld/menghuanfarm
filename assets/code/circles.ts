@@ -2,31 +2,21 @@ import {
   _decorator,
   Component,
   Node,
-  tween,
-  CCInteger,
-  Vec3,
-  CCFloat,
   find,
-  EventTouch,
   instantiate,
-  Layers,
   resources,
   Sprite,
   SpriteFrame,
   UITransform,
   Label,
-  director,
-  Scene,
-  sys,
-  assetManager,
-  AudioClip,
-  AudioSource,
+  EventTouch,
 } from "cc";
-import { paiHang, param, wechatAd, tokenMock } from "./loadData";
 import { httpRequest } from "./http";
 import { IMembersList, ISquadList } from "./interface";
-import { squadList, membersList } from "./loadData";
+import { squadList } from "./loadData";
 import { GlobalData } from "./globalData";
+import { GenInfo } from "./genInfo";
+import { Dialog } from "./dialog";
 
 const { ccclass, property } = _decorator;
 @ccclass("circles")
@@ -96,6 +86,9 @@ export class circles extends Component {
         .getComponent(Label).string = squad.memberCount + "";
       squadSection.getChildByName("Name").getComponent(Label).string =
         squad.name;
+
+      debugger;
+      squadSection.getChildByName("Button")["squadId"] = squad.id;
     });
   }
 
@@ -123,6 +116,8 @@ export class circles extends Component {
         .getChildByName("Money")
         .getChildByName("Label")
         .getComponent(Label).string = member.pointsBalance + "";
+
+      membersSection.getChildByName("Button")["userId"] = member.id;
 
       let iconPath = "";
       if (index >= 0 && index < 3) {
@@ -166,6 +161,8 @@ export class circles extends Component {
   checkSquadList() {
     const globalData = GlobalData.getInstance();
 
+    debugger;
+    this.UMembersList.removeAllChildren();
     if (globalData.userInfo.squadId === null) {
       this.UMembers.active = false;
       this.USquad.active = true;
@@ -205,7 +202,7 @@ export class circles extends Component {
           method: "GET",
         },
         {
-          squadId: 1,
+          squadId: globalData.userInfo.squadId,
           pageNum: 1,
           pageSize: 10,
         }
@@ -213,6 +210,88 @@ export class circles extends Component {
       if (response.ok) {
         this.membersList = response.data.list as IMembersList[];
         this.createMembersLayout();
+      } else {
+        console.error("Request failed with status:", response.status);
+      }
+    } catch (error) {
+      console.error("Error:", error);
+    }
+  }
+
+  // 退出队伍
+  async quitSquad() {
+    const globalData = GlobalData.getInstance();
+
+    try {
+      const response = await httpRequest("/api/v1/squad/leave", {
+        method: "POST",
+        body: {
+          squadId: globalData.userInfo.squadId,
+        },
+      });
+      if (response.ok) {
+        const genInfo = GenInfo.getInstance();
+        genInfo.requestUserInfo();
+        this.UMembers.active = false;
+        this.USquad.active = true;
+        this.UMembersList.removeAllChildren();
+        this.requestSquadList();
+      } else {
+        console.error("Request failed with status:", response.status);
+      }
+    } catch (error) {
+      console.error("Error:", error);
+    }
+  }
+
+  // 加入队伍
+  async joinSquad(event: EventTouch) {
+    const globalData = GlobalData.getInstance();
+
+    try {
+      const response = await httpRequest("/api/v1/squad/join", {
+        method: "POST",
+        body: {
+          squadId: event.currentTarget.squadId,
+        },
+      });
+      if (response.ok) {
+        globalData.userInfo.squadId = event.currentTarget.squadId;
+        this.UMembers.active = true;
+        this.USquad.active = false;
+        this.requestMembersList();
+      } else {
+        console.error("Request failed with status:", response.status);
+      }
+    } catch (error) {
+      console.error("Error:", error);
+    }
+  }
+
+  createSquadBtnClick() {
+    const dialog = Dialog.getInstance();
+
+    dialog.showDialog(null, "CreateCircle");
+  }
+
+  // 创建队伍
+  async createSquad(event: EventTouch) {
+    const criclesName = find(
+      "popBox/Canvas/CreateCircle/EditBox/TEXT_LABEL"
+    ).getComponent(Label).string;
+    console.log(criclesName);
+    try {
+      const response = await httpRequest("/api/v1/squad/create", {
+        method: "POST",
+        body: {
+          name: criclesName,
+        },
+      });
+      if (response.ok) {
+        const dialog = Dialog.getInstance();
+
+        this.requestSquadList();
+        dialog.closeDialog(null, "CreateCircle");
       } else {
         console.error("Request failed with status:", response.status);
       }

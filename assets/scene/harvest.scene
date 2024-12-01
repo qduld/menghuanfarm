@@ -888,7 +888,7 @@
       "a": 255
     },
     "_spriteFrame": {
-      "__uuid__": "edf946e9-069b-434a-80d1-cbb0ebb91f85@f9941",
+      "__uuid__": "979ad747-bd5d-4b72-9495-e608182dc2b2@f9941",
       "__expectedType__": "cc.SpriteFrame"
     },
     "_type": 0,
@@ -1556,7 +1556,7 @@
       "a": 255
     },
     "_spriteFrame": {
-      "__uuid__": "edf946e9-069b-434a-80d1-cbb0ebb91f85@f9941",
+      "__uuid__": "979ad747-bd5d-4b72-9495-e608182dc2b2@f9941",
       "__expectedType__": "cc.SpriteFrame"
     },
     "_type": 0,
@@ -4796,6 +4796,7 @@
     "_enabled": true,
     "__prefab": null,
     "sceneName": "main",
+    "isStolen": false,
     "_id": "faX0k1UeRI5ZluVMDdmfPT"
   },
   {
@@ -5325,6 +5326,8 @@
     "lockBlockBox": null,
     "buySeedBox": null,
     "buyPropsBox": null,
+    "buyCoinsBox": null,
+    "createCircleBox": null,
     "overlayMask": null,
     "targetBlock": null,
     "targetBlockInfo": null,

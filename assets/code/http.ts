@@ -1,3 +1,4 @@
+import { IMembersList } from "./interface";
 import { tokenMock } from "./loadData";
 
 export interface HttpRequestOptions {
@@ -7,6 +8,7 @@ export interface HttpRequestOptions {
 }
 
 export interface HttpResponseData {
+  list: IMembersList[];
   code: number;
   data: any;
   ok: boolean;

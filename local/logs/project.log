@@ -1,0 +1,524 @@
+2024-12-01T11:43:53.965Z - log: [Package] menu@1.0.0 enable
+2024-12-01T11:43:53.967Z - log: [Package] profile@1.0.0 enable
+2024-12-01T11:43:53.973Z - log: [Package] project@1.0.2 enable
+2024-12-01T11:43:53.977Z - log: [Package] messages@1.0.0 enable
+2024-12-01T11:43:53.979Z - log: [Package] program@1.0.0 enable
+2024-12-01T11:43:53.983Z - log: [Package] tester@1.0.0 enable
+2024-12-01T11:43:53.986Z - log: [Package] preferences@1.0.0 enable
+2024-12-01T11:43:56.155Z - log: Load engine in D:\cocos-dashboard-editors\Creator\3.6.1\resources\resources\3d\engine
+2024-12-01T11:43:56.506Z - log: Profile changed: engine (modules.includeModules: 2d,animation,audio,base,dragon-bones,gfx-webgl,gfx-webgl2,intersection-2d,marionette,particle-2d,physics-2d-box2d,profiler,skeletal-animation,spine,tiled-map,tween,ui,video,webview,xr)
+2024-12-01T11:43:56.515Z - log: Register native engine in D:\cocos-dashboard-editors\Creator\3.6.1\resources\resources\3d\engine\native
+2024-12-01T11:43:56.519Z - log: [Package] engine@1.0.6 enable
+2024-12-01T11:43:57.574Z - log: [Package] programming@1.0.0 enable
+2024-12-01T11:43:57.636Z - warn: 
+2024-12-01T11:43:57.664Z - warn: 
+2024-12-01T11:43:57.933Z - log: [Package] device@1.0.1 enable
+2024-12-01T11:43:57.967Z - log: [Package] ui-kit@1.0.1 enable
+2024-12-01T11:43:57.995Z - log: [Package] engine-extends@1.0.0 enable
+2024-12-01T11:43:58.057Z - log: [Package] asset-db@1.0.0 enable
+2024-12-01T11:43:58.058Z - warn: 
+2024-12-01T11:43:58.097Z - log: [Package] scene@1.0.0 enable
+2024-12-01T11:43:58.227Z - log: [Package] server@1.0.0 enable
+2024-12-01T11:43:58.253Z - log: [Package] utils@1.0.0 enable
+2024-12-01T11:43:58.838Z - warn: Browserslist: caniuse-lite is outdated. Please run:
+npx browserslist@latest --update-db
+
+Why you should do it regularly:
+https://github.com/browserslist/browserslist#browsers-data-updating
+2024-12-01T11:44:01.169Z - warn: 
+2024-12-01T11:44:01.170Z - warn: 
+2024-12-01T11:44:01.170Z - warn: 
+2024-12-01T11:44:01.180Z - warn: 
+2024-12-01T11:44:01.180Z - warn: 
+2024-12-01T11:44:01.180Z - warn: 
+2024-12-01T11:44:03.935Z - warn: 
+2024-12-01T11:44:03.992Z - log: [Package] preview@1.0.1 enable
+2024-12-01T11:44:04.018Z - log: [Package] animator@1.0.0 enable
+2024-12-01T11:44:04.053Z - log: pluginManager init: 0.155ms
+2024-12-01T11:44:04.022Z - warn: [Programming] Browserslist: caniuse-lite is outdated. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme[Programming] Browserslist: caniuse-lite is outdated. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme  
+at Logger.record (D:\cocos-dashboard-editors\Creator\3.6.1\resources\app.asar\node_modules\@base\electron-logger\lib\renderer.ccc:1:458)  
+at console.warn (D:\cocos-dashboard-editors\Creator\3.6.1\resources\app.asar\node_modules\@base\electron-logger\lib\renderer.ccc:1:1260)  
+at Object.oldDataWarning (D:\cocos-dashboard-editors\Creator\3.6.1\resources\app.asar\node_modules\@cocos\creator-programming-mod-lo\node_modules\browserslist\node.js:386:15)  
+at browserslist (D:\cocos-dashboard-editors\Creator\3.6.1\resources\app.asar\node_modules\@cocos\creator-programming-mod-lo\node_modules\browserslist\index.js:394:7)  
+at resolveTargets (D:\cocos-dashboard-editors\Creator\3.6.1\resources\app.asar\node_modules\@cocos\creator-programming-mod-lo\node_modules\@babel\helper-compilation-targets\lib\index.js:165:20)  
+at getTargets (D:\cocos-dashboard-editors\Creator\3.6.1\resources\app.asar\node_modules\@cocos\creator-programming-mod-lo\node_modules\@babel\helper-compilation-targets\lib\index.js:210:27)  
+at getLocalTargets (D:\cocos-dashboard-editors\Creator\3.6.1\resources\app.asar\node_modules\@cocos\creator-programming-mod-lo\node_modules\@babel\preset-env\lib\index.js:227:48)  
+at D:\cocos-dashboard-editors\Creator\3.6.1\resources\app.asar\node_modules\@cocos\creator-programming-mod-lo\node_modules\@babel\preset-env\lib\index.js:288:15
+2024-12-01T11:44:04.547Z - warn: 
+2024-12-01T11:44:04.547Z - warn: 
+2024-12-01T11:44:04.548Z - warn: 
+2024-12-01T11:44:05.149Z - log: [Package] builder@1.3.3 enable
+2024-12-01T11:44:05.177Z - log: [Package] shortcuts@1.0.1 enable
+2024-12-01T11:44:05.204Z - log: [Package] animation-graph@1.0.0 enable
+2024-12-01T11:44:05.230Z - log: [Package] about@1.0.0 enable
+2024-12-01T11:44:05.258Z - log: [Package] assets@1.0.0 enable
+2024-12-01T11:44:05.283Z - log: [Package] console@1.0.0 enable
+2024-12-01T11:44:05.425Z - log: [Package] extension@3.0.16 enable
+2024-12-01T11:44:05.451Z - log: [Package] hierarchy@1.0.0 enable
+2024-12-01T11:44:05.478Z - log: [Package] inspector@1.0.0 enable
+2024-12-01T11:44:05.504Z - log: [Package] lightmap@1.0.4 enable
+2024-12-01T11:44:05.790Z - log: [Package] localization-editor@1.0.0 enable
+2024-12-01T11:44:05.797Z - log: [Build-plugin] register pkg localization-editor: 4.359ms
+2024-12-01T11:44:05.821Z - log: [Package] node-library@1.0.1 enable
+2024-12-01T11:44:05.843Z - log: [Package] package-asset@1.0.0 enable
+2024-12-01T11:44:05.870Z - log: [Package] process@1.0.0 enable
+2024-12-01T11:44:05.897Z - log: [Package] reference-image@1.0.0 enable
+2024-12-01T11:44:05.918Z - log: [Package] alipay-mini-game@1.0.1 enable
+2024-12-01T11:44:05.921Z - log: [Build-plugin] register pkg alipay-mini-game: 2.842ms
+2024-12-01T11:44:05.944Z - log: [Package] android@1.0.1 enable
+2024-12-01T11:44:05.949Z - log: [Build-plugin] register pkg android: 4.288ms
+2024-12-01T11:44:05.970Z - log: [Package] baidu-mini-game@1.0.1 enable
+2024-12-01T11:44:05.972Z - log: [Build-plugin] register pkg baidu-mini-game: 0.918ms
+2024-12-01T11:44:06.018Z - log: [Package] bytedance-mini-game@1.0.2 enable
+2024-12-01T11:44:06.020Z - log: [Build-plugin] register pkg bytedance-mini-game: 1.726ms
+2024-12-01T11:44:06.041Z - log: [Package] certificate@1.0.0 enable
+2024-12-01T11:44:06.063Z - log: [Package] channel-upload-tools@1.0.0 enable
+2024-12-01T11:44:06.085Z - log: [Package] cocos-play@1.0.1 enable
+2024-12-01T11:44:06.088Z - log: [Build-plugin] register pkg cocos-play: 3.055ms
+2024-12-01T11:44:06.111Z - log: [Package] huawei-agc@1.0.0 enable
+2024-12-01T11:44:06.113Z - log: [Build-plugin] register pkg huawei-agc: 2.671ms
+2024-12-01T11:44:06.136Z - log: [Package] huawei-quick-game@1.0.1 enable
+2024-12-01T11:44:06.139Z - log: [Build-plugin] register pkg huawei-quick-game: 2.745ms
+2024-12-01T11:44:06.162Z - log: [Package] ios@1.0.0 enable
+2024-12-01T11:44:06.164Z - log: [Build-plugin] register pkg ios: 2.204ms
+2024-12-01T11:44:06.185Z - log: [Package] linux@1.0.0 enable
+2024-12-01T11:44:06.186Z - log: [Build-plugin] register pkg linux: 0.68ms
+2024-12-01T11:44:06.208Z - log: [Package] mac@1.0.0 enable
+2024-12-01T11:44:06.211Z - log: [Build-plugin] register pkg mac: 2.938ms
+2024-12-01T11:44:06.292Z - log: [Package] native@1.0.2 enable
+2024-12-01T11:44:06.297Z - log: [Build-plugin] register pkg native: 5.053ms
+2024-12-01T11:44:06.318Z - log: [Package] ohos@1.0.0 enable
+2024-12-01T11:44:06.321Z - log: [Build-plugin] register pkg ohos: 2.359ms
+2024-12-01T11:44:06.343Z - log: [Package] open-harmonyos@1.0.0 enable
+2024-12-01T11:44:06.344Z - log: [Build-plugin] register pkg open-harmonyos: 0.869ms
+2024-12-01T11:44:06.365Z - log: [Package] oppo-mini-game@1.0.1 enable
+2024-12-01T11:44:06.368Z - log: [Build-plugin] register pkg oppo-mini-game: 2.797ms
+2024-12-01T11:44:06.390Z - log: [Package] runtime-dev-tools@1.0.0 enable
+2024-12-01T11:44:06.413Z - log: [Package] vivo-mini-game@1.0.1 enable
+2024-12-01T11:44:06.415Z - log: [Build-plugin] register pkg vivo-mini-game: 2.742ms
+2024-12-01T11:44:06.453Z - log: [Package] web-desktop@1.0.1 enable
+2024-12-01T11:44:06.456Z - log: [Build-plugin] register pkg web-desktop: 2.648ms
+2024-12-01T11:44:06.483Z - log: [Package] web-mobile@1.0.1 enable
+2024-12-01T11:44:06.486Z - log: [Build-plugin] register pkg web-mobile: 2.38ms
+2024-12-01T11:44:06.514Z - log: [Package] wechatgame@1.0.2 enable
+2024-12-01T11:44:06.518Z - log: [Build-plugin] register pkg wechatgame: 3.52ms
+2024-12-01T11:44:06.541Z - log: [Package] windows@1.0.1 enable
+2024-12-01T11:44:06.544Z - log: [Build-plugin] register pkg windows: 2.495ms
+2024-12-01T11:44:06.567Z - log: [Package] xiaomi-quick-game@1.0.1 enable
+2024-12-01T11:44:06.569Z - log: [Build-plugin] register pkg xiaomi-quick-game: 2.587ms
+2024-12-01T11:44:06.841Z - log: [Package] cocos-service@3.0.7 enable
+2024-12-01T11:44:06.845Z - log: [Build-plugin] register pkg cocos-service: 2.307ms
+2024-12-01T11:44:07.040Z - log: [Im-plugin] Check im-plugin version.
+2024-12-01T11:44:07.043Z - log: [Package] im-plugin@3.0.9 enable
+2024-12-01T11:44:08.060Z - log: [Im-plugin] No online info of im-plugin.
+2024-12-01T11:44:09.951Z - log: [Scene] Please specifiy a default value for "cc.EditorExtendable.__editorExtras__" property at its declaration:
+
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-12-01T11:44:09.966Z - log: [Scene] Please specifiy a default value for "CCPropertyOverrideInfo.value" property at its declaration:
+
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-12-01T11:44:09.967Z - log: [Scene] Please specifiy a default value for "cc.PrefabInfo.asset" property at its declaration:
+
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-12-01T11:44:09.967Z - log: [Scene] Please specifiy a default value for "cc.PrefabInfo.nestedPrefabInstanceRoots" property at its declaration:
+
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-12-01T11:44:09.969Z - log: [Scene] The 'default' attribute of 'ColorDesc.beginAccesses' must be an array
+2024-12-01T11:44:09.969Z - log: [Scene] The 'default' attribute of 'ColorDesc.endAccesses' must be an array
+2024-12-01T11:44:09.980Z - log: [Scene] Please specifiy a default value for "cc.animation.TrackBinding.proxy" property at its declaration:
+
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-12-01T11:44:09.980Z - log: [Scene] Please specifiy a default value for "cc.animation.Channel._curve" property at its declaration:
+
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-12-01T11:44:09.980Z - log: [Scene] Please specifiy a default value for "cc.animation.SingleChannelTrack._channel" property at its declaration:
+
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-12-01T11:44:09.980Z - log: [Scene] Please specifiy a default value for "cc.animation.VectorTrack._channels" property at its declaration:
+
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-12-01T11:44:09.980Z - log: [Scene] Please specifiy a default value for "cc.animation.ColorTrack._channels" property at its declaration:
+
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-12-01T11:44:09.981Z - log: [Scene] Please specifiy a default value for "cc.animation.SizeTrack._channels" property at its declaration:
+
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-12-01T11:44:09.981Z - log: [Scene] Please specifiy a default value for "cc.animation.Transition.from" property at its declaration:
+
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-12-01T11:44:09.981Z - log: [Scene] Please specifiy a default value for "cc.animation.Transition.to" property at its declaration:
+
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-12-01T11:44:09.981Z - log: [Scene] Please specifiy a default value for "cc.animation.StateMachine._entryState" property at its declaration:
+
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-12-01T11:44:09.981Z - log: [Scene] Please specifiy a default value for "cc.animation.StateMachine._exitState" property at its declaration:
+
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-12-01T11:44:09.981Z - log: [Scene] Please specifiy a default value for "cc.animation.StateMachine._anyState" property at its declaration:
+
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-12-01T11:44:09.981Z - log: [Scene] Please specifiy a default value for "cc.animation.Layer._stateMachine" property at its declaration:
+
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-12-01T11:44:09.982Z - log: [Scene] Please specifiy a default value for "cc.animation.ExoticVectorLikeTrackValues._values" property at its declaration:
+
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-12-01T11:44:09.982Z - log: [Scene] Please specifiy a default value for "cc.animation.ExoticVectorLikeTrackValues._isQuantized" property at its declaration:
+
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-12-01T11:44:09.982Z - log: [Scene] Please specifiy a default value for "cc.animation.ExoticTrack.times" property at its declaration:
+
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-12-01T11:44:09.982Z - log: [Scene] Please specifiy a default value for "cc.animation.ExoticTrack.values" property at its declaration:
+
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-12-01T11:44:09.982Z - log: [Scene] Please specifiy a default value for "cc.animation.QuantizedFloatArray.originalPrecision" property at its declaration:
+
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-12-01T11:44:09.982Z - log: [Scene] Please specifiy a default value for "cc.animation.QuantizedFloatArray.min" property at its declaration:
+
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-12-01T11:44:09.982Z - log: [Scene] Please specifiy a default value for "cc.animation.QuantizedFloatArray.extent" property at its declaration:
+
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-12-01T11:44:09.982Z - log: [Scene] Please specifiy a default value for "cc.animation.QuantizedFloatArray.values" property at its declaration:
+
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-12-01T11:44:10.007Z - log: [Scene] 'cc.ParticleSystem2D.color' hides inherited property 'cc.UIRenderer.color'. To make the current property override that implementation, add the `override: true` attribute please.
+2024-12-01T11:44:10.038Z - log: [Scene] No needs to indicate the 'cc.Boolean' attribute for "cc.Terrain._receiveShadow", which its default value is type of Boolean.
+2024-12-01T11:44:10.038Z - log: [Scene] No needs to indicate the 'cc.Boolean' attribute for "cc.Terrain._useNormalmap", which its default value is type of Boolean.
+2024-12-01T11:44:10.038Z - log: [Scene] No needs to indicate the 'cc.Boolean' attribute for "cc.Terrain._usePBR", which its default value is type of Boolean.
+2024-12-01T11:44:10.038Z - log: [Scene] No needs to indicate the 'cc.Boolean' attribute for "cc.Terrain._lodEnable", which its default value is type of Boolean.
+2024-12-01T11:44:10.104Z - info: [Scene] [Physics][Bullet]: Using asmjs Bullet libs.
+2024-12-01T11:44:10.112Z - info: [Scene] [PHYSICS]: using builtin.
+2024-12-01T11:44:10.199Z - log: [Scene] Cocos Creator v3.6.1
+2024-12-01T11:44:10.200Z - info: [Scene] Forward render pipeline initialized.
+2024-12-01T11:44:10.304Z - warn: [Scene] Please specifiy a default value for "GenInfo.uagg" property at its declaration:
+
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;Error: [Scene] Please specifiy a default value for "GenInfo.uagg" property at its declaration:
+
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+    at warn (D:\cocos-dashboard-editors\Creator\3.6.1\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:142575:12)
+    at warnID (D:\cocos-dashboard-editors\Creator\3.6.1\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:142789:5)
+    at parseAttributes (D:\cocos-dashboard-editors\Creator\3.6.1\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:112671:7)
+    at defineProp (D:\cocos-dashboard-editors\Creator\3.6.1\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:112317:5)
+    at declareProperties (D:\cocos-dashboard-editors\Creator\3.6.1\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:112515:11)
+    at CCClass (D:\cocos-dashboard-editors\Creator\3.6.1\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:112546:5)
+    at eval (D:\cocos-dashboard-editors\Creator\3.6.1\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:220555:21)
+2024-12-01T11:44:10.332Z - log: [Scene] No need to specify the "type" of "DashedRectangle.lineColor" because cc.Color is a child class of ValueType.
+2024-12-01T11:44:10.334Z - log: [Scene] No need to specify the "type" of "DrawRoundedRect.fillColor" because cc.Color is a child class of ValueType.
+2024-12-01T11:44:10.334Z - log: [Scene] No need to specify the "type" of "DrawRoundedRect.strokeColor" because cc.Color is a child class of ValueType.
+2024-12-01T11:44:10.342Z - warn: [Scene] The type of "scaleAction.isChild" must be CCBoolean, not Boolean.Error: [Scene] The type of "scaleAction.isChild" must be CCBoolean, not Boolean.
+    at warn (D:\cocos-dashboard-editors\Creator\3.6.1\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:142575:12)
+    at warnID (D:\cocos-dashboard-editors\Creator\3.6.1\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:142789:5)
+    at parseType (D:\cocos-dashboard-editors\Creator\3.6.1\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:222567:11)
+    at preprocessAttrs (D:\cocos-dashboard-editors\Creator\3.6.1\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:222701:11)
+    at declareProperties (D:\cocos-dashboard-editors\Creator\3.6.1\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:112509:7)
+    at CCClass (D:\cocos-dashboard-editors\Creator\3.6.1\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:112546:5)
+    at eval (D:\cocos-dashboard-editors\Creator\3.6.1\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:220555:21)
+2024-12-01T11:44:10.344Z - warn: [Scene] The type of "SceneSwitcher.sceneName" must be CCString, not String.Error: [Scene] The type of "SceneSwitcher.sceneName" must be CCString, not String.
+    at warn (D:\cocos-dashboard-editors\Creator\3.6.1\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:142575:12)
+    at warnID (D:\cocos-dashboard-editors\Creator\3.6.1\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:142789:5)
+    at parseType (D:\cocos-dashboard-editors\Creator\3.6.1\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:222561:11)
+    at preprocessAttrs (D:\cocos-dashboard-editors\Creator\3.6.1\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:222701:11)
+    at declareProperties (D:\cocos-dashboard-editors\Creator\3.6.1\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:112509:7)
+    at CCClass (D:\cocos-dashboard-editors\Creator\3.6.1\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:112546:5)
+    at eval (D:\cocos-dashboard-editors\Creator\3.6.1\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:220555:21)
+2024-12-01T11:44:10.344Z - warn: [Scene] The type of "SceneSwitcher.isStolen" must be CCBoolean, not Boolean.Error: [Scene] The type of "SceneSwitcher.isStolen" must be CCBoolean, not Boolean.
+    at warn (D:\cocos-dashboard-editors\Creator\3.6.1\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:142575:12)
+    at warnID (D:\cocos-dashboard-editors\Creator\3.6.1\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:142789:5)
+    at parseType (D:\cocos-dashboard-editors\Creator\3.6.1\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:222567:11)
+    at preprocessAttrs (D:\cocos-dashboard-editors\Creator\3.6.1\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:222701:11)
+    at declareProperties (D:\cocos-dashboard-editors\Creator\3.6.1\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:112509:7)
+    at CCClass (D:\cocos-dashboard-editors\Creator\3.6.1\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:112546:5)
+    at eval (D:\cocos-dashboard-editors\Creator\3.6.1\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:220555:21)
+2024-12-01T11:44:10.345Z - warn: [Scene] No needs to indicate the 'cc.String' attribute for "SceneSwitcher.sceneName", which its default value is type of String.Error: [Scene] No needs to indicate the 'cc.String' attribute for "SceneSwitcher.sceneName", which its default value is type of String.
+    at warn (D:\cocos-dashboard-editors\Creator\3.6.1\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:142575:12)
+    at warnID (D:\cocos-dashboard-editors\Creator\3.6.1\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:142789:5)
+    at Array.eval (D:\cocos-dashboard-editors\Creator\3.6.1\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:222221:11)
+    at defineProp (D:\cocos-dashboard-editors\Creator\3.6.1\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:112321:27)
+    at declareProperties (D:\cocos-dashboard-editors\Creator\3.6.1\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:112515:11)
+    at CCClass (D:\cocos-dashboard-editors\Creator\3.6.1\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:112546:5)
+    at eval (D:\cocos-dashboard-editors\Creator\3.6.1\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:220555:21)
+2024-12-01T11:44:10.345Z - warn: [Scene] No needs to indicate the 'cc.Boolean' attribute for "SceneSwitcher.isStolen", which its default value is type of Boolean.Error: [Scene] No needs to indicate the 'cc.Boolean' attribute for "SceneSwitcher.isStolen", which its default value is type of Boolean.
+    at warn (D:\cocos-dashboard-editors\Creator\3.6.1\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:142575:12)
+    at warnID (D:\cocos-dashboard-editors\Creator\3.6.1\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:142789:5)
+    at Array.eval (D:\cocos-dashboard-editors\Creator\3.6.1\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:222221:11)
+    at defineProp (D:\cocos-dashboard-editors\Creator\3.6.1\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:112321:27)
+    at declareProperties (D:\cocos-dashboard-editors\Creator\3.6.1\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:112515:11)
+    at CCClass (D:\cocos-dashboard-editors\Creator\3.6.1\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:112546:5)
+    at eval (D:\cocos-dashboard-editors\Creator\3.6.1\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:220555:21)
+2024-12-01T11:45:29.657Z - warn: [Build] The type of "scaleAction.isChild" must be CCBoolean, not Boolean.[Build] The type of "scaleAction.isChild" must be CCBoolean, not Boolean.  
+at NewConsole.warn (D:\cocos-dashboard-editors\Creator\3.6.1\resources\app.asar\builtin\builder\dist\worker\console.ccc:1:1306)  
+at warn (D:\cocos-dashboard-editors\Creator\3.6.1\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:142575:12)  
+at warnID (D:\cocos-dashboard-editors\Creator\3.6.1\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:142789:5)  
+at parseType (D:\cocos-dashboard-editors\Creator\3.6.1\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:222567:11)  
+at preprocessAttrs (D:\cocos-dashboard-editors\Creator\3.6.1\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:222701:11)  
+at declareProperties (D:\cocos-dashboard-editors\Creator\3.6.1\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:112509:7)
+2024-12-01T11:45:29.720Z - warn: [Build] The type of "SceneSwitcher.sceneName" must be CCString, not String.[Build] The type of "SceneSwitcher.sceneName" must be CCString, not String.  
+at NewConsole.warn (D:\cocos-dashboard-editors\Creator\3.6.1\resources\app.asar\builtin\builder\dist\worker\console.ccc:1:1306)  
+at warn (D:\cocos-dashboard-editors\Creator\3.6.1\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:142575:12)  
+at warnID (D:\cocos-dashboard-editors\Creator\3.6.1\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:142789:5)  
+at parseType (D:\cocos-dashboard-editors\Creator\3.6.1\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:222561:11)  
+at preprocessAttrs (D:\cocos-dashboard-editors\Creator\3.6.1\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:222701:11)  
+at declareProperties (D:\cocos-dashboard-editors\Creator\3.6.1\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:112509:7)
+2024-12-01T11:45:29.721Z - warn: [Build] The type of "SceneSwitcher.isStolen" must be CCBoolean, not Boolean.[Build] The type of "SceneSwitcher.isStolen" must be CCBoolean, not Boolean.  
+at NewConsole.warn (D:\cocos-dashboard-editors\Creator\3.6.1\resources\app.asar\builtin\builder\dist\worker\console.ccc:1:1306)  
+at warn (D:\cocos-dashboard-editors\Creator\3.6.1\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:142575:12)  
+at warnID (D:\cocos-dashboard-editors\Creator\3.6.1\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:142789:5)  
+at parseType (D:\cocos-dashboard-editors\Creator\3.6.1\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:222567:11)  
+at preprocessAttrs (D:\cocos-dashboard-editors\Creator\3.6.1\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:222701:11)  
+at declareProperties (D:\cocos-dashboard-editors\Creator\3.6.1\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:112509:7)
+2024-12-01T11:45:30.922Z - warn: [Build] Browserslist: caniuse-lite is outdated. Please run:
+npx browserslist@latest --update-db[Build] Browserslist: caniuse-lite is outdated. Please run:
+npx browserslist@latest --update-db  
+at Object.warn (D:\cocos-dashboard-editors\Creator\3.6.1\resources\app.asar\node_modules\@base\electron-logger\lib\renderer.ccc:1:1260)  
+at NewConsole.warn (D:\cocos-dashboard-editors\Creator\3.6.1\resources\app.asar\builtin\builder\dist\worker\console.ccc:1:1306)  
+at Object.oldDataWarning (D:\cocos-dashboard-editors\Creator\3.6.1\resources\app.asar\node_modules\browserslist\node.js:351:15)  
+at browserslist (D:\cocos-dashboard-editors\Creator\3.6.1\resources\app.asar\node_modules\browserslist\index.js:431:7)  
+at D:\cocos-dashboard-editors\Creator\3.6.1\resources\app.asar\node_modules\core-js-compat\targets-parser.js:39:18  
+at D:\cocos-dashboard-editors\Creator\3.6.1\resources\app.asar\node_modules\core-js-compat\compat.js:28:25  
+at Object.default (D:\cocos-dashboard-editors\Creator\3.6.1\resources\app.asar\node_modules\core-js-builder\index.js:35:26)
+2024-12-01T11:45:31.954Z - warn: [Build] Browserslist: caniuse-lite is outdated. Please run:
+npx browserslist@latest --update-db
+
+Why you should do it regularly:
+https://github.com/browserslist/browserslist#browsers-data-updating[Build] Browserslist: caniuse-lite is outdated. Please run:
+npx browserslist@latest --update-db
+
+Why you should do it regularly:
+https://github.com/browserslist/browserslist#browsers-data-updating  
+at Object.encode (D:\cocos-dashboard-editors\Creator\3.6.1\resources\app.asar\node_modules\@base\electron-worker\node_modules\v-stacks\index.js:14:17)  
+at Logger._logHandler (D:\cocos-dashboard-editors\Creator\3.6.1\resources\app.asar\node_modules\@base\electron-worker\static\script.ccc:1:531)  
+at Logger.record (D:\cocos-dashboard-editors\Creator\3.6.1\resources\app.asar\node_modules\@base\electron-logger\lib\renderer.ccc:1:458)  
+at Object.warn (D:\cocos-dashboard-editors\Creator\3.6.1\resources\app.asar\node_modules\@base\electron-logger\lib\renderer.ccc:1:1260)  
+at NewConsole.warn (D:\cocos-dashboard-editors\Creator\3.6.1\resources\app.asar\builtin\builder\dist\worker\console.ccc:1:1306)  
+at Object.oldDataWarning (D:\cocos-dashboard-editors\Creator\3.6.1\resources\app.asar\node_modules\@babel\helper-compilation-targets\node_modules\browserslist\node.js:373:15)  
+at browserslist (D:\cocos-dashboard-editors\Creator\3.6.1\resources\app.asar\node_modules\@babel\helper-compilation-targets\node_modules\browserslist\index.js:432:7)  
+at resolveTargets (D:\cocos-dashboard-editors\Creator\3.6.1\resources\app.asar\node_modules\@babel\helper-compilation-targets\lib\index.js:174:20)  
+at getTargets (D:\cocos-dashboard-editors\Creator\3.6.1\resources\app.asar\node_modules\@babel\helper-compilation-targets\lib\index.js:214:27)  
+at resolveTargets (D:\cocos-dashboard-editors\Creator\3.6.1\resources\app.asar\node_modules\@babel\core\lib\config\resolve-targets.js:58:50)
+2024-12-01T11:45:56.651Z - warn: [Build] [build-script][[Build.Script.Rollup]] Circular dependency: file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/dialog.ts -> file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/genBag.ts -> file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/dialog.ts
+[warning][[Build.Script.Rollup]] Circular dependency: file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/dialog.ts -> file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/genBag.ts -> file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/seedEffect.ts -> file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/dialog.ts
+[warning][[Build.Script.Rollup]] Circular dependency: file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/genBag.ts -> file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/seedEffect.ts -> file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/genBag.ts
+[Build] [build-script][[Build.Script.Rollup]] Circular dependency: file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/dialog.ts -> file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/genBag.ts -> file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/dialog.ts
+[warning][[Build.Script.Rollup]] Circular dependency: file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/dialog.ts -> file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/genBag.ts -> file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/seedEffect.ts -> file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/dialog.ts
+[warning][[Build.Script.Rollup]] Circular dependency: file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/genBag.ts -> file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/seedEffect.ts -> file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/genBag.ts
+  
+at Logger._logHandler (D:\cocos-dashboard-editors\Creator\3.6.1\resources\app.asar\node_modules\@base\electron-worker\static\script.ccc:1:531)  
+at Logger.record (D:\cocos-dashboard-editors\Creator\3.6.1\resources\app.asar\node_modules\@base\electron-logger\lib\renderer.ccc:1:458)  
+at Object.warn (D:\cocos-dashboard-editors\Creator\3.6.1\resources\app.asar\node_modules\@base\electron-logger\lib\renderer.ccc:1:1260)  
+at NewConsole.warn (D:\cocos-dashboard-editors\Creator\3.6.1\resources\app.asar\builtin\builder\dist\worker\console.ccc:1:1306)  
+at Socket.<anonymous> (D:\cocos-dashboard-editors\Creator\3.6.1\resources\app.asar\builtin\builder\dist\worker\worker-pools\sub-process-manager.ccc:1:2640)  
+at Socket.emit (events.js:315:20)  
+at addChunk (internal/streams/readable.js:309:12)  
+at readableAddChunk (internal/streams/readable.js:284:9)  
+at Socket.Readable.push (internal/streams/readable.js:223:10)
+2024-12-01T11:45:56.654Z - warn: [Build] [build-script][[Build.Script.Rollup]] Circular dependency: file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/genBlock.ts -> file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/genPlant.ts -> file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/genBlock.ts
+[warning][[Build.Script.Rollup]] Circular dependency: file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/dialog.ts -> file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/genBag.ts -> file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/genBlock.ts -> file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/genPlant.ts -> file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/hoverEffect.ts -> file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/dialog.ts
+[warning][[Build.Script.Rollup]] Circular dependency: file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/genBlock.ts -> file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/genPlant.ts -> file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/hoverEffect.ts -> file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/genBlock.ts
+[warning][[Build.Script.Rollup]] Circular dependency: file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/dialog.ts -> file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/genBag.ts -> file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/genBlock.ts -> file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/dialog.ts
+[warning][[Build.Script.Rollup]] Circular dependency: file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/dialog.ts -> file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/genShop.ts -> file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/buySeedEffect.ts -> file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/dialog.ts
+[warning][[Build.Script.Rollup]] Circular dependency: file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/buySeed.ts -> file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/dialog.ts -> file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/genShop.ts -> file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/buySeedEffect.ts -> file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/buySeed.ts
+[Build] [build-script][[Build.Script.Rollup]] Circular dependency: file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/genBlock.ts -> file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/genPlant.ts -> file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/genBlock.ts
+[warning][[Build.Script.Rollup]] Circular dependency: file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/dialog.ts -> file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/genBag.ts -> file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/genBlock.ts -> file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/genPlant.ts -> file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/hoverEffect.ts -> file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/dialog.ts
+[warning][[Build.Script.Rollup]] Circular dependency: file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/genBlock.ts -> file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/genPlant.ts -> file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/hoverEffect.ts -> file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/genBlock.ts
+[warning][[Build.Script.Rollup]] Circular dependency: file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/dialog.ts -> file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/genBag.ts -> file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/genBlock.ts -> file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/dialog.ts
+[warning][[Build.Script.Rollup]] Circular dependency: file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/dialog.ts -> file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/genShop.ts -> file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/buySeedEffect.ts -> file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/dialog.ts
+[warning][[Build.Script.Rollup]] Circular dependency: file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/buySeed.ts -> file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/dialog.ts -> file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/genShop.ts -> file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/buySeedEffect.ts -> file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/buySeed.ts
+  
+[warning][[Build.Script.Rollup]] Circular dependency: file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/buySeed.ts -> file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/dialog.ts -> file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/genShop.ts -> file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/buySeedEffect.ts -> file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/buySeed.ts  
+  
+at Object.encode (D:\cocos-dashboard-editors\Creator\3.6.1\resources\app.asar\node_modules\@base\electron-worker\node_modules\v-stacks\index.js:14:17)  
+at Logger._logHandler (D:\cocos-dashboard-editors\Creator\3.6.1\resources\app.asar\node_modules\@base\electron-worker\static\script.ccc:1:531)  
+at Logger.record (D:\cocos-dashboard-editors\Creator\3.6.1\resources\app.asar\node_modules\@base\electron-logger\lib\renderer.ccc:1:458)  
+at Object.warn (D:\cocos-dashboard-editors\Creator\3.6.1\resources\app.asar\node_modules\@base\electron-logger\lib\renderer.ccc:1:1260)  
+at NewConsole.warn (D:\cocos-dashboard-editors\Creator\3.6.1\resources\app.asar\builtin\builder\dist\worker\console.ccc:1:1306)  
+at Socket.<anonymous> (D:\cocos-dashboard-editors\Creator\3.6.1\resources\app.asar\builtin\builder\dist\worker\worker-pools\sub-process-manager.ccc:1:2640)  
+at Socket.emit (events.js:315:20)  
+at addChunk (internal/streams/readable.js:309:12)  
+at readableAddChunk (internal/streams/readable.js:284:9)  
+at Socket.Readable.push (internal/streams/readable.js:223:10)
+2024-12-01T11:45:56.887Z - warn: [Build] [build-script]Browserslist: caniuse-lite is outdated. Please run:
+npx browserslist@latest --update-db
+
+Why you should do it regularly:
+https://github.com/browserslist/browserslist#browsers-data-updating
+[Build] [build-script]Browserslist: caniuse-lite is outdated. Please run:
+npx browserslist@latest --update-db
+
+Why you should do it regularly:
+https://github.com/browserslist/browserslist#browsers-data-updating
+  
+  
+at Object.encode (D:\cocos-dashboard-editors\Creator\3.6.1\resources\app.asar\node_modules\@base\electron-worker\node_modules\v-stacks\index.js:14:17)  
+at Logger._logHandler (D:\cocos-dashboard-editors\Creator\3.6.1\resources\app.asar\node_modules\@base\electron-worker\static\script.ccc:1:531)  
+at Logger.record (D:\cocos-dashboard-editors\Creator\3.6.1\resources\app.asar\node_modules\@base\electron-logger\lib\renderer.ccc:1:458)  
+at Object.warn (D:\cocos-dashboard-editors\Creator\3.6.1\resources\app.asar\node_modules\@base\electron-logger\lib\renderer.ccc:1:1260)  
+at NewConsole.warn (D:\cocos-dashboard-editors\Creator\3.6.1\resources\app.asar\builtin\builder\dist\worker\console.ccc:1:1306)  
+at Socket.<anonymous> (D:\cocos-dashboard-editors\Creator\3.6.1\resources\app.asar\builtin\builder\dist\worker\worker-pools\sub-process-manager.ccc:1:2640)  
+at Socket.emit (events.js:315:20)  
+at addChunk (internal/streams/readable.js:309:12)  
+at readableAddChunk (internal/streams/readable.js:284:9)  
+at Socket.Readable.push (internal/streams/readable.js:223:10)

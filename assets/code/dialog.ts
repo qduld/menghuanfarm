@@ -23,6 +23,12 @@ export class Dialog extends Component {
   buyPropsBox: Node = null; // buyPropsBox
 
   @property(Node)
+  buyCoinsBox: Node = null; // buyCoinsBox
+
+  @property(Node)
+  createCircleBox: Node = null; // createCircleBox
+
+  @property(Node)
   overlayMask: Node = null; // overlayMask
 
   @property
@@ -51,6 +57,8 @@ export class Dialog extends Component {
     this.lockBlockBox = find("popBox/Canvas/LockBlock");
     this.buySeedBox = find("popBox/Canvas/BuySeed");
     this.buyPropsBox = find("popBox/Canvas/BuyProps");
+    this.buyCoinsBox = find("popBox/Canvas/BuyCoins");
+    this.createCircleBox = find("popBox/Canvas/CreateCircle");
     this.overlayMask = find("popBox/Canvas/OverlayMask");
 
     this.bagBox.active = false;
@@ -58,6 +66,8 @@ export class Dialog extends Component {
     this.lockBlockBox.active = false;
     this.buySeedBox.active = false;
     this.buyPropsBox.active = false;
+    this.buyCoinsBox.active = false;
+    this.createCircleBox.active = false;
     this.overlayMask.active = false;
   }
   showDialog(event: EventTouch, customData) {
@@ -81,6 +91,12 @@ export class Dialog extends Component {
       case "BuyProps":
         this.buyPropsBox.active = true;
         break;
+      case "BuyCoins":
+        this.buyCoinsBox.active = true;
+        break;
+      case "CreateCircle":
+        this.createCircleBox.active = true;
+        break;
     }
     this.overlayMask.active = true;
   }
@@ -103,6 +119,14 @@ export class Dialog extends Component {
         break;
       case "BuyProps":
         this.buyPropsBox.active = false;
+        this.overlayMask.active = false;
+        break;
+      case "BuyCoins":
+        this.buyCoinsBox.active = false;
+        this.overlayMask.active = false;
+        break;
+      case "CreateCircle":
+        this.createCircleBox.active = false;
         this.overlayMask.active = false;
         break;
     }

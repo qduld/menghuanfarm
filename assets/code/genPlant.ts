@@ -16,7 +16,9 @@ const { ccclass, property } = _decorator;
 @ccclass("GenPlant")
 export class GenPlant extends Component {
   private plantSprite: Node | null = null;
+  private plantMarkingSprite: Node | null = null;
   private plantSpritePath: string | null = null;
+  private plantMarkingsPath: string | null = null;
   private plantLevel: number | null = null;
 
   updatePlantStatus(block, data) {
@@ -24,6 +26,11 @@ export class GenPlant extends Component {
 
     this.plantSprite = block.getChildByName("Plant");
     this.plantSprite.active = true;
+    // 倒计时标记改为植物标记
+    this.plantMarkingSprite = block
+      .getChildByName("Countdown")
+      .getChildByName("Icon");
+    this.plantMarkingsPath = "";
     if (data.farmStatus === 0) {
       // 未种植
       this.plantSpritePath = "awaitingSowing";
@@ -52,6 +59,22 @@ export class GenPlant extends Component {
         if (maturityTime - currentTime < currentTime - plantTime) {
           // 如果播种时间过半
           this.plantLevel = 2;
+        }
+        switch (data.seed.name) {
+          case "玉米":
+            this.plantMarkingsPath = "tomatoMarkings";
+            break;
+          case "茄子":
+            this.plantMarkingsPath = "tomatoMarkings";
+            break;
+          case "萝卜":
+            this.plantMarkingsPath = "carrotMarkings";
+            break;
+          case "西红柿":
+            this.plantMarkingsPath = "tomatoMarkings";
+            break;
+          default:
+            this.plantMarkingsPath = "carrotMarkings";
         }
       } else {
         countdownLabel["hasSchedule"] = false;
@@ -88,6 +111,22 @@ export class GenPlant extends Component {
             this.plantSpritePath = "carrotLevel3";
         }
       }
+    }
+
+    if (this.plantMarkingsPath) {
+      resources.load(
+        this.plantMarkingsPath + "/spriteFrame",
+        SpriteFrame,
+        (err, spriteFrame) => {
+          if (err) {
+            console.error("Failed to load sprite:", err);
+            return;
+          }
+
+          this.plantMarkingSprite.getComponent(Sprite).spriteFrame =
+            spriteFrame;
+        }
+      );
     }
 
     if (!this.plantSpritePath) {

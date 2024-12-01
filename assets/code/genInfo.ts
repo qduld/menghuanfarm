@@ -27,7 +27,15 @@ export class GenInfo extends Component {
 
   @property
   uagg: IUagg; // 今日收益统计
+
+  private static _instance: GenInfo;
+
+  static getInstance(): GenInfo {
+    return GenInfo._instance;
+  }
+
   onLoad() {
+    GenInfo._instance = this;
     this.requestUAgg();
     this.requestUserInfo();
     this.UUserName = find("MainCanvas/TopContent/Person/Name");
