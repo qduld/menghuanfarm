@@ -46,7 +46,7 @@ export class circles extends Component {
   UMembersSection: Node = null; // 成员列表Section
 
   @property
-  squadSpacingY: number = 20; // 推荐间距
+  squadSpacingY: number = 10; // 推荐间距
 
   @property
   memberSpacingY: number = 0; // 推荐间距
@@ -87,7 +87,6 @@ export class circles extends Component {
       squadSection.getChildByName("Name").getComponent(Label).string =
         squad.name;
 
-      debugger;
       squadSection.getChildByName("Button")["squadId"] = squad.id;
     });
   }

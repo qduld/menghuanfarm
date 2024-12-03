@@ -43,7 +43,7 @@
     },
     {
       "bufferView": 1,
-      "componentType": 5125,
+      "componentType": 5123,
       "count": 6144,
       "name": "capsule/INDICES",
       "type": "SCALAR"
@@ -91,7 +91,7 @@
     },
     {
       "bufferView": 3,
-      "componentType": 5125,
+      "componentType": 5123,
       "count": 600,
       "name": "plane/INDICES",
       "type": "SCALAR"
@@ -139,7 +139,7 @@
     },
     {
       "bufferView": 5,
-      "componentType": 5125,
+      "componentType": 5123,
       "count": 216,
       "name": "cone/INDICES",
       "type": "SCALAR"
@@ -187,7 +187,7 @@
     },
     {
       "bufferView": 7,
-      "componentType": 5125,
+      "componentType": 5123,
       "count": 6144,
       "name": "torus/INDICES",
       "type": "SCALAR"
@@ -235,7 +235,7 @@
     },
     {
       "bufferView": 9,
-      "componentType": 5125,
+      "componentType": 5123,
       "count": 7140,
       "name": "sphere/INDICES",
       "type": "SCALAR"
@@ -283,7 +283,7 @@
     },
     {
       "bufferView": 11,
-      "componentType": 5125,
+      "componentType": 5123,
       "count": 6,
       "name": "quad/INDICES",
       "type": "SCALAR"
@@ -331,7 +331,7 @@
     },
     {
       "bufferView": 13,
-      "componentType": 5125,
+      "componentType": 5123,
       "count": 384,
       "name": "cylinder/INDICES",
       "type": "SCALAR"
@@ -379,7 +379,7 @@
     },
     {
       "bufferView": 15,
-      "componentType": 5125,
+      "componentType": 5123,
       "count": 36,
       "name": "box/INDICES",
       "type": "SCALAR"
@@ -400,104 +400,112 @@
     },
     {
       "buffer": 0,
-      "byteLength": 24576,
-      "byteOffset": 52840
+      "byteLength": 12288,
+      "byteOffset": 52840,
+      "target": 34963
     },
     {
       "buffer": 0,
       "byteLength": 4840,
-      "byteOffset": 77416,
+      "byteOffset": 65128,
       "byteStride": 40,
       "name": "plane",
       "target": 34962
     },
     {
       "buffer": 0,
-      "byteLength": 2400,
-      "byteOffset": 82256
+      "byteLength": 1200,
+      "byteOffset": 69968,
+      "target": 34963
     },
     {
       "buffer": 0,
       "byteLength": 5200,
-      "byteOffset": 84656,
+      "byteOffset": 71168,
       "byteStride": 40,
       "name": "cone",
       "target": 34962
     },
     {
       "buffer": 0,
-      "byteLength": 864,
-      "byteOffset": 89856
+      "byteLength": 432,
+      "byteOffset": 76368,
+      "target": 34963
     },
     {
       "buffer": 0,
       "byteLength": 51880,
-      "byteOffset": 90720,
+      "byteOffset": 76800,
       "byteStride": 40,
       "name": "torus",
       "target": 34962
     },
     {
       "buffer": 0,
-      "byteLength": 24576,
-      "byteOffset": 142600
+      "byteLength": 12288,
+      "byteOffset": 128680,
+      "target": 34963
     },
     {
       "buffer": 0,
       "byteLength": 51760,
-      "byteOffset": 167176,
+      "byteOffset": 140968,
       "byteStride": 40,
       "name": "sphere",
       "target": 34962
     },
     {
       "buffer": 0,
-      "byteLength": 28560,
-      "byteOffset": 218936
+      "byteLength": 14280,
+      "byteOffset": 192728,
+      "target": 34963
     },
     {
       "buffer": 0,
       "byteLength": 160,
-      "byteOffset": 247496,
+      "byteOffset": 207008,
       "byteStride": 40,
       "name": "quad",
       "target": 34962
     },
     {
       "buffer": 0,
-      "byteLength": 24,
-      "byteOffset": 247656
+      "byteLength": 12,
+      "byteOffset": 207168,
+      "target": 34963
     },
     {
       "buffer": 0,
       "byteLength": 10400,
-      "byteOffset": 247680,
+      "byteOffset": 207180,
       "byteStride": 40,
       "name": "cylinder",
       "target": 34962
     },
     {
       "buffer": 0,
-      "byteLength": 1536,
-      "byteOffset": 258080
+      "byteLength": 768,
+      "byteOffset": 217580,
+      "target": 34963
     },
     {
       "buffer": 0,
       "byteLength": 960,
-      "byteOffset": 259616,
+      "byteOffset": 218348,
       "byteStride": 40,
       "name": "box",
       "target": 34962
     },
     {
       "buffer": 0,
-      "byteLength": 144,
-      "byteOffset": 260576
+      "byteLength": 72,
+      "byteOffset": 219308,
+      "target": 34963
     }
   ],
   "buffers": [
     {
-      "byteLength": 260720,
+      "byteLength": 219380,
       "uri": "out.bin"
     }
   ],

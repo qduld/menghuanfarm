@@ -12,52 +12,41 @@
     ],
     "isIconGizmo3D": false,
     "iconGizmoSize": 2,
-    "isGridVisible": true
+    "isGridVisible": true,
+    "transformToolName": "position",
+    "pivot": "pivot",
+    "coordinate": "local",
+    "toolsVisibility3d": true
   },
   "scene": {
     "native": false
   },
   "camera": {
-    "fov": 45,
-    "far": 10000,
-    "near": 0.01,
     "color": [
       48,
       48,
       48,
       255
     ],
+    "fov": 45,
+    "far": 10000,
+    "near": 0.01,
     "wheelSpeed": 0.01,
     "wanderSpeed": 10,
     "enableAcceleration": true,
+    "size": "__default_design__",
     "far2D": 10000,
     "near2D": 1,
     "wheelSpeed2D": 6,
-    "size": "__default_design__"
+    "iso": 0,
+    "aperture": 19,
+    "shutter": 7
   },
   "camera-infos": {
     "c77ecaa8-c936-46c4-a5b0-98692673ed87": {
       "position": {
         "x": 375,
         "y": 666.9999999999999,
-        "z": 5000
-      },
-      "rotation": {
-        "x": 0,
-        "y": 0,
-        "z": 0,
-        "w": 1
-      },
-      "viewCenter": {
-        "x": 0,
-        "y": 0,
-        "z": 0
-      }
-    },
-    "5a6f4efe-edd1-4c9d-adc3-c28f8d58012d": {
-      "position": {
-        "x": 414.74727977940313,
-        "y": 918.2668275314131,
         "z": 5000
       },
       "rotation": {
@@ -92,7 +81,57 @@
     },
     "3909eff4-33d0-491b-8f52-ccf0d8cd9f76": {
       "position": {
-        "x": 375.00000000000006,
+        "x": 519.5,
+        "y": 318,
+        "z": 5000
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "viewCenter": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "contentRect": {
+        "x": 204.99999999999994,
+        "y": 0,
+        "width": 583.8,
+        "height": 445.2
+      },
+      "scale": 0.7
+    },
+    "817d097a-2e5d-438b-bbd5-f5b7e22be5ae": {
+      "position": {
+        "x": 363.44459050995397,
+        "y": 1093.5954746595617,
+        "z": 5000
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "viewCenter": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "contentRect": {
+        "x": 46.35907765354886,
+        "y": 1013.8377689717541,
+        "width": 583.8,
+        "height": 146.84539877300614
+      },
+      "scale": 0.9205718588984839
+    },
+    "520f11f3-d3cf-4d14-9f53-41dd34710c85": {
+      "position": {
+        "x": 375,
         "y": 667,
         "z": 5000
       },
@@ -106,12 +145,19 @@
         "x": 0,
         "y": 0,
         "z": 0
-      }
+      },
+      "contentRect": {
+        "x": -499.6509433962261,
+        "y": 8.516298378292664e-14,
+        "width": 250.29985007496256,
+        "height": 445.20000000000005
+      },
+      "scale": 0.3337331334332834
     },
-    "817d097a-2e5d-438b-bbd5-f5b7e22be5ae": {
+    "5a6f4efe-edd1-4c9d-adc3-c28f8d58012d": {
       "position": {
-        "x": 350,
-        "y": 642,
+        "x": 527.980379030715,
+        "y": 548.9780882274613,
         "z": 5000
       },
       "rotation": {
@@ -124,10 +170,20 @@
         "x": 0,
         "y": 0,
         "z": 0
-      }
+      },
+      "contentRect": {
+        "x": -34.99039058298017,
+        "y": -20.257856882729598,
+        "width": 440.3,
+        "height": 445.2
+      },
+      "scale": 0.39105049832527666
     }
   },
   "camera-uuids": [
+    "3909eff4-33d0-491b-8f52-ccf0d8cd9f76",
+    "817d097a-2e5d-438b-bbd5-f5b7e22be5ae",
+    "520f11f3-d3cf-4d14-9f53-41dd34710c85",
     "5a6f4efe-edd1-4c9d-adc3-c28f8d58012d"
   ],
   "float-window": {
@@ -145,12 +201,33 @@
   },
   "game-view": {
     "devicesInfo": {
-      "name": "iPhone XS",
-      "type": "device",
-      "width": 375,
-      "height": 812
+      "name": "i18n:scene.game_view.free_aspect",
+      "type": "free",
+      "width": 0,
+      "height": 0
     },
     "scaleValue": 73,
     "sliderValue": 35
+  },
+  "__version__": "1.0.1",
+  "builder": {
+    "taskOptionsMap": {},
+    "__version__": "1.3.8"
+  },
+  "snap-configs": {
+    "position": {
+      "x": 1,
+      "y": 1,
+      "z": 1
+    },
+    "rotation": 1,
+    "scale": 1,
+    "isPositionSnapEnabled": false,
+    "isRotationSnapEnabled": false,
+    "isScaleSnapEnabled": false
+  },
+  "rect-snap-configs": {
+    "enableSnapping": true,
+    "snapThreshold": 4
   }
 }

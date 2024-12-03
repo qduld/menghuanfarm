@@ -2,6 +2,7 @@
   "__type__": "cc.EffectAsset",
   "_name": "util/splash-screen",
   "_objFlags": 0,
+  "__editorExtras__": {},
   "_native": "",
   "techniques": [
     {
@@ -207,6 +208,94 @@
           "defines": [],
           "stageFlags": 16,
           "location": 0
+        }
+      ],
+      "descriptors": [
+        {
+          "rate": 0,
+          "blocks": [],
+          "samplerTextures": [],
+          "samplers": [],
+          "textures": [],
+          "buffers": [],
+          "images": [],
+          "subpassInputs": []
+        },
+        {
+          "rate": 1,
+          "blocks": [
+            {
+              "name": "Constant",
+              "members": [
+                {
+                  "name": "u_buffer0",
+                  "type": 16,
+                  "count": 1
+                },
+                {
+                  "name": "u_buffer1",
+                  "type": 16,
+                  "count": 1
+                },
+                {
+                  "name": "u_projection",
+                  "type": 25,
+                  "count": 1
+                }
+              ],
+              "defines": [],
+              "stageFlags": 1,
+              "binding": 0
+            },
+            {
+              "name": "Factor",
+              "members": [
+                {
+                  "name": "u_percent",
+                  "type": 13,
+                  "count": 1
+                }
+              ],
+              "defines": [],
+              "stageFlags": 16,
+              "binding": 1
+            }
+          ],
+          "samplerTextures": [
+            {
+              "name": "mainTexture",
+              "type": 28,
+              "count": 1,
+              "defines": [],
+              "stageFlags": 16,
+              "binding": 2
+            }
+          ],
+          "samplers": [],
+          "textures": [],
+          "buffers": [],
+          "images": [],
+          "subpassInputs": []
+        },
+        {
+          "rate": 2,
+          "blocks": [],
+          "samplerTextures": [],
+          "samplers": [],
+          "textures": [],
+          "buffers": [],
+          "images": [],
+          "subpassInputs": []
+        },
+        {
+          "rate": 3,
+          "blocks": [],
+          "samplerTextures": [],
+          "samplers": [],
+          "textures": [],
+          "buffers": [],
+          "images": [],
+          "subpassInputs": []
         }
       ],
       "hash": 3189094080,

@@ -17,7 +17,7 @@ export class UserAvatar extends Component {
   avatarSprite: Sprite = null!;
 
   start() {
-    this.showUserAvatar();
+    // this.showUserAvatar();
   }
   showUserAvatar() {
     // 假设您已经获得授权后重定向的 URL

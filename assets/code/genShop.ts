@@ -28,7 +28,7 @@ export class GenShop extends Component {
   USeedSection: Node = null; // 种子Section
 
   @property
-  seedSpacingY: number = 60; // 种子Y间距
+  seedSpacingY: number = 80; // 种子Y间距
 
   @property
   seedSpacingX: number = 20; // 种子X间距
@@ -41,10 +41,11 @@ export class GenShop extends Component {
 
   protected onLoad(): void {
     GenShop._instance = this;
-    this.seedSpacingY = 80;
     this.requestShopList();
-    this.USeedList = find("popBox/Canvas/Shop/List");
-    this.USeedSection = find("popBox/Canvas/Shop/Section");
+    this.USeedList = find("popBox/Canvas/Shop/ScrollView/view/content");
+    this.USeedSection = find(
+      "popBox/Canvas/Shop/ScrollView/view/content/Section"
+    );
   }
 
   // 生成推荐列表
@@ -58,8 +59,8 @@ export class GenShop extends Component {
         .contentSize.width;
 
     // 计算起始点，以保证整个布局居中
-    const startX = this.USeedSection.position.x - 376;
-    const startY = this.USeedSection.position.y - 667;
+    const startX = this.USeedSection.position.x;
+    const startY = this.USeedSection.position.y;
 
     this.seedList.forEach((seed, index) => {
       const posY =

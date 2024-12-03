@@ -1,7 +1,10 @@
 {
-  "common": {
-    "polyfills": {
-      "asyncFunctions": true
+  "builder": {
+    "common": {
+      "polyfills": {
+        "asyncFunctions": true
+      }
     }
-  }
+  },
+  "__version__": "1.0.1"
 }

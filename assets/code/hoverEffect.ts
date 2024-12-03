@@ -77,15 +77,15 @@ export class HoverEffect extends Component {
     this.targetNode.getChildByName("Receivehand").active = false;
   }
 
-  onDestroy() {
-    if (this.targetNode) {
-      // 移除事件监听，防止内存泄漏
-      this.targetNode.off(Node.EventType.MOUSE_DOWN, this.onMouseDown, this);
-      this.targetNode.off(Node.EventType.MOUSE_ENTER, this.onMouseEnter, this);
-      this.targetNode.off(Node.EventType.MOUSE_LEAVE, this.onMouseLeave, this);
-      this.targetNode.off(Node.EventType.TOUCH_START, this.onTouchStart, this);
-      // this.targetNode.off(Node.EventType.TOUCH_MOVE, this.onTouchMove, this);
-      this.targetNode.off(Node.EventType.TOUCH_END, this.onTouchEnd, this);
-    }
-  }
+  // onDestroy() {
+  //   if (this.targetNode) {
+  //     // 移除事件监听，防止内存泄漏
+  //     this.targetNode.off(Node.EventType.MOUSE_DOWN, this.onMouseDown, this);
+  //     this.targetNode.off(Node.EventType.MOUSE_ENTER, this.onMouseEnter, this);
+  //     this.targetNode.off(Node.EventType.MOUSE_LEAVE, this.onMouseLeave, this);
+  //     this.targetNode.off(Node.EventType.TOUCH_START, this.onTouchStart, this);
+  //     // this.targetNode.off(Node.EventType.TOUCH_MOVE, this.onTouchMove, this);
+  //     this.targetNode.off(Node.EventType.TOUCH_END, this.onTouchEnd, this);
+  //   }
+  // }
 }

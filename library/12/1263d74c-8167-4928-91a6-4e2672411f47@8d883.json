@@ -2,9 +2,10 @@
   "__type__": "cc.Material",
   "_name": "lambert1",
   "_objFlags": 0,
+  "__editorExtras__": {},
   "_native": "",
   "_effectAsset": {
-    "__uuid__": "1baf0fc9-befa-459c-8bdd-af1a450a0319",
+    "__uuid__": "c8f66d17-351a-48da-a12c-0212d28575c4",
     "__expectedType__": "cc.EffectAsset"
   },
   "_techIdx": 0,
@@ -31,7 +32,8 @@
         "x": 0.4000000059604645,
         "y": 0.4000000059604645,
         "z": 0.4000000059604645
-      }
+      },
+      "occlusion": 0
     }
   ]
 }

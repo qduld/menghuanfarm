@@ -2,11 +2,9 @@ System.register(["./application.js"], function (_export, _context) {
   "use strict";
 
   var Application, canvas, $p, bcr, application;
-
   function topLevelImport(url) {
     return System["import"](url);
   }
-
   return {
     setters: [function (_applicationJs) {
       Application = _applicationJs.Application;

@@ -1,29 +1,43 @@
 {
-  "common": {
-    "outputName": "wechatgame",
-    "mainBundleCompressionType": "subpackage",
-    "platform": "wechatgame",
-    "scenes": [
-      {
-        "url": "db://assets/scene/main.scene",
-        "uuid": "5a6f4efe-edd1-4c9d-adc3-c28f8d58012d",
-        "inBundle": false
+  "builder": {
+    "taskOptionsMap": {
+      "1668068042719": {
+        "startSceneAssetBundle": true,
+        "orientation": "portrait",
+        "appid": "wx3ba4c9a7620a350f",
+        "separateEngine": false,
+        "__version__": "1.0.0",
+        "buildOpenDataContextTemplate": true
       }
-    ],
-    "startScene": "06d29b3c-c3f1-4104-824c-0060dfcb1f92",
-    "mainBundleIsRemote": false,
-    "replaceSplashScreen": true
-  },
-  "options": {
-    "wechatgame": {
-      "startSceneAssetBundle": true,
-      "orientation": "portrait",
-      "appid": "wx3ba4c9a7620a350f",
-      "separateEngine": false,
-      "wasm": "wasm",
-      "enabelWebGL2": "off",
-      "__version__": "1.0.2",
-      "buildOpenDataContextTemplate": true
+    },
+    "__version__": "1.3.8",
+    "common": {
+      "outputName": "wechatgame",
+      "mainBundleCompressionType": "subpackage",
+      "platform": "wechatgame",
+      "scenes": [
+        {
+          "url": "db://assets/scene/main.scene",
+          "uuid": "5a6f4efe-edd1-4c9d-adc3-c28f8d58012d",
+          "inBundle": false
+        }
+      ],
+      "startScene": "06d29b3c-c3f1-4104-824c-0060dfcb1f92",
+      "mainBundleIsRemote": false,
+      "replaceSplashScreen": true,
+      "startSceneAssetBundle": true
+    },
+    "options": {
+      "wechatgame": {
+        "orientation": "portrait",
+        "appid": "wx3ba4c9a7620a350f",
+        "separateEngine": false,
+        "wasm": "js",
+        "enabelWebGL2": "off",
+        "__version__": "1.0.2",
+        "buildOpenDataContextTemplate": true
+      }
     }
-  }
+  },
+  "__version__": "1.0.4"
 }

@@ -1,5 +1,5 @@
 {
-  "ver": "1.0.25",
+  "ver": "1.0.27",
   "importer": "image",
   "imported": true,
   "uuid": "6cfb57f2-1c8b-46a1-9701-60273ae11a81",
@@ -43,11 +43,11 @@
         "trimThreshold": 1,
         "rotated": false,
         "offsetX": 0,
-        "offsetY": 0,
+        "offsetY": -0.5,
         "trimX": 2,
         "trimY": 2,
         "width": 168,
-        "height": 170,
+        "height": 171,
         "rawWidth": 172,
         "rawHeight": 174,
         "borderTop": 0,
@@ -62,16 +62,16 @@
         "vertices": {
           "rawPosition": [
             -84,
-            -85,
+            -85.5,
             0,
             84,
-            -85,
+            -85.5,
             0,
             -84,
-            85,
+            85.5,
             0,
             84,
-            85,
+            85.5,
             0
           ],
           "indexes": [
@@ -88,15 +88,15 @@
             170,
             172,
             2,
-            2,
+            1,
             170,
-            2
+            1
           ],
           "nuv": [
             0.011627906976744186,
-            0.011494252873563218,
+            0.005747126436781609,
             0.9883720930232558,
-            0.011494252873563218,
+            0.005747126436781609,
             0.011627906976744186,
             0.9885057471264368,
             0.9883720930232558,
@@ -104,12 +104,12 @@
           ],
           "minPos": [
             -84,
-            -85,
+            -85.5,
             0
           ],
           "maxPos": [
             84,
-            85,
+            85.5,
             0
           ]
         },
@@ -117,7 +117,7 @@
         "imageUuidOrDatabaseUri": "6cfb57f2-1c8b-46a1-9701-60273ae11a81@6c48a",
         "atlasUuid": ""
       },
-      "ver": "1.0.11",
+      "ver": "1.0.12",
       "imported": true,
       "files": [
         ".json"
@@ -129,6 +129,6 @@
     "type": "sprite-frame",
     "fixAlphaTransparencyArtifacts": true,
     "hasAlpha": true,
-    "redirect": "6cfb57f2-1c8b-46a1-9701-60273ae11a81@f9941"
+    "redirect": "6cfb57f2-1c8b-46a1-9701-60273ae11a81@6c48a"
   }
 }

@@ -1,5 +1,5 @@
 {
-  "ver": "1.0.25",
+  "ver": "1.0.27",
   "importer": "image",
   "imported": true,
   "uuid": "7294683f-f222-4dcd-9d80-b992b68c4f47",
@@ -43,11 +43,11 @@
         "trimThreshold": 1,
         "rotated": false,
         "offsetX": 0,
-        "offsetY": 0,
+        "offsetY": -0.5,
         "trimX": 0,
         "trimY": 2,
         "width": 172,
-        "height": 170,
+        "height": 171,
         "rawWidth": 172,
         "rawHeight": 174,
         "borderTop": 0,
@@ -62,16 +62,16 @@
         "vertices": {
           "rawPosition": [
             -86,
-            -85,
+            -85.5,
             0,
             86,
-            -85,
+            -85.5,
             0,
             -86,
-            85,
+            85.5,
             0,
             86,
-            85,
+            85.5,
             0
           ],
           "indexes": [
@@ -88,15 +88,15 @@
             172,
             172,
             0,
-            2,
+            1,
             172,
-            2
+            1
           ],
           "nuv": [
             0,
-            0.011494252873563218,
+            0.005747126436781609,
             1,
-            0.011494252873563218,
+            0.005747126436781609,
             0,
             0.9885057471264368,
             1,
@@ -104,12 +104,12 @@
           ],
           "minPos": [
             -86,
-            -85,
+            -85.5,
             0
           ],
           "maxPos": [
             86,
-            85,
+            85.5,
             0
           ]
         },
@@ -117,7 +117,7 @@
         "imageUuidOrDatabaseUri": "7294683f-f222-4dcd-9d80-b992b68c4f47@6c48a",
         "atlasUuid": ""
       },
-      "ver": "1.0.11",
+      "ver": "1.0.12",
       "imported": true,
       "files": [
         ".json"
@@ -129,6 +129,6 @@
     "type": "sprite-frame",
     "fixAlphaTransparencyArtifacts": true,
     "hasAlpha": true,
-    "redirect": "7294683f-f222-4dcd-9d80-b992b68c4f47@f9941"
+    "redirect": "7294683f-f222-4dcd-9d80-b992b68c4f47@6c48a"
   }
 }

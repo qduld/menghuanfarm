@@ -1,7 +1,8 @@
 {
   "__type__": "cc.EffectAsset",
-  "_name": "builtin-clear-stencil",
+  "_name": "internal/builtin-clear-stencil",
   "_objFlags": 0,
+  "__editorExtras__": {},
   "_native": "",
   "techniques": [
     {
@@ -17,7 +18,7 @@
           "rasterizerState": {
             "cullMode": 0
           },
-          "program": "builtin-clear-stencil|sprite-vs:vert|sprite-fs:frag",
+          "program": "internal/builtin-clear-stencil|sprite-vs:vert|sprite-fs:frag",
           "depthStencilState": {
             "depthTest": false,
             "depthWrite": false
@@ -55,6 +56,48 @@
           "location": 0
         }
       ],
+      "descriptors": [
+        {
+          "rate": 0,
+          "blocks": [],
+          "samplerTextures": [],
+          "samplers": [],
+          "textures": [],
+          "buffers": [],
+          "images": [],
+          "subpassInputs": []
+        },
+        {
+          "rate": 1,
+          "blocks": [],
+          "samplerTextures": [],
+          "samplers": [],
+          "textures": [],
+          "buffers": [],
+          "images": [],
+          "subpassInputs": []
+        },
+        {
+          "rate": 2,
+          "blocks": [],
+          "samplerTextures": [],
+          "samplers": [],
+          "textures": [],
+          "buffers": [],
+          "images": [],
+          "subpassInputs": []
+        },
+        {
+          "rate": 3,
+          "blocks": [],
+          "samplerTextures": [],
+          "samplers": [],
+          "textures": [],
+          "buffers": [],
+          "images": [],
+          "subpassInputs": []
+        }
+      ],
       "hash": 3507038093,
       "glsl4": {
         "vert": "\nprecision highp float;\nlayout(location = 0) in vec3 a_position;\nvec4 vert () {\n  vec4 pos = vec4(a_position, 1);\n  return pos;\n}\nvoid main() { gl_Position = vert(); }",
@@ -87,7 +130,7 @@
         }
       },
       "defines": [],
-      "name": "builtin-clear-stencil|sprite-vs:vert|sprite-fs:frag"
+      "name": "internal/builtin-clear-stencil|sprite-vs:vert|sprite-fs:frag"
     }
   ],
   "combinations": [

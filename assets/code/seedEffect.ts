@@ -36,11 +36,11 @@ export class SeedEffect extends Component {
     }
   }
 
-  onDestroy() {
-    if (this.targetNode) {
-      // 移除事件监听，防止内存泄漏
-      this.targetNode.off(Node.EventType.MOUSE_DOWN, this.onMouseDown, this);
-      this.targetNode.off(Node.EventType.TOUCH_START, this.onTouchStart, this);
-    }
-  }
+  // onDestroy() {
+  //   if (this.targetNode) {
+  //     // 移除事件监听，防止内存泄漏
+  //     this.targetNode.off(Node.EventType.MOUSE_DOWN, this.onMouseDown, this);
+  //     this.targetNode.off(Node.EventType.TOUCH_START, this.onTouchStart, this);
+  //   }
+  // }
 }

@@ -2,6 +2,7 @@
   "__type__": "cc.Mesh",
   "_name": "",
   "_objFlags": 0,
+  "__editorExtras__": {},
   "_native": ".bin",
   "_struct": {
     "primitives": [
@@ -12,9 +13,9 @@
         ],
         "indexView": {
           "offset": 72464,
-          "length": 28560,
+          "length": 14280,
           "count": 7140,
-          "stride": 4
+          "stride": 2
         }
       }
     ],
@@ -68,6 +69,6 @@
       "z": 0.49899348616600037
     }
   },
-  "_hash": 3429205708,
+  "_hash": 815868016,
   "_allowDataAccess": true
 }

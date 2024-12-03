@@ -1,7 +1,10 @@
 {
-  "common": {
-    "outputName": "windows",
-    "mainBundleCompressionType": "merge_dep",
-    "platform": "windows"
+  "__version__": "1.0.1",
+  "builder": {
+    "common": {
+      "outputName": "windows",
+      "mainBundleCompressionType": "merge_dep",
+      "platform": "windows"
+    }
   }
 }

@@ -1,7 +1,10 @@
 {
-  "common": {
-    "outputName": "android",
-    "mainBundleCompressionType": "merge_dep",
-    "platform": "android"
+  "__version__": "1.0.1",
+  "builder": {
+    "common": {
+      "outputName": "android",
+      "mainBundleCompressionType": "merge_dep",
+      "platform": "android"
+    }
   }
 }

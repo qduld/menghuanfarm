@@ -29,6 +29,12 @@ export class DrawRoundedRect extends Component {
   @property
   startY: number = 0;
 
+  @property
+  offsetX: number = 0;
+
+  @property
+  offsetY: number = 0;
+
   onLoad() {
     // 获取当前节点的 Graphics 组件
     this.graphics = this.getComponent(Graphics);
@@ -42,8 +48,8 @@ export class DrawRoundedRect extends Component {
   drawRoundedRect() {
     if (!this.graphics) return;
 
-    this.startX = -this.rectWidth / 2 - this.borderWidth;
-    this.startY = -this.rectHeight / 2 - this.borderWidth;
+    this.startX = -this.rectWidth / 2 - this.borderWidth + this.offsetX;
+    this.startY = -this.rectHeight / 2 - this.borderWidth + this.offsetY;
 
     // 设置填充颜色为白色
     this.graphics.fillColor = this.fillColor;
@@ -65,8 +71,8 @@ export class DrawRoundedRect extends Component {
 
     // 绘制边框
     this.graphics.roundRect(
-      this.startX,
-      this.startY,
+      this.startX - 0.5,
+      this.startY - 0.5,
       this.rectWidth,
       this.rectHeight,
       this.borderRadius
