@@ -1,7 +1,11 @@
 import { _decorator, Component, Node, find, Sprite, Label, director } from "cc";
-import { Login } from "./login";
 import { GenBlock } from "./genBlock";
+import { GenInfo } from "./genInfo";
+import { GenBag } from "./genBag";
+import { GenShop } from "./genShop";
+
 import { httpRequest } from "./http";
+import { GlobalData } from "./globalData";
 
 const { ccclass, property } = _decorator;
 let userAvata: Node;
@@ -12,15 +16,39 @@ export class main extends Component {
   @property(Node)
   genBlock: GenBlock = new GenBlock(); // block实例
 
-  @property(Node)
-  login: Login = new Login(); // block实例
-
   protected onLoad(): void {
-    this.init();
+    const globalData = GlobalData.getInstance();
+    if (globalData.isStolen) {
+      this.init();
+      return;
+    }
+    this.userLogin();
     director.preloadScene("circles");
+    director.preloadScene("harvest");
   }
-  init() {
-    //种子背包
-    userAvata = find("MainCanvas/TopContent/Avatar/Picture");
+  async init() {
+    const genInfo = GenInfo.getInstance();
+    const genBlock = GenBlock.getInstance();
+
+    genInfo.init();
+    genBlock.init();
+  }
+
+  async userLogin() {
+    const globalData = GlobalData.getInstance();
+    try {
+      const response = await httpRequest("/api/v1/farm/u/login", {
+        method: "POST",
+      });
+      if (response.ok) {
+        globalData.isLogin = true;
+        this.init();
+      } else {
+        globalData.isLogin = false;
+        console.error("Request failed with status:", response.status);
+      }
+    } catch (error) {
+      console.error("Error:", error);
+    }
   }
 }

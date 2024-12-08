@@ -11,6 +11,9 @@ export class GlobalData {
   userInfo: IUserInfo = null; // 用户信息
 
   @property
+  isLogin: Boolean = false; // 是否登录
+
+  @property
   isStolen: Boolean = false; // 是偷取
 
   @property
@@ -31,22 +34,38 @@ export class GlobalData {
   isStolenUISwitch() {
     const income = find("MainCanvas/TopContent/Income");
     const slider = find("MainCanvas/TopContent/Slider");
+    const moneyPlusCircle = find(
+      "MainCanvas/TopContent/Person/Money/PlusCircle"
+    );
+    const addtionPlusCircle = find(
+      "MainCanvas/TopContent/Person/Addition/PlusCircle"
+    );
     const footer = find("MainCanvas/Footer");
     const footerStolen = find("MainCanvas/FooterStolen");
 
     income.active = false;
     slider.active = false;
+    moneyPlusCircle.active = false;
+    addtionPlusCircle.active = false;
     footer.active = false;
     footerStolen.active = true;
   }
   isNotStolenUISwitch() {
     const income = find("MainCanvas/TopContent/Income");
     const slider = find("MainCanvas/TopContent/Slider");
+    const moneyPlusCircle = find(
+      "MainCanvas/TopContent/Person/Money/PlusCircle"
+    );
+    const addtionPlusCircle = find(
+      "MainCanvas/TopContent/Person/Addition/PlusCircle"
+    );
     const footer = find("MainCanvas/Footer");
     const footerStolen = find("MainCanvas/FooterStolen");
 
     income.active = true;
     slider.active = true;
+    moneyPlusCircle.active = true;
+    addtionPlusCircle.active = true;
     footer.active = true;
     footerStolen.active = false;
   }

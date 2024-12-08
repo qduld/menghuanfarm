@@ -31,10 +31,10 @@ export class GenBlock extends Component {
   sprite: Node = null; // 容器节点
 
   @property
-  spacingX: number = 100; // X轴间距
+  spacingX: number = 40; // X轴间距
 
   @property
-  spacingY: number = 100; // Y轴间距
+  spacingY: number = 40; // Y轴间距
 
   @property
   blockList: IFarmland[] = []; // Y轴间距
@@ -53,18 +53,18 @@ export class GenBlock extends Component {
 
   onLoad() {
     GenBlock._instance = this;
-    this.spacingX = 40;
-    this.spacingY = 40;
-    this.blockContainer = find("MainCanvas/Block/List");
-    this.lockBlock = find("MainCanvas/Block/Lock");
-    this.unlockBlock = find("MainCanvas/Block/Unlock");
-    this.sprite = find("MainCanvas/Block/Lock/Sprite");
+  }
 
+  init() {
     if (GlobalData.getInstance().isStolen) {
       this.requestFriendFarmLand();
     } else {
       this.requestFarmLand();
     }
+    this.blockContainer = find("MainCanvas/Block/List");
+    this.lockBlock = find("MainCanvas/Block/Lock");
+    this.unlockBlock = find("MainCanvas/Block/Unlock");
+    this.sprite = find("MainCanvas/Block/Lock/Sprite");
   }
 
   createblockLayout() {
@@ -140,21 +140,24 @@ export class GenBlock extends Component {
   }
 
   resetAllSchedule() {
-    this.blockContainer.children.forEach((block, index) => {
-      if (block.getChildByName("Countdown")) {
-        block.getChildByName("Countdown")["hasSchedule"] = false;
-      }
-    });
+    if (this.blockContainer?.children) {
+      this.blockContainer.children.forEach((block, index) => {
+        if (block.getChildByName("Countdown")) {
+          block.getChildByName("Countdown")["hasSchedule"] = false;
+        }
+      });
+    }
   }
 
   // 获取农田列表
   async requestFarmLand() {
     try {
-      const response = await httpRequest("/api/v1/farmland", {
+      const response = await httpRequest("/api/v1/farm/farmland", {
         method: "GET",
       });
       if (response.ok) {
         this.blockList = response.data.data as IFarmland[];
+        this.blockContainer.removeAllChildren();
         this.createblockLayout(); // 在加载时调用布局创建方法
       } else {
         console.error("Request failed with status:", response.status);
@@ -167,7 +170,7 @@ export class GenBlock extends Component {
   // 更新农田列表
   async updateFarmLand(farmlandId) {
     try {
-      const response = await httpRequest("/api/v1/farmland", {
+      const response = await httpRequest("/api/v1/farm/farmland", {
         method: "GET",
       });
       if (response.ok) {
@@ -181,10 +184,29 @@ export class GenBlock extends Component {
     }
   }
 
+  //  // 更新被偷农田列表
+  // async updateStolenFarmLand(farmlandId) {
+  //   const globalData = GlobalData.getInstance();
+
+  //   try {
+  //     const response = await httpRequest(`/api/v1/farm/farmland/userFarmlandList/${globalData.stolenId}`, {
+  //       method: "GET",
+  //     });
+  //     if (response.ok) {
+  //       this.blockList = response.data.data as IFarmland[];
+  //       this.updateBlock(farmlandId);
+  //     } else {
+  //       console.error("Request failed with status:", response.status);
+  //     }
+  //   } catch (error) {
+  //     console.error("Error:", error);
+  //   }
+  // }
+
   // 收获
   async harvestFarmland(farmlandId) {
     try {
-      const response = await httpRequest("/api/v1/farmland/harvest", {
+      const response = await httpRequest("/api/v1/farm/farmland/harvest", {
         method: "POST",
         body: {
           farmlandId,
@@ -200,10 +222,11 @@ export class GenBlock extends Component {
     }
   }
 
+  // 解锁土地
   async unLockBlock() {
     const dialog = Dialog.getInstance();
     try {
-      const response = await httpRequest("/api/v1/farmland/extend", {
+      const response = await httpRequest("/api/v1/farm/farmland/extend", {
         method: "POST",
       });
       if (response.ok) {
@@ -222,14 +245,39 @@ export class GenBlock extends Component {
 
     try {
       const response = await httpRequest(
-        `/api/v1/farmland/userFarmlandList/${globalData.stolenId}`,
+        `/api/v1/farm/farmland/userFarmlandList/${globalData.stolenId}`,
         {
           method: "GET",
         }
       );
       if (response.ok) {
         this.blockList = response.data.data as IFarmland[];
+        this.blockContainer = find("MainCanvas/Block/List");
+        this.blockContainer.removeAllChildren();
         this.createblockLayout(); // 在加载时调用布局创建方法
+      } else {
+        console.error("Request failed with status:", response.status);
+      }
+    } catch (error) {
+      console.error("Error:", error);
+    }
+  }
+
+  // 偷取
+  async stealFarmland(farmlandId, plantId) {
+    const globalData = GlobalData.getInstance();
+
+    try {
+      const response = await httpRequest("/api/v1/squad/steal", {
+        method: "POST",
+        body: {
+          farmlandId,
+          memberId: globalData.stolenId, // 被偷人的userId
+          plantId,
+        },
+      });
+      if (response.ok) {
+        // this.updateFarmLand(farmlandId);
       } else {
         console.error("Request failed with status:", response.status);
       }

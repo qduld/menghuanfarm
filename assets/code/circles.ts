@@ -12,11 +12,12 @@ import {
   EventTouch,
 } from "cc";
 import { httpRequest } from "./http";
-import { IMembersList, ISquadList } from "./interface";
+import { IMembersList, ISquadList, ISquadInfo } from "./interface";
 import { squadList } from "./loadData";
 import { GlobalData } from "./globalData";
 import { GenInfo } from "./genInfo";
 import { Dialog } from "./dialog";
+import { formatTimestampToDate } from "./utils";
 
 const { ccclass, property } = _decorator;
 @ccclass("circles")
@@ -35,6 +36,12 @@ export class circles extends Component {
 
   @property
   membersList: IMembersList[] = []; // 成员列表
+
+  @property
+  squadInfo: ISquadInfo; // 推荐列表
+
+  @property
+  USquadInfo: Node = null; // 队伍信息
 
   @property
   UMembers: Node = null; // 推荐列表
@@ -58,6 +65,7 @@ export class circles extends Component {
     this.USquadSection = find("Canvas/UnJoined/Content/Section");
     this.UMembersList = find("Canvas/Joined/Content/List");
     this.UMembersSection = find("Canvas/Joined/Content/Section");
+    this.USquadInfo = find("Canvas/Joined/Tips");
     this.checkSquadList();
   }
 
@@ -71,7 +79,7 @@ export class circles extends Component {
     const startX = this.USquadSection.position.x;
     const startY = this.USquadSection.position.y;
 
-    squadList.forEach((squad, index) => {
+    this.squadList.forEach((squad, index) => {
       const posY =
         startY - index * (sectionHeight + (this.squadSpacingY * 3) / 2);
 
@@ -160,7 +168,6 @@ export class circles extends Component {
   checkSquadList() {
     const globalData = GlobalData.getInstance();
 
-    debugger;
     this.UMembersList.removeAllChildren();
     if (globalData.userInfo.squadId === null) {
       this.UMembers.active = false;
@@ -170,7 +177,26 @@ export class circles extends Component {
       this.UMembers.active = true;
       this.USquad.active = false;
       this.requestMembersList();
+      this.requestSquadInfo();
     }
+  }
+
+  updateSquadInfo() {
+    this.USquadInfo.getChildByName("Name").getComponent(Label).string =
+      this.squadInfo.name;
+
+    this.USquadInfo.getChildByName("People")
+      .getChildByName("Label")
+      .getComponent(Label).string = this.squadInfo.memberCount + "";
+
+    this.USquadInfo.getChildByName("Money")
+      .getChildByName("Label")
+      .getComponent(Label).string = this.squadInfo.totalPoints + "";
+
+    this.USquadInfo.getChildByName("Timer")
+      .getChildByName("Label")
+      .getComponent(Label).string =
+      formatTimestampToDate(this.squadInfo.createdAt) + "";
   }
 
   // 推荐队伍
@@ -180,7 +206,8 @@ export class circles extends Component {
         method: "GET",
       });
       if (response.ok) {
-        this.squadList = response.data.data as ISquadList[];
+        this.squadList = response.data.data.list as ISquadList[];
+        this.USquadList.removeAllChildren();
         this.createSquadLayout();
       } else {
         console.error("Request failed with status:", response.status);
@@ -207,8 +234,34 @@ export class circles extends Component {
         }
       );
       if (response.ok) {
-        this.membersList = response.data.list as IMembersList[];
+        this.membersList = response.data.data.list as IMembersList[];
+        this.UMembersList.removeAllChildren();
         this.createMembersLayout();
+      } else {
+        console.error("Request failed with status:", response.status);
+      }
+    } catch (error) {
+      console.error("Error:", error);
+    }
+  }
+
+  // 获取队伍信息
+  async requestSquadInfo() {
+    const globalData = GlobalData.getInstance();
+
+    try {
+      const response = await httpRequest(
+        "/api/v1/squad/info",
+        {
+          method: "GET",
+        },
+        {
+          squadId: globalData.userInfo.squadId,
+        }
+      );
+      if (response.ok) {
+        this.squadInfo = response.data.data as ISquadInfo;
+        this.updateSquadInfo();
       } else {
         console.error("Request failed with status:", response.status);
       }
@@ -289,8 +342,12 @@ export class circles extends Component {
       if (response.ok) {
         const dialog = Dialog.getInstance();
 
-        this.requestSquadList();
         dialog.closeDialog(null, "CreateCircle");
+        const globalData = GlobalData.getInstance();
+        globalData.userInfo.squadId = event.currentTarget.squadId;
+        this.UMembers.active = true;
+        this.USquad.active = false;
+        this.requestMembersList();
       } else {
         console.error("Request failed with status:", response.status);
       }

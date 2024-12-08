@@ -18,6 +18,7 @@ export interface IFarmland {
   number: number;
   status: number;
   seed: ISeed;
+  plantId: string;
   farmStatus: number; // 0-未种植,1-种植中, 如果是种植中的话看seed.ttlSeconds
 }
 
@@ -88,6 +89,8 @@ export interface ILogin {
   tgUsername: string;
   pointsBalance: number;
   level: number;
+  createdAt: number;
+  lastLoginAt: number;
 }
 
 // /farm/u/userInfo 用户信息
@@ -143,6 +146,14 @@ export interface IMembersList {
    * 该用户今日收取数量=今日偷取数量+今日收取数量
    */
   totalCollectPoints: number;
+}
+
+export interface ISquadInfo {
+  id: number;
+  name: string;
+  createdAt: number;
+  totalPoints: number;
+  memberCount: number;
 }
 
 // /api/v1/skill/list 技能列表

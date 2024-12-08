@@ -1,4 +1,4 @@
-import { _decorator, Component, Graphics, Color } from "cc";
+import { _decorator, Component, Graphics, Color, UITransform } from "cc";
 const { ccclass, property } = _decorator;
 
 @ccclass("DrawRoundedRect")
@@ -35,6 +35,12 @@ export class DrawRoundedRect extends Component {
   @property
   offsetY: number = 0;
 
+  @property
+  padding: number = 0;
+
+  @property
+  alignLeft: boolean = false;
+
   onLoad() {
     // 获取当前节点的 Graphics 组件
     this.graphics = this.getComponent(Graphics);
@@ -48,8 +54,21 @@ export class DrawRoundedRect extends Component {
   drawRoundedRect() {
     if (!this.graphics) return;
 
-    this.startX = -this.rectWidth / 2 - this.borderWidth + this.offsetX;
-    this.startY = -this.rectHeight / 2 - this.borderWidth + this.offsetY;
+    if (!this.alignLeft) {
+      this.startX = -this.rectWidth / 2 - this.borderWidth + this.offsetX;
+      this.startY = -this.rectHeight / 2 - this.borderWidth + this.offsetY;
+    } else {
+      this.startX =
+        this.node.position.x +
+        (this.rectWidth - 2 * this.borderWidth - 2 * this.offsetX) / 2 -
+        this.borderWidth -
+        this.offsetX;
+      this.startY =
+        this.node.position.y -
+        this.rectHeight / 2 -
+        this.borderWidth +
+        this.offsetY / 2;
+    }
 
     // 设置填充颜色为白色
     this.graphics.fillColor = this.fillColor;
@@ -78,5 +97,15 @@ export class DrawRoundedRect extends Component {
       this.borderRadius
     );
     this.graphics.stroke();
+  }
+
+  reRender(width) {
+    this.rectWidth = width + 2 * this.offsetX + 2 * this.borderWidth;
+
+    if (this.graphics) {
+      this.graphics.clear();
+      // 调用自定义方法来绘制图形
+      this.drawRoundedRect();
+    }
   }
 }

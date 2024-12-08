@@ -1,6 +1,7 @@
 import { _decorator, Component, director } from "cc";
 import { GenBlock } from "./genBlock";
 import { GlobalData } from "./globalData";
+import { GenInfo } from "./genInfo";
 const { ccclass, property } = _decorator;
 
 @ccclass("SceneSwitcher")
@@ -33,7 +34,10 @@ export class SceneSwitcher extends Component {
         } else {
           console.log("Scene loaded:", this.sceneName);
           if (this.isStolen) {
+            const genInfo = GenInfo.getInstance();
             globalData.isStolenUISwitch();
+
+            genInfo.requestFriendInfo();
           }
           if (!this.isStolen && this.sceneName === "main") {
             globalData.isNotStolenUISwitch();

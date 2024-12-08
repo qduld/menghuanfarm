@@ -2,6 +2,7 @@ import { _decorator, Component, Node } from "cc";
 import { IFarmland } from "./interface";
 import { Dialog } from "./dialog";
 import { GenBlock } from "./genBlock";
+import { GlobalData } from "./globalData";
 const { ccclass } = _decorator;
 
 @ccclass("HoverEffect")
@@ -27,6 +28,8 @@ export class HoverEffect extends Component {
   }
 
   onMouseEnter() {
+    const globalData = GlobalData.getInstance();
+    if (globalData.isStolen) return;
     if (this.targetLevel === 3) {
       this.targetNode.getChildByName("Receivehand").active = true;
     } else {
@@ -35,14 +38,21 @@ export class HoverEffect extends Component {
   }
 
   onMouseLeave() {
+    const globalData = GlobalData.getInstance();
+    if (globalData.isStolen) return;
     this.targetNode.getChildByName("Receivehand").active = false;
   }
 
   onMouseDown() {
+    const globalData = GlobalData.getInstance();
     const genBlock = GenBlock.getInstance();
     const dialog = Dialog.getInstance();
     if (this.targetLevel === 3) {
-      genBlock.harvestFarmland(this.targetData.id);
+      if (globalData.isStolen) {
+        genBlock.stealFarmland(this.targetData.id, this.targetData.plantId);
+      } else {
+        genBlock.harvestFarmland(this.targetData.id);
+      }
     }
     if (dialog) {
       if (this.targetLevel === 0) {
@@ -59,11 +69,16 @@ export class HoverEffect extends Component {
   // }
 
   onTouchStart() {
+    const globalData = GlobalData.getInstance();
     const genBlock = GenBlock.getInstance();
     const dialog = Dialog.getInstance();
     if (this.targetLevel === 3) {
       this.targetNode.getChildByName("Receivehand").active = true;
-      genBlock.harvestFarmland(this.targetData.id);
+      if (globalData.isStolen) {
+        genBlock.stealFarmland(this.targetData.id, this.targetData.plantId);
+      } else {
+        genBlock.harvestFarmland(this.targetData.id);
+      }
     }
     if (dialog) {
       if (this.targetLevel === 0) {
@@ -74,6 +89,8 @@ export class HoverEffect extends Component {
   }
 
   onTouchEnd() {
+    const globalData = GlobalData.getInstance();
+    if (globalData.isStolen) return;
     this.targetNode.getChildByName("Receivehand").active = false;
   }
 

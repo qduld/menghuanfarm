@@ -1,8 +1,9 @@
-import { _decorator, Component, Node, find, Label } from "cc";
+import { _decorator, Component, Node, find, Label, UITransform } from "cc";
 import { blockList } from "./loadData";
 import { httpRequest } from "./http";
-import { IUserInfo, IUagg } from "./interface";
+import { ILogin, IUserInfo, IUagg } from "./interface";
 import { GlobalData } from "./globalData";
+import { DrawRoundedRect } from "./drawRoundedRect";
 const { ccclass, property } = _decorator;
 
 @ccclass("GenInfo")
@@ -28,6 +29,9 @@ export class GenInfo extends Component {
   @property
   uagg: IUagg; // 今日收益统计
 
+  @property
+  friendInfo: IUserInfo = null; // 朋友信息
+
   private static _instance: GenInfo;
 
   static getInstance(): GenInfo {
@@ -36,8 +40,7 @@ export class GenInfo extends Component {
 
   onLoad() {
     GenInfo._instance = this;
-    this.requestUAgg();
-    this.requestUserInfo();
+
     this.UUserName = find("MainCanvas/TopContent/Person/Name");
     this.UPointsBalance = find("MainCanvas/TopContent/Person/Money");
     this.UAddition = find("MainCanvas/TopContent/Person/Addition");
@@ -49,26 +52,49 @@ export class GenInfo extends Component {
     this.UBeStolen = find("MainCanvas/TopContent/Income/Mask/Section/BeStolen");
   }
 
+  init() {
+    if (GlobalData.getInstance().isStolen) {
+      return;
+    }
+    this.requestUAgg();
+    this.requestUserInfo();
+  }
+
   updateUserInfo() {
     const globalData = GlobalData.getInstance();
+
+    let userInfo = this.friendInfo ? this.friendInfo : globalData.userInfo;
+
     this.UUserName.getChildByName("Label").getComponent(Label).string =
-      globalData.userInfo.tgUsername;
+      userInfo.tgUsername;
+
+    // this.UUserName.getChildByName("Label")
+    //   .getComponent(Label)
+    //   .updateRenderData(true);
+    // const drawRoundedRect = this.UUserName.getChildByName(
+    //   "Border"
+    // ).getComponent("DrawRoundedRect") as DrawRoundedRect;
+    // drawRoundedRect.reRender(
+    //   this.UUserName.getChildByName("Label").getComponent(UITransform)
+    //     .contentSize.width
+    // );
     this.UPointsBalance.getChildByName("Label").getComponent(Label).string =
-      globalData.userInfo.pointsBalance + "";
+      userInfo.pointsBalance + "";
     this.UAddition.getChildByName("Label").getComponent(
       Label
-    ).string = `+${globalData.userInfo.radio}%`;
+    ).string = `+${userInfo.radio}%`;
   }
 
   // 获取用户信息
   async requestUserInfo() {
     try {
-      const response = await httpRequest("/farm/u/userInfo", {
+      const response = await httpRequest("/api/v1/farm/u/userInfo", {
         method: "GET",
       });
       if (response.ok) {
         const globalData = GlobalData.getInstance();
         globalData.userInfo = response.data.data as IUserInfo;
+        this.friendInfo = null;
         this.updateUserInfo();
       } else {
         console.error("Request failed with status:", response.status);
@@ -90,12 +116,33 @@ export class GenInfo extends Component {
   // 获取今日统计信息
   async requestUAgg() {
     try {
-      const response = await httpRequest("/farm/u/agg", {
+      const response = await httpRequest("/api/v1/farm/u/agg", {
         method: "GET",
       });
       if (response.ok) {
         this.uagg = response.data.data as IUagg;
         this.updateUAgg();
+      } else {
+        console.error("Request failed with status:", response.status);
+      }
+    } catch (error) {
+      console.error("Error:", error);
+    }
+  }
+
+  // 获取好有信息
+  async requestFriendInfo() {
+    const globalData = GlobalData.getInstance();
+    try {
+      const response = await httpRequest(
+        `/api/v1/farm/u/userInfo/${globalData.stolenId}`,
+        {
+          method: "GET",
+        }
+      );
+      if (response.ok) {
+        this.friendInfo = response.data.data as IUserInfo;
+        this.updateUserInfo();
       } else {
         console.error("Request failed with status:", response.status);
       }

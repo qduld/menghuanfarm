@@ -159,7 +159,7 @@ export class GenBag extends Component {
   // 播种
   async requestFarmLandPlant(farmlandId, seedId) {
     try {
-      const response = await httpRequest("/api/v1/farmland/plant", {
+      const response = await httpRequest("/api/v1/farm/farmland/plant", {
         method: "POST",
         body: {
           farmlandId,

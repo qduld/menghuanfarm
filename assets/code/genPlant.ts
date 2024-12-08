@@ -11,6 +11,7 @@ import {
 import { formatSeconds } from "./utils";
 import { GenBlock } from "./genBlock";
 import { HoverEffect } from "./hoverEffect";
+import { GlobalData } from "./globalData";
 
 const { ccclass, property } = _decorator;
 @ccclass("GenPlant")
@@ -127,6 +128,15 @@ export class GenPlant extends Component {
             spriteFrame;
         }
       );
+    }
+
+    const globalData = GlobalData.getInstance();
+    if (
+      globalData.isStolen &&
+      this.plantLevel === 3 &&
+      data.stealAvailable === 1
+    ) {
+      block.getChildByName("Receivehand").active;
     }
 
     if (!this.plantSpritePath) {
