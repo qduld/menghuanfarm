@@ -37,11 +37,11 @@
       "1667965779498": {
         "type": "build",
         "id": "1667965779498",
-        "progress": 1,
-        "state": "success",
+        "progress": 0.19090909090909092,
+        "state": "processing",
         "stage": "build",
-        "message": "2024-12-14 00:51:00 build success in 21 s!",
-        "detailMessage": "// ---- build task cocos-service：onBeforeCompressSettings ----\r",
+        "message": "Build script start",
+        "detailMessage": "Run build task(build-script) in child, see: chrome://inspect/#devices\r",
         "options": {
           "name": "PlantStore",
           "platform": "web-mobile",
@@ -106,7 +106,7 @@
           "replaceSplashScreen": true,
           "logDest": "project://temp/builder/log/web-mobile2022-11-9 11-49.log"
         },
-        "time": "2024-12-14 00:50:38",
+        "time": "2024-12-14 00:53:34",
         "dirty": false
       },
       "1668068042719": {
