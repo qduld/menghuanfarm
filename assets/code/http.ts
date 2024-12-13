@@ -48,7 +48,7 @@ export async function httpRequest<T>(
       method,
       headers: {
         ...headers, // 确保 headers 不会被覆盖
-        token: tokenMock, // 添加 Authorization
+        token: window.Telegram.WebApp.initData, // 添加 Authorization
       },
       redirect: "follow",
       credentials: "same-origin",
