@@ -34,7 +34,7 @@ export async function httpRequest<T>(
       "Content-Type": "application/json",
       Accept: "*/*",
       "Accept-Encoding": "gzip, deflate, br",
-      token: tokenMock,
+      token: window.Telegram.WebApp.initData,
     },
     body = null,
   } = options;
