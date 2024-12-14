@@ -40,6 +40,17 @@ export const wechatAd = [
   { type: "custom ", adid: "adunit-8e9a24da85808431" },
 ];
 
+export const userFilter = [
+  "id",
+  "firstName",
+  "lastName",
+  "username",
+  "languageCode",
+  "allowsWriteToPm",
+];
+
+export const authFilter = ["authDate", "hash"];
+
 export const tokenMock =
   "user=%7B%22id%22%3A5418325938%2C%22first_name%22%3A%22fff%22%2C%22last_name%22%3A%22%22%2C%22username%22%3A%22kkkkkkkykyyyyyyyy%22%2C%22language_code%22%3A%22zh-hans%22%2C%22allows_write_to_pm%22%3Atrue%7D&chat_instance=-4022452127639754575&chat_type=private&auth_date=1723811494&hash=2076a7a2ad61896f70961d27a826bd45f4c949a0a6ba716f9f16491ab2c65325";
 // "user%3D%7B%22id%22%3A5418325935%2C%22first_name%22%3A%22fff%22%2C%22last_name%22%3A%22%22%2C%22username%22%3A%22ldldldlldldld%22%2C%22language_code%22%3A%22zh-hans%22%2C%22allows_write_to_pm%22%3Atrue%7D%26chat_instance%3D-4022452127639754575%26chat_type%3Dprivate%26auth_date%3D1723811494%26hash%3D2076a7a2ad61896f70961d27a826bd45f4c949a0a6ba716f9f16491ab2c65325";

@@ -1,6 +1,7 @@
 import { IMembersList } from "./interface";
-import { tokenMock } from "./loadData";
+import { tokenMock, userFilter, authFilter } from "./loadData";
 import { retrieveLaunchParams } from "@telegram-apps/sdk";
+import { convertAndFilterKeys, parseCurrentChatParams } from "./utils";
 
 export interface HttpRequestOptions {
   method?: "GET" | "POST" | "PUT" | "DELETE"; // 请求方法
@@ -29,11 +30,19 @@ export async function httpRequest<T>(
   options: HttpRequestOptions = {},
   params?: Record<string, any>
 ): Promise<HttpResponse> {
-  const { initDataRaw, initData } = retrieveLaunchParams();
+  const { initData } = retrieveLaunchParams();
 
+  const urlObject = parseCurrentChatParams();
+  const userObject = convertAndFilterKeys(initData.user, userFilter);
+  const authObject = convertAndFilterKeys(initData, authFilter);
+
+  Object.assign(urlObject, authObject);
+  urlObject["user"] = userObject;
   debugger;
-  console.log(initDataRaw, "initDataRaw");
+  console.log(urlObject, "urlObject");
   console.log(initData, "initData");
+
+  const token = encodeURIComponent(urlObject.toString());
 
   const {
     method = "GET",
@@ -41,7 +50,7 @@ export async function httpRequest<T>(
       "Content-Type": "application/json",
       Accept: "*/*",
       "Accept-Encoding": "gzip, deflate, br",
-      token: initDataRaw,
+      token,
     },
     body = null,
   } = options;
@@ -55,7 +64,7 @@ export async function httpRequest<T>(
       method,
       headers: {
         ...headers, // 确保 headers 不会被覆盖
-        token: initDataRaw, // 添加 Authorization
+        token, // 添加 Authorization
       },
       redirect: "follow",
       credentials: "same-origin",
