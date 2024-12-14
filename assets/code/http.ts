@@ -42,7 +42,7 @@ export async function httpRequest<T>(
   console.log(urlObject, "urlObject");
   console.log(initData, "initData");
 
-  const token = encodeURIComponent(urlObject.toString());
+  const token = encodeURIComponent(JSON.stringify(urlObject));
 
   const {
     method = "GET",
