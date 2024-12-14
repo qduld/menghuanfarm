@@ -98,7 +98,9 @@ export function buildToken(data: Record<string, any>, order: string[]): string {
     .map((key) => {
       const value = data[key];
       // 过滤掉值为 undefined 或 null 的键值对
-      return value !== undefined && value !== null ? `${key}=${value}` : null;
+      return value !== undefined && value !== null
+        ? `${key}=${encodeURIComponent(String(value))}`
+        : null;
     })
     .filter((pair) => pair !== null) // 移除无效项
     .join("&");

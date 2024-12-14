@@ -44,7 +44,7 @@ export async function httpRequest<T>(
     const authObject = convertAndFilterKeys(initData, authFilter);
 
     Object.assign(urlObject, authObject);
-    urlObject["user"] = JSON.stringify(userObject);
+    urlObject["user"] = encodeURIComponent(JSON.stringify(userObject));
     console.log(urlObject, "urlObject");
     console.log(initData, "initData");
 
