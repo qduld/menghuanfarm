@@ -1,5 +1,6 @@
 import { IMembersList } from "./interface";
 import { tokenMock } from "./loadData";
+import { retrieveLaunchParams } from "@telegram-apps/sdk";
 
 export interface HttpRequestOptions {
   method?: "GET" | "POST" | "PUT" | "DELETE"; // 请求方法
@@ -28,13 +29,19 @@ export async function httpRequest<T>(
   options: HttpRequestOptions = {},
   params?: Record<string, any>
 ): Promise<HttpResponse> {
+  const { initDataRaw, initData } = retrieveLaunchParams();
+
+  debugger;
+  console.log(initDataRaw, "initDataRaw");
+  console.log(initData, "initData");
+
   const {
     method = "GET",
     headers = {
       "Content-Type": "application/json",
       Accept: "*/*",
       "Accept-Encoding": "gzip, deflate, br",
-      token: window.Telegram.WebApp.initData,
+      token: initDataRaw,
     },
     body = null,
   } = options;
@@ -48,7 +55,7 @@ export async function httpRequest<T>(
       method,
       headers: {
         ...headers, // 确保 headers 不会被覆盖
-        token: window.Telegram.WebApp.initData, // 添加 Authorization
+        token: initDataRaw, // 添加 Authorization
       },
       redirect: "follow",
       credentials: "same-origin",

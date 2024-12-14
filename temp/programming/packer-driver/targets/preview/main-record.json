@@ -409,7 +409,7 @@
       ]
     },
     "cce:/internal/x/prerequisite-imports": {
-      "mTimestamp": 83201820.7287,
+      "mTimestamp": 96097335.72399999,
       "chunkId": "6d8fd2b0177941b032ddc0733af48a561fb60657",
       "imports": [
         {
@@ -1882,13 +1882,30 @@
     },
     "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/http.ts": {
       "mTimestamp": {
-        "mtime": 1734180592229.1885,
+        "mtime": 1734193440023.2832,
         "uuid": "c04de095-1da8-424a-8757-d86c10b4d537"
       },
       "chunkId": "d4b8c1b1aa284d2ff86f93e4a2e0f36c05147c62",
       "imports": [
         {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
           "value": "cc"
+        },
+        {
+          "value": "@telegram-apps/sdk",
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 37
+            },
+            "end": {
+              "line": 3,
+              "column": 57
+            }
+          }
         }
       ],
       "type": "esm",
@@ -1896,7 +1913,21 @@
         {
           "resolved": {
             "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
             "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/node_modules/@telegram-apps/sdk/dist/index.js"
           },
           "messages": []
         }
@@ -4128,7 +4159,7 @@
     },
     "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/telegram.ts": {
       "mTimestamp": {
-        "mtime": 1734104426561.508,
+        "mtime": 1734193486042.5037,
         "uuid": "502c4070-4389-4d87-a0e1-ed5bffec4a38"
       },
       "chunkId": "cf77faa9caed81de9250efed8a713f02b13abafb",
@@ -9769,6 +9800,13 @@
           "messages": []
         }
       ]
+    },
+    "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/node_modules/@telegram-apps/sdk/dist/index.js": {
+      "mTimestamp": 1732517384986.0586,
+      "chunkId": "9c2384103ed7453c4a01015ad2c1545120f8cf98",
+      "imports": [],
+      "type": "esm",
+      "resolutions": []
     }
   }
 }

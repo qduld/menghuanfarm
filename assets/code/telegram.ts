@@ -7,7 +7,7 @@ export class Telegram extends Component {
   tgInitData: Object = null;
 
   protected start(): void {
-    this.initTelegram();
+    // this.initTelegram();
   }
 
   loadTelegramSDK() {
