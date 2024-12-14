@@ -42,6 +42,9 @@ export async function httpRequest<T>(
     const urlObject = parseCurrentChatParams();
     const userObject = convertAndFilterKeys(initData.user, userFilter);
     const authObject = convertAndFilterKeys(initData, authFilter);
+    authObject.auth_date = Math.floor(
+      new Date(authObject.auth_date).getTime() / 1000
+    );
 
     Object.assign(urlObject, authObject);
     urlObject["user"] = JSON.stringify(userObject);
