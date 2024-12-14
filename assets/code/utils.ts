@@ -85,3 +85,21 @@ export function parseCurrentChatParams(): {
 
   return result;
 }
+
+/**
+ * 根据指定的顺序，将对象的键值对拼接成 `&` 符号连接的字符串。
+ *
+ * @param data 包含所有属性的对象
+ * @param order 指定拼接顺序的键数组
+ * @returns 拼接后的字符串
+ */
+export function buildToken(data: Record<string, any>, order: string[]): string {
+  return order
+    .map((key) => {
+      const value = data[key];
+      // 过滤掉值为 undefined 或 null 的键值对
+      return value !== undefined && value !== null ? `${key}=${value}` : null;
+    })
+    .filter((pair) => pair !== null) // 移除无效项
+    .join("&");
+}
