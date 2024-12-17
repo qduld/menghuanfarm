@@ -40,8 +40,8 @@
         "progress": 1,
         "state": "success",
         "stage": "build",
-        "message": "2024-12-17 22:47:35 build success in 26 s!",
-        "detailMessage": "// ---- build task web-mobile：onBeforeCompressSettings ----\r",
+        "message": "2024-12-17 22:52:32 build success in 31 s!",
+        "detailMessage": "web-mobile:(onBeforeCopyBuildTemplate) in 61 ms ✓, progress: 46%\r",
         "options": {
           "name": "PlantStore",
           "platform": "web-mobile",
@@ -106,7 +106,7 @@
           "replaceSplashScreen": true,
           "logDest": "project://temp/builder/log/web-mobile2022-11-9 11-49.log"
         },
-        "time": "2024-12-17 22:47:08",
+        "time": "2024-12-17 22:52:01",
         "dirty": false
       },
       "1668068042719": {

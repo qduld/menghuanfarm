@@ -54,7 +54,7 @@ export async function httpRequest<T>(
     console.log(initDataRaw, "initDataRaw");
 
     // token = buildToken(urlObject, tokenSort);
-    token = objectToUrlParams(initData);
+    token = initDataRaw;
   }
 
   const {
