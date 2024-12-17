@@ -38,7 +38,7 @@ export async function httpRequest<T>(
   params?: Record<string, any>
 ): Promise<HttpResponse> {
   if (!token) {
-    const { initData } = retrieveLaunchParams();
+    const { initData, initDataRaw } = retrieveLaunchParams();
 
     // const urlObject = parseCurrentChatParams();
     // const userObject = convertAndFilterKeys(initData.user, userFilter);
@@ -51,6 +51,7 @@ export async function httpRequest<T>(
     // urlObject["user"] = JSON.stringify(userObject);
     // console.log(urlObject, "urlObject");
     console.log(initData, "initData");
+    console.log(initData, "initDataRaw");
 
     // token = buildToken(urlObject, tokenSort);
     token = objectToUrlParams(initData);
