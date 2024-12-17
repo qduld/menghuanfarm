@@ -105,3 +105,22 @@ export function buildToken(data: Record<string, any>, order: string[]): string {
     .filter((pair) => pair !== null) // 移除无效项
     .join("&");
 }
+
+export function objectToUrlParams(obj: Record<string, any>): string {
+  return Object.keys(obj)
+    .map((key) => {
+      let value = obj[key];
+
+      // 判断值是否为对象（且不为 null）
+      if (typeof value === "object" && value !== null) {
+        value = JSON.stringify(value);
+      }
+
+      // 将键和值进行 URL 编码
+      const encodedKey = encodeURIComponent(key);
+      const encodedValue = encodeURIComponent(value);
+
+      return `${encodedKey}=${encodedValue}`;
+    })
+    .join("&");
+}

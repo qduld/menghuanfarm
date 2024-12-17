@@ -409,7 +409,7 @@
       ]
     },
     "cce:/internal/x/prerequisite-imports": {
-      "mTimestamp": 1404796.2035000026,
+      "mTimestamp": 3964121.9603999853,
       "chunkId": "6d8fd2b0177941b032ddc0733af48a561fb60657",
       "imports": [
         {
@@ -1882,7 +1882,7 @@
     },
     "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/http.ts": {
       "mTimestamp": {
-        "mtime": 1734439637448.6284,
+        "mtime": 1734442203522.686,
         "uuid": "c04de095-1da8-424a-8757-d86c10b4d537"
       },
       "chunkId": "d4b8c1b1aa284d2ff86f93e4a2e0f36c05147c62",
@@ -1893,20 +1893,6 @@
         },
         {
           "value": "cc"
-        },
-        {
-          "value": "./loadData",
-          "resolved": "__unresolved_1",
-          "loc": {
-            "start": {
-              "line": 2,
-              "column": 61
-            },
-            "end": {
-              "line": 2,
-              "column": 73
-            }
-          }
         },
         {
           "value": "@telegram-apps/sdk",
@@ -1923,14 +1909,14 @@
         },
         {
           "value": "./utils",
-          "resolved": "__unresolved_2",
+          "resolved": "__unresolved_1",
           "loc": {
             "start": {
-              "line": 8,
+              "line": 9,
               "column": 7
             },
             "end": {
-              "line": 8,
+              "line": 9,
               "column": 16
             }
           }
@@ -1949,13 +1935,6 @@
           "resolved": {
             "type": "module",
             "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/loadData.ts"
           },
           "messages": []
         },
@@ -2250,7 +2229,7 @@
     },
     "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/utils.ts": {
       "mTimestamp": {
-        "mtime": 1734200147898.5322,
+        "mtime": 1734442183095.9756,
         "uuid": "42490016-f946-4498-b2c9-311728ec4a72"
       },
       "chunkId": "3067adcf266071080dc310bb6cb6ccc8701f248f",

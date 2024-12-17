@@ -5,6 +5,7 @@ import {
   buildToken,
   convertAndFilterKeys,
   parseCurrentChatParams,
+  objectToUrlParams,
 } from "./utils";
 
 export interface HttpRequestOptions {
@@ -39,19 +40,20 @@ export async function httpRequest<T>(
   if (!token) {
     const { initData } = retrieveLaunchParams();
 
-    const urlObject = parseCurrentChatParams();
-    const userObject = convertAndFilterKeys(initData.user, userFilter);
-    const authObject = convertAndFilterKeys(initData, authFilter);
-    authObject.auth_date = Math.floor(
-      new Date(authObject.auth_date).getTime() / 1000
-    );
+    // const urlObject = parseCurrentChatParams();
+    // const userObject = convertAndFilterKeys(initData.user, userFilter);
+    // const authObject = convertAndFilterKeys(initData, authFilter);
+    // authObject.auth_date = Math.floor(
+    //   new Date(authObject.auth_date).getTime() / 1000
+    // );
 
-    Object.assign(urlObject, authObject);
-    urlObject["user"] = JSON.stringify(userObject);
-    console.log(urlObject, "urlObject");
+    // Object.assign(urlObject, authObject);
+    // urlObject["user"] = JSON.stringify(userObject);
+    // console.log(urlObject, "urlObject");
     console.log(initData, "initData");
 
-    token = buildToken(urlObject, tokenSort);
+    // token = buildToken(urlObject, tokenSort);
+    token = objectToUrlParams(initData);
   }
 
   const {
