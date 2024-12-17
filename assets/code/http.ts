@@ -36,23 +36,23 @@ export async function httpRequest<T>(
   options: HttpRequestOptions = {},
   params?: Record<string, any>
 ): Promise<HttpResponse> {
-  // if (!token) {
-  //   const { initData } = retrieveLaunchParams();
+  if (!token) {
+    const { initData } = retrieveLaunchParams();
 
-  //   const urlObject = parseCurrentChatParams();
-  //   const userObject = convertAndFilterKeys(initData.user, userFilter);
-  //   const authObject = convertAndFilterKeys(initData, authFilter);
-  //   authObject.auth_date = Math.floor(
-  //     new Date(authObject.auth_date).getTime() / 1000
-  //   );
+    const urlObject = parseCurrentChatParams();
+    const userObject = convertAndFilterKeys(initData.user, userFilter);
+    const authObject = convertAndFilterKeys(initData, authFilter);
+    authObject.auth_date = Math.floor(
+      new Date(authObject.auth_date).getTime() / 1000
+    );
 
-  //   Object.assign(urlObject, authObject);
-  //   urlObject["user"] = JSON.stringify(userObject);
-  //   console.log(urlObject, "urlObject");
-  //   console.log(initData, "initData");
+    Object.assign(urlObject, authObject);
+    urlObject["user"] = JSON.stringify(userObject);
+    console.log(urlObject, "urlObject");
+    console.log(initData, "initData");
 
-  //   token = buildToken(urlObject, tokenSort);
-  // }
+    token = buildToken(urlObject, tokenSort);
+  }
 
   const {
     method = "GET",
@@ -60,7 +60,7 @@ export async function httpRequest<T>(
       "Content-Type": "application/json",
       Accept: "*/*",
       "Accept-Encoding": "gzip, deflate, br",
-      token: tokenMock,
+      token,
     },
     body = null,
   } = options;
@@ -74,7 +74,7 @@ export async function httpRequest<T>(
       method,
       headers: {
         ...headers, // 确保 headers 不会被覆盖
-        token: tokenMock, // 添加 Authorization
+        token, // 添加 Authorization
       },
       redirect: "follow",
       credentials: "same-origin",
