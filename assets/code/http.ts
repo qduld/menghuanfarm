@@ -51,7 +51,7 @@ export async function httpRequest<T>(
     // urlObject["user"] = JSON.stringify(userObject);
     // console.log(urlObject, "urlObject");
     console.log(initData, "initData");
-    console.log(initData, "initDataRaw");
+    console.log(initDataRaw, "initDataRaw");
 
     // token = buildToken(urlObject, tokenSort);
     token = objectToUrlParams(initData);
