@@ -103,6 +103,7 @@ export interface IUserInfo {
   squadId: number; // 组织ID
   level: number; // 等级
   radio: number; // 加成
+  avatar: string;
 }
 
 // /farm/u/agg 我今日的收益统计

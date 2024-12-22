@@ -13,22 +13,23 @@
     "replaceSplashScreen": true,
     "scenes": [
       {
-        "url": "db://assets/game/scene/circles.scene",
-        "uuid": "3909eff4-33d0-491b-8f52-ccf0d8cd9f76",
-        "bundle": "db://assets/game"
+        "url": "db://assets/scene/circles.scene",
+        "uuid": "3909eff4-33d0-491b-8f52-ccf0d8cd9f76"
       },
       {
-        "url": "db://assets/game/scene/harvest.scene",
-        "uuid": "817d097a-2e5d-438b-bbd5-f5b7e22be5ae",
-        "bundle": "db://assets/game"
+        "url": "db://assets/scene/harvest.scene",
+        "uuid": "817d097a-2e5d-438b-bbd5-f5b7e22be5ae"
       },
       {
-        "url": "db://assets/game/scene/main.scene",
-        "uuid": "5a6f4efe-edd1-4c9d-adc3-c28f8d58012d",
-        "bundle": "db://assets/game"
+        "url": "db://assets/scene/main.scene",
+        "uuid": "5a6f4efe-edd1-4c9d-adc3-c28f8d58012d"
+      },
+      {
+        "url": "db://assets/scene/load.scene",
+        "uuid": "cf4dc34b-8c49-4fc8-b329-7c0faa4a4a85"
       }
     ],
-    "startScene": "5a6f4efe-edd1-4c9d-adc3-c28f8d58012d",
+    "startScene": "cf4dc34b-8c49-4fc8-b329-7c0faa4a4a85",
     "mainBundleIsRemote": false,
     "skipCompressTexture": true
   },
@@ -40,8 +41,8 @@
         "progress": 1,
         "state": "success",
         "stage": "build",
-        "message": "2024-12-17 22:52:32 build success in 31 s!",
-        "detailMessage": "web-mobile:(onBeforeCopyBuildTemplate) in 61 ms ✓, progress: 46%\r",
+        "message": "2024-12-22 21:13:20 build success in 25 s!",
+        "detailMessage": "// ---- build task cocos-service：onBeforeCompressSettings ----\r",
         "options": {
           "name": "PlantStore",
           "platform": "web-mobile",
@@ -58,7 +59,7 @@
           "useBuiltinServer": false,
           "mainBundleIsRemote": false,
           "mainBundleCompressionType": "none",
-          "startScene": "5a6f4efe-edd1-4c9d-adc3-c28f8d58012d",
+          "startScene": "cf4dc34b-8c49-4fc8-b329-7c0faa4a4a85",
           "outputName": "web-mobile",
           "scenes": [
             {
@@ -72,6 +73,10 @@
             {
               "url": "db://assets/scene/main.scene",
               "uuid": "5a6f4efe-edd1-4c9d-adc3-c28f8d58012d"
+            },
+            {
+              "url": "db://assets/scene/load.scene",
+              "uuid": "cf4dc34b-8c49-4fc8-b329-7c0faa4a4a85"
             }
           ],
           "windows": [],
@@ -106,7 +111,7 @@
           "replaceSplashScreen": true,
           "logDest": "project://temp/builder/log/web-mobile2022-11-9 11-49.log"
         },
-        "time": "2024-12-17 22:52:01",
+        "time": "2024-12-22 21:12:55",
         "dirty": false
       },
       "1668068042719": {

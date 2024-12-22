@@ -136,9 +136,13 @@ export class GenPlant extends Component {
       this.plantLevel === 3 &&
       data.stealAvailable === 1
     ) {
-      block.getChildByName("Receivehand").active;
+      block.getChildByName("Plant").getChildByName("Receivehand").active = true;
     }
 
+    if (globalData.isStolen && data.stealAvailable === 0) {
+      block.getChildByName("Plant").getChildByName("Receivehand").active =
+        false;
+    }
     if (!this.plantSpritePath) {
       const genBlock = GenBlock.getInstance();
       genBlock.updateFarmLand(data.id); // 重新请求farmlandList
@@ -181,8 +185,14 @@ export class GenPlant extends Component {
           }
         }
 
-        const hoverEffect = this.plantSprite.addComponent(HoverEffect);
-        hoverEffect.setTargetNode(this.plantSprite, data, this.plantLevel);
+        if (!this.plantSprite.getComponent(HoverEffect)) {
+          const hoverEffect = this.plantSprite.addComponent(HoverEffect);
+          hoverEffect.setTargetNode(this.plantSprite, data, this.plantLevel);
+        } else {
+          this.plantSprite
+            .getComponent(HoverEffect)
+            .setTargetNode(this.plantSprite, data, this.plantLevel);
+        }
       }
     );
   }
@@ -193,10 +203,10 @@ export class GenPlant extends Component {
     let label = landNode.getChildByName("Content").getComponent(Label);
     landNode.active = true;
 
-    if (!label["hasSchedule"]) {
+    if (!landNode["hasSchedule"]) {
       // 定时器
-      this.schedule(() => {
-        label["hasSchedule"] = true;
+      const timeCallBack = () => {
+        landNode["hasSchedule"] = true;
         if (remainingTime > 0) {
           // 设置标志位，防止重复创建定时器
           remainingTime = remainingTime - 1000;
@@ -204,10 +214,12 @@ export class GenPlant extends Component {
         } else {
           label.string = "";
           // 停止定时器
-          this.unschedule(this.updateCountdown(landNode));
+          this.unschedule(timeCallBack);
+          this.updateCountdown(landNode);
         }
         this.updatePlantStatus(block, data);
-      }, 1);
+      };
+      this.schedule(timeCallBack, 1);
     }
   }
 

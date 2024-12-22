@@ -1,7 +1,7 @@
 {
   "modules": {
     "cce:/internal/x/cc": {
-      "mTimestamp": 18935.68560001254,
+      "mTimestamp": 20150.305700063705,
       "chunkId": "93ba276ea7b26ffcdc433fab14afc1ed6f05647b",
       "imports": [
         {
@@ -703,7 +703,7 @@
       ]
     },
     "cce:/internal/x/prerequisite-imports": {
-      "mTimestamp": 8873217.378499985,
+      "mTimestamp": 50305842.34280002,
       "chunkId": "6d8fd2b0177941b032ddc0733af48a561fb60657",
       "imports": [
         {
@@ -1071,7 +1071,7 @@
           }
         },
         {
-          "value": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/main.ts",
+          "value": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/loadingScreen%20.ts",
           "resolved": "__unresolved_26",
           "loc": {
             "start": {
@@ -1080,59 +1080,59 @@
             },
             "end": {
               "line": 5,
-              "column": 2754
+              "column": 2766
+            }
+          }
+        },
+        {
+          "value": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/main.ts",
+          "resolved": "__unresolved_27",
+          "loc": {
+            "start": {
+              "line": 5,
+              "column": 2782
+            },
+            "end": {
+              "line": 5,
+              "column": 2853
             }
           }
         },
         {
           "value": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/overlayMask.ts",
-          "resolved": "__unresolved_27",
+          "resolved": "__unresolved_28",
           "loc": {
             "start": {
               "line": 5,
-              "column": 2770
+              "column": 2869
             },
             "end": {
               "line": 5,
-              "column": 2848
+              "column": 2947
             }
           }
         },
         {
           "value": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/popupStop.ts",
-          "resolved": "__unresolved_28",
-          "loc": {
-            "start": {
-              "line": 5,
-              "column": 2864
-            },
-            "end": {
-              "line": 5,
-              "column": 2940
-            }
-          }
-        },
-        {
-          "value": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/scaleAction.ts",
           "resolved": "__unresolved_29",
           "loc": {
             "start": {
               "line": 5,
-              "column": 2956
+              "column": 2963
             },
             "end": {
               "line": 5,
-              "column": 3034
+              "column": 3039
             }
           }
         },
         {
-          "value": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/sceneSwitcher.ts",
+          "value": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/roundBox.ts",
           "resolved": "__unresolved_30",
           "loc": {
             "start": {
               "line": 5,
-              "column": 3050
+              "column": 3055
             },
             "end": {
               "line": 5,
@@ -1141,7 +1141,7 @@
           }
         },
         {
-          "value": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/seedEffect.ts",
+          "value": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/scaleAction.ts",
           "resolved": "__unresolved_31",
           "loc": {
             "start": {
@@ -1150,31 +1150,31 @@
             },
             "end": {
               "line": 5,
-              "column": 3223
+              "column": 3224
             }
           }
         },
         {
-          "value": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/showTelegramInfo.ts",
+          "value": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/sceneSwitcher.ts",
           "resolved": "__unresolved_32",
           "loc": {
             "start": {
               "line": 5,
-              "column": 3239
+              "column": 3240
             },
             "end": {
               "line": 5,
-              "column": 3322
+              "column": 3320
             }
           }
         },
         {
-          "value": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/telegram.ts",
+          "value": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/seedEffect.ts",
           "resolved": "__unresolved_33",
           "loc": {
             "start": {
               "line": 5,
-              "column": 3338
+              "column": 3336
             },
             "end": {
               "line": 5,
@@ -1183,7 +1183,7 @@
           }
         },
         {
-          "value": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/timer.ts",
+          "value": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/showTelegramInfo.ts",
           "resolved": "__unresolved_34",
           "loc": {
             "start": {
@@ -1192,35 +1192,49 @@
             },
             "end": {
               "line": 5,
-              "column": 3501
+              "column": 3512
             }
           }
         },
         {
-          "value": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/userAvatar.ts",
+          "value": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/telegram.ts",
           "resolved": "__unresolved_35",
           "loc": {
             "start": {
               "line": 5,
-              "column": 3517
+              "column": 3528
             },
             "end": {
               "line": 5,
-              "column": 3594
+              "column": 3603
+            }
+          }
+        },
+        {
+          "value": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/timer.ts",
+          "resolved": "__unresolved_36",
+          "loc": {
+            "start": {
+              "line": 5,
+              "column": 3619
+            },
+            "end": {
+              "line": 5,
+              "column": 3691
             }
           }
         },
         {
           "value": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/utils.ts",
-          "resolved": "__unresolved_36",
+          "resolved": "__unresolved_37",
           "loc": {
             "start": {
               "line": 5,
-              "column": 3610
+              "column": 3707
             },
             "end": {
               "line": 5,
-              "column": 3682
+              "column": 3779
             }
           }
         }
@@ -1412,6 +1426,13 @@
         {
           "resolved": {
             "type": "module",
+            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/loadingScreen%20.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
             "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/main.ts"
           },
           "messages": []
@@ -1427,6 +1448,13 @@
           "resolved": {
             "type": "module",
             "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/popupStop.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/roundBox.ts"
           },
           "messages": []
         },
@@ -1469,13 +1497,6 @@
           "resolved": {
             "type": "module",
             "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/timer.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/userAvatar.ts"
           },
           "messages": []
         },
@@ -1593,7 +1614,7 @@
       ]
     },
     "cce:/internal/code-quality/cr.mjs": {
-      "mTimestamp": 1734438245209,
+      "mTimestamp": 1734822777283,
       "chunkId": "6a5019a719a9014c047e67aa1cf34453ab8392ce",
       "imports": [],
       "type": "esm",
@@ -2049,7 +2070,7 @@
     },
     "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/loadData.ts": {
       "mTimestamp": {
-        "mtime": 1734198213176.8423,
+        "mtime": 1734858071875.674,
         "uuid": "23eafa10-d97f-4874-812a-16c12e0efced"
       },
       "chunkId": "ee3ea0dbc7200eb3f105c40cf8623b70665adc41",
@@ -2176,7 +2197,7 @@
     },
     "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/http.ts": {
       "mTimestamp": {
-        "mtime": 1734447108741.2898,
+        "mtime": 1734873065846.9229,
         "uuid": "c04de095-1da8-424a-8757-d86c10b4d537"
       },
       "chunkId": "d4b8c1b1aa284d2ff86f93e4a2e0f36c05147c62",
@@ -2189,15 +2210,16 @@
           "value": "cc"
         },
         {
-          "value": "@telegram-apps/sdk",
+          "value": "./loadData",
+          "resolved": "__unresolved_1",
           "loc": {
             "start": {
-              "line": 3,
-              "column": 37
+              "line": 1,
+              "column": 61
             },
             "end": {
-              "line": 3,
-              "column": 57
+              "line": 1,
+              "column": 73
             }
           }
         }
@@ -2221,7 +2243,7 @@
         {
           "resolved": {
             "type": "module",
-            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/node_modules/@telegram-apps/sdk/dist/index.js"
+            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/loadData.ts"
           },
           "messages": []
         }
@@ -2629,7 +2651,7 @@
     },
     "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/genBlock.ts": {
       "mTimestamp": {
-        "mtime": 1733588462642.6526,
+        "mtime": 1734858330810.9958,
         "uuid": "d531bfae-33e5-4dc0-b5e6-ece4850922b3"
       },
       "chunkId": "31e7ed6474cbe1cffb111624e6d74d2c31107af8",
@@ -2712,6 +2734,20 @@
               "column": 41
             }
           }
+        },
+        {
+          "value": "./loadData",
+          "resolved": "__unresolved_5",
+          "loc": {
+            "start": {
+              "line": 17,
+              "column": 21
+            },
+            "end": {
+              "line": 17,
+              "column": 33
+            }
+          }
         }
       ],
       "type": "esm",
@@ -2771,12 +2807,19 @@
             "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/globalData.ts"
           },
           "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/loadData.ts"
+          },
+          "messages": []
         }
       ]
     },
     "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/genPlant.ts": {
       "mTimestamp": {
-        "mtime": 1733643733147.7368,
+        "mtime": 1734860622994.692,
         "uuid": "8d18ba6e-e9c9-4311-a9db-07bead0944c5"
       },
       "chunkId": "9605a97d089b2628900488d171c8dfe7ab5d50d2",
@@ -2923,7 +2966,7 @@
     },
     "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/hoverEffect.ts": {
       "mTimestamp": {
-        "mtime": 1733643840994.7783,
+        "mtime": 1734870376596.6453,
         "uuid": "432312c1-b102-4b8c-b139-67814fe54660"
       },
       "chunkId": "19b5673c3aafde7569db693719b3e8991b1b7799",
@@ -2942,12 +2985,12 @@
           "value": "cc",
           "loc": {
             "start": {
-              "line": 1,
-              "column": 44
+              "line": 16,
+              "column": 7
             },
             "end": {
-              "line": 1,
-              "column": 48
+              "line": 16,
+              "column": 11
             }
           }
         },
@@ -2956,11 +2999,11 @@
           "resolved": "__unresolved_1",
           "loc": {
             "start": {
-              "line": 3,
+              "line": 18,
               "column": 23
             },
             "end": {
-              "line": 3,
+              "line": 18,
               "column": 33
             }
           }
@@ -2970,11 +3013,11 @@
           "resolved": "__unresolved_2",
           "loc": {
             "start": {
-              "line": 4,
+              "line": 19,
               "column": 25
             },
             "end": {
-              "line": 4,
+              "line": 19,
               "column": 37
             }
           }
@@ -2984,11 +3027,11 @@
           "resolved": "__unresolved_3",
           "loc": {
             "start": {
-              "line": 5,
+              "line": 20,
               "column": 27
             },
             "end": {
-              "line": 5,
+              "line": 20,
               "column": 41
             }
           }
@@ -3049,7 +3092,7 @@
     },
     "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/globalData.ts": {
       "mTimestamp": {
-        "mtime": 1733644945539.9265,
+        "mtime": 1734857978084.8242,
         "uuid": "1c5b2c5c-a657-4333-8263-69bcb5598009"
       },
       "chunkId": "43f177ad9a9921bd39b4948770e066f0d80dd338",
@@ -3069,11 +3112,11 @@
           "loc": {
             "start": {
               "line": 2,
-              "column": 33
+              "column": 57
             },
             "end": {
               "line": 2,
-              "column": 37
+              "column": 61
             }
           }
         }
@@ -3511,7 +3554,7 @@
     },
     "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/genInfo.ts": {
       "mTimestamp": {
-        "mtime": 1733659057863.9592,
+        "mtime": 1734869019698.0916,
         "uuid": "c70a354b-405a-4822-ba2c-80ebb2b23689"
       },
       "chunkId": "be114289548d765cd353a7186c65bcfd0c754583",
@@ -3530,12 +3573,12 @@
           "value": "cc",
           "loc": {
             "start": {
-              "line": 1,
-              "column": 70
+              "line": 13,
+              "column": 7
             },
             "end": {
-              "line": 1,
-              "column": 74
+              "line": 13,
+              "column": 11
             }
           }
         },
@@ -3544,12 +3587,12 @@
           "resolved": "__unresolved_1",
           "loc": {
             "start": {
-              "line": 3,
-              "column": 28
+              "line": 15,
+              "column": 38
             },
             "end": {
-              "line": 3,
-              "column": 36
+              "line": 15,
+              "column": 46
             }
           }
         },
@@ -3558,12 +3601,26 @@
           "resolved": "__unresolved_2",
           "loc": {
             "start": {
-              "line": 5,
+              "line": 17,
               "column": 27
             },
             "end": {
-              "line": 5,
+              "line": 17,
               "column": 41
+            }
+          }
+        },
+        {
+          "value": "./roundBox",
+          "resolved": "__unresolved_3",
+          "loc": {
+            "start": {
+              "line": 19,
+              "column": 25
+            },
+            "end": {
+              "line": 19,
+              "column": 37
             }
           }
         }
@@ -3609,6 +3666,13 @@
           "resolved": {
             "type": "module",
             "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/globalData.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/roundBox.ts"
           },
           "messages": []
         }
@@ -3720,7 +3784,7 @@
     },
     "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/drawer.ts": {
       "mTimestamp": {
-        "mtime": 1731699552432.1113,
+        "mtime": 1734870510635.8967,
         "uuid": "01adda21-79b2-4087-b26f-faf8121ef141"
       },
       "chunkId": "a45f52380a4f0be47f565a030185a10aabf93931",
@@ -3898,7 +3962,7 @@
     },
     "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/interface.ts": {
       "mTimestamp": {
-        "mtime": 1733588336965.1318,
+        "mtime": 1734868851338.4685,
         "uuid": "42547275-7807-4c87-ac42-2e0e126017f0"
       },
       "chunkId": "a8246498167457cd9c5fce32b9ac3707b1f543c2",
@@ -3918,12 +3982,12 @@
         }
       ]
     },
-    "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/login.ts": {
+    "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/loadingScreen%20.ts": {
       "mTimestamp": {
-        "mtime": 1731161602038.456,
-        "uuid": "bbf92da1-2d0f-4324-910f-727fd60ea76f"
+        "mtime": 1734765842366.803,
+        "uuid": "0f0f90d1-0fb3-495a-876f-a171aa6f9e50"
       },
-      "chunkId": "7aa3b1d4f0091e5d1e71e9328b41d65ba4050ea4",
+      "chunkId": "6ce126232d2a36f939303707713ab3bdec896617",
       "imports": [
         {
           "value": "cc"
@@ -3935,12 +3999,12 @@
           "value": "cc",
           "loc": {
             "start": {
-              "line": 8,
-              "column": 7
+              "line": 2,
+              "column": 68
             },
             "end": {
-              "line": 8,
-              "column": 11
+              "line": 2,
+              "column": 72
             }
           }
         }
@@ -4639,2165 +4703,29 @@
         }
       ]
     },
-    "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/code/adaptiveCanvas.ts": {
-      "mTimestamp": {
-        "mtime": 1730311021303.9243,
-        "uuid": "e093eac2-6e56-49d5-8fa9-d3b5adf7be12"
-      },
-      "chunkId": "cf1acd6ccb772eea71047adf0db6aaf332d7c37a",
+    "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/node_modules/canvg/dist/index.js": {
+      "mTimestamp": 1734772039163.4792,
+      "chunkId": "773706e33797eb89b40ed7b034fbd74c2f1e279c",
       "imports": [
         {
-          "value": "cc"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc",
+          "value": "raf",
           "loc": {
             "start": {
               "line": 1,
-              "column": 54
+              "column": 34
             },
             "end": {
               "line": 1,
-              "column": 58
-            }
-          }
-        }
-      ],
-      "type": "esm",
-      "resolutions": [
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        }
-      ]
-    },
-    "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/code/audioManager.ts": {
-      "mTimestamp": {
-        "mtime": 1730307847626.9062,
-        "uuid": "e84ac9e3-97d5-41ef-bdc6-5fb9d5888b74"
-      },
-      "chunkId": "b331d29a8b4dd82365a8866fceef65a33d3b4c8f",
-      "imports": [
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc",
-          "loc": {
-            "start": {
-              "line": 1,
-              "column": 66
-            },
-            "end": {
-              "line": 1,
-              "column": 70
-            }
-          }
-        }
-      ],
-      "type": "esm",
-      "resolutions": [
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        }
-      ]
-    },
-    "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/code/autoScaleImage.ts": {
-      "mTimestamp": {
-        "mtime": 1730308442342.6318,
-        "uuid": "6c05f0c4-81ee-4948-8738-aba60013153a"
-      },
-      "chunkId": "a7b5b8a982857f12854358f855b190c7883287ca",
-      "imports": [
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc",
-          "loc": {
-            "start": {
-              "line": 1,
-              "column": 63
-            },
-            "end": {
-              "line": 1,
-              "column": 67
-            }
-          }
-        }
-      ],
-      "type": "esm",
-      "resolutions": [
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        }
-      ]
-    },
-    "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/code/buyCoins.ts": {
-      "mTimestamp": {
-        "mtime": 1733049998962.9165,
-        "uuid": "626b90bc-794e-43d7-ac5b-56fbfa4fb850"
-      },
-      "chunkId": "4e5a2908e551f9d241b565f51fd7781455be5e87",
-      "imports": [
-        {
-          "value": "cce:/internal/code-quality/cr.mjs",
-          "resolved": "__unresolved_0"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc",
-          "loc": {
-            "start": {
-              "line": 9,
-              "column": 7
-            },
-            "end": {
-              "line": 9,
-              "column": 11
-            }
-          }
-        },
-        {
-          "value": "./loadData",
-          "resolved": "__unresolved_1",
-          "loc": {
-            "start": {
-              "line": 10,
-              "column": 25
-            },
-            "end": {
-              "line": 10,
-              "column": 37
-            }
-          }
-        }
-      ],
-      "type": "esm",
-      "resolutions": [
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/code-quality/cr.mjs"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/code/loadData.ts"
-          },
-          "messages": []
-        }
-      ]
-    },
-    "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/code/loadData.ts": {
-      "mTimestamp": {
-        "mtime": 1732994908582.7444,
-        "uuid": "23eafa10-d97f-4874-812a-16c12e0efced"
-      },
-      "chunkId": "3785fe4c8af073265a63d8eba2a708a6a41be36d",
-      "imports": [
-        {
-          "value": "cc"
-        }
-      ],
-      "type": "esm",
-      "resolutions": [
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        }
-      ]
-    },
-    "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/code/buySeed.ts": {
-      "mTimestamp": {
-        "mtime": 1731792324643.75,
-        "uuid": "bf977087-e733-4542-8ee8-dd3c36664fd0"
-      },
-      "chunkId": "f40bb0322ba6f5dd2becfbd7721184a7a96f269b",
-      "imports": [
-        {
-          "value": "cce:/internal/code-quality/cr.mjs",
-          "resolved": "__unresolved_0"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc",
-          "loc": {
-            "start": {
-              "line": 10,
-              "column": 7
-            },
-            "end": {
-              "line": 10,
-              "column": 11
-            }
-          }
-        },
-        {
-          "value": "./http",
-          "resolved": "__unresolved_1",
-          "loc": {
-            "start": {
-              "line": 11,
-              "column": 28
-            },
-            "end": {
-              "line": 11,
-              "column": 36
-            }
-          }
-        },
-        {
-          "value": "./dialog",
-          "resolved": "__unresolved_2",
-          "loc": {
-            "start": {
-              "line": 12,
-              "column": 23
-            },
-            "end": {
-              "line": 12,
-              "column": 33
-            }
-          }
-        }
-      ],
-      "type": "esm",
-      "resolutions": [
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/code-quality/cr.mjs"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/code/http.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/code/dialog.ts"
-          },
-          "messages": []
-        }
-      ]
-    },
-    "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/code/http.ts": {
-      "mTimestamp": {
-        "mtime": 1733052527251.8384,
-        "uuid": "c04de095-1da8-424a-8757-d86c10b4d537"
-      },
-      "chunkId": "1771709ff0fac4cf48f01b13f1f92d21f1b5108d",
-      "imports": [
-        {
-          "value": "cce:/internal/code-quality/cr.mjs",
-          "resolved": "__unresolved_0"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "./loadData",
-          "resolved": "__unresolved_1",
-          "loc": {
-            "start": {
-              "line": 2,
-              "column": 26
-            },
-            "end": {
-              "line": 2,
-              "column": 38
-            }
-          }
-        }
-      ],
-      "type": "esm",
-      "resolutions": [
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/code-quality/cr.mjs"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/code/loadData.ts"
-          },
-          "messages": []
-        }
-      ]
-    },
-    "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/code/dialog.ts": {
-      "mTimestamp": {
-        "mtime": 1733049998971.8208,
-        "uuid": "029647c6-2934-4064-b3d0-d0e70e757fa5"
-      },
-      "chunkId": "890a1b3ed29cca83316c7cfe9bead16583bbbfef",
-      "imports": [
-        {
-          "value": "cce:/internal/code-quality/cr.mjs",
-          "resolved": "__unresolved_0"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc",
-          "loc": {
-            "start": {
-              "line": 1,
-              "column": 62
-            },
-            "end": {
-              "line": 1,
-              "column": 66
-            }
-          }
-        },
-        {
-          "value": "./genBag",
-          "resolved": "__unresolved_1",
-          "loc": {
-            "start": {
-              "line": 3,
-              "column": 23
-            },
-            "end": {
-              "line": 3,
-              "column": 33
-            }
-          }
-        },
-        {
-          "value": "./genShop",
-          "resolved": "__unresolved_2",
-          "loc": {
-            "start": {
-              "line": 4,
-              "column": 24
-            },
-            "end": {
-              "line": 4,
-              "column": 35
-            }
-          }
-        }
-      ],
-      "type": "esm",
-      "resolutions": [
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/code-quality/cr.mjs"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/code/genBag.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/code/genShop.ts"
-          },
-          "messages": []
-        }
-      ]
-    },
-    "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/code/genBag.ts": {
-      "mTimestamp": {
-        "mtime": 1731845486928.1184,
-        "uuid": "e36eb73e-1097-4f5c-9a57-54e2ad8e68b4"
-      },
-      "chunkId": "24d0024ed41ae17de78a81e386358661eef41125",
-      "imports": [
-        {
-          "value": "cce:/internal/code-quality/cr.mjs",
-          "resolved": "__unresolved_0"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc",
-          "loc": {
-            "start": {
-              "line": 12,
-              "column": 7
-            },
-            "end": {
-              "line": 12,
-              "column": 11
-            }
-          }
-        },
-        {
-          "value": "./http",
-          "resolved": "__unresolved_1",
-          "loc": {
-            "start": {
-              "line": 13,
-              "column": 28
-            },
-            "end": {
-              "line": 13,
-              "column": 36
-            }
-          }
-        },
-        {
-          "value": "./utils",
-          "resolved": "__unresolved_2",
-          "loc": {
-            "start": {
-              "line": 16,
-              "column": 30
-            },
-            "end": {
-              "line": 16,
               "column": 39
             }
           }
         },
         {
-          "value": "./dialog",
-          "resolved": "__unresolved_3",
-          "loc": {
-            "start": {
-              "line": 17,
-              "column": 23
-            },
-            "end": {
-              "line": 17,
-              "column": 33
-            }
-          }
-        },
-        {
-          "value": "./seedEffect",
-          "resolved": "__unresolved_4",
-          "loc": {
-            "start": {
-              "line": 18,
-              "column": 27
-            },
-            "end": {
-              "line": 18,
-              "column": 41
-            }
-          }
-        },
-        {
-          "value": "./genBlock",
-          "resolved": "__unresolved_5",
-          "loc": {
-            "start": {
-              "line": 19,
-              "column": 25
-            },
-            "end": {
-              "line": 19,
-              "column": 37
-            }
-          }
-        }
-      ],
-      "type": "esm",
-      "resolutions": [
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/code-quality/cr.mjs"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/code/http.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/code/utils.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/code/dialog.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/code/seedEffect.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/code/genBlock.ts"
-          },
-          "messages": []
-        }
-      ]
-    },
-    "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/code/utils.ts": {
-      "mTimestamp": {
-        "mtime": 1731173459541.4268,
-        "uuid": "42490016-f946-4498-b2c9-311728ec4a72"
-      },
-      "chunkId": "fdd8ecb5fd767fe11d5811e4a04cc87f0e1e772b",
-      "imports": [
-        {
-          "value": "cc"
-        }
-      ],
-      "type": "esm",
-      "resolutions": [
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        }
-      ]
-    },
-    "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/code/seedEffect.ts": {
-      "mTimestamp": {
-        "mtime": 1733219253501.9917,
-        "uuid": "3e9da917-b9ae-4e62-b9a0-27e91f3f7b35"
-      },
-      "chunkId": "696382a3d4428c685d07daf8c414befd023457ba",
-      "imports": [
-        {
-          "value": "cce:/internal/code-quality/cr.mjs",
-          "resolved": "__unresolved_0"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc",
-          "loc": {
-            "start": {
-              "line": 1,
-              "column": 44
-            },
-            "end": {
-              "line": 1,
-              "column": 48
-            }
-          }
-        },
-        {
-          "value": "./dialog",
-          "resolved": "__unresolved_1",
-          "loc": {
-            "start": {
-              "line": 3,
-              "column": 23
-            },
-            "end": {
-              "line": 3,
-              "column": 33
-            }
-          }
-        },
-        {
-          "value": "./genBag",
-          "resolved": "__unresolved_2",
-          "loc": {
-            "start": {
-              "line": 4,
-              "column": 23
-            },
-            "end": {
-              "line": 4,
-              "column": 33
-            }
-          }
-        }
-      ],
-      "type": "esm",
-      "resolutions": [
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/code-quality/cr.mjs"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/code/dialog.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/code/genBag.ts"
-          },
-          "messages": []
-        }
-      ]
-    },
-    "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/code/genBlock.ts": {
-      "mTimestamp": {
-        "mtime": 1733052468260.806,
-        "uuid": "d531bfae-33e5-4dc0-b5e6-ece4850922b3"
-      },
-      "chunkId": "9a4e255e3f21836d026d21c947259625408a2c1c",
-      "imports": [
-        {
-          "value": "cce:/internal/code-quality/cr.mjs",
-          "resolved": "__unresolved_0"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc",
-          "loc": {
-            "start": {
-              "line": 10,
-              "column": 7
-            },
-            "end": {
-              "line": 10,
-              "column": 11
-            }
-          }
-        },
-        {
-          "value": "./http",
-          "resolved": "__unresolved_1",
-          "loc": {
-            "start": {
-              "line": 13,
-              "column": 28
-            },
-            "end": {
-              "line": 13,
-              "column": 36
-            }
-          }
-        },
-        {
-          "value": "./genPlant",
-          "resolved": "__unresolved_2",
-          "loc": {
-            "start": {
-              "line": 14,
-              "column": 25
-            },
-            "end": {
-              "line": 14,
-              "column": 37
-            }
-          }
-        },
-        {
-          "value": "./dialog",
-          "resolved": "__unresolved_3",
-          "loc": {
-            "start": {
-              "line": 15,
-              "column": 23
-            },
-            "end": {
-              "line": 15,
-              "column": 33
-            }
-          }
-        },
-        {
-          "value": "./globalData",
-          "resolved": "__unresolved_4",
-          "loc": {
-            "start": {
-              "line": 16,
-              "column": 27
-            },
-            "end": {
-              "line": 16,
-              "column": 41
-            }
-          }
-        }
-      ],
-      "type": "esm",
-      "resolutions": [
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/code-quality/cr.mjs"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/code/http.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/code/genPlant.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/code/dialog.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/code/globalData.ts"
-          },
-          "messages": []
-        }
-      ]
-    },
-    "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/code/genPlant.ts": {
-      "mTimestamp": {
-        "mtime": 1733038769985.4275,
-        "uuid": "8d18ba6e-e9c9-4311-a9db-07bead0944c5"
-      },
-      "chunkId": "d31b6a6239c18f03f48eed03dee10da4554e446a",
-      "imports": [
-        {
-          "value": "cce:/internal/code-quality/cr.mjs",
-          "resolved": "__unresolved_0"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc",
-          "loc": {
-            "start": {
-              "line": 10,
-              "column": 7
-            },
-            "end": {
-              "line": 10,
-              "column": 11
-            }
-          }
-        },
-        {
-          "value": "./utils",
-          "resolved": "__unresolved_1",
-          "loc": {
-            "start": {
-              "line": 11,
-              "column": 30
-            },
-            "end": {
-              "line": 11,
-              "column": 39
-            }
-          }
-        },
-        {
-          "value": "./genBlock",
-          "resolved": "__unresolved_2",
-          "loc": {
-            "start": {
-              "line": 12,
-              "column": 25
-            },
-            "end": {
-              "line": 12,
-              "column": 37
-            }
-          }
-        },
-        {
-          "value": "./hoverEffect",
-          "resolved": "__unresolved_3",
-          "loc": {
-            "start": {
-              "line": 13,
-              "column": 28
-            },
-            "end": {
-              "line": 13,
-              "column": 43
-            }
-          }
-        }
-      ],
-      "type": "esm",
-      "resolutions": [
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/code-quality/cr.mjs"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/code/utils.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/code/genBlock.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/code/hoverEffect.ts"
-          },
-          "messages": []
-        }
-      ]
-    },
-    "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/code/hoverEffect.ts": {
-      "mTimestamp": {
-        "mtime": 1733219249964.3147,
-        "uuid": "432312c1-b102-4b8c-b139-67814fe54660"
-      },
-      "chunkId": "b2b0a4a75b8ae47ae6948437bc1ad971a02c8fbb",
-      "imports": [
-        {
-          "value": "cce:/internal/code-quality/cr.mjs",
-          "resolved": "__unresolved_0"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc",
-          "loc": {
-            "start": {
-              "line": 1,
-              "column": 44
-            },
-            "end": {
-              "line": 1,
-              "column": 48
-            }
-          }
-        },
-        {
-          "value": "./dialog",
-          "resolved": "__unresolved_1",
-          "loc": {
-            "start": {
-              "line": 3,
-              "column": 23
-            },
-            "end": {
-              "line": 3,
-              "column": 33
-            }
-          }
-        },
-        {
-          "value": "./genBlock",
-          "resolved": "__unresolved_2",
-          "loc": {
-            "start": {
-              "line": 4,
-              "column": 25
-            },
-            "end": {
-              "line": 4,
-              "column": 37
-            }
-          }
-        }
-      ],
-      "type": "esm",
-      "resolutions": [
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/code-quality/cr.mjs"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/code/dialog.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/code/genBlock.ts"
-          },
-          "messages": []
-        }
-      ]
-    },
-    "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/code/globalData.ts": {
-      "mTimestamp": {
-        "mtime": 1733052102429.7495,
-        "uuid": "1c5b2c5c-a657-4333-8263-69bcb5598009"
-      },
-      "chunkId": "ca8ebbfcb86c414ddb23ae19573313e4810ee6f3",
-      "imports": [
-        {
-          "value": "cce:/internal/code-quality/cr.mjs",
-          "resolved": "__unresolved_0"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc",
+          "value": "rgbcolor",
           "loc": {
             "start": {
               "line": 2,
-              "column": 33
-            },
-            "end": {
-              "line": 2,
-              "column": 37
-            }
-          }
-        }
-      ],
-      "type": "esm",
-      "resolutions": [
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/code-quality/cr.mjs"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        }
-      ]
-    },
-    "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/code/genShop.ts": {
-      "mTimestamp": {
-        "mtime": 1733218528944.618,
-        "uuid": "b5b2aa0d-5160-4eb1-ad57-41a9fac6e06b"
-      },
-      "chunkId": "f714ff69f88ac34b8402b87e0a4baf12f1ae64e0",
-      "imports": [
-        {
-          "value": "cce:/internal/code-quality/cr.mjs",
-          "resolved": "__unresolved_0"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc",
-          "loc": {
-            "start": {
-              "line": 12,
-              "column": 7
-            },
-            "end": {
-              "line": 12,
-              "column": 11
-            }
-          }
-        },
-        {
-          "value": "./http",
-          "resolved": "__unresolved_1",
-          "loc": {
-            "start": {
-              "line": 13,
-              "column": 28
-            },
-            "end": {
-              "line": 13,
-              "column": 36
-            }
-          }
-        },
-        {
-          "value": "./buySeedEffect",
-          "resolved": "__unresolved_2",
-          "loc": {
-            "start": {
-              "line": 15,
-              "column": 30
-            },
-            "end": {
-              "line": 15,
-              "column": 47
-            }
-          }
-        },
-        {
-          "value": "./utils",
-          "resolved": "__unresolved_3",
-          "loc": {
-            "start": {
-              "line": 16,
-              "column": 30
-            },
-            "end": {
-              "line": 16,
-              "column": 39
-            }
-          }
-        }
-      ],
-      "type": "esm",
-      "resolutions": [
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/code-quality/cr.mjs"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/code/http.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/code/buySeedEffect.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/code/utils.ts"
-          },
-          "messages": []
-        }
-      ]
-    },
-    "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/code/buySeedEffect.ts": {
-      "mTimestamp": {
-        "mtime": 1733219244425.8728,
-        "uuid": "9d93f504-0006-4eea-926b-a79fc10f2e93"
-      },
-      "chunkId": "fe973341b07e03d634724eaf5ee9474e9be91017",
-      "imports": [
-        {
-          "value": "cce:/internal/code-quality/cr.mjs",
-          "resolved": "__unresolved_0"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc",
-          "loc": {
-            "start": {
-              "line": 1,
-              "column": 44
-            },
-            "end": {
-              "line": 1,
-              "column": 48
-            }
-          }
-        },
-        {
-          "value": "./dialog",
-          "resolved": "__unresolved_1",
-          "loc": {
-            "start": {
-              "line": 3,
-              "column": 23
-            },
-            "end": {
-              "line": 3,
-              "column": 33
-            }
-          }
-        },
-        {
-          "value": "./buySeed",
-          "resolved": "__unresolved_2",
-          "loc": {
-            "start": {
-              "line": 4,
-              "column": 24
-            },
-            "end": {
-              "line": 4,
-              "column": 35
-            }
-          }
-        }
-      ],
-      "type": "esm",
-      "resolutions": [
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/code-quality/cr.mjs"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/code/dialog.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/code/buySeed.ts"
-          },
-          "messages": []
-        }
-      ]
-    },
-    "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/code/circles.ts": {
-      "mTimestamp": {
-        "mtime": 1733139020374.8442,
-        "uuid": "f96f613c-3b56-4f90-88a2-13e424e20573"
-      },
-      "chunkId": "ec761b91030692face7da35aa0f68f4cb4f2ab4b",
-      "imports": [
-        {
-          "value": "cce:/internal/code-quality/cr.mjs",
-          "resolved": "__unresolved_0"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc",
-          "loc": {
-            "start": {
-              "line": 13,
-              "column": 7
-            },
-            "end": {
-              "line": 13,
-              "column": 11
-            }
-          }
-        },
-        {
-          "value": "./http",
-          "resolved": "__unresolved_1",
-          "loc": {
-            "start": {
-              "line": 14,
-              "column": 28
-            },
-            "end": {
-              "line": 14,
-              "column": 36
-            }
-          }
-        },
-        {
-          "value": "./loadData",
-          "resolved": "__unresolved_2",
-          "loc": {
-            "start": {
-              "line": 16,
-              "column": 26
-            },
-            "end": {
-              "line": 16,
-              "column": 38
-            }
-          }
-        },
-        {
-          "value": "./globalData",
-          "resolved": "__unresolved_3",
-          "loc": {
-            "start": {
-              "line": 17,
-              "column": 27
-            },
-            "end": {
-              "line": 17,
-              "column": 41
-            }
-          }
-        },
-        {
-          "value": "./genInfo",
-          "resolved": "__unresolved_4",
-          "loc": {
-            "start": {
-              "line": 18,
-              "column": 24
-            },
-            "end": {
-              "line": 18,
-              "column": 35
-            }
-          }
-        },
-        {
-          "value": "./dialog",
-          "resolved": "__unresolved_5",
-          "loc": {
-            "start": {
-              "line": 19,
-              "column": 23
-            },
-            "end": {
-              "line": 19,
-              "column": 33
-            }
-          }
-        }
-      ],
-      "type": "esm",
-      "resolutions": [
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/code-quality/cr.mjs"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/code/http.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/code/loadData.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/code/globalData.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/code/genInfo.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/code/dialog.ts"
-          },
-          "messages": []
-        }
-      ]
-    },
-    "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/code/genInfo.ts": {
-      "mTimestamp": {
-        "mtime": 1733043688405.1125,
-        "uuid": "c70a354b-405a-4822-ba2c-80ebb2b23689"
-      },
-      "chunkId": "a34151367f1620d22f130376caa10fa1c32ad679",
-      "imports": [
-        {
-          "value": "cce:/internal/code-quality/cr.mjs",
-          "resolved": "__unresolved_0"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc",
-          "loc": {
-            "start": {
-              "line": 1,
-              "column": 57
-            },
-            "end": {
-              "line": 1,
-              "column": 61
-            }
-          }
-        },
-        {
-          "value": "./http",
-          "resolved": "__unresolved_1",
-          "loc": {
-            "start": {
-              "line": 3,
-              "column": 28
-            },
-            "end": {
-              "line": 3,
-              "column": 36
-            }
-          }
-        },
-        {
-          "value": "./globalData",
-          "resolved": "__unresolved_2",
-          "loc": {
-            "start": {
-              "line": 5,
-              "column": 27
-            },
-            "end": {
-              "line": 5,
-              "column": 41
-            }
-          }
-        }
-      ],
-      "type": "esm",
-      "resolutions": [
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/code-quality/cr.mjs"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/code/http.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/code/globalData.ts"
-          },
-          "messages": []
-        }
-      ]
-    },
-    "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/code/dashedRectangle.ts": {
-      "mTimestamp": {
-        "mtime": 1732304520529.3489,
-        "uuid": "c9240af7-0d18-4933-80f2-170fcc258dfc"
-      },
-      "chunkId": "e8d33fb009a48bbc2b06c45fa11b6ad7af954a90",
-      "imports": [
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc",
-          "loc": {
-            "start": {
-              "line": 1,
-              "column": 55
-            },
-            "end": {
-              "line": 1,
-              "column": 59
-            }
-          }
-        }
-      ],
-      "type": "esm",
-      "resolutions": [
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        }
-      ]
-    },
-    "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/code/drawRoundedRect.ts": {
-      "mTimestamp": {
-        "mtime": 1733141020293.9578,
-        "uuid": "a002a77f-06b6-43ca-9e1b-b424b6a8e4d7"
-      },
-      "chunkId": "06877f7f06afd4b9184f6dd40abe006fed392766",
-      "imports": [
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc",
-          "loc": {
-            "start": {
-              "line": 1,
-              "column": 55
-            },
-            "end": {
-              "line": 1,
-              "column": 59
-            }
-          }
-        }
-      ],
-      "type": "esm",
-      "resolutions": [
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        }
-      ]
-    },
-    "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/code/drawer.ts": {
-      "mTimestamp": {
-        "mtime": 1731699552432.1113,
-        "uuid": "01adda21-79b2-4087-b26f-faf8121ef141"
-      },
-      "chunkId": "5673a546bc716e07fb76a13450286e81d8c4a80f",
-      "imports": [
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc",
-          "loc": {
-            "start": {
-              "line": 11,
-              "column": 7
-            },
-            "end": {
-              "line": 11,
-              "column": 11
-            }
-          }
-        }
-      ],
-      "type": "esm",
-      "resolutions": [
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        }
-      ]
-    },
-    "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/code/harvest.ts": {
-      "mTimestamp": {
-        "mtime": 1732441890301.5354,
-        "uuid": "bcb8aee2-14c6-4f7a-9215-029efa07ea5d"
-      },
-      "chunkId": "b09188b6161501cee330e383e2ab9403729696c5",
-      "imports": [
-        {
-          "value": "cce:/internal/code-quality/cr.mjs",
-          "resolved": "__unresolved_0"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc",
-          "loc": {
-            "start": {
-              "line": 9,
-              "column": 7
-            },
-            "end": {
-              "line": 9,
-              "column": 11
-            }
-          }
-        },
-        {
-          "value": "./loadData",
-          "resolved": "__unresolved_1",
-          "loc": {
-            "start": {
-              "line": 10,
-              "column": 28
-            },
-            "end": {
-              "line": 10,
-              "column": 40
-            }
-          }
-        },
-        {
-          "value": "./http",
-          "resolved": "__unresolved_2",
-          "loc": {
-            "start": {
-              "line": 11,
-              "column": 28
-            },
-            "end": {
-              "line": 11,
-              "column": 36
-            }
-          }
-        },
-        {
-          "value": "./dialog",
-          "resolved": "__unresolved_3",
-          "loc": {
-            "start": {
-              "line": 13,
-              "column": 23
-            },
-            "end": {
-              "line": 13,
-              "column": 33
-            }
-          }
-        }
-      ],
-      "type": "esm",
-      "resolutions": [
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/code-quality/cr.mjs"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/code/loadData.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/code/http.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/code/dialog.ts"
-          },
-          "messages": []
-        }
-      ]
-    },
-    "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/code/interface.ts": {
-      "mTimestamp": {
-        "mtime": 1732448373769.7173,
-        "uuid": "42547275-7807-4c87-ac42-2e0e126017f0"
-      },
-      "chunkId": "ffac51dd9def4560ee188c0cde1597f4a887d000",
-      "imports": [
-        {
-          "value": "cc"
-        }
-      ],
-      "type": "esm",
-      "resolutions": [
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        }
-      ]
-    },
-    "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/code/login.ts": {
-      "mTimestamp": {
-        "mtime": 1731161602038.456,
-        "uuid": "bbf92da1-2d0f-4324-910f-727fd60ea76f"
-      },
-      "chunkId": "06480614539d140b4175ca0ce9398bf8d1865270",
-      "imports": [
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc",
-          "loc": {
-            "start": {
-              "line": 8,
-              "column": 7
-            },
-            "end": {
-              "line": 8,
-              "column": 11
-            }
-          }
-        }
-      ],
-      "type": "esm",
-      "resolutions": [
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        }
-      ]
-    },
-    "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/code/main.ts": {
-      "mTimestamp": {
-        "mtime": 1732958136617.699,
-        "uuid": "ad534c45-313f-494a-9f0a-10a9c7f79cb4"
-      },
-      "chunkId": "8f0ec412a073c9ce7519ea3292b0bc372515b945",
-      "imports": [
-        {
-          "value": "cce:/internal/code-quality/cr.mjs",
-          "resolved": "__unresolved_0"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc",
-          "loc": {
-            "start": {
-              "line": 1,
-              "column": 75
-            },
-            "end": {
-              "line": 1,
-              "column": 79
-            }
-          }
-        },
-        {
-          "value": "./login",
-          "resolved": "__unresolved_1",
-          "loc": {
-            "start": {
-              "line": 2,
-              "column": 22
+              "column": 21
             },
             "end": {
               "line": 2,
@@ -6806,1043 +4734,28 @@
           }
         },
         {
-          "value": "./genBlock",
-          "resolved": "__unresolved_2",
+          "value": "svg-pathdata",
           "loc": {
             "start": {
               "line": 3,
-              "column": 25
+              "column": 28
             },
             "end": {
               "line": 3,
-              "column": 37
-            }
-          }
-        }
-      ],
-      "type": "esm",
-      "resolutions": [
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/code-quality/cr.mjs"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/code/login.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/code/genBlock.ts"
-          },
-          "messages": []
-        }
-      ]
-    },
-    "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/code/overlayMask.ts": {
-      "mTimestamp": {
-        "mtime": 1731233886235.5205,
-        "uuid": "8d2ecc31-2cf7-4ac4-b949-23fcd94273f4"
-      },
-      "chunkId": "9f020be90fae867df1f8e5d8d90ab70d17161c90",
-      "imports": [
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc",
-          "loc": {
-            "start": {
-              "line": 8,
-              "column": 7
-            },
-            "end": {
-              "line": 8,
-              "column": 11
-            }
-          }
-        }
-      ],
-      "type": "esm",
-      "resolutions": [
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        }
-      ]
-    },
-    "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/code/popupStop.ts": {
-      "mTimestamp": {
-        "mtime": 1730483441165.3765,
-        "uuid": "d9d110b5-1aaa-4121-abe4-63f2d89de6cc"
-      },
-      "chunkId": "939aab6c3ae608debeb29ac7cde61dfe7b4d84a6",
-      "imports": [
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc",
-          "loc": {
-            "start": {
-              "line": 1,
-              "column": 63
-            },
-            "end": {
-              "line": 1,
-              "column": 67
-            }
-          }
-        }
-      ],
-      "type": "esm",
-      "resolutions": [
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        }
-      ]
-    },
-    "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/code/scaleAction.ts": {
-      "mTimestamp": {
-        "mtime": 1730307847629.9087,
-        "uuid": "086261dd-eb9f-4452-a523-7f59d60ae7e2"
-      },
-      "chunkId": "3bf8b658de5a5e8c065a83c3c99549eba0af5adc",
-      "imports": [
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc",
-          "loc": {
-            "start": {
-              "line": 1,
-              "column": 77
-            },
-            "end": {
-              "line": 1,
-              "column": 81
-            }
-          }
-        }
-      ],
-      "type": "esm",
-      "resolutions": [
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        }
-      ]
-    },
-    "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/code/sceneSwitcher.ts": {
-      "mTimestamp": {
-        "mtime": 1733053117606.7676,
-        "uuid": "90faea67-71ce-48f4-aadc-d60fc5054170"
-      },
-      "chunkId": "d3b74c2514e51f12773cae805f0811e8eed552bb",
-      "imports": [
-        {
-          "value": "cce:/internal/code-quality/cr.mjs",
-          "resolved": "__unresolved_0"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc",
-          "loc": {
-            "start": {
-              "line": 1,
-              "column": 48
-            },
-            "end": {
-              "line": 1,
-              "column": 52
+              "column": 42
             }
           }
         },
         {
-          "value": "./genBlock",
-          "resolved": "__unresolved_1",
+          "value": "stackblur-canvas",
           "loc": {
             "start": {
-              "line": 2,
-              "column": 25
-            },
-            "end": {
-              "line": 2,
-              "column": 37
-            }
-          }
-        },
-        {
-          "value": "./globalData",
-          "resolved": "__unresolved_2",
-          "loc": {
-            "start": {
-              "line": 3,
+              "line": 4,
               "column": 27
             },
             "end": {
-              "line": 3,
-              "column": 41
-            }
-          }
-        }
-      ],
-      "type": "esm",
-      "resolutions": [
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/code-quality/cr.mjs"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/code/genBlock.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/code/globalData.ts"
-          },
-          "messages": []
-        }
-      ]
-    },
-    "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/code/showTelegramInfo.ts": {
-      "mTimestamp": {
-        "mtime": 1731095939797.6174,
-        "uuid": "5605442c-f367-49e2-bce9-55b01d78c92b"
-      },
-      "chunkId": "059e171094b771cd015f2aec90314b472fc7a10d",
-      "imports": [
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc",
-          "loc": {
-            "start": {
-              "line": 1,
-              "column": 57
-            },
-            "end": {
-              "line": 1,
-              "column": 61
-            }
-          }
-        }
-      ],
-      "type": "esm",
-      "resolutions": [
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        }
-      ]
-    },
-    "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/code/telegram.ts": {
-      "mTimestamp": {
-        "mtime": 1733049996722.4844,
-        "uuid": "502c4070-4389-4d87-a0e1-ed5bffec4a38"
-      },
-      "chunkId": "d81a63c28a287f15662d9fd1ca0ec215019f7be5",
-      "imports": [
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc",
-          "loc": {
-            "start": {
-              "line": 1,
-              "column": 46
-            },
-            "end": {
-              "line": 1,
-              "column": 50
-            }
-          }
-        }
-      ],
-      "type": "esm",
-      "resolutions": [
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        }
-      ]
-    },
-    "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/code/timer.ts": {
-      "mTimestamp": {
-        "mtime": 1730307847629.9087,
-        "uuid": "1cceaba6-6929-4cc1-9c8a-3fbc8a345bc8"
-      },
-      "chunkId": "5aa4638439015882d76260d1cabdbab2ca169d81",
-      "imports": [
-        {
-          "value": "cce:/internal/code-quality/cr.mjs",
-          "resolved": "__unresolved_0"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc",
-          "loc": {
-            "start": {
-              "line": 1,
-              "column": 57
-            },
-            "end": {
-              "line": 1,
-              "column": 61
-            }
-          }
-        },
-        {
-          "value": "./loadData",
-          "resolved": "__unresolved_1",
-          "loc": {
-            "start": {
-              "line": 5,
-              "column": 7
-            },
-            "end": {
-              "line": 5,
-              "column": 19
-            }
-          }
-        }
-      ],
-      "type": "esm",
-      "resolutions": [
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/code-quality/cr.mjs"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/code/loadData.ts"
-          },
-          "messages": []
-        }
-      ]
-    },
-    "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/code/userAvatar.ts": {
-      "mTimestamp": {
-        "mtime": 1733157434266.4268,
-        "uuid": "11f81f04-9e76-48fb-ac7a-2e125f21a855"
-      },
-      "chunkId": "66212f90b169d1f50058a7d435978bb2d5077545",
-      "imports": [
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc",
-          "loc": {
-            "start": {
-              "line": 10,
-              "column": 7
-            },
-            "end": {
-              "line": 10,
-              "column": 11
-            }
-          }
-        }
-      ],
-      "type": "esm",
-      "resolutions": [
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        }
-      ]
-    },
-    "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/scene/code/adaptiveCanvas.ts": {
-      "mTimestamp": {
-        "mtime": 1730311021303.9243,
-        "uuid": "e093eac2-6e56-49d5-8fa9-d3b5adf7be12"
-      },
-      "chunkId": "2d39c8ad483b76f440b95fafe720a101e9d7a622",
-      "imports": [
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc",
-          "loc": {
-            "start": {
-              "line": 1,
-              "column": 54
-            },
-            "end": {
-              "line": 1,
-              "column": 58
-            }
-          }
-        }
-      ],
-      "type": "esm",
-      "resolutions": [
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        }
-      ]
-    },
-    "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/scene/code/audioManager.ts": {
-      "mTimestamp": {
-        "mtime": 1730307847626.9062,
-        "uuid": "e84ac9e3-97d5-41ef-bdc6-5fb9d5888b74"
-      },
-      "chunkId": "e304f6965dabd08d207cb7c2591999fb7c7664cb",
-      "imports": [
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc",
-          "loc": {
-            "start": {
-              "line": 1,
-              "column": 66
-            },
-            "end": {
-              "line": 1,
-              "column": 70
-            }
-          }
-        }
-      ],
-      "type": "esm",
-      "resolutions": [
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        }
-      ]
-    },
-    "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/scene/code/autoScaleImage.ts": {
-      "mTimestamp": {
-        "mtime": 1730308442342.6318,
-        "uuid": "6c05f0c4-81ee-4948-8738-aba60013153a"
-      },
-      "chunkId": "316f6fdd5e70237fda639f536ddada4533db9e67",
-      "imports": [
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc",
-          "loc": {
-            "start": {
-              "line": 1,
-              "column": 63
-            },
-            "end": {
-              "line": 1,
-              "column": 67
-            }
-          }
-        }
-      ],
-      "type": "esm",
-      "resolutions": [
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        }
-      ]
-    },
-    "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/scene/code/buyCoins.ts": {
-      "mTimestamp": {
-        "mtime": 1733049998962.9165,
-        "uuid": "626b90bc-794e-43d7-ac5b-56fbfa4fb850"
-      },
-      "chunkId": "859f7dd6abd4111543004e1aa68ef72394ea3b5f",
-      "imports": [
-        {
-          "value": "cce:/internal/code-quality/cr.mjs",
-          "resolved": "__unresolved_0"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc",
-          "loc": {
-            "start": {
-              "line": 9,
-              "column": 7
-            },
-            "end": {
-              "line": 9,
-              "column": 11
-            }
-          }
-        },
-        {
-          "value": "./loadData",
-          "resolved": "__unresolved_1",
-          "loc": {
-            "start": {
-              "line": 10,
-              "column": 25
-            },
-            "end": {
-              "line": 10,
-              "column": 37
-            }
-          }
-        }
-      ],
-      "type": "esm",
-      "resolutions": [
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/code-quality/cr.mjs"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/scene/code/loadData.ts"
-          },
-          "messages": []
-        }
-      ]
-    },
-    "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/scene/code/loadData.ts": {
-      "mTimestamp": {
-        "mtime": 1732994908582.7444,
-        "uuid": "23eafa10-d97f-4874-812a-16c12e0efced"
-      },
-      "chunkId": "76912b20d3f71982a9974d43e3d37189e184b0e8",
-      "imports": [
-        {
-          "value": "cc"
-        }
-      ],
-      "type": "esm",
-      "resolutions": [
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        }
-      ]
-    },
-    "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/scene/code/buySeed.ts": {
-      "mTimestamp": {
-        "mtime": 1731792324643.75,
-        "uuid": "bf977087-e733-4542-8ee8-dd3c36664fd0"
-      },
-      "chunkId": "f4e8a7c99a1c38222f3921e3652b119285551119",
-      "imports": [
-        {
-          "value": "cce:/internal/code-quality/cr.mjs",
-          "resolved": "__unresolved_0"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc",
-          "loc": {
-            "start": {
-              "line": 10,
-              "column": 7
-            },
-            "end": {
-              "line": 10,
-              "column": 11
-            }
-          }
-        },
-        {
-          "value": "./http",
-          "resolved": "__unresolved_1",
-          "loc": {
-            "start": {
-              "line": 11,
-              "column": 28
-            },
-            "end": {
-              "line": 11,
-              "column": 36
-            }
-          }
-        },
-        {
-          "value": "./dialog",
-          "resolved": "__unresolved_2",
-          "loc": {
-            "start": {
-              "line": 12,
-              "column": 23
-            },
-            "end": {
-              "line": 12,
-              "column": 33
-            }
-          }
-        }
-      ],
-      "type": "esm",
-      "resolutions": [
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/code-quality/cr.mjs"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/scene/code/http.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/scene/code/dialog.ts"
-          },
-          "messages": []
-        }
-      ]
-    },
-    "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/scene/code/http.ts": {
-      "mTimestamp": {
-        "mtime": 1733052527251.8384,
-        "uuid": "c04de095-1da8-424a-8757-d86c10b4d537"
-      },
-      "chunkId": "51d4baf8fc2646f3824e5f8e1321f17097b3d463",
-      "imports": [
-        {
-          "value": "cce:/internal/code-quality/cr.mjs",
-          "resolved": "__unresolved_0"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "./loadData",
-          "resolved": "__unresolved_1",
-          "loc": {
-            "start": {
-              "line": 2,
-              "column": 26
-            },
-            "end": {
-              "line": 2,
-              "column": 38
-            }
-          }
-        }
-      ],
-      "type": "esm",
-      "resolutions": [
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/code-quality/cr.mjs"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/scene/code/loadData.ts"
-          },
-          "messages": []
-        }
-      ]
-    },
-    "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/scene/code/dialog.ts": {
-      "mTimestamp": {
-        "mtime": 1733049998971.8208,
-        "uuid": "029647c6-2934-4064-b3d0-d0e70e757fa5"
-      },
-      "chunkId": "7d029f09ffec22cb67644d13efd82e5414bf0ae5",
-      "imports": [
-        {
-          "value": "cce:/internal/code-quality/cr.mjs",
-          "resolved": "__unresolved_0"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc",
-          "loc": {
-            "start": {
-              "line": 1,
-              "column": 62
-            },
-            "end": {
-              "line": 1,
-              "column": 66
-            }
-          }
-        },
-        {
-          "value": "./genBag",
-          "resolved": "__unresolved_1",
-          "loc": {
-            "start": {
-              "line": 3,
-              "column": 23
-            },
-            "end": {
-              "line": 3,
-              "column": 33
-            }
-          }
-        },
-        {
-          "value": "./genShop",
-          "resolved": "__unresolved_2",
-          "loc": {
-            "start": {
               "line": 4,
-              "column": 24
-            },
-            "end": {
-              "line": 4,
-              "column": 35
+              "column": 45
             }
           }
         }
@@ -7852,2288 +4765,36 @@
         {
           "resolved": {
             "type": "module",
-            "url": "cce:/internal/code-quality/cr.mjs"
+            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/node_modules/raf/index.mjs?cjs=&original=.js"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "cce:/internal/x/cc"
+            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/node_modules/rgbcolor/index.mjs?cjs=&original=.js"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "cce:/internal/x/cc"
+            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/node_modules/svg-pathdata/lib/SVGPathData.module.js"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/scene/code/genBag.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/scene/code/genShop.ts"
+            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/node_modules/stackblur-canvas/dist/stackblur.mjs?cjs=&original=.js"
           },
           "messages": []
         }
       ]
     },
-    "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/scene/code/genBag.ts": {
-      "mTimestamp": {
-        "mtime": 1731845486928.1184,
-        "uuid": "e36eb73e-1097-4f5c-9a57-54e2ad8e68b4"
-      },
-      "chunkId": "7c96b31fde4c30095492c7eb30e685f9fc3c190c",
-      "imports": [
-        {
-          "value": "cce:/internal/code-quality/cr.mjs",
-          "resolved": "__unresolved_0"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc",
-          "loc": {
-            "start": {
-              "line": 12,
-              "column": 7
-            },
-            "end": {
-              "line": 12,
-              "column": 11
-            }
-          }
-        },
-        {
-          "value": "./http",
-          "resolved": "__unresolved_1",
-          "loc": {
-            "start": {
-              "line": 13,
-              "column": 28
-            },
-            "end": {
-              "line": 13,
-              "column": 36
-            }
-          }
-        },
-        {
-          "value": "./utils",
-          "resolved": "__unresolved_2",
-          "loc": {
-            "start": {
-              "line": 16,
-              "column": 30
-            },
-            "end": {
-              "line": 16,
-              "column": 39
-            }
-          }
-        },
-        {
-          "value": "./dialog",
-          "resolved": "__unresolved_3",
-          "loc": {
-            "start": {
-              "line": 17,
-              "column": 23
-            },
-            "end": {
-              "line": 17,
-              "column": 33
-            }
-          }
-        },
-        {
-          "value": "./seedEffect",
-          "resolved": "__unresolved_4",
-          "loc": {
-            "start": {
-              "line": 18,
-              "column": 27
-            },
-            "end": {
-              "line": 18,
-              "column": 41
-            }
-          }
-        },
-        {
-          "value": "./genBlock",
-          "resolved": "__unresolved_5",
-          "loc": {
-            "start": {
-              "line": 19,
-              "column": 25
-            },
-            "end": {
-              "line": 19,
-              "column": 37
-            }
-          }
-        }
-      ],
-      "type": "esm",
-      "resolutions": [
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/code-quality/cr.mjs"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/scene/code/http.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/scene/code/utils.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/scene/code/dialog.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/scene/code/seedEffect.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/scene/code/genBlock.ts"
-          },
-          "messages": []
-        }
-      ]
-    },
-    "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/scene/code/utils.ts": {
-      "mTimestamp": {
-        "mtime": 1731173459541.4268,
-        "uuid": "42490016-f946-4498-b2c9-311728ec4a72"
-      },
-      "chunkId": "433e6b9ab4627c834b48396da22c143a617b994f",
-      "imports": [
-        {
-          "value": "cc"
-        }
-      ],
-      "type": "esm",
-      "resolutions": [
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        }
-      ]
-    },
-    "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/scene/code/seedEffect.ts": {
-      "mTimestamp": {
-        "mtime": 1733219253501.9917,
-        "uuid": "3e9da917-b9ae-4e62-b9a0-27e91f3f7b35"
-      },
-      "chunkId": "80ac3215ab09f3cf9e043debfa6ac8162d8f81aa",
-      "imports": [
-        {
-          "value": "cce:/internal/code-quality/cr.mjs",
-          "resolved": "__unresolved_0"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc",
-          "loc": {
-            "start": {
-              "line": 1,
-              "column": 44
-            },
-            "end": {
-              "line": 1,
-              "column": 48
-            }
-          }
-        },
-        {
-          "value": "./dialog",
-          "resolved": "__unresolved_1",
-          "loc": {
-            "start": {
-              "line": 3,
-              "column": 23
-            },
-            "end": {
-              "line": 3,
-              "column": 33
-            }
-          }
-        },
-        {
-          "value": "./genBag",
-          "resolved": "__unresolved_2",
-          "loc": {
-            "start": {
-              "line": 4,
-              "column": 23
-            },
-            "end": {
-              "line": 4,
-              "column": 33
-            }
-          }
-        }
-      ],
-      "type": "esm",
-      "resolutions": [
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/code-quality/cr.mjs"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/scene/code/dialog.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/scene/code/genBag.ts"
-          },
-          "messages": []
-        }
-      ]
-    },
-    "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/scene/code/genBlock.ts": {
-      "mTimestamp": {
-        "mtime": 1733052468260.806,
-        "uuid": "d531bfae-33e5-4dc0-b5e6-ece4850922b3"
-      },
-      "chunkId": "a26ab450d0e39780f53248edc90e1723d1861bae",
-      "imports": [
-        {
-          "value": "cce:/internal/code-quality/cr.mjs",
-          "resolved": "__unresolved_0"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc",
-          "loc": {
-            "start": {
-              "line": 10,
-              "column": 7
-            },
-            "end": {
-              "line": 10,
-              "column": 11
-            }
-          }
-        },
-        {
-          "value": "./http",
-          "resolved": "__unresolved_1",
-          "loc": {
-            "start": {
-              "line": 13,
-              "column": 28
-            },
-            "end": {
-              "line": 13,
-              "column": 36
-            }
-          }
-        },
-        {
-          "value": "./genPlant",
-          "resolved": "__unresolved_2",
-          "loc": {
-            "start": {
-              "line": 14,
-              "column": 25
-            },
-            "end": {
-              "line": 14,
-              "column": 37
-            }
-          }
-        },
-        {
-          "value": "./dialog",
-          "resolved": "__unresolved_3",
-          "loc": {
-            "start": {
-              "line": 15,
-              "column": 23
-            },
-            "end": {
-              "line": 15,
-              "column": 33
-            }
-          }
-        },
-        {
-          "value": "./globalData",
-          "resolved": "__unresolved_4",
-          "loc": {
-            "start": {
-              "line": 16,
-              "column": 27
-            },
-            "end": {
-              "line": 16,
-              "column": 41
-            }
-          }
-        }
-      ],
-      "type": "esm",
-      "resolutions": [
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/code-quality/cr.mjs"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/scene/code/http.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/scene/code/genPlant.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/scene/code/dialog.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/scene/code/globalData.ts"
-          },
-          "messages": []
-        }
-      ]
-    },
-    "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/scene/code/genPlant.ts": {
-      "mTimestamp": {
-        "mtime": 1733038769985.4275,
-        "uuid": "8d18ba6e-e9c9-4311-a9db-07bead0944c5"
-      },
-      "chunkId": "26917e3d89aeeff077f25955ca1ebcbfdc41fc65",
-      "imports": [
-        {
-          "value": "cce:/internal/code-quality/cr.mjs",
-          "resolved": "__unresolved_0"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc",
-          "loc": {
-            "start": {
-              "line": 10,
-              "column": 7
-            },
-            "end": {
-              "line": 10,
-              "column": 11
-            }
-          }
-        },
-        {
-          "value": "./utils",
-          "resolved": "__unresolved_1",
-          "loc": {
-            "start": {
-              "line": 11,
-              "column": 30
-            },
-            "end": {
-              "line": 11,
-              "column": 39
-            }
-          }
-        },
-        {
-          "value": "./genBlock",
-          "resolved": "__unresolved_2",
-          "loc": {
-            "start": {
-              "line": 12,
-              "column": 25
-            },
-            "end": {
-              "line": 12,
-              "column": 37
-            }
-          }
-        },
-        {
-          "value": "./hoverEffect",
-          "resolved": "__unresolved_3",
-          "loc": {
-            "start": {
-              "line": 13,
-              "column": 28
-            },
-            "end": {
-              "line": 13,
-              "column": 43
-            }
-          }
-        }
-      ],
-      "type": "esm",
-      "resolutions": [
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/code-quality/cr.mjs"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/scene/code/utils.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/scene/code/genBlock.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/scene/code/hoverEffect.ts"
-          },
-          "messages": []
-        }
-      ]
-    },
-    "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/scene/code/hoverEffect.ts": {
-      "mTimestamp": {
-        "mtime": 1733219249964.3147,
-        "uuid": "432312c1-b102-4b8c-b139-67814fe54660"
-      },
-      "chunkId": "7217691cff31e43489bc43b9d55ebcfbfd495ac7",
-      "imports": [
-        {
-          "value": "cce:/internal/code-quality/cr.mjs",
-          "resolved": "__unresolved_0"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc",
-          "loc": {
-            "start": {
-              "line": 1,
-              "column": 44
-            },
-            "end": {
-              "line": 1,
-              "column": 48
-            }
-          }
-        },
-        {
-          "value": "./dialog",
-          "resolved": "__unresolved_1",
-          "loc": {
-            "start": {
-              "line": 3,
-              "column": 23
-            },
-            "end": {
-              "line": 3,
-              "column": 33
-            }
-          }
-        },
-        {
-          "value": "./genBlock",
-          "resolved": "__unresolved_2",
-          "loc": {
-            "start": {
-              "line": 4,
-              "column": 25
-            },
-            "end": {
-              "line": 4,
-              "column": 37
-            }
-          }
-        }
-      ],
-      "type": "esm",
-      "resolutions": [
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/code-quality/cr.mjs"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/scene/code/dialog.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/scene/code/genBlock.ts"
-          },
-          "messages": []
-        }
-      ]
-    },
-    "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/scene/code/globalData.ts": {
-      "mTimestamp": {
-        "mtime": 1733052102429.7495,
-        "uuid": "1c5b2c5c-a657-4333-8263-69bcb5598009"
-      },
-      "chunkId": "e9f80898f702dfe3f05ff5ff6ce91c9f302186f8",
-      "imports": [
-        {
-          "value": "cce:/internal/code-quality/cr.mjs",
-          "resolved": "__unresolved_0"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc",
-          "loc": {
-            "start": {
-              "line": 2,
-              "column": 33
-            },
-            "end": {
-              "line": 2,
-              "column": 37
-            }
-          }
-        }
-      ],
-      "type": "esm",
-      "resolutions": [
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/code-quality/cr.mjs"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        }
-      ]
-    },
-    "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/scene/code/genShop.ts": {
-      "mTimestamp": {
-        "mtime": 1733218528944.618,
-        "uuid": "b5b2aa0d-5160-4eb1-ad57-41a9fac6e06b"
-      },
-      "chunkId": "8f45599b61a4caa30b5d27114a98658522eaba60",
-      "imports": [
-        {
-          "value": "cce:/internal/code-quality/cr.mjs",
-          "resolved": "__unresolved_0"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc",
-          "loc": {
-            "start": {
-              "line": 12,
-              "column": 7
-            },
-            "end": {
-              "line": 12,
-              "column": 11
-            }
-          }
-        },
-        {
-          "value": "./http",
-          "resolved": "__unresolved_1",
-          "loc": {
-            "start": {
-              "line": 13,
-              "column": 28
-            },
-            "end": {
-              "line": 13,
-              "column": 36
-            }
-          }
-        },
-        {
-          "value": "./buySeedEffect",
-          "resolved": "__unresolved_2",
-          "loc": {
-            "start": {
-              "line": 15,
-              "column": 30
-            },
-            "end": {
-              "line": 15,
-              "column": 47
-            }
-          }
-        },
-        {
-          "value": "./utils",
-          "resolved": "__unresolved_3",
-          "loc": {
-            "start": {
-              "line": 16,
-              "column": 30
-            },
-            "end": {
-              "line": 16,
-              "column": 39
-            }
-          }
-        }
-      ],
-      "type": "esm",
-      "resolutions": [
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/code-quality/cr.mjs"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/scene/code/http.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/scene/code/buySeedEffect.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/scene/code/utils.ts"
-          },
-          "messages": []
-        }
-      ]
-    },
-    "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/scene/code/buySeedEffect.ts": {
-      "mTimestamp": {
-        "mtime": 1733219244425.8728,
-        "uuid": "9d93f504-0006-4eea-926b-a79fc10f2e93"
-      },
-      "chunkId": "9a6259fcd3d0018f18982824bcd5b217be9a535e",
-      "imports": [
-        {
-          "value": "cce:/internal/code-quality/cr.mjs",
-          "resolved": "__unresolved_0"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc",
-          "loc": {
-            "start": {
-              "line": 1,
-              "column": 44
-            },
-            "end": {
-              "line": 1,
-              "column": 48
-            }
-          }
-        },
-        {
-          "value": "./dialog",
-          "resolved": "__unresolved_1",
-          "loc": {
-            "start": {
-              "line": 3,
-              "column": 23
-            },
-            "end": {
-              "line": 3,
-              "column": 33
-            }
-          }
-        },
-        {
-          "value": "./buySeed",
-          "resolved": "__unresolved_2",
-          "loc": {
-            "start": {
-              "line": 4,
-              "column": 24
-            },
-            "end": {
-              "line": 4,
-              "column": 35
-            }
-          }
-        }
-      ],
-      "type": "esm",
-      "resolutions": [
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/code-quality/cr.mjs"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/scene/code/dialog.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/scene/code/buySeed.ts"
-          },
-          "messages": []
-        }
-      ]
-    },
-    "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/scene/code/circles.ts": {
-      "mTimestamp": {
-        "mtime": 1733139020374.8442,
-        "uuid": "f96f613c-3b56-4f90-88a2-13e424e20573"
-      },
-      "chunkId": "c37c4ecc9f83d5623967e1e968e621c000e2af1a",
-      "imports": [
-        {
-          "value": "cce:/internal/code-quality/cr.mjs",
-          "resolved": "__unresolved_0"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc",
-          "loc": {
-            "start": {
-              "line": 13,
-              "column": 7
-            },
-            "end": {
-              "line": 13,
-              "column": 11
-            }
-          }
-        },
-        {
-          "value": "./http",
-          "resolved": "__unresolved_1",
-          "loc": {
-            "start": {
-              "line": 14,
-              "column": 28
-            },
-            "end": {
-              "line": 14,
-              "column": 36
-            }
-          }
-        },
-        {
-          "value": "./loadData",
-          "resolved": "__unresolved_2",
-          "loc": {
-            "start": {
-              "line": 16,
-              "column": 26
-            },
-            "end": {
-              "line": 16,
-              "column": 38
-            }
-          }
-        },
-        {
-          "value": "./globalData",
-          "resolved": "__unresolved_3",
-          "loc": {
-            "start": {
-              "line": 17,
-              "column": 27
-            },
-            "end": {
-              "line": 17,
-              "column": 41
-            }
-          }
-        },
-        {
-          "value": "./genInfo",
-          "resolved": "__unresolved_4",
-          "loc": {
-            "start": {
-              "line": 18,
-              "column": 24
-            },
-            "end": {
-              "line": 18,
-              "column": 35
-            }
-          }
-        },
-        {
-          "value": "./dialog",
-          "resolved": "__unresolved_5",
-          "loc": {
-            "start": {
-              "line": 19,
-              "column": 23
-            },
-            "end": {
-              "line": 19,
-              "column": 33
-            }
-          }
-        }
-      ],
-      "type": "esm",
-      "resolutions": [
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/code-quality/cr.mjs"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/scene/code/http.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/scene/code/loadData.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/scene/code/globalData.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/scene/code/genInfo.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/scene/code/dialog.ts"
-          },
-          "messages": []
-        }
-      ]
-    },
-    "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/scene/code/genInfo.ts": {
-      "mTimestamp": {
-        "mtime": 1733043688405.1125,
-        "uuid": "c70a354b-405a-4822-ba2c-80ebb2b23689"
-      },
-      "chunkId": "f66fad136111133c2223a2465f05512a81d5a9a3",
-      "imports": [
-        {
-          "value": "cce:/internal/code-quality/cr.mjs",
-          "resolved": "__unresolved_0"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc",
-          "loc": {
-            "start": {
-              "line": 1,
-              "column": 57
-            },
-            "end": {
-              "line": 1,
-              "column": 61
-            }
-          }
-        },
-        {
-          "value": "./http",
-          "resolved": "__unresolved_1",
-          "loc": {
-            "start": {
-              "line": 3,
-              "column": 28
-            },
-            "end": {
-              "line": 3,
-              "column": 36
-            }
-          }
-        },
-        {
-          "value": "./globalData",
-          "resolved": "__unresolved_2",
-          "loc": {
-            "start": {
-              "line": 5,
-              "column": 27
-            },
-            "end": {
-              "line": 5,
-              "column": 41
-            }
-          }
-        }
-      ],
-      "type": "esm",
-      "resolutions": [
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/code-quality/cr.mjs"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/scene/code/http.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/scene/code/globalData.ts"
-          },
-          "messages": []
-        }
-      ]
-    },
-    "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/scene/code/dashedRectangle.ts": {
-      "mTimestamp": {
-        "mtime": 1732304520529.3489,
-        "uuid": "c9240af7-0d18-4933-80f2-170fcc258dfc"
-      },
-      "chunkId": "59345d0e53efbe9de544ea376eeabdb3ad2e3d07",
-      "imports": [
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc",
-          "loc": {
-            "start": {
-              "line": 1,
-              "column": 55
-            },
-            "end": {
-              "line": 1,
-              "column": 59
-            }
-          }
-        }
-      ],
-      "type": "esm",
-      "resolutions": [
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        }
-      ]
-    },
-    "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/scene/code/drawRoundedRect.ts": {
-      "mTimestamp": {
-        "mtime": 1733141020293.9578,
-        "uuid": "a002a77f-06b6-43ca-9e1b-b424b6a8e4d7"
-      },
-      "chunkId": "d2760af6bc6ccd0840fd7562ec4e3240419d5b05",
-      "imports": [
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc",
-          "loc": {
-            "start": {
-              "line": 1,
-              "column": 55
-            },
-            "end": {
-              "line": 1,
-              "column": 59
-            }
-          }
-        }
-      ],
-      "type": "esm",
-      "resolutions": [
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        }
-      ]
-    },
-    "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/scene/code/drawer.ts": {
-      "mTimestamp": {
-        "mtime": 1731699552432.1113,
-        "uuid": "01adda21-79b2-4087-b26f-faf8121ef141"
-      },
-      "chunkId": "20cee8f6b7fa9db659556d3b6ff0eab3c0c3eac3",
-      "imports": [
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc",
-          "loc": {
-            "start": {
-              "line": 11,
-              "column": 7
-            },
-            "end": {
-              "line": 11,
-              "column": 11
-            }
-          }
-        }
-      ],
-      "type": "esm",
-      "resolutions": [
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        }
-      ]
-    },
-    "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/scene/code/harvest.ts": {
-      "mTimestamp": {
-        "mtime": 1732441890301.5354,
-        "uuid": "bcb8aee2-14c6-4f7a-9215-029efa07ea5d"
-      },
-      "chunkId": "2e4d3fbb1fda66d46ea88c5ec3c3c39f978eeb4c",
-      "imports": [
-        {
-          "value": "cce:/internal/code-quality/cr.mjs",
-          "resolved": "__unresolved_0"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc",
-          "loc": {
-            "start": {
-              "line": 9,
-              "column": 7
-            },
-            "end": {
-              "line": 9,
-              "column": 11
-            }
-          }
-        },
-        {
-          "value": "./loadData",
-          "resolved": "__unresolved_1",
-          "loc": {
-            "start": {
-              "line": 10,
-              "column": 28
-            },
-            "end": {
-              "line": 10,
-              "column": 40
-            }
-          }
-        },
-        {
-          "value": "./http",
-          "resolved": "__unresolved_2",
-          "loc": {
-            "start": {
-              "line": 11,
-              "column": 28
-            },
-            "end": {
-              "line": 11,
-              "column": 36
-            }
-          }
-        },
-        {
-          "value": "./dialog",
-          "resolved": "__unresolved_3",
-          "loc": {
-            "start": {
-              "line": 13,
-              "column": 23
-            },
-            "end": {
-              "line": 13,
-              "column": 33
-            }
-          }
-        }
-      ],
-      "type": "esm",
-      "resolutions": [
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/code-quality/cr.mjs"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/scene/code/loadData.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/scene/code/http.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/scene/code/dialog.ts"
-          },
-          "messages": []
-        }
-      ]
-    },
-    "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/scene/code/interface.ts": {
-      "mTimestamp": {
-        "mtime": 1732448373769.7173,
-        "uuid": "42547275-7807-4c87-ac42-2e0e126017f0"
-      },
-      "chunkId": "ab7cd414fea80689adb197eef70143115225513b",
-      "imports": [
-        {
-          "value": "cc"
-        }
-      ],
-      "type": "esm",
-      "resolutions": [
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        }
-      ]
-    },
-    "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/scene/code/login.ts": {
-      "mTimestamp": {
-        "mtime": 1731161602038.456,
-        "uuid": "bbf92da1-2d0f-4324-910f-727fd60ea76f"
-      },
-      "chunkId": "707346458556207e432db6c085d4fda488d9049d",
-      "imports": [
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc",
-          "loc": {
-            "start": {
-              "line": 8,
-              "column": 7
-            },
-            "end": {
-              "line": 8,
-              "column": 11
-            }
-          }
-        }
-      ],
-      "type": "esm",
-      "resolutions": [
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        }
-      ]
-    },
-    "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/scene/code/main.ts": {
-      "mTimestamp": {
-        "mtime": 1732958136617.699,
-        "uuid": "ad534c45-313f-494a-9f0a-10a9c7f79cb4"
-      },
-      "chunkId": "600390f9f687c8a8523438f30262db6bb2995d59",
-      "imports": [
-        {
-          "value": "cce:/internal/code-quality/cr.mjs",
-          "resolved": "__unresolved_0"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc",
-          "loc": {
-            "start": {
-              "line": 1,
-              "column": 75
-            },
-            "end": {
-              "line": 1,
-              "column": 79
-            }
-          }
-        },
-        {
-          "value": "./login",
-          "resolved": "__unresolved_1",
-          "loc": {
-            "start": {
-              "line": 2,
-              "column": 22
-            },
-            "end": {
-              "line": 2,
-              "column": 31
-            }
-          }
-        },
-        {
-          "value": "./genBlock",
-          "resolved": "__unresolved_2",
-          "loc": {
-            "start": {
-              "line": 3,
-              "column": 25
-            },
-            "end": {
-              "line": 3,
-              "column": 37
-            }
-          }
-        }
-      ],
-      "type": "esm",
-      "resolutions": [
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/code-quality/cr.mjs"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/scene/code/login.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/scene/code/genBlock.ts"
-          },
-          "messages": []
-        }
-      ]
-    },
-    "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/scene/code/overlayMask.ts": {
-      "mTimestamp": {
-        "mtime": 1731233886235.5205,
-        "uuid": "8d2ecc31-2cf7-4ac4-b949-23fcd94273f4"
-      },
-      "chunkId": "44a4a6dab081196c4a18c43d1e134bd114ed8fe1",
-      "imports": [
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc",
-          "loc": {
-            "start": {
-              "line": 8,
-              "column": 7
-            },
-            "end": {
-              "line": 8,
-              "column": 11
-            }
-          }
-        }
-      ],
-      "type": "esm",
-      "resolutions": [
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        }
-      ]
-    },
-    "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/scene/code/popupStop.ts": {
-      "mTimestamp": {
-        "mtime": 1730483441165.3765,
-        "uuid": "d9d110b5-1aaa-4121-abe4-63f2d89de6cc"
-      },
-      "chunkId": "4b24a7d2dc8e7af4c8c4278ffa029e2fc7ab92a4",
-      "imports": [
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc",
-          "loc": {
-            "start": {
-              "line": 1,
-              "column": 63
-            },
-            "end": {
-              "line": 1,
-              "column": 67
-            }
-          }
-        }
-      ],
-      "type": "esm",
-      "resolutions": [
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        }
-      ]
-    },
-    "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/scene/code/scaleAction.ts": {
-      "mTimestamp": {
-        "mtime": 1730307847629.9087,
-        "uuid": "086261dd-eb9f-4452-a523-7f59d60ae7e2"
-      },
-      "chunkId": "66b6286446315ab294e5d93bf02304dbf28125fe",
-      "imports": [
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc",
-          "loc": {
-            "start": {
-              "line": 1,
-              "column": 77
-            },
-            "end": {
-              "line": 1,
-              "column": 81
-            }
-          }
-        }
-      ],
-      "type": "esm",
-      "resolutions": [
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        }
-      ]
-    },
-    "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/scene/code/sceneSwitcher.ts": {
-      "mTimestamp": {
-        "mtime": 1733053117606.7676,
-        "uuid": "90faea67-71ce-48f4-aadc-d60fc5054170"
-      },
-      "chunkId": "1c7c919f5524c6064470d1161af3fcd9edbe66ee",
-      "imports": [
-        {
-          "value": "cce:/internal/code-quality/cr.mjs",
-          "resolved": "__unresolved_0"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc",
-          "loc": {
-            "start": {
-              "line": 1,
-              "column": 48
-            },
-            "end": {
-              "line": 1,
-              "column": 52
-            }
-          }
-        },
-        {
-          "value": "./genBlock",
-          "resolved": "__unresolved_1",
-          "loc": {
-            "start": {
-              "line": 2,
-              "column": 25
-            },
-            "end": {
-              "line": 2,
-              "column": 37
-            }
-          }
-        },
-        {
-          "value": "./globalData",
-          "resolved": "__unresolved_2",
-          "loc": {
-            "start": {
-              "line": 3,
-              "column": 27
-            },
-            "end": {
-              "line": 3,
-              "column": 41
-            }
-          }
-        }
-      ],
-      "type": "esm",
-      "resolutions": [
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/code-quality/cr.mjs"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/scene/code/genBlock.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/scene/code/globalData.ts"
-          },
-          "messages": []
-        }
-      ]
-    },
-    "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/scene/code/showTelegramInfo.ts": {
-      "mTimestamp": {
-        "mtime": 1731095939797.6174,
-        "uuid": "5605442c-f367-49e2-bce9-55b01d78c92b"
-      },
-      "chunkId": "2cf75ad9a5788d7fc5d564b25b2b1990779f644b",
-      "imports": [
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc",
-          "loc": {
-            "start": {
-              "line": 1,
-              "column": 57
-            },
-            "end": {
-              "line": 1,
-              "column": 61
-            }
-          }
-        }
-      ],
-      "type": "esm",
-      "resolutions": [
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        }
-      ]
-    },
-    "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/scene/code/telegram.ts": {
-      "mTimestamp": {
-        "mtime": 1733049996722.4844,
-        "uuid": "502c4070-4389-4d87-a0e1-ed5bffec4a38"
-      },
-      "chunkId": "b9fd09e3020473b345377168bbd3242f16f8be10",
-      "imports": [
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc",
-          "loc": {
-            "start": {
-              "line": 1,
-              "column": 46
-            },
-            "end": {
-              "line": 1,
-              "column": 50
-            }
-          }
-        }
-      ],
-      "type": "esm",
-      "resolutions": [
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        }
-      ]
-    },
-    "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/scene/code/timer.ts": {
-      "mTimestamp": {
-        "mtime": 1730307847629.9087,
-        "uuid": "1cceaba6-6929-4cc1-9c8a-3fbc8a345bc8"
-      },
-      "chunkId": "8aed3b0ad3b2b7538f25a54fe0aa99a00b183bfa",
-      "imports": [
-        {
-          "value": "cce:/internal/code-quality/cr.mjs",
-          "resolved": "__unresolved_0"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc",
-          "loc": {
-            "start": {
-              "line": 1,
-              "column": 57
-            },
-            "end": {
-              "line": 1,
-              "column": 61
-            }
-          }
-        },
-        {
-          "value": "./loadData",
-          "resolved": "__unresolved_1",
-          "loc": {
-            "start": {
-              "line": 5,
-              "column": 7
-            },
-            "end": {
-              "line": 5,
-              "column": 19
-            }
-          }
-        }
-      ],
-      "type": "esm",
-      "resolutions": [
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/code-quality/cr.mjs"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/scene/code/loadData.ts"
-          },
-          "messages": []
-        }
-      ]
-    },
-    "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/game/scene/code/userAvatar.ts": {
-      "mTimestamp": {
-        "mtime": 1733157434266.4268,
-        "uuid": "11f81f04-9e76-48fb-ac7a-2e125f21a855"
-      },
-      "chunkId": "849bac2fb51785f13cfe0e5a57fa478f9416c9cb",
-      "imports": [
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc",
-          "loc": {
-            "start": {
-              "line": 10,
-              "column": 7
-            },
-            "end": {
-              "line": 10,
-              "column": 11
-            }
-          }
-        }
-      ],
-      "type": "esm",
-      "resolutions": [
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        }
-      ]
-    },
-    "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/node_modules/@telegram-apps/sdk/dist/index.js": {
-      "mTimestamp": 1732517384986.0586,
-      "chunkId": "9c2384103ed7453c4a01015ad2c1545120f8cf98",
-      "imports": [],
-      "type": "esm",
-      "resolutions": []
-    },
-    "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/node_modules/@telegram-apps/sdk-react/dist/index.js": {
-      "mTimestamp": 1734446564687.4304,
-      "chunkId": "5e892bac87aaf62b5ac527c59b5b4ca417eaa712",
-      "imports": [
-        {
-          "value": "react",
-          "loc": {
-            "start": {
-              "line": 1,
-              "column": 58
-            },
-            "end": {
-              "line": 1,
-              "column": 65
-            }
-          }
-        }
-      ],
-      "type": "esm",
-      "resolutions": [
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/node_modules/react/index.mjs?cjs=&original=.js"
-          },
-          "messages": []
-        }
-      ]
-    },
-    "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/node_modules/react/index.mjs?cjs=&original=.js": {
-      "mTimestamp": 1734446564502.0913,
-      "chunkId": "a068cd939ecc0a1136e8d56b9b7ef68da91ece7b",
+    "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/node_modules/raf/index.mjs?cjs=&original=.js": {
+      "mTimestamp": 1734772039058.5393,
+      "chunkId": "6e6fe7215f16d049bc144a85e40f9f9edef26722",
       "imports": [
         {
           "value": "./index.js",
@@ -10197,7 +4858,7 @@
         {
           "resolved": {
             "type": "module",
-            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/node_modules/react/index.js"
+            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/node_modules/raf/index.js"
           },
           "messages": []
         },
@@ -10211,22 +4872,22 @@
         {
           "resolved": {
             "type": "module",
-            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/node_modules/react/index.js"
+            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/node_modules/raf/index.js"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/node_modules/react/index.js"
+            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/node_modules/raf/index.js"
           },
           "messages": []
         }
       ]
     },
-    "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/node_modules/react/index.js": {
-      "mTimestamp": 1734446564502.0913,
-      "chunkId": "d349d05812ef29ce97b0fd624c72e67cbe798cd3",
+    "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/node_modules/raf/index.js": {
+      "mTimestamp": 1734772039058.5393,
+      "chunkId": "224226214ec175feec974463c5d3faeaa16412c0",
       "imports": [
         {
           "value": "cce:/internal/ml/cjs-loader.mjs",
@@ -10243,8 +4904,7 @@
           }
         },
         {
-          "value": "./cjs/react.production.js",
-          "resolved": "__unresolved_1",
+          "value": "performance-now",
           "loc": {
             "start": {
               "line": 2,
@@ -10252,21 +4912,7 @@
             },
             "end": {
               "line": 2,
-              "column": 63
-            }
-          }
-        },
-        {
-          "value": "./cjs/react.development.js",
-          "resolved": "__unresolved_2",
-          "loc": {
-            "start": {
-              "line": 3,
-              "column": 37
-            },
-            "end": {
-              "line": 3,
-              "column": 65
+              "column": 53
             }
           }
         }
@@ -10283,14 +4929,7 @@
         {
           "resolved": {
             "type": "module",
-            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/node_modules/react/cjs/react.production.js"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/node_modules/react/cjs/react.development.js"
+            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/node_modules/performance-now/lib/performance-now.js"
           },
           "messages": []
         }
@@ -10303,9 +4942,9 @@
       "type": "esm",
       "resolutions": []
     },
-    "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/node_modules/react/cjs/react.production.js": {
-      "mTimestamp": 1734446564519.0793,
-      "chunkId": "7c15d12aaefcd35da63036b5c5e22f9ecbaf2964",
+    "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/node_modules/performance-now/lib/performance-now.js": {
+      "mTimestamp": 1734772039039.6472,
+      "chunkId": "e68af6bfd6fbb70659f1581726653506621e4b30",
       "imports": [
         {
           "value": "cce:/internal/ml/cjs-loader.mjs",
@@ -10333,9 +4972,102 @@
         }
       ]
     },
-    "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/node_modules/react/cjs/react.development.js": {
-      "mTimestamp": 1734446564517.0786,
-      "chunkId": "672c3841a06967f2fbe6c96936c087e85cb69d20",
+    "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/node_modules/rgbcolor/index.mjs?cjs=&original=.js": {
+      "mTimestamp": 1734772039068.3718,
+      "chunkId": "45c1b38c970a42f6103508f4e0337ca46d1755d2",
+      "imports": [
+        {
+          "value": "./index.js",
+          "resolved": "__unresolved_0",
+          "loc": {
+            "start": {
+              "line": 2,
+              "column": 36
+            },
+            "end": {
+              "line": 2,
+              "column": 48
+            }
+          }
+        },
+        {
+          "value": "cce:/internal/ml/cjs-loader.mjs",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 19
+            },
+            "end": {
+              "line": 3,
+              "column": 52
+            }
+          }
+        },
+        {
+          "value": "./index.js",
+          "resolved": "__unresolved_2",
+          "loc": {
+            "start": {
+              "line": 8,
+              "column": 14
+            },
+            "end": {
+              "line": 8,
+              "column": 26
+            }
+          }
+        },
+        {
+          "value": "./index.js",
+          "resolved": "__unresolved_3",
+          "loc": {
+            "start": {
+              "line": 9,
+              "column": 29
+            },
+            "end": {
+              "line": 9,
+              "column": 41
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/node_modules/rgbcolor/index.js"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/ml/cjs-loader.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/node_modules/rgbcolor/index.js"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/node_modules/rgbcolor/index.js"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/node_modules/rgbcolor/index.js": {
+      "mTimestamp": 1734772039068.3718,
+      "chunkId": "a2ac64cc39c6a35bc57b087f624bc89142829b63",
       "imports": [
         {
           "value": "cce:/internal/ml/cjs-loader.mjs",
@@ -10358,6 +5090,220 @@
           "resolved": {
             "type": "module",
             "url": "cce:/internal/ml/cjs-loader.mjs"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/node_modules/svg-pathdata/lib/SVGPathData.module.js": {
+      "mTimestamp": 1734772039060.411,
+      "chunkId": "56901e9e941f6df04453d7ec4c3699e2aa479e37",
+      "imports": [],
+      "type": "esm",
+      "resolutions": []
+    },
+    "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/node_modules/stackblur-canvas/dist/stackblur.mjs?cjs=&original=.js": {
+      "mTimestamp": 1734772039090.5945,
+      "chunkId": "180648639670650f9074d2198ea543edfd7ce688",
+      "imports": [
+        {
+          "value": "./stackblur.js",
+          "resolved": "__unresolved_0",
+          "loc": {
+            "start": {
+              "line": 2,
+              "column": 36
+            },
+            "end": {
+              "line": 2,
+              "column": 52
+            }
+          }
+        },
+        {
+          "value": "cce:/internal/ml/cjs-loader.mjs",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 19
+            },
+            "end": {
+              "line": 3,
+              "column": 52
+            }
+          }
+        },
+        {
+          "value": "./stackblur.js",
+          "resolved": "__unresolved_2",
+          "loc": {
+            "start": {
+              "line": 8,
+              "column": 14
+            },
+            "end": {
+              "line": 8,
+              "column": 30
+            }
+          }
+        },
+        {
+          "value": "./stackblur.js",
+          "resolved": "__unresolved_3",
+          "loc": {
+            "start": {
+              "line": 9,
+              "column": 29
+            },
+            "end": {
+              "line": 9,
+              "column": 45
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/node_modules/stackblur-canvas/dist/stackblur.js"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/ml/cjs-loader.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/node_modules/stackblur-canvas/dist/stackblur.js"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/node_modules/stackblur-canvas/dist/stackblur.js"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/node_modules/stackblur-canvas/dist/stackblur.js": {
+      "mTimestamp": 1734772039090.5945,
+      "chunkId": "da7bfdb11262d6ce0a126db3575248cdf9b92274",
+      "imports": [
+        {
+          "value": "cce:/internal/ml/cjs-loader.mjs",
+          "resolved": "__unresolved_0",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 23
+            },
+            "end": {
+              "line": 1,
+              "column": 56
+            }
+          }
+        }
+      ],
+      "type": "commonjs",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/ml/cjs-loader.mjs"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/roundedShaderSprite.ts": {
+      "mTimestamp": {
+        "mtime": 1734821354358.0786,
+        "uuid": "e05262e0-3320-4e1b-a6de-d97c4b625e8b"
+      },
+      "chunkId": "82acb43b6229572069a9fb28e045d044c02ac70f",
+      "imports": [
+        {
+          "value": "cc"
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/roundBox.ts": {
+      "mTimestamp": {
+        "mtime": 1734824920878.3289,
+        "uuid": "d7acd86d-e737-4547-94d5-67ffb1a34b05"
+      },
+      "chunkId": "ed0383d86cd48d11e604866c5a7411536f3747ab",
+      "imports": [
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc/env",
+          "loc": {
+            "start": {
+              "line": 7,
+              "column": 33
+            },
+            "end": {
+              "line": 7,
+              "column": 41
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "external",
+            "specifierOrURL": "cc/env"
           },
           "messages": []
         }

@@ -14,6 +14,7 @@ import { httpRequest } from "./http";
 import { GenPlant } from "./genPlant";
 import { Dialog } from "./dialog";
 import { GlobalData } from "./globalData";
+import { i18n } from "./loadData";
 const { ccclass, property } = _decorator;
 
 @ccclass("GenBlock")
@@ -276,12 +277,14 @@ export class GenBlock extends Component {
           plantId,
         },
       });
-      if (response.ok) {
-        // this.updateFarmLand(farmlandId);
+      if (response.ok && response.data.code === 200) {
+        globalData.setMessageLabel(i18n.stealSuccess);
+        this.updateFarmLand(farmlandId);
       } else {
-        console.error("Request failed with status:", response.status);
+        globalData.setMessageLabel(i18n.stealFailed);
       }
     } catch (error) {
+      globalData.setMessageLabel(i18n.stealFailed);
       console.error("Error:", error);
     }
   }

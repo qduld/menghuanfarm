@@ -1,10 +1,10 @@
 // GlobalData.ts
-import { _decorator, find } from "cc";
+import { _decorator, Component, find, Label, Node } from "cc";
 import { IUserInfo } from "./interface";
 const { ccclass, property } = _decorator;
 
 @ccclass("GlobalData")
-export class GlobalData {
+export class GlobalData extends Component {
   private static instance: GlobalData;
 
   @property
@@ -20,9 +20,19 @@ export class GlobalData {
   stolenId: Number = -1; // 是偷取
 
   @property
+  UMessage: Node = null; //信息
+
+  @property
   token: string = "7360724156:AAGeBGUrfDuRRYTkL-G4ZWKmi3rIKWH05VU";
 
-  private constructor() {}
+  private constructor() {
+    super();
+  }
+
+  onLoad() {
+    this.UMessage = find("MainCanvas/Message");
+    this.UMessage.active = false;
+  }
 
   static getInstance() {
     if (!GlobalData.instance) {
@@ -68,5 +78,14 @@ export class GlobalData {
     addtionPlusCircle.active = true;
     footer.active = true;
     footerStolen.active = false;
+  }
+  setMessageLabel(message, timer = 2) {
+    const UMessageFind = find("MainCanvas/Message");
+    UMessageFind.active = true;
+    UMessageFind.getChildByName("Label").getComponent(Label).string = message;
+
+    setTimeout(() => {
+      UMessageFind.active = false;
+    }, timer * 1000);
   }
 }

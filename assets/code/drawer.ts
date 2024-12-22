@@ -32,35 +32,23 @@ export class Drawer extends Component {
       ? this.closedPosition
       : this.openPosition;
 
+    let spritePath = "";
     if (this.isOpen) {
-      resources.load(
-        "drawerclose/spriteFrame",
-        SpriteFrame,
-        (err, spriteFrame) => {
-          if (err) {
-            console.error("Failed to load sprite:", err);
-            return;
-          }
-
-          drawerBtn.getChildByName("Sprite").getComponent(Sprite).spriteFrame =
-            spriteFrame;
-        }
-      );
+      spritePath = "drawerclose/spriteFrame";
     } else {
-      resources.load(
-        "drawerexpand/spriteFrame",
-        SpriteFrame,
-        (err, spriteFrame) => {
-          if (err) {
-            console.error("Failed to load sprite:", err);
-            return;
-          }
-
-          drawerBtn.getChildByName("Sprite").getComponent(Sprite).spriteFrame =
-            spriteFrame;
-        }
-      );
+      spritePath = "drawerexpand/spriteFrame";
     }
+
+    resources.load(spritePath, SpriteFrame, (err, spriteFrame) => {
+      if (err) {
+        console.error("Failed to load sprite:", err);
+        return;
+      }
+
+      drawerBtn.getChildByName("Sprite").getComponent(Sprite).spriteFrame =
+        spriteFrame;
+    });
+
     // 使用 tween 实现位置移动
     tween(this.drawer)
       .to(0.3, { position: targetPosition }, { easing: "cubicOut" })

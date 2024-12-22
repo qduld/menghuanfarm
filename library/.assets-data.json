@@ -1514,11 +1514,7 @@
     "value": {
       "depends": [
         "5a6f4efe-edd1-4c9d-adc3-c28f8d58012d",
-        "85c7a98d-f8fe-4e9e-97f4-0d994bc01564@f9941",
-        "0b1e9b4b-290d-46d0-96c0-87bbd76b1581@f9941",
-        "adaf1c3b-497a-4f0c-a32a-a7eba45d5706@f9941",
         "a23bf510-4f33-449d-ba46-53f0d71d2a99",
-        "c5793078-0526-465a-ab75-62fc22667157@f9941",
         "cc35e074-3d5f-4aa7-b34e-515b15da23fc@f9941",
         "979ad747-bd5d-4b72-9495-e608182dc2b2@f9941",
         "951249e0-9f16-456d-8b85-a6ca954da16b@f9941",
@@ -1529,12 +1525,18 @@
         "be63848c-7985-4a05-9923-04ed3101ae7d@f9941",
         "6cfb57f2-1c8b-46a1-9701-60273ae11a81@f9941",
         "7294683f-f222-4dcd-9d80-b992b68c4f47@f9941",
+        "fda095cb-831d-4601-ad94-846013963de8",
         "25aa232e-0f5d-4ef1-8322-efdb2fc54520@f9941",
         "f9c850d0-7f90-4c74-a183-33fdaf8e0abb@f9941",
         "0b7050e4-97fc-4296-8a15-723411fb8cf0@f9941",
         "bfb55259-6859-44d6-897f-99df38be55ea@f9941",
         "fa0cd478-509d-4e2c-8929-7306fa5e2815@f9941",
         "9fc370ae-a542-4a70-8c22-9317249356bc@f9941",
+        "85c7a98d-f8fe-4e9e-97f4-0d994bc01564@f9941",
+        "0b1e9b4b-290d-46d0-96c0-87bbd76b1581@f9941",
+        "adaf1c3b-497a-4f0c-a32a-a7eba45d5706@f9941",
+        "4714080b-7a48-4b97-a56f-0f6bd6be9abc",
+        "c5793078-0526-465a-ab75-62fc22667157@f9941",
         "edde6dcd-c781-448d-bb34-0847d76bf269@f9941",
         "9436aea8-07a9-42c7-9d97-24ea48859564",
         "93b20a49-8717-4b29-b805-7aaa485c606e@f9941",
@@ -1556,14 +1558,15 @@
       ],
       "dependScripts": [
         "a002a77f-06b6-43ca-9e1b-b424b6a8e4d7",
-        "d531bfae-33e5-4dc0-b5e6-ece4850922b3",
         "029647c6-2934-4064-b3d0-d0e70e757fa5",
         "c70a354b-405a-4822-ba2c-80ebb2b23689",
         "01adda21-79b2-4087-b26f-faf8121ef141",
         "11f81f04-9e76-48fb-ac7a-2e125f21a855",
         "90faea67-71ce-48f4-aadc-d60fc5054170",
+        "d7acd86d-e737-4547-94d5-67ffb1a34b05",
+        "d531bfae-33e5-4dc0-b5e6-ece4850922b3",
         "ad534c45-313f-494a-9f0a-10a9c7f79cb4",
-        "502c4070-4389-4d87-a0e1-ed5bffec4a38",
+        "1c5b2c5c-a657-4333-8263-69bcb5598009",
         "e84ac9e3-97d5-41ef-bdc6-5fb9d5888b74",
         "8d2ecc31-2cf7-4ac4-b949-23fcd94273f4",
         "b5b2aa0d-5160-4eb1-ad57-41a9fac6e06b",
@@ -2252,9 +2255,7 @@
   },
   "f634560a-7f63-4e45-aa59-1551a3f089cd": {
     "url": "db://assets/resources/菜鸟图库-金币收款.mp3",
-    "value": {
-      "depends": []
-    },
+    "value": {},
     "versionCode": 1
   },
   "9436aea8-07a9-42c7-9d97-24ea48859564": {
@@ -2532,9 +2533,11 @@
         "a30c8038-b20f-4bef-9e58-3550c5f9b31c@f9941",
         "0e164bc0-d62e-40cd-b3b4-ee9853a029ba@f9941",
         "eb90ad40-2d1e-4889-9eef-7494694dec9b@f9941",
+        "a23bf510-4f33-449d-ba46-53f0d71d2a99",
+        "7db40071-2784-4d61-92db-70afb03a169f@f9941",
+        "17df91e8-4d4a-4ef0-bead-cb8aaf763cc1@f9941",
         "f78a227a-b60e-4eaf-9d02-81133525bcca@f9941",
         "3251977c-7fc2-4c2a-91db-85127d787c4c@f9941",
-        "a23bf510-4f33-449d-ba46-53f0d71d2a99",
         "0b1e9b4b-290d-46d0-96c0-87bbd76b1581@f9941",
         "c10e67a9-4d0e-48f5-9c33-4730f27b97ab@f9941",
         "951249e0-9f16-456d-8b85-a6ca954da16b@f9941",
@@ -4177,6 +4180,174 @@
   "a8c95075-47ce-4836-b11b-844c8037d978": {
     "url": "db://assets/game",
     "value": {},
+    "versionCode": 1
+  },
+  "cf4dc34b-8c49-4fc8-b329-7c0faa4a4a85": {
+    "url": "db://assets/scene/load.scene",
+    "value": {
+      "depends": [
+        "cf4dc34b-8c49-4fc8-b329-7c0faa4a4a85",
+        "a23bf510-4f33-449d-ba46-53f0d71d2a99",
+        "24a704da-2867-446d-8d1a-5e920c75e09d@f9941",
+        "9fd900dd-221b-4f89-8f2c-fba34243c835@f9941"
+      ],
+      "dependScripts": [
+        "a002a77f-06b6-43ca-9e1b-b424b6a8e4d7",
+        "0f0f90d1-0fb3-495a-876f-a171aa6f9e50"
+      ]
+    },
+    "versionCode": 1
+  },
+  "28c9ea5c-8e2b-4761-b691-1983a128253f": {
+    "url": "db://assets/code/load.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "0f0f90d1-0fb3-495a-876f-a171aa6f9e50": {
+    "url": "db://assets/code/loadingScreen .ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "1cc1bed6-fafc-40bf-8e32-4e447a0579d2": {
+    "url": "db://assets/effects",
+    "value": {},
+    "versionCode": 1
+  },
+  "c9da2d62-6227-400a-a0f8-05e3f8fa0db1": {
+    "url": "db://assets/shador/rounded.effect.mtl",
+    "value": {},
+    "versionCode": 1
+  },
+  "f1b55077-73e1-4e5a-ae89-942c0da3bb43": {
+    "url": "db://assets/shador/chunk.chunk",
+    "value": {},
+    "versionCode": 1
+  },
+  "e12d3549-895d-4c61-9e4b-bef34b472265": {
+    "url": "db://assets/shador/rounded.effect",
+    "value": {},
+    "versionCode": 1
+  },
+  "77c47c9d-b363-4031-8b68-4d34cf4f1872": {
+    "url": "db://assets/shador/rounded.effectAsset",
+    "value": {},
+    "versionCode": 1
+  },
+  "449668cb-068d-439a-bd01-efd9a1698e6e": {
+    "url": "db://assets/shador/material.mtl",
+    "value": {},
+    "versionCode": 1
+  },
+  "8153b620-80dd-4616-8c09-06cbab31c353": {
+    "url": "db://assets/shador/material.mtl",
+    "value": {},
+    "versionCode": 1
+  },
+  "e05262e0-3320-4e1b-a6de-d97c4b625e8b": {
+    "url": "db://assets/code/roundedShaderSprite.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "70d54e9b-c514-4623-b35d-ba3140139ba4": {
+    "url": "db://assets/shador/surface-effect.effect",
+    "value": {},
+    "versionCode": 1
+  },
+  "1e0df898-0804-49a3-8730-3ff73d95be5c": {
+    "url": "db://assets/shador/surface-effect.effect",
+    "value": {},
+    "versionCode": 1
+  },
+  "4cab64ec-c18a-42d3-b398-8d0afdc66d5d": {
+    "url": "db://assets/shador/surface-effect.effect",
+    "value": {},
+    "versionCode": 1
+  },
+  "73f841c4-86d2-44a7-8659-b65fe14c57e2": {
+    "url": "db://assets/shador/effect.effect",
+    "value": {},
+    "versionCode": 1
+  },
+  "d7acd86d-e737-4547-94d5-67ffb1a34b05": {
+    "url": "db://assets/code/roundBox.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "fe3f70a9-3af6-40bb-8265-20e9f69f4fae": {
+    "url": "db://assets/shador/surface-effect.effect",
+    "value": {},
+    "versionCode": 1
+  },
+  "a10dbc9a-1107-47c5-96a8-57ac1ff877a0": {
+    "url": "db://assets/effects/surface-effect.effect",
+    "value": {},
+    "versionCode": 1
+  },
+  "97944d49-2240-4047-89eb-7e7a234aaacf": {
+    "url": "db://assets/effects/material.mtl",
+    "value": {},
+    "versionCode": 1
+  },
+  "de2bd630-e96f-4452-a3d5-5542fdb8f072": {
+    "url": "db://assets/effects/effect.effect",
+    "value": {},
+    "versionCode": 1
+  },
+  "4714080b-7a48-4b97-a56f-0f6bd6be9abc": {
+    "url": "db://assets/resources/coinSound.mp3",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "7db40071-2784-4d61-92db-70afb03a169f": {
+    "url": "db://assets/resources/bulletin.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "7db40071-2784-4d61-92db-70afb03a169f@6c48a": {
+    "url": "db://assets/resources/bulletin.png@6c48a",
+    "value": {
+      "depends": [
+        "7db40071-2784-4d61-92db-70afb03a169f"
+      ]
+    },
+    "versionCode": 1
+  },
+  "7db40071-2784-4d61-92db-70afb03a169f@f9941": {
+    "url": "db://assets/resources/bulletin.png@f9941",
+    "value": {
+      "depends": [
+        "7db40071-2784-4d61-92db-70afb03a169f@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "17df91e8-4d4a-4ef0-bead-cb8aaf763cc1": {
+    "url": "db://assets/resources/downExpand.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "17df91e8-4d4a-4ef0-bead-cb8aaf763cc1@6c48a": {
+    "url": "db://assets/resources/downExpand.png@6c48a",
+    "value": {
+      "depends": [
+        "17df91e8-4d4a-4ef0-bead-cb8aaf763cc1"
+      ]
+    },
+    "versionCode": 1
+  },
+  "17df91e8-4d4a-4ef0-bead-cb8aaf763cc1@f9941": {
+    "url": "db://assets/resources/downExpand.png@f9941",
+    "value": {
+      "depends": [
+        "17df91e8-4d4a-4ef0-bead-cb8aaf763cc1@6c48a"
+      ]
+    },
     "versionCode": 1
   }
 }

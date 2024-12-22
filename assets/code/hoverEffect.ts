@@ -1,9 +1,24 @@
-import { _decorator, Component, Node } from "cc";
+import {
+  _decorator,
+  AudioClip,
+  AudioSource,
+  Canvas,
+  Component,
+  find,
+  instantiate,
+  Node,
+  resources,
+  sys,
+  tween,
+  UITransform,
+  v3,
+  Vec3,
+} from "cc";
 import { IFarmland } from "./interface";
 import { Dialog } from "./dialog";
 import { GenBlock } from "./genBlock";
 import { GlobalData } from "./globalData";
-const { ccclass } = _decorator;
+const { ccclass, property } = _decorator;
 
 @ccclass("HoverEffect")
 export class HoverEffect extends Component {
@@ -11,20 +26,30 @@ export class HoverEffect extends Component {
   private targetData: IFarmland;
   private targetLevel: number;
 
+  @property
+  hasPlayed: Boolean = false;
+
+  @property(Vec3)
+  leftPosition: Vec3 = new Vec3(0, 25.625, 0); // 关闭位置
+
+  @property(Vec3)
+  rightPosition: Vec3 = new Vec3(60.297, 25.625, 0); // 打开位置
+
   // 通过方法设置 targetNode
   setTargetNode(node: Node, data, level) {
     this.targetNode = node;
     this.targetData = data;
     this.targetLevel = level;
 
-    // 设置监听事件
-    this.targetNode.on(Node.EventType.MOUSE_DOWN, this.onMouseDown, this);
-    // 设置监听事件
-    this.targetNode.on(Node.EventType.MOUSE_ENTER, this.onMouseEnter, this);
-    this.targetNode.on(Node.EventType.MOUSE_LEAVE, this.onMouseLeave, this);
-    this.targetNode.on(Node.EventType.TOUCH_START, this.onTouchStart, this);
-    // this.targetNode.on(Node.EventType.TOUCH_MOVE, this.onTouchMove, this);
-    this.targetNode.on(Node.EventType.TOUCH_END, this.onTouchEnd, this);
+    if (sys.isMobile) {
+      this.targetNode.on(Node.EventType.TOUCH_START, this.onTouchStart, this);
+      // this.targetNode.on(Node.EventType.TOUCH_MOVE, this.onTouchMove, this);
+      this.targetNode.on(Node.EventType.TOUCH_END, this.onTouchEnd, this);
+    } else {
+      this.targetNode.on(Node.EventType.MOUSE_DOWN, this.onMouseDown, this);
+      this.targetNode.on(Node.EventType.MOUSE_ENTER, this.onMouseEnter, this);
+      this.targetNode.on(Node.EventType.MOUSE_LEAVE, this.onMouseLeave, this);
+    }
   }
 
   onMouseEnter() {
@@ -48,6 +73,9 @@ export class HoverEffect extends Component {
     const genBlock = GenBlock.getInstance();
     const dialog = Dialog.getInstance();
     if (this.targetLevel === 3) {
+      this.receiveHandAnimation();
+      this.goldMoveAnimation();
+      this.playVoice();
       if (globalData.isStolen) {
         genBlock.stealFarmland(this.targetData.id, this.targetData.plantId);
       } else {
@@ -62,6 +90,89 @@ export class HoverEffect extends Component {
     }
   }
 
+  receiveHandAnimation() {
+    tween(this.targetNode.getChildByName("Receivehand"))
+      .to(0.3, { position: this.leftPosition }, { easing: "cubicOut" })
+      .to(0.3, { position: this.rightPosition }, { easing: "cubicOut" })
+      .start();
+    setTimeout(() => {
+      this.targetNode.getChildByName("Receivehand").active = false;
+    }, 600);
+  }
+
+  goldMoveAnimation() {
+    const goldEnd = find("MainCanvas/GoldEnd");
+    const gold = instantiate(goldEnd);
+    gold.active = true;
+    gold.setSiblingIndex(this.node.children.length - 1); // 移动到最上层
+    this.node.addChild(gold);
+
+    // 2. 起点（点击土地的位置）
+    const startPosition = this.node
+      .getComponent(UITransform)!
+      .convertToWorldSpaceAR(Vec3.ZERO);
+    const localStartPosition = this.node
+      .getComponent(UITransform)!
+      .convertToNodeSpaceAR(startPosition);
+
+    gold.setPosition(startPosition);
+
+    // 3. 终点（金币袋子的位置）
+    const endPosition = goldEnd
+      .getComponent(UITransform)!
+      .convertToWorldSpaceAR(Vec3.ZERO);
+    const localEndPosition = this.node
+      .getComponent(UITransform)!
+      .convertToNodeSpaceAR(endPosition);
+
+    // 4. 中间控制点（贝塞尔曲线的顶点）
+    const controlPoint = v3(
+      (localStartPosition.x + localEndPosition.x) / 2, // X 坐标为起点和终点的中间
+      localStartPosition.y + 150, // Y 坐标略高，形成弧线
+      0
+    );
+
+    // 5. 贝塞尔曲线动画
+    tween({ t: 0 }) // 使用一个变量 t（0 到 1）表示动画进度
+      .to(
+        1,
+        { t: 1 }, // t 从 0 变为 1
+        {
+          onUpdate: (target) => {
+            const t = target.t;
+            // 贝塞尔曲线公式
+            const x =
+              (1 - t) * (1 - t) * localStartPosition.x +
+              2 * (1 - t) * t * controlPoint.x +
+              t * t * localEndPosition.x;
+            const y =
+              (1 - t) * (1 - t) * localStartPosition.y +
+              2 * (1 - t) * t * controlPoint.y +
+              t * t * localEndPosition.y;
+
+            gold.setPosition(x, y, 0); // 更新金币位置
+          },
+        }
+      )
+      .call(() => {
+        // 动画结束后销毁金币
+        gold.destroy();
+      })
+      .start();
+  }
+
+  playVoice() {
+    const audioSource =
+      this.node.getComponent(AudioSource) ||
+      this.node.addComponent(AudioSource);
+
+    audioSource.play();
+
+    this.scheduleOnce(() => {
+      audioSource.stop();
+    }, 2);
+  }
+
   // onTouchMove() {
   //   if (this.targetLevel === 3) {
   //     this.targetNode.getChildByName("Receivehand").active = true;
@@ -74,6 +185,9 @@ export class HoverEffect extends Component {
     const dialog = Dialog.getInstance();
     if (this.targetLevel === 3) {
       this.targetNode.getChildByName("Receivehand").active = true;
+      this.receiveHandAnimation();
+      this.goldMoveAnimation();
+      this.playVoice();
       if (globalData.isStolen) {
         genBlock.stealFarmland(this.targetData.id, this.targetData.plantId);
       } else {

@@ -1,12 +1,5 @@
-import { IMembersList } from "./interface";
 import { tokenMock, userFilter, authFilter, tokenSort } from "./loadData";
-import { retrieveLaunchParams } from "@telegram-apps/sdk";
-import {
-  buildToken,
-  convertAndFilterKeys,
-  parseCurrentChatParams,
-  objectToUrlParams,
-} from "./utils";
+// import { retrieveLaunchParams } from "@telegram-apps/sdk";
 
 export interface HttpRequestOptions {
   method?: "GET" | "POST" | "PUT" | "DELETE"; // 请求方法
@@ -28,6 +21,7 @@ export interface HttpResponse {
 
 let token = "";
 
+export const proxyUrl = "https://bf.tomocloud.com:8989/proxy";
 // 服务器默认ip和地址
 const defaultServer = "https://bf.tomocloud.com";
 // const defaultServer = "http://39.108.156.78:20180";
@@ -38,23 +32,10 @@ export async function httpRequest<T>(
   params?: Record<string, any>
 ): Promise<HttpResponse> {
   if (!token) {
-    const { initData, initDataRaw } = retrieveLaunchParams();
+    // const { initDataRaw } = retrieveLaunchParams();
 
-    // const urlObject = parseCurrentChatParams();
-    // const userObject = convertAndFilterKeys(initData.user, userFilter);
-    // const authObject = convertAndFilterKeys(initData, authFilter);
-    // authObject.auth_date = Math.floor(
-    //   new Date(authObject.auth_date).getTime() / 1000
-    // );
-
-    // Object.assign(urlObject, authObject);
-    // urlObject["user"] = JSON.stringify(userObject);
-    // console.log(urlObject, "urlObject");
-    console.log(initData, "initData");
-    console.log(initDataRaw, "initDataRaw");
-
-    // token = buildToken(urlObject, tokenSort);
-    token = initDataRaw;
+    token = tokenMock;
+    // token = initDataRaw;
   }
 
   const {
