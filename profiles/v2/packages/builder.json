@@ -41,8 +41,8 @@
         "progress": 1,
         "state": "success",
         "stage": "build",
-        "message": "2024-12-22 21:13:20 build success in 25 s!",
-        "detailMessage": "// ---- build task cocos-service：onBeforeCompressSettings ----\r",
+        "message": "2024-12-22 21:31:12 build success in 27 s!",
+        "detailMessage": "// ---- build task cocos-service：onAfterBuild ----\r",
         "options": {
           "name": "PlantStore",
           "platform": "web-mobile",
@@ -111,7 +111,7 @@
           "replaceSplashScreen": true,
           "logDest": "project://temp/builder/log/web-mobile2022-11-9 11-49.log"
         },
-        "time": "2024-12-22 21:12:55",
+        "time": "2024-12-22 21:30:44",
         "dirty": false
       },
       "1668068042719": {
