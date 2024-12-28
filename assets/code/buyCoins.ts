@@ -113,7 +113,7 @@ export class BuyCoins extends Component {
         },
       });
       if (response.ok) {
-        sys.openURL(response.data.data);
+        sys.openURL(response.data.data.url);
       } else {
         console.error("Request failed with status:", response.status);
       }
