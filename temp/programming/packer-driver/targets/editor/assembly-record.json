@@ -112,32 +112,6 @@
       },
       "timestamp": 1734764859419
     },
-    "719b7edf7ed1f19285d1e73fd6b0f8e67781ab59": {
-      "imports": {
-        "__unresolved_0": {
-          "resolved": {
-            "type": "chunk",
-            "id": "6a5019a719a9014c047e67aa1cf34453ab8392ce"
-          },
-          "messages": []
-        },
-        "__unresolved_1": {
-          "resolved": {
-            "type": "chunk",
-            "id": "ee3ea0dbc7200eb3f105c40cf8623b70665adc41"
-          },
-          "messages": []
-        },
-        "cc": {
-          "resolved": {
-            "type": "chunk",
-            "id": "93ba276ea7b26ffcdc433fab14afc1ed6f05647b"
-          },
-          "messages": []
-        }
-      },
-      "timestamp": 1734764859471
-    },
     "2a9759b6428eefe858cd6953353bea722545ac08": {
       "imports": {
         "__unresolved_0": {
@@ -2948,18 +2922,6 @@
       },
       "timestamp": 1734857982394
     },
-    "ee3ea0dbc7200eb3f105c40cf8623b70665adc41": {
-      "imports": {
-        "cc": {
-          "resolved": {
-            "type": "chunk",
-            "id": "93ba276ea7b26ffcdc433fab14afc1ed6f05647b"
-          },
-          "messages": []
-        }
-      },
-      "timestamp": 1734858078161
-    },
     "31e7ed6474cbe1cffb111624e6d74d2c31107af8": {
       "imports": {
         "__unresolved_0": {
@@ -3061,18 +3023,6 @@
       },
       "timestamp": 1734860625293
     },
-    "a8246498167457cd9c5fce32b9ac3707b1f543c2": {
-      "imports": {
-        "cc": {
-          "resolved": {
-            "type": "chunk",
-            "id": "93ba276ea7b26ffcdc433fab14afc1ed6f05647b"
-          },
-          "messages": []
-        }
-      },
-      "timestamp": 1734868860868
-    },
     "be114289548d765cd353a7186c65bcfd0c754583": {
       "imports": {
         "__unresolved_0": {
@@ -3164,6 +3114,56 @@
         }
       },
       "timestamp": 1734870514728
+    },
+    "d4b8c1b1aa284d2ff86f93e4a2e0f36c05147c62": {
+      "imports": {
+        "__unresolved_0": {
+          "resolved": {
+            "type": "chunk",
+            "id": "6a5019a719a9014c047e67aa1cf34453ab8392ce"
+          },
+          "messages": []
+        },
+        "__unresolved_1": {
+          "resolved": {
+            "type": "chunk",
+            "id": "ee3ea0dbc7200eb3f105c40cf8623b70665adc41"
+          },
+          "messages": []
+        },
+        "cc": {
+          "resolved": {
+            "type": "chunk",
+            "id": "93ba276ea7b26ffcdc433fab14afc1ed6f05647b"
+          },
+          "messages": []
+        }
+      },
+      "timestamp": 1735372433587
+    },
+    "ee3ea0dbc7200eb3f105c40cf8623b70665adc41": {
+      "imports": {
+        "cc": {
+          "resolved": {
+            "type": "chunk",
+            "id": "93ba276ea7b26ffcdc433fab14afc1ed6f05647b"
+          },
+          "messages": []
+        }
+      },
+      "timestamp": 1735373614716
+    },
+    "a8246498167457cd9c5fce32b9ac3707b1f543c2": {
+      "imports": {
+        "cc": {
+          "resolved": {
+            "type": "chunk",
+            "id": "93ba276ea7b26ffcdc433fab14afc1ed6f05647b"
+          },
+          "messages": []
+        }
+      },
+      "timestamp": 1735373614764
     },
     "6d8fd2b0177941b032ddc0733af48a561fb60657": {
       "imports": {
@@ -3434,21 +3434,21 @@
           "messages": []
         }
       },
-      "timestamp": 1734874847913
+      "timestamp": 1735399844807
     },
-    "d4b8c1b1aa284d2ff86f93e4a2e0f36c05147c62": {
+    "719b7edf7ed1f19285d1e73fd6b0f8e67781ab59": {
       "imports": {
-        "@telegram-apps/sdk": {
-          "resolved": {
-            "type": "chunk",
-            "id": "9c2384103ed7453c4a01015ad2c1545120f8cf98"
-          },
-          "messages": []
-        },
         "__unresolved_0": {
           "resolved": {
             "type": "chunk",
             "id": "6a5019a719a9014c047e67aa1cf34453ab8392ce"
+          },
+          "messages": []
+        },
+        "__unresolved_1": {
+          "resolved": {
+            "type": "chunk",
+            "id": "d4b8c1b1aa284d2ff86f93e4a2e0f36c05147c62"
           },
           "messages": []
         },
@@ -3460,7 +3460,7 @@
           "messages": []
         }
       },
-      "timestamp": 1734874847982
+      "timestamp": 1735399844894
     }
   },
   "entries": {

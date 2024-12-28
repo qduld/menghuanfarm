@@ -186,3 +186,11 @@ export interface ISkillList {
   upNum: number;
   userId: number;
 }
+
+export interface ICoinListItem {
+  id: number;
+  name: string;
+  price: number;
+  discount: number;
+  points: number;
+}

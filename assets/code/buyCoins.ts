@@ -6,14 +6,17 @@ import {
   instantiate,
   UITransform,
   Label,
+  sys,
 } from "cc";
 import { coinList } from "./loadData";
+import { httpRequest } from "./http";
+import { ICoinListItem } from "./interface";
 
 const { ccclass, property } = _decorator;
 @ccclass("BuyCoins")
 export class BuyCoins extends Component {
   @property
-  coinList: Array<any> = []; // Coin列表
+  coinList: Array<ICoinListItem> = []; // Coin列表
 
   @property
   UCoinList: Node = null; // Coin列表
@@ -38,7 +41,7 @@ export class BuyCoins extends Component {
     this.coinSpacingY = 40;
     this.UCoinList = find("popBox/Canvas/BuyCoins/List");
     this.UCoinSection = find("popBox/Canvas/BuyCoins/Section");
-    this.createBuyCoinsLayout();
+    this.buyCoinsList();
   }
 
   // 生成推荐列表
@@ -53,7 +56,7 @@ export class BuyCoins extends Component {
     const startX = this.UCoinSection.position.x;
     const startY = this.UCoinSection.position.y;
 
-    coinList.forEach((coin, index) => {
+    this.coinList.forEach((coin, index) => {
       const posY =
         startY - Math.floor(index / 3) * (sectionHeight + this.coinSpacingY);
       const posX = startX + (index % 3) * (sectionWidth + this.coinSpacingX);
@@ -67,16 +70,55 @@ export class BuyCoins extends Component {
       coinSection
         .getChildByName("Rebates")
         .getChildByName("Percent")
-        .getComponent(Label).string = `${coin.rebates}%`;
+        .getComponent(Label).string = `${coin.discount}%`;
 
       coinSection
         .getChildByName("Coins")
-        .getComponent(Label).string = `x${coin.coins}`;
+        .getComponent(Label).string = `x${coin.points}`;
+
+      coinSection.getChildByName("Button")["coinId"] = coin.id;
 
       coinSection
         .getChildByName("Button")
         .getChildByName("Label")
-        .getComponent(Label).string = "$" + coin.money;
+        .getComponent(Label).string = "$" + coin.price;
     });
+  }
+
+  // 积分列表
+  async buyCoinsList() {
+    try {
+      const response = await httpRequest("/api/v1/shop/points", {
+        method: "GET",
+      });
+      if (response.ok) {
+        this.coinList = response.data.data as ICoinListItem[];
+        this.createBuyCoinsLayout();
+      } else {
+        console.error("Request failed with status:", response.status);
+      }
+    } catch (error) {
+      console.error("Error:", error);
+    }
+  }
+
+  // 购买
+  async buyCoins(event) {
+    debugger;
+    try {
+      const response = await httpRequest("/api/v1/shop/buy", {
+        method: "POST",
+        body: {
+          id: event.currentTarget.coinId,
+        },
+      });
+      if (response.ok) {
+        sys.openURL(response.data.data);
+      } else {
+        console.error("Request failed with status:", response.status);
+      }
+    } catch (error) {
+      console.error("Error:", error);
+    }
   }
 }
