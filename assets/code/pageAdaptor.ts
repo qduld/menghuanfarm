@@ -86,8 +86,8 @@ class PageAdapter extends Component {
           winSize.height / ut.height
         );
         this.node.setPosition(
-          winSize.width * (ut.anchorX - 0.5),
-          winSize.height * (ut.anchorY - 0.5)
+          winSize.width * ut.anchorX,
+          winSize.height * ut.anchorY
         );
         break;
       case AdapterMode.等比缩放:
