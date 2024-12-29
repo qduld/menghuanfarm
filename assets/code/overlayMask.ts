@@ -26,7 +26,7 @@ export class OverlayMask extends Component {
       this.graphics.fillColor.set(0, 0, 0, 200); // 设置填充颜色为黑色
       this.graphics.rect(
         -375,
-        -667,
+        -724,
         this.uiTransform.contentSize.width,
         this.uiTransform.contentSize.height
       ); // 绘制矩形覆盖整个节点
