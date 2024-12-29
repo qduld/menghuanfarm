@@ -8,6 +8,9 @@ export class AudioManager extends Component {
   @property({ type: AudioSource })
   bgmAudioSource: AudioSource = null!;
 
+  @property
+  isMuted: boolean = true;
+
   onLoad() {
     if (AudioManager._instance) {
       // 如果实例已存在，则销毁新节点，保留旧实例
@@ -20,7 +23,7 @@ export class AudioManager extends Component {
 
     this.bgmAudioSource.play(); // 播放背景音乐
     this.bgmAudioSource.loop = true; // 循环播放
-    this.bgmAudioSource.volume = 0.5; // 设置音量
+    this.bgmAudioSource.volume = 2; // 设置音量
     log("AudioManager is initialized and playing music.");
   }
 
@@ -33,5 +36,15 @@ export class AudioManager extends Component {
     this.bgmAudioSource.stop();
     this.bgmAudioSource.clip = newAudioClip;
     this.bgmAudioSource.play();
+  }
+
+  setMute() {
+    this.isMuted = !this.isMuted;
+
+    if (this.isMuted) {
+      this.bgmAudioSource.volume = 0;
+    } else {
+      this.bgmAudioSource.volume = 2;
+    }
   }
 }

@@ -703,7 +703,7 @@
       ]
     },
     "cce:/internal/x/prerequisite-imports": {
-      "mTimestamp": 577812496.4474001,
+      "mTimestamp": 631660689.0681,
       "chunkId": "6d8fd2b0177941b032ddc0733af48a561fb60657",
       "imports": [
         {
@@ -1015,7 +1015,7 @@
           }
         },
         {
-          "value": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/hoverEffect.ts",
+          "value": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/hideScrollbar.ts",
           "resolved": "__unresolved_22",
           "loc": {
             "start": {
@@ -1024,143 +1024,143 @@
             },
             "end": {
               "line": 5,
-              "column": 2397
+              "column": 2399
+            }
+          }
+        },
+        {
+          "value": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/hoverEffect.ts",
+          "resolved": "__unresolved_23",
+          "loc": {
+            "start": {
+              "line": 5,
+              "column": 2415
+            },
+            "end": {
+              "line": 5,
+              "column": 2493
             }
           }
         },
         {
           "value": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/http.ts",
-          "resolved": "__unresolved_23",
+          "resolved": "__unresolved_24",
           "loc": {
             "start": {
               "line": 5,
-              "column": 2413
+              "column": 2509
             },
             "end": {
               "line": 5,
-              "column": 2484
+              "column": 2580
             }
           }
         },
         {
           "value": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/interface.ts",
-          "resolved": "__unresolved_24",
+          "resolved": "__unresolved_25",
           "loc": {
             "start": {
               "line": 5,
-              "column": 2500
+              "column": 2596
             },
             "end": {
               "line": 5,
-              "column": 2576
+              "column": 2672
             }
           }
         },
         {
           "value": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/loadData.ts",
-          "resolved": "__unresolved_25",
+          "resolved": "__unresolved_26",
           "loc": {
             "start": {
               "line": 5,
-              "column": 2592
+              "column": 2688
             },
             "end": {
               "line": 5,
-              "column": 2667
+              "column": 2763
             }
           }
         },
         {
           "value": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/loadingScreen%20.ts",
-          "resolved": "__unresolved_26",
+          "resolved": "__unresolved_27",
           "loc": {
             "start": {
               "line": 5,
-              "column": 2683
+              "column": 2779
             },
             "end": {
               "line": 5,
-              "column": 2766
+              "column": 2862
             }
           }
         },
         {
           "value": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/main.ts",
-          "resolved": "__unresolved_27",
+          "resolved": "__unresolved_28",
           "loc": {
             "start": {
               "line": 5,
-              "column": 2782
+              "column": 2878
             },
             "end": {
               "line": 5,
-              "column": 2853
+              "column": 2949
             }
           }
         },
         {
           "value": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/overlayMask.ts",
-          "resolved": "__unresolved_28",
+          "resolved": "__unresolved_29",
           "loc": {
             "start": {
               "line": 5,
-              "column": 2869
+              "column": 2965
             },
             "end": {
               "line": 5,
-              "column": 2947
+              "column": 3043
             }
           }
         },
         {
           "value": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/popupStop.ts",
-          "resolved": "__unresolved_29",
+          "resolved": "__unresolved_30",
           "loc": {
             "start": {
               "line": 5,
-              "column": 2963
+              "column": 3059
             },
             "end": {
               "line": 5,
-              "column": 3039
+              "column": 3135
             }
           }
         },
         {
           "value": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/roundBox.ts",
-          "resolved": "__unresolved_30",
+          "resolved": "__unresolved_31",
           "loc": {
             "start": {
               "line": 5,
-              "column": 3055
+              "column": 3151
             },
             "end": {
               "line": 5,
-              "column": 3130
+              "column": 3226
             }
           }
         },
         {
           "value": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/scaleAction.ts",
-          "resolved": "__unresolved_31",
-          "loc": {
-            "start": {
-              "line": 5,
-              "column": 3146
-            },
-            "end": {
-              "line": 5,
-              "column": 3224
-            }
-          }
-        },
-        {
-          "value": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/sceneSwitcher.ts",
           "resolved": "__unresolved_32",
           "loc": {
             "start": {
               "line": 5,
-              "column": 3240
+              "column": 3242
             },
             "end": {
               "line": 5,
@@ -1169,7 +1169,7 @@
           }
         },
         {
-          "value": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/seedEffect.ts",
+          "value": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/sceneSwitcher.ts",
           "resolved": "__unresolved_33",
           "loc": {
             "start": {
@@ -1178,63 +1178,91 @@
             },
             "end": {
               "line": 5,
-              "column": 3413
+              "column": 3416
+            }
+          }
+        },
+        {
+          "value": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/seedEffect.ts",
+          "resolved": "__unresolved_34",
+          "loc": {
+            "start": {
+              "line": 5,
+              "column": 3432
+            },
+            "end": {
+              "line": 5,
+              "column": 3509
             }
           }
         },
         {
           "value": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/showTelegramInfo.ts",
-          "resolved": "__unresolved_34",
+          "resolved": "__unresolved_35",
           "loc": {
             "start": {
               "line": 5,
-              "column": 3429
+              "column": 3525
             },
             "end": {
               "line": 5,
-              "column": 3512
+              "column": 3608
+            }
+          }
+        },
+        {
+          "value": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/switchButton.ts",
+          "resolved": "__unresolved_36",
+          "loc": {
+            "start": {
+              "line": 5,
+              "column": 3624
+            },
+            "end": {
+              "line": 5,
+              "column": 3703
             }
           }
         },
         {
           "value": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/telegram.ts",
-          "resolved": "__unresolved_35",
+          "resolved": "__unresolved_37",
           "loc": {
             "start": {
               "line": 5,
-              "column": 3528
+              "column": 3719
             },
             "end": {
               "line": 5,
-              "column": 3603
+              "column": 3794
             }
           }
         },
         {
           "value": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/timer.ts",
-          "resolved": "__unresolved_36",
+          "resolved": "__unresolved_38",
           "loc": {
             "start": {
               "line": 5,
-              "column": 3619
+              "column": 3810
             },
             "end": {
               "line": 5,
-              "column": 3691
+              "column": 3882
             }
           }
         },
         {
           "value": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/utils.ts",
-          "resolved": "__unresolved_37",
+          "resolved": "__unresolved_39",
           "loc": {
             "start": {
               "line": 5,
-              "column": 3707
+              "column": 3898
             },
             "end": {
               "line": 5,
-              "column": 3779
+              "column": 3970
             }
           }
         }
@@ -1398,6 +1426,13 @@
         {
           "resolved": {
             "type": "module",
+            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/hideScrollbar.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
             "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/hoverEffect.ts"
           },
           "messages": []
@@ -1483,6 +1518,13 @@
           "resolved": {
             "type": "module",
             "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/showTelegramInfo.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/switchButton.ts"
           },
           "messages": []
         },
@@ -1882,7 +1924,7 @@
     },
     "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/audioManager.ts": {
       "mTimestamp": {
-        "mtime": 1730307847626.9062,
+        "mtime": 1735454422176.8982,
         "uuid": "e84ac9e3-97d5-41ef-bdc6-5fb9d5888b74"
       },
       "chunkId": "ff369d3ccc3f8ad10b9da1f2397037830a1a2785",
@@ -2251,7 +2293,7 @@
     },
     "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/dialog.ts": {
       "mTimestamp": {
-        "mtime": 1733049998971.8208,
+        "mtime": 1735421085367.0266,
         "uuid": "029647c6-2934-4064-b3d0-d0e70e757fa5"
       },
       "chunkId": "2a9759b6428eefe858cd6953353bea722545ac08",
@@ -3554,7 +3596,7 @@
     },
     "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/genInfo.ts": {
       "mTimestamp": {
-        "mtime": 1734869019698.0916,
+        "mtime": 1735404239204.5156,
         "uuid": "c70a354b-405a-4822-ba2c-80ebb2b23689"
       },
       "chunkId": "be114289548d765cd353a7186c65bcfd0c754583",
@@ -5315,6 +5357,121 @@
       "imports": [],
       "type": "esm",
       "resolutions": []
+    },
+    "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/switchButton.ts": {
+      "mTimestamp": {
+        "mtime": 1735454232619.0286,
+        "uuid": "311f2292-0d64-4cfe-b888-e685c28ac5ac"
+      },
+      "chunkId": "549e612dab639b3c0842ebee7b2c0ee4e96999aa",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 9,
+              "column": 7
+            },
+            "end": {
+              "line": 9,
+              "column": 11
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/hideScrollbar.ts": {
+      "mTimestamp": {
+        "mtime": 1735453088439.2014,
+        "uuid": "0831ce0b-9a84-4083-8de4-9c8a840ad2a2"
+      },
+      "chunkId": "796a311e60f4d708254ac5b67fbb636551bb2b72",
+      "imports": [
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 60
+            },
+            "end": {
+              "line": 1,
+              "column": 64
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        }
+      ]
     }
   }
 }

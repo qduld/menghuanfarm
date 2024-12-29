@@ -5,7 +5,7 @@
   "common": {
     "polyfills": {
       "asyncFunctions": true,
-      "coreJs": true
+      "coreJs": false
     },
     "outputName": "wechatgame",
     "mainBundleCompressionType": "subpackage",
@@ -31,7 +31,8 @@
     ],
     "startScene": "cf4dc34b-8c49-4fc8-b329-7c0faa4a4a85",
     "mainBundleIsRemote": false,
-    "skipCompressTexture": true
+    "skipCompressTexture": true,
+    "experimentalEraseModules": true
   },
   "BuildTaskManager": {
     "taskMap": {
@@ -41,7 +42,7 @@
         "progress": 1,
         "state": "success",
         "stage": "build",
-        "message": "2024-12-28 23:43:26 build success in 23 s!",
+        "message": "2024-12-29 16:10:50 build success in 21 s!",
         "detailMessage": "// ---- build task adsense-h5g-plugin：onAfterBuild ----\r",
         "options": {
           "name": "PlantStore",
@@ -53,9 +54,9 @@
           "sourceMaps": false,
           "polyfills": {
             "asyncFunctions": true,
-            "coreJs": true
+            "coreJs": false
           },
-          "experimentalEraseModules": false,
+          "experimentalEraseModules": true,
           "useBuiltinServer": false,
           "mainBundleIsRemote": false,
           "mainBundleCompressionType": "none",
@@ -111,7 +112,7 @@
           "replaceSplashScreen": true,
           "logDest": "project://temp/builder/log/web-mobile2022-11-9 11-49.log"
         },
-        "time": "2024-12-28 23:43:02",
+        "time": "2024-12-29 16:10:28",
         "dirty": false
       },
       "1668068042719": {

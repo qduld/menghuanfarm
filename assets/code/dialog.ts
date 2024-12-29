@@ -29,6 +29,9 @@ export class Dialog extends Component {
   createCircleBox: Node = null; // createCircleBox
 
   @property(Node)
+  settingBox: Node = null; // settingBox
+
+  @property(Node)
   overlayMask: Node = null; // overlayMask
 
   @property
@@ -59,6 +62,7 @@ export class Dialog extends Component {
     this.buyPropsBox = find("popBox/Canvas/BuyProps");
     this.buyCoinsBox = find("popBox/Canvas/BuyCoins");
     this.createCircleBox = find("popBox/Canvas/CreateCircle");
+    this.settingBox = find("popBox/Canvas/Setting");
     this.overlayMask = find("popBox/Canvas/OverlayMask");
 
     this.bagBox.active = false;
@@ -68,6 +72,8 @@ export class Dialog extends Component {
     this.buyPropsBox.active = false;
     this.buyCoinsBox.active = false;
     this.createCircleBox.active = false;
+    this.settingBox.active = false;
+
     this.overlayMask.active = false;
   }
   showDialog(event: EventTouch, customData) {
@@ -96,6 +102,9 @@ export class Dialog extends Component {
         break;
       case "CreateCircle":
         this.createCircleBox.active = true;
+        break;
+      case "Setting":
+        this.settingBox.active = true;
         break;
     }
     this.overlayMask.active = true;
@@ -127,6 +136,10 @@ export class Dialog extends Component {
         break;
       case "CreateCircle":
         this.createCircleBox.active = false;
+        this.overlayMask.active = false;
+        break;
+      case "Setting":
+        this.settingBox.active = false;
         this.overlayMask.active = false;
         break;
     }
