@@ -12,7 +12,7 @@
     "common": {
       "outputName": "web-mobile",
       "polyfills": {
-        "asyncFunctions": true,
+        "asyncFunctions": false,
         "coreJs": false
       },
       "mainBundleCompressionType": "none",
@@ -38,7 +38,7 @@
       ],
       "startScene": "cf4dc34b-8c49-4fc8-b329-7c0faa4a4a85",
       "skipCompressTexture": true,
-      "experimentalEraseModules": true
+      "experimentalEraseModules": false
     },
     "options": {
       "web-mobile": {

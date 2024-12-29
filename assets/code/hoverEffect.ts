@@ -74,11 +74,12 @@ export class HoverEffect extends Component {
     const dialog = Dialog.getInstance();
     if (this.targetLevel === 3) {
       this.receiveHandAnimation();
-      this.goldMoveAnimation();
       this.playVoice();
       if (globalData.isStolen) {
+        this.goldStolenMoveAnimation();
         genBlock.stealFarmland(this.targetData.id, this.targetData.plantId);
       } else {
+        this.goldMoveAnimation();
         genBlock.harvestFarmland(this.targetData.id);
       }
     }
@@ -97,7 +98,7 @@ export class HoverEffect extends Component {
       .start();
     setTimeout(() => {
       this.targetNode.getChildByName("Receivehand").active = false;
-    }, 600);
+    }, 1200);
   }
 
   goldMoveAnimation() {
@@ -161,6 +162,35 @@ export class HoverEffect extends Component {
       .start();
   }
 
+  goldStolenMoveAnimation() {
+    const goldEnd = find("MainCanvas/GoldEnd");
+    const gold = instantiate(goldEnd);
+    gold.active = true;
+    gold.setSiblingIndex(this.node.children.length - 1); // 移动到最上层
+    this.node.addChild(gold);
+
+    // 2. 起点（点击土地的位置）
+    const startPosition = this.node
+      .getComponent(UITransform)!
+      .convertToWorldSpaceAR(Vec3.ZERO);
+
+    const localStartPosition = this.node
+      .getComponent(UITransform)!
+      .convertToNodeSpaceAR(startPosition);
+
+    gold.setPosition(startPosition);
+
+    const topPosition = instantiate(localStartPosition);
+    topPosition.y += 30;
+
+    tween(gold)
+      .to(0.8, { position: topPosition }, { easing: "sineOut" }) // 向上
+      .to(0.8, { position: startPosition }, { easing: "sineIn" }) // 向下
+      .start();
+
+    gold.active = false;
+  }
+
   playVoice() {
     const audioSource =
       this.node.getComponent(AudioSource) ||
@@ -186,11 +216,12 @@ export class HoverEffect extends Component {
     if (this.targetLevel === 3) {
       this.targetNode.getChildByName("Receivehand").active = true;
       this.receiveHandAnimation();
-      this.goldMoveAnimation();
       this.playVoice();
       if (globalData.isStolen) {
+        this.goldStolenMoveAnimation();
         genBlock.stealFarmland(this.targetData.id, this.targetData.plantId);
       } else {
+        this.goldMoveAnimation();
         genBlock.harvestFarmland(this.targetData.id);
       }
     }

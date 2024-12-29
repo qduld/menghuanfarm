@@ -126,6 +126,12 @@ export class circles extends Component {
 
       membersSection.getChildByName("Button")["userId"] = member.id;
 
+      if (member.stealAvailable === 1) {
+        membersSection.getChildByName("Button").active = true;
+      } else {
+        membersSection.getChildByName("Button").active = false;
+      }
+
       let iconPath = "";
       if (index >= 0 && index < 3) {
         if (index === 0) {
@@ -329,7 +335,7 @@ export class circles extends Component {
   // 创建队伍
   async createSquad(event: EventTouch) {
     const criclesName = find(
-      "popBox/Canvas/CreateCircle/EditBox/TEXT_LABEL"
+      "popBox/Canvas/CreateCircle/Name/EditBox/TEXT_LABEL"
     ).getComponent(Label).string;
     console.log(criclesName);
     try {

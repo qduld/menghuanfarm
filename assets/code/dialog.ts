@@ -1,5 +1,4 @@
 import { _decorator, Component, Node, find, EventTouch } from "cc";
-import { Login } from "./login";
 import { GenBag } from "./genBag";
 import { GenShop } from "./genShop";
 import { IFarmland, ISeed } from "./interface";

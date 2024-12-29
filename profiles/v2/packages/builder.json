@@ -4,7 +4,7 @@
   },
   "common": {
     "polyfills": {
-      "asyncFunctions": true,
+      "asyncFunctions": false,
       "coreJs": false
     },
     "outputName": "wechatgame",
@@ -32,7 +32,7 @@
     "startScene": "cf4dc34b-8c49-4fc8-b329-7c0faa4a4a85",
     "mainBundleIsRemote": false,
     "skipCompressTexture": true,
-    "experimentalEraseModules": true
+    "experimentalEraseModules": false
   },
   "BuildTaskManager": {
     "taskMap": {
@@ -42,8 +42,8 @@
         "progress": 1,
         "state": "success",
         "stage": "build",
-        "message": "2024-12-29 17:11:58 build success in 23 s!",
-        "detailMessage": "// ---- build task cocos-service：onAfterCompressSettings ----\r",
+        "message": "2024-12-29 21:59:30 build success in 20 s!",
+        "detailMessage": "// ---- build task Sort build template ----\r",
         "options": {
           "name": "PlantStore",
           "platform": "web-mobile",
@@ -53,10 +53,10 @@
           "skipCompressTexture": true,
           "sourceMaps": false,
           "polyfills": {
-            "asyncFunctions": true,
+            "asyncFunctions": false,
             "coreJs": false
           },
-          "experimentalEraseModules": true,
+          "experimentalEraseModules": false,
           "useBuiltinServer": false,
           "mainBundleIsRemote": false,
           "mainBundleCompressionType": "none",
@@ -112,7 +112,7 @@
           "replaceSplashScreen": true,
           "logDest": "project://temp/builder/log/web-mobile2022-11-9 11-49.log"
         },
-        "time": "2024-12-29 17:11:34",
+        "time": "2024-12-29 21:59:09",
         "dirty": false
       },
       "1668068042719": {

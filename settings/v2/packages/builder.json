@@ -28,7 +28,7 @@
         "configs": {
           "native": {
             "preferredOptions": {
-              "compressionType": "merge_all_json",
+              "compressionType": "merge_dep",
               "isRemote": false
             }
           },
@@ -103,7 +103,7 @@
           "native": {
             "preferredOptions": {
               "isRemote": false,
-              "compressionType": "merge_all_json"
+              "compressionType": "merge_dep"
             }
           },
           "web": {
