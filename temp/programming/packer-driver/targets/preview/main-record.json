@@ -409,7 +409,7 @@
       ]
     },
     "cce:/internal/x/prerequisite-imports": {
-      "mTimestamp": 631660853.2428,
+      "mTimestamp": 639021043.5005,
       "chunkId": "6d8fd2b0177941b032ddc0733af48a561fb60657",
       "imports": [
         {
@@ -833,7 +833,7 @@
           }
         },
         {
-          "value": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/popupStop.ts",
+          "value": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/pageAdaptor.ts",
           "resolved": "__unresolved_30",
           "loc": {
             "start": {
@@ -842,12 +842,12 @@
             },
             "end": {
               "line": 34,
-              "column": 83
+              "column": 85
             }
           }
         },
         {
-          "value": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/roundBox.ts",
+          "value": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/popupStop.ts",
           "resolved": "__unresolved_31",
           "loc": {
             "start": {
@@ -856,12 +856,12 @@
             },
             "end": {
               "line": 35,
-              "column": 82
+              "column": 83
             }
           }
         },
         {
-          "value": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/scaleAction.ts",
+          "value": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/roundBox.ts",
           "resolved": "__unresolved_32",
           "loc": {
             "start": {
@@ -870,12 +870,12 @@
             },
             "end": {
               "line": 36,
-              "column": 85
+              "column": 82
             }
           }
         },
         {
-          "value": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/sceneSwitcher.ts",
+          "value": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/scaleAction.ts",
           "resolved": "__unresolved_33",
           "loc": {
             "start": {
@@ -884,12 +884,12 @@
             },
             "end": {
               "line": 37,
-              "column": 87
+              "column": 85
             }
           }
         },
         {
-          "value": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/seedEffect.ts",
+          "value": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/sceneSwitcher.ts",
           "resolved": "__unresolved_34",
           "loc": {
             "start": {
@@ -898,12 +898,12 @@
             },
             "end": {
               "line": 38,
-              "column": 84
+              "column": 87
             }
           }
         },
         {
-          "value": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/showTelegramInfo.ts",
+          "value": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/seedEffect.ts",
           "resolved": "__unresolved_35",
           "loc": {
             "start": {
@@ -912,12 +912,12 @@
             },
             "end": {
               "line": 39,
-              "column": 90
+              "column": 84
             }
           }
         },
         {
-          "value": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/switchButton.ts",
+          "value": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/showTelegramInfo.ts",
           "resolved": "__unresolved_36",
           "loc": {
             "start": {
@@ -926,12 +926,12 @@
             },
             "end": {
               "line": 40,
-              "column": 86
+              "column": 90
             }
           }
         },
         {
-          "value": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/telegram.ts",
+          "value": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/switchButton.ts",
           "resolved": "__unresolved_37",
           "loc": {
             "start": {
@@ -940,12 +940,12 @@
             },
             "end": {
               "line": 41,
-              "column": 82
+              "column": 86
             }
           }
         },
         {
-          "value": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/timer.ts",
+          "value": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/telegram.ts",
           "resolved": "__unresolved_38",
           "loc": {
             "start": {
@@ -954,12 +954,12 @@
             },
             "end": {
               "line": 42,
-              "column": 79
+              "column": 82
             }
           }
         },
         {
-          "value": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/utils.ts",
+          "value": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/timer.ts",
           "resolved": "__unresolved_39",
           "loc": {
             "start": {
@@ -968,6 +968,20 @@
             },
             "end": {
               "line": 43,
+              "column": 79
+            }
+          }
+        },
+        {
+          "value": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/utils.ts",
+          "resolved": "__unresolved_40",
+          "loc": {
+            "start": {
+              "line": 44,
+              "column": 7
+            },
+            "end": {
+              "line": 44,
               "column": 79
             }
           }
@@ -1182,6 +1196,13 @@
           "resolved": {
             "type": "module",
             "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/overlayMask.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/pageAdaptor.ts"
           },
           "messages": []
         },
@@ -3784,7 +3805,7 @@
     },
     "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/main.ts": {
       "mTimestamp": {
-        "mtime": 1733585894824.6055,
+        "mtime": 1735461563221.0193,
         "uuid": "ad534c45-313f-494a-9f0a-10a9c7f79cb4"
       },
       "chunkId": "a1ce2b8ee2c71c9f0feb362b14caabc88a58b0f1",
@@ -3803,12 +3824,12 @@
           "value": "cc",
           "loc": {
             "start": {
-              "line": 1,
-              "column": 75
+              "line": 10,
+              "column": 7
             },
             "end": {
-              "line": 1,
-              "column": 79
+              "line": 10,
+              "column": 11
             }
           }
         },
@@ -3817,11 +3838,11 @@
           "resolved": "__unresolved_1",
           "loc": {
             "start": {
-              "line": 2,
+              "line": 11,
               "column": 25
             },
             "end": {
-              "line": 2,
+              "line": 11,
               "column": 37
             }
           }
@@ -3831,11 +3852,11 @@
           "resolved": "__unresolved_2",
           "loc": {
             "start": {
-              "line": 3,
+              "line": 12,
               "column": 24
             },
             "end": {
-              "line": 3,
+              "line": 12,
               "column": 35
             }
           }
@@ -3845,11 +3866,11 @@
           "resolved": "__unresolved_3",
           "loc": {
             "start": {
-              "line": 7,
+              "line": 16,
               "column": 28
             },
             "end": {
-              "line": 7,
+              "line": 16,
               "column": 36
             }
           }
@@ -3859,11 +3880,11 @@
           "resolved": "__unresolved_4",
           "loc": {
             "start": {
-              "line": 8,
+              "line": 17,
               "column": 27
             },
             "end": {
-              "line": 8,
+              "line": 17,
               "column": 41
             }
           }
@@ -5150,6 +5171,58 @@
             "end": {
               "line": 1,
               "column": 64
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/pageAdaptor.ts": {
+      "mTimestamp": {
+        "mtime": 1735461782428.901,
+        "uuid": "77010d3c-809d-4ecf-97cc-aa824945e151"
+      },
+      "chunkId": "8654724b8de92f7b31a73187c7620d113f3973eb",
+      "imports": [
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 28,
+              "column": 7
+            },
+            "end": {
+              "line": 28,
+              "column": 11
             }
           }
         }

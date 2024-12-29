@@ -1,4 +1,13 @@
-import { _decorator, Component, Node, find, Sprite, Label, director } from "cc";
+import {
+  _decorator,
+  Component,
+  Node,
+  find,
+  Sprite,
+  Label,
+  director,
+  view,
+} from "cc";
 import { GenBlock } from "./genBlock";
 import { GenInfo } from "./genInfo";
 import { GenBag } from "./genBag";
