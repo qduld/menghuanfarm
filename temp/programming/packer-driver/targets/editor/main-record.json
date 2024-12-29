@@ -703,7 +703,7 @@
       ]
     },
     "cce:/internal/x/prerequisite-imports": {
-      "mTimestamp": 639261664.1036,
+      "mTimestamp": 640097426.0945001,
       "chunkId": "6d8fd2b0177941b032ddc0733af48a561fb60657",
       "imports": [
         {
@@ -1127,7 +1127,7 @@
           }
         },
         {
-          "value": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/pageAdaptor.ts",
+          "value": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/popupStop.ts",
           "resolved": "__unresolved_30",
           "loc": {
             "start": {
@@ -1136,31 +1136,31 @@
             },
             "end": {
               "line": 5,
-              "column": 3137
-            }
-          }
-        },
-        {
-          "value": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/popupStop.ts",
-          "resolved": "__unresolved_31",
-          "loc": {
-            "start": {
-              "line": 5,
-              "column": 3153
-            },
-            "end": {
-              "line": 5,
-              "column": 3229
+              "column": 3135
             }
           }
         },
         {
           "value": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/roundBox.ts",
+          "resolved": "__unresolved_31",
+          "loc": {
+            "start": {
+              "line": 5,
+              "column": 3151
+            },
+            "end": {
+              "line": 5,
+              "column": 3226
+            }
+          }
+        },
+        {
+          "value": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/scaleAction.ts",
           "resolved": "__unresolved_32",
           "loc": {
             "start": {
               "line": 5,
-              "column": 3245
+              "column": 3242
             },
             "end": {
               "line": 5,
@@ -1169,7 +1169,7 @@
           }
         },
         {
-          "value": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/scaleAction.ts",
+          "value": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/sceneSwitcher.ts",
           "resolved": "__unresolved_33",
           "loc": {
             "start": {
@@ -1178,105 +1178,91 @@
             },
             "end": {
               "line": 5,
-              "column": 3414
-            }
-          }
-        },
-        {
-          "value": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/sceneSwitcher.ts",
-          "resolved": "__unresolved_34",
-          "loc": {
-            "start": {
-              "line": 5,
-              "column": 3430
-            },
-            "end": {
-              "line": 5,
-              "column": 3510
+              "column": 3416
             }
           }
         },
         {
           "value": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/seedEffect.ts",
-          "resolved": "__unresolved_35",
+          "resolved": "__unresolved_34",
           "loc": {
             "start": {
               "line": 5,
-              "column": 3526
+              "column": 3432
             },
             "end": {
               "line": 5,
-              "column": 3603
+              "column": 3509
             }
           }
         },
         {
           "value": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/showTelegramInfo.ts",
-          "resolved": "__unresolved_36",
+          "resolved": "__unresolved_35",
           "loc": {
             "start": {
               "line": 5,
-              "column": 3619
+              "column": 3525
             },
             "end": {
               "line": 5,
-              "column": 3702
+              "column": 3608
             }
           }
         },
         {
           "value": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/switchButton.ts",
-          "resolved": "__unresolved_37",
+          "resolved": "__unresolved_36",
           "loc": {
             "start": {
               "line": 5,
-              "column": 3718
+              "column": 3624
             },
             "end": {
               "line": 5,
-              "column": 3797
+              "column": 3703
             }
           }
         },
         {
           "value": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/telegram.ts",
-          "resolved": "__unresolved_38",
+          "resolved": "__unresolved_37",
           "loc": {
             "start": {
               "line": 5,
-              "column": 3813
+              "column": 3719
             },
             "end": {
               "line": 5,
-              "column": 3888
+              "column": 3794
             }
           }
         },
         {
           "value": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/timer.ts",
-          "resolved": "__unresolved_39",
+          "resolved": "__unresolved_38",
           "loc": {
             "start": {
               "line": 5,
-              "column": 3904
+              "column": 3810
             },
             "end": {
               "line": 5,
-              "column": 3976
+              "column": 3882
             }
           }
         },
         {
           "value": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/utils.ts",
-          "resolved": "__unresolved_40",
+          "resolved": "__unresolved_39",
           "loc": {
             "start": {
               "line": 5,
-              "column": 3992
+              "column": 3898
             },
             "end": {
               "line": 5,
-              "column": 4064
+              "column": 3970
             }
           }
         }
@@ -1490,13 +1476,6 @@
           "resolved": {
             "type": "module",
             "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/overlayMask.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/pageAdaptor.ts"
           },
           "messages": []
         },
