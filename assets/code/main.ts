@@ -10,11 +10,11 @@ import {
 } from "cc";
 import { GenBlock } from "./genBlock";
 import { GenInfo } from "./genInfo";
-import { GenBag } from "./genBag";
-import { GenShop } from "./genShop";
+import { AudioControl } from "./audioControl";
 
 import { httpRequest } from "./http";
 import { GlobalData } from "./globalData";
+import { AudioMgr } from "./audioManager";
 
 const { ccclass, property } = _decorator;
 let userAvata: Node;
@@ -30,6 +30,9 @@ export class main extends Component {
     if (globalData.isStolen) {
       this.init();
       return;
+    }
+    if (!AudioMgr.inst.audioSource.state) {
+      AudioMgr.inst.play("sounds/bgm", 1);
     }
     this.userLogin();
     director.preloadScene("circles");

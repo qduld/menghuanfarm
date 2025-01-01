@@ -191,7 +191,7 @@ export class GenInfo extends Component {
     }
   }
 
-  // 获取好有信息
+  // 获取好友信息
   async requestFriendInfo() {
     const globalData = GlobalData.getInstance();
     try {

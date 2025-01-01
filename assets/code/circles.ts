@@ -10,9 +10,11 @@ import {
   UITransform,
   Label,
   EventTouch,
+  SpriteAtlas,
+  Vec3,
 } from "cc";
 import { httpRequest } from "./http";
-import { IMembersList, ISquadList, ISquadInfo } from "./interface";
+import { IMembersList, ISquadList, ISquadInfo, IUserInfo } from "./interface";
 import { squadList } from "./loadData";
 import { GlobalData } from "./globalData";
 import { GenInfo } from "./genInfo";
@@ -58,14 +60,30 @@ export class circles extends Component {
   @property
   memberSpacingY: number = 0; // 推荐间距
 
+  @property
+  isView: boolean = false;
+
+  @property
+  currentUser: IUserInfo = GlobalData.getInstance().userInfo;
+
+  @property
+  UCurrentUser: Node = null;
+
+  @property
+  UScrollView: Node = null;
+
   protected onLoad(): void {
     this.USquad = find("Canvas/UnJoined");
     this.UMembers = find("Canvas/Joined");
     this.USquadList = find("Canvas/UnJoined/Content/List");
     this.USquadSection = find("Canvas/UnJoined/Content/Section");
-    this.UMembersList = find("Canvas/Joined/Content/List");
-    this.UMembersSection = find("Canvas/Joined/Content/Section");
+    this.UScrollView = find("Canvas/Joined/Content/ScrollView");
+    this.UMembersList = find("Canvas/Joined/Content/ScrollView/view/content");
+    this.UMembersSection = find(
+      "Canvas/Joined/Content/ScrollView/view/content/Section"
+    );
     this.USquadInfo = find("Canvas/Joined/Tips");
+    this.UCurrentUser = find("Canvas/Joined/Content/CurrentUser");
     this.checkSquadList();
   }
 
@@ -96,14 +114,60 @@ export class circles extends Component {
         squad.name;
 
       squadSection.getChildByName("Button")["squadId"] = squad.id;
+
+      squadSection["squad"] = squad;
     });
+  }
+
+  updateCurrentUser() {
+    const globalData = GlobalData.getInstance();
+
+    const memberIndex = this.membersList.findIndex(
+      (member) => member.id === globalData.userInfo.id + ""
+    );
+
+    this.UCurrentUser.active = true;
+
+    this.UCurrentUser.getChildByName("Ranking").getComponent(Label).string =
+      memberIndex + 1 + "";
+
+    this.UCurrentUser.getChildByName("Name")
+      .getChildByName("Label")
+      .getComponent(Label).string = this.membersList[memberIndex].tgUsername;
+
+    this.UCurrentUser.getChildByName("Money")
+      .getChildByName("Label")
+      .getComponent(Label).string =
+      this.membersList[memberIndex].pointsBalance + "";
+
+    if (this.membersList[memberIndex].isLeader) {
+      this.UCurrentUser.getChildByName("Name").getChildByName("Icon").active =
+        true;
+    } else {
+      this.UCurrentUser.getChildByName("Name").getChildByName("Icon").active =
+        false;
+    }
   }
 
   // 生成成员列表
   createMembersLayout() {
+    const globalData = GlobalData.getInstance();
     // 获取预制体的宽度和高度
     const sectionHeight =
       this.UMembersSection.getComponent(UITransform).contentSize.height;
+
+    // 未加入不显示当前用户
+    this.UCurrentUser.active = !this.isView;
+
+    // 未加入修改scrollview位置
+    const position = new Vec3(0, -410, 0);
+    if (this.isView) {
+      position.y -= sectionHeight;
+      this.UCurrentUser.active = false;
+    } else {
+      this.updateCurrentUser();
+    }
+    this.UScrollView.setPosition(position);
 
     // 计算起始点，以保证整个布局居中
     const startX = this.UMembersSection.position.x;
@@ -117,8 +181,10 @@ export class circles extends Component {
 
       membersSection.active = true;
       membersSection.setPosition(startX, posY);
-      membersSection.getChildByName("Name").getComponent(Label).string =
-        member.tgUsername + "";
+      membersSection
+        .getChildByName("Name")
+        .getChildByName("Label")
+        .getComponent(Label).string = member.tgUsername + "";
       membersSection
         .getChildByName("Money")
         .getChildByName("Label")
@@ -126,7 +192,17 @@ export class circles extends Component {
 
       membersSection.getChildByName("Button")["userId"] = member.id;
 
-      if (member.stealAvailable === 1) {
+      // 如果是队长显示图标
+      if (member.isLeader) {
+        membersSection.getChildByName("Name").getChildByName("Icon").active =
+          true;
+      } else {
+        membersSection.getChildByName("Name").getChildByName("Icon").active =
+          false;
+      }
+
+      // 可偷且不是自己显示偷取图标
+      if (member.stealAvailable === 1 && member.id !== globalData.userInfo.id) {
         membersSection.getChildByName("Button").active = true;
       } else {
         membersSection.getChildByName("Button").active = false;
@@ -144,22 +220,18 @@ export class circles extends Component {
           iconPath = "third";
         }
 
-        resources.load(
-          iconPath + "/spriteFrame",
-          SpriteFrame,
-          (err, spriteFrame) => {
-            if (err) {
-              console.error("Failed to load sprite:", err);
-              return;
-            }
-
-            membersSection.getChildByName("Ranking").active = false;
-
-            membersSection
-              .getChildByName("Icon")
-              .getComponent(Sprite).spriteFrame = spriteFrame;
+        resources.load("iconList", SpriteAtlas, (err, atlas) => {
+          if (err) {
+            console.error("Failed to load sprite:", err);
+            return;
           }
-        );
+
+          membersSection.getChildByName("Ranking").active = false;
+
+          membersSection
+            .getChildByName("Icon")
+            .getComponent(Sprite).spriteFrame = atlas.getSpriteFrame(iconPath);
+        });
       } else {
         membersSection.getChildByName("Icon").active = false;
         membersSection.getChildByName("Ranking").active = true;
@@ -191,18 +263,30 @@ export class circles extends Component {
     this.USquadInfo.getChildByName("Name").getComponent(Label).string =
       this.squadInfo.name;
 
-    this.USquadInfo.getChildByName("People")
+    this.USquadInfo.getChildByName("Detail")
+      .getChildByName("People")
       .getChildByName("Label")
       .getComponent(Label).string = this.squadInfo.memberCount + "";
 
-    this.USquadInfo.getChildByName("Money")
+    this.USquadInfo.getChildByName("Detail")
+      .getChildByName("Money")
       .getChildByName("Label")
       .getComponent(Label).string = this.squadInfo.totalPoints + "";
 
-    this.USquadInfo.getChildByName("Timer")
+    this.USquadInfo.getChildByName("Detail")
+      .getChildByName("Timer")
       .getChildByName("Label")
       .getComponent(Label).string =
       formatTimestampToDate(this.squadInfo.createdAt) + "";
+  }
+
+  viewSquadDetail(event: Event) {
+    const squadId = event.currentTarget["squad"].id;
+    this.isView = true;
+    this.UMembers.active = true;
+    this.USquad.active = false;
+    this.requestMembersList(squadId);
+    this.requestSquadInfo(squadId);
   }
 
   // 推荐队伍
@@ -212,7 +296,9 @@ export class circles extends Component {
         method: "GET",
       });
       if (response.ok) {
-        this.squadList = response.data.data.list as ISquadList[];
+        this.squadList = response.data.data.list
+          ? response.data.data.list
+          : ([] as ISquadList[]);
         this.USquadList.removeAllChildren();
         this.createSquadLayout();
       } else {
@@ -224,9 +310,11 @@ export class circles extends Component {
   }
 
   // 获取队伍成员
-  async requestMembersList() {
+  async requestMembersList(squadId?: number) {
     const globalData = GlobalData.getInstance();
-
+    if (!squadId) {
+      squadId = globalData.userInfo.squadId;
+    }
     try {
       const response = await httpRequest(
         "/api/v1/squad/members",
@@ -234,13 +322,15 @@ export class circles extends Component {
           method: "GET",
         },
         {
-          squadId: globalData.userInfo.squadId,
+          squadId,
           pageNum: 1,
           pageSize: 10,
         }
       );
       if (response.ok) {
-        this.membersList = response.data.data.list as IMembersList[];
+        this.membersList = response.data.data.list
+          ? response.data.data.list
+          : ([] as IMembersList[]);
         this.UMembersList.removeAllChildren();
         this.createMembersLayout();
       } else {
@@ -252,9 +342,11 @@ export class circles extends Component {
   }
 
   // 获取队伍信息
-  async requestSquadInfo() {
+  async requestSquadInfo(squadId?: number) {
     const globalData = GlobalData.getInstance();
-
+    if (!squadId) {
+      squadId = globalData.userInfo.squadId;
+    }
     try {
       const response = await httpRequest(
         "/api/v1/squad/info",
@@ -262,7 +354,7 @@ export class circles extends Component {
           method: "GET",
         },
         {
-          squadId: globalData.userInfo.squadId,
+          squadId,
         }
       );
       if (response.ok) {

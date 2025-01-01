@@ -2,7 +2,7 @@
   "ver": "1.0.27",
   "importer": "image",
   "imported": true,
-  "uuid": "3a9745e0-79b9-47d3-ab74-3f764089a9bc",
+  "uuid": "a05e1163-fe4c-4e3e-bd0f-6921e931708a",
   "files": [
     ".json",
     ".png"
@@ -10,14 +10,14 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "3a9745e0-79b9-47d3-ab74-3f764089a9bc@6c48a",
+      "uuid": "a05e1163-fe4c-4e3e-bd0f-6921e931708a@6c48a",
       "displayName": "bagbg",
       "id": "6c48a",
       "name": "texture",
       "userData": {
         "wrapModeS": "clamp-to-edge",
         "wrapModeT": "clamp-to-edge",
-        "imageUuidOrDatabaseUri": "3a9745e0-79b9-47d3-ab74-3f764089a9bc",
+        "imageUuidOrDatabaseUri": "a05e1163-fe4c-4e3e-bd0f-6921e931708a",
         "isUuid": true,
         "visible": false,
         "minfilter": "linear",
@@ -34,7 +34,7 @@
     },
     "f9941": {
       "importer": "sprite-frame",
-      "uuid": "3a9745e0-79b9-47d3-ab74-3f764089a9bc@f9941",
+      "uuid": "a05e1163-fe4c-4e3e-bd0f-6921e931708a@f9941",
       "displayName": "bagbg",
       "id": "f9941",
       "name": "spriteFrame",
@@ -114,7 +114,7 @@
           ]
         },
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "3a9745e0-79b9-47d3-ab74-3f764089a9bc@6c48a",
+        "imageUuidOrDatabaseUri": "a05e1163-fe4c-4e3e-bd0f-6921e931708a@6c48a",
         "atlasUuid": ""
       },
       "ver": "1.0.12",
@@ -127,8 +127,8 @@
   },
   "userData": {
     "type": "sprite-frame",
-    "fixAlphaTransparencyArtifacts": true,
     "hasAlpha": true,
-    "redirect": "3a9745e0-79b9-47d3-ab74-3f764089a9bc@6c48a"
+    "fixAlphaTransparencyArtifacts": false,
+    "redirect": "a05e1163-fe4c-4e3e-bd0f-6921e931708a@6c48a"
   }
 }

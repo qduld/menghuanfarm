@@ -7,11 +7,15 @@ import {
   UITransform,
   instantiate,
   EventTouch,
+  resources,
+  AudioClip,
+  AudioSource,
 } from "cc";
 import { blockList } from "./loadData";
 import { IFarmland } from "./interface";
 import { httpRequest } from "./http";
 import { GenPlant } from "./genPlant";
+import { GenInfo } from "./genInfo";
 import { Dialog } from "./dialog";
 import { GlobalData } from "./globalData";
 import { i18n } from "./loadData";
@@ -215,6 +219,7 @@ export class GenBlock extends Component {
       });
       if (response.ok) {
         this.updateFarmLand(farmlandId);
+        this.updateUserInfo();
       } else {
         console.error("Request failed with status:", response.status);
       }
@@ -225,6 +230,7 @@ export class GenBlock extends Component {
 
   // 解锁土地
   async unLockBlock() {
+    const globalData = GlobalData.getInstance();
     const dialog = Dialog.getInstance();
     try {
       const response = await httpRequest("/api/v1/farm/farmland/extend", {
@@ -233,7 +239,11 @@ export class GenBlock extends Component {
       if (response.ok) {
         this.requestFarmLand();
         dialog.closeDialog(null, "LockBlock");
+        this.goldReducePlay();
       } else {
+        if (response.data.code === 2003) {
+          globalData.setMessageLabel(i18n.goldNotEnough);
+        }
         console.error("Request failed with status:", response.status);
       }
     } catch (error) {
@@ -277,7 +287,7 @@ export class GenBlock extends Component {
           plantId,
         },
       });
-      if (response.ok && response.data.code === 200) {
+      if (response.ok && response.data.code === 0) {
         globalData.setMessageLabel(i18n.stealSuccess);
         this.updateFarmLand(farmlandId);
       } else {
@@ -287,5 +297,42 @@ export class GenBlock extends Component {
       globalData.setMessageLabel(i18n.stealFailed);
       console.error("Error:", error);
     }
+  }
+
+  updateUserInfo() {
+    const genInfo = GenInfo.getInstance();
+
+    genInfo.requestUserInfo();
+    genInfo.requestUAgg();
+  }
+
+  unLockAudioPlay() {
+    resources.load("sounds/unlock", (err, clip: AudioClip) => {
+      if (err) {
+        console.log(err);
+      } else {
+        const audioSource = find("MainCanvas/AudioManager/Unlock").getComponent(
+          AudioSource
+        );
+        audioSource.clip = clip;
+        audioSource.play();
+        audioSource.volume = 1;
+      }
+    });
+  }
+
+  goldReducePlay() {
+    resources.load("sounds/goldReduce", (err, clip: AudioClip) => {
+      if (err) {
+        console.log(err);
+      } else {
+        const audioSource = find(
+          "MainCanvas/AudioManager/GoldReduce"
+        ).getComponent(AudioSource);
+        audioSource.clip = clip;
+        audioSource.play();
+        audioSource.volume = 1;
+      }
+    });
   }
 }

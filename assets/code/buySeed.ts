@@ -7,9 +7,13 @@ import {
   SpriteFrame,
   resources,
   Label,
+  SpriteAtlas,
+  AudioClip,
+  AudioSource,
 } from "cc";
 import { httpRequest } from "./http";
 import { Dialog } from "./dialog";
+import { GenInfo } from "./genInfo";
 
 const { ccclass, property } = _decorator;
 @ccclass("BuySeed")
@@ -79,18 +83,15 @@ export class BuySeed extends Component {
         spritePath = "carrot";
     }
 
-    resources.load(
-      spritePath + "/spriteFrame",
-      SpriteFrame,
-      (err, spriteFrame) => {
-        if (err) {
-          console.error("Failed to load sprite:", err);
-          return;
-        }
-
-        this.USeedSprite.getComponent(Sprite).spriteFrame = spriteFrame;
+    resources.load("iconList", SpriteAtlas, (err, atlas) => {
+      if (err) {
+        console.error("Failed to load sprite:", err);
+        return;
       }
-    );
+
+      this.USeedSprite.getComponent(Sprite).spriteFrame =
+        atlas.getSpriteFrame(spritePath);
+    });
 
     this.USeedProfit.getChildByName("Value").getComponent(
       Label
@@ -131,6 +132,7 @@ export class BuySeed extends Component {
 
   // 购买种子
   async buySeed() {
+    const genInfo = GenInfo.getInstance();
     const dialog = Dialog.getInstance();
     try {
       const response = await httpRequest("/api/v1/seed/buy", {
@@ -142,11 +144,28 @@ export class BuySeed extends Component {
       });
       if (response.ok) {
         dialog.closeDialog(null, "BuySeed");
+        this.goldReducePlay();
+        genInfo.requestUserInfo(); // 买完之后更新用户信息
       } else {
         console.error("Request failed with status:", response.status);
       }
     } catch (error) {
       console.error("Error:", error);
     }
+  }
+
+  goldReducePlay() {
+    resources.load("sounds/goldReduce", (err, clip: AudioClip) => {
+      if (err) {
+        console.log(err);
+      } else {
+        const audioSource = find(
+          "MainCanvas/AudioManager/GoldReduce"
+        ).getComponent(AudioSource);
+        audioSource.clip = clip;
+        audioSource.play();
+        audioSource.volume = 1;
+      }
+    });
   }
 }

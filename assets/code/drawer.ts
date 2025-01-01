@@ -8,6 +8,7 @@ import {
   Sprite,
   resources,
   SpriteFrame,
+  SpriteAtlas,
 } from "cc";
 const { ccclass, property } = _decorator;
 
@@ -32,21 +33,21 @@ export class Drawer extends Component {
       ? this.closedPosition
       : this.openPosition;
 
-    let spritePath = "";
-    if (this.isOpen) {
-      spritePath = "drawerclose/spriteFrame";
-    } else {
-      spritePath = "drawerexpand/spriteFrame";
-    }
-
-    resources.load(spritePath, SpriteFrame, (err, spriteFrame) => {
+    resources.load("iconList", SpriteAtlas, (err, atlas) => {
       if (err) {
         console.error("Failed to load sprite:", err);
         return;
       }
 
+      let atlasName = "";
+      if (this.isOpen) {
+        atlasName = "drawerclose";
+      } else {
+        atlasName = "drawerexpand";
+      }
+
       drawerBtn.getChildByName("Sprite").getComponent(Sprite).spriteFrame =
-        spriteFrame;
+        atlas.getSpriteFrame(atlasName);
     });
 
     // 使用 tween 实现位置移动

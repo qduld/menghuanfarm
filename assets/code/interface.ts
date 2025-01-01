@@ -95,7 +95,7 @@ export interface ILogin {
 
 // /farm/u/userInfo 用户信息
 export interface IUserInfo {
-  id: number;
+  id: string;
   tgFirstName: string;
   tgLastName: string;
   tgUsername: string;
@@ -147,6 +147,7 @@ export interface IMembersList {
    * 该用户今日收取数量=今日偷取数量+今日收取数量
    */
   totalCollectPoints: number;
+  isLeader: number;
 }
 
 export interface ISquadInfo {

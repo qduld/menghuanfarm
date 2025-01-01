@@ -7,6 +7,7 @@ import {
   SpriteFrame,
   UITransform,
   Label,
+  SpriteAtlas,
 } from "cc";
 import { formatSeconds } from "./utils";
 import { GenBlock } from "./genBlock";
@@ -115,19 +116,15 @@ export class GenPlant extends Component {
     }
 
     if (this.plantMarkingsPath) {
-      resources.load(
-        this.plantMarkingsPath + "/spriteFrame",
-        SpriteFrame,
-        (err, spriteFrame) => {
-          if (err) {
-            console.error("Failed to load sprite:", err);
-            return;
-          }
-
-          this.plantMarkingSprite.getComponent(Sprite).spriteFrame =
-            spriteFrame;
+      resources.load("iconList", SpriteAtlas, (err, atlas) => {
+        if (err) {
+          console.error("Failed to load sprite:", err);
+          return;
         }
-      );
+
+        this.plantMarkingSprite.getComponent(Sprite).spriteFrame =
+          atlas.getSpriteFrame(this.plantMarkingsPath);
+      });
     }
 
     const globalData = GlobalData.getInstance();
@@ -147,54 +144,52 @@ export class GenPlant extends Component {
       const genBlock = GenBlock.getInstance();
       genBlock.updateFarmLand(data.id); // 重新请求farmlandList
     }
-    resources.load(
-      this.plantSpritePath + "/spriteFrame",
-      SpriteFrame,
-      (err, spriteFrame) => {
-        if (err) {
-          console.error("Failed to load sprite:", err);
-          return;
-        }
+    resources.load("iconList", SpriteAtlas, (err, atlas) => {
+      if (err) {
+        console.error("Failed to load sprite:", err);
+        return;
+      }
 
-        this.plantSprite.getComponent(Sprite).spriteFrame = spriteFrame;
+      this.plantSprite.getComponent(Sprite).spriteFrame = atlas.getSpriteFrame(
+        this.plantSpritePath
+      );
 
-        if (this.plantLevel === 0) {
-          this.plantSprite.getComponent(UITransform).width = 60;
-          this.plantSprite.getComponent(UITransform).height = 70;
-          this.plantSprite.setPosition(0, 36, 0);
-        }
-        if (this.plantLevel === 1) {
-          this.plantSprite.getComponent(UITransform).width = 60;
-          this.plantSprite.getComponent(UITransform).height = 48;
-          this.plantSprite.setPosition(0, 30, 0);
-        }
-        if (this.plantLevel === 2) {
+      if (this.plantLevel === 0) {
+        this.plantSprite.getComponent(UITransform).width = 60;
+        this.plantSprite.getComponent(UITransform).height = 70;
+        this.plantSprite.setPosition(0, 36, 0);
+      }
+      if (this.plantLevel === 1) {
+        this.plantSprite.getComponent(UITransform).width = 60;
+        this.plantSprite.getComponent(UITransform).height = 48;
+        this.plantSprite.setPosition(0, 30, 0);
+      }
+      if (this.plantLevel === 2) {
+        this.plantSprite.getComponent(UITransform).width = 90;
+        this.plantSprite.getComponent(UITransform).height = 100;
+        this.plantSprite.setPosition(0, 60, 0);
+      }
+      if (this.plantLevel === 3) {
+        if (this.plantSpritePath === "carrotLevel3") {
           this.plantSprite.getComponent(UITransform).width = 90;
-          this.plantSprite.getComponent(UITransform).height = 100;
+          this.plantSprite.getComponent(UITransform).height = 120;
           this.plantSprite.setPosition(0, 60, 0);
-        }
-        if (this.plantLevel === 3) {
-          if (this.plantSpritePath === "carrotLevel3") {
-            this.plantSprite.getComponent(UITransform).width = 90;
-            this.plantSprite.getComponent(UITransform).height = 120;
-            this.plantSprite.setPosition(0, 60, 0);
-          } else {
-            this.plantSprite.getComponent(UITransform).width = 160;
-            this.plantSprite.getComponent(UITransform).height = 156;
-            this.plantSprite.setPosition(0, 80, 0);
-          }
-        }
-
-        if (!this.plantSprite.getComponent(HoverEffect)) {
-          const hoverEffect = this.plantSprite.addComponent(HoverEffect);
-          hoverEffect.setTargetNode(this.plantSprite, data, this.plantLevel);
         } else {
-          this.plantSprite
-            .getComponent(HoverEffect)
-            .setTargetNode(this.plantSprite, data, this.plantLevel);
+          this.plantSprite.getComponent(UITransform).width = 160;
+          this.plantSprite.getComponent(UITransform).height = 156;
+          this.plantSprite.setPosition(0, 80, 0);
         }
       }
-    );
+
+      if (!this.plantSprite.getComponent(HoverEffect)) {
+        const hoverEffect = this.plantSprite.addComponent(HoverEffect);
+        hoverEffect.setTargetNode(this.plantSprite, data, this.plantLevel);
+      } else {
+        this.plantSprite
+          .getComponent(HoverEffect)
+          .setTargetNode(this.plantSprite, data, this.plantLevel);
+      }
+    });
   }
 
   startCountdownForLand(block: Node, landNode: Node, time: number, data) {

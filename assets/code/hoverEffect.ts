@@ -35,6 +35,9 @@ export class HoverEffect extends Component {
   @property(Vec3)
   rightPosition: Vec3 = new Vec3(60.297, 25.625, 0); // 打开位置
 
+  @property
+  animating: boolean = false;
+
   // 通过方法设置 targetNode
   setTargetNode(node: Node, data, level) {
     this.targetNode = node;
@@ -65,7 +68,9 @@ export class HoverEffect extends Component {
   onMouseLeave() {
     const globalData = GlobalData.getInstance();
     if (globalData.isStolen) return;
-    this.targetNode.getChildByName("Receivehand").active = false;
+    if (!this.animating) {
+      this.targetNode.getChildByName("Receivehand").active = false;
+    }
   }
 
   onMouseDown() {
@@ -92,17 +97,19 @@ export class HoverEffect extends Component {
   }
 
   receiveHandAnimation() {
+    this.animating = true;
     tween(this.targetNode.getChildByName("Receivehand"))
-      .to(0.3, { position: this.leftPosition }, { easing: "cubicOut" })
-      .to(0.3, { position: this.rightPosition }, { easing: "cubicOut" })
+      .to(0.8, { position: this.leftPosition }, { easing: "cubicOut" })
+      .to(0.8, { position: this.rightPosition }, { easing: "cubicOut" })
       .start();
     setTimeout(() => {
       this.targetNode.getChildByName("Receivehand").active = false;
-    }, 1200);
+      this.animating = false;
+    }, 1600);
   }
 
   goldMoveAnimation() {
-    const goldEnd = find("MainCanvas/GoldEnd");
+    const goldEnd = find("MainCanvas/TopContent/Person/Money/Gold");
     const gold = instantiate(goldEnd);
     gold.active = true;
     gold.setSiblingIndex(this.node.children.length - 1); // 移动到最上层
@@ -163,43 +170,54 @@ export class HoverEffect extends Component {
   }
 
   goldStolenMoveAnimation() {
-    const goldEnd = find("MainCanvas/GoldEnd");
+    const goldEnd = find("MainCanvas/TopContent/Person/Money/Gold");
     const gold = instantiate(goldEnd);
     gold.active = true;
     gold.setSiblingIndex(this.node.children.length - 1); // 移动到最上层
     this.node.addChild(gold);
 
-    // 2. 起点（点击土地的位置）
-    const startPosition = this.node
-      .getComponent(UITransform)!
-      .convertToWorldSpaceAR(Vec3.ZERO);
+    const jumpHeight = 200; // 向上跳跃的高度
+    const duration = 1; // 每段动画的持续时间
 
-    const localStartPosition = this.node
-      .getComponent(UITransform)!
-      .convertToNodeSpaceAR(startPosition);
+    // 获取初始位置
+    const startPos = new Vec3(0, 0, 0);
+    gold.setPosition(startPos);
 
-    gold.setPosition(startPosition);
+    // 向上弹起动画
+    const jumpUp = tween().to(
+      duration,
+      {
+        position: new Vec3(startPos.x, startPos.y + jumpHeight, startPos.z),
+      },
+      { easing: "sineOut" }
+    );
 
-    const topPosition = instantiate(localStartPosition);
-    topPosition.y += 30;
+    // 向下落下动画
+    const fallDown = tween().to(
+      duration,
+      { position: new Vec3(startPos.x, startPos.y, startPos.z) },
+      { easing: "sineIn" }
+    );
 
-    tween(gold)
-      .to(0.8, { position: topPosition }, { easing: "sineOut" }) // 向上
-      .to(0.8, { position: startPosition }, { easing: "sineIn" }) // 向下
-      .start();
+    // 组合动画：向上 -> 向下
+    tween(gold).sequence(jumpUp, fallDown).start();
 
-    gold.active = false;
+    setTimeout(() => {
+      gold.active = false;
+    }, duration * 2000);
   }
 
   playVoice() {
-    const audioSource =
-      this.node.getComponent(AudioSource) ||
-      this.node.addComponent(AudioSource);
+    const audioSources = this.node.getComponents(AudioSource);
 
-    audioSource.play();
+    audioSources.forEach((audio) => {
+      audio.play();
+    });
 
     this.scheduleOnce(() => {
-      audioSource.stop();
+      audioSources.forEach((audio) => {
+        audio.stop();
+      });
     }, 2);
   }
 
@@ -236,7 +254,9 @@ export class HoverEffect extends Component {
   onTouchEnd() {
     const globalData = GlobalData.getInstance();
     if (globalData.isStolen) return;
-    this.targetNode.getChildByName("Receivehand").active = false;
+    if (!this.animating) {
+      this.targetNode.getChildByName("Receivehand").active = false;
+    }
   }
 
   // onDestroy() {

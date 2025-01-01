@@ -1,50 +1,146 @@
-import { _decorator, Component, AudioSource, director, log } from "cc";
-const { ccclass, property } = _decorator;
+import { Node, AudioSource, AudioClip, resources, director } from "cc";
+import { AudioControl } from "./audioControl";
 
-@ccclass("AudioManager")
-export class AudioManager extends Component {
-  private static _instance: AudioManager | null = null;
+/**
+ * @en
+ * this is a sington class for audio play, can be easily called from anywhere in you project.
+ * @zh
+ * 这是一个用于播放音频的单件类，可以很方便地在项目的任何地方调用。
+ */
+export class AudioMgr {
+  private static _inst: AudioMgr;
+  private _audioSource: AudioSource;
+  private _isPaused: boolean = false; // 保存暂停状态
+  private _currentClip: AudioClip | null = null; // 当前播放的音频
 
-  @property({ type: AudioSource })
-  bgmAudioSource: AudioSource = null!;
-
-  @property
-  isMuted: boolean = true;
-
-  onLoad() {
-    if (AudioManager._instance) {
-      // 如果实例已存在，则销毁新节点，保留旧实例
-      this.destroy();
-      return;
+  public static get inst(): AudioMgr {
+    if (this._inst == null) {
+      this._inst = new AudioMgr();
     }
-
-    AudioManager._instance = this;
-    director.addPersistRootNode(this.node); // 设置为常驻节点
-
-    this.bgmAudioSource.play(); // 播放背景音乐
-    this.bgmAudioSource.loop = true; // 循环播放
-    this.bgmAudioSource.volume = 2; // 设置音量
-    log("AudioManager is initialized and playing music.");
+    return this._inst;
   }
 
-  public static getInstance(): AudioManager {
-    return AudioManager._instance!;
+  constructor() {
+    //@en create a node as audioMgr
+    //@zh 创建一个节点作为 audioMgr
+    let audioMgr = new Node();
+    audioMgr.name = "__audioMgr__";
+
+    //@en add to the scene.
+    //@zh 添加节点到场景
+    director.getScene().addChild(audioMgr);
+
+    //@en make it as a persistent node, so it won't be destroied when scene change.
+    //@zh 标记为常驻节点，这样场景切换的时候就不会被销毁了
+    director.addPersistRootNode(audioMgr);
+
+    //@en add AudioSource componrnt to play audios.
+    //@zh 添加 AudioSource 组件，用于播放音频。
+    this._audioSource = audioMgr.addComponent(AudioSource);
   }
 
-  // 切换背景音乐
-  public playBackgroundMusic(newAudioClip) {
-    this.bgmAudioSource.stop();
-    this.bgmAudioSource.clip = newAudioClip;
-    this.bgmAudioSource.play();
+  onSceneChange() {
+    // 保存当前的暂停状态
+    if (!AudioControl.getInstance().isOn) {
+      if (this._audioSource.playing) {
+        this._isPaused = false;
+        this._currentClip = this._audioSource.clip;
+        this._audioSource.stop();
+      } else {
+        this._isPaused = true;
+      }
+    }
   }
 
-  setMute() {
-    this.isMuted = !this.isMuted;
+  public get audioSource() {
+    return this._audioSource;
+  }
 
-    if (this.isMuted) {
-      this.bgmAudioSource.volume = 0;
+  /**
+   * @en
+   * play short audio, such as strikes,explosions
+   * @zh
+   * 播放短音频,比如 打击音效，爆炸音效等
+   * @param sound clip or url for the audio
+   * @param volume
+   */
+  playOneShot(sound: AudioClip | string, volume: number = 1.0) {
+    if (sound instanceof AudioClip) {
+      this._audioSource.playOneShot(sound, volume);
     } else {
-      this.bgmAudioSource.volume = 2;
+      resources.load(sound, (err, clip: AudioClip) => {
+        if (err) {
+          console.log(err);
+        } else {
+          this._audioSource.playOneShot(clip, volume);
+        }
+      });
     }
+  }
+
+  /**
+   * @en
+   * play long audio, such as the bg music
+   * @zh
+   * 播放长音频，比如 背景音乐
+   * @param sound clip or url for the sound
+   * @param volume
+   */
+  play(sound: AudioClip | string, volume: number = 1.0, loop: boolean = true) {
+    if (sound instanceof AudioClip) {
+      this._audioSource.stop();
+      this._audioSource.clip = sound;
+      this._audioSource.play();
+      this._audioSource.loop = true;
+      this._audioSource.volume = volume;
+    } else {
+      this._isPaused = false;
+      resources.load(sound, (err, clip: AudioClip) => {
+        if (err) {
+          console.log(err);
+        } else {
+          this._audioSource.stop();
+          this._audioSource.clip = clip;
+          this._currentClip = clip;
+          this._audioSource.loop = loop;
+          this._audioSource.play();
+          this._audioSource.volume = volume;
+        }
+      });
+    }
+  }
+
+  /**
+   * stop the audio play
+   */
+  stop() {
+    this._audioSource.stop();
+    this._isPaused = false;
+    this._currentClip = null; // 清除当前音频记录
+  }
+
+  /**
+   * pause the audio play
+   */
+  pause() {
+    this._audioSource.pause();
+    this._isPaused = true;
+  }
+
+  /**
+   * resume the audio play
+   */
+  resume() {
+    if (this._currentClip) {
+      this._audioSource.clip = this._currentClip;
+      this._audioSource.play();
+      this._audioSource.loop = true;
+      this._audioSource.volume = 1.0; // 默认音量为 1.0
+      this._isPaused = false;
+    }
+  }
+
+  getPause() {
+    return this._isPaused;
   }
 }

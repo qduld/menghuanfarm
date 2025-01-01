@@ -2,7 +2,7 @@
   "ver": "1.0.27",
   "importer": "image",
   "imported": true,
-  "uuid": "3c757379-0f7f-4c1a-b659-06c31c8e7eee",
+  "uuid": "a90a573d-b7cd-49b2-9752-5c0bd2182bab",
   "files": [
     ".json",
     ".png"
@@ -10,14 +10,14 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "3c757379-0f7f-4c1a-b659-06c31c8e7eee@6c48a",
+      "uuid": "a90a573d-b7cd-49b2-9752-5c0bd2182bab@6c48a",
       "displayName": "buyCoinsBg",
       "id": "6c48a",
       "name": "texture",
       "userData": {
         "wrapModeS": "clamp-to-edge",
         "wrapModeT": "clamp-to-edge",
-        "imageUuidOrDatabaseUri": "3c757379-0f7f-4c1a-b659-06c31c8e7eee",
+        "imageUuidOrDatabaseUri": "a90a573d-b7cd-49b2-9752-5c0bd2182bab",
         "isUuid": true,
         "visible": false,
         "minfilter": "linear",
@@ -34,7 +34,7 @@
     },
     "f9941": {
       "importer": "sprite-frame",
-      "uuid": "3c757379-0f7f-4c1a-b659-06c31c8e7eee@f9941",
+      "uuid": "a90a573d-b7cd-49b2-9752-5c0bd2182bab@f9941",
       "displayName": "buyCoinsBg",
       "id": "f9941",
       "name": "spriteFrame",
@@ -114,7 +114,7 @@
           ]
         },
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "3c757379-0f7f-4c1a-b659-06c31c8e7eee@6c48a",
+        "imageUuidOrDatabaseUri": "a90a573d-b7cd-49b2-9752-5c0bd2182bab@6c48a",
         "atlasUuid": ""
       },
       "ver": "1.0.12",
@@ -127,8 +127,8 @@
   },
   "userData": {
     "type": "sprite-frame",
-    "fixAlphaTransparencyArtifacts": true,
     "hasAlpha": true,
-    "redirect": "3c757379-0f7f-4c1a-b659-06c31c8e7eee@6c48a"
+    "fixAlphaTransparencyArtifacts": false,
+    "redirect": "a90a573d-b7cd-49b2-9752-5c0bd2182bab@6c48a"
   }
 }

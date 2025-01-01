@@ -9,6 +9,7 @@ import {
   SpriteFrame,
   UITransform,
   Label,
+  SpriteAtlas,
 } from "cc";
 import { httpRequest } from "./http";
 import { ISeedList } from "./interface";
@@ -104,24 +105,20 @@ export class GenBag extends Component {
           spritePath = "carrot";
       }
 
-      resources.load(
-        spritePath + "/spriteFrame",
-        SpriteFrame,
-        (err, spriteFrame) => {
-          if (err) {
-            console.error("Failed to load sprite:", err);
-            return;
-          }
-
-          seedSection
-            .getChildByName("Fruit")
-            .getChildByName("Picture")
-            .getComponent(Sprite).spriteFrame = spriteFrame;
-
-          const seedEffect = seedSection.addComponent(SeedEffect);
-          seedEffect.setTargetNode(seedSection, seed);
+      resources.load("iconList", SpriteAtlas, (err, atlas) => {
+        if (err) {
+          console.error("Failed to load sprite:", err);
+          return;
         }
-      );
+
+        seedSection
+          .getChildByName("Fruit")
+          .getChildByName("Picture")
+          .getComponent(Sprite).spriteFrame = atlas.getSpriteFrame(spritePath);
+
+        const seedEffect = seedSection.addComponent(SeedEffect);
+        seedEffect.setTargetNode(seedSection, seed);
+      });
     });
   }
 

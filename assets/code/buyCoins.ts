@@ -104,7 +104,6 @@ export class BuyCoins extends Component {
 
   // 购买
   async buyCoins(event) {
-    debugger;
     try {
       const response = await httpRequest("/api/v1/shop/buy", {
         method: "POST",

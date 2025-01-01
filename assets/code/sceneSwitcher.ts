@@ -2,6 +2,7 @@ import { _decorator, Component, director } from "cc";
 import { GenBlock } from "./genBlock";
 import { GlobalData } from "./globalData";
 import { GenInfo } from "./genInfo";
+import { AudioMgr } from "./audioManager";
 const { ccclass, property } = _decorator;
 
 @ccclass("SceneSwitcher")
@@ -33,6 +34,7 @@ export class SceneSwitcher extends Component {
           console.error("Failed to load scene:", this.sceneName, err);
         } else {
           console.log("Scene loaded:", this.sceneName);
+          AudioMgr.inst.onSceneChange();
           if (this.isStolen) {
             const genInfo = GenInfo.getInstance();
             globalData.isStolenUISwitch();

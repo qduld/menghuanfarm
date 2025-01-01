@@ -9,11 +9,13 @@ import {
   SpriteFrame,
   UITransform,
   Label,
+  SpriteAtlas,
 } from "cc";
 import { httpRequest } from "./http";
 import { ISeedList } from "./interface";
 import { BuySeedEffect } from "./buySeedEffect";
 import { formatSeconds } from "./utils";
+import { GenInfo } from "./genInfo";
 
 const { ccclass, property } = _decorator;
 @ccclass("GenShop")
@@ -102,21 +104,17 @@ export class GenShop extends Component {
           spritePath = "carrot";
       }
 
-      resources.load(
-        spritePath + "/spriteFrame",
-        SpriteFrame,
-        (err, spriteFrame) => {
-          if (err) {
-            console.error("Failed to load sprite:", err);
-            return;
-          }
-
-          seedSection
-            .getChildByName("Fruit")
-            .getChildByName("Picture")
-            .getComponent(Sprite).spriteFrame = spriteFrame;
+      resources.load("iconList", SpriteAtlas, (err, atlas) => {
+        if (err) {
+          console.error("Failed to load sprite:", err);
+          return;
         }
-      );
+
+        seedSection
+          .getChildByName("Fruit")
+          .getChildByName("Picture")
+          .getComponent(Sprite).spriteFrame = atlas.getSpriteFrame(spritePath);
+      });
 
       const buySeedEffect = seedSection.addComponent(BuySeedEffect);
       buySeedEffect.setTargetNode(seedSection.getChildByName("Button"), seed);
@@ -145,21 +143,23 @@ export class GenShop extends Component {
   }
 
   // 购买种子
-  async buySeed(seedId, quantity) {
-    try {
-      const response = await httpRequest("/api/v1/seed/buy", {
-        method: "POST",
-        body: {
-          quantity,
-          seedId,
-        },
-      });
-      if (response.ok) {
-      } else {
-        console.error("Request failed with status:", response.status);
-      }
-    } catch (error) {
-      console.error("Error:", error);
-    }
-  }
+  // async buySeed(seedId, quantity) {
+  //   try {
+  //     const response = await httpRequest("/api/v1/seed/buy", {
+  //       method: "POST",
+  //       body: {
+  //         quantity,
+  //         seedId,
+  //       },
+  //     });
+  //     if (response.ok) {
+  //       const genInfo = GenInfo.getInstance();
+  //       genInfo.requestUserInfo(); // 买完之后更新用户信息
+  //     } else {
+  //       console.error("Request failed with status:", response.status);
+  //     }
+  //   } catch (error) {
+  //     console.error("Error:", error);
+  //   }
+  // }
 }

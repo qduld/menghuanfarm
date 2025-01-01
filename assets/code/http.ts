@@ -33,10 +33,10 @@ export async function httpRequest<T>(
   params?: Record<string, any>
 ): Promise<HttpResponse> {
   if (!token) {
-    // const { initDataRaw } = retrieveLaunchParams();
+    const { initDataRaw } = retrieveLaunchParams();
 
-    token = tokenMock;
-    // token = initDataRaw;
+    // token = tokenMock;
+    token = initDataRaw;
   }
 
   const {

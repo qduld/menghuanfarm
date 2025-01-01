@@ -1,4 +1,13 @@
-import { _decorator, Component, Node, find, EventTouch } from "cc";
+import {
+  _decorator,
+  Component,
+  Node,
+  find,
+  EventTouch,
+  resources,
+  AudioClip,
+  AudioSource,
+} from "cc";
 import { GenBag } from "./genBag";
 import { GenShop } from "./genShop";
 import { IFarmland, ISeed } from "./interface";
@@ -79,11 +88,13 @@ export class Dialog extends Component {
     switch (customData) {
       case "Bag":
         this.bagBox.active = true;
+        this.audioPlay();
         const genBag = GenBag.getInstance();
         genBag.requestPackageList();
         break;
       case "Shop":
         this.shopBox.active = true;
+        this.audioPlay();
         const genShop = GenShop.getInstance();
         genShop.requestShopList();
         break;
@@ -152,5 +163,19 @@ export class Dialog extends Component {
   }
   setTargetBuySeed(data) {
     this.targetBuySeedInfo = data;
+  }
+  audioPlay() {
+    resources.load("sounds/openBag", (err, clip: AudioClip) => {
+      if (err) {
+        console.log(err);
+      } else {
+        const audioSource = find(
+          "MainCanvas/AudioManager/OpenBag"
+        ).getComponent(AudioSource);
+        audioSource.clip = clip;
+        audioSource.play();
+        audioSource.volume = 1;
+      }
+    });
   }
 }

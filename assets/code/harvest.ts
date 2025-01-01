@@ -11,6 +11,7 @@ import { harvestList } from "./loadData";
 import { httpRequest } from "./http";
 import { ISkillList } from "./interface";
 import { Dialog } from "./dialog";
+import { GlobalData } from "./globalData";
 
 const { ccclass, property } = _decorator;
 @ccclass("harvest")
@@ -30,6 +31,12 @@ export class harvest extends Component {
   @property
   harvestSpacingY: number = 40; // 推荐间距
 
+  @property(Node)
+  UMoney: Node = null; // 推荐列表
+
+  @property(Node)
+  UAddition: Node = null; // 推荐列表
+
   @property
   column: number = 3;
   protected onLoad(): void {
@@ -37,9 +44,9 @@ export class harvest extends Component {
     this.harvestSpacingY = 40;
     this.UHarvestList = find("Canvas/Content/List");
     this.UHarvestSection = find("Canvas/Content/Section");
-    const dialog = Dialog.getInstance();
-    dialog.buyPropsBox.active = false;
-    dialog.overlayMask.active = false;
+    this.UMoney = find("Canvas/Top/Money");
+    this.UAddition = find("Canvas/Top/Addition");
+    this.updateUserInfo();
   }
 
   // 生成推荐列表
@@ -81,7 +88,16 @@ export class harvest extends Component {
     });
   }
 
-  // 推荐队伍
+  updateUserInfo() {
+    const globalData = GlobalData.getInstance();
+    this.UMoney.getChildByName("Label").getComponent(Label).string =
+      globalData.userInfo.pointsBalance + "";
+    this.UAddition.getChildByName("Label").getComponent(
+      Label
+    ).string = `+${globalData.userInfo.radio}%`;
+  }
+
+  // 膨胀列表
   async requestHarvestList() {
     try {
       const response = await httpRequest("/api/v1/skill/list", {
