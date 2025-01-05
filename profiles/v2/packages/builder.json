@@ -32,7 +32,8 @@
     "startScene": "cf4dc34b-8c49-4fc8-b329-7c0faa4a4a85",
     "mainBundleIsRemote": false,
     "skipCompressTexture": true,
-    "experimentalEraseModules": false
+    "experimentalEraseModules": false,
+    "md5Cache": true
   },
   "BuildTaskManager": {
     "taskMap": {
@@ -42,14 +43,14 @@
         "progress": 1,
         "state": "success",
         "stage": "build",
-        "message": "2025-1-5 19:09:13 build success in 23 s!",
-        "detailMessage": "// ---- build task cocos-service：onAfterCompressSettings ----\r",
+        "message": "2025-1-5 19:58:36 build success in 26 s!",
+        "detailMessage": "// ---- build task web-mobile：onBeforeCopyBuildTemplate ----\r",
         "options": {
           "name": "PlantStore",
           "platform": "web-mobile",
           "buildPath": "project://build",
           "debug": false,
-          "md5Cache": false,
+          "md5Cache": true,
           "skipCompressTexture": true,
           "sourceMaps": false,
           "polyfills": {
@@ -112,7 +113,7 @@
           "replaceSplashScreen": true,
           "logDest": "project://temp/builder/log/web-mobile2022-11-9 11-49.log"
         },
-        "time": "2025-1-5 19:08:49",
+        "time": "2025-1-5 19:58:10",
         "dirty": false
       },
       "1668068042719": {
