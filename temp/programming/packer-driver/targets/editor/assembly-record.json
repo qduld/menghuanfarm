@@ -3226,18 +3226,6 @@
       },
       "timestamp": 1736073031039
     },
-    "f14c4fe94b50aff67e038232558f6f58d4a45ba8": {
-      "imports": {
-        "cc": {
-          "resolved": {
-            "type": "chunk",
-            "id": "93ba276ea7b26ffcdc433fab14afc1ed6f05647b"
-          },
-          "messages": []
-        }
-      },
-      "timestamp": 1736082539398
-    },
     "ee3ea0dbc7200eb3f105c40cf8623b70665adc41": {
       "imports": {
         "cc": {
@@ -3282,6 +3270,32 @@
         }
       },
       "timestamp": 1736084734818
+    },
+    "d4b8c1b1aa284d2ff86f93e4a2e0f36c05147c62": {
+      "imports": {
+        "@telegram-apps/sdk": {
+          "resolved": {
+            "type": "chunk",
+            "id": "9c2384103ed7453c4a01015ad2c1545120f8cf98"
+          },
+          "messages": []
+        },
+        "__unresolved_0": {
+          "resolved": {
+            "type": "chunk",
+            "id": "6a5019a719a9014c047e67aa1cf34453ab8392ce"
+          },
+          "messages": []
+        },
+        "cc": {
+          "resolved": {
+            "type": "chunk",
+            "id": "93ba276ea7b26ffcdc433fab14afc1ed6f05647b"
+          },
+          "messages": []
+        }
+      },
+      "timestamp": 1736084787064
     },
     "6d8fd2b0177941b032ddc0733af48a561fb60657": {
       "imports": {
@@ -3573,24 +3587,10 @@
           "messages": []
         }
       },
-      "timestamp": 1736084787013
+      "timestamp": 1736085093933
     },
-    "d4b8c1b1aa284d2ff86f93e4a2e0f36c05147c62": {
+    "f14c4fe94b50aff67e038232558f6f58d4a45ba8": {
       "imports": {
-        "@telegram-apps/sdk": {
-          "resolved": {
-            "type": "chunk",
-            "id": "9c2384103ed7453c4a01015ad2c1545120f8cf98"
-          },
-          "messages": []
-        },
-        "__unresolved_0": {
-          "resolved": {
-            "type": "chunk",
-            "id": "6a5019a719a9014c047e67aa1cf34453ab8392ce"
-          },
-          "messages": []
-        },
         "cc": {
           "resolved": {
             "type": "chunk",
@@ -3599,7 +3599,7 @@
           "messages": []
         }
       },
-      "timestamp": 1736084787064
+      "timestamp": 1736085094005
     }
   },
   "entries": {
