@@ -703,7 +703,7 @@
       ]
     },
     "cce:/internal/x/prerequisite-imports": {
-      "mTimestamp": 262302682.5638001,
+      "mTimestamp": 599410890.8608,
       "chunkId": "6d8fd2b0177941b032ddc0733af48a561fb60657",
       "imports": [
         {
@@ -2249,7 +2249,7 @@
     },
     "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/buyCoins.ts": {
       "mTimestamp": {
-        "mtime": 1735735168202.6594,
+        "mtime": 1736070123176.9888,
         "uuid": "626b90bc-794e-43d7-ac5b-56fbfa4fb850"
       },
       "chunkId": "719b7edf7ed1f19285d1e73fd6b0f8e67781ab59",
@@ -2333,7 +2333,7 @@
     },
     "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/http.ts": {
       "mTimestamp": {
-        "mtime": 1735736716009.2625,
+        "mtime": 1736073651245.224,
         "uuid": "c04de095-1da8-424a-8757-d86c10b4d537"
       },
       "chunkId": "d4b8c1b1aa284d2ff86f93e4a2e0f36c05147c62",
@@ -2346,15 +2346,16 @@
           "value": "cc"
         },
         {
-          "value": "@telegram-apps/sdk",
+          "value": "./loadData",
+          "resolved": "__unresolved_1",
           "loc": {
             "start": {
-              "line": 2,
-              "column": 37
+              "line": 1,
+              "column": 61
             },
             "end": {
-              "line": 2,
-              "column": 57
+              "line": 1,
+              "column": 73
             }
           }
         }
@@ -2378,7 +2379,7 @@
         {
           "resolved": {
             "type": "module",
-            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/node_modules/@telegram-apps/sdk/dist/index.js"
+            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/loadData.ts"
           },
           "messages": []
         }
@@ -2386,7 +2387,7 @@
     },
     "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/loadData.ts": {
       "mTimestamp": {
-        "mtime": 1735736696829.677,
+        "mtime": 1736073025466.8394,
         "uuid": "23eafa10-d97f-4874-812a-16c12e0efced"
       },
       "chunkId": "ee3ea0dbc7200eb3f105c40cf8623b70665adc41",
@@ -2408,7 +2409,7 @@
     },
     "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/buySeed.ts": {
       "mTimestamp": {
-        "mtime": 1735735587383.1763,
+        "mtime": 1736073025469.8394,
         "uuid": "bf977087-e733-4542-8ee8-dd3c36664fd0"
       },
       "chunkId": "d5972c3fee94a23941aa814c07e51fb2c6efce6a",
@@ -2639,7 +2640,7 @@
     },
     "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/genBag.ts": {
       "mTimestamp": {
-        "mtime": 1735641466455.6948,
+        "mtime": 1736073025466.8394,
         "uuid": "e36eb73e-1097-4f5c-9a57-54e2ad8e68b4"
       },
       "chunkId": "fc07bda39eabbeb083df6d9035de3d27d7492a2f",
@@ -2934,7 +2935,7 @@
     },
     "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/genBlock.ts": {
       "mTimestamp": {
-        "mtime": 1735736699299.911,
+        "mtime": 1736072359683.7307,
         "uuid": "d531bfae-33e5-4dc0-b5e6-ece4850922b3"
       },
       "chunkId": "31e7ed6474cbe1cffb111624e6d74d2c31107af8",
@@ -3123,7 +3124,7 @@
     },
     "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/genPlant.ts": {
       "mTimestamp": {
-        "mtime": 1735734661408.3003,
+        "mtime": 1736073025463.8376,
         "uuid": "8d18ba6e-e9c9-4311-a9db-07bead0944c5"
       },
       "chunkId": "9605a97d089b2628900488d171c8dfe7ab5d50d2",
@@ -3270,7 +3271,7 @@
     },
     "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/hoverEffect.ts": {
       "mTimestamp": {
-        "mtime": 1735734652715.6414,
+        "mtime": 1735804909568.1125,
         "uuid": "432312c1-b102-4b8c-b139-67814fe54660"
       },
       "chunkId": "19b5673c3aafde7569db693719b3e8991b1b7799",
@@ -3459,7 +3460,7 @@
     },
     "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/genInfo.ts": {
       "mTimestamp": {
-        "mtime": 1735711240049.316,
+        "mtime": 1736071410344.888,
         "uuid": "c70a354b-405a-4822-ba2c-80ebb2b23689"
       },
       "chunkId": "be114289548d765cd353a7186c65bcfd0c754583",
@@ -3647,7 +3648,7 @@
     },
     "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/genShop.ts": {
       "mTimestamp": {
-        "mtime": 1735735160710.0403,
+        "mtime": 1736073025466.8394,
         "uuid": "b5b2aa0d-5160-4eb1-ad57-41a9fac6e06b"
       },
       "chunkId": "7236a6c6d8ff3c251d66893950dfc400957263a6",
@@ -3878,7 +3879,7 @@
     },
     "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/circles.ts": {
       "mTimestamp": {
-        "mtime": 1735732830270.1943,
+        "mtime": 1736073026196.679,
         "uuid": "f96f613c-3b56-4f90-88a2-13e424e20573"
       },
       "chunkId": "9845a5bdb8c882dfaec000dc71eb0ed683f921f5",
@@ -4202,7 +4203,7 @@
     },
     "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/harvest.ts": {
       "mTimestamp": {
-        "mtime": 1735736322310.1265,
+        "mtime": 1736060610393.2646,
         "uuid": "bcb8aee2-14c6-4f7a-9215-029efa07ea5d"
       },
       "chunkId": "b6c02e717bb49a6779f41f0d5abf84bf19dabcc8",
@@ -4380,7 +4381,7 @@
     },
     "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/interface.ts": {
       "mTimestamp": {
-        "mtime": 1735732569758.3577,
+        "mtime": 1736073025463.8376,
         "uuid": "42547275-7807-4c87-ac42-2e0e126017f0"
       },
       "chunkId": "a8246498167457cd9c5fce32b9ac3707b1f543c2",
@@ -4622,7 +4623,7 @@
     },
     "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/overlayMask.ts": {
       "mTimestamp": {
-        "mtime": 1735713593513.6667,
+        "mtime": 1736073817623.389,
         "uuid": "8d2ecc31-2cf7-4ac4-b949-23fcd94273f4"
       },
       "chunkId": "f14c4fe94b50aff67e038232558f6f58d4a45ba8",

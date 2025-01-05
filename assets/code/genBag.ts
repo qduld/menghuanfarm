@@ -88,7 +88,7 @@ export class GenBag extends Component {
         .getComponent(Label).string = `+${seed.quantity}/block`;
 
       seedSection.getChildByName("Time").getComponent(Label).string =
-        formatSeconds(seed.maturityTime);
+        formatSeconds(seed.maturity_time);
 
       let spritePath = "";
       switch (seed.name) {
@@ -154,18 +154,18 @@ export class GenBag extends Component {
   }
 
   // 播种
-  async requestFarmLandPlant(farmlandId, seedId) {
+  async requestFarmLandPlant(farmland_Id, seed_id) {
     try {
       const response = await httpRequest("/api/v1/farm/farmland/plant", {
         method: "POST",
         body: {
-          farmlandId,
-          seedId,
+          farmland_Id,
+          seed_id,
         },
       });
       if (response.ok) {
         const genBlock = GenBlock.getInstance();
-        genBlock.updateFarmLand(farmlandId); // 重新请求farmlandList
+        genBlock.updateFarmLand(farmland_Id); // 重新请求farmlandList
       } else {
         console.error("Request failed with status:", response.status);
       }

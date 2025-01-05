@@ -25,7 +25,7 @@ export class GenInfo extends Component {
   UUserName: Node = null; // 用户名
 
   @property
-  UPointsBalance: Node = null; // 金币数
+  Upoints_balance: Node = null; // 金币数
 
   @property
   UAddition: Node = null; // 加成
@@ -58,7 +58,7 @@ export class GenInfo extends Component {
     GenInfo._instance = this;
 
     this.UUserName = find("MainCanvas/TopContent/Person/Name");
-    this.UPointsBalance = find("MainCanvas/TopContent/Person/Money");
+    this.Upoints_balance = find("MainCanvas/TopContent/Person/Money");
     this.UAddition = find("MainCanvas/TopContent/Person/Addition");
 
     this.UHarvest = find("MainCanvas/TopContent/Income/Mask/Section/Harvest");
@@ -126,7 +126,7 @@ export class GenInfo extends Component {
     let userInfo = this.friendInfo ? this.friendInfo : globalData.userInfo;
 
     this.UUserName.getChildByName("Label").getComponent(Label).string =
-      userInfo.tgUsername;
+      userInfo.tg_username;
 
     // this.UUserName.getChildByName("Label")
     //   .getComponent(Label)
@@ -138,8 +138,8 @@ export class GenInfo extends Component {
     //   this.UUserName.getChildByName("Label").getComponent(UITransform)
     //     .contentSize.width
     // );
-    this.UPointsBalance.getChildByName("Label").getComponent(Label).string =
-      userInfo.pointsBalance + "";
+    this.Upoints_balance.getChildByName("Label").getComponent(Label).string =
+      userInfo.points_balance + "";
     this.UAddition.getChildByName("Label").getComponent(
       Label
     ).string = `+${userInfo.radio}%`;
@@ -167,11 +167,11 @@ export class GenInfo extends Component {
 
   updateUAgg() {
     this.UHarvest.getChildByName("Value").getComponent(Label).string =
-      this.uagg.mePointSum + "";
+      this.uagg.me_point_sum + "";
     this.UStolenFrom.getChildByName("Value").getComponent(Label).string =
-      this.uagg.friendPointSum + "";
+      this.uagg.friend_point_sum + "";
     this.UBeStolen.getChildByName("Value").getComponent(Label).string =
-      this.uagg.stealPointSum + "";
+      this.uagg.steal_point_sum + "";
   }
 
   // 获取今日统计信息

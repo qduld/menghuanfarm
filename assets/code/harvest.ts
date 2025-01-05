@@ -91,7 +91,7 @@ export class harvest extends Component {
   updateUserInfo() {
     const globalData = GlobalData.getInstance();
     this.UMoney.getChildByName("Label").getComponent(Label).string =
-      globalData.userInfo.pointsBalance + "";
+      globalData.userInfo.points_balance + "";
     this.UAddition.getChildByName("Label").getComponent(
       Label
     ).string = `+${globalData.userInfo.radio}%`;

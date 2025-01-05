@@ -119,11 +119,11 @@ export class GenBlock extends Component {
     }
   }
 
-  updateBlock(farmlandId) {
+  updateBlock(farmland_Id) {
     // 更新单个block
     const plant = new GenPlant();
     const blockIndex = this.blockList.findIndex(
-      (block) => block.id === farmlandId
+      (block) => block.id === farmland_Id
     );
 
     plant.resetNode(this.blockContainer.children[blockIndex]);
@@ -173,14 +173,14 @@ export class GenBlock extends Component {
   }
 
   // 更新农田列表
-  async updateFarmLand(farmlandId) {
+  async updateFarmLand(farmland_Id) {
     try {
       const response = await httpRequest("/api/v1/farm/farmland", {
         method: "GET",
       });
       if (response.ok) {
         this.blockList = response.data.data as IFarmland[];
-        this.updateBlock(farmlandId);
+        this.updateBlock(farmland_Id);
       } else {
         console.error("Request failed with status:", response.status);
       }
@@ -190,7 +190,7 @@ export class GenBlock extends Component {
   }
 
   //  // 更新被偷农田列表
-  // async updateStolenFarmLand(farmlandId) {
+  // async updateStolenFarmLand(farmland_Id) {
   //   const globalData = GlobalData.getInstance();
 
   //   try {
@@ -199,7 +199,7 @@ export class GenBlock extends Component {
   //     });
   //     if (response.ok) {
   //       this.blockList = response.data.data as IFarmland[];
-  //       this.updateBlock(farmlandId);
+  //       this.updateBlock(farmland_Id);
   //     } else {
   //       console.error("Request failed with status:", response.status);
   //     }
@@ -209,16 +209,16 @@ export class GenBlock extends Component {
   // }
 
   // 收获
-  async harvestFarmland(farmlandId) {
+  async harvestFarmland(farmland_Id) {
     try {
       const response = await httpRequest("/api/v1/farm/farmland/harvest", {
         method: "POST",
         body: {
-          farmlandId,
+          farmland_Id,
         },
       });
       if (response.ok) {
-        this.updateFarmLand(farmlandId);
+        this.updateFarmLand(farmland_Id);
         this.updateUserInfo();
       } else {
         console.error("Request failed with status:", response.status);
@@ -275,21 +275,21 @@ export class GenBlock extends Component {
   }
 
   // 偷取
-  async stealFarmland(farmlandId, plantId) {
+  async stealFarmland(farmland_id, plant_id) {
     const globalData = GlobalData.getInstance();
 
     try {
       const response = await httpRequest("/api/v1/squad/steal", {
         method: "POST",
         body: {
-          farmlandId,
-          memberId: globalData.stolenId, // 被偷人的userId
-          plantId,
+          farmland_id,
+          member_id: globalData.stolenId, // 被偷人的userId
+          plant_id,
         },
       });
       if (response.ok && response.data.code === 0) {
         globalData.setMessageLabel(i18n.stealSuccess);
-        this.updateFarmLand(farmlandId);
+        this.updateFarmLand(farmland_id);
       } else {
         globalData.setMessageLabel(i18n.stealFailed);
       }

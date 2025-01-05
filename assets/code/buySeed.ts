@@ -99,7 +99,7 @@ export class BuySeed extends Component {
 
     this.USeedRipeningTime.getChildByName("Value").getComponent(
       Label
-    ).string = `${seed.maturityTime}min`;
+    ).string = `${seed.maturity_time}min`;
 
     this.USeedTotalCost.getChildByName("Value").getComponent(Label).string =
       "0k";
@@ -139,7 +139,7 @@ export class BuySeed extends Component {
         method: "POST",
         body: {
           quantity: this.seedNumber,
-          seedId: dialog.targetBuySeedInfo.id,
+          seed_id: dialog.targetBuySeedInfo.id,
         },
       });
       if (response.ok) {

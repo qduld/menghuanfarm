@@ -109,11 +109,11 @@ export class circles extends Component {
       squadSection
         .getChildByName("People")
         .getChildByName("Label")
-        .getComponent(Label).string = squad.memberCount + "";
+        .getComponent(Label).string = squad.member_count + "";
       squadSection.getChildByName("Name").getComponent(Label).string =
         squad.name;
 
-      squadSection.getChildByName("Button")["squadId"] = squad.id;
+      squadSection.getChildByName("Button")["squad_id"] = squad.id;
 
       squadSection["squad"] = squad;
     });
@@ -133,14 +133,14 @@ export class circles extends Component {
 
     this.UCurrentUser.getChildByName("Name")
       .getChildByName("Label")
-      .getComponent(Label).string = this.membersList[memberIndex].tgUsername;
+      .getComponent(Label).string = this.membersList[memberIndex].tg_username;
 
     this.UCurrentUser.getChildByName("Money")
       .getChildByName("Label")
       .getComponent(Label).string =
-      this.membersList[memberIndex].pointsBalance + "";
+      this.membersList[memberIndex].points_balance + "";
 
-    if (this.membersList[memberIndex].isLeader) {
+    if (this.membersList[memberIndex].is_leader) {
       this.UCurrentUser.getChildByName("Name").getChildByName("Icon").active =
         true;
     } else {
@@ -184,16 +184,16 @@ export class circles extends Component {
       membersSection
         .getChildByName("Name")
         .getChildByName("Label")
-        .getComponent(Label).string = member.tgUsername + "";
+        .getComponent(Label).string = member.tg_username + "";
       membersSection
         .getChildByName("Money")
         .getChildByName("Label")
-        .getComponent(Label).string = member.pointsBalance + "";
+        .getComponent(Label).string = member.points_balance + "";
 
       membersSection.getChildByName("Button")["userId"] = member.id;
 
       // 如果是队长显示图标
-      if (member.isLeader) {
+      if (member.is_leader) {
         membersSection.getChildByName("Name").getChildByName("Icon").active =
           true;
       } else {
@@ -202,7 +202,10 @@ export class circles extends Component {
       }
 
       // 可偷且不是自己显示偷取图标
-      if (member.stealAvailable === 1 && member.id !== globalData.userInfo.id) {
+      if (
+        member.steal_available === 1 &&
+        member.id !== globalData.userInfo.id
+      ) {
         membersSection.getChildByName("Button").active = true;
       } else {
         membersSection.getChildByName("Button").active = false;
@@ -247,7 +250,7 @@ export class circles extends Component {
     const globalData = GlobalData.getInstance();
 
     this.UMembersList.removeAllChildren();
-    if (globalData.userInfo.squadId === null) {
+    if (globalData.userInfo.squad_id === null) {
       this.UMembers.active = false;
       this.USquad.active = true;
       this.requestSquadList();
@@ -266,27 +269,27 @@ export class circles extends Component {
     this.USquadInfo.getChildByName("Detail")
       .getChildByName("People")
       .getChildByName("Label")
-      .getComponent(Label).string = this.squadInfo.memberCount + "";
+      .getComponent(Label).string = this.squadInfo.member_count + "";
 
     this.USquadInfo.getChildByName("Detail")
       .getChildByName("Money")
       .getChildByName("Label")
-      .getComponent(Label).string = this.squadInfo.totalPoints + "";
+      .getComponent(Label).string = this.squadInfo.total_points + "";
 
     this.USquadInfo.getChildByName("Detail")
       .getChildByName("Timer")
       .getChildByName("Label")
       .getComponent(Label).string =
-      formatTimestampToDate(this.squadInfo.createdAt) + "";
+      formatTimestampToDate(this.squadInfo.created_at) + "";
   }
 
   viewSquadDetail(event: Event) {
-    const squadId = event.currentTarget["squad"].id;
+    const squad_id = event.currentTarget["squad"].id;
     this.isView = true;
     this.UMembers.active = true;
     this.USquad.active = false;
-    this.requestMembersList(squadId);
-    this.requestSquadInfo(squadId);
+    this.requestMembersList(squad_id);
+    this.requestSquadInfo(squad_id);
   }
 
   // 推荐队伍
@@ -310,10 +313,10 @@ export class circles extends Component {
   }
 
   // 获取队伍成员
-  async requestMembersList(squadId?: number) {
+  async requestMembersList(squad_id?: number) {
     const globalData = GlobalData.getInstance();
-    if (!squadId) {
-      squadId = globalData.userInfo.squadId;
+    if (!squad_id) {
+      squad_id = globalData.userInfo.squad_id;
     }
     try {
       const response = await httpRequest(
@@ -322,7 +325,7 @@ export class circles extends Component {
           method: "GET",
         },
         {
-          squadId,
+          squad_id,
           pageNum: 1,
           pageSize: 10,
         }
@@ -342,10 +345,10 @@ export class circles extends Component {
   }
 
   // 获取队伍信息
-  async requestSquadInfo(squadId?: number) {
+  async requestSquadInfo(squad_id?: number) {
     const globalData = GlobalData.getInstance();
-    if (!squadId) {
-      squadId = globalData.userInfo.squadId;
+    if (!squad_id) {
+      squad_id = globalData.userInfo.squad_id;
     }
     try {
       const response = await httpRequest(
@@ -354,7 +357,7 @@ export class circles extends Component {
           method: "GET",
         },
         {
-          squadId,
+          squad_id,
         }
       );
       if (response.ok) {
@@ -376,7 +379,7 @@ export class circles extends Component {
       const response = await httpRequest("/api/v1/squad/leave", {
         method: "POST",
         body: {
-          squadId: globalData.userInfo.squadId,
+          squad_id: globalData.userInfo.squad_id,
         },
       });
       if (response.ok) {
@@ -402,14 +405,15 @@ export class circles extends Component {
       const response = await httpRequest("/api/v1/squad/join", {
         method: "POST",
         body: {
-          squadId: event.currentTarget.squadId,
+          squad_id: event.currentTarget.squad_id,
         },
       });
       if (response.ok) {
-        globalData.userInfo.squadId = event.currentTarget.squadId;
+        globalData.userInfo.squad_id = event.currentTarget.squad_id;
         this.UMembers.active = true;
         this.USquad.active = false;
         this.requestMembersList();
+        this.requestSquadInfo();
       } else {
         console.error("Request failed with status:", response.status);
       }
@@ -429,7 +433,6 @@ export class circles extends Component {
     const criclesName = find(
       "popBox/Canvas/CreateCircle/Name/EditBox/TEXT_LABEL"
     ).getComponent(Label).string;
-    console.log(criclesName);
     try {
       const response = await httpRequest("/api/v1/squad/create", {
         method: "POST",
@@ -442,10 +445,11 @@ export class circles extends Component {
 
         dialog.closeDialog(null, "CreateCircle");
         const globalData = GlobalData.getInstance();
-        globalData.userInfo.squadId = event.currentTarget.squadId;
+        globalData.userInfo.squad_id = response.data.data.id;
         this.UMembers.active = true;
         this.USquad.active = false;
         this.requestMembersList();
+        this.requestSquadInfo();
       } else {
         console.error("Request failed with status:", response.status);
       }

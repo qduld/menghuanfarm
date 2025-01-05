@@ -33,7 +33,7 @@ export class GenPlant extends Component {
       .getChildByName("Countdown")
       .getChildByName("Icon");
     this.plantMarkingsPath = "";
-    if (data.farmStatus === 0) {
+    if (data.farm_status === 0) {
       // 未种植
       this.plantSpritePath = "awaitingSowing";
       this.plantLevel = 0;
@@ -42,23 +42,23 @@ export class GenPlant extends Component {
         false;
     } else {
       const currentTime = new Date().getTime();
-      const maturityTime = data.seed.plantAt + data.seed.maturityTime * 1000;
-      const plantTime = data.seed.plantAt;
+      const maturity_time = data.seed.plant_at + data.seed.maturity_time * 1000;
+      const plantTime = data.seed.plant_at;
       block.getChildByName("Countdown").active = true; // 临时放这里
       const countdownLabel = block.getChildByName("Countdown");
 
-      if (maturityTime - currentTime > 0 && currentTime - plantTime >= 0) {
+      if (maturity_time - currentTime > 0 && currentTime - plantTime >= 0) {
         this.startCountdownForLand(
           block,
           countdownLabel,
-          maturityTime - currentTime,
+          maturity_time - currentTime,
           data
         );
-        if (maturityTime - currentTime > currentTime - plantTime) {
+        if (maturity_time - currentTime > currentTime - plantTime) {
           // 如果播种时间没有过半
           this.plantLevel = 1;
         }
-        if (maturityTime - currentTime < currentTime - plantTime) {
+        if (maturity_time - currentTime < currentTime - plantTime) {
           // 如果播种时间过半
           this.plantLevel = 2;
         }
@@ -82,7 +82,7 @@ export class GenPlant extends Component {
         countdownLabel["hasSchedule"] = false;
       }
 
-      if (maturityTime - currentTime <= 0) {
+      if (maturity_time - currentTime <= 0) {
         // 如果超过成熟时间
         this.plantLevel = 3;
         countdownLabel.active = false;
@@ -131,12 +131,12 @@ export class GenPlant extends Component {
     if (
       globalData.isStolen &&
       this.plantLevel === 3 &&
-      data.stealAvailable === 1
+      data.steal_available === 1
     ) {
       block.getChildByName("Plant").getChildByName("Receivehand").active = true;
     }
 
-    if (globalData.isStolen && data.stealAvailable === 0) {
+    if (globalData.isStolen && data.steal_available === 0) {
       block.getChildByName("Plant").getChildByName("Receivehand").active =
         false;
     }

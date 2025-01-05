@@ -87,7 +87,7 @@ export class GenShop extends Component {
         .getComponent(Label).string = `+${seed.points}/block`;
 
       seedSection.getChildByName("Time").getComponent(Label).string =
-        formatSeconds(seed.maturityTime);
+        formatSeconds(seed.maturity_time);
 
       let spritePath = "";
       switch (seed.name) {
@@ -143,13 +143,13 @@ export class GenShop extends Component {
   }
 
   // 购买种子
-  // async buySeed(seedId, quantity) {
+  // async buySeed(seed_id, quantity) {
   //   try {
   //     const response = await httpRequest("/api/v1/seed/buy", {
   //       method: "POST",
   //       body: {
   //         quantity,
-  //         seedId,
+  //         seed_id,
   //       },
   //     });
   //     if (response.ok) {

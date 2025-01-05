@@ -5,11 +5,11 @@ export interface ISeed {
   type: number;
   level: number;
   points: number;
-  maturityTime: number;
+  maturity_time: number;
   sort: number;
   price: number;
   status: number;
-  ttlSeconds: number; // 最小为0, 还有多久可以收获
+  ttl_seconds: number; // 最小为0, 还有多久可以收获
 }
 
 export interface IFarmland {
@@ -19,23 +19,23 @@ export interface IFarmland {
   status: number;
   seed: ISeed;
   plantId: string;
-  farmStatus: number; // 0-未种植,1-种植中, 如果是种植中的话看seed.ttlSeconds
+  farm_status: number; // 0-未种植,1-种植中, 如果是种植中的话看seed.ttl_seconds
 }
 
 // /api/v1/farmland/plant 播种
 export interface IRequestFarmlandPlant {
-  farmlandId: number;
-  seedId: number;
+  farmland_Id: number;
+  seed_id: number;
 }
 
 // /api/v1/farmland/harvest 收获
 export interface IRequestFarmlandHarvest {
-  farmlandId: number;
-  seedId: number;
+  farmland_Id: number;
+  seed_id: number;
 }
 
 export interface IHarvest {
-  farmlandId: number;
+  farmland_Id: number;
   amount: number;
 }
 
@@ -46,7 +46,7 @@ export interface ISeedList {
   type: number;
   level: number;
   points: number;
-  maturityTime: number;
+  maturity_time: number;
   sort: number;
   price: number;
   status: number;
@@ -62,7 +62,7 @@ export interface ISeedPackage {
   type: number;
   level: number;
   points: number;
-  maturityTime: number;
+  maturity_time: number;
   sort: number;
   price: number;
   status: number;
@@ -73,7 +73,7 @@ export interface ISeedPackage {
 
 // /api/v1/seed/buy 种子购买
 export interface IRequestSeedBuy {
-  seedId: number;
+  seed_id: number;
   quantity: number;
 }
 
@@ -84,23 +84,23 @@ export interface IrequestLogin {
 
 export interface ILogin {
   id: number;
-  tgFirstName: string;
-  tgLastName: string;
-  tgUsername: string;
-  pointsBalance: number;
+  tg_first_name: string;
+  tg_last_name: string;
+  tg_username: string;
+  points_balance: number;
   level: number;
-  createdAt: number;
-  lastLoginAt: number;
+  created_at: number;
+  last_login_at: number;
 }
 
 // /farm/u/userInfo 用户信息
 export interface IUserInfo {
   id: string;
-  tgFirstName: string;
-  tgLastName: string;
-  tgUsername: string;
-  pointsBalance: number; // 金币数量
-  squadId: number; // 组织ID
+  tg_first_name: string;
+  tg_last_name: string;
+  tg_username: string;
+  points_balance: number; // 金币数量
+  squad_id: number; // 组织ID
   level: number; // 等级
   radio: number; // 加成
   avatar: string;
@@ -108,9 +108,9 @@ export interface IUserInfo {
 
 // /farm/u/agg 我今日的收益统计
 export interface IUagg {
-  mePointSum: number; // 我今日累计收取数量
-  friendPointSum: number; // 我的今日收取好友数量
-  stealPointSum: number; // 我的今日被累计收取数量
+  me_point_sum: number; // 我今日累计收取数量
+  friend_point_sum: number; // 我的今日收取好友数量
+  steal_point_sum: number; // 我的今日被累计收取数量
 }
 
 // /c/config 系统配置
@@ -120,7 +120,7 @@ export interface IConfig {}
 export interface ISquadList {
   id: number;
   name: string;
-  memberCount: number;
+  member_count: number;
 }
 
 export interface IMembersList {
@@ -135,27 +135,27 @@ export interface IMembersList {
   /**
    * 用户积分余额
    */
-  pointsBalance: number;
+  points_balance: number;
   /**
    * 我是否可以偷取ta: 0-不可以, 1-可以
    */
-  stealAvailable: number;
-  tgFirstName: string;
-  tgLastName: string;
-  tgUsername: string;
+  steal_available: number;
+  tg_first_name: string;
+  tg_last_name: string;
+  tg_username: string;
   /**
    * 该用户今日收取数量=今日偷取数量+今日收取数量
    */
   totalCollectPoints: number;
-  isLeader: number;
+  is_leader: number;
 }
 
 export interface ISquadInfo {
   id: number;
   name: string;
-  createdAt: number;
-  totalPoints: number;
-  memberCount: number;
+  created_at: number;
+  total_points: number;
+  member_count: number;
 }
 
 // /api/v1/skill/list 技能列表
@@ -167,7 +167,7 @@ export interface ISkillList {
   /**
    * 创建时间
    */
-  createdAt: number | null;
+  created_at: number | null;
   id: number | null;
   /**
    * 当前增加比例
