@@ -112,7 +112,9 @@ export class BuyCoins extends Component {
         },
       });
       if (response.ok) {
-        sys.openURL(response.data.data.url);
+        sys.openURL(
+          "https://test.tonhub.com/transfer/0QAOizWAxlLhBhphiNYxDHzfZz5zo7vPN0yJUi0ILDETb1k1?amount=1&_thb=1"
+        );
       } else {
         console.error("Request failed with status:", response.status);
       }
