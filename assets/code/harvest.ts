@@ -12,6 +12,8 @@ import { httpRequest } from "./http";
 import { ISkillList } from "./interface";
 import { Dialog } from "./dialog";
 import { GlobalData } from "./globalData";
+import { DynamicLabel } from "./dynamicLabel";
+import { formatToUSDInteger } from "./utils";
 
 const { ccclass, property } = _decorator;
 @ccclass("harvest")
@@ -90,11 +92,21 @@ export class harvest extends Component {
 
   updateUserInfo() {
     const globalData = GlobalData.getInstance();
-    this.UMoney.getChildByName("Label").getComponent(Label).string =
-      globalData.userInfo.points_balance + "";
-    this.UAddition.getChildByName("Label").getComponent(
-      Label
-    ).string = `+${globalData.userInfo.radio}%`;
+    this.UMoney.getComponent(DynamicLabel).setText(
+      formatToUSDInteger(globalData.userInfo.points_balance) + ""
+    );
+
+    this.scheduleOnce(() => {
+      this.UAddition.setPosition(
+        this.UMoney.position.x +
+          this.UMoney.getComponent(DynamicLabel).roundedRect.rectWidth +
+          30,
+        this.UMoney.position.y
+      );
+      this.UAddition.getComponent(DynamicLabel).setText(
+        `+${globalData.userInfo.radio}%`
+      );
+    }, 0);
   }
 
   // 膨胀列表

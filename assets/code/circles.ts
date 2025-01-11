@@ -19,7 +19,7 @@ import { squadList } from "./loadData";
 import { GlobalData } from "./globalData";
 import { GenInfo } from "./genInfo";
 import { Dialog } from "./dialog";
-import { formatTimestampToDate } from "./utils";
+import { formatNumberShortDynamic, formatTimestampToDate } from "./utils";
 
 const { ccclass, property } = _decorator;
 @ccclass("circles")
@@ -274,7 +274,8 @@ export class circles extends Component {
     this.USquadInfo.getChildByName("Detail")
       .getChildByName("Money")
       .getChildByName("Label")
-      .getComponent(Label).string = this.squadInfo.total_points + "";
+      .getComponent(Label).string =
+      formatNumberShortDynamic(this.squadInfo.total_points) + "";
 
     this.USquadInfo.getChildByName("Detail")
       .getChildByName("Timer")
@@ -383,6 +384,10 @@ export class circles extends Component {
         },
       });
       if (response.ok) {
+        const dialog = Dialog.getInstance();
+
+        dialog.closeDialog(null, "QuitCircle");
+
         const genInfo = GenInfo.getInstance();
         genInfo.requestUserInfo();
         this.UMembers.active = false;
@@ -422,10 +427,10 @@ export class circles extends Component {
     }
   }
 
-  createSquadBtnClick() {
+  squadBtnClick(event, options) {
     const dialog = Dialog.getInstance();
 
-    dialog.showDialog(null, "CreateCircle");
+    dialog.showDialog(null, options);
   }
 
   // 创建队伍

@@ -10,6 +10,7 @@ import {
   resources,
   AudioClip,
   AudioSource,
+  Vec3,
 } from "cc";
 import { blockList } from "./loadData";
 import { IFarmland } from "./interface";
@@ -103,7 +104,7 @@ export class GenBlock extends Component {
         this.blockContainer.addChild(newblock);
 
         // 设置土地的位置
-        newblock.setPosition(posX, posY);
+        newblock.setPosition(posX, posY, 0);
 
         newblock.on(Node.EventType.TOUCH_END, (event) => {
           this.onBlockClick(event, newblock, this.blockList[blockIndex]);

@@ -58,16 +58,9 @@ export class DrawRoundedRect extends Component {
       this.startX = -this.rectWidth / 2 - this.borderWidth + this.offsetX;
       this.startY = -this.rectHeight / 2 - this.borderWidth + this.offsetY;
     } else {
-      this.startX =
-        this.node.position.x +
-        (this.rectWidth - 2 * this.borderWidth - 2 * this.offsetX) / 2 -
-        this.borderWidth -
-        this.offsetX;
+      this.startX = 0;
       this.startY =
-        this.node.position.y -
-        this.rectHeight / 2 -
-        this.borderWidth +
-        this.offsetY / 2;
+        this.node.position.y - this.rectHeight / 2 + this.borderWidth;
     }
 
     // 设置填充颜色为白色

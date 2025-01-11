@@ -7,10 +7,10 @@ const { ccclass, property } = _decorator;
 
 @ccclass("SceneSwitcher")
 export class SceneSwitcher extends Component {
-  @property({ type: String })
+  @property
   sceneName: string = ""; // 切换到的场景名称
 
-  @property({ type: Boolean })
+  @property
   isStolen: boolean = false; // 是否是偷取场景
 
   // 切换场景的方法

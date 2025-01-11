@@ -4,10 +4,8 @@ import {
   Node,
   find,
   Label,
-  assetManager,
   Texture2D,
   SpriteFrame,
-  Sprite,
   ImageAsset,
   UITransform,
 } from "cc";
@@ -15,8 +13,9 @@ import { blockList } from "./loadData";
 import { httpRequest, proxyUrl } from "./http";
 import { IUserInfo, IUagg } from "./interface";
 import { GlobalData } from "./globalData";
-import { Canvg } from "canvg";
 import { RoundBox } from "./roundBox";
+import { DynamicLabel } from "./dynamicLabel";
+import { formatToUSDInteger } from "./utils";
 const { ccclass, property } = _decorator;
 
 @ccclass("GenInfo")
@@ -125,24 +124,22 @@ export class GenInfo extends Component {
 
     let userInfo = this.friendInfo ? this.friendInfo : globalData.userInfo;
 
-    this.UUserName.getChildByName("Label").getComponent(Label).string =
-      userInfo.tg_username;
+    this.UUserName.getComponent(DynamicLabel).setText(userInfo.tg_username);
 
-    // this.UUserName.getChildByName("Label")
-    //   .getComponent(Label)
-    //   .updateRenderData(true);
-    // const drawRoundedRect = this.UUserName.getChildByName(
-    //   "Border"
-    // ).getComponent("DrawRoundedRect") as DrawRoundedRect;
-    // drawRoundedRect.reRender(
-    //   this.UUserName.getChildByName("Label").getComponent(UITransform)
-    //     .contentSize.width
-    // );
-    this.Upoints_balance.getChildByName("Label").getComponent(Label).string =
-      userInfo.points_balance + "";
-    this.UAddition.getChildByName("Label").getComponent(
-      Label
-    ).string = `+${userInfo.radio}%`;
+    this.Upoints_balance.getComponent(DynamicLabel).setText(
+      formatToUSDInteger(userInfo.points_balance) + ""
+    );
+
+    this.scheduleOnce(() => {
+      this.UAddition.setPosition(
+        this.Upoints_balance.position.x +
+          this.Upoints_balance.getComponent(DynamicLabel).roundedRect
+            .rectWidth +
+          20,
+        this.Upoints_balance.position.y
+      );
+      this.UAddition.getComponent(DynamicLabel).setText(`+${userInfo.radio}%`);
+    }, 0);
   }
 
   // 获取用户信息

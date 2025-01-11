@@ -23,7 +23,7 @@ export class GlobalData extends Component {
   UMessage: Node = null; //信息
 
   @property
-  token: string = "7360724156:AAGeBGUrfDuRRYTkL-G4ZWKmi3rIKWH05VU";
+  bgmIsOn: boolean = true; //bgm正在播放
 
   private constructor() {
     super();

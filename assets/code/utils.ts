@@ -124,3 +124,32 @@ export function objectToUrlParams(obj: Record<string, any>): string {
     })
     .join("&");
 }
+
+export function formatToUSDInteger(amount: number): string {
+  if (isNaN(amount)) {
+    throw new Error("Input is not a valid number");
+  }
+  const integerPart = Math.floor(amount); // 获取整数部分
+  return `${integerPart.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`;
+}
+
+export function formatNumberShortDynamic(amount: number): string {
+  if (isNaN(amount)) {
+    throw new Error("Input is not a valid number");
+  }
+
+  const units = ["", "K", "M", "B", "T"];
+  let unitIndex = 0;
+  let absAmount = Math.abs(amount);
+
+  while (absAmount >= 1000 && unitIndex < units.length - 1) {
+    absAmount /= 1000;
+    unitIndex++;
+  }
+
+  return (
+    (amount < 0 ? "-" : "") +
+    absAmount.toFixed(1).replace(/\.0$/, "") +
+    units[unitIndex]
+  );
+}

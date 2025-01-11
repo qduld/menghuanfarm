@@ -40,6 +40,9 @@ export class Dialog extends Component {
   settingBox: Node = null; // settingBox
 
   @property(Node)
+  quitCircleBox: Node = null; // settingBox
+
+  @property(Node)
   overlayMask: Node = null; // overlayMask
 
   @property
@@ -71,16 +74,18 @@ export class Dialog extends Component {
     this.buyCoinsBox = find("popBox/Canvas/BuyCoins");
     this.createCircleBox = find("popBox/Canvas/CreateCircle");
     this.settingBox = find("popBox/Canvas/Setting");
+    this.quitCircleBox = find("popBox/Canvas/QuitCircle");
     this.overlayMask = find("popBox/Canvas/OverlayMask");
 
-    this.bagBox.active = false;
-    this.shopBox.active = false;
-    this.lockBlockBox.active = false;
-    this.buySeedBox.active = false;
-    this.buyPropsBox.active = false;
-    this.buyCoinsBox.active = false;
-    this.createCircleBox.active = false;
-    this.settingBox.active = false;
+    this.bagBox ? (this.bagBox.active = false) : "";
+    this.shopBox ? (this.shopBox.active = false) : "";
+    this.lockBlockBox ? (this.lockBlockBox.active = false) : "";
+    this.buySeedBox ? (this.buySeedBox.active = false) : "";
+    this.buyPropsBox ? (this.buyPropsBox.active = false) : "";
+    this.buyCoinsBox ? (this.buyCoinsBox.active = false) : "";
+    this.createCircleBox ? (this.createCircleBox.active = false) : "";
+    this.settingBox ? (this.settingBox.active = false) : "";
+    this.quitCircleBox ? (this.quitCircleBox.active = false) : "";
 
     this.overlayMask.active = false;
   }
@@ -116,6 +121,9 @@ export class Dialog extends Component {
       case "Setting":
         this.settingBox.active = true;
         break;
+      case "QuitCircle":
+        this.quitCircleBox.active = true;
+        break;
     }
     this.overlayMask.active = true;
   }
@@ -150,6 +158,10 @@ export class Dialog extends Component {
         break;
       case "Setting":
         this.settingBox.active = false;
+        this.overlayMask.active = false;
+        break;
+      case "QuitCircle":
+        this.quitCircleBox.active = false;
         this.overlayMask.active = false;
         break;
     }

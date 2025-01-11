@@ -15,7 +15,7 @@ export class DashedRectangle extends Component {
   @property
   gapLength: number = 5; // 虚线段之间的间隔
 
-  @property({ type: Color })
+  @property
   lineColor: Color = new Color(0, 0, 0, 255); // 虚线的颜色
 
   private graphics: Graphics = null!;
