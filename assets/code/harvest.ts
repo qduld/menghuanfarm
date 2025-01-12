@@ -82,7 +82,7 @@ export class harvest extends Component {
       harvestSection
         .getChildByName("Addition")
         .getChildByName("Label")
-        .getComponent(Label).string = harvest.ratio + "";
+        .getComponent(Label).string = `+${harvest.ratio}%`;
       harvestSection
         .getChildByName("Button")
         .getChildByName("Label")
