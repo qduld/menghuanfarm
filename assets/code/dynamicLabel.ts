@@ -77,9 +77,7 @@ export class DynamicLabel extends Component {
         const suffixTransform = this.suffixIcon.getComponent(UITransform);
         if (suffixTransform) {
           this.suffixIcon.setPosition(
-            this.roundedRect.rectWidth -
-              this.padding -
-              this.roundedRect.borderWidth,
+            this.roundedRect.rectWidth - this.padding,
             0
           );
         }

@@ -92,8 +92,10 @@ export class DrawRoundedRect extends Component {
     this.graphics.stroke();
   }
 
-  reRender(width) {
-    this.rectWidth = width + 2 * this.offsetX + 2 * this.borderWidth;
+  reRender(width?) {
+    if (width) {
+      this.rectWidth = width + 2 * this.offsetX + 2 * this.borderWidth;
+    }
 
     if (this.graphics) {
       this.graphics.clear();

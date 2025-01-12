@@ -15,11 +15,12 @@ import {
 } from "cc";
 import { httpRequest } from "./http";
 import { IMembersList, ISquadList, ISquadInfo, IUserInfo } from "./interface";
-import { squadList } from "./loadData";
+import { squadList, i18n } from "./loadData";
 import { GlobalData } from "./globalData";
 import { GenInfo } from "./genInfo";
 import { Dialog } from "./dialog";
 import { formatNumberShortDynamic, formatTimestampToDate } from "./utils";
+import { ExpandNoticeWithArrow } from "./expandNoticeWithArrow";
 
 const { ccclass, property } = _decorator;
 @ccclass("circles")
@@ -55,6 +56,9 @@ export class circles extends Component {
   UMembersSection: Node = null; // 成员列表Section
 
   @property
+  UEditButton: Node = null;
+
+  @property
   squadSpacingY: number = 10; // 推荐间距
 
   @property
@@ -72,6 +76,8 @@ export class circles extends Component {
   @property
   UScrollView: Node = null;
 
+  private isUpdateCircle: string = "false";
+
   protected onLoad(): void {
     this.USquad = find("Canvas/UnJoined");
     this.UMembers = find("Canvas/Joined");
@@ -84,6 +90,7 @@ export class circles extends Component {
     );
     this.USquadInfo = find("Canvas/Joined/Tips");
     this.UCurrentUser = find("Canvas/Joined/Content/CurrentUser");
+    this.UEditButton = find("Canvas/Joined/Options/Edit");
     this.checkSquadList();
   }
 
@@ -141,9 +148,11 @@ export class circles extends Component {
       this.membersList[memberIndex].points_balance + "";
 
     if (this.membersList[memberIndex].is_leader) {
+      this.UEditButton.active = true;
       this.UCurrentUser.getChildByName("Name").getChildByName("Icon").active =
         true;
     } else {
+      this.UEditButton.active = false;
       this.UCurrentUser.getChildByName("Name").getChildByName("Icon").active =
         false;
     }
@@ -282,6 +291,15 @@ export class circles extends Component {
       .getChildByName("Label")
       .getComponent(Label).string =
       formatTimestampToDate(this.squadInfo.created_at) + "";
+
+    this.USquadInfo.getChildByName("Bulletin")
+      .getChildByName("Content")
+      .getChildByName("Label")
+      .getComponent(Label).string = this.squadInfo.notice
+      ? this.squadInfo.notice
+      : i18n.empty;
+
+    this.USquadInfo.getComponent(ExpandNoticeWithArrow).updateContent();
   }
 
   viewSquadDetail(event: Event) {
@@ -291,6 +309,33 @@ export class circles extends Component {
     this.USquad.active = false;
     this.requestMembersList(squad_id);
     this.requestSquadInfo(squad_id);
+  }
+
+  switchUpdateCircleFlag(event, flag: string) {
+    this.isUpdateCircle = flag;
+
+    const dialog = Dialog.getInstance();
+
+    dialog.showDialog(null, "CreateCircle");
+  }
+
+  squadDialogConfirm(event) {
+    const criclesName = find(
+      "popBox/Canvas/CreateCircle/Name/EditBox/TEXT_LABEL"
+    ).getComponent(Label).string;
+
+    const criclesNotice = find(
+      "popBox/Canvas/CreateCircle/Notice/EditBox/TEXT_LABEL"
+    ).getComponent(Label).string;
+
+    if (this.isUpdateCircle === "true") {
+      this.requestUpdateSquadInfo({
+        name: criclesName,
+        notice: criclesNotice,
+      });
+    } else {
+      this.createSquad(criclesName);
+    }
   }
 
   // 推荐队伍
@@ -372,6 +417,32 @@ export class circles extends Component {
     }
   }
 
+  // 更新队伍信息
+  async requestUpdateSquadInfo(squadInfo: Pick<ISquadInfo, "notice" | "name">) {
+    const globalData = GlobalData.getInstance();
+
+    try {
+      const response = await httpRequest("/api/v1/squad/update", {
+        method: "POST",
+        body: {
+          squad_id: globalData.userInfo.squad_id,
+          name: squadInfo.name,
+          notice: squadInfo.notice,
+        },
+      });
+      if (response.ok) {
+        this.requestSquadInfo(globalData.userInfo.squad_id);
+        const dialog = Dialog.getInstance();
+
+        dialog.closeDialog(null, "CreateCircle");
+      } else {
+        console.error("Request failed with status:", response.status);
+      }
+    } catch (error) {
+      console.error("Error:", error);
+    }
+  }
+
   // 退出队伍
   async quitSquad() {
     const globalData = GlobalData.getInstance();
@@ -434,10 +505,7 @@ export class circles extends Component {
   }
 
   // 创建队伍
-  async createSquad(event: EventTouch) {
-    const criclesName = find(
-      "popBox/Canvas/CreateCircle/Name/EditBox/TEXT_LABEL"
-    ).getComponent(Label).string;
+  async createSquad(criclesName) {
     try {
       const response = await httpRequest("/api/v1/squad/create", {
         method: "POST",

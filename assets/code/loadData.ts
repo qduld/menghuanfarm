@@ -63,6 +63,7 @@ export const i18n = {
   stealSuccess: "Steal Success!",
   stealFailed: "Steal Failed!",
   goldNotEnough: "Not enough coins",
+  empty: "Empty",
 };
 
 export const tokenMock =

@@ -156,6 +156,7 @@ export interface ISquadInfo {
   created_at: number;
   total_points: number;
   member_count: number;
+  notice: string;
 }
 
 // /api/v1/skill/list 技能列表
