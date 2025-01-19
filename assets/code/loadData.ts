@@ -64,15 +64,24 @@ export const i18n = {
   stealFailed: "Steal Failed!",
   goldNotEnough: "Not enough coins",
   empty: "Empty",
+  stealTooManyTimes:
+    "You're too late! The number of times this land has been stolen has reached the limit.",
+  alreadyStolen: "You've already stolen from this crop!",
+  buySuccess: "Purchase successful!",
+};
+
+export const errTips = {
+  5008: i18n.alreadyStolen,
+  5007: i18n.stealTooManyTimes,
 };
 
 export const tokenMock =
-  "query_id=AAFNCHk7AAAAAE0IeTtP7RMw&user=%7B%22id%22%3A997787731%2C%22first_name%22%3A%22Franklin%22%2C%22last_name%22%3A%22Zelo%22%2C%22username%22%3A%22franklinEight%22%2C%22language_code%22%3A%22zh-hans%22%2C%22allows_write_to_pm%22%3Atrue%2C%22photo_url%22%3A%22https%3A%5C%2F%5C%2Ft.me%5C%2Fi%5C%2Fuserpic%5C%2F320%5C%2FVPWnV7PoxyMCwkPeMUnbj5ISWwjyAf0W0d1i8cKqjGk.svg%22%7D&auth_date=1734449112&signature=opXIYnBU_2ZOnJeRIpEqjwgUFzMpYGv5b-vDK2u3YE7ojcnhPvAzQ5UtEluRwTuEPflKqC8bcTnqnJpWc2KCAg&hash=0c5a480bdf6dc2a33c0f8d7d94779ca91442078ee409ed5f2bcb37e531489785";
-// "query_id=AAFNCHk7AAAAAE0IeTtP7RMw&user=%7B%22id%22%3A997787730%2C%22first_name%22%3A%22Franklin%22%2C%22last_name%22%3A%22Zelo%22%2C%22username%22%3A%22franklinSeven%22%2C%22language_code%22%3A%22zh-hans%22%2C%22allows_write_to_pm%22%3Atrue%2C%22photo_url%22%3A%22https%3A%5C%2F%5C%2Ft.me%5C%2Fi%5C%2Fuserpic%5C%2F320%5C%2FVPWnV7PoxyMCwkPeMUnbj5ISWwjyAf0W0d1i8cKqjGk.svg%22%7D&auth_date=1734449112&signature=opXIYnBU_2ZOnJeRIpEqjwgUFzMpYGv5b-vDK2u3YE7ojcnhPvAzQ5UtEluRwTuEPflKqC8bcTnqnJpWc2KCAg&hash=0c5a480bdf6dc2a33c0f8d7d94779ca91442078ee409ed5f2bcb37e531489785";
-// "query_id=AAFNCHk7AAAAAE0IeTtP7RMw&user=%7B%22id%22%3A997787729%2C%22first_name%22%3A%22Franklin%22%2C%22last_name%22%3A%22Zelo%22%2C%22username%22%3A%22franklinSix%22%2C%22language_code%22%3A%22zh-hans%22%2C%22allows_write_to_pm%22%3Atrue%2C%22photo_url%22%3A%22https%3A%5C%2F%5C%2Ft.me%5C%2Fi%5C%2Fuserpic%5C%2F320%5C%2FVPWnV7PoxyMCwkPeMUnbj5ISWwjyAf0W0d1i8cKqjGk.svg%22%7D&auth_date=1734449112&signature=opXIYnBU_2ZOnJeRIpEqjwgUFzMpYGv5b-vDK2u3YE7ojcnhPvAzQ5UtEluRwTuEPflKqC8bcTnqnJpWc2KCAg&hash=0c5a480bdf6dc2a33c0f8d7d94779ca91442078ee409ed5f2bcb37e531489785";
-// "query_id=AAFNCHk7AAAAAE0IeTtP7RMw&user=%7B%22id%22%3A997787728%2C%22first_name%22%3A%22Franklin%22%2C%22last_name%22%3A%22Zelo%22%2C%22username%22%3A%22franklinFour%22%2C%22language_code%22%3A%22zh-hans%22%2C%22allows_write_to_pm%22%3Atrue%2C%22photo_url%22%3A%22https%3A%5C%2F%5C%2Ft.me%5C%2Fi%5C%2Fuserpic%5C%2F320%5C%2FVPWnV7PoxyMCwkPeMUnbj5ISWwjyAf0W0d1i8cKqjGk.svg%22%7D&auth_date=1734449112&signature=opXIYnBU_2ZOnJeRIpEqjwgUFzMpYGv5b-vDK2u3YE7ojcnhPvAzQ5UtEluRwTuEPflKqC8bcTnqnJpWc2KCAg&hash=0c5a480bdf6dc2a33c0f8d7d94779ca91442078ee409ed5f2bcb37e531489785";
-// "query_id=AAFNCHk7AAAAAE0IeTtP7RMw&user=%7B%22id%22%3A997787727%2C%22first_name%22%3A%22Franklin%22%2C%22last_name%22%3A%22Zelo%22%2C%22username%22%3A%22franklinThree%22%2C%22language_code%22%3A%22zh-hans%22%2C%22allows_write_to_pm%22%3Atrue%2C%22photo_url%22%3A%22https%3A%5C%2F%5C%2Ft.me%5C%2Fi%5C%2Fuserpic%5C%2F320%5C%2FVPWnV7PoxyMCwkPeMUnbj5ISWwjyAf0W0d1i8cKqjGk.svg%22%7D&auth_date=1734449112&signature=opXIYnBU_2ZOnJeRIpEqjwgUFzMpYGv5b-vDK2u3YE7ojcnhPvAzQ5UtEluRwTuEPflKqC8bcTnqnJpWc2KCAg&hash=0c5a480bdf6dc2a33c0f8d7d94779ca91442078ee409ed5f2bcb37e531489785";
-// ("query_id=AAFNCHk7AAAAAE0IeTtP7RMw&user=%7B%22id%22%3A997787726%2C%22first_name%22%3A%22Franklin%22%2C%22last_name%22%3A%22Zelo%22%2C%22username%22%3A%22franklinZELO%22%2C%22language_code%22%3A%22zh-hans%22%2C%22allows_write_to_pm%22%3Atrue%2C%22photo_url%22%3A%22https%3A%5C%2F%5C%2Ft.me%5C%2Fi%5C%2Fuserpic%5C%2F320%5C%2FVPWnV7PoxyMCwkPeMUnbj5ISWwjyAf0W0d1i8cKqjGk.svg%22%7D&auth_date=1734449112&signature=opXIYnBU_2ZOnJeRIpEqjwgUFzMpYGv5b-vDK2u3YE7ojcnhPvAzQ5UtEluRwTuEPflKqC8bcTnqnJpWc2KCAg&hash=0c5a480bdf6dc2a33c0f8d7d94779ca91442078ee409ed5f2bcb37e531489785");
+  // "query_id=AAFNCHk7AAAAAE0IeTtP7RMw&user=%7B%22id%22%3A997787731%2C%22first_name%22%3A%22Franklin%22%2C%22last_name%22%3A%22Zelo%22%2C%22username%22%3A%22franklinEight%22%2C%22language_code%22%3A%22zh-hans%22%2C%22allows_write_to_pm%22%3Atrue%2C%22photo_url%22%3A%22https%3A%5C%2F%5C%2Ft.me%5C%2Fi%5C%2Fuserpic%5C%2F320%5C%2FVPWnV7PoxyMCwkPeMUnbj5ISWwjyAf0W0d1i8cKqjGk.svg%22%7D&auth_date=1734449112&signature=opXIYnBU_2ZOnJeRIpEqjwgUFzMpYGv5b-vDK2u3YE7ojcnhPvAzQ5UtEluRwTuEPflKqC8bcTnqnJpWc2KCAg&hash=0c5a480bdf6dc2a33c0f8d7d94779ca91442078ee409ed5f2bcb37e531489785";
+  // "query_id=AAFNCHk7AAAAAE0IeTtP7RMw&user=%7B%22id%22%3A997787730%2C%22first_name%22%3A%22Franklin%22%2C%22last_name%22%3A%22Zelo%22%2C%22username%22%3A%22franklinSeven%22%2C%22language_code%22%3A%22zh-hans%22%2C%22allows_write_to_pm%22%3Atrue%2C%22photo_url%22%3A%22https%3A%5C%2F%5C%2Ft.me%5C%2Fi%5C%2Fuserpic%5C%2F320%5C%2FVPWnV7PoxyMCwkPeMUnbj5ISWwjyAf0W0d1i8cKqjGk.svg%22%7D&auth_date=1734449112&signature=opXIYnBU_2ZOnJeRIpEqjwgUFzMpYGv5b-vDK2u3YE7ojcnhPvAzQ5UtEluRwTuEPflKqC8bcTnqnJpWc2KCAg&hash=0c5a480bdf6dc2a33c0f8d7d94779ca91442078ee409ed5f2bcb37e531489785";
+  // "query_id=AAFNCHk7AAAAAE0IeTtP7RMw&user=%7B%22id%22%3A997787729%2C%22first_name%22%3A%22Franklin%22%2C%22last_name%22%3A%22Zelo%22%2C%22username%22%3A%22franklinSix%22%2C%22language_code%22%3A%22zh-hans%22%2C%22allows_write_to_pm%22%3Atrue%2C%22photo_url%22%3A%22https%3A%5C%2F%5C%2Ft.me%5C%2Fi%5C%2Fuserpic%5C%2F320%5C%2FVPWnV7PoxyMCwkPeMUnbj5ISWwjyAf0W0d1i8cKqjGk.svg%22%7D&auth_date=1734449112&signature=opXIYnBU_2ZOnJeRIpEqjwgUFzMpYGv5b-vDK2u3YE7ojcnhPvAzQ5UtEluRwTuEPflKqC8bcTnqnJpWc2KCAg&hash=0c5a480bdf6dc2a33c0f8d7d94779ca91442078ee409ed5f2bcb37e531489785";
+  // "query_id=AAFNCHk7AAAAAE0IeTtP7RMw&user=%7B%22id%22%3A997787728%2C%22first_name%22%3A%22Franklin%22%2C%22last_name%22%3A%22Zelo%22%2C%22username%22%3A%22franklinFour%22%2C%22language_code%22%3A%22zh-hans%22%2C%22allows_write_to_pm%22%3Atrue%2C%22photo_url%22%3A%22https%3A%5C%2F%5C%2Ft.me%5C%2Fi%5C%2Fuserpic%5C%2F320%5C%2FVPWnV7PoxyMCwkPeMUnbj5ISWwjyAf0W0d1i8cKqjGk.svg%22%7D&auth_date=1734449112&signature=opXIYnBU_2ZOnJeRIpEqjwgUFzMpYGv5b-vDK2u3YE7ojcnhPvAzQ5UtEluRwTuEPflKqC8bcTnqnJpWc2KCAg&hash=0c5a480bdf6dc2a33c0f8d7d94779ca91442078ee409ed5f2bcb37e531489785";
+  "query_id=AAFNCHk7AAAAAE0IeTtP7RMw&user=%7B%22id%22%3A997787727%2C%22first_name%22%3A%22Franklin%22%2C%22last_name%22%3A%22Zelo%22%2C%22username%22%3A%22franklinThree%22%2C%22language_code%22%3A%22zh-hans%22%2C%22allows_write_to_pm%22%3Atrue%2C%22photo_url%22%3A%22https%3A%5C%2F%5C%2Ft.me%5C%2Fi%5C%2Fuserpic%5C%2F320%5C%2FVPWnV7PoxyMCwkPeMUnbj5ISWwjyAf0W0d1i8cKqjGk.svg%22%7D&auth_date=1734449112&signature=opXIYnBU_2ZOnJeRIpEqjwgUFzMpYGv5b-vDK2u3YE7ojcnhPvAzQ5UtEluRwTuEPflKqC8bcTnqnJpWc2KCAg&hash=0c5a480bdf6dc2a33c0f8d7d94779ca91442078ee409ed5f2bcb37e531489785";
+// "query_id=AAFNCHk7AAAAAE0IeTtP7RMw&user=%7B%22id%22%3A997787726%2C%22first_name%22%3A%22Franklin%22%2C%22last_name%22%3A%22Zelo%22%2C%22username%22%3A%22franklinZELO%22%2C%22language_code%22%3A%22zh-hans%22%2C%22allows_write_to_pm%22%3Atrue%2C%22photo_url%22%3A%22https%3A%5C%2F%5C%2Ft.me%5C%2Fi%5C%2Fuserpic%5C%2F320%5C%2FVPWnV7PoxyMCwkPeMUnbj5ISWwjyAf0W0d1i8cKqjGk.svg%22%7D&auth_date=1734449112&signature=opXIYnBU_2ZOnJeRIpEqjwgUFzMpYGv5b-vDK2u3YE7ojcnhPvAzQ5UtEluRwTuEPflKqC8bcTnqnJpWc2KCAg&hash=0c5a480bdf6dc2a33c0f8d7d94779ca91442078ee409ed5f2bcb37e531489785";
 // "query_id=AAFNCHk7AAAAAE0IeTtP7RMw&user=%7B%22id%22%3A997787725%2C%22first_name%22%3A%22Franklin%22%2C%22last_name%22%3A%22Zelo%22%2C%22username%22%3A%22franklinyiqi%22%2C%22language_code%22%3A%22zh-hans%22%2C%22allows_write_to_pm%22%3Atrue%2C%22photo_url%22%3A%22https%3A%5C%2F%5C%2Ft.me%5C%2Fi%5C%2Fuserpic%5C%2F320%5C%2FVPWnV7PoxyMCwkPeMUnbj5ISWwjyAf0W0d1i8cKqjGk.svg%22%7D&auth_date=1734449112&signature=opXIYnBU_2ZOnJeRIpEqjwgUFzMpYGv5b-vDK2u3YE7ojcnhPvAzQ5UtEluRwTuEPflKqC8bcTnqnJpWc2KCAg&hash=0c5a480bdf6dc2a33c0f8d7d94779ca91442078ee409ed5f2bcb37e531489785";
 // "user=%7B%22id%22%3A5418325938%2C%22first_name%22%3A%22fff%22%2C%22last_name%22%3A%22%22%2C%22username%22%3A%22kkkkkkkykyyyyyyyy%22%2C%22language_code%22%3A%22zh-hans%22%2C%22allows_write_to_pm%22%3Atrue%7D&chat_instance=-4022452127639754575&chat_type=private&auth_date=1723811494&hash=2076a7a2ad61896f70961d27a826bd45f4c949a0a6ba716f9f16491ab2c65325";
 // "user%3D%7B%22id%22%3A5418325935%2C%22first_name%22%3A%22fff%22%2C%22last_name%22%3A%22%22%2C%22username%22%3A%22ldldldlldldld%22%2C%22language_code%22%3A%22zh-hans%22%2C%22allows_write_to_pm%22%3Atrue%7D%26chat_instance%3D-4022452127639754575%26chat_type%3Dprivate%26auth_date%3D1723811494%26hash%3D2076a7a2ad61896f70961d27a826bd45f4c949a0a6ba716f9f16491ab2c65325";
@@ -234,29 +243,119 @@ export const uAggResponse = {
 
 export const squadList = [
   {
-    id: 1,
-    name: "test",
-    member_count: 4,
-  },
-  {
     id: 2,
-    name: "test2",
+    name: "t1",
+    created_at: 1737221184,
+    total_points: 10000,
     member_count: 1,
+    notice: "",
   },
   {
     id: 3,
-    name: "HelloBTC",
-    member_count: 0,
+    name: "t2",
+    created_at: 1737221214,
+    total_points: 10000,
+    member_count: 1,
+    notice: "",
   },
   {
     id: 4,
-    name: "HelloB",
-    member_count: 0,
+    name: "t3",
+    created_at: 1737221214,
+    total_points: 10000,
+    member_count: 1,
+    notice: "",
   },
   {
     id: 5,
-    name: "HelloC",
-    member_count: 0,
+    name: "t4",
+    created_at: 1737221214,
+    total_points: 10000,
+    member_count: 1,
+    notice: "",
+  },
+  {
+    id: 6,
+    name: "t5",
+    created_at: 1737221214,
+    total_points: 10000,
+    member_count: 1,
+    notice: "",
+  },
+  // {
+  //   id: 7,
+  //   name: "t6",
+  //   created_at: 1737221214,
+  //   total_points: 10000,
+  //   member_count: 1,
+  //   notice: "",
+  // },
+  // {
+  //   id: 8,
+  //   name: "t7",
+  //   created_at: 1737221214,
+  //   total_points: 10000,
+  //   member_count: 1,
+  //   notice: "",
+  // },
+];
+
+export const squadSearchList = [
+  {
+    id: 2,
+    name: "t1",
+    created_at: 1737221184,
+    total_points: 10000,
+    member_count: 1,
+    notice: "",
+  },
+  {
+    id: 3,
+    name: "t2",
+    created_at: 1737221214,
+    total_points: 10000,
+    member_count: 1,
+    notice: "",
+  },
+  {
+    id: 4,
+    name: "t3",
+    created_at: 1737221214,
+    total_points: 10000,
+    member_count: 1,
+    notice: "",
+  },
+  {
+    id: 5,
+    name: "t4",
+    created_at: 1737221214,
+    total_points: 10000,
+    member_count: 1,
+    notice: "",
+  },
+  {
+    id: 6,
+    name: "t5",
+    created_at: 1737221214,
+    total_points: 10000,
+    member_count: 1,
+    notice: "",
+  },
+  {
+    id: 7,
+    name: "t6",
+    created_at: 1737221214,
+    total_points: 10000,
+    member_count: 1,
+    notice: "",
+  },
+  {
+    id: 8,
+    name: "t7",
+    created_at: 1737221214,
+    total_points: 10000,
+    member_count: 1,
+    notice: "",
   },
 ];
 

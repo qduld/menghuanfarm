@@ -12,15 +12,17 @@ import {
   EventTouch,
   SpriteAtlas,
   Vec3,
+  EditBox,
 } from "cc";
 import { httpRequest } from "./http";
 import { IMembersList, ISquadList, ISquadInfo, IUserInfo } from "./interface";
-import { squadList, i18n } from "./loadData";
+import { squadList, i18n, squadSearchList } from "./loadData";
 import { GlobalData } from "./globalData";
 import { GenInfo } from "./genInfo";
 import { Dialog } from "./dialog";
 import { formatNumberShortDynamic, formatTimestampToDate } from "./utils";
 import { ExpandNoticeWithArrow } from "./expandNoticeWithArrow";
+import { InputHandler } from "./inputHandler";
 
 const { ccclass, property } = _decorator;
 @ccclass("circles")
@@ -59,7 +61,7 @@ export class circles extends Component {
   UEditButton: Node = null;
 
   @property
-  squadSpacingY: number = 10; // 推荐间距
+  squadSpacingY: number = 15; // 推荐间距
 
   @property
   memberSpacingY: number = 0; // 推荐间距
@@ -76,13 +78,30 @@ export class circles extends Component {
   @property
   UScrollView: Node = null;
 
+  @property(Node)
+  USearchCircle: Node = null;
+
+  @property(Node)
+  UBatchAnother: Node = null;
+
+  @property(Node)
+  UCloseSearch: Node = null;
+
+  @property(Node)
+  USquadScrollView: Node = null;
+
   private isUpdateCircle: string = "false";
+  private currentPage: number = 0;
+  private hasMore: boolean = false;
+  private isSearchMode: boolean = false;
 
   protected onLoad(): void {
     this.USquad = find("Canvas/UnJoined");
     this.UMembers = find("Canvas/Joined");
-    this.USquadList = find("Canvas/UnJoined/Content/List");
-    this.USquadSection = find("Canvas/UnJoined/Content/Section");
+    this.USquadList = find("Canvas/UnJoined/Content/ScrollView/view/content");
+    this.USquadSection = find(
+      "Canvas/UnJoined/Content/ScrollView/view/content/Section"
+    );
     this.UScrollView = find("Canvas/Joined/Content/ScrollView");
     this.UMembersList = find("Canvas/Joined/Content/ScrollView/view/content");
     this.UMembersSection = find(
@@ -91,7 +110,25 @@ export class circles extends Component {
     this.USquadInfo = find("Canvas/Joined/Tips");
     this.UCurrentUser = find("Canvas/Joined/Content/CurrentUser");
     this.UEditButton = find("Canvas/Joined/Options/Edit");
+    this.USearchCircle.getComponent(InputHandler).callback = this.searchCircle;
+    this.USearchCircle.getComponent(InputHandler).callbackThis = this;
+    this.USearchCircle.getComponent(InputHandler).onFocusEvent =
+      this.switchSearchAndPatch;
     this.checkSquadList();
+  }
+
+  updateScrollViewHeight(sectionNum) {
+    const scrollHeight = sectionNum * (120 + this.squadSpacingY) + 20;
+    // this.USquadScrollView.getComponent(UITransform).height = scrollHeight;
+    // this.USquadScrollView.getChildByName("scrollBar").getComponent(
+    //   UITransform
+    // ).height = scrollHeight;
+    // this.USquadScrollView.getChildByName("view").getComponent(
+    //   UITransform
+    // ).height = scrollHeight;
+    this.USquadScrollView.getChildByName("view")
+      .getChildByName("content")
+      .getComponent(UITransform).height = scrollHeight;
   }
 
   // 生成推荐列表
@@ -103,6 +140,10 @@ export class circles extends Component {
     // 计算起始点，以保证整个布局居中
     const startX = this.USquadSection.position.x;
     const startY = this.USquadSection.position.y;
+
+    if (this.isSearchMode) {
+      this.updateScrollViewHeight(this.squadList.length);
+    }
 
     this.squadList.forEach((squad, index) => {
       const posY =
@@ -138,23 +179,27 @@ export class circles extends Component {
     this.UCurrentUser.getChildByName("Ranking").getComponent(Label).string =
       memberIndex + 1 + "";
 
-    this.UCurrentUser.getChildByName("Name")
+    this.UCurrentUser.getChildByName("Middle")
+      .getChildByName("Name")
       .getChildByName("Label")
       .getComponent(Label).string = this.membersList[memberIndex].tg_username;
 
-    this.UCurrentUser.getChildByName("Money")
+    this.UCurrentUser.getChildByName("Middle")
+      .getChildByName("Money")
       .getChildByName("Label")
       .getComponent(Label).string =
       this.membersList[memberIndex].points_balance + "";
 
     if (this.membersList[memberIndex].is_leader) {
       this.UEditButton.active = true;
-      this.UCurrentUser.getChildByName("Name").getChildByName("Icon").active =
-        true;
+      this.UCurrentUser.getChildByName("Middle")
+        .getChildByName("Name")
+        .getChildByName("Icon").active = true;
     } else {
       this.UEditButton.active = false;
-      this.UCurrentUser.getChildByName("Name").getChildByName("Icon").active =
-        false;
+      this.UCurrentUser.getChildByName("Middle")
+        .getChildByName("Name")
+        .getChildByName("Icon").active = false;
     }
   }
 
@@ -191,10 +236,12 @@ export class circles extends Component {
       membersSection.active = true;
       membersSection.setPosition(startX, posY);
       membersSection
+        .getChildByName("Middle")
         .getChildByName("Name")
         .getChildByName("Label")
         .getComponent(Label).string = member.tg_username + "";
       membersSection
+        .getChildByName("Middle")
         .getChildByName("Money")
         .getChildByName("Label")
         .getComponent(Label).string = member.points_balance + "";
@@ -203,11 +250,15 @@ export class circles extends Component {
 
       // 如果是队长显示图标
       if (member.is_leader) {
-        membersSection.getChildByName("Name").getChildByName("Icon").active =
-          true;
+        membersSection
+          .getChildByName("Middle")
+          .getChildByName("Name")
+          .getChildByName("Icon").active = true;
       } else {
-        membersSection.getChildByName("Name").getChildByName("Icon").active =
-          false;
+        membersSection
+          .getChildByName("Middle")
+          .getChildByName("Name")
+          .getChildByName("Icon").active = false;
       }
 
       // 可偷且不是自己显示偷取图标
@@ -316,6 +367,14 @@ export class circles extends Component {
 
     const dialog = Dialog.getInstance();
 
+    if (flag === "false") {
+      dialog.createCircleBox.getChildByName("UpdateMode").active = false;
+      dialog.createCircleBox.getChildByName("CreateMode").active = true;
+    } else {
+      dialog.createCircleBox.getChildByName("UpdateMode").active = true;
+      dialog.createCircleBox.getChildByName("CreateMode").active = false;
+    }
+
     dialog.showDialog(null, "CreateCircle");
   }
 
@@ -338,13 +397,31 @@ export class circles extends Component {
     }
   }
 
+  anotherBatchSquad() {
+    if (this.hasMore) {
+      this.currentPage++;
+    } else {
+      this.currentPage = 0;
+    }
+    this.requestSquadList();
+  }
+
   // 推荐队伍
   async requestSquadList() {
     try {
-      const response = await httpRequest("/api/v1/squad/list", {
-        method: "GET",
-      });
+      const response = await httpRequest(
+        "/api/v1/squad/list",
+        {
+          method: "GET",
+        },
+        {
+          current: this.currentPage,
+          page_size: 5,
+        }
+      );
       if (response.ok) {
+        this.hasMore = response.data.data.has_more;
+        // this.squadList = squadSearchList;
         this.squadList = response.data.data.list
           ? response.data.data.list
           : ([] as ISquadList[]);
@@ -523,6 +600,53 @@ export class circles extends Component {
         this.USquad.active = false;
         this.requestMembersList();
         this.requestSquadInfo();
+      } else {
+        console.error("Request failed with status:", response.status);
+      }
+    } catch (error) {
+      console.error("Error:", error);
+    }
+  }
+
+  switchSearchAndPatch(event, mode) {
+    this.isSearchMode = mode;
+    if (this.isSearchMode === true) {
+      this.USquadList.removeAllChildren();
+      this.UBatchAnother.active = false;
+      // this.UCloseSearch.active = true;
+    } else {
+      this.UBatchAnother.active = true;
+      // this.UCloseSearch.active = false;
+      this.searchCircle("");
+      this.USearchCircle.getChildByName("EditBox").getComponent(
+        EditBox
+      ).string = "";
+    }
+  }
+
+  // 查询圈子
+  async searchCircle(keyword: string) {
+    if (!keyword) {
+      this.currentPage = 0;
+      this.requestSquadList();
+      return;
+    }
+    try {
+      const response = await httpRequest(
+        "/api/v1/squad/search",
+        {
+          method: "GET",
+        },
+        {
+          keyword,
+        }
+      );
+      if (response.ok) {
+        this.squadList = response.data.data.data
+          ? response.data.data.data
+          : ([] as ISquadList[]);
+        this.USquadList.removeAllChildren();
+        this.createSquadLayout();
       } else {
         console.error("Request failed with status:", response.status);
       }

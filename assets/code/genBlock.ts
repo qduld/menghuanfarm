@@ -19,7 +19,8 @@ import { GenPlant } from "./genPlant";
 import { GenInfo } from "./genInfo";
 import { Dialog } from "./dialog";
 import { GlobalData } from "./globalData";
-import { i18n } from "./loadData";
+import { i18n, errTips } from "./loadData";
+import { AudioMgr } from "./audioManager";
 const { ccclass, property } = _decorator;
 
 @ccclass("GenBlock")
@@ -240,7 +241,7 @@ export class GenBlock extends Component {
       if (response.ok) {
         this.requestFarmLand();
         dialog.closeDialog(null, "LockBlock");
-        this.goldReducePlay();
+        AudioMgr.inst.playOneShot("sounds/unlock", 1);
       } else {
         if (response.data.code === 2003) {
           globalData.setMessageLabel(i18n.goldNotEnough);
@@ -292,7 +293,7 @@ export class GenBlock extends Component {
         globalData.setMessageLabel(i18n.stealSuccess);
         this.updateFarmLand(farmland_id);
       } else {
-        globalData.setMessageLabel(i18n.stealFailed);
+        globalData.setMessageLabel(errTips[response.data.code]);
       }
     } catch (error) {
       globalData.setMessageLabel(i18n.stealFailed);
@@ -305,35 +306,5 @@ export class GenBlock extends Component {
 
     genInfo.requestUserInfo();
     genInfo.requestUAgg();
-  }
-
-  unLockAudioPlay() {
-    resources.load("sounds/unlock", (err, clip: AudioClip) => {
-      if (err) {
-        console.log(err);
-      } else {
-        const audioSource = find("MainCanvas/AudioManager/Unlock").getComponent(
-          AudioSource
-        );
-        audioSource.clip = clip;
-        audioSource.play();
-        audioSource.volume = 1;
-      }
-    });
-  }
-
-  goldReducePlay() {
-    resources.load("sounds/goldReduce", (err, clip: AudioClip) => {
-      if (err) {
-        console.log(err);
-      } else {
-        const audioSource = find(
-          "MainCanvas/AudioManager/GoldReduce"
-        ).getComponent(AudioSource);
-        audioSource.clip = clip;
-        audioSource.play();
-        audioSource.volume = 1;
-      }
-    });
   }
 }

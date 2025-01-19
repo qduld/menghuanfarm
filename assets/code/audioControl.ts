@@ -15,7 +15,6 @@ export class AudioControl extends SwitchButton {
   onLoad() {
     const globalData = GlobalData.getInstance();
     AudioControl._instance = this;
-    // this.isOn = !AudioMgr.inst.getPause();
     this.isOn = globalData.bgmIsOn;
     this.init();
   }
@@ -25,6 +24,8 @@ export class AudioControl extends SwitchButton {
     globalData.bgmIsOn = !globalData.bgmIsOn;
     this.isOn = !this.isOn; // 切换状态
     this.init();
+
+    AudioMgr.inst.musicEnabled = !AudioMgr.inst.musicEnabled;
 
     if (this.isOn) {
       AudioMgr.inst.resume();

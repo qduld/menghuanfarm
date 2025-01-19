@@ -25,6 +25,9 @@ export class GlobalData extends Component {
   @property
   bgmIsOn: boolean = true; //bgm正在播放
 
+  @property
+  soundIsEnable: boolean = true; //SFX正在播放
+
   private constructor() {
     super();
   }

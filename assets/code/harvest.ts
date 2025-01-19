@@ -7,19 +7,20 @@ import {
   UITransform,
   Label,
 } from "cc";
-import { harvestList } from "./loadData";
+import { harvestList, i18n } from "./loadData";
 import { httpRequest } from "./http";
-import { ISkillList } from "./interface";
+import { IHarvestListItem } from "./interface";
 import { Dialog } from "./dialog";
 import { GlobalData } from "./globalData";
 import { DynamicLabel } from "./dynamicLabel";
 import { formatToUSDInteger } from "./utils";
+import { GenInfo } from "./genInfo";
 
 const { ccclass, property } = _decorator;
 @ccclass("harvest")
 export class harvest extends Component {
   @property
-  harvestList: ISkillList[] = []; // 技能列表
+  harvestList: IHarvestListItem[] = []; // 技能列表
 
   @property
   UHarvestList: Node = null; // 推荐列表
@@ -41,6 +42,9 @@ export class harvest extends Component {
 
   @property
   column: number = 3;
+
+  private currentCard: IHarvestListItem = null;
+
   protected onLoad(): void {
     this.requestHarvestList();
     this.harvestSpacingY = 40;
@@ -64,7 +68,7 @@ export class harvest extends Component {
     const startX = this.UHarvestSection.position.x;
     const startY = this.UHarvestSection.position.y;
 
-    harvestList.forEach((harvest, index) => {
+    this.harvestList.forEach((harvest, index) => {
       const xCoordinate = Math.floor(index / this.column);
       const yCoordinate = index % this.column;
 
@@ -78,7 +82,7 @@ export class harvest extends Component {
       harvestSection.active = true;
       harvestSection.setPosition(posX, posY);
       harvestSection.getChildByName("Name").getComponent(Label).string =
-        harvest.skillType + "";
+        harvest.name + "";
       harvestSection
         .getChildByName("Addition")
         .getChildByName("Label")
@@ -86,7 +90,9 @@ export class harvest extends Component {
       harvestSection
         .getChildByName("Button")
         .getChildByName("Label")
-        .getComponent(Label).string = harvest.cost + "";
+        .getComponent(Label).string = harvest.points + "";
+
+      harvestSection.getChildByName("Button")["cardInfo"] = harvest;
     });
   }
 
@@ -109,15 +115,62 @@ export class harvest extends Component {
     }, 0);
   }
 
+  setCurrentSelectHarvestCard(event) {
+    const dialog = Dialog.getInstance();
+
+    this.currentCard = event.currentTarget.cardInfo;
+
+    dialog.showDialog(null, "BuyProps");
+
+    dialog.buyPropsBox.getChildByName("Name").getComponent(Label).string =
+      this.currentCard.name;
+
+    dialog.buyPropsBox
+      .getChildByName("Harvest")
+      .getChildByName("Value")
+      .getComponent(Label).string = `+${this.currentCard.ratio}%`;
+
+    dialog.buyPropsBox
+      .getChildByName("Button")
+      .getChildByName("Label")
+      .getComponent(Label).string = this.currentCard.points + "";
+  }
+
   // 膨胀列表
   async requestHarvestList() {
     try {
-      const response = await httpRequest("/api/v1/skill/list", {
+      const response = await httpRequest("/api/v1/expansion/list", {
         method: "GET",
       });
       if (response.ok) {
-        this.harvestList = response.data.data as ISkillList[];
+        this.harvestList = response.data.data.list as IHarvestListItem[];
         this.createHarvestLayout();
+      } else {
+        console.error("Request failed with status:", response.status);
+      }
+    } catch (error) {
+      console.error("Error:", error);
+    }
+  }
+
+  // 膨购买膨胀卡
+  async requestBuyHarvestCard() {
+    const globalData = GlobalData.getInstance();
+    const dialog = Dialog.getInstance();
+    try {
+      const response = await httpRequest("/api/v1/expansion/buy", {
+        method: "POST",
+        body: {
+          id: this.currentCard.id,
+        },
+      });
+      if (response.ok) {
+        const genInfo = GenInfo.getInstance();
+        await genInfo.requestUserInfo();
+
+        this.updateUserInfo();
+        globalData.setMessageLabel(i18n.buySuccess);
+        dialog.closeDialog(null, "BuyProps");
       } else {
         console.error("Request failed with status:", response.status);
       }

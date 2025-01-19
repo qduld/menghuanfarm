@@ -196,3 +196,11 @@ export interface ICoinListItem {
   discount: number;
   points: number;
 }
+
+export interface IHarvestListItem {
+  id: number;
+  name: string;
+  ratio: number;
+  points: number;
+  created_at: string;
+}

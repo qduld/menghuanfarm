@@ -32,6 +32,9 @@ export class GenBag extends Component {
   USeedSection: Node = null; // 种子Section
 
   @property
+  UEmptyContent: Node = null;
+
+  @property
   seedSpacingY: number = 20; // 种子Y间距
 
   @property
@@ -48,11 +51,16 @@ export class GenBag extends Component {
     this.requestPackageList();
     this.USeedList = find("popBox/Canvas/Bag/List");
     this.USeedSection = find("popBox/Canvas/Bag/Section");
+    this.UEmptyContent = find("popBox/Canvas/Bag/Empty");
   }
 
   // 生成推荐列表
   createPackageLayout() {
-    if (this.seedList.length === 0) return;
+    if (this.seedList?.length === 0 || !this.seedList) {
+      this.UEmptyContent.active = true;
+      return;
+    }
+    this.UEmptyContent.active = false;
     // 获取预制体的宽度和高度
     const sectionHeight =
       this.USeedSection.getChildByName("Bg").getComponent(UITransform)
@@ -172,5 +180,12 @@ export class GenBag extends Component {
     } catch (error) {
       console.error("Error:", error);
     }
+  }
+
+  routeToShop() {
+    const dialog = Dialog.getInstance();
+
+    dialog.closeDialog(null, "Bag");
+    dialog.showDialog(null, "Shop");
   }
 }

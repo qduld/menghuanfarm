@@ -14,6 +14,7 @@ import {
 import { httpRequest } from "./http";
 import { Dialog } from "./dialog";
 import { GenInfo } from "./genInfo";
+import { AudioMgr } from "./audioManager";
 
 const { ccclass, property } = _decorator;
 @ccclass("BuySeed")
@@ -144,7 +145,7 @@ export class BuySeed extends Component {
       });
       if (response.ok) {
         dialog.closeDialog(null, "BuySeed");
-        this.goldReducePlay();
+        AudioMgr.inst.playOneShot("sounds/goldReduce");
         genInfo.requestUserInfo(); // 买完之后更新用户信息
       } else {
         console.error("Request failed with status:", response.status);
@@ -152,20 +153,5 @@ export class BuySeed extends Component {
     } catch (error) {
       console.error("Error:", error);
     }
-  }
-
-  goldReducePlay() {
-    resources.load("sounds/goldReduce", (err, clip: AudioClip) => {
-      if (err) {
-        console.log(err);
-      } else {
-        const audioSource = find(
-          "MainCanvas/AudioManager/GoldReduce"
-        ).getComponent(AudioSource);
-        audioSource.clip = clip;
-        audioSource.play();
-        audioSource.volume = 1;
-      }
-    });
   }
 }

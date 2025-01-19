@@ -112,7 +112,8 @@ export class BuyCoins extends Component {
         },
       });
       if (response.ok) {
-        sys.openURL(response.data.data.url);
+        sys.openURL(response.data.data.tonkeeper_url);
+        // tonhub_url ;
       } else {
         console.error("Request failed with status:", response.status);
       }

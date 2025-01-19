@@ -1,11 +1,4 @@
-import {
-  _decorator,
-  Component,
-  Graphics,
-  Vec2,
-  EventTouch,
-  UITransform,
-} from "cc";
+import { _decorator, Component, Graphics, Vec2, Node, UITransform } from "cc";
 const { ccclass, property } = _decorator;
 
 @ccclass("OverlayMask")
@@ -14,9 +7,30 @@ export class OverlayMask extends Component {
   private uiTransform: UITransform;
 
   onLoad() {
-    // this.node.setSiblingIndex(-999);
     this.graphics = this.getComponent(Graphics);
     this.drawOverlay();
+    // 确保 Mask 节点能阻止事件传播
+    this.node.on(Node.EventType.TOUCH_START, this.onTouchStart, this);
+    this.node.on(Node.EventType.TOUCH_MOVE, this.onTouchMove, this);
+    this.node.on(Node.EventType.TOUCH_END, this.onTouchEnd, this);
+    this.node.on(Node.EventType.TOUCH_CANCEL, this.onTouchCancel, this);
+  }
+
+  onTouchStart(event) {
+    // 通过调用 stopPropagation() 阻止事件穿透
+    event.propagationStopped = true;
+  }
+
+  onTouchMove(event) {
+    event.propagationStopped = true;
+  }
+
+  onTouchEnd(event) {
+    event.propagationStopped = true;
+  }
+
+  onTouchCancel(event) {
+    event.propagationStopped = true;
   }
 
   private drawOverlay() {

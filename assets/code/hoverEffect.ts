@@ -18,6 +18,7 @@ import { IFarmland } from "./interface";
 import { Dialog } from "./dialog";
 import { GenBlock } from "./genBlock";
 import { GlobalData } from "./globalData";
+import { AudioMgr } from "./audioManager";
 const { ccclass, property } = _decorator;
 
 @ccclass("HoverEffect")
@@ -208,17 +209,19 @@ export class HoverEffect extends Component {
   }
 
   playVoice() {
-    const audioSources = this.node.getComponents(AudioSource);
+    AudioMgr.inst.playOneShot("sounds/reap", 1);
+    // AudioMgr.inst.playOneShot(this.clickSound);
+    // const audioSources = this.node.getComponents(AudioSource);
 
-    audioSources.forEach((audio) => {
-      audio.play();
-    });
+    // audioSources.forEach((audio) => {
+    //   audio.play();
+    // });
 
-    this.scheduleOnce(() => {
-      audioSources.forEach((audio) => {
-        audio.stop();
-      });
-    }, 2);
+    // this.scheduleOnce(() => {
+    //   audioSources.forEach((audio) => {
+    //     audio.stop();
+    //   });
+    // }, 2);
   }
 
   // onTouchMove() {
