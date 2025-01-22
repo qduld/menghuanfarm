@@ -44,6 +44,9 @@ export class Dialog extends Component {
   quitCircleBox: Node = null; // settingBox
 
   @property(Node)
+  paymentMethodBox: Node = null; // PaymentMethodBox
+
+  @property(Node)
   overlayMask: Node = null; // overlayMask
 
   @property
@@ -76,6 +79,7 @@ export class Dialog extends Component {
     this.createCircleBox = find("popBox/Canvas/CreateCircle");
     this.settingBox = find("popBox/Canvas/Setting");
     this.quitCircleBox = find("popBox/Canvas/QuitCircle");
+    this.paymentMethodBox = find("popBox/Canvas/PaymentMethod");
     this.overlayMask = find("popBox/Canvas/OverlayMask");
 
     this.bagBox ? (this.bagBox.active = false) : "";
@@ -87,6 +91,7 @@ export class Dialog extends Component {
     this.createCircleBox ? (this.createCircleBox.active = false) : "";
     this.settingBox ? (this.settingBox.active = false) : "";
     this.quitCircleBox ? (this.quitCircleBox.active = false) : "";
+    this.paymentMethodBox ? (this.paymentMethodBox.active = false) : "";
 
     this.overlayMask.active = false;
   }
@@ -124,6 +129,9 @@ export class Dialog extends Component {
         break;
       case "QuitCircle":
         this.quitCircleBox.active = true;
+        break;
+      case "PaymentMethodBox":
+        this.paymentMethodBox.active = true;
         break;
     }
     this.overlayMask.active = true;
@@ -163,6 +171,10 @@ export class Dialog extends Component {
         break;
       case "QuitCircle":
         this.quitCircleBox.active = false;
+        this.overlayMask.active = false;
+        break;
+      case "PaymentMethodBox":
+        this.paymentMethodBox.active = false;
         this.overlayMask.active = false;
         break;
     }
