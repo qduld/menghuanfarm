@@ -15,10 +15,14 @@ import { httpRequest } from "./http";
 import { Dialog } from "./dialog";
 import { GenInfo } from "./genInfo";
 import { AudioMgr } from "./audioManager";
+import { formatNumberShortDynamic } from "./utils";
 
 const { ccclass, property } = _decorator;
 @ccclass("BuySeed")
 export class BuySeed extends Component {
+  @property
+  USeedName: Node = null; // 种子名字
+
   @property
   USeedSprite: Node = null; // 种子图片
 
@@ -41,7 +45,7 @@ export class BuySeed extends Component {
   USeedMinimize: Node = null; // 种子减少
 
   @property
-  seedNumber: number = 0; // 种子减少
+  seedNumber: number = 1; // 种子减少
 
   private static _instance: BuySeed;
 
@@ -51,6 +55,7 @@ export class BuySeed extends Component {
 
   protected onLoad(): void {
     BuySeed._instance = this;
+    this.USeedName = find("popBox/Canvas/BuySeed/Content/Name");
     this.USeedSprite = find("popBox/Canvas/BuySeed/Content/Fruit/Picture");
     this.USeedProfit = find("popBox/Canvas/BuySeed/Content/Effect/Profit");
     this.USeedRipeningTime = find(
@@ -94,20 +99,22 @@ export class BuySeed extends Component {
         atlas.getSpriteFrame(spritePath);
     });
 
+    this.USeedName.getComponent(Label).string = seed.name;
+
     this.USeedProfit.getChildByName("Value").getComponent(
       Label
-    ).string = `+${seed.points}/block`;
+    ).string = `+${formatNumberShortDynamic(seed.points)}/block`;
 
     this.USeedRipeningTime.getChildByName("Value").getComponent(
       Label
     ).string = `${seed.maturity_time}min`;
 
+    this.USeedNumber.getChildByName("Value").getComponent(Label).string = "1";
+
+    this.seedNumber = 1;
+
     this.USeedTotalCost.getChildByName("Value").getComponent(Label).string =
-      "0k";
-
-    this.USeedNumber.getChildByName("Value").getComponent(Label).string = "0";
-
-    this.seedNumber = 0;
+      formatNumberShortDynamic(seed.price * this.seedNumber);
   }
 
   increaseEmit() {
@@ -117,18 +124,18 @@ export class BuySeed extends Component {
       this.seedNumber + "";
 
     this.USeedTotalCost.getChildByName("Value").getComponent(Label).string =
-      dialog.targetBuySeedInfo.price * this.seedNumber + "k";
+      formatNumberShortDynamic(dialog.targetBuySeedInfo.price * this.seedNumber);
   }
 
   minimizeEmit() {
-    if (this.seedNumber === 0) return;
+    if (this.seedNumber === 1) return;
     const dialog = Dialog.getInstance();
     this.seedNumber--;
     this.USeedNumber.getChildByName("Value").getComponent(Label).string =
       this.seedNumber + "";
 
     this.USeedTotalCost.getChildByName("Value").getComponent(Label).string =
-      dialog.targetBuySeedInfo.price * this.seedNumber + "k";
+      formatNumberShortDynamic(dialog.targetBuySeedInfo.price * this.seedNumber);
   }
 
   // 购买种子

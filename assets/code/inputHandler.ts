@@ -29,6 +29,12 @@ export class InputHandler extends Component {
 
       debounceTimeout = setTimeout(() => {
         console.log("Debounced Input:", inputText);
+        if(!inputText) {
+          this.onFocusEvent.bind(this.callbackThis)(event, false);
+          return;
+        } else {
+          this.onFocusEvent.bind(this.callbackThis)(event, true);
+        }
         this.callback.bind(this.callbackThis)(inputText); // 在防抖完成后查询后台
       }, 500); // 设置防抖延迟时间（500ms）
     });

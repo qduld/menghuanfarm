@@ -11,6 +11,7 @@ import {
 import { coinList } from "./loadData";
 import { httpRequest } from "./http";
 import { ICoinListItem } from "./interface";
+import { Dialog } from "./dialog";
 
 const { ccclass, property } = _decorator;
 @ccclass("BuyCoins")
@@ -104,6 +105,7 @@ export class BuyCoins extends Component {
 
   // 购买
   async buyCoins(event) {
+    const dialog = Dialog.getInstance();
     try {
       const response = await httpRequest("/api/v1/shop/buy", {
         method: "POST",
@@ -112,7 +114,14 @@ export class BuyCoins extends Component {
         },
       });
       if (response.ok) {
-        sys.openURL(response.data.data.tonkeeper_url);
+        dialog.showDialog(null, "PaymentMethod");
+        if(response.data.data.star_url){
+          dialog.paymentMethodBox.getChildByName("Star").on(Node.EventType.MOUSE_DOWN, ()=> sys.openURL(response.data.data.star_url), this);
+        }
+        if(response.data.data.tonkeeper_url) {
+          dialog.paymentMethodBox.getChildByName("TON").on(Node.EventType.MOUSE_DOWN, ()=> sys.openURL(response.data.data.tonkeeper_url), this);
+        }
+        // sys.openURL(response.data.data.tonkeeper_url);
         // tonhub_url ;
       } else {
         console.error("Request failed with status:", response.status);

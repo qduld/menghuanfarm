@@ -14,7 +14,7 @@ import {
 import { httpRequest } from "./http";
 import { ISeedList } from "./interface";
 // import { seedList } from "./loadData";
-import { formatSeconds } from "./utils";
+import { formatNumberShortDynamic, formatSeconds } from "./utils";
 import { Dialog } from "./dialog";
 import { SeedEffect } from "./seedEffect";
 import { GenBlock } from "./genBlock";
@@ -35,6 +35,9 @@ export class GenBag extends Component {
   UEmptyContent: Node = null;
 
   @property
+  UClickTipsLabel: Node = null;
+
+  @property
   seedSpacingY: number = 20; // 种子Y间距
 
   @property
@@ -52,15 +55,18 @@ export class GenBag extends Component {
     this.USeedList = find("popBox/Canvas/Bag/List");
     this.USeedSection = find("popBox/Canvas/Bag/Section");
     this.UEmptyContent = find("popBox/Canvas/Bag/Empty");
+    this.UClickTipsLabel = find("popBox/Canvas/Bag/Title");
   }
 
   // 生成推荐列表
   createPackageLayout() {
     if (this.seedList?.length === 0 || !this.seedList) {
       this.UEmptyContent.active = true;
+      this.UClickTipsLabel.active = false;
       return;
     }
     this.UEmptyContent.active = false;
+    this.UClickTipsLabel.active = true;
     // 获取预制体的宽度和高度
     const sectionHeight =
       this.USeedSection.getChildByName("Bg").getComponent(UITransform)
@@ -84,6 +90,9 @@ export class GenBag extends Component {
       seedSection.active = true;
       seedSection.setPosition(posX, posY);
 
+      seedSection.getChildByName("Name").getComponent(Label).string =
+        seed.name;
+
       seedSection
         .getChildByName("Fruit")
         .getChildByName("Number")
@@ -93,7 +102,7 @@ export class GenBag extends Component {
       seedSection
         .getChildByName("TimeGain")
         .getChildByName("Label")
-        .getComponent(Label).string = `+${seed.quantity}/block`;
+        .getComponent(Label).string = `+${formatNumberShortDynamic(seed.points)}/block`;
 
       seedSection.getChildByName("Time").getComponent(Label).string =
         formatSeconds(seed.maturity_time);

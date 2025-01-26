@@ -5,17 +5,17 @@
     "module": "ES2015",
     "strict": true,
     "types": [
-      "./temp/declarations/jsb",
       "./temp/declarations/cc.custom-macro",
+      "./temp/declarations/jsb",
       "./temp/declarations/cc",
       "./temp/declarations/cc.env"
     ],
     "paths": {
       "db://internal/*": [
-        "D:\\cocos-dashboard-editors\\Creator\\3.8.4\\resources\\resources\\3d\\engine\\editor\\assets\\*"
+        "/Applications/Cocos/Creator/3.8.4/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/*"
       ],
       "db://assets/*": [
-        "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\*"
+        "/Users/zelofranklin/Desktop/lianlukeji/menghuanfarm/assets/*"
       ]
     },
     "experimentalDecorators": true,

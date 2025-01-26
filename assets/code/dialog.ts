@@ -113,6 +113,7 @@ export class Dialog extends Component {
         this.lockBlockBox.active = true;
         break;
       case "BuySeed":
+        this.overlayMask.setSiblingIndex(3);
         this.buySeedBox.active = true;
         break;
       case "BuyProps":
@@ -130,7 +131,8 @@ export class Dialog extends Component {
       case "QuitCircle":
         this.quitCircleBox.active = true;
         break;
-      case "PaymentMethodBox":
+      case "PaymentMethod":
+        this.overlayMask.setSiblingIndex(9);
         this.paymentMethodBox.active = true;
         break;
     }
@@ -151,6 +153,7 @@ export class Dialog extends Component {
         this.overlayMask.active = false;
         break;
       case "BuySeed":
+        this.overlayMask.setSiblingIndex(1);
         this.buySeedBox.active = false;
         break;
       case "BuyProps":
@@ -173,7 +176,8 @@ export class Dialog extends Component {
         this.quitCircleBox.active = false;
         this.overlayMask.active = false;
         break;
-      case "PaymentMethodBox":
+      case "PaymentMethod":
+        this.overlayMask.setSiblingIndex(1);
         this.paymentMethodBox.active = false;
         this.overlayMask.active = false;
         break;

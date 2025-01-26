@@ -85,6 +85,12 @@ export class circles extends Component {
   UBatchAnother: Node = null;
 
   @property(Node)
+  UCircleTitle: Node = null;
+ 
+  @property(Node)
+  USearchCircleTitle: Node = null;
+
+  @property(Node)
   UCloseSearch: Node = null;
 
   @property(Node)
@@ -110,6 +116,8 @@ export class circles extends Component {
     this.USquadInfo = find("Canvas/Joined/Tips");
     this.UCurrentUser = find("Canvas/Joined/Content/CurrentUser");
     this.UEditButton = find("Canvas/Joined/Options/Edit");
+    this.UCircleTitle = find("Canvas/UnJoined/Content/Title");
+    this.USearchCircleTitle = find("Canvas/UnJoined/Content/SearchTitle");
     this.USearchCircle.getComponent(InputHandler).callback = this.searchCircle;
     this.USearchCircle.getComponent(InputHandler).callbackThis = this;
     this.USearchCircle.getComponent(InputHandler).onFocusEvent =
@@ -379,20 +387,24 @@ export class circles extends Component {
   }
 
   squadDialogConfirm(event) {
-    const criclesName = find(
-      "popBox/Canvas/CreateCircle/Name/EditBox/TEXT_LABEL"
-    ).getComponent(Label).string;
-
-    const criclesNotice = find(
-      "popBox/Canvas/CreateCircle/Notice/EditBox/TEXT_LABEL"
-    ).getComponent(Label).string;
-
     if (this.isUpdateCircle === "true") {
+      const criclesName = find(
+        "popBox/Canvas/CreateCircle/UpdateMode/Name/EditBox/TEXT_LABEL"
+      ).getComponent(Label).string;
+  
+      const criclesNotice = find(
+        "popBox/Canvas/CreateCircle/UpdateMode/Notice/EditBox/TEXT_LABEL"
+      ).getComponent(Label).string;
+
       this.requestUpdateSquadInfo({
         name: criclesName,
         notice: criclesNotice,
       });
     } else {
+      const criclesName = find(
+        "popBox/Canvas/CreateCircle/CreateMode/Name/EditBox/TEXT_LABEL"
+      ).getComponent(Label).string;
+
       this.createSquad(criclesName);
     }
   }
@@ -613,10 +625,15 @@ export class circles extends Component {
     if (this.isSearchMode === true) {
       this.USquadList.removeAllChildren();
       this.UBatchAnother.active = false;
-      // this.UCloseSearch.active = true;
+      this.UCloseSearch.active = true;
+      this.UCircleTitle.active = false;
+      this.USearchCircleTitle.active = true;
+      this.USearchCircleTitle.getComponent(Label).string = `0 search results`
     } else {
+      this.USearchCircleTitle.active = false;
       this.UBatchAnother.active = true;
-      // this.UCloseSearch.active = false;
+      this.UCloseSearch.active = false;
+      this.UCircleTitle.active = true;
       this.searchCircle("");
       this.USearchCircle.getChildByName("EditBox").getComponent(
         EditBox
@@ -628,6 +645,10 @@ export class circles extends Component {
   async searchCircle(keyword: string) {
     if (!keyword) {
       this.currentPage = 0;
+      this.isSearchMode = false;
+      this.UBatchAnother.active = true;
+      this.UCloseSearch.active = false;
+      this.UCircleTitle.active = true;
       this.requestSquadList();
       return;
     }
@@ -641,15 +662,19 @@ export class circles extends Component {
           keyword,
         }
       );
+      let squadListLen = 0;
       if (response.ok) {
         this.squadList = response.data.data.data
           ? response.data.data.data
           : ([] as ISquadList[]);
+        squadListLen = this.squadList.length;
         this.USquadList.removeAllChildren();
+        this.USearchCircleTitle.active = true;
         this.createSquadLayout();
       } else {
         console.error("Request failed with status:", response.status);
       }
+      this.USearchCircleTitle.getComponent(Label).string = `${this.squadList} search results`
     } catch (error) {
       console.error("Error:", error);
     }

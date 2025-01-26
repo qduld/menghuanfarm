@@ -14,7 +14,7 @@ import {
 import { httpRequest } from "./http";
 import { ISeedList } from "./interface";
 import { BuySeedEffect } from "./buySeedEffect";
-import { formatSeconds } from "./utils";
+import { formatNumberShortDynamic, formatSeconds } from "./utils";
 import { GenInfo } from "./genInfo";
 
 const { ccclass, property } = _decorator;
@@ -82,12 +82,18 @@ export class GenShop extends Component {
       //   .getComponent(Label).string = seed.quantity + "";
 
       seedSection
+      .getChildByName("Name").getComponent(Label).string = seed.name;
+
+      seedSection
         .getChildByName("TimeGain")
         .getChildByName("Label")
-        .getComponent(Label).string = `+${seed.points}/block`;
+        .getComponent(Label).string = `+${formatNumberShortDynamic(seed.points)}/block`;
 
       seedSection.getChildByName("Time").getComponent(Label).string =
         formatSeconds(seed.maturity_time);
+
+      seedSection.getChildByName("Button").getChildByName("Label").getComponent(Label).string =
+        formatNumberShortDynamic(seed.price) + "";
 
       let spritePath = "";
       switch (seed.name) {
