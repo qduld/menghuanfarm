@@ -29,7 +29,7 @@ export class InputHandler extends Component {
 
       debounceTimeout = setTimeout(() => {
         console.log("Debounced Input:", inputText);
-        if(!inputText) {
+        if (!inputText) {
           this.onFocusEvent.bind(this.callbackThis)(event, false);
           return;
         } else {
@@ -40,9 +40,9 @@ export class InputHandler extends Component {
     });
 
     // 监听 EditBox 获得焦点的事件
-    this.editBox.node.on("editing-did-began", (event) => {
-      this.onFocusEvent.bind(this.callbackThis)(event, true);
-    });
+    // this.editBox.node.on("editing-did-began", (event) => {
+    //   this.onFocusEvent.bind(this.callbackThis)(event, true);
+    // });
   }
 
   // 编辑框结束输入时的回调

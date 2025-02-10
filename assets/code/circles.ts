@@ -23,6 +23,7 @@ import { Dialog } from "./dialog";
 import { formatNumberShortDynamic, formatTimestampToDate } from "./utils";
 import { ExpandNoticeWithArrow } from "./expandNoticeWithArrow";
 import { InputHandler } from "./inputHandler";
+import { initUtils } from "@telegram-apps/sdk";
 
 const { ccclass, property } = _decorator;
 @ccclass("circles")
@@ -86,7 +87,7 @@ export class circles extends Component {
 
   @property(Node)
   UCircleTitle: Node = null;
- 
+
   @property(Node)
   USearchCircleTitle: Node = null;
 
@@ -391,7 +392,7 @@ export class circles extends Component {
       const criclesName = find(
         "popBox/Canvas/CreateCircle/UpdateMode/Name/EditBox/TEXT_LABEL"
       ).getComponent(Label).string;
-  
+
       const criclesNotice = find(
         "popBox/Canvas/CreateCircle/UpdateMode/Notice/EditBox/TEXT_LABEL"
       ).getComponent(Label).string;
@@ -628,7 +629,7 @@ export class circles extends Component {
       this.UCloseSearch.active = true;
       this.UCircleTitle.active = false;
       this.USearchCircleTitle.active = true;
-      this.USearchCircleTitle.getComponent(Label).string = `0 search results`
+      this.USearchCircleTitle.getComponent(Label).string = `0 search results`;
     } else {
       this.USearchCircleTitle.active = false;
       this.UBatchAnother.active = true;
@@ -674,9 +675,18 @@ export class circles extends Component {
       } else {
         console.error("Request failed with status:", response.status);
       }
-      this.USearchCircleTitle.getComponent(Label).string = `${this.squadList} search results`
+      this.USearchCircleTitle.getComponent(
+        Label
+      ).string = `${this.squadList} search results`;
     } catch (error) {
       console.error("Error:", error);
     }
+  }
+
+  shareGame() {
+    const utils = initUtils();
+
+    const link = `https://t.me/MyBitFarmBot?start=startapp`;
+    utils.shareURL(link, ``);
   }
 }
