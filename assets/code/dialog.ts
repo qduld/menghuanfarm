@@ -47,6 +47,9 @@ export class Dialog extends Component {
   paymentMethodBox: Node = null; // PaymentMethodBox
 
   @property(Node)
+  editNameBox: Node = null; // EditNameBox
+
+  @property(Node)
   overlayMask: Node = null; // overlayMask
 
   @property
@@ -80,6 +83,7 @@ export class Dialog extends Component {
     this.settingBox = find("popBox/Canvas/Setting");
     this.quitCircleBox = find("popBox/Canvas/QuitCircle");
     this.paymentMethodBox = find("popBox/Canvas/PaymentMethod");
+    this.editNameBox = find("popBox/Canvas/EditName");
     this.overlayMask = find("popBox/Canvas/OverlayMask");
 
     this.bagBox ? (this.bagBox.active = false) : "";
@@ -92,6 +96,7 @@ export class Dialog extends Component {
     this.settingBox ? (this.settingBox.active = false) : "";
     this.quitCircleBox ? (this.quitCircleBox.active = false) : "";
     this.paymentMethodBox ? (this.paymentMethodBox.active = false) : "";
+    this.editNameBox ? (this.editNameBox.active = false) : "";
 
     this.overlayMask.active = false;
   }
@@ -134,6 +139,9 @@ export class Dialog extends Component {
       case "PaymentMethod":
         this.overlayMask.setSiblingIndex(9);
         this.paymentMethodBox.active = true;
+        break;
+      case "EditName":
+        this.editNameBox.active = true;
         break;
     }
     this.overlayMask.active = true;
@@ -179,6 +187,10 @@ export class Dialog extends Component {
       case "PaymentMethod":
         this.overlayMask.setSiblingIndex(1);
         this.paymentMethodBox.active = false;
+        this.overlayMask.active = false;
+        break;
+      case "EditName":
+        this.editNameBox.active = false;
         this.overlayMask.active = false;
         break;
     }

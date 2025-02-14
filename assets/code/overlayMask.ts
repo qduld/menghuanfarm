@@ -10,26 +10,17 @@ export class OverlayMask extends Component {
     this.graphics = this.getComponent(Graphics);
     this.drawOverlay();
     // 确保 Mask 节点能阻止事件传播
-    this.node.on(Node.EventType.TOUCH_START, this.onTouchStart, this);
-    this.node.on(Node.EventType.TOUCH_MOVE, this.onTouchMove, this);
-    this.node.on(Node.EventType.TOUCH_END, this.onTouchEnd, this);
-    this.node.on(Node.EventType.TOUCH_CANCEL, this.onTouchCancel, this);
+    this.node.on(Node.EventType.TOUCH_START, this.propagationStopped, this);
+    this.node.on(Node.EventType.TOUCH_MOVE, this.propagationStopped, this);
+    this.node.on(Node.EventType.TOUCH_END, this.propagationStopped, this);
+    this.node.on(Node.EventType.TOUCH_CANCEL, this.propagationStopped, this);
+    this.node.on(Node.EventType.MOUSE_DOWN, this.propagationStopped, this);
+    this.node.on(Node.EventType.MOUSE_ENTER, this.propagationStopped, this);
+    this.node.on(Node.EventType.MOUSE_LEAVE, this.propagationStopped, this);
   }
 
-  onTouchStart(event) {
+  propagationStopped(event) {
     // 通过调用 stopPropagation() 阻止事件穿透
-    event.propagationStopped = true;
-  }
-
-  onTouchMove(event) {
-    event.propagationStopped = true;
-  }
-
-  onTouchEnd(event) {
-    event.propagationStopped = true;
-  }
-
-  onTouchCancel(event) {
     event.propagationStopped = true;
   }
 
