@@ -50,6 +50,9 @@ export class Dialog extends Component {
   editNameBox: Node = null; // EditNameBox
 
   @property(Node)
+  shareLinkBox: Node = null; // ShareLinkBox
+
+  @property(Node)
   overlayMask: Node = null; // overlayMask
 
   @property
@@ -84,6 +87,7 @@ export class Dialog extends Component {
     this.quitCircleBox = find("popBox/Canvas/QuitCircle");
     this.paymentMethodBox = find("popBox/Canvas/PaymentMethod");
     this.editNameBox = find("popBox/Canvas/EditName");
+    this.shareLinkBox = find("popBox/Canvas/ShareLink");
     this.overlayMask = find("popBox/Canvas/OverlayMask");
 
     this.bagBox ? (this.bagBox.active = false) : "";
@@ -97,6 +101,7 @@ export class Dialog extends Component {
     this.quitCircleBox ? (this.quitCircleBox.active = false) : "";
     this.paymentMethodBox ? (this.paymentMethodBox.active = false) : "";
     this.editNameBox ? (this.editNameBox.active = false) : "";
+    this.shareLinkBox ? (this.shareLinkBox.active = false) : "";
 
     this.overlayMask.active = false;
   }
@@ -142,6 +147,9 @@ export class Dialog extends Component {
         break;
       case "EditName":
         this.editNameBox.active = true;
+        break;
+      case "ShareLink":
+        this.shareLinkBox.active = true;
         break;
     }
     this.overlayMask.active = true;
@@ -191,6 +199,10 @@ export class Dialog extends Component {
         break;
       case "EditName":
         this.editNameBox.active = false;
+        this.overlayMask.active = false;
+        break;
+      case "ShareLink":
+        this.shareLinkBox.active = false;
         this.overlayMask.active = false;
         break;
     }
