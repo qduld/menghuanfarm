@@ -124,7 +124,9 @@ export class GenInfo extends Component {
 
     let userInfo = this.friendInfo ? this.friendInfo : globalData.userInfo;
 
-    this.UUserName.getComponent(DynamicLabel).setText(userInfo.tg_username);
+    this.UUserName.getComponent(DynamicLabel).setText(
+      userInfo.nickname ? userInfo.nickname : userInfo.tg_username
+    );
 
     this.Upoints_balance.getComponent(DynamicLabel).setText(
       formatToUSDInteger(userInfo.points_balance) + ""

@@ -99,6 +99,7 @@ export interface IUserInfo {
   tg_first_name: string;
   tg_last_name: string;
   tg_username: string;
+  nickname: string;
   points_balance: number; // 金币数量
   squad_id: number; // 组织ID
   level: number; // 等级
@@ -143,6 +144,7 @@ export interface IMembersList {
   tg_first_name: string;
   tg_last_name: string;
   tg_username: string;
+  nickname: string;
   /**
    * 该用户今日收取数量=今日偷取数量+今日收取数量
    */

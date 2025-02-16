@@ -191,7 +191,9 @@ export class circles extends Component {
     this.UCurrentUser.getChildByName("Middle")
       .getChildByName("Name")
       .getChildByName("Label")
-      .getComponent(Label).string = this.membersList[memberIndex].tg_username;
+      .getComponent(Label).string = this.membersList[memberIndex].nickname
+      ? this.membersList[memberIndex].nickname
+      : this.membersList[memberIndex].tg_username;
 
     this.UCurrentUser.getChildByName("Middle")
       .getChildByName("Money")
@@ -248,7 +250,9 @@ export class circles extends Component {
         .getChildByName("Middle")
         .getChildByName("Name")
         .getChildByName("Label")
-        .getComponent(Label).string = member.tg_username + "";
+        .getComponent(Label).string = member.nickname
+        ? member.nickname
+        : member.tg_username + "";
       membersSection
         .getChildByName("Middle")
         .getChildByName("Money")
@@ -661,6 +665,8 @@ export class circles extends Component {
         },
         {
           keyword,
+          current: this.currentPage + 1,
+          page_size: 5,
         }
       );
       let squadListLen = 0;
@@ -677,7 +683,7 @@ export class circles extends Component {
       }
       this.USearchCircleTitle.getComponent(
         Label
-      ).string = `${this.squadList} search results`;
+      ).string = `${squadListLen} search results`;
     } catch (error) {
       console.error("Error:", error);
     }

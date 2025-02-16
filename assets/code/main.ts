@@ -63,4 +63,21 @@ export class main extends Component {
       console.error("Error:", error);
     }
   }
+
+  // 一键收割
+  async requestOneClickHarvest() {
+    const genInfo = GenInfo.getInstance();
+    try {
+      const response = await httpRequest("/api/v1/farm/farmland/harvest_all", {
+        method: "POST",
+      });
+      if (response.ok) {
+        genInfo.init();
+      } else {
+        console.error("Request failed with status:", response.status);
+      }
+    } catch (error) {
+      console.error("Error:", error);
+    }
+  }
 }

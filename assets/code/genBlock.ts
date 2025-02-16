@@ -239,13 +239,15 @@ export class GenBlock extends Component {
         method: "POST",
       });
       if (response.ok) {
+        if (response.data.code === 2003) {
+          globalData.setMessageLabel(i18n.goldNotEnough);
+          dialog.closeDialog(null, "LockBlock");
+          return;
+        }
         this.requestFarmLand();
         dialog.closeDialog(null, "LockBlock");
         AudioMgr.inst.playOneShot("sounds/unlock", 1);
       } else {
-        if (response.data.code === 2003) {
-          globalData.setMessageLabel(i18n.goldNotEnough);
-        }
         console.error("Request failed with status:", response.status);
       }
     } catch (error) {
