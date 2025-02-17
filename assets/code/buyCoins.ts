@@ -114,40 +114,16 @@ export class BuyCoins extends Component {
         },
       });
       if (response.ok) {
-        dialog.showDialog(null, "PaymentMethod");
         debugger;
+        dialog.showDialog(null, "PaymentMethod");
         if (response.data.data.star_url) {
-          dialog.paymentMethodBox
-            .getChildByName("Star")
-            .on(
-              Node.EventType.MOUSE_DOWN,
-              () => this.openUrl(response.data.data.star_url),
-              this
-            );
-
-          dialog.paymentMethodBox
-            .getChildByName("Star")
-            .on(
-              Node.EventType.TOUCH_END,
-              () => this.openUrl(response.data.data.star_url),
-              this
-            );
+          this.addClickEvent("Star", response.data.data.star_url);
         }
         if (response.data.data.tonkeeper_url) {
-          dialog.paymentMethodBox
-            .getChildByName("TON")
-            .on(
-              Node.EventType.MOUSE_DOWN,
-              () => this.openUrl(response.data.data.tonkeeper_url),
-              this
-            );
-          dialog.paymentMethodBox
-            .getChildByName("TON")
-            .on(
-              Node.EventType.TOUCH_END,
-              () => this.openUrl(response.data.data.tonkeeper_url),
-              this
-            );
+          this.addClickEvent("TONKeeper", response.data.data.tonkeeper_url);
+        }
+        if (response.data.data.tonhub_url) {
+          this.addClickEvent("TONHub", response.data.data.tonhub_url);
         }
         // sys.openURL(response.data.data.tonkeeper_url);
         // tonhub_url ;
@@ -159,8 +135,13 @@ export class BuyCoins extends Component {
     }
   }
 
-  // 打开URL
-  openUrl(url) {
-    sys.openURL(url);
+  addClickEvent(name, url) {
+    const dialog = Dialog.getInstance();
+    dialog.paymentMethodBox
+      .getChildByName(name)
+      .on(Node.EventType.MOUSE_DOWN, () => sys.openURL(url), this);
+    dialog.paymentMethodBox
+      .getChildByName(name)
+      .on(Node.EventType.TOUCH_END, () => sys.openURL(url), this);
   }
 }
