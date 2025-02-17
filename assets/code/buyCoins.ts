@@ -115,11 +115,39 @@ export class BuyCoins extends Component {
       });
       if (response.ok) {
         dialog.showDialog(null, "PaymentMethod");
-        if(response.data.data.star_url){
-          dialog.paymentMethodBox.getChildByName("Star").on(Node.EventType.MOUSE_DOWN, ()=> sys.openURL(response.data.data.star_url), this);
+        debugger;
+        if (response.data.data.star_url) {
+          dialog.paymentMethodBox
+            .getChildByName("Star")
+            .on(
+              Node.EventType.MOUSE_DOWN,
+              () => this.openUrl(response.data.data.star_url),
+              this
+            );
+
+          dialog.paymentMethodBox
+            .getChildByName("Star")
+            .on(
+              Node.EventType.TOUCH_END,
+              () => this.openUrl(response.data.data.star_url),
+              this
+            );
         }
-        if(response.data.data.tonkeeper_url) {
-          dialog.paymentMethodBox.getChildByName("TON").on(Node.EventType.MOUSE_DOWN, ()=> sys.openURL(response.data.data.tonkeeper_url), this);
+        if (response.data.data.tonkeeper_url) {
+          dialog.paymentMethodBox
+            .getChildByName("TON")
+            .on(
+              Node.EventType.MOUSE_DOWN,
+              () => this.openUrl(response.data.data.tonkeeper_url),
+              this
+            );
+          dialog.paymentMethodBox
+            .getChildByName("TON")
+            .on(
+              Node.EventType.TOUCH_END,
+              () => this.openUrl(response.data.data.tonkeeper_url),
+              this
+            );
         }
         // sys.openURL(response.data.data.tonkeeper_url);
         // tonhub_url ;
@@ -129,5 +157,10 @@ export class BuyCoins extends Component {
     } catch (error) {
       console.error("Error:", error);
     }
+  }
+
+  // 打开URL
+  openUrl(url) {
+    sys.openURL(url);
   }
 }
