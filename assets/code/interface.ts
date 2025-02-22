@@ -19,6 +19,7 @@ export interface IFarmland {
   status: number;
   seed: ISeed;
   plantId: string;
+  unlocked: number;
   farm_status: number; // 0-未种植,1-种植中, 如果是种植中的话看seed.ttl_seconds
 }
 
@@ -50,7 +51,7 @@ export interface ISeedList {
   sort: number;
   price: number;
   status: number;
-  unLocked: number;
+  unlocked: number;
   quantity: number;
   userSeedId: number;
 }

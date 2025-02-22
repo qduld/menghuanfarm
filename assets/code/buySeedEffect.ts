@@ -2,6 +2,7 @@ import { _decorator, Component, Node } from "cc";
 import { IFarmland } from "./interface";
 import { Dialog } from "./dialog";
 import { BuySeed } from "./buySeed";
+import { GlobalData } from "./globalData";
 const { ccclass } = _decorator;
 
 @ccclass("BuySeedEffect")
@@ -27,9 +28,16 @@ export class BuySeedEffect extends Component {
   }
 
   emitEvent() {
+    const globalData = GlobalData.getInstance();
     const dialog = Dialog.getInstance();
     const buySeed = BuySeed.getInstance();
     if (dialog) {
+      if (this.targetData.unlocked === 0) {
+        globalData.setTipsLabel(
+          `Unlock seed on ${this.targetData.id}th land unlock`
+        );
+        return;
+      }
       dialog.showDialog(null, "BuySeed");
       dialog.setTargetBuySeed(this.targetData);
       buySeed.updateBuySeedInfo(this.targetData);

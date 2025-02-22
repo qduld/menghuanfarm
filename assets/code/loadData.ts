@@ -70,6 +70,7 @@ export const i18n = {
   buySuccess: "Purchase successful!",
   modifyNicknameSuccess: "Modify nickname successful!",
   nicknameEmpty: "The nickname cannot be empty.",
+  notUnlocked: "Not Unlocked",
 };
 
 export const errTips = {
@@ -564,5 +565,126 @@ export const coinList = [
     price: 98,
     discount: 70,
     points: 1400000,
+  },
+];
+
+export const noticeListData = [
+  {
+    id: 1,
+    type: 0,
+    title: "Update Prompt",
+    content: "New features are live! Come on …",
+  },
+  {
+    id: 2,
+    type: 0,
+    title: "Update Prompt",
+    content: "New features are live! Come on …",
+  },
+  {
+    id: 3,
+    type: 0,
+    title: "Update Prompt",
+    content: "New features are live! Come on …",
+  },
+  {
+    id: 4,
+    type: 0,
+    title: "Update Prompt",
+    content: "New features are live! Come on …",
+  },
+  {
+    id: 5,
+    type: 0,
+    title: "Update Prompt",
+    content: "New features are live! Come on …",
+  },
+  {
+    id: 6,
+    type: 0,
+    title: "Update Prompt",
+    content: "New features are live! Come on …",
+  },
+  {
+    id: 7,
+    type: 0,
+    title: "Update Prompt",
+    content: "New features are live! Come on …",
+  },
+];
+
+export const taskList = [
+  {
+    id: 1,
+    title: "Follow the official X",
+    total: "1",
+    current: "1",
+    gold: "500",
+  },
+  {
+    id: 2,
+    title: "First purchase of seeds",
+    total: "1",
+    current: "1",
+    gold: "500",
+  },
+  {
+    id: 3,
+    title: "Complete 10 harvests",
+    total: "10",
+    current: "4",
+    gold: "500",
+  },
+  {
+    id: 4,
+    title: "Join the official community",
+    total: "1",
+    current: "0",
+    gold: "500",
+  },
+  {
+    id: 5,
+    title: "Complete the first steal",
+    total: "1",
+    current: "1",
+    gold: "500",
+  },
+];
+
+export const dayList = [
+  {
+    id: 1,
+    title: "Day 1",
+    number: "50",
+  },
+  {
+    id: 2,
+    title: "Day 2",
+    number: "50",
+  },
+  {
+    id: 3,
+    title: "Day 3",
+    number: "50",
+  },
+  {
+    id: 4,
+    title: "Day 4",
+    number: "50",
+  },
+  {
+    id: 5,
+    title: "Day 5",
+    number: "50",
+  },
+  {
+    id: 6,
+    title: "Day 6",
+    number: "50",
+  },
+  {
+    id: 7,
+    title: "Day 7",
+    number: "50",
   },
 ];

@@ -53,6 +53,15 @@ export class Dialog extends Component {
   shareLinkBox: Node = null; // ShareLinkBox
 
   @property(Node)
+  noticeListBox: Node = null; // noticeListBox
+
+  @property(Node)
+  noticeDetailBox: Node = null; // noticeDetailBox
+
+  @property(Node)
+  seedUnlockBox: Node = null; // seedUnlockBox
+
+  @property(Node)
   overlayMask: Node = null; // overlayMask
 
   @property
@@ -88,6 +97,9 @@ export class Dialog extends Component {
     this.paymentMethodBox = find("popBox/Canvas/PaymentMethod");
     this.editNameBox = find("popBox/Canvas/EditName");
     this.shareLinkBox = find("popBox/Canvas/ShareLink");
+    this.noticeListBox = find("popBox/Canvas/NoticeList");
+    this.noticeDetailBox = find("popBox/Canvas/NoticeDetail");
+    this.seedUnlockBox = find("popBox/Canvas/SeedUnlock");
     this.overlayMask = find("popBox/Canvas/OverlayMask");
 
     this.bagBox ? (this.bagBox.active = false) : "";
@@ -102,6 +114,9 @@ export class Dialog extends Component {
     this.paymentMethodBox ? (this.paymentMethodBox.active = false) : "";
     this.editNameBox ? (this.editNameBox.active = false) : "";
     this.shareLinkBox ? (this.shareLinkBox.active = false) : "";
+    this.noticeListBox ? (this.noticeListBox.active = false) : "";
+    this.noticeDetailBox ? (this.noticeDetailBox.active = false) : "";
+    this.seedUnlockBox ? (this.seedUnlockBox.active = false) : "";
 
     this.overlayMask.active = false;
   }
@@ -150,6 +165,17 @@ export class Dialog extends Component {
         break;
       case "ShareLink":
         this.shareLinkBox.active = true;
+        break;
+      case "NoticeList":
+        this.noticeListBox.active = true;
+        break;
+      case "NoticeDetail":
+        this.noticeDetailBox.active = true;
+        this.overlayMask.setSiblingIndex(11);
+        break;
+      case "SeedUnlock":
+        this.seedUnlockBox.active = true;
+        this.overlayMask.setSiblingIndex(12);
         break;
     }
     this.overlayMask.active = true;
@@ -203,6 +229,19 @@ export class Dialog extends Component {
         break;
       case "ShareLink":
         this.shareLinkBox.active = false;
+        this.overlayMask.active = false;
+        break;
+      case "NoticeList":
+        this.noticeListBox.active = false;
+        this.overlayMask.active = false;
+        break;
+      case "NoticeDetail":
+        this.overlayMask.setSiblingIndex(1);
+        this.noticeDetailBox.active = false;
+        break;
+      case "SeedUnlock":
+        this.overlayMask.setSiblingIndex(1);
+        this.seedUnlockBox.active = false;
         this.overlayMask.active = false;
         break;
     }

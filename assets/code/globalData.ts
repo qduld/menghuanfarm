@@ -23,6 +23,9 @@ export class GlobalData extends Component {
   UMessage: Node = null; //信息
 
   @property
+  UTipsFind: Node = null;
+
+  @property
   bgmIsOn: boolean = true; //bgm正在播放
 
   @property
@@ -89,6 +92,15 @@ export class GlobalData extends Component {
 
     setTimeout(() => {
       UMessageFind.active = false;
+    }, timer * 1000);
+  }
+  setTipsLabel(tips, timer = 2) {
+    const UTipsFind = find("popBox/Canvas/Tips");
+    UTipsFind.active = true;
+    UTipsFind.getChildByName("Label").getComponent(Label).string = tips;
+
+    setTimeout(() => {
+      UTipsFind.active = false;
     }, timer * 1000);
   }
 }

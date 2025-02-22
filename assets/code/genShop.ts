@@ -6,16 +6,19 @@ import {
   instantiate,
   resources,
   Sprite,
-  SpriteFrame,
   UITransform,
   Label,
   SpriteAtlas,
+  Color,
 } from "cc";
 import { httpRequest } from "./http";
 import { ISeedList } from "./interface";
 import { BuySeedEffect } from "./buySeedEffect";
 import { formatNumberShortDynamic, formatSeconds } from "./utils";
-import { GenInfo } from "./genInfo";
+import { DrawRoundedRect } from "./drawRoundedRect";
+import { i18n } from "./loadData";
+import { Dialog } from "./dialog";
+import { GlobalData } from "./globalData";
 
 const { ccclass, property } = _decorator;
 @ccclass("GenShop")
@@ -81,19 +84,22 @@ export class GenShop extends Component {
       //   .getChildByName("Label")
       //   .getComponent(Label).string = seed.quantity + "";
 
-      seedSection
-      .getChildByName("Name").getComponent(Label).string = seed.name;
+      seedSection.getChildByName("Name").getComponent(Label).string = seed.name;
 
       seedSection
         .getChildByName("TimeGain")
         .getChildByName("Label")
-        .getComponent(Label).string = `+${formatNumberShortDynamic(seed.points)}/block`;
+        .getComponent(Label).string = `+${formatNumberShortDynamic(
+        seed.points
+      )}/block`;
 
       seedSection.getChildByName("Time").getComponent(Label).string =
         formatSeconds(seed.maturity_time);
 
-      seedSection.getChildByName("Button").getChildByName("Label").getComponent(Label).string =
-        formatNumberShortDynamic(seed.price) + "";
+      seedSection
+        .getChildByName("Button")
+        .getChildByName("Label")
+        .getComponent(Label).string = formatNumberShortDynamic(seed.price) + "";
 
       let spritePath = "";
       switch (seed.name) {
@@ -121,6 +127,33 @@ export class GenShop extends Component {
           .getChildByName("Picture")
           .getComponent(Sprite).spriteFrame = atlas.getSpriteFrame(spritePath);
       });
+
+      const button = seedSection.getChildByName("Button");
+
+      if (seed.unlocked === 0) {
+        button
+          .getChildByName("Border")
+          .getComponent(DrawRoundedRect).fillColor = new Color(212, 213, 215);
+        button
+          .getChildByName("Border")
+          .getComponent(DrawRoundedRect)
+          .reRender();
+        seedSection
+          .getChildByName("Button")
+          .getChildByName("Label")
+          .getComponent(Label).string = i18n.notUnlocked;
+
+        button.getChildByName("Icon").active = false;
+      } else {
+        button
+          .getChildByName("Border")
+          .getComponent(DrawRoundedRect).fillColor = new Color(255, 205, 92);
+        button
+          .getChildByName("Border")
+          .getComponent(DrawRoundedRect)
+          .reRender();
+        button.getChildByName("Icon").active = true;
+      }
 
       const buySeedEffect = seedSection.addComponent(BuySeedEffect);
       buySeedEffect.setTargetNode(seedSection.getChildByName("Button"), seed);

@@ -37,6 +37,7 @@ export class main extends Component {
     this.userLogin();
     director.preloadScene("circles");
     director.preloadScene("harvest");
+    director.preloadScene("task");
   }
   async init() {
     const genInfo = GenInfo.getInstance();

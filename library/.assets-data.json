@@ -1560,6 +1560,8 @@
         "9a9138f8-b72b-4664-ab71-e499d6f407f2@a76a8",
         "9a9138f8-b72b-4664-ab71-e499d6f407f2@06c6b",
         "9a9138f8-b72b-4664-ab71-e499d6f407f2@6e4b0",
+        "9a9138f8-b72b-4664-ab71-e499d6f407f2@a517c",
+        "9a9138f8-b72b-4664-ab71-e499d6f407f2@08a1b",
         "9a9138f8-b72b-4664-ab71-e499d6f407f2@e99bd",
         "9a9138f8-b72b-4664-ab71-e499d6f407f2@08c08",
         "9a9138f8-b72b-4664-ab71-e499d6f407f2@19b40",
@@ -1584,6 +1586,8 @@
         "626b90bc-794e-43d7-ac5b-56fbfa4fb850",
         "0831ce0b-9a84-4083-8de4-9c8a840ad2a2",
         "96bc1fd7-c4c8-4ed8-9616-3a97c60eac09",
+        "fe6aff45-c7e2-40dc-b1c0-70319a14dca4",
+        "b18bcc7b-0d6f-4633-93b6-8d91b5b673b1",
         "4410ce2b-e8f7-4124-a341-869f8f6bf0ab",
         "ad534c45-313f-494a-9f0a-10a9c7f79cb4",
         "1c5b2c5c-a657-4333-8263-69bcb5598009"
@@ -4477,12 +4481,16 @@
         "9a9138f8-b72b-4664-ab71-e499d6f407f2@3f71c",
         "9a9138f8-b72b-4664-ab71-e499d6f407f2@5e926",
         "9a9138f8-b72b-4664-ab71-e499d6f407f2@54b5f",
+        "9a9138f8-b72b-4664-ab71-e499d6f407f2@d72c1",
+        "9a9138f8-b72b-4664-ab71-e499d6f407f2@ef389",
+        "9a9138f8-b72b-4664-ab71-e499d6f407f2@45d35",
         "9a9138f8-b72b-4664-ab71-e499d6f407f2@58a7a",
         "9a9138f8-b72b-4664-ab71-e499d6f407f2@2cd18",
         "9a9138f8-b72b-4664-ab71-e499d6f407f2@492af",
         "9a9138f8-b72b-4664-ab71-e499d6f407f2@74436",
         "9a9138f8-b72b-4664-ab71-e499d6f407f2@40abe",
         "9a9138f8-b72b-4664-ab71-e499d6f407f2@57f66",
+        "9a9138f8-b72b-4664-ab71-e499d6f407f2@c0622",
         "9a9138f8-b72b-4664-ab71-e499d6f407f2@8e7c5",
         "9a9138f8-b72b-4664-ab71-e499d6f407f2@ec5a5",
         "9a9138f8-b72b-4664-ab71-e499d6f407f2@4c2d0",
@@ -4513,7 +4521,9 @@
         "9a9138f8-b72b-4664-ab71-e499d6f407f2@cf26c",
         "9a9138f8-b72b-4664-ab71-e499d6f407f2@f8735",
         "9a9138f8-b72b-4664-ab71-e499d6f407f2@d3a5d",
+        "9a9138f8-b72b-4664-ab71-e499d6f407f2@a517c",
         "9a9138f8-b72b-4664-ab71-e499d6f407f2@4430f",
+        "9a9138f8-b72b-4664-ab71-e499d6f407f2@01672",
         "9a9138f8-b72b-4664-ab71-e499d6f407f2@dfe04",
         "9a9138f8-b72b-4664-ab71-e499d6f407f2@2f2a4",
         "9a9138f8-b72b-4664-ab71-e499d6f407f2@ccb6a",
@@ -5388,6 +5398,182 @@
   "fe6aff45-c7e2-40dc-b1c0-70319a14dca4": {
     "url": "db://assets/code/noticeList.ts",
     "value": {},
+    "versionCode": 1
+  },
+  "a60d9a0e-ec4b-4812-b331-cb41497fa119": {
+    "url": "db://assets/code/lightRayEffect.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "b18bcc7b-0d6f-4633-93b6-8d91b5b673b1": {
+    "url": "db://assets/code/lightRayEffect .ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "9510162c-8bf6-4613-90f7-1b0f9ca2e55a": {
+    "url": "db://assets/code/task.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "6ca93497-c1bc-436b-9a0f-fa74baf54cdc": {
+    "url": "db://assets/scene/task.scene",
+    "value": {
+      "depends": [
+        "6ca93497-c1bc-436b-9a0f-fa74baf54cdc",
+        "9a9138f8-b72b-4664-ab71-e499d6f407f2@45d35",
+        "9a9138f8-b72b-4664-ab71-e499d6f407f2",
+        "a23bf510-4f33-449d-ba46-53f0d71d2a99",
+        "afc47931-f066-46b0-90be-9fe61f213428@f9941",
+        "ffb88a8f-af62-48f4-8f1d-3cb606443a43@f9941",
+        "9a9138f8-b72b-4664-ab71-e499d6f407f2@ec5a5",
+        "9a9138f8-b72b-4664-ab71-e499d6f407f2@01672",
+        "9a9138f8-b72b-4664-ab71-e499d6f407f2@10c3c",
+        "9a9138f8-b72b-4664-ab71-e499d6f407f2@122b1",
+        "9a9138f8-b72b-4664-ab71-e499d6f407f2@4c2d0",
+        "9a9138f8-b72b-4664-ab71-e499d6f407f2@4430f",
+        "9a9138f8-b72b-4664-ab71-e499d6f407f2@648d4"
+      ],
+      "dependScripts": [
+        "a002a77f-06b6-43ca-9e1b-b424b6a8e4d7",
+        "6effeed6-8269-4638-b32b-d658aebdab0a",
+        "8923add2-ee9f-4efe-af57-25b76f65548a",
+        "0baed69f-ff00-471f-9ad6-ec22838f8e5f",
+        "90faea67-71ce-48f4-aadc-d60fc5054170",
+        "9510162c-8bf6-4613-90f7-1b0f9ca2e55a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "9a9138f8-b72b-4664-ab71-e499d6f407f2@d72c1": {
+    "url": "db://assets/resources/iconList.plist@d72c1",
+    "value": {
+      "depends": [
+        "745eecca-7459-4cd7-9ec9-52f39de57f2c@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "9a9138f8-b72b-4664-ab71-e499d6f407f2@ef389": {
+    "url": "db://assets/resources/iconList.plist@ef389",
+    "value": {
+      "depends": [
+        "745eecca-7459-4cd7-9ec9-52f39de57f2c@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "9a9138f8-b72b-4664-ab71-e499d6f407f2@45d35": {
+    "url": "db://assets/resources/iconList.plist@45d35",
+    "value": {
+      "depends": [
+        "745eecca-7459-4cd7-9ec9-52f39de57f2c@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "9a9138f8-b72b-4664-ab71-e499d6f407f2@c0622": {
+    "url": "db://assets/resources/iconList.plist@c0622",
+    "value": {
+      "depends": [
+        "745eecca-7459-4cd7-9ec9-52f39de57f2c@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "9a9138f8-b72b-4664-ab71-e499d6f407f2@01672": {
+    "url": "db://assets/resources/iconList.plist@01672",
+    "value": {
+      "depends": [
+        "745eecca-7459-4cd7-9ec9-52f39de57f2c@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "6db240d4-8ddc-4852-928d-f743d29b3065": {
+    "url": "db://assets/code/customProgressBar.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "58446bee-944f-4abf-9b02-6e54825aae0a": {
+    "url": "db://assets/code/roundRect",
+    "value": {},
+    "versionCode": 1
+  },
+  "f35a7b2f-368a-40de-bb33-824bf92f4d12": {
+    "url": "db://assets/code/roundedRectMask.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "5721f35c-405f-4ffb-a9f4-0b70b6a2a142": {
+    "url": "db://assets/effect",
+    "value": {},
+    "versionCode": 1
+  },
+  "adba4ee1-145d-4ff4-8356-58ab094bea74": {
+    "url": "db://assets/effect/rounded-corner.effect.effect",
+    "value": {},
+    "versionCode": 1
+  },
+  "bf48b414-1d40-4316-a0ab-518bd1e27643": {
+    "url": "db://assets/effect/rounded-corner1.effect.effect",
+    "value": {},
+    "versionCode": 1
+  },
+  "f28625d9-e619-4b95-940c-2b555d941a3b": {
+    "url": "db://assets/material",
+    "value": {},
+    "versionCode": 1
+  },
+  "32ae3b97-ddf2-44f4-897d-ac413200de1d": {
+    "url": "db://assets/material/rounded-corner.mtl",
+    "value": {
+      "depends": [
+        "bf48b414-1d40-4316-a0ab-518bd1e27643"
+      ]
+    },
+    "versionCode": 1
+  },
+  "0a3218a4-d565-48e1-b7ba-94e44b32463d": {
+    "url": "db://assets/material/material.mtl",
+    "value": {},
+    "versionCode": 1
+  },
+  "f31f13f9-0c9f-4ebb-a925-6e4105244cb1": {
+    "url": "db://assets/effect/rounded-corner.effect",
+    "value": {},
+    "versionCode": 1
+  },
+  "3cb79e85-9edc-4535-8b62-ae9a7a216551": {
+    "url": "db://assets/effect/surface-effect.effect",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "76563deb-2126-4dd1-ad9c-93819770af6a": {
+    "url": "db://assets/effect/effect.effect",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "8923add2-ee9f-4efe-af57-25b76f65548a": {
+    "url": "db://assets/code/roundedRect.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "0baed69f-ff00-471f-9ad6-ec22838f8e5f": {
+    "url": "db://assets/code/progressbar.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "9a9138f8-b72b-4664-ab71-e499d6f407f2@a517c": {
+    "url": "db://assets/resources/iconList.plist@a517c",
+    "value": {
+      "depends": [
+        "745eecca-7459-4cd7-9ec9-52f39de57f2c@6c48a"
+      ]
+    },
     "versionCode": 1
   }
 }

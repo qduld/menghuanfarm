@@ -242,11 +242,29 @@ export class GenBlock extends Component {
         if (response.data.code === 2003) {
           globalData.setMessageLabel(i18n.goldNotEnough);
           dialog.closeDialog(null, "LockBlock");
+          // seed_info;
+          //           {
+          //   "id": 5,
+          //   "name": "西瓜",
+          //   "type": 1,
+          //   "level": 5,
+          //   "points": 18000,
+          //   "maturity_time": 0,
+          //   "plant_at": 0,
+          //   "sort": 0,
+          //   "price": 0,
+          //   "status": 0,
+          //   "ttl_seconds": 0
+          // }
           return;
         }
         this.requestFarmLand();
         dialog.closeDialog(null, "LockBlock");
         AudioMgr.inst.playOneShot("sounds/unlock", 1);
+        dialog.showDialog(null, "SeedUnlock");
+        setTimeout(() => {
+          dialog.closeDialog(null, "SeedUnlock");
+        }, 2000);
       } else {
         console.error("Request failed with status:", response.status);
       }
