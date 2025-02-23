@@ -151,6 +151,9 @@ export class GenPlant extends Component {
       const genBlock = GenBlock.getInstance();
       genBlock.updateFarmLand(data.id); // 重新请求farmlandList
     }
+
+    block.getChildByName("Plant")["plantLevel"] = this.plantLevel;
+
     resources.load("iconList", SpriteAtlas, (err, atlas) => {
       if (err) {
         console.error("Failed to load sprite:", err);

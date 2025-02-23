@@ -21,6 +21,7 @@ import { Dialog } from "./dialog";
 import { GlobalData } from "./globalData";
 import { i18n, errTips } from "./loadData";
 import { AudioMgr } from "./audioManager";
+import { HoverEffect } from "./hoverEffect";
 const { ccclass, property } = _decorator;
 
 @ccclass("GenBlock")
@@ -312,5 +313,21 @@ export class GenBlock extends Component {
 
     genInfo.requestUserInfo();
     genInfo.requestUAgg();
+  }
+
+  onekeyHarvest() {
+    this.blockContainer.children.forEach((blockItem, index) => {
+      if (
+        blockItem.getChildByName("Plant") &&
+        blockItem.getChildByName("Plant")["plantLevel"] === 3
+      ) {
+        const hoverEffect = blockItem
+          .getChildByName("Plant")
+          .getComponent(HoverEffect);
+
+        hoverEffect.receiveHandAnimation();
+        hoverEffect.goldMoveAnimation();
+      }
+    });
   }
 }

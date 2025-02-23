@@ -7,6 +7,7 @@ import {
   Label,
   director,
   view,
+  instantiate,
 } from "cc";
 import { GenBlock } from "./genBlock";
 import { GenInfo } from "./genInfo";
@@ -68,12 +69,16 @@ export class main extends Component {
   // 一键收割
   async requestOneClickHarvest() {
     const genInfo = GenInfo.getInstance();
+    const genBlock = GenBlock.getInstance();
+
     try {
       const response = await httpRequest("/api/v1/farm/farmland/harvest_all", {
         method: "POST",
       });
       if (response.ok) {
         genInfo.init();
+        genBlock.onekeyHarvest();
+        genBlock.init();
       } else {
         console.error("Request failed with status:", response.status);
       }
