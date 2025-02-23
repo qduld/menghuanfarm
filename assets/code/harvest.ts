@@ -9,7 +9,7 @@ import {
 } from "cc";
 import { harvestList, i18n } from "./loadData";
 import { httpRequest } from "./http";
-import { IHarvestListItem } from "./interface";
+import { IHarvestListItem, IUserInfo } from "./interface";
 import { Dialog } from "./dialog";
 import { GlobalData } from "./globalData";
 import { DynamicLabel } from "./dynamicLabel";
@@ -153,6 +153,24 @@ export class harvest extends Component {
     }
   }
 
+  // 获取用户信息
+  async requestUserInfo() {
+    try {
+      const response = await httpRequest("/api/v1/farm/u/userInfo", {
+        method: "GET",
+      });
+      if (response.ok) {
+        const globalData = GlobalData.getInstance();
+        globalData.userInfo = response.data.data as IUserInfo;
+        this.updateUserInfo();
+      } else {
+        console.error("Request failed with status:", response.status);
+      }
+    } catch (error) {
+      console.error("Error:", error);
+    }
+  }
+
   // 膨购买膨胀卡
   async requestBuyHarvestCard() {
     const globalData = GlobalData.getInstance();
@@ -165,10 +183,7 @@ export class harvest extends Component {
         },
       });
       if (response.ok) {
-        const genInfo = GenInfo.getInstance();
-        await genInfo.requestUserInfo();
-
-        this.updateUserInfo();
+        this.requestUserInfo();
         globalData.setMessageLabel(i18n.buySuccess);
         dialog.closeDialog(null, "BuyProps");
       } else {

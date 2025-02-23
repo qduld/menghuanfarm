@@ -68,10 +68,10 @@ export class GenBlock extends Component {
     } else {
       this.requestFarmLand();
     }
-    this.blockContainer = find("MainCanvas/Block/List");
-    this.lockBlock = find("MainCanvas/Block/Lock");
-    this.unlockBlock = find("MainCanvas/Block/Unlock");
-    this.sprite = find("MainCanvas/Block/Lock/Sprite");
+    this.blockContainer = find("Canvas/Block/List");
+    this.lockBlock = find("Canvas/Block/Lock");
+    this.unlockBlock = find("Canvas/Block/Unlock");
+    this.sprite = find("Canvas/Block/Lock/Sprite");
   }
 
   createblockLayout() {
@@ -242,20 +242,6 @@ export class GenBlock extends Component {
         if (response.data.code === 2003) {
           globalData.setMessageLabel(i18n.goldNotEnough);
           dialog.closeDialog(null, "LockBlock");
-          // seed_info;
-          //           {
-          //   "id": 5,
-          //   "name": "西瓜",
-          //   "type": 1,
-          //   "level": 5,
-          //   "points": 18000,
-          //   "maturity_time": 0,
-          //   "plant_at": 0,
-          //   "sort": 0,
-          //   "price": 0,
-          //   "status": 0,
-          //   "ttl_seconds": 0
-          // }
           return;
         }
         this.requestFarmLand();
@@ -285,7 +271,7 @@ export class GenBlock extends Component {
       );
       if (response.ok) {
         this.blockList = response.data.data as IFarmland[];
-        this.blockContainer = find("MainCanvas/Block/List");
+        this.blockContainer = find("Canvas/Block/List");
         this.blockContainer.removeAllChildren();
         this.createblockLayout(); // 在加载时调用布局创建方法
       } else {

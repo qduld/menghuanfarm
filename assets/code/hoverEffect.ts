@@ -61,8 +61,12 @@ export class HoverEffect extends Component {
     if (globalData.isStolen) return;
     if (this.targetLevel === 3) {
       this.targetNode.getChildByName("Receivehand").active = true;
+      if (globalData.userInfo.expansion_card) {
+        this.targetNode.getChildByName("Expand").active = true;
+      }
     } else {
       this.targetNode.getChildByName("Receivehand").active = false;
+      this.targetNode.getChildByName("Expand").active = false;
     }
   }
 
@@ -71,6 +75,7 @@ export class HoverEffect extends Component {
     if (globalData.isStolen) return;
     if (!this.animating) {
       this.targetNode.getChildByName("Receivehand").active = false;
+      this.targetNode.getChildByName("Expand").active = false;
     }
   }
 
@@ -105,12 +110,13 @@ export class HoverEffect extends Component {
       .start();
     setTimeout(() => {
       this.targetNode.getChildByName("Receivehand").active = false;
+      this.targetNode.getChildByName("Expand").active = false;
       this.animating = false;
     }, 1600);
   }
 
   goldMoveAnimation() {
-    const goldEnd = find("MainCanvas/TopContent/Person/Money/Gold");
+    const goldEnd = find("Canvas/TopContent/Person/Money/Gold");
     const gold = instantiate(goldEnd);
     gold.active = true;
     gold.setSiblingIndex(this.node.children.length - 1); // 移动到最上层
@@ -171,7 +177,7 @@ export class HoverEffect extends Component {
   }
 
   goldStolenMoveAnimation() {
-    const goldEnd = find("MainCanvas/TopContent/Person/Money/Gold");
+    const goldEnd = find("Canvas/TopContent/Person/Money/Gold");
     const gold = instantiate(goldEnd);
     gold.active = true;
     gold.setSiblingIndex(this.node.children.length - 1); // 移动到最上层
@@ -236,6 +242,9 @@ export class HoverEffect extends Component {
     const dialog = Dialog.getInstance();
     if (this.targetLevel === 3) {
       this.targetNode.getChildByName("Receivehand").active = true;
+      if (globalData.userInfo.expansion_card) {
+        this.targetNode.getChildByName("Expand").active = true;
+      }
       this.receiveHandAnimation();
       this.playVoice();
       if (globalData.isStolen) {
@@ -259,6 +268,7 @@ export class HoverEffect extends Component {
     if (globalData.isStolen) return;
     if (!this.animating) {
       this.targetNode.getChildByName("Receivehand").active = false;
+      this.targetNode.getChildByName("Expand").active = false;
     }
   }
 

@@ -40,6 +40,7 @@ export class GenPlant extends Component {
       block.getChildByName("Countdown").active = false;
       block.getChildByName("Plant").getChildByName("Receivehand").active =
         false;
+      block.getChildByName("Plant").getChildByName("Expand").active = false;
     } else {
       const currentTime = new Date().getTime();
       const maturity_time = data.seed.plant_at + data.seed.maturity_time * 1000;
@@ -134,11 +135,17 @@ export class GenPlant extends Component {
       data.steal_available === 1
     ) {
       block.getChildByName("Plant").getChildByName("Receivehand").active = true;
+      if (globalData.userInfo.expansion_card) {
+        block.getChildByName("Plant").getChildByName("Expand").active = true;
+      }
     }
 
     if (globalData.isStolen && data.steal_available === 0) {
       block.getChildByName("Plant").getChildByName("Receivehand").active =
         false;
+      if (globalData.userInfo.expansion_card) {
+        block.getChildByName("Plant").getChildByName("Expand").active = true;
+      }
     }
     if (!this.plantSpritePath) {
       const genBlock = GenBlock.getInstance();

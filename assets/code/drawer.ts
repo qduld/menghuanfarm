@@ -27,7 +27,7 @@ export class Drawer extends Component {
   openPosition: Vec3 = new Vec3(0, 0, 0); // 打开位置
 
   toggleDrawer() {
-    const drawerBtn = find("MainCanvas/TopContent/Income/Drawer");
+    const drawerBtn = find("Canvas/TopContent/Income/Drawer");
     this.isOpen = !this.isOpen;
     const targetPosition = this.isOpen
       ? this.closedPosition

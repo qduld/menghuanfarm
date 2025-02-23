@@ -14,7 +14,7 @@ export class ShowTelegramInfo extends Component {
     //   null,
     //   2
     // ); // 格式化显示对象内容
-    // this.label = find("MainCanvas/TelgramInfo");
+    // this.label = find("Canvas/TelgramInfo");
     // // 将 `window.Telegram` 的内容显示到 Label 上
     // this.label.getComponent(Label).string = `Telegram Info:\n${telegramInfo}`;
   }

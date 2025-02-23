@@ -36,7 +36,7 @@ export class GlobalData extends Component {
   }
 
   onLoad() {
-    this.UMessage = find("MainCanvas/Message");
+    this.UMessage = find("Canvas/Message");
     this.UMessage.active = false;
   }
 
@@ -48,16 +48,14 @@ export class GlobalData extends Component {
   }
 
   isStolenUISwitch() {
-    const income = find("MainCanvas/TopContent/Income");
-    const slider = find("MainCanvas/TopContent/Slider");
-    const moneyPlusCircle = find(
-      "MainCanvas/TopContent/Person/Money/PlusCircle"
-    );
+    const income = find("Canvas/TopContent/Income");
+    const slider = find("Canvas/TopContent/Slider");
+    const moneyPlusCircle = find("Canvas/TopContent/Person/Money/PlusCircle");
     const addtionPlusCircle = find(
-      "MainCanvas/TopContent/Person/Addition/PlusCircle"
+      "Canvas/TopContent/Person/Addition/PlusCircle"
     );
-    const footer = find("MainCanvas/Footer");
-    const footerStolen = find("MainCanvas/FooterStolen");
+    const footer = find("Canvas/Footer");
+    const footerStolen = find("Canvas/FooterStolen");
 
     income.active = false;
     slider.active = false;
@@ -67,16 +65,14 @@ export class GlobalData extends Component {
     footerStolen.active = true;
   }
   isNotStolenUISwitch() {
-    const income = find("MainCanvas/TopContent/Income");
-    const slider = find("MainCanvas/TopContent/Slider");
-    const moneyPlusCircle = find(
-      "MainCanvas/TopContent/Person/Money/PlusCircle"
-    );
+    const income = find("Canvas/TopContent/Income");
+    const slider = find("Canvas/TopContent/Slider");
+    const moneyPlusCircle = find("Canvas/TopContent/Person/Money/PlusCircle");
     const addtionPlusCircle = find(
-      "MainCanvas/TopContent/Person/Addition/PlusCircle"
+      "Canvas/TopContent/Person/Addition/PlusCircle"
     );
-    const footer = find("MainCanvas/Footer");
-    const footerStolen = find("MainCanvas/FooterStolen");
+    const footer = find("Canvas/Footer");
+    const footerStolen = find("Canvas/FooterStolen");
 
     income.active = true;
     slider.active = true;
@@ -86,7 +82,7 @@ export class GlobalData extends Component {
     footerStolen.active = false;
   }
   setMessageLabel(message, timer = 2) {
-    const UMessageFind = find("MainCanvas/Message");
+    const UMessageFind = find("Canvas/Message");
     UMessageFind.active = true;
     UMessageFind.getChildByName("Label").getComponent(Label).string = message;
 

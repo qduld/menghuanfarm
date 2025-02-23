@@ -94,6 +94,17 @@ export interface ILogin {
   last_login_at: number;
 }
 
+export interface IExpand {
+  created_at: string;
+  expansion_id: number;
+  id: number;
+  name: string;
+  ratio: number;
+  total_count: number;
+  used_count: number;
+  user_id: string;
+}
+
 // /farm/u/userInfo 用户信息
 export interface IUserInfo {
   id: string;
@@ -106,6 +117,7 @@ export interface IUserInfo {
   level: number; // 等级
   radio: number; // 加成
   avatar: string;
+  expansion_card?: IExpand;
 }
 
 // /farm/u/agg 我今日的收益统计

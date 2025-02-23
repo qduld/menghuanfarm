@@ -1,5 +1,6 @@
 import { _decorator, Component, Label, UITransform, Node } from "cc";
 import { DrawRoundedRect } from "./drawRoundedRect";
+import { boolean } from "@telegram-apps/sdk";
 
 const { ccclass, property } = _decorator;
 
@@ -13,6 +14,12 @@ export class DynamicLabel extends Component {
 
   @property(Node)
   prefixIcon: Node | null = null; // 前置图标节点
+
+  @property(Node)
+  expand: Node | null = null; // 膨胀
+
+  @property(Boolean)
+  hasExpand: boolean = false; // 膨胀
 
   @property(Node)
   suffixIcon: Node | null = null; // 后置图标节点
@@ -48,6 +55,10 @@ export class DynamicLabel extends Component {
         }
       }
 
+      if (this.hasExpand) {
+        totalWidth += this.expand.getComponent(UITransform).width;
+      }
+
       // 计算背景宽度
       this.roundedRect.rectWidth = totalWidth + this.padding * 2;
 
@@ -71,6 +82,15 @@ export class DynamicLabel extends Component {
         0
       );
       startX += labelWidth + this.iconSpacing;
+
+      if (this.hasExpand) {
+        this.expand.setPosition(
+          startX + this.padding + this.roundedRect.borderWidth + 25,
+          this.expand.position.y
+        );
+        startX +=
+          this.expand.getComponent(UITransform).width + this.iconSpacing;
+      }
 
       // 设置后置图标位置
       if (this.suffixIcon) {

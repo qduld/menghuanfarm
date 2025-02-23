@@ -30,6 +30,9 @@ export class GenInfo extends Component {
   UAddition: Node = null; // 加成
 
   @property
+  UExpand: Node = null; // 膨胀
+
+  @property
   UHarvest: Node = null; // 我今日累计收取数量
 
   @property
@@ -56,16 +59,15 @@ export class GenInfo extends Component {
   onLoad() {
     GenInfo._instance = this;
 
-    this.UUserName = find("MainCanvas/TopContent/Person/Name");
-    this.Upoints_balance = find("MainCanvas/TopContent/Person/Money");
-    this.UAddition = find("MainCanvas/TopContent/Person/Addition");
+    this.UUserName = find("Canvas/TopContent/Person/Name");
+    this.Upoints_balance = find("Canvas/TopContent/Person/Money");
+    this.UAddition = find("Canvas/TopContent/Person/Addition");
+    this.UExpand = find("Canvas/TopContent/Person/Addition/Expand");
 
-    this.UHarvest = find("MainCanvas/TopContent/Income/Mask/Section/Harvest");
-    this.UStolenFrom = find(
-      "MainCanvas/TopContent/Income/Mask/Section/StolenFrom"
-    );
-    this.UBeStolen = find("MainCanvas/TopContent/Income/Mask/Section/BeStolen");
-    this.UAvatar = find("MainCanvas/TopContent/Avatar/RoundBox");
+    this.UHarvest = find("Canvas/TopContent/Income/Mask/Section/Harvest");
+    this.UStolenFrom = find("Canvas/TopContent/Income/Mask/Section/StolenFrom");
+    this.UBeStolen = find("Canvas/TopContent/Income/Mask/Section/BeStolen");
+    this.UAvatar = find("Canvas/TopContent/Avatar/RoundBox");
   }
 
   init() {
@@ -131,6 +133,19 @@ export class GenInfo extends Component {
     this.Upoints_balance.getComponent(DynamicLabel).setText(
       formatToUSDInteger(userInfo.points_balance) + ""
     );
+
+    if (userInfo.expansion_card) {
+      this.UAddition.getComponent(DynamicLabel).hasExpand = true;
+      this.UExpand.active = true;
+      this.UExpand.getChildByName("Used").getComponent(Label).string =
+        userInfo.expansion_card.used_count + "";
+      this.UExpand.getChildByName("Suffix").getComponent(
+        Label
+      ).string = `/${userInfo.expansion_card.total_count})`;
+    } else {
+      this.UAddition.getComponent(DynamicLabel).hasExpand = false;
+      this.UExpand.active = false;
+    }
 
     this.scheduleOnce(() => {
       this.UAddition.setPosition(
