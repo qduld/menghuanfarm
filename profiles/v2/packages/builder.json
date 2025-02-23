@@ -27,6 +27,10 @@
       {
         "url": "db://assets/scene/load.scene",
         "uuid": "cf4dc34b-8c49-4fc8-b329-7c0faa4a4a85"
+      },
+      {
+        "url": "db://assets/scene/task.scene",
+        "uuid": "6ca93497-c1bc-436b-9a0f-fa74baf54cdc"
       }
     ],
     "startScene": "cf4dc34b-8c49-4fc8-b329-7c0faa4a4a85",
@@ -43,8 +47,8 @@
         "progress": 1,
         "state": "success",
         "stage": "build",
-        "message": "2025-2-23 18:20:19 build success in 42 s!",
-        "detailMessage": "// ---- build task web-mobile：onBeforeCopyBuildTemplate ----\r",
+        "message": "2025-2-23 20:17:29 build success in 28 s!",
+        "detailMessage": "// ---- build task cocos-service：onAfterBuild ----\r",
         "options": {
           "name": "PlantStore",
           "platform": "web-mobile",
@@ -79,6 +83,10 @@
             {
               "url": "db://assets/scene/load.scene",
               "uuid": "cf4dc34b-8c49-4fc8-b329-7c0faa4a4a85"
+            },
+            {
+              "url": "db://assets/scene/task.scene",
+              "uuid": "6ca93497-c1bc-436b-9a0f-fa74baf54cdc"
             }
           ],
           "windows": [],
@@ -113,7 +121,7 @@
           "replaceSplashScreen": true,
           "logDest": "project://temp/builder/log/web-mobile2022-11-9 11-49.log"
         },
-        "time": "2025-2-23 18:19:37",
+        "time": "2025-2-23 20:17:00",
         "dirty": false
       },
       "1668068042719": {
