@@ -114,7 +114,6 @@ export class BuyCoins extends Component {
         },
       });
       if (response.ok) {
-        debugger;
         dialog.showDialog(null, "PaymentMethod");
         if (response.data.data.star_url) {
           this.addClickEvent("Star", response.data.data.star_url);

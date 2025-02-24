@@ -379,7 +379,6 @@ export class circles extends Component {
     this.isUpdateCircle = flag;
 
     const dialog = Dialog.getInstance();
-
     if (flag === "false") {
       dialog.createCircleBox.getChildByName("UpdateMode").active = false;
       dialog.createCircleBox.getChildByName("CreateMode").active = true;
