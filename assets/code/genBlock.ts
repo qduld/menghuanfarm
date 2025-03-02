@@ -63,7 +63,7 @@ export class GenBlock extends Component {
     GenBlock._instance = this;
   }
 
-  init() {
+  async init() {
     if (GlobalData.getInstance().isStolen) {
       this.requestFriendFarmLand();
     } else {
@@ -275,6 +275,7 @@ export class GenBlock extends Component {
         this.blockContainer = find("Canvas/Block/List");
         this.blockContainer.removeAllChildren();
         this.createblockLayout(); // 在加载时调用布局创建方法
+        debugger;
       } else {
         console.error("Request failed with status:", response.status);
       }

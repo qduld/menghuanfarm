@@ -18,6 +18,7 @@ import { formatNumberShortDynamic, formatSeconds } from "./utils";
 import { Dialog } from "./dialog";
 import { SeedEffect } from "./seedEffect";
 import { GenBlock } from "./genBlock";
+import { LoadingUI } from "./loadingUI";
 
 const { ccclass, property } = _decorator;
 @ccclass("GenBag")
@@ -30,6 +31,9 @@ export class GenBag extends Component {
 
   @property
   USeedSection: Node = null; // 种子Section
+
+  @property
+  UTitle: Node = null;
 
   @property
   UEmptyContent: Node = null;
@@ -49,13 +53,19 @@ export class GenBag extends Component {
     return GenBag._instance;
   }
 
-  protected onLoad(): void {
+  protected async onLoad() {
     GenBag._instance = this;
-    this.requestPackageList();
+
+    const loadingUI = this.node.getComponent(LoadingUI);
+    loadingUI.show();
+
     this.USeedList = find("popBox/Canvas/Bag/List");
     this.USeedSection = find("popBox/Canvas/Bag/Section");
     this.UEmptyContent = find("popBox/Canvas/Bag/Empty");
     this.UClickTipsLabel = find("popBox/Canvas/Bag/Title");
+
+    await this.requestPackageList();
+    loadingUI.hide();
   }
 
   // 生成推荐列表
@@ -63,10 +73,12 @@ export class GenBag extends Component {
     if (this.seedList?.length === 0 || !this.seedList) {
       this.UEmptyContent.active = true;
       this.UClickTipsLabel.active = false;
+      this.UTitle.active = false;
       return;
     }
     this.UEmptyContent.active = false;
     this.UClickTipsLabel.active = true;
+    this.UTitle.active = true;
     // 获取预制体的宽度和高度
     const sectionHeight =
       this.USeedSection.getChildByName("Bg").getComponent(UITransform)
@@ -90,8 +102,7 @@ export class GenBag extends Component {
       seedSection.active = true;
       seedSection.setPosition(posX, posY);
 
-      seedSection.getChildByName("Name").getComponent(Label).string =
-        seed.name;
+      seedSection.getChildByName("Name").getComponent(Label).string = seed.name;
 
       seedSection
         .getChildByName("Fruit")
@@ -102,7 +113,9 @@ export class GenBag extends Component {
       seedSection
         .getChildByName("TimeGain")
         .getChildByName("Label")
-        .getComponent(Label).string = `+${formatNumberShortDynamic(seed.points)}/block`;
+        .getComponent(Label).string = `+${formatNumberShortDynamic(
+        seed.points
+      )}/block`;
 
       seedSection.getChildByName("Time").getComponent(Label).string =
         formatSeconds(seed.maturity_time);

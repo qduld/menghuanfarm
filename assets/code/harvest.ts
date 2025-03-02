@@ -15,6 +15,7 @@ import { GlobalData } from "./globalData";
 import { DynamicLabel } from "./dynamicLabel";
 import { formatToUSDInteger } from "./utils";
 import { GenInfo } from "./genInfo";
+import { LoadingUI } from "./loadingUI";
 
 const { ccclass, property } = _decorator;
 @ccclass("harvest")
@@ -45,14 +46,19 @@ export class harvest extends Component {
 
   private currentCard: IHarvestListItem = null;
 
-  protected onLoad(): void {
-    this.requestHarvestList();
+  protected async onLoad() {
+    const loadingUI = this.node.getComponent(LoadingUI);
+    loadingUI.show();
+
     this.harvestSpacingY = 40;
     this.UHarvestList = find("Canvas/Content/List");
     this.UHarvestSection = find("Canvas/Content/Section");
     this.UMoney = find("Canvas/Top/Money");
     this.UAddition = find("Canvas/Top/Addition");
     this.updateUserInfo();
+
+    await this.requestHarvestList();
+    loadingUI.hide();
   }
 
   // 生成推荐列表
@@ -110,12 +116,21 @@ export class harvest extends Component {
         this.UMoney.position.y
       );
       this.UAddition.getComponent(DynamicLabel).setText(
-        `+${globalData.userInfo.radio}%`
+        `+${
+          globalData.userInfo.expansion_card?.ratio
+            ? globalData.userInfo.expansion_card?.ratio
+            : globalData.userInfo.radio
+        }%`
       );
     }, 0);
   }
 
   setCurrentSelectHarvestCard(event) {
+    const globalData = GlobalData.getInstance();
+    if (globalData.userInfo.expansion_card) {
+      globalData.setMessageLabel(i18n.expansionCardAvailable);
+      return;
+    }
     const dialog = Dialog.getInstance();
 
     this.currentCard = event.currentTarget.cardInfo;
@@ -134,6 +149,26 @@ export class harvest extends Component {
       .getChildByName("Button")
       .getChildByName("Label")
       .getComponent(Label).string = this.currentCard.points + "";
+  }
+
+  setBuySucceededShow() {
+    const dialog = Dialog.getInstance();
+
+    dialog.showDialog(null, "BuySucceeded");
+
+    dialog.buySucceededBox
+      .getChildByName("Card")
+      .getChildByName("Name")
+      .getComponent(Label).string = this.currentCard.name;
+
+    dialog.buySucceededBox
+      .getChildByName("Button")
+      .getChildByName("Label")
+      .getComponent(Label).string = `+ ${this.currentCard.ratio}%`;
+
+    setTimeout(() => {
+      dialog.closeDialog(null, "BuySucceeded");
+    }, 3000);
   }
 
   // 膨胀列表
@@ -184,8 +219,9 @@ export class harvest extends Component {
       });
       if (response.ok) {
         this.requestUserInfo();
-        globalData.setMessageLabel(i18n.buySuccess);
+        // globalData.setMessageLabel(i18n.buySuccess);
         dialog.closeDialog(null, "BuyProps");
+        this.setBuySucceededShow();
       } else {
         console.error("Request failed with status:", response.status);
       }

@@ -20,10 +20,15 @@ import { squadList, i18n, squadSearchList } from "./loadData";
 import { GlobalData } from "./globalData";
 import { GenInfo } from "./genInfo";
 import { Dialog } from "./dialog";
-import { formatNumberShortDynamic, formatTimestampToDate } from "./utils";
+import {
+  formatNumberShortDynamic,
+  formatTimestampToDate,
+  generateDynamicShareLink,
+} from "./utils";
 import { ExpandNoticeWithArrow } from "./expandNoticeWithArrow";
 import { InputHandler } from "./inputHandler";
 import { initUtils } from "@telegram-apps/sdk";
+import { LoadingUI } from "./loadingUI";
 
 const { ccclass, property } = _decorator;
 @ccclass("circles")
@@ -97,12 +102,19 @@ export class circles extends Component {
   @property(Node)
   USquadScrollView: Node = null;
 
+  @property
+  shareLink: string = null;
+
   private isUpdateCircle: string = "false";
   private currentPage: number = 0;
   private hasMore: boolean = false;
   private isSearchMode: boolean = false;
 
-  protected onLoad(): void {
+  protected async onLoad() {
+    const globalData = GlobalData.getInstance();
+    const loadingUI = this.node.getComponent(LoadingUI);
+    loadingUI.show();
+
     this.USquad = find("Canvas/UnJoined");
     this.UMembers = find("Canvas/Joined");
     this.USquadList = find("Canvas/UnJoined/Content/ScrollView/view/content");
@@ -123,7 +135,16 @@ export class circles extends Component {
     this.USearchCircle.getComponent(InputHandler).callbackThis = this;
     this.USearchCircle.getComponent(InputHandler).onFocusEvent =
       this.switchSearchAndPatch;
-    this.checkSquadList();
+    await this.checkSquadList();
+
+    loadingUI.hide();
+
+    globalData.shareLink = generateDynamicShareLink(
+      "MyBitFarm  Sow Now,Reap Tokens.",
+      `Welcome to join my team to steal vegetables together!`,
+      "https://franklinzelo.duckdns.org:8989/bot_description_picture.png",
+      "circle"
+    );
   }
 
   updateScrollViewHeight(sectionNum) {
@@ -319,19 +340,19 @@ export class circles extends Component {
   }
 
   // 判断是否加入了组织
-  checkSquadList() {
+  async checkSquadList() {
     const globalData = GlobalData.getInstance();
 
     this.UMembersList.removeAllChildren();
     if (globalData.userInfo.squad_id === null) {
       this.UMembers.active = false;
       this.USquad.active = true;
-      this.requestSquadList();
+      await this.requestSquadList();
     } else {
       this.UMembers.active = true;
       this.USquad.active = false;
-      this.requestMembersList();
-      this.requestSquadInfo();
+      await this.requestMembersList();
+      await this.requestSquadInfo();
     }
   }
 
@@ -690,8 +711,8 @@ export class circles extends Component {
 
   shareGame() {
     const utils = initUtils();
+    const globalData = GlobalData.getInstance();
 
-    const link = `https://t.me/MyBitFarmBot?start=startapp`;
-    utils.shareURL(link, ``);
+    utils.shareURL(globalData.shareLink, ``);
   }
 }

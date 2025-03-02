@@ -16,15 +16,27 @@ import { AudioControl } from "./audioControl";
 import { httpRequest } from "./http";
 import { GlobalData } from "./globalData";
 import { AudioMgr } from "./audioManager";
+import { LoadingUI } from "./loadingUI";
 
 const { ccclass, property } = _decorator;
-let userAvata: Node;
 //0 橘子香蕉西红柿幼苗，1 红富士苹果幼苗,2 紫金冠茄幼苗,3 红森胡萝卜幼苗
 @ccclass("main")
 export class main extends Component {
   public static token: string | null = null;
   @property(Node)
   genBlock: GenBlock = new GenBlock(); // block实例
+
+  @property(Node)
+  topContent: Node = null;
+
+  @property(Node)
+  block: Node = null;
+
+  @property(Node)
+  footer: Node = null;
+
+  @property(Node)
+  tools: Node = null;
 
   protected onLoad(): void {
     const globalData = GlobalData.getInstance();
@@ -36,6 +48,14 @@ export class main extends Component {
       AudioMgr.inst.play("sounds/bgm", 1);
     }
     this.userLogin();
+
+    this.topContent.active = false;
+    this.footer.active = false;
+    this.tools.active = false;
+
+    const loadingUI = this.node.getComponent(LoadingUI);
+    loadingUI.show();
+
     director.preloadScene("circles");
     director.preloadScene("harvest");
     director.preloadScene("task");
@@ -44,8 +64,14 @@ export class main extends Component {
     const genInfo = GenInfo.getInstance();
     const genBlock = GenBlock.getInstance();
 
-    genInfo.init();
-    genBlock.init();
+    await Promise.all([genInfo.init(), genBlock.init()]);
+
+    this.topContent.active = true;
+    this.footer.active = true;
+    this.tools.active = true;
+
+    const loadingUI = this.node.getComponent(LoadingUI);
+    loadingUI.hide();
   }
 
   async userLogin() {

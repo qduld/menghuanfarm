@@ -70,12 +70,21 @@ export class GenInfo extends Component {
     this.UAvatar = find("Canvas/TopContent/Avatar/RoundBox");
   }
 
-  init() {
+  async init() {
     if (GlobalData.getInstance().isStolen) {
       return;
     }
-    this.requestUAgg();
-    this.requestUserInfo();
+    await this.requestUAgg();
+    await this.requestUserInfo();
+
+    this.UUserName.active = true;
+    this.Upoints_balance.active = true;
+    this.UAddition.active = true;
+    this.UExpand.active = true;
+    this.UHarvest.active = true;
+    this.UStolenFrom.active = true;
+    this.UBeStolen.active = true;
+    this.UAvatar.active = true;
   }
 
   async loadAvatarFromUrl(photoUrl: string) {
@@ -138,7 +147,9 @@ export class GenInfo extends Component {
       this.UAddition.getComponent(DynamicLabel).hasExpand = true;
       this.UExpand.active = true;
       this.UExpand.getChildByName("Used").getComponent(Label).string =
-        userInfo.expansion_card.used_count + "";
+        userInfo.expansion_card.total_count -
+        userInfo.expansion_card.used_count +
+        "";
       this.UExpand.getChildByName("Suffix").getComponent(
         Label
       ).string = `/${userInfo.expansion_card.total_count})`;
@@ -155,7 +166,13 @@ export class GenInfo extends Component {
           20,
         this.Upoints_balance.position.y
       );
-      this.UAddition.getComponent(DynamicLabel).setText(`+${userInfo.radio}%`);
+      this.UAddition.getComponent(DynamicLabel).setText(
+        `+${
+          userInfo.expansion_card?.ratio
+            ? userInfo.expansion_card?.ratio
+            : userInfo.radio
+        }%`
+      );
     }, 0);
   }
 

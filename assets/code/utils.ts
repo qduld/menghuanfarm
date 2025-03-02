@@ -153,3 +153,18 @@ export function formatNumberShortDynamic(amount: number): string {
     units[unitIndex]
   );
 }
+
+export function generateDynamicShareLink(
+  title,
+  description,
+  image,
+  targetScene
+): string {
+  const baseUrl = "https://franklinzelo.duckdns.org:8989/share";
+  const queryParams = `?title=${encodeURIComponent(
+    title
+  )}&description=${encodeURIComponent(description)}&image=${encodeURIComponent(
+    image
+  )}&target=${encodeURIComponent(targetScene)}`;
+  return baseUrl + queryParams;
+}

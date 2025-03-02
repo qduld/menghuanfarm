@@ -7,11 +7,13 @@ import {
   resources,
   AudioClip,
   AudioSource,
+  Label,
 } from "cc";
 import { GenBag } from "./genBag";
 import { GenShop } from "./genShop";
 import { IFarmland, ISeed } from "./interface";
 import { AudioMgr } from "./audioManager";
+import { GlobalData } from "./globalData";
 
 const { ccclass, property } = _decorator;
 @ccclass("Dialog")
@@ -62,6 +64,9 @@ export class Dialog extends Component {
   seedUnlockBox: Node = null; // seedUnlockBox
 
   @property(Node)
+  buySucceededBox: Node = null; // buySucceededBox
+
+  @property(Node)
   overlayMask: Node = null; // overlayMask
 
   @property
@@ -100,6 +105,7 @@ export class Dialog extends Component {
     this.noticeListBox = find("popBox/Canvas/NoticeList");
     this.noticeDetailBox = find("popBox/Canvas/NoticeDetail");
     this.seedUnlockBox = find("popBox/Canvas/SeedUnlock");
+    this.buySucceededBox = find("popBox/Canvas/BuySucceeded");
     this.overlayMask = find("popBox/Canvas/OverlayMask");
 
     this.bagBox ? (this.bagBox.active = false) : "";
@@ -116,6 +122,7 @@ export class Dialog extends Component {
     this.shareLinkBox ? (this.shareLinkBox.active = false) : "";
     this.noticeListBox ? (this.noticeListBox.active = false) : "";
     this.noticeDetailBox ? (this.noticeDetailBox.active = false) : "";
+    this.buySucceededBox ? (this.buySucceededBox.active = false) : "";
     this.seedUnlockBox ? (this.seedUnlockBox.active = false) : "";
 
     this.overlayMask.active = false;
@@ -176,6 +183,10 @@ export class Dialog extends Component {
       case "SeedUnlock":
         this.seedUnlockBox.active = true;
         this.overlayMask.setSiblingIndex(12);
+        break;
+      case "BuySucceeded":
+        this.buySucceededBox.active = true;
+        this.overlayMask.setSiblingIndex(2);
         break;
     }
     this.overlayMask.active = true;
@@ -242,6 +253,11 @@ export class Dialog extends Component {
       case "SeedUnlock":
         this.overlayMask.setSiblingIndex(1);
         this.seedUnlockBox.active = false;
+        this.overlayMask.active = false;
+        break;
+      case "BuySucceeded":
+        this.overlayMask.setSiblingIndex(1);
+        this.buySucceededBox.active = false;
         this.overlayMask.active = false;
         break;
     }

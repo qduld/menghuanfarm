@@ -1,6 +1,7 @@
 // GlobalData.ts
-import { _decorator, Component, find, Label, Node } from "cc";
+import { _decorator, Component, find, Label, Node, UITransform } from "cc";
 import { IUserInfo } from "./interface";
+import { DrawRoundedRect } from "./drawRoundedRect";
 const { ccclass, property } = _decorator;
 
 @ccclass("GlobalData")
@@ -30,6 +31,9 @@ export class GlobalData extends Component {
 
   @property
   soundIsEnable: boolean = true; //SFX正在播放
+
+  @property
+  shareLink: string = null; //分享链接
 
   private constructor() {
     super();
@@ -84,7 +88,17 @@ export class GlobalData extends Component {
   setMessageLabel(message, timer = 2) {
     const UMessageFind = find("Canvas/Message");
     UMessageFind.active = true;
-    UMessageFind.getChildByName("Label").getComponent(Label).string = message;
+
+    const label = UMessageFind.getChildByName("Label").getComponent(Label);
+    label.string = message;
+
+    this.scheduleOnce(() => {
+      const bgBorder =
+        UMessageFind.getChildByName("BgBorder").getComponent(DrawRoundedRect);
+      bgBorder.rectHeight = label.getComponent(UITransform).height + 10;
+
+      bgBorder.reRender();
+    }, 0);
 
     setTimeout(() => {
       UMessageFind.active = false;

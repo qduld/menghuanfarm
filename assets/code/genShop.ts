@@ -19,6 +19,7 @@ import { DrawRoundedRect } from "./drawRoundedRect";
 import { i18n } from "./loadData";
 import { Dialog } from "./dialog";
 import { GlobalData } from "./globalData";
+import { LoadingUI } from "./loadingUI";
 
 const { ccclass, property } = _decorator;
 @ccclass("GenShop")
@@ -44,13 +45,19 @@ export class GenShop extends Component {
     return GenShop._instance;
   }
 
-  protected onLoad(): void {
+  protected async onLoad() {
     GenShop._instance = this;
-    this.requestShopList();
+
+    const loadingUI = this.node.getComponent(LoadingUI);
+    loadingUI.show();
+
     this.USeedList = find("popBox/Canvas/Shop/ScrollView/view/content");
     this.USeedSection = find(
       "popBox/Canvas/Shop/ScrollView/view/content/Section"
     );
+
+    await this.requestShopList();
+    loadingUI.hide();
   }
 
   // 生成推荐列表
