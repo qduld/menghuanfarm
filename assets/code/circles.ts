@@ -139,12 +139,8 @@ export class circles extends Component {
 
     loadingUI.hide();
 
-    globalData.shareLink = generateDynamicShareLink(
-      "MyBitFarm  Sow Now,Reap Tokens.",
-      `Welcome to join my team to steal vegetables together!`,
-      "https://franklinzelo.duckdns.org:8989/bot_description_picture.png",
-      "circle"
-    );
+    globalData.shareLink =
+      "https://franklinzelo.duckdns.org:8989/node/share?scene=circle";
   }
 
   updateScrollViewHeight(sectionNum) {
