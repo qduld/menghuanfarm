@@ -21,7 +21,7 @@ export interface HttpResponse {
 
 let token = "";
 
-export const proxyUrl = "https://franklinzelo.duckdns.org:8989/node/proxy";
+export const proxyUrl = "https://franklinzelo.duckdns.org:8989/proxy";
 // export const proxyUrl = "http://localhost:8989/proxy";
 // 服务器默认ip和地址
 const defaultServer = "https://bf.tomocloud.com";

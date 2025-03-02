@@ -33,9 +33,6 @@ export class GenBag extends Component {
   USeedSection: Node = null; // 种子Section
 
   @property
-  UTitle: Node = null;
-
-  @property
   UEmptyContent: Node = null;
 
   @property
@@ -73,12 +70,10 @@ export class GenBag extends Component {
     if (this.seedList?.length === 0 || !this.seedList) {
       this.UEmptyContent.active = true;
       this.UClickTipsLabel.active = false;
-      this.UTitle.active = false;
       return;
     }
     this.UEmptyContent.active = false;
     this.UClickTipsLabel.active = true;
-    this.UTitle.active = true;
     // 获取预制体的宽度和高度
     const sectionHeight =
       this.USeedSection.getChildByName("Bg").getComponent(UITransform)
