@@ -20,6 +20,7 @@ export interface IFarmland {
   seed: ISeed;
   plantId: string;
   unlocked: number;
+  farmland_price: number;
   farm_status: number; // 0-未种植,1-种植中, 如果是种植中的话看seed.ttl_seconds
 }
 

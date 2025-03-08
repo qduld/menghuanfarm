@@ -11,6 +11,7 @@ import {
   AudioClip,
   AudioSource,
   Vec3,
+  Label,
 } from "cc";
 import { blockList } from "./loadData";
 import { IFarmland } from "./interface";
@@ -138,11 +139,32 @@ export class GenBlock extends Component {
   }
 
   onBlockClick(event: EventTouch, block, blockData) {
+    const globalData = GlobalData.getInstance();
     const dialog = Dialog.getInstance();
     if (dialog) {
       if (blockData.status === 0) {
         dialog.showDialog(event, "LockBlock");
         dialog.setTargetBlock(block, blockData);
+
+        // 找到当前将会解锁的土地
+        const unLockBlock = this.blockList.find(
+          (item) => item.farmland_price > 0
+        );
+
+        dialog.lockBlockBox
+          .getChildByName("Money")
+          .getChildByName("Content")
+          .getComponent(Label).string = unLockBlock.farmland_price + "";
+
+        if (globalData.userInfo.points_balance > unLockBlock.farmland_price) {
+          dialog.lockBlockBox.getChildByName("GoldShort").active = true;
+          dialog.lockBlockBox.getChildByName("GainCoins").active = true;
+          dialog.lockBlockBox.getChildByName("Button").active = false;
+        } else {
+          dialog.lockBlockBox.getChildByName("GoldShort").active = false;
+          dialog.lockBlockBox.getChildByName("GainCoins").active = false;
+          dialog.lockBlockBox.getChildByName("Button").active = true;
+        }
       }
     }
   }
@@ -275,7 +297,6 @@ export class GenBlock extends Component {
         this.blockContainer = find("Canvas/Block/List");
         this.blockContainer.removeAllChildren();
         this.createblockLayout(); // 在加载时调用布局创建方法
-        debugger;
       } else {
         console.error("Request failed with status:", response.status);
       }

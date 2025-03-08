@@ -129,24 +129,30 @@ export class GenPlant extends Component {
     }
 
     const globalData = GlobalData.getInstance();
+    // 偷取时作物成熟且可偷取
     if (
       globalData.isStolen &&
       this.plantLevel === 3 &&
       data.steal_available === 1
     ) {
       block.getChildByName("Plant").getChildByName("Receivehand").active = true;
-      if (globalData.userInfo.expansion_card) {
-        block.getChildByName("Plant").getChildByName("Expand").active = true;
-      }
     }
 
+    // 偷取时不可偷取
     if (globalData.isStolen && data.steal_available === 0) {
       block.getChildByName("Plant").getChildByName("Receivehand").active =
         false;
-      if (globalData.userInfo.expansion_card) {
-        block.getChildByName("Plant").getChildByName("Expand").active = true;
-      }
     }
+
+    // // 自己的作物成熟时有膨胀卡
+    // if (
+    //   !globalData.isStolen &&
+    //   this.plantLevel === 3 &&
+    //   globalData.userInfo?.expansion_card
+    // ) {
+    //   block.getChildByName("Plant").getChildByName("Expand").active = true;
+    // }
+
     if (!this.plantSpritePath) {
       const genBlock = GenBlock.getInstance();
       genBlock.updateFarmLand(data.id); // 重新请求farmlandList

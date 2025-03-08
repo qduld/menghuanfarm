@@ -1,13 +1,10 @@
 import {
   _decorator,
-  AudioClip,
-  AudioSource,
-  Canvas,
   Component,
   find,
   instantiate,
+  Label,
   Node,
-  resources,
   sys,
   tween,
   UITransform,
@@ -63,6 +60,12 @@ export class HoverEffect extends Component {
       this.targetNode.getChildByName("Receivehand").active = true;
       if (globalData.userInfo.expansion_card) {
         this.targetNode.getChildByName("Expand").active = true;
+        this.targetNode
+          .getChildByName("Expand")
+          .getChildByName("Percent")
+          .getComponent(
+            Label
+          ).string = `+${globalData.userInfo.expansion_card.ratio}%`;
       }
     } else {
       this.targetNode.getChildByName("Receivehand").active = false;
@@ -244,6 +247,12 @@ export class HoverEffect extends Component {
       this.targetNode.getChildByName("Receivehand").active = true;
       if (globalData.userInfo.expansion_card) {
         this.targetNode.getChildByName("Expand").active = true;
+        this.targetNode
+          .getChildByName("Expand")
+          .getChildByName("Percent")
+          .getComponent(
+            Label
+          ).string = `+${globalData.userInfo.expansion_card.ratio}%`;
       }
       this.receiveHandAnimation();
       this.playVoice();

@@ -94,6 +94,12 @@ export class GenShop extends Component {
       seedSection.getChildByName("Name").getComponent(Label).string = seed.name;
 
       seedSection
+        .getChildByName("Fruit")
+        .getChildByName("Number")
+        .getChildByName("Label")
+        .getComponent(Label).string = seed.level + "";
+
+      seedSection
         .getChildByName("TimeGain")
         .getChildByName("Label")
         .getComponent(Label).string = `+${formatNumberShortDynamic(
@@ -171,7 +177,7 @@ export class GenShop extends Component {
   async requestShopList() {
     try {
       const response = await httpRequest(
-        "/api/v1/seed/list?beginId=1&pageSize=10",
+        "/api/v1/seed/list?beginId=1&pageSize=20",
         {
           method: "GET",
         }

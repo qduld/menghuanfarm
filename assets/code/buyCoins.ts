@@ -12,6 +12,7 @@ import { coinList } from "./loadData";
 import { httpRequest } from "./http";
 import { ICoinListItem } from "./interface";
 import { Dialog } from "./dialog";
+import { LoadingUI } from "./loadingUI";
 
 const { ccclass, property } = _decorator;
 @ccclass("BuyCoins")
@@ -37,12 +38,17 @@ export class BuyCoins extends Component {
     return BuyCoins._instance;
   }
 
-  protected onLoad(): void {
+  protected async onLoad() {
+    const loadingUI = this.node.getComponent(LoadingUI);
+    loadingUI.show();
+
     BuyCoins._instance = this;
     this.coinSpacingY = 40;
     this.UCoinList = find("popBox/Canvas/BuyCoins/List");
     this.UCoinSection = find("popBox/Canvas/BuyCoins/Section");
-    this.buyCoinsList();
+
+    await this.buyCoinsList();
+    loadingUI.hide();
   }
 
   // 生成推荐列表

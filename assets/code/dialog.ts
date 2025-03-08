@@ -152,6 +152,7 @@ export class Dialog extends Component {
         this.buyPropsBox.active = true;
         break;
       case "BuyCoins":
+        this.lockBlockBox.active = false;
         this.buyCoinsBox.active = true;
         break;
       case "CreateCircle":
