@@ -46,7 +46,7 @@ export class main extends Component {
 
     const urlParams = new URLSearchParams(window.location.search);
     const tgWebAppStartParam = urlParams.get("tgWebAppStartParam");
-    if (tgWebAppStartParam.includes("circles")) {
+    if (tgWebAppStartParam?.includes("circles")) {
       await this.circleScenePreview();
       return;
     }
