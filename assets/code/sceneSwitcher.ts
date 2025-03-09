@@ -13,6 +13,16 @@ export class SceneSwitcher extends Component {
   @property
   isStolen: boolean = false; // 是否是偷取场景
 
+  private static _instance: SceneSwitcher;
+
+  static getInstance(): SceneSwitcher {
+    return SceneSwitcher._instance;
+  }
+
+  onLoad() {
+    SceneSwitcher._instance = this;
+  }
+
   // 切换场景的方法
   public switchScene() {
     const globalData = GlobalData.getInstance();

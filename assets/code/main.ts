@@ -17,6 +17,7 @@ import { httpRequest } from "./http";
 import { GlobalData } from "./globalData";
 import { AudioMgr } from "./audioManager";
 import { LoadingUI } from "./loadingUI";
+import { SceneSwitcher } from "./sceneSwitcher";
 
 const { ccclass, property } = _decorator;
 //0 橘子香蕉西红柿幼苗，1 红富士苹果幼苗,2 紫金冠茄幼苗,3 红森胡萝卜幼苗
@@ -38,7 +39,18 @@ export class main extends Component {
   @property(Node)
   tools: Node = null;
 
-  protected onLoad(): void {
+  protected async onLoad() {
+    director.preloadScene("circles");
+    director.preloadScene("harvest");
+    director.preloadScene("task");
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const tgWebAppStartParam = urlParams.get("tgWebAppStartParam");
+    if (tgWebAppStartParam.includes("circles")) {
+      await this.circleScenePreview();
+      return;
+    }
+
     const globalData = GlobalData.getInstance();
     if (globalData.isStolen) {
       this.init();
@@ -55,10 +67,14 @@ export class main extends Component {
 
     const loadingUI = this.node.getComponent(LoadingUI);
     loadingUI.show();
-
-    director.preloadScene("circles");
-    director.preloadScene("harvest");
-    director.preloadScene("task");
+  }
+  async circleScenePreview() {
+    await this.requestUserInfo();
+    director.loadScene("circles", async (err) => {
+      if (err) {
+        console.error("Failed to load scene:", "circle", err);
+      }
+    });
   }
   async init() {
     const genInfo = GenInfo.getInstance();
@@ -105,6 +121,23 @@ export class main extends Component {
         genInfo.init();
         genBlock.onekeyHarvest();
         genBlock.init();
+      } else {
+        console.error("Request failed with status:", response.status);
+      }
+    } catch (error) {
+      console.error("Error:", error);
+    }
+  }
+
+  // 获取好友信息
+  async requestUserInfo() {
+    const globalData = GlobalData.getInstance();
+    try {
+      const response = await httpRequest(`/api/v1/farm/u/userInfo`, {
+        method: "GET",
+      });
+      if (response.ok) {
+        globalData.userInfo = response.data.data;
       } else {
         console.error("Request failed with status:", response.status);
       }
