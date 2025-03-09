@@ -140,7 +140,7 @@ export class circles extends Component {
     loadingUI.hide();
 
     globalData.shareLink =
-      "https://franklinzelo.duckdns.org:8989/node/share?scene=circle";
+      "https://franklinzelo.duckdns.org/node/share?scene=circles";
   }
 
   updateScrollViewHeight(sectionNum) {
