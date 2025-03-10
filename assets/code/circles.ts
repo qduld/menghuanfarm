@@ -541,8 +541,13 @@ export class circles extends Component {
         },
       });
       if (response.ok) {
-        this.requestSquadInfo(globalData.userInfo.squad_id);
         const dialog = Dialog.getInstance();
+        if (response.data.code === 1003) {
+          dialog.closeDialog(null, "CreateCircle");
+          globalData.setMessageLabel(i18n.noticeLimit);
+          return;
+        }
+        this.requestSquadInfo(globalData.userInfo.squad_id);
 
         dialog.closeDialog(null, "CreateCircle");
       } else {
