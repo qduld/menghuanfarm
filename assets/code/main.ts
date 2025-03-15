@@ -155,7 +155,7 @@ export class main extends Component {
     // WebSocketManager.instance.connect("wss://bf.tomocloud.com/ws");
 
     // 连接到 Node.js 中间件，并传递 Token
-    wsManager.connect("ws://franklinzelo.duckdns.org:8989");
+    wsManager.connect("wss://franklinzelo.duckdns.org:8990");
 
     // 注册消息处理器
     wsManager.registerHandler("chat", (data) => {
