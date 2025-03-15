@@ -13,12 +13,12 @@ import { GenBlock } from "./genBlock";
 import { GenInfo } from "./genInfo";
 import { AudioControl } from "./audioControl";
 
-import { httpRequest } from "./http";
+import { httpRequest, token } from "./http";
 import { GlobalData } from "./globalData";
 import { AudioMgr } from "./audioManager";
 import { LoadingUI } from "./loadingUI";
 import { SceneSwitcher } from "./sceneSwitcher";
-// import { WebSocketManager } from "./websocketManager";
+import { WebSocketManager } from "./websocketManager";
 
 const { ccclass, property } = _decorator;
 //0 橘子香蕉西红柿幼苗，1 红富士苹果幼苗,2 紫金冠茄幼苗,3 红森胡萝卜幼苗
@@ -69,7 +69,7 @@ export class main extends Component {
     const loadingUI = this.node.getComponent(LoadingUI);
     loadingUI.show();
 
-    // this.connectWebsocket();
+    this.connectWebsocket();
   }
   async circleScenePreview() {
     await this.requestUserInfo();
@@ -149,8 +149,20 @@ export class main extends Component {
     }
   }
 
-  // connectWebsocket() {
-  //   // 连接服务器
-  //   WebSocketManager.instance.connect("wss://bf.tomocloud.com/ws");
-  // }
+  connectWebsocket() {
+    const wsManager = WebSocketManager.instance;
+    // 连接服务器
+    // WebSocketManager.instance.connect("wss://bf.tomocloud.com/ws");
+
+    // 连接到 Node.js 中间件，并传递 Token
+    wsManager.connect("ws://localhost:8989");
+
+    // 注册消息处理器
+    wsManager.registerHandler("chat", (data) => {
+      console.log("Received chat message:", data);
+    });
+
+    // 发送消息
+    wsManager.send({ type: "chat", content: "Hello, world!" });
+  }
 }

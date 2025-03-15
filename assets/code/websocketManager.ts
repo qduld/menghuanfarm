@@ -1,5 +1,6 @@
-// WebSocketManager.ts
 import { _decorator, Component, Node } from "cc";
+import { tokenMock, userFilter, authFilter, tokenSort } from "./loadData";
+// import { retrieveLaunchParams } from "@telegram-apps/sdk";
 
 export class WebSocketManager {
   private static _instance: WebSocketManager;
@@ -9,6 +10,7 @@ export class WebSocketManager {
   private heartbeatInterval: number = 30000; // 30秒心跳
   private heartbeatTimer: any = null;
   private messageHandlers: Map<string, Function> = new Map();
+  private token: string;
 
   private constructor() {}
 
@@ -22,17 +24,31 @@ export class WebSocketManager {
   /**
    * 连接WebSocket服务器
    * @param url 连接地址
+   * @param token 认证令牌
    */
   public connect(url: string): void {
+    // const { initDataRaw } = retrieveLaunchParams();
+
+    this.token = tokenMock;
+    // token = initDataRaw;
+
+    if (!this.token) {
+      console.error("Token is required for WebSocket connection.");
+      return;
+    }
+
     if (this.ws && this.ws.readyState === WebSocket.OPEN) {
       console.log("Already connected");
       return;
     }
 
-    this.ws = new WebSocket(url);
+    // 拼接查询参数（如果有 Token）
+    const wsUrl = this.buildWebSocketUrl(url, this.token);
+
+    this.ws = new WebSocket(wsUrl);
 
     this.ws.onopen = () => {
-      console.log("WebSocket connected");
+      console.log("WebSocket connected to Node.js middleware");
       this.reconnectCount = 0;
       this.startHeartbeat();
     };
@@ -48,12 +64,12 @@ export class WebSocketManager {
 
     this.ws.onerror = (error) => {
       console.error("WebSocket Error:", error);
-      this.reconnect();
+      this.reconnect(url, this.token);
     };
 
     this.ws.onclose = () => {
       console.log("WebSocket closed");
-      this.reconnect();
+      this.reconnect(url, this.token);
     };
   }
 
@@ -87,6 +103,7 @@ export class WebSocketManager {
   }
 
   private startHeartbeat(): void {
+    this.stopHeartbeat(); // 确保没有重复的心跳定时器
     this.heartbeatTimer = setInterval(() => {
       if (this.ws && this.ws.readyState === WebSocket.OPEN) {
         this.send({ type: "heartbeat" });
@@ -101,14 +118,14 @@ export class WebSocketManager {
     }
   }
 
-  private reconnect(): void {
+  private reconnect(url: string, token: string): void {
     if (this.reconnectCount < this.MAX_RECONNECT_COUNT) {
       this.reconnectCount++;
       setTimeout(() => {
         console.log(
           `Reconnecting...(${this.reconnectCount}/${this.MAX_RECONNECT_COUNT})`
         );
-        this.connect("ws://bf.tomocloud.com");
+        this.connect(url); // 重新连接时携带 Token
       }, 5000);
     } else {
       console.error("Max reconnection attempts reached");
@@ -133,5 +150,17 @@ export class WebSocketManager {
       this.ws = null;
     }
     this.stopHeartbeat();
+  }
+
+  /**
+   * 构建带有 Token 的 WebSocket URL
+   * @param baseUrl 基础 URL
+   * @param token 认证令牌
+   * @returns 完整的 WebSocket URL
+   */
+  private buildWebSocketUrl(baseUrl: string, token: string): string {
+    const url = new URL(baseUrl);
+    url.searchParams.set("token", token); // 添加 token 参数
+    return url.toString();
   }
 }

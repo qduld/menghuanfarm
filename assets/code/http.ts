@@ -19,7 +19,7 @@ export interface HttpResponse {
   ok: boolean;
 }
 
-let token = "";
+export let token = "";
 
 export const proxyUrl = "https://franklinzelo.duckdns.org/node/proxy";
 // export const proxyUrl = "http://localhost:8989/proxy";

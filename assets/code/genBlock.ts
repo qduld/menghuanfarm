@@ -143,20 +143,28 @@ export class GenBlock extends Component {
     const dialog = Dialog.getInstance();
     if (dialog) {
       if (blockData.status === 0) {
+        // 找到当前将会解锁的土地
+        const unLockBlockIdx = this.blockList.findIndex(
+          (item) => item.farmland_price > 0 && item.status === 0
+        );
+        if (blockData.id !== this.blockList[unLockBlockIdx].id) {
+          globalData.setMessageLabel(i18n.pleaseUnlockPrevious);
+          return;
+        }
+
         dialog.showDialog(event, "LockBlock");
         dialog.setTargetBlock(block, blockData);
-
-        // 找到当前将会解锁的土地
-        const unLockBlock = this.blockList.find(
-          (item) => item.farmland_price > 0
-        );
 
         dialog.lockBlockBox
           .getChildByName("Money")
           .getChildByName("Content")
-          .getComponent(Label).string = unLockBlock.farmland_price + "";
+          .getComponent(Label).string =
+          this.blockList[unLockBlockIdx].farmland_price + "";
 
-        if (globalData.userInfo.points_balance > unLockBlock.farmland_price) {
+        if (
+          globalData.userInfo.points_balance <
+          this.blockList[unLockBlockIdx].farmland_price
+        ) {
           dialog.lockBlockBox.getChildByName("GoldShort").active = true;
           dialog.lockBlockBox.getChildByName("GainCoins").active = true;
           dialog.lockBlockBox.getChildByName("Button").active = false;
