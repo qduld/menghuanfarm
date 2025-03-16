@@ -19,6 +19,7 @@ import { AudioMgr } from "./audioManager";
 import { LoadingUI } from "./loadingUI";
 import { SceneSwitcher } from "./sceneSwitcher";
 import { WebSocketManager } from "./websocketManager";
+import { Dialog } from "./dialog";
 
 const { ccclass, property } = _decorator;
 //0 橘子香蕉西红柿幼苗，1 红富士苹果幼苗,2 紫金冠茄幼苗,3 红森胡萝卜幼苗
@@ -157,8 +158,27 @@ export class main extends Component {
     // 连接到 Node.js 中间件，并传递 Token
     wsManager.connect("wss://franklinzelo.duckdns.org/websocket");
 
+    // wsManager.connect("ws://localhost:8989");
+
     // 注册消息处理器
-    wsManager.registerHandler("chat", (data) => {
+    wsManager.registerHandler("message", (data) => {
+      const dialog = Dialog.getInstance();
+
+      switch (data.content.type) {
+        case "order_payment_success":
+          dialog.closeDialog(null, "PaymentMethod");
+          dialog.closeDialog(null, "BuyCoins");
+          dialog.buyCoinsSuccessBox
+            .getChildByName("Coins")
+            .getChildByName("Number")
+            .getChildByName("Name")
+            .getComponent(Label).string = data.content.data.points;
+          dialog.showDialog(null, "BuyCoinsSuccess");
+          setTimeout(() => {
+            dialog.closeDialog(null, "BuyCoinsSuccess");
+          }, 2000);
+          break;
+      }
       console.log("Received chat message:", data);
     });
 

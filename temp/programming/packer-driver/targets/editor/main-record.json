@@ -703,7 +703,7 @@
       ]
     },
     "cce:/internal/x/prerequisite-imports": {
-      "mTimestamp": 125276270.8677,
+      "mTimestamp": 162003491.9493,
       "chunkId": "6d8fd2b0177941b032ddc0733af48a561fb60657",
       "imports": [
         {
@@ -2858,7 +2858,7 @@
     },
     "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/http.ts": {
       "mTimestamp": {
-        "mtime": 1742063757748.3213,
+        "mtime": 1742100572378.8274,
         "uuid": "c04de095-1da8-424a-8757-d86c10b4d537"
       },
       "chunkId": "d4b8c1b1aa284d2ff86f93e4a2e0f36c05147c62",
@@ -3101,7 +3101,7 @@
     },
     "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/dialog.ts": {
       "mTimestamp": {
-        "mtime": 1741409099139.2405,
+        "mtime": 1742097516607.1406,
         "uuid": "029647c6-2934-4064-b3d0-d0e70e757fa5"
       },
       "chunkId": "2a9759b6428eefe858cd6953353bea722545ac08",
@@ -5649,7 +5649,7 @@
     },
     "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/main.ts": {
       "mTimestamp": {
-        "mtime": 1742063855451.9082,
+        "mtime": 1742100547472.908,
         "uuid": "ad534c45-313f-494a-9f0a-10a9c7f79cb4"
       },
       "chunkId": "a1ce2b8ee2c71c9f0feb362b14caabc88a58b0f1",
@@ -5774,6 +5774,20 @@
               "column": 53
             }
           }
+        },
+        {
+          "value": "./dialog",
+          "resolved": "__unresolved_8",
+          "loc": {
+            "start": {
+              "line": 22,
+              "column": 23
+            },
+            "end": {
+              "line": 22,
+              "column": 33
+            }
+          }
         }
       ],
       "type": "esm",
@@ -5852,6 +5866,13 @@
           "resolved": {
             "type": "module",
             "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/websocketManager.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/dialog.ts"
           },
           "messages": []
         }
@@ -7411,7 +7432,7 @@
     },
     "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/websocketManager.ts": {
       "mTimestamp": {
-        "mtime": 1742063789527.423,
+        "mtime": 1742100583699.964,
         "uuid": "01f4fe5d-7118-4a11-a185-a71fdcae2531"
       },
       "chunkId": "a37215805077840e1bb97db18b822d86532a72c2",

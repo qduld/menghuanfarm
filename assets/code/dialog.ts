@@ -67,6 +67,9 @@ export class Dialog extends Component {
   buySucceededBox: Node = null; // buySucceededBox
 
   @property(Node)
+  buyCoinsSuccessBox: Node = null; // buySucceededBox
+
+  @property(Node)
   overlayMask: Node = null; // overlayMask
 
   @property
@@ -106,6 +109,7 @@ export class Dialog extends Component {
     this.noticeDetailBox = find("popBox/Canvas/NoticeDetail");
     this.seedUnlockBox = find("popBox/Canvas/SeedUnlock");
     this.buySucceededBox = find("popBox/Canvas/BuySucceeded");
+    this.buyCoinsSuccessBox = find("popBox/Canvas/BuyCoinsSuccess");
     this.overlayMask = find("popBox/Canvas/OverlayMask");
 
     this.bagBox ? (this.bagBox.active = false) : "";
@@ -123,6 +127,7 @@ export class Dialog extends Component {
     this.noticeListBox ? (this.noticeListBox.active = false) : "";
     this.noticeDetailBox ? (this.noticeDetailBox.active = false) : "";
     this.buySucceededBox ? (this.buySucceededBox.active = false) : "";
+    this.buyCoinsSuccessBox ? (this.buyCoinsSuccessBox.active = false) : "";
     this.seedUnlockBox ? (this.seedUnlockBox.active = false) : "";
 
     this.overlayMask.active = false;
@@ -187,6 +192,10 @@ export class Dialog extends Component {
         break;
       case "BuySucceeded":
         this.buySucceededBox.active = true;
+        this.overlayMask.setSiblingIndex(2);
+        break;
+      case "BuyCoinsSuccess":
+        this.buyCoinsSuccessBox.active = true;
         this.overlayMask.setSiblingIndex(2);
         break;
     }
@@ -259,6 +268,11 @@ export class Dialog extends Component {
       case "BuySucceeded":
         this.overlayMask.setSiblingIndex(1);
         this.buySucceededBox.active = false;
+        this.overlayMask.active = false;
+        break;
+      case "BuyCoinsSuccess":
+        this.overlayMask.setSiblingIndex(1);
+        this.buyCoinsSuccessBox.active = false;
         this.overlayMask.active = false;
         break;
     }

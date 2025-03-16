@@ -106,7 +106,7 @@ export class WebSocketManager {
     this.stopHeartbeat(); // 确保没有重复的心跳定时器
     this.heartbeatTimer = setInterval(() => {
       if (this.ws && this.ws.readyState === WebSocket.OPEN) {
-        this.send({ type: "heartbeat" });
+        this.send({ type: "ping" });
       }
     }, this.heartbeatInterval);
   }
@@ -134,7 +134,7 @@ export class WebSocketManager {
   }
 
   private handleMessage(data: any): void {
-    if (data.type === "heartbeat") return; // 忽略心跳响应
+    if (data.type === "pong") return; // 忽略心跳响应
 
     const handler = this.messageHandlers.get(data.type);
     if (handler) {
