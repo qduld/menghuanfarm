@@ -20,15 +20,12 @@ import { squadList, i18n, squadSearchList } from "./loadData";
 import { GlobalData } from "./globalData";
 import { GenInfo } from "./genInfo";
 import { Dialog } from "./dialog";
-import {
-  formatNumberShortDynamic,
-  formatTimestampToDate,
-  generateDynamicShareLink,
-} from "./utils";
+import { formatNumberShortDynamic, formatTimestampToDate } from "./utils";
 import { ExpandNoticeWithArrow } from "./expandNoticeWithArrow";
 import { InputHandler } from "./inputHandler";
 import { initUtils } from "@telegram-apps/sdk";
 import { LoadingUI } from "./loadingUI";
+import { CustomInputBox } from "./customInputBox";
 
 const { ccclass, property } = _decorator;
 @ccclass("circles")
@@ -414,8 +411,8 @@ export class circles extends Component {
       ).getComponent(Label).string;
 
       const criclesNotice = find(
-        "popBox/Canvas/CreateCircle/UpdateMode/Notice/EditBox/TEXT_LABEL"
-      ).getComponent(Label).string;
+        "popBox/Canvas/CreateCircle/UpdateMode/Notice/CustomInputBox"
+      ).getComponent(CustomInputBox).validText;
 
       this.requestUpdateSquadInfo({
         name: criclesName,

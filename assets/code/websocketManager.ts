@@ -126,7 +126,7 @@ export class WebSocketManager {
           `Reconnecting...(${this.reconnectCount}/${this.MAX_RECONNECT_COUNT})`
         );
         this.connect(url); // 重新连接时携带 Token
-      }, 5000);
+      }, 8000);
     } else {
       console.error("Max reconnection attempts reached");
       this.stopHeartbeat();
