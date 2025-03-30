@@ -22,7 +22,7 @@ export class CustomInputBox extends Component {
   @property(ScrollView) scrollView: ScrollView = null!;
 
   private content: string = "";
-  private maxLength: number = 100;
+  private maxLength: number = 1000;
   private isFocused: boolean = false;
   private cursorInterval: number = 0;
   public validText: string = "";
@@ -58,13 +58,13 @@ export class CustomInputBox extends Component {
   }
 
   private setupRichText() {
-    this.richText.verticalAlign = 1; // 顶部对齐
-    this.richText.node.getComponent(UITransform)!.anchorY = 1;
-    this.richText.node.getComponent(UITransform)!.setContentSize(570, 330);
+    // this.richText.verticalAlign = 1; // 顶部对齐
+    // this.richText.node.getComponent(UITransform)!.anchorY = 1;
+    // this.richText.node.getComponent(UITransform)!.setContentSize(570, 1330);
 
     // 2. 确保 ScrollView 可以滚动
     this.scrollView.vertical = true;
-    this.scrollView.elastic = true;
+    // this.scrollView.elastic = true;
   }
 
   // **输入完成后隐藏 EditBox**
@@ -87,7 +87,7 @@ export class CustomInputBox extends Component {
     if (this.content.length <= this.maxLength) {
       this.richText.string = this.content.replace(/\n/g, ""); // 移除所有换行符
       this.validText = this.richText.string;
-      this.calculateTotalLines(this.richText.string); // 计算总行数并更新 this.totalLines
+      this.calculateTotalLinesByCanvas(this.richText.string, 530); // 计算总行数并更新 this.totalLines
       return;
     }
 
@@ -103,10 +103,15 @@ export class CustomInputBox extends Component {
     const displayedText = `${this.validText}<color=#ff0000>${overflowText}</color>`;
 
     this.richText.string = displayedText;
-    this.calculateTotalLines(displayedText); // 计算总行数并更新 this.totalLines
+    this.calculateTotalLinesByCanvas(displayedText, 530); // 计算总行数并更新 this.totalLines
+
     // 更新 RichText 内容
     this.scheduleOnce(() => {
-      let textHeight = this.richText.node.getComponent(UITransform)!.height;
+      let textHeight = 45.1 * this.totalLines;
+
+      this.richText.node
+        .getComponent(UITransform)!
+        .setContentSize(570, textHeight);
 
       // **动态设置 content 高度**
       this.richText.node.parent.getComponent(UITransform)!.height = Math.max(
@@ -115,7 +120,7 @@ export class CustomInputBox extends Component {
       );
 
       // **滚动到底部**
-      this.scrollView.scrollToBottom(0.2);
+      // this.scrollView.scrollToBottom(0.2);
     }, 0.1);
 
     // 显示或隐藏占位符
@@ -128,21 +133,62 @@ export class CustomInputBox extends Component {
     this.adjustScrollViewHeight();
 
     // 滚动到底部
-    this.autoScrollToBottom();
+    // this.autoScrollToBottom();
   }
 
   /**
    * 计算总行数并更新 this.totalLines
    * @param text 当前显示的文本内容
    */
-  private calculateTotalLines(text: string) {
-    // 统计换行符数量（包括 <br/> 和原始 \n）
-    const lineBreaks = (text.match(/<br\/>|\n/g) || []).length;
+  private calculateTotalLinesByCanvas(text: string, maxWidth: number): number {
+    // 创建一个临时的 CanvasRenderingContext2D 对象
+    const canvas = document.createElement("canvas");
+    const ctx = canvas.getContext("2d");
 
-    // 总行数 = 换行符数量 + 1
-    this.totalLines = lineBreaks + 1;
+    if (!ctx) {
+      console.error("无法创建 CanvasRenderingContext2D");
+      return 1; // 默认返回 1 行
+    }
 
-    console.log(`当前总行数: ${this.totalLines}`); // 打印总行数
+    // 设置字体样式（根据 RichText 的实际样式调整）
+    ctx.font = `${this.richText.fontSize}px ${this.richText.fontFamily}`;
+
+    // 初始化变量
+    let currentLineWidth = 0; // 当前行的宽度
+    let totalLines = 1; // 总行数（至少有一行）
+
+    // 解析富文本并提取纯文本内容
+    const plainText = this.extractPlainText(text);
+
+    // 遍历每个字符，模拟换行逻辑
+    for (let i = 0; i < plainText.length; i++) {
+      const char = plainText[i];
+
+      // 测量当前字符的宽度
+      const charWidth = ctx.measureText(char).width;
+
+      // 累加当前行的宽度
+      currentLineWidth += charWidth;
+
+      // 如果超过最大宽度，触发换行
+      if (currentLineWidth > maxWidth) {
+        totalLines++;
+        currentLineWidth = charWidth; // 重置当前行宽度
+      }
+    }
+
+    console.log(`当前总行数: ${totalLines}`); // 打印总行数
+    this.totalLines = totalLines;
+  }
+
+  /**
+   * 提取富文本中的纯文本内容
+   * @param richText 富文本字符串
+   * @returns 纯文本内容
+   */
+  private extractPlainText(richText: string): string {
+    // 使用正则表达式移除所有富文本标签
+    return richText.replace(/<[^>]+>/g, "");
   }
 
   // 处理聚焦事件
@@ -185,7 +231,12 @@ export class CustomInputBox extends Component {
 
   // **适配 ScrollView 高度**
   private adjustScrollViewHeight() {
-    const textHeight = this.richText.node.getComponent(UITransform).height;
+    const textHeight = 45.1 * this.totalLines;
+
+    this.richText.node
+      .getComponent(UITransform)!
+      .setContentSize(570, textHeight);
+
     const contentTransform = this.scrollView.node
       .getChildByName("view")
       .getChildByName("content")

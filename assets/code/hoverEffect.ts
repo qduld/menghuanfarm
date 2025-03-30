@@ -16,6 +16,7 @@ import { Dialog } from "./dialog";
 import { GenBlock } from "./genBlock";
 import { GlobalData } from "./globalData";
 import { AudioMgr } from "./audioManager";
+
 const { ccclass, property } = _decorator;
 
 @ccclass("HoverEffect")
@@ -36,7 +37,10 @@ export class HoverEffect extends Component {
   @property
   animating: boolean = false;
 
-  // 通过方法设置 targetNode
+  private canTriggerMouseDown: boolean = true; // 防抖标志位（onMouseDown）
+  private canTriggerTouchStart: boolean = true; // 防抖标志位（onTouchStart）
+
+  // 设置目标节点
   setTargetNode(node: Node, data, level) {
     this.targetNode = node;
     this.targetData = data;
@@ -44,7 +48,6 @@ export class HoverEffect extends Component {
 
     if (sys.isMobile) {
       this.targetNode.on(Node.EventType.TOUCH_START, this.onTouchStart, this);
-      // this.targetNode.on(Node.EventType.TOUCH_MOVE, this.onTouchMove, this);
       this.targetNode.on(Node.EventType.TOUCH_END, this.onTouchEnd, this);
     } else {
       this.targetNode.on(Node.EventType.MOUSE_DOWN, this.onMouseDown, this);
@@ -83,11 +86,19 @@ export class HoverEffect extends Component {
   }
 
   onMouseDown() {
+    if (!this.canTriggerMouseDown || this.animating) return; // 如果不允许触发或正在动画中，则直接返回
+
+    this.canTriggerMouseDown = false; // 设置为不可触发
+    setTimeout(() => {
+      this.canTriggerMouseDown = true; // 在冷却时间后恢复触发能力
+    }, 500); // 冷却时间为 500 毫秒
+
     const globalData = GlobalData.getInstance();
     const genBlock = GenBlock.getInstance();
     const dialog = Dialog.getInstance();
+
     if (this.targetLevel === 3) {
-      this.receiveHandAnimation();
+      this.receiveHandAnimation(); // 动画开始
       this.playVoice();
       if (globalData.isStolen) {
         this.goldStolenMoveAnimation();
@@ -97,6 +108,7 @@ export class HoverEffect extends Component {
         genBlock.harvestFarmland(this.targetData.id);
       }
     }
+
     if (dialog) {
       if (this.targetLevel === 0) {
         dialog.showDialog(null, "Bag");
@@ -105,17 +117,70 @@ export class HoverEffect extends Component {
     }
   }
 
+  onTouchStart() {
+    if (!this.canTriggerTouchStart || this.animating) return; // 如果不允许触发或正在动画中，则直接返回
+
+    this.canTriggerTouchStart = false; // 设置为不可触发
+    setTimeout(() => {
+      this.canTriggerTouchStart = true; // 在冷却时间后恢复触发能力
+    }, 500); // 冷却时间为 500 毫秒
+
+    const globalData = GlobalData.getInstance();
+    const genBlock = GenBlock.getInstance();
+    const dialog = Dialog.getInstance();
+
+    if (this.targetLevel === 3) {
+      this.targetNode.getChildByName("Receivehand").active = true;
+      if (globalData.userInfo.expansion_card) {
+        this.targetNode.getChildByName("Expand").active = true;
+        this.targetNode
+          .getChildByName("Expand")
+          .getChildByName("Percent")
+          .getComponent(
+            Label
+          ).string = `+${globalData.userInfo.expansion_card.ratio}%`;
+      }
+      this.receiveHandAnimation(); // 动画开始
+      this.playVoice();
+      if (globalData.isStolen) {
+        this.goldStolenMoveAnimation();
+        genBlock.stealFarmland(this.targetData.id, this.targetData.plantId);
+      } else {
+        this.goldMoveAnimation();
+        genBlock.harvestFarmland(this.targetData.id);
+      }
+    }
+
+    if (dialog) {
+      if (this.targetLevel === 0) {
+        dialog.showDialog(null, "Bag");
+        dialog.setTargetBlock(this.targetNode.parent, this.targetData);
+      }
+    }
+  }
+
+  onTouchEnd() {
+    const globalData = GlobalData.getInstance();
+    if (globalData.isStolen) return;
+    if (!this.animating) {
+      this.targetNode.getChildByName("Receivehand").active = false;
+      this.targetNode.getChildByName("Expand").active = false;
+    }
+  }
+
   receiveHandAnimation() {
-    this.animating = true;
+    if (this.animating) return; // 如果动画正在进行，则直接返回
+
+    this.animating = true; // 设置为动画中
     tween(this.targetNode.getChildByName("Receivehand"))
       .to(0.8, { position: this.leftPosition }, { easing: "cubicOut" })
       .to(0.8, { position: this.rightPosition }, { easing: "cubicOut" })
+      .call(() => {
+        this.targetNode.getChildByName("Receivehand").active = false;
+        this.targetNode.getChildByName("Expand").active = false;
+        this.animating = false; // 动画完成，恢复状态
+      })
       .start();
-    setTimeout(() => {
-      this.targetNode.getChildByName("Receivehand").active = false;
-      this.targetNode.getChildByName("Expand").active = false;
-      this.animating = false;
-    }, 1600);
   }
 
   goldMoveAnimation() {
@@ -219,77 +284,16 @@ export class HoverEffect extends Component {
 
   playVoice() {
     AudioMgr.inst.playOneShot("sounds/reap", 1);
-    // AudioMgr.inst.playOneShot(this.clickSound);
-    // const audioSources = this.node.getComponents(AudioSource);
-
-    // audioSources.forEach((audio) => {
-    //   audio.play();
-    // });
-
-    // this.scheduleOnce(() => {
-    //   audioSources.forEach((audio) => {
-    //     audio.stop();
-    //   });
-    // }, 2);
   }
 
-  // onTouchMove() {
-  //   if (this.targetLevel === 3) {
-  //     this.targetNode.getChildByName("Receivehand").active = true;
-  //   }
-  // }
-
-  onTouchStart() {
-    const globalData = GlobalData.getInstance();
-    const genBlock = GenBlock.getInstance();
-    const dialog = Dialog.getInstance();
-    if (this.targetLevel === 3) {
-      this.targetNode.getChildByName("Receivehand").active = true;
-      if (globalData.userInfo.expansion_card) {
-        this.targetNode.getChildByName("Expand").active = true;
-        this.targetNode
-          .getChildByName("Expand")
-          .getChildByName("Percent")
-          .getComponent(
-            Label
-          ).string = `+${globalData.userInfo.expansion_card.ratio}%`;
-      }
-      this.receiveHandAnimation();
-      this.playVoice();
-      if (globalData.isStolen) {
-        this.goldStolenMoveAnimation();
-        genBlock.stealFarmland(this.targetData.id, this.targetData.plantId);
-      } else {
-        this.goldMoveAnimation();
-        genBlock.harvestFarmland(this.targetData.id);
-      }
-    }
-    if (dialog) {
-      if (this.targetLevel === 0) {
-        dialog.showDialog(null, "Bag");
-        dialog.setTargetBlock(this.targetNode.parent, this.targetData);
-      }
-    }
+  onDestroy() {
+    this.animating = false;
+    // if (this.targetNode) {
+    //   this.targetNode.off(Node.EventType.MOUSE_DOWN, this.onMouseDown, this);
+    //   this.targetNode.off(Node.EventType.MOUSE_ENTER, this.onMouseEnter, this);
+    //   this.targetNode.off(Node.EventType.MOUSE_LEAVE, this.onMouseLeave, this);
+    //   this.targetNode.off(Node.EventType.TOUCH_START, this.onTouchStart, this);
+    //   this.targetNode.off(Node.EventType.TOUCH_END, this.onTouchEnd, this);
+    // }
   }
-
-  onTouchEnd() {
-    const globalData = GlobalData.getInstance();
-    if (globalData.isStolen) return;
-    if (!this.animating) {
-      this.targetNode.getChildByName("Receivehand").active = false;
-      this.targetNode.getChildByName("Expand").active = false;
-    }
-  }
-
-  // onDestroy() {
-  //   if (this.targetNode) {
-  //     // 移除事件监听，防止内存泄漏
-  //     this.targetNode.off(Node.EventType.MOUSE_DOWN, this.onMouseDown, this);
-  //     this.targetNode.off(Node.EventType.MOUSE_ENTER, this.onMouseEnter, this);
-  //     this.targetNode.off(Node.EventType.MOUSE_LEAVE, this.onMouseLeave, this);
-  //     this.targetNode.off(Node.EventType.TOUCH_START, this.onTouchStart, this);
-  //     // this.targetNode.off(Node.EventType.TOUCH_MOVE, this.onTouchMove, this);
-  //     this.targetNode.off(Node.EventType.TOUCH_END, this.onTouchEnd, this);
-  //   }
-  // }
 }

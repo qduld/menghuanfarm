@@ -2373,7 +2373,7 @@
     "_lpos": {
       "__type__": "cc.Vec3",
       "x": 0,
-      "y": -574.9010000000001,
+      "y": -628.9010000000001,
       "z": 0
     },
     "_lrot": {
@@ -8381,7 +8381,7 @@
     "_prefab": null,
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": -236.30399999999995,
+      "x": -246,
       "y": 118.15200000000004,
       "z": 0
     },
@@ -8523,8 +8523,8 @@
     "__prefab": null,
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 200,
-      "height": 120
+      "width": 206,
+      "height": 160
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -8615,8 +8615,8 @@
     "_prefab": null,
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": 10,
-      "y": 62,
+      "x": 0,
+      "y": 18,
       "z": 0
     },
     "_lrot": {
@@ -9384,7 +9384,7 @@
     "__prefab": null,
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 90,
+      "width": 180,
       "height": 120
     },
     "_anchorPoint": {
@@ -9406,12 +9406,12 @@
     "__prefab": null,
     "_alignFlags": 42,
     "_target": null,
-    "_left": 15,
-    "_right": -5,
+    "_left": -40,
+    "_right": -40,
     "_top": -10,
     "_bottom": -10,
     "_horizontalCenter": 0,
-    "_verticalCenter": 62,
+    "_verticalCenter": 18,
     "_isAbsLeft": true,
     "_isAbsRight": true,
     "_isAbsTop": true,
@@ -9530,7 +9530,7 @@
     "_lpos": {
       "__type__": "cc.Vec3",
       "x": 0,
-      "y": -31,
+      "y": -49,
       "z": 0
     },
     "_lrot": {
@@ -9985,7 +9985,7 @@
     "_top": 0,
     "_bottom": 0,
     "_horizontalCenter": 0,
-    "_verticalCenter": -31,
+    "_verticalCenter": -49,
     "_isAbsLeft": true,
     "_isAbsRight": true,
     "_isAbsTop": true,
@@ -10129,8 +10129,8 @@
     "__prefab": null,
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 200,
-      "height": 120
+      "width": 206,
+      "height": 160
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -54672,7 +54672,7 @@
     "unlockBlock": null,
     "sprite": null,
     "spacingX": 40,
-    "spacingY": 40,
+    "spacingY": 30,
     "blockList": [],
     "column": 3,
     "row": 4,

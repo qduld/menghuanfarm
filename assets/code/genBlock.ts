@@ -43,7 +43,7 @@ export class GenBlock extends Component {
   spacingX: number = 40; // X轴间距
 
   @property
-  spacingY: number = 40; // Y轴间距
+  spacingY: number = 30; // Y轴间距
 
   @property
   blockList: IFarmland[] = []; // Y轴间距
