@@ -91,7 +91,8 @@ export class GenShop extends Component {
       //   .getChildByName("Label")
       //   .getComponent(Label).string = seed.quantity + "";
 
-      seedSection.getChildByName("Name").getComponent(Label).string = seed.name;
+      seedSection.getChildByName("Name").getComponent(Label).string =
+        i18n.seed[seed.level];
 
       seedSection
         .getChildByName("Fruit")
@@ -115,21 +116,48 @@ export class GenShop extends Component {
         .getComponent(Label).string = formatNumberShortDynamic(seed.price) + "";
 
       let spritePath = "";
-      switch (seed.name) {
-        case "西红柿":
-          spritePath = "tomato";
+      switch (seed.level) {
+        case 1:
+          spritePath = "Carrot";
           break;
-        case "萝卜":
-          spritePath = "carrot";
+        case 2:
+          spritePath = "Chive";
           break;
-        case "茄子":
-          spritePath = "eggplant";
+        case 3:
+          spritePath = "Tomato";
+          break;
+        case 4:
+          spritePath = "Corn";
+          break;
+        case 5:
+          spritePath = "Watermelon";
+          break;
+        case 6:
+          spritePath = "Sunflower";
+          break;
+        case 7:
+          spritePath = "BSC";
+          break;
+        case 8:
+          spritePath = "Base";
+          break;
+        case 9:
+          spritePath = "Solona";
+          break;
+        case 10:
+          spritePath = "Ton";
+          break;
+        case 11:
+          spritePath = "ETH";
+          break;
+        case 12:
+          spritePath = "BTC";
           break;
         default:
-          spritePath = "carrot";
+          spritePath = "Carrot";
       }
 
-      resources.load("iconList", SpriteAtlas, (err, atlas) => {
+      resources.load("seedPlant", SpriteAtlas, (err, atlas) => {
         if (err) {
           console.error("Failed to load sprite:", err);
           return;

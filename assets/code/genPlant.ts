@@ -32,7 +32,7 @@ export class GenPlant extends Component {
     this.plantMarkingSprite = block
       .getChildByName("Countdown")
       .getChildByName("Icon");
-    this.plantMarkingsPath = "carrotMarkings";
+
     if (data.farm_status === 0) {
       // 未种植
       this.plantSpritePath = "awaitingSowing";
@@ -47,6 +47,47 @@ export class GenPlant extends Component {
       const plantTime = data.seed.plant_at;
       block.getChildByName("Countdown").active = true; // 临时放这里
       const countdownLabel = block.getChildByName("Countdown");
+
+      switch (data.seed.level) {
+        case 1:
+          this.plantMarkingsPath = "Carrot";
+          break;
+        case 2:
+          this.plantMarkingsPath = "Chive";
+          break;
+        case 3:
+          this.plantMarkingsPath = "Tomato";
+          break;
+        case 4:
+          this.plantMarkingsPath = "Corn";
+          break;
+        case 5:
+          this.plantMarkingsPath = "Watermelon";
+          break;
+        case 6:
+          this.plantMarkingsPath = "Sunflower";
+          break;
+        case 7:
+          this.plantMarkingsPath = "BSC";
+          break;
+        case 8:
+          this.plantMarkingsPath = "Base";
+          break;
+        case 9:
+          this.plantMarkingsPath = "Solona";
+          break;
+        case 10:
+          this.plantMarkingsPath = "Ton";
+          break;
+        case 11:
+          this.plantMarkingsPath = "ETH";
+          break;
+        case 12:
+          this.plantMarkingsPath = "BTC";
+          break;
+        default:
+          this.plantMarkingsPath = "Carrot";
+      }
 
       if (maturity_time - currentTime > 0 && currentTime - plantTime >= 0) {
         this.startCountdownForLand(
@@ -205,7 +246,7 @@ export class GenPlant extends Component {
     }
 
     if (this.plantMarkingsPath) {
-      resources.load("iconList", SpriteAtlas, (err, atlas) => {
+      resources.load("seedPlant", SpriteAtlas, (err, atlas) => {
         if (err) {
           console.error("Failed to load sprite:", err);
           return;

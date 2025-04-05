@@ -75,6 +75,20 @@ export const i18n = {
     "Sorry, you currently have an active expansion card in use. You can only purchase a new card after the current one has been fully utilized.",
   noticeLimit: "The notification character limit is 1000.",
   pleaseUnlockPrevious: "Please unlock the previous plot of land first.",
+  seed: {
+    1: "Carrot",
+    2: "Chive",
+    3: "Tomato",
+    4: "Corn",
+    5: "Watermelon",
+    6: "Sunflower",
+    7: "BSC",
+    8: "Base",
+    9: "Solona",
+    10: "Ton",
+    11: "ETH",
+    12: "BTC",
+  },
 };
 
 export const errTips = {

@@ -9,6 +9,7 @@ import {
   ScrollView,
   UITransform,
   Input,
+  Vec2,
 } from "cc";
 
 const { ccclass, property } = _decorator;
@@ -16,6 +17,7 @@ const { ccclass, property } = _decorator;
 @ccclass("CustomInputBox")
 export class CustomInputBox extends Component {
   @property(RichText) richText: RichText = null!;
+  @property(Node) placeHolder: RichText = null!;
   @property(Label) labelPlaceholder: Label = null!;
   @property(Graphics) cursor: Graphics = null!;
   @property(EditBox) editBox: EditBox = null!;
@@ -47,6 +49,8 @@ export class CustomInputBox extends Component {
 
     this.editBox.node.on("editing-did-ended", this.onEditBoxEnd, this);
 
+    this.editBox.node.on("editing-did-began", this.onEditBoxFocus, this);
+
     // 监听点击事件
     this.node.on(Input.EventType.TOUCH_END, this.onFocus, this);
     this.setupRichText();
@@ -73,11 +77,17 @@ export class CustomInputBox extends Component {
     this.isFocused = false;
     this.cursor.node.active = false; // 隐藏光标
     this.richText.node.active = true;
+    if (this.richText.string) {
+      this.labelPlaceholder.node.active = false;
+    } else {
+      this.labelPlaceholder.node.active = true;
+    }
   }
 
   // 监听 EditBox 输入
   private onEditBoxChanged(editBox: EditBox) {
     this.content = editBox.string;
+    this.labelPlaceholder.node.active = false;
     this.updateRichText();
   }
 
@@ -191,6 +201,10 @@ export class CustomInputBox extends Component {
     return richText.replace(/<[^>]+>/g, "");
   }
 
+  private onEditBoxFocus() {
+    this.labelPlaceholder.node.active = false;
+  }
+
   // 处理聚焦事件
   private onFocus() {
     this.isFocused = true;
@@ -201,6 +215,26 @@ export class CustomInputBox extends Component {
     // 显示 EditBox 让用户输入
     this.editBox.node.active = true;
     this.editBox.focus();
+
+    // 三阶段同步策略
+    this.scheduleOnce(() => {
+      this.editBox.focus(); // 阶段1：获取焦点
+
+      this.scheduleOnce(() => {
+        // 阶段2：强制同步内容
+        if (this.content.length > this.maxLength) {
+          this.editBox.string = this.content; // 先更新内容
+          this.setEditBoxCursorPosition(this.maxLength);
+        }
+
+        this.scheduleOnce(() => {
+          // 阶段3：二次校准
+          if (this.content.length > this.maxLength) {
+            this.setEditBoxCursorPosition(this.maxLength);
+          }
+        }, 0.05);
+      }, 0.05);
+    }, 0.05);
   }
 
   // 更新光标位置
@@ -252,5 +286,108 @@ export class CustomInputBox extends Component {
   // **滚动到底部**
   private autoScrollToBottom() {
     this.scrollView.scrollToBottom(0.2);
+  }
+
+  /**
+   * 获取当前 EditBox 的底层输入框实例
+   * @returns 底层输入框实例（可能为 null）
+   */
+  private getNativeInput(): HTMLInputElement | HTMLTextAreaElement | null {
+    const editBoxNode = this.editBox.node;
+    if (!editBoxNode || !editBoxNode.activeInHierarchy) {
+      return null;
+    }
+
+    // 尝试通过私有属性获取输入框
+    const editBoxImpl = (this.editBox as any)._impl;
+    if (editBoxImpl && editBoxImpl._edTxt) {
+      return editBoxImpl._edTxt;
+    }
+
+    // 回退到全局查询
+    const inputElements = document.querySelectorAll<
+      HTMLInputElement | HTMLTextAreaElement
+    >("input, textarea");
+    for (const input of inputElements) {
+      if (input === document.activeElement) {
+        return input;
+      }
+    }
+
+    return null;
+  }
+
+  private setEditBoxCursorPosition(position: number) {
+    position = Math.min(position, this.content.length);
+    this.editBox.string = this.content;
+
+    // 使用递归重试机制确保操作成功
+    const attemptSetCursor = (retryCount: number) => {
+      setTimeout(() => {
+        this.editBox.focus();
+
+        const nativeInput = this.getNativeInput();
+        if (
+          nativeInput &&
+          typeof nativeInput.setSelectionRange === "function"
+        ) {
+          nativeInput.value = this.content;
+
+          // if (nativeInput.type !== "text") {
+          //   nativeInput.type = "text";
+          // }
+
+          if (position > nativeInput.value.length) {
+            position = nativeInput.value.length;
+          }
+
+          try {
+            nativeInput.setSelectionRange(position, position);
+            this.ensureCursorVisible(nativeInput, position);
+            console.log(`Cursor set successfully at position: ${position}`);
+          } catch (error) {
+            if (retryCount < 3) {
+              console.warn(`Retrying cursor set... Attempt ${retryCount + 1}`);
+              attemptSetCursor(retryCount + 1);
+            } else {
+              console.error(
+                "Failed to set cursor after multiple attempts:",
+                error
+              );
+            }
+          }
+        }
+      }, 100 * (retryCount + 1)); // 逐步增加延迟
+    };
+
+    attemptSetCursor(0); // 初始尝试
+  }
+
+  private ensureCursorVisible(
+    input: HTMLInputElement | HTMLTextAreaElement,
+    position: number
+  ) {
+    // 方法 1: 使用浏览器内置的 scrollIntoViewIfNeeded
+    if (typeof (input as any).scrollIntoViewIfNeeded === "function") {
+      setTimeout(() => {
+        (input as any).scrollIntoViewIfNeeded();
+      }, 1000);
+      return;
+    }
+
+    // 方法 2: 手动计算滚动位置（针对多行文本）
+    if (input.tagName === "TEXTAREA") {
+      const textBeforeCursor = input.value.substring(0, position);
+      const lines = textBeforeCursor.split("\n");
+      const lineHeight = parseInt(getComputedStyle(input).lineHeight, 10) || 20;
+      const verticalScroll = lines.length * lineHeight;
+      input.scrollTop = verticalScroll - input.clientHeight / 2;
+    }
+
+    // 方法 3: 强制触发重新布局
+    input.style.overflow = "hidden";
+    requestAnimationFrame(() => {
+      input.style.overflow = "";
+    });
   }
 }

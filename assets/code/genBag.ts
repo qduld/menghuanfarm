@@ -19,12 +19,16 @@ import { Dialog } from "./dialog";
 import { SeedEffect } from "./seedEffect";
 import { GenBlock } from "./genBlock";
 import { LoadingUI } from "./loadingUI";
+import { i18n } from "./loadData";
 
 const { ccclass, property } = _decorator;
 @ccclass("GenBag")
 export class GenBag extends Component {
   @property
   seedList: ISeedList[] = []; // 种子列表
+
+  @property
+  USeedContainer: Node = null; // 种子容器
 
   @property
   USeedList: Node = null; // 种子列表
@@ -56,8 +60,13 @@ export class GenBag extends Component {
     const loadingUI = this.node.getComponent(LoadingUI);
     loadingUI.show();
 
-    this.USeedList = find("popBox/Canvas/Bag/List");
-    this.USeedSection = find("popBox/Canvas/Bag/Section");
+    // this.USeedList = find("popBox/Canvas/Bag/List");
+    // this.USeedSection = find("popBox/Canvas/Bag/Section");
+    this.USeedContainer = find("popBox/Canvas/Bag/ScrollView");
+    this.USeedList = find("popBox/Canvas/Bag/ScrollView/view/content");
+    this.USeedSection = find(
+      "popBox/Canvas/Bag/ScrollView/view/content/Section"
+    );
     this.UEmptyContent = find("popBox/Canvas/Bag/Empty");
     this.UClickTipsLabel = find("popBox/Canvas/Bag/Title");
 
@@ -69,10 +78,12 @@ export class GenBag extends Component {
   createPackageLayout() {
     if (this.seedList?.length === 0 || !this.seedList) {
       this.UEmptyContent.active = true;
+      this.USeedContainer.active = false;
       this.UClickTipsLabel.active = false;
       return;
     }
     this.UEmptyContent.active = false;
+    this.USeedContainer.active = true;
     this.UClickTipsLabel.active = true;
     // 获取预制体的宽度和高度
     const sectionHeight =
@@ -83,8 +94,8 @@ export class GenBag extends Component {
         .contentSize.width;
 
     // 计算起始点，以保证整个布局居中
-    const startX = this.USeedSection.position.x - 376;
-    const startY = this.USeedSection.position.y - 667;
+    const startX = this.USeedSection.position.x;
+    const startY = this.USeedSection.position.y;
 
     this.seedList.forEach((seed, index) => {
       const posY =
@@ -97,7 +108,8 @@ export class GenBag extends Component {
       seedSection.active = true;
       seedSection.setPosition(posX, posY);
 
-      seedSection.getChildByName("Name").getComponent(Label).string = seed.name;
+      seedSection.getChildByName("Name").getComponent(Label).string =
+        i18n.seed[seed.level];
 
       seedSection
         .getChildByName("Fruit")
@@ -116,21 +128,48 @@ export class GenBag extends Component {
         formatSeconds(seed.maturity_time);
 
       let spritePath = "";
-      switch (seed.name) {
-        case "西红柿":
-          spritePath = "tomato";
+      switch (seed.level) {
+        case 1:
+          spritePath = "Carrot";
           break;
-        case "萝卜":
-          spritePath = "carrot";
+        case 2:
+          spritePath = "Chive";
           break;
-        case "茄子":
-          spritePath = "eggplant";
+        case 3:
+          spritePath = "Tomato";
+          break;
+        case 4:
+          spritePath = "Corn";
+          break;
+        case 5:
+          spritePath = "Watermelon";
+          break;
+        case 6:
+          spritePath = "Sunflower";
+          break;
+        case 7:
+          spritePath = "BSC";
+          break;
+        case 8:
+          spritePath = "Base";
+          break;
+        case 9:
+          spritePath = "Solona";
+          break;
+        case 10:
+          spritePath = "Ton";
+          break;
+        case 11:
+          spritePath = "ETH";
+          break;
+        case 12:
+          spritePath = "BTC";
           break;
         default:
-          spritePath = "carrot";
+          spritePath = "Carrot";
       }
 
-      resources.load("iconList", SpriteAtlas, (err, atlas) => {
+      resources.load("seedPlant", SpriteAtlas, (err, atlas) => {
         if (err) {
           console.error("Failed to load sprite:", err);
           return;
@@ -167,7 +206,14 @@ export class GenBag extends Component {
         method: "GET",
       });
       if (response.ok) {
-        this.seedList = response.data.data as ISeedList[];
+        if (response.data.data) {
+          this.seedList = response.data.data.sort(
+            (a, b) => a.level - b.level
+          ) as ISeedList[];
+        } else {
+          this.seedList = [];
+        }
+
         this.USeedList.removeAllChildren();
         this.createPackageLayout();
       } else {

@@ -539,14 +539,16 @@ export class circles extends Component {
       });
       if (response.ok) {
         const dialog = Dialog.getInstance();
-        if (response.data.code === 1003) {
-          dialog.closeDialog(null, "CreateCircle");
-          globalData.setMessageLabel(i18n.noticeLimit);
-          return;
-        }
+        // if (response.data.code === 1003) {
+        //   dialog.closeDialog(null, "CreateCircle");
+        //   globalData.setMessageLabel(i18n.noticeLimit);
+        //   return;
+        // }
         this.requestSquadInfo(globalData.userInfo.squad_id);
 
-        dialog.closeDialog(null, "CreateCircle");
+        if (response.data.code !== 1001 && response.data.code !== 1003) {
+          dialog.closeDialog(null, "CreateCircle");
+        }
       } else {
         console.error("Request failed with status:", response.status);
       }
