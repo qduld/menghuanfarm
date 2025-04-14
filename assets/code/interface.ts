@@ -220,3 +220,21 @@ export interface IHarvestListItem {
   points: number;
   created_at: string;
 }
+
+export enum TaskType {
+  "CREATE_SQUAD",
+  "FIRST_BUY_SEED",
+  "FIRST_STEAL",
+  "HARVEST_10",
+  "JOIN_SQUAD",
+}
+
+export interface ITaskListItem {
+  completed: boolean;
+  progress: number;
+  reward: number;
+  special_tag: string;
+  status: number;
+  target: number;
+  task_type: TaskType;
+}

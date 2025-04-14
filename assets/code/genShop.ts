@@ -130,10 +130,10 @@ export class GenShop extends Component {
           spritePath = "Corn";
           break;
         case 5:
-          spritePath = "Watermelon";
+          spritePath = "Sunflower";
           break;
         case 6:
-          spritePath = "Sunflower";
+          spritePath = "Watermelon";
           break;
         case 7:
           spritePath = "BSC";

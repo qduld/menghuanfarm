@@ -60,8 +60,6 @@ export class GenBag extends Component {
     const loadingUI = this.node.getComponent(LoadingUI);
     loadingUI.show();
 
-    // this.USeedList = find("popBox/Canvas/Bag/List");
-    // this.USeedSection = find("popBox/Canvas/Bag/Section");
     this.USeedContainer = find("popBox/Canvas/Bag/ScrollView");
     this.USeedList = find("popBox/Canvas/Bag/ScrollView/view/content");
     this.USeedSection = find(
@@ -142,10 +140,10 @@ export class GenBag extends Component {
           spritePath = "Corn";
           break;
         case 5:
-          spritePath = "Watermelon";
+          spritePath = "Sunflower";
           break;
         case 6:
-          spritePath = "Sunflower";
+          spritePath = "Watermelon";
           break;
         case 7:
           spritePath = "BSC";

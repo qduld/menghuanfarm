@@ -66,6 +66,7 @@ export class GlobalData extends Component {
     moneyPlusCircle.active = false;
     addtionPlusCircle.active = false;
     footer.active = false;
+    footer.setPosition(-1000, -1000);
     footerStolen.active = true;
   }
   isNotStolenUISwitch() {
@@ -83,6 +84,7 @@ export class GlobalData extends Component {
     moneyPlusCircle.active = true;
     addtionPlusCircle.active = true;
     footer.active = true;
+    footer.setPosition(0, -628.901);
     footerStolen.active = false;
   }
   setMessageLabel(message, timer = 2) {

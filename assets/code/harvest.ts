@@ -51,8 +51,10 @@ export class harvest extends Component {
     loadingUI.show();
 
     this.harvestSpacingY = 40;
-    this.UHarvestList = find("Canvas/Content/List");
-    this.UHarvestSection = find("Canvas/Content/Section");
+    this.UHarvestList = find("Canvas/Content/ScrollView/view/content");
+    this.UHarvestSection = find(
+      "Canvas/Content/ScrollView/view/content/Section"
+    );
     this.UMoney = find("Canvas/Top/Money");
     this.UAddition = find("Canvas/Top/Addition");
     this.updateUserInfo();
@@ -108,19 +110,24 @@ export class harvest extends Component {
       formatToUSDInteger(globalData.userInfo.points_balance) + ""
     );
 
+    if (globalData.userInfo.expansion_card) {
+      this.scheduleOnce(() => {
+        this.UAddition.getComponent(DynamicLabel).setText(
+          `+${
+            globalData.userInfo.expansion_card?.ratio
+              ? globalData.userInfo.expansion_card?.ratio
+              : globalData.userInfo.radio
+          }%`
+        );
+      }, 0);
+    }
+
     this.scheduleOnce(() => {
       this.UAddition.setPosition(
         this.UMoney.position.x +
           this.UMoney.getComponent(DynamicLabel).roundedRect.rectWidth +
           30,
         this.UMoney.position.y
-      );
-      this.UAddition.getComponent(DynamicLabel).setText(
-        `+${
-          globalData.userInfo.expansion_card?.ratio
-            ? globalData.userInfo.expansion_card?.ratio
-            : globalData.userInfo.radio
-        }%`
       );
     }, 0);
   }

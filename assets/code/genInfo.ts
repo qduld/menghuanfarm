@@ -29,7 +29,7 @@ export class GenInfo extends Component {
   @property
   UAddition: Node = null; // 加成
 
-  @property
+  @property(Node)
   UExpand: Node = null; // 膨胀
 
   @property
@@ -146,6 +146,9 @@ export class GenInfo extends Component {
     if (userInfo.expansion_card) {
       this.UAddition.getComponent(DynamicLabel).hasExpand = true;
       this.UExpand.active = true;
+      this.UExpand.getChildByName("Prefix").active = true;
+      this.UExpand.getChildByName("Used").active = true;
+      this.UExpand.getChildByName("Suffix").active = true;
       this.UExpand.getChildByName("Used").getComponent(Label).string =
         userInfo.expansion_card.total_count -
         userInfo.expansion_card.used_count +
@@ -153,9 +156,22 @@ export class GenInfo extends Component {
       this.UExpand.getChildByName("Suffix").getComponent(
         Label
       ).string = `/${userInfo.expansion_card.total_count})`;
+
+      this.scheduleOnce(() => {
+        this.UAddition.getComponent(DynamicLabel).setText(
+          `+${
+            userInfo.expansion_card?.ratio
+              ? userInfo.expansion_card?.ratio
+              : userInfo.radio
+          }%`
+        );
+      }, 0);
     } else {
       this.UAddition.getComponent(DynamicLabel).hasExpand = false;
       this.UExpand.active = false;
+      this.UExpand.getChildByName("Prefix").active = false;
+      this.UExpand.getChildByName("Used").active = false;
+      this.UExpand.getChildByName("Suffix").active = false;
     }
 
     this.scheduleOnce(() => {
@@ -165,13 +181,6 @@ export class GenInfo extends Component {
             .rectWidth +
           20,
         this.Upoints_balance.position.y
-      );
-      this.UAddition.getComponent(DynamicLabel).setText(
-        `+${
-          userInfo.expansion_card?.ratio
-            ? userInfo.expansion_card?.ratio
-            : userInfo.radio
-        }%`
       );
     }, 0);
   }

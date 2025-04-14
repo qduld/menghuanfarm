@@ -12,6 +12,8 @@ import {
   AudioSource,
   Vec3,
   Label,
+  SpriteAtlas,
+  Sprite,
 } from "cc";
 import { blockList } from "./loadData";
 import { IFarmland } from "./interface";
@@ -275,10 +277,72 @@ export class GenBlock extends Component {
           dialog.closeDialog(null, "LockBlock");
           return;
         }
+        const seedInfo = response.data.data.seed_info;
+        var spritePath = "";
+        switch (seedInfo.level) {
+          case 1:
+            spritePath = "Carrot";
+            break;
+          case 2:
+            spritePath = "Chive";
+            break;
+          case 3:
+            spritePath = "Tomato";
+            break;
+          case 4:
+            spritePath = "Corn";
+            break;
+          case 5:
+            spritePath = "Sunflower";
+            break;
+          case 6:
+            spritePath = "Watermelon";
+            break;
+          case 7:
+            spritePath = "BSC";
+            break;
+          case 8:
+            spritePath = "Base";
+            break;
+          case 9:
+            spritePath = "Solona";
+            break;
+          case 10:
+            spritePath = "Ton";
+            break;
+          case 11:
+            spritePath = "ETH";
+            break;
+          case 12:
+            spritePath = "BTC";
+            break;
+          default:
+            spritePath = "Carrot";
+        }
+
+        resources.load("seedPlant", SpriteAtlas, (err, atlas) => {
+          if (err) {
+            console.error("Failed to load sprite:", err);
+            return;
+          }
+
+          dialog.seedUnlockBox
+            .getChildByName("Seed")
+            .getChildByName("Photo")
+            .getComponent(Sprite).spriteFrame =
+            atlas.getSpriteFrame(spritePath);
+        });
+
+        dialog.seedUnlockBox
+          .getChildByName("Seed")
+          .getChildByName("Name")
+          .getComponent(Label).string = i18n.seed[seedInfo.level];
+
         this.requestFarmLand();
         dialog.closeDialog(null, "LockBlock");
         AudioMgr.inst.playOneShot("sounds/unlock", 1);
         dialog.showDialog(null, "SeedUnlock");
+
         setTimeout(() => {
           dialog.closeDialog(null, "SeedUnlock");
         }, 2000);
