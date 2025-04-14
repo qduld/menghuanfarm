@@ -409,7 +409,7 @@
       ]
     },
     "cce:/internal/x/prerequisite-imports": {
-      "mTimestamp": 375167925.4179,
+      "mTimestamp": 376480746.7246,
       "chunkId": "6d8fd2b0177941b032ddc0733af48a561fb60657",
       "imports": [
         {
@@ -2585,7 +2585,7 @@
     },
     "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/http.ts": {
       "mTimestamp": {
-        "mtime": 1744637901740.4023,
+        "mtime": 1744639495823.2104,
         "uuid": "c04de095-1da8-424a-8757-d86c10b4d537"
       },
       "chunkId": "d4b8c1b1aa284d2ff86f93e4a2e0f36c05147c62",
@@ -2598,16 +2598,15 @@
           "value": "cc"
         },
         {
-          "value": "./loadData",
-          "resolved": "__unresolved_1",
+          "value": "@telegram-apps/sdk",
           "loc": {
             "start": {
-              "line": 1,
-              "column": 61
+              "line": 2,
+              "column": 37
             },
             "end": {
-              "line": 1,
-              "column": 73
+              "line": 2,
+              "column": 57
             }
           }
         }
@@ -2631,7 +2630,7 @@
         {
           "resolved": {
             "type": "module",
-            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/loadData.ts"
+            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/node_modules/@telegram-apps/sdk/dist/index.js"
           },
           "messages": []
         }
@@ -7265,7 +7264,7 @@
     },
     "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/websocketManager.ts": {
       "mTimestamp": {
-        "mtime": 1744637893273.9524,
+        "mtime": 1744639516329.9968,
         "uuid": "01f4fe5d-7118-4a11-a185-a71fdcae2531"
       },
       "chunkId": "a37215805077840e1bb97db18b822d86532a72c2",
@@ -7281,16 +7280,15 @@
           "value": "cc"
         },
         {
-          "value": "./loadData",
-          "resolved": "__unresolved_1",
+          "value": "@telegram-apps/sdk",
           "loc": {
             "start": {
-              "line": 2,
-              "column": 61
+              "line": 3,
+              "column": 37
             },
             "end": {
-              "line": 2,
-              "column": 73
+              "line": 3,
+              "column": 57
             }
           }
         }
@@ -7321,7 +7319,7 @@
         {
           "resolved": {
             "type": "module",
-            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/loadData.ts"
+            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/node_modules/@telegram-apps/sdk/dist/index.js"
           },
           "messages": []
         }
