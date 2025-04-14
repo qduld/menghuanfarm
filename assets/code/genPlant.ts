@@ -62,10 +62,10 @@ export class GenPlant extends Component {
           this.plantMarkingsPath = "Corn";
           break;
         case 5:
-          this.plantMarkingsPath = "Watermelon";
+          this.plantMarkingsPath = "Sunflower";
           break;
         case 6:
-          this.plantMarkingsPath = "Sunflower";
+          this.plantMarkingsPath = "Watermelon";
           break;
         case 7:
           this.plantMarkingsPath = "BSC";
