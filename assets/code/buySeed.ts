@@ -130,7 +130,7 @@ export class BuySeed extends Component {
     this.USeedSprite.getChildByName("Number")
       .getChildByName("Label")
       .getComponent(Label).string = seed.level;
-    this.USeedName.getComponent(Label).string = seed.name;
+    this.USeedName.getComponent(Label).string = spritePath;
 
     this.USeedProfit.getChildByName("Value").getComponent(
       Label
