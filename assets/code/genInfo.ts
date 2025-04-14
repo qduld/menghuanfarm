@@ -156,16 +156,6 @@ export class GenInfo extends Component {
       this.UExpand.getChildByName("Suffix").getComponent(
         Label
       ).string = `/${userInfo.expansion_card.total_count})`;
-
-      this.scheduleOnce(() => {
-        this.UAddition.getComponent(DynamicLabel).setText(
-          `+${
-            userInfo.expansion_card?.ratio
-              ? userInfo.expansion_card?.ratio
-              : userInfo.radio
-          }%`
-        );
-      }, 0);
     } else {
       this.UAddition.getComponent(DynamicLabel).hasExpand = false;
       this.UExpand.active = false;
@@ -181,6 +171,13 @@ export class GenInfo extends Component {
             .rectWidth +
           20,
         this.Upoints_balance.position.y
+      );
+      this.UAddition.getComponent(DynamicLabel).setText(
+        `+${
+          userInfo.expansion_card?.ratio
+            ? userInfo.expansion_card?.ratio
+            : userInfo.radio
+        }%`
       );
     }, 0);
   }
