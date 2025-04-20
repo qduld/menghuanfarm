@@ -14,7 +14,7 @@ import {
 import { httpRequest } from "./http";
 import { ISeedList } from "./interface";
 // import { seedList } from "./loadData";
-import { formatNumberShortDynamic, formatSeconds } from "./utils";
+import { formatNumberShortDynamic, formatSecondsImprove } from "./utils";
 import { Dialog } from "./dialog";
 import { SeedEffect } from "./seedEffect";
 import { GenBlock } from "./genBlock";
@@ -123,7 +123,7 @@ export class GenBag extends Component {
       )}/block`;
 
       seedSection.getChildByName("Time").getComponent(Label).string =
-        formatSeconds(seed.maturity_time);
+        formatSecondsImprove(seed.maturity_time);
 
       let spritePath = "";
       switch (seed.level) {

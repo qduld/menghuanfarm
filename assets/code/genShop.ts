@@ -14,7 +14,7 @@ import {
 import { httpRequest } from "./http";
 import { ISeedList } from "./interface";
 import { BuySeedEffect } from "./buySeedEffect";
-import { formatNumberShortDynamic, formatSeconds } from "./utils";
+import { formatNumberShortDynamic, formatSecondsImprove } from "./utils";
 import { DrawRoundedRect } from "./drawRoundedRect";
 import { i18n } from "./loadData";
 import { Dialog } from "./dialog";
@@ -108,7 +108,7 @@ export class GenShop extends Component {
       )}/block`;
 
       seedSection.getChildByName("Time").getComponent(Label).string =
-        formatSeconds(seed.maturity_time);
+        formatSecondsImprove(seed.maturity_time);
 
       seedSection
         .getChildByName("Button")

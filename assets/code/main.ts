@@ -47,8 +47,8 @@ export class main extends Component {
     director.preloadScene("task");
 
     const urlParams = new URLSearchParams(window.location.search);
-    const tgWebAppStartParam = urlParams.get("tgWebAppStartParam");
-    if (tgWebAppStartParam?.includes("circles")) {
+    const scene = urlParams.get("scene");
+    if (scene?.includes("circles")) {
       await this.circleScenePreview();
       return;
     }

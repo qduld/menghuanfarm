@@ -136,8 +136,7 @@ export class circles extends Component {
 
     loadingUI.hide();
 
-    globalData.shareLink =
-      "https://franklinzelo.duckdns.org/node/share?scene=circles";
+    globalData.shareLink = "https://t.me/WeFarmingBot/WeFarmingNow";
   }
 
   updateScrollViewHeight(sectionNum) {
@@ -713,6 +712,9 @@ export class circles extends Component {
     const utils = initUtils();
     const globalData = GlobalData.getInstance();
 
-    utils.shareURL(globalData.shareLink, ``);
+    utils.shareURL(
+      globalData.shareLink,
+      `Welcome to join my team and steal vegetables together!`
+    );
   }
 }

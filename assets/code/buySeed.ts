@@ -15,7 +15,7 @@ import { httpRequest } from "./http";
 import { Dialog } from "./dialog";
 import { GenInfo } from "./genInfo";
 import { AudioMgr } from "./audioManager";
-import { formatNumberShortDynamic, formatSeconds } from "./utils";
+import { formatNumberShortDynamic, formatSecondsImprove } from "./utils";
 
 const { ccclass, property } = _decorator;
 @ccclass("BuySeed")
@@ -137,7 +137,7 @@ export class BuySeed extends Component {
     ).string = `+${formatNumberShortDynamic(seed.points)}/block`;
 
     this.USeedRipeningTime.getChildByName("Value").getComponent(Label).string =
-      formatSeconds(seed.maturity_time);
+      formatSecondsImprove(seed.maturity_time);
 
     this.USeedNumber.getChildByName("Value").getComponent(Label).string = "1";
 

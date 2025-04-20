@@ -1,4 +1,5 @@
-import { tokenMock, userFilter, authFilter, tokenSort } from "./loadData";
+import { GlobalData } from "./globalData";
+import { tokenMock, userFilter, authFilter, tokenSort, i18n } from "./loadData";
 import { retrieveLaunchParams } from "@telegram-apps/sdk";
 
 export interface HttpRequestOptions {
@@ -30,7 +31,8 @@ const defaultServer = "https://bf.tomocloud.com";
 export async function httpRequest<T>(
   url: string,
   options: HttpRequestOptions = {},
-  params?: Record<string, any>
+  params?: Record<string, any>,
+  timeout: number = 5000 // 超时时间，默认 5000 毫秒（5 秒）
 ): Promise<HttpResponse> {
   if (!token) {
     const { initDataRaw } = retrieveLaunchParams();
@@ -54,22 +56,32 @@ export async function httpRequest<T>(
     url += objectToQueryString(params);
   }
 
+  // 创建超时的 Promise
+  const timeoutPromise = new Promise<never>((_, reject) => {
+    setTimeout(() => {
+      reject(new Error("Request timed out")); // 超时后抛出错误
+    }, timeout);
+  });
+
   try {
-    const response = await fetch(`${defaultServer}${url}`, {
-      method,
-      headers: {
-        ...headers, // 确保 headers 不会被覆盖
-        token, // 添加 Authorization
-      },
-      redirect: "follow",
-      credentials: "same-origin",
-      body: body ? JSON.stringify(body) : null,
-    });
+    const response = await Promise.race([
+      fetch(`${defaultServer}${url}`, {
+        method,
+        headers: {
+          ...headers,
+          token,
+        },
+        redirect: "follow",
+        credentials: "same-origin",
+        body: body ? JSON.stringify(body) : null,
+      }),
+      timeoutPromise, // 超时控制
+    ]);
 
     // 解析 JSON 响应
     const data = await response.json();
 
-    // 返回一个统一的响应格式
+    // 返回统一的响应格式
     return {
       status: response.status,
       data,
@@ -77,7 +89,9 @@ export async function httpRequest<T>(
     };
   } catch (error) {
     // 在这里可以添加更多的错误处理逻辑
-    throw new Error(`HTTP request failed: ${error}`);
+    const globalData = GlobalData.getInstance();
+    globalData.setMessageLabel(i18n.requestError);
+    throw new Error(`HTTP request failed: ${error.message}`);
   }
 }
 

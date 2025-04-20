@@ -93,6 +93,7 @@ export const i18n = {
   todayChecked: "Signed in today",
   taskCompleted: "Task Completed",
   taskUnCompleted: "Task not completed",
+  requestError: "Request error",
 };
 
 export const errTips = {
