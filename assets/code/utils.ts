@@ -175,3 +175,44 @@ export function formatNumberShortDynamic(amount: number): string {
     units[unitIndex]
   );
 }
+
+// 有时间戳获取当天00:00:00的时间戳
+export function getStartOfDayTimestamp(timestampInSeconds) {
+  // 1. 将秒级时间戳转换为毫秒级
+  const timestampInMilliseconds = timestampInSeconds * 1000;
+
+  // 2. 创建一个 Date 对象
+  const date = new Date(timestampInMilliseconds);
+
+  // 3. 获取当天的年、月、日
+  const year = date.getFullYear();
+  const month = date.getMonth(); // 注意：月份从 0 开始
+  const day = date.getDate();
+
+  // 4. 创建一个新的 Date 对象，表示当天的 00:00:00
+  const startOfDay = new Date(year, month, day);
+
+  // 5. 返回时间戳（毫秒级）
+  return startOfDay.getTime();
+}
+
+// 判断两个时间戳之间的天数是否大于 30 天（包含起始的两天）
+export function isDifferenceBetweenTimes(timestamp1, timestamp2) {
+  // 确保时间戳是毫秒级
+  const toMilliseconds = (ts) => (ts < 1e12 ? ts * 1000 : ts);
+
+  const timestamp1InMilliseconds = toMilliseconds(timestamp1);
+  const timestamp2InMilliseconds = toMilliseconds(timestamp2);
+
+  // 计算两个时间戳之间的毫秒差
+  const differenceInMilliseconds = Math.abs(
+    timestamp1InMilliseconds - timestamp2InMilliseconds
+  );
+
+  // 将毫秒差转换为天数，并加 1（包含起始的两天）
+  const millisecondsPerDay = 1000 * 60 * 60 * 24; // 一天的毫秒数
+  const differenceInDays =
+    Math.floor(differenceInMilliseconds / millisecondsPerDay) + 1;
+
+  return differenceInDays;
+}

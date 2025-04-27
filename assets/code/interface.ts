@@ -106,6 +106,11 @@ export interface IExpand {
   user_id: string;
 }
 
+interface IItems {
+  item_id: number;
+  item_name: string;
+  item_type: number;
+}
 // /farm/u/userInfo 用户信息
 export interface IUserInfo {
   id: string;
@@ -119,6 +124,7 @@ export interface IUserInfo {
   radio: number; // 加成
   avatar: string;
   expansion_card?: IExpand;
+  items: IItems[];
 }
 
 // /farm/u/agg 我今日的收益统计
@@ -230,11 +236,33 @@ export enum TaskType {
 }
 
 export interface ITaskListItem {
-  completed: boolean;
+  id: number;
   progress: number;
-  reward: number;
-  special_tag: string;
   status: number;
-  target: number;
-  task_type: TaskType;
+  description: string;
+  reward_name: string;
+  reward_type: string;
+  reward_value: number;
+  target_progress: number;
+  title: string;
+  type: string;
+}
+
+export interface ICheckInStatus {
+  has_checked_in_today: boolean;
+  last_checkin_ts: number;
+}
+
+export interface ICheckInHistory {
+  checkin_days: number[];
+  current_day: number;
+  continuous_days: number;
+}
+
+export interface IDayItem {
+  id: number;
+  title: string;
+  rewardType: number;
+  reward: string;
+  checkIn: number;
 }
