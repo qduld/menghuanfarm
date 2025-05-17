@@ -28,7 +28,6 @@ export class InputHandler extends Component {
       }
 
       debounceTimeout = setTimeout(() => {
-        console.log("Debounced Input:", inputText);
         if (!inputText) {
           this.onFocusEvent.bind(this.callbackThis)(event, false);
           return;
@@ -48,11 +47,9 @@ export class InputHandler extends Component {
   // 编辑框结束输入时的回调
   async onTextChange() {
     const inputText = this.editBox.string;
-    console.log("Editing ended, input text:", inputText);
 
     try {
       const response = await this.callback(inputText);
-      console.log("Backend response:", response);
     } catch (error) {
       console.error("Error querying backend:", error);
     }

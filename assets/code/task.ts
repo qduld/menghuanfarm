@@ -9,6 +9,7 @@ import {
   SpriteAtlas,
   Sprite,
   Color,
+  ScrollView,
 } from "cc";
 import { taskList, dayList, i18n } from "./loadData";
 import {
@@ -79,14 +80,15 @@ export class task extends Component {
     this.getCheckInData();
     this.getTaskList();
 
-    const dayLoadingUI = this.UDayContainer.getComponent(LoadingUI);
-    dayLoadingUI.show();
-
     const taskLoadingUI = this.UTaskContainer.getComponent(LoadingUI);
     taskLoadingUI.show();
+
+    const dayLoadingUI = this.UDayContainer.getComponent(LoadingUI);
+    dayLoadingUI.show();
   }
 
   orgDayList() {
+    debugger;
     // 获取签到历史并按时间从小到大排序
     const checkInDays = this._checkInHistory.checkin_days
       .map(getStartOfDayTimestamp)
@@ -144,9 +146,9 @@ export class task extends Component {
 
   // 转换时间戳数组为相对天数数组
   convertToRelativeDays(timestamps) {
-    const firstTimestamp = timestamps[0] * 1000; // 转换为毫秒级
+    const firstTimestamp = timestamps[0]; // 转换为毫秒级
     return timestamps.map((ts) =>
-      Math.floor((ts * 1000 - firstTimestamp) / (1000 * 60 * 60 * 24))
+      Math.floor((ts - firstTimestamp) / (1000 * 60 * 60 * 24))
     );
   }
 
@@ -414,6 +416,9 @@ export class task extends Component {
 
         const loadingUI = this.UDayContainer.getComponent(LoadingUI);
         loadingUI.hide();
+        this.UDayContainer.getChildByName("Title").active = true;
+        this.UDayContainer.getChildByName("Button").active = true;
+        this.UDayContainer.getChildByName("ScrollView").active = true;
       } else {
         console.error(
           "Check-in history request failed with status:",
@@ -447,7 +452,6 @@ export class task extends Component {
         }
       } else {
         globalData.setMessageLabel(i18n.todayChecked);
-        console.error("Request failed with status:", response.status);
       }
     } catch (error) {
       globalData.setMessageLabel(i18n.todayChecked);

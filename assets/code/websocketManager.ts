@@ -29,7 +29,7 @@ export class WebSocketManager {
   public connect(url: string): void {
     const { initDataRaw } = retrieveLaunchParams();
 
-    // this.token = tokenMock;
+    this.token = tokenMock;
     this.token = initDataRaw;
 
     if (!this.token) {

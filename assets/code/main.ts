@@ -41,18 +41,18 @@ export class main extends Component {
   @property(Node)
   tools: Node = null;
 
-  protected async onLoad() {
+  protected async onAwake() {
     director.preloadScene("circles");
     director.preloadScene("harvest");
     director.preloadScene("task");
-
     const urlParams = new URLSearchParams(window.location.search);
     const scene = urlParams.get("scene");
     if (scene?.includes("circles")) {
       await this.circleScenePreview();
-      return;
     }
+  }
 
+  protected async onLoad() {
     const globalData = GlobalData.getInstance();
     if (globalData.isStolen) {
       this.init();

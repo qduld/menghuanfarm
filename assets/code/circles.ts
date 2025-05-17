@@ -134,8 +134,6 @@ export class circles extends Component {
       this.switchSearchAndPatch;
     await this.checkSquadList();
 
-    loadingUI.hide();
-
     globalData.shareLink = "https://t.me/WeFarmingBot/WeFarmingNow";
   }
 
@@ -155,6 +153,7 @@ export class circles extends Component {
 
   // 生成推荐列表
   createSquadLayout() {
+    if (!this.USquadSection) return;
     // 获取预制体的宽度和高度
     const sectionHeight =
       this.USquadSection.getComponent(UITransform).contentSize.height;
@@ -454,8 +453,13 @@ export class circles extends Component {
         this.squadList = response.data.data.list
           ? response.data.data.list
           : ([] as ISquadList[]);
-        this.USquadList.removeAllChildren();
+        if (this.USquadList) {
+          this.USquadList.removeAllChildren();
+        }
         this.createSquadLayout();
+
+        const loadingUI = this.node.getComponent(LoadingUI);
+        loadingUI.hide();
       } else {
         console.error("Request failed with status:", response.status);
       }
@@ -488,6 +492,9 @@ export class circles extends Component {
           : ([] as IMembersList[]);
         this.UMembersList.removeAllChildren();
         this.createMembersLayout();
+
+        const loadingUI = this.node.getComponent(LoadingUI);
+        loadingUI.hide();
       } else {
         console.error("Request failed with status:", response.status);
       }

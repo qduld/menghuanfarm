@@ -111,7 +111,6 @@ export class GenInfo extends Component {
         spriteFrame.texture = texture;
 
         if (this.UAvatar) {
-          console.log(this.UAvatar);
           this.UAvatar.getComponent(UITransform).width = 90;
           this.UAvatar.getComponent(UITransform).height = 90;
 

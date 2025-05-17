@@ -130,7 +130,6 @@ export class CustomInputBox extends Component {
       }
     }
 
-    console.log(`当前总行数: ${totalLines}`);
     this.totalLines = totalLines;
   }
 

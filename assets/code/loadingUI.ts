@@ -59,6 +59,7 @@ export class LoadingUI extends Component {
    */
   public show(retryCallback?: () => void) {
     if (!this.node.getChildByName("LoadingUI")) {
+      this.loadingNode = instantiate(this.loadingNode);
       this.node.addChild(this.loadingNode);
       this.spinnerNode = this.loadingNode.getChildByName("Spinner");
     }
