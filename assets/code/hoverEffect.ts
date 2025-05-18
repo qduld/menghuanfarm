@@ -61,7 +61,7 @@ export class HoverEffect extends Component {
     if (globalData.isStolen) return;
     if (this.targetLevel === 3) {
       this.targetNode.getChildByName("Receivehand").active = true;
-      if (globalData.userInfo.expansion_card) {
+      if (globalData.userInfo?.expansion_card) {
         if (globalData.isStolen) return;
         this.targetNode.getChildByName("Expand").active = true;
         this.targetNode
@@ -132,7 +132,7 @@ export class HoverEffect extends Component {
 
     if (this.targetLevel === 3) {
       this.targetNode.getChildByName("Receivehand").active = true;
-      if (globalData.userInfo.expansion_card) {
+      if (globalData.userInfo?.expansion_card) {
         if (globalData.isStolen) return;
         this.targetNode.getChildByName("Expand").active = true;
         this.targetNode

@@ -32,7 +32,7 @@ export async function httpRequest<T>(
   url: string,
   options: HttpRequestOptions = {},
   params?: Record<string, any>,
-  timeout: number = 5000 // 超时时间，默认 5000 毫秒（5 秒）
+  timeout: number = 10000 // 超时时间，默认 5000 毫秒（5 秒）
 ): Promise<HttpResponse> {
   if (!token) {
     const { initDataRaw } = retrieveLaunchParams();

@@ -96,7 +96,7 @@ export class ExpandNoticeWithArrow extends Component {
 
       // 设置箭头方向向上
       // 平滑旋转到 180 度
-      const startEuler = this.arrowButton.eulerAngles.clone();
+      const startEuler = this.arrowButton?.eulerAngles.clone();
       tween(startEuler)
         .to(0.3, new Vec3(0, 0, 180), {
           onUpdate: (value) => {
@@ -131,7 +131,7 @@ export class ExpandNoticeWithArrow extends Component {
 
       // 设置箭头方向向下
       // 平滑旋转到 180 度
-      const startEuler = this.arrowButton.eulerAngles.clone();
+      const startEuler = this.arrowButton?.eulerAngles.clone();
       tween(startEuler)
         .to(0.3, new Vec3(0, 0, 0), {
           onUpdate: (value) => {

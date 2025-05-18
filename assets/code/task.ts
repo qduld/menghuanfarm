@@ -41,6 +41,9 @@ type TaskTypes = (typeof taskTypes)[number]; // 'typeA' | 'typeB' | 'typeC'
 @ccclass("task")
 export class task extends Component {
   @property(Node)
+  UDayTitle: Node = null; // UDayTitle
+
+  @property(Node)
   UDayList: Node = null; // UDayList
 
   @property(Node)
@@ -72,7 +75,7 @@ export class task extends Component {
 
   private _checkInHistory: ICheckInHistory;
   private _checkInStatus: ICheckInStatus;
-  private _currentDayIndex: Number = 0;
+  private _currentDayIndex: number = 0;
   protected onLoad(): void {
     this.init();
   }
@@ -88,7 +91,6 @@ export class task extends Component {
   }
 
   orgDayList() {
-    debugger;
     // 获取签到历史并按时间从小到大排序
     const checkInDays = this._checkInHistory.checkin_days
       .map(getStartOfDayTimestamp)
@@ -119,29 +121,134 @@ export class task extends Component {
     // 转换签到日期为相对天数
     const relativeDays = this.convertToRelativeDays(checkInDays);
 
+    let currentTimestamp = 0;
+
+    if (this._checkInStatus.has_checked_in_today) {
+      currentTimestamp = this._checkInHistory.current_day * 1000;
+    } else {
+      currentTimestamp =
+        this._checkInHistory.current_day * 1000 - 24 * 60 * 60 * 1000;
+    }
+
     // 处理前缀天数列表
-    const prefixDayList = this.processDays(relativeDays, dayList);
+    const prefixDayList = this.processDays(
+      relativeDays,
+      dayList,
+      currentTimestamp,
+      checkInDays[0]
+    );
+
+    const continusDays = this.calculateContinuousDays(
+      relativeDays,
+      new Date(currentTimestamp),
+      new Date(checkInDays[0])
+    );
+
+    this.UDayTitle.getChildByName("Main")
+      .getChildByName("Number")
+      .getComponent(Label).string = continusDays + "";
 
     // 计算前缀天数和后缀天数
     let prefixDays, suffixDays;
     if (this._checkInStatus.has_checked_in_today) {
-      prefixDays = currentBetweenDays - this._checkInHistory.continuous_days;
+      prefixDays = currentBetweenDays - continusDays;
       this._currentDayIndex = prefixDayList.length - 1;
     } else {
-      prefixDays =
-        currentBetweenDays - this._checkInHistory.continuous_days - 1;
+      prefixDays = currentBetweenDays - continusDays - 1;
       this._currentDayIndex = prefixDayList.length;
     }
     suffixDays = 30 - prefixDayList.length;
 
     // 截取后缀天数列表
     const suffixDayList = dayList.slice(
-      prefixDays + 1,
-      prefixDays + 1 + suffixDays
+      continusDays,
+      continusDays + suffixDays
     );
+
+    let currentDayItem = null;
+    if (this._checkInStatus.has_checked_in_today) {
+      currentDayItem = dayList.slice(continusDays - 1)[0];
+    } else {
+      currentDayItem = dayList.slice(continusDays)[0];
+    }
+
+    const nextBigReward = this.getNextBigRewardFromSuffix(
+      currentDayItem.id,
+      suffixDayList
+    );
+
+    if (nextBigReward) {
+      this.UDayTitle.getChildByName("Sub")
+        .getChildByName("Number")
+        .getComponent(Label).string = nextBigReward.daysUntilReward + "";
+    }
 
     // 拼接前缀和后缀天数列表
     this.dayList = prefixDayList.concat(suffixDayList);
+  }
+
+  getNextBigRewardFromSuffix(currentDay, suffixDayList) {
+    // 定义大奖的 rewardType
+    const bigRewardTypes = [2, 3, 4, 5, 6];
+
+    // 遍历 suffixDayList，找到第一个大奖
+    for (let i = 0; i < suffixDayList.length; i++) {
+      const day = suffixDayList[i];
+      if (bigRewardTypes.indexOf(day.rewardType) !== -1) {
+        // 计算距离下一个大奖的天数
+        const daysUntilReward = day.id - currentDay;
+        return {
+          daysUntilReward,
+          reward: day.reward,
+          rewardType: day.rewardType,
+        };
+      }
+    }
+
+    // 如果没有找到大奖，返回 null
+    return null;
+  }
+
+  calculateContinuousDays(relativeDays, currentDate, startDate) {
+    if (relativeDays.length === 0) return 0;
+
+    // Step 1: 转换relativeDays为实际日期数组
+    const dates = relativeDays.map((day) => {
+      const date = new Date(startDate);
+      date.setDate(startDate.getDate() + day);
+      return date;
+    });
+
+    // Step 2: 找到最后一个签到日期
+    const lastSignedDate = dates[dates.length - 1];
+    const timeDiff = currentDate - lastSignedDate;
+    const dayDiff = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+
+    // Step 3: 判断最后一天是否连续（允许最后一天是今天或昨天）
+    if (dayDiff > 1) return 0; // 超过1天未签到
+
+    // Step 4: 从今天开始往前统计连续天数
+    let continuousDays = 0;
+    let checkDate = new Date(currentDate);
+
+    while (true) {
+      // 检查当前日期是否在签到日期中
+      const isSigned = dates.some(
+        (d) =>
+          d.getDate() === checkDate.getDate() &&
+          d.getMonth() === checkDate.getMonth() &&
+          d.getFullYear() === checkDate.getFullYear()
+      );
+
+      if (isSigned) {
+        continuousDays++;
+        checkDate.setDate(checkDate.getDate() - 1); // 前一天
+      } else {
+        break;
+      }
+    }
+
+    return continuousDays;
   }
 
   // 转换时间戳数组为相对天数数组
@@ -152,54 +259,62 @@ export class task extends Component {
     );
   }
 
-  processDays(relativeDays, dayList) {
-    const defaultObject = Object.assign(dayList[0]);
+  getCurrentDayDifference(currentTimestamp, firstTimestamp) {
+    const differenceInMilliseconds = currentTimestamp - firstTimestamp;
+    return Math.floor(differenceInMilliseconds / (1000 * 60 * 60 * 24)); // 转换为天数差
+  }
+
+  processDays(relativeDays, dayList, currentTimestamp, firstTimestamp) {
+    // 默认对象：基于 dayList 的第一个元素，添加 checkIn 属性
+    const defaultObject = JSON.parse(JSON.stringify(dayList[0]));
     defaultObject.checkIn = 2;
 
-    // Step 1: 找到最大天数，并生成完整的天数范围
-    const maxDay = Math.max(...relativeDays);
-    const fullRange = Array.from({ length: maxDay + 1 }, (_, i) => i);
+    // Step 1: 获取第一个签到日期的相对天数（即0）
+    const firstDay = relativeDays[0];
 
-    // Step 2: 初始化结果数组
+    // Step 2: 计算当前日期与第一个签到日期的天数差
+    const currentDayDifference = this.getCurrentDayDifference(
+      currentTimestamp,
+      firstTimestamp
+    );
+
+    // Step 3: 生成完整的天数范围 [0, 1, 2, ..., currentDayDifference]
+    const fullRange = Array.from(
+      { length: currentDayDifference + 1 },
+      (_, i) => i
+    );
+
+    // Step 4: 初始化结果数组
     const result = [];
 
-    // Step 3: 遍历完整范围，填充对象
+    // Step 5: 遍历完整范围，填充对象
     let i = 0;
-    while (i <= maxDay) {
+    while (i <= currentDayDifference) {
       if (relativeDays.includes(i)) {
-        // 当前天数存在于输入数组中
+        // 当前天数存在于 relativeDays 中
         let j = i + 1;
 
         // 找到连续的天数段
-        while (j <= maxDay && relativeDays.includes(j) && j === i + (j - i)) {
+        while (j <= currentDayDifference && relativeDays.includes(j)) {
           j++;
         }
 
         const segmentLength = j - i; // 当前连续段的长度
 
         // 根据连续段长度填充对象
-        if ([3, 7, 12, 20].some((length) => length <= segmentLength)) {
-          // 如果满足连续条件，从 dayList 截取对应数量的对象
-          for (let k = 0; k < segmentLength; k++) {
-            const obj = { ...dayList[k], checkIn: 1 }; // 设置 checkIn: 1
-            result.push(obj);
-          }
-        } else {
-          // 如果不满足连续条件，用默认对象填补，并设置 checkIn: 1
-          for (let k = 0; k < segmentLength; k++) {
-            result.push({
-              ...defaultObject,
-              id: result.length + 1,
-              checkIn: 1,
-            });
-          }
+        for (let k = 0; k < segmentLength; k++) {
+          const obj = { ...dayList[k], checkIn: 1 };
+          obj.title = `Day ${k + 1}`; // 动态设置 title，从 Day 1 开始累加
+          result.push(obj);
         }
 
-        // 移动到下一个段
+        // 跳过已处理的连续段
         i = j;
       } else {
-        // 当前天数不存在于输入数组中，用默认对象填补，并设置 checkIn: 2
-        result.push({ ...defaultObject, id: result.length + 1, checkIn: 2 });
+        // 当前天数不存在于 relativeDays 中，用默认对象填充，checkIn 设为 2
+        const obj = { ...defaultObject, id: result.length + 1, checkIn: 2 };
+        obj.title = "Day 1"; // 不连续时，始终显示为 Day 1
+        result.push(obj);
         i++;
       }
     }
@@ -440,10 +555,12 @@ export class task extends Component {
       if (response.ok) {
         if (response.data.code === 200) {
           globalData.setMessageLabel(i18n.checkInSuccess);
+
           const currentDayItem = this.UDayList.children.find(
-            (item, index) => index === this._currentDayIndex
+            (item, index) => index === this._currentDayIndex + 1
           );
 
+          currentDayItem.getChildByName("Mask").active = true;
           currentDayItem
             .getChildByName("Mask")
             .getChildByName("Correct").active = true;

@@ -6,6 +6,9 @@ import {
   instantiate,
   UITransform,
   Label,
+  resources,
+  SpriteAtlas,
+  Sprite,
 } from "cc";
 import { harvestList, i18n } from "./loadData";
 import { httpRequest } from "./http";
@@ -18,6 +21,15 @@ import { GenInfo } from "./genInfo";
 import { LoadingUI } from "./loadingUI";
 
 const { ccclass, property } = _decorator;
+
+const harvestMap = {
+  1: "RaiseSeedlings",
+  2: "Tilling",
+  3: "Irrigate",
+  4: "Fertilize",
+  5: "BugSpray",
+  6: "Weeding",
+};
 @ccclass("harvest")
 export class harvest extends Component {
   @property
@@ -90,7 +102,7 @@ export class harvest extends Component {
       harvestSection.active = true;
       harvestSection.setPosition(posX, posY);
       harvestSection.getChildByName("Name").getComponent(Label).string =
-        harvest.name + "";
+        i18n.harvest[harvest.id];
       harvestSection
         .getChildByName("Addition")
         .getChildByName("Label")
@@ -101,6 +113,20 @@ export class harvest extends Component {
         .getComponent(Label).string = harvest.points + "";
 
       harvestSection.getChildByName("Button")["cardInfo"] = harvest;
+
+      resources.load("iconList", SpriteAtlas, (err, atlas) => {
+        if (err) {
+          console.error("Failed to load sprite:", err);
+          return;
+        }
+
+        harvestSection
+          .getChildByName("Picture")
+          .getChildByName("Sprite")
+          .getComponent(Sprite).spriteFrame = atlas.getSpriteFrame(
+          harvestMap[harvest.id]
+        );
+      });
     });
   }
 
@@ -145,7 +171,7 @@ export class harvest extends Component {
     dialog.showDialog(null, "BuyProps");
 
     dialog.buyPropsBox.getChildByName("Name").getComponent(Label).string =
-      this.currentCard.name;
+      i18n.harvest[this.currentCard.id];
 
     dialog.buyPropsBox
       .getChildByName("Harvest")
@@ -156,6 +182,25 @@ export class harvest extends Component {
       .getChildByName("Button")
       .getChildByName("Label")
       .getComponent(Label).string = this.currentCard.points + "";
+
+    resources.load("iconList", SpriteAtlas, (err, atlas) => {
+      if (err) {
+        console.error("Failed to load sprite:", err);
+        return;
+      }
+
+      const harvestSprite = dialog.buyPropsBox
+        .getChildByName("Picture")
+        .getChildByName("Sprite");
+
+      harvestSprite.getComponent(Sprite).spriteFrame = atlas.getSpriteFrame(
+        harvestMap[this.currentCard.id]
+      );
+
+      harvestSprite.getComponent(UITransform).width = 160;
+      harvestSprite.getComponent(UITransform).height = 160;
+      harvestSprite.setPosition(-10, -20, 0);
+    });
   }
 
   setBuySucceededShow() {

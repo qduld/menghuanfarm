@@ -89,6 +89,14 @@ export const i18n = {
     11: "ETH",
     12: "BTC",
   },
+  harvest: {
+    1: "Raise Seedlings",
+    2: "Tilling",
+    3: "Irrigate",
+    4: "Fertilize",
+    5: "Bug Spray",
+    6: "Weeding",
+  },
   task: {
     1: "Harvesting master",
     2: "Join the circle",
