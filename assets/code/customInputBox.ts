@@ -63,36 +63,29 @@ export class CustomInputBox extends Component {
 
   private createInputElement() {
     this.inputElement = document.createElement("textarea");
-    const style = this.inputElement.style;
 
-    style.position = "fixed";
-    style.bottom = "0px";
-    style.left = "0px";
-    style.width = "100vw";
+    const style = this.inputElement.style;
+    style.position = "absolute"; // 或 fixed 也可以，但必须能点击到
+    style.left = "0";
+    style.top = "0";
+    style.width = "100%";
     style.height = "40px";
-    style.opacity = "0.01";
-    style.zIndex = "9999";
-    style.fontSize = "16px";
-    style.lineHeight = "20px";
-    style.padding = "0";
-    style.margin = "0";
+    style.opacity = "0.01"; // 不用 0，iOS 会阻止焦点
+    style.zIndex = "1000"; // 确保在 WebGL 层之上
+    style.pointerEvents = "auto"; // 可交互
+    style.background = "transparent";
     style.border = "none";
     style.outline = "none";
     style.resize = "none";
-    style.pointerEvents = "auto";
-
-    this.inputElement.setAttribute("autocapitalize", "off");
-    this.inputElement.setAttribute("autocomplete", "off");
-    this.inputElement.setAttribute("autocorrect", "off");
-    this.inputElement.setAttribute("inputmode", "text");
+    style.fontSize = "16px";
 
     this.inputElement.value = this.content;
     document.body.appendChild(this.inputElement);
 
-    setTimeout(() => {
-      this.inputElement!.focus();
-    }, 0);
+    // 立即 focus（不能包 setTimeout）
+    this.inputElement.focus();
 
+    // 注册事件
     this.inputElement.addEventListener("input", this.onInput.bind(this));
     this.inputElement.addEventListener(
       "compositionstart",
@@ -103,6 +96,10 @@ export class CustomInputBox extends Component {
       this.onInput();
     });
     this.inputElement.addEventListener("blur", this.onBlur.bind(this));
+
+    this.inputElement.addEventListener("focus", () => {
+      console.log("Input focused");
+    });
   }
 
   private removeInputElement() {

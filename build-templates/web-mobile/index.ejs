@@ -71,6 +71,21 @@
         transform: translate(-50%, -50%);
         color: #000;
       }
+      textarea {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 40px;
+        font-size: 16px;
+        opacity: 0.01; /* 注意不是 0 */
+        z-index: 1000;
+        background: transparent;
+        border: none;
+        outline: none;
+        resize: none;
+        pointer-events: auto;
+      }
     </style>
     <script>
       window.onload = function () {
