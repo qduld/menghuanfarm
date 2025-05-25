@@ -68,7 +68,7 @@ export class harvest extends Component {
       "Canvas/Content/ScrollView/view/content/Section"
     );
     this.UMoney = find("Canvas/Top/Money");
-    this.UAddition = find("Canvas/Top/Addition");
+    // this.UAddition = find("Canvas/Top/Addition");
     this.updateUserInfo();
 
     await this.requestHarvestList();
@@ -136,17 +136,16 @@ export class harvest extends Component {
       formatToUSDInteger(globalData.userInfo.points_balance) + ""
     );
 
-    if (globalData.userInfo.expansion_card) {
-      this.scheduleOnce(() => {
-        this.UAddition.getComponent(DynamicLabel).setText(
-          `+${
-            globalData.userInfo.expansion_card?.ratio
-              ? globalData.userInfo.expansion_card?.ratio
-              : globalData.userInfo.radio
-          }%`
-        );
-      }, 0);
-    }
+    this.UAddition.getComponent(DynamicLabel).hasExpand = false;
+    this.scheduleOnce(() => {
+      this.UAddition.getComponent(DynamicLabel).setText(
+        `+${
+          globalData.userInfo.expansion_card?.ratio
+            ? globalData.userInfo.expansion_card?.ratio
+            : globalData.userInfo.radio
+        }%`
+      );
+    }, 0);
 
     this.scheduleOnce(() => {
       this.UAddition.setPosition(
