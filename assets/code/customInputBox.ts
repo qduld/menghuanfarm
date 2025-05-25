@@ -32,10 +32,10 @@ export class CustomInputBox extends Component {
     this.richText.lineHeight = 36;
     this.placeHolder.active = true;
     this.cursor.node.active = false;
-    this.node.on(Input.EventType.TOUCH_END, this.onFocus, this);
+
+    this.node.on(Input.EventType.TOUCH_START, this.onFocus, this);
     this.scrollView.vertical = true;
 
-    // 初始化光标样式 [[6]]
     this.cursor.lineWidth = 3;
     this.cursor.strokeColor = new Color("#00FF00");
   }
@@ -63,16 +63,35 @@ export class CustomInputBox extends Component {
 
   private createInputElement() {
     this.inputElement = document.createElement("textarea");
-    this.inputElement.style.position = "absolute";
-    this.inputElement.style.opacity = "0";
-    this.inputElement.style.left = "0px";
-    this.inputElement.style.top = "0px";
-    this.inputElement.style.width = "100%";
-    this.inputElement.style.height = "100%";
-    this.inputElement.style.zIndex = "-1";
-    document.body.appendChild(this.inputElement);
-    this.inputElement.focus();
+    const style = this.inputElement.style;
+
+    style.position = "fixed";
+    style.bottom = "0px";
+    style.left = "0px";
+    style.width = "100vw";
+    style.height = "40px";
+    style.opacity = "0.01";
+    style.zIndex = "9999";
+    style.fontSize = "16px";
+    style.lineHeight = "20px";
+    style.padding = "0";
+    style.margin = "0";
+    style.border = "none";
+    style.outline = "none";
+    style.resize = "none";
+    style.pointerEvents = "auto";
+
+    this.inputElement.setAttribute("autocapitalize", "off");
+    this.inputElement.setAttribute("autocomplete", "off");
+    this.inputElement.setAttribute("autocorrect", "off");
+    this.inputElement.setAttribute("inputmode", "text");
+
     this.inputElement.value = this.content;
+    document.body.appendChild(this.inputElement);
+
+    setTimeout(() => {
+      this.inputElement!.focus();
+    }, 0);
 
     this.inputElement.addEventListener("input", this.onInput.bind(this));
     this.inputElement.addEventListener(
@@ -100,7 +119,6 @@ export class CustomInputBox extends Component {
     if (this.isComposing || !this.inputElement) return;
     this.content = this.inputElement.value;
 
-    // 防抖更新（约60FPS）[[9]]
     if (this.updateTimer) clearTimeout(this.updateTimer);
     this.updateTimer = setTimeout(() => this.updateRichText(), 16);
   }
@@ -170,7 +188,7 @@ export class CustomInputBox extends Component {
   }
 
   private adjustScrollViewHeight() {
-    if (this.totalLines > 100) return; // 性能保护 [[9]]
+    if (this.totalLines > 100) return;
 
     const contentTransform = this.scrollView.node
       .getChildByName("view")
