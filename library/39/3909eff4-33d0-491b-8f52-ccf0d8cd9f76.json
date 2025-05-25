@@ -24231,7 +24231,7 @@
         "__id__": 643
       }
     ],
-    "_active": true,
+    "_active": false,
     "_components": [
       {
         "__id__": 646
@@ -24801,15 +24801,11 @@
     "richText": {
       "__id__": 630
     },
-    "placeHolder": null,
-    "labelPlaceholder": {
-      "__id__": 650
+    "placeHolder": {
+      "__id__": 648
     },
     "cursor": {
       "__id__": 633
-    },
-    "editBox": {
-      "__id__": 638
     },
     "scrollView": {
       "__id__": 622

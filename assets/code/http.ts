@@ -37,7 +37,7 @@ export async function httpRequest<T>(
   if (!token) {
     const { initDataRaw } = retrieveLaunchParams();
 
-    token = tokenMock;
+    // token = tokenMock;
     token = initDataRaw;
   }
 
