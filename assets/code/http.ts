@@ -1,6 +1,6 @@
 import { GlobalData } from "./globalData";
 import { tokenMock, userFilter, authFilter, tokenSort, i18n } from "./loadData";
-import { retrieveLaunchParams } from "@telegram-apps/sdk";
+// import { retrieveLaunchParams } from "@telegram-apps/sdk";
 
 export interface HttpRequestOptions {
   method?: "GET" | "POST" | "PUT" | "DELETE"; // 请求方法
@@ -35,10 +35,10 @@ export async function httpRequest<T>(
   timeout: number = 10000 // 超时时间，默认 5000 毫秒（5 秒）
 ): Promise<HttpResponse> {
   if (!token) {
-    const { initDataRaw } = retrieveLaunchParams();
+    // const { initDataRaw } = retrieveLaunchParams();
 
-    // token = tokenMock;
-    token = initDataRaw;
+    token = tokenMock;
+    // token = initDataRaw;
   }
 
   const {
