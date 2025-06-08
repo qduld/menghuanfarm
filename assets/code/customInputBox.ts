@@ -52,6 +52,11 @@ export class CustomInputBox extends Component {
     this.placeHolder.active = false;
     this.createInputElement();
     this.startCursorBlink();
+
+    // 延迟 focus 以适配 iOS
+    setTimeout(() => {
+      this.inputElement?.focus();
+    }, 10);
   }
 
   private onBlur() {
@@ -65,25 +70,22 @@ export class CustomInputBox extends Component {
     this.inputElement = document.createElement("textarea");
 
     const style = this.inputElement.style;
-    style.position = "absolute"; // 或 fixed 也可以，但必须能点击到
-    style.left = "0";
-    style.top = "0";
-    style.width = "100%";
-    style.height = "40px";
-    style.opacity = "0.01"; // 不用 0，iOS 会阻止焦点
-    style.zIndex = "1000"; // 确保在 WebGL 层之上
-    style.pointerEvents = "auto"; // 可交互
+    style.position = "fixed"; // 保证在屏幕上显示
+    style.left = "10px"; // 放在屏幕内，避免点击无效
+    style.top = "10px";
+    style.width = "1px"; // 最小尺寸避免遮挡内容
+    style.height = "1px";
+    style.opacity = "0.01"; // 非 0，否则 iOS 阻止焦点
+    style.zIndex = "9999"; // 保证在 WebGL 上层
     style.background = "transparent";
     style.border = "none";
     style.outline = "none";
     style.resize = "none";
     style.fontSize = "16px";
+    style.pointerEvents = "auto";
 
     this.inputElement.value = this.content;
     document.body.appendChild(this.inputElement);
-
-    // 立即 focus（不能包 setTimeout）
-    this.inputElement.focus();
 
     // 注册事件
     this.inputElement.addEventListener("input", this.onInput.bind(this));
@@ -96,10 +98,6 @@ export class CustomInputBox extends Component {
       this.onInput();
     });
     this.inputElement.addEventListener("blur", this.onBlur.bind(this));
-
-    this.inputElement.addEventListener("focus", () => {
-      console.log("Input focused");
-    });
   }
 
   private removeInputElement() {
@@ -179,7 +177,7 @@ export class CustomInputBox extends Component {
 
     this.cursor.node.setPosition(
       lastLineWidth + 5,
-      -this.richText.node.getComponent(UITransform).height / 2
+      -this.richText.node.getComponent(UITransform)!.height / 2
     );
     this.cursor.node.active = true;
   }
