@@ -9,6 +9,7 @@ import {
   Input,
   Color,
 } from "cc";
+
 const { ccclass, property } = _decorator;
 
 @ccclass("CustomInputBox")
@@ -50,13 +51,8 @@ export class CustomInputBox extends Component {
     if (this.isFocused) return;
     this.isFocused = true;
     this.placeHolder.active = false;
-    this.createInputElement();
+    this.createVisibleInputElement(); // 用可见输入框替换之前的透明方案
     this.startCursorBlink();
-
-    // 延迟 focus 以适配 iOS
-    setTimeout(() => {
-      this.inputElement?.focus();
-    }, 10);
   }
 
   private onBlur() {
@@ -66,38 +62,42 @@ export class CustomInputBox extends Component {
     this.cursor.node.active = false;
   }
 
-  private createInputElement() {
+  private createVisibleInputElement() {
     this.inputElement = document.createElement("textarea");
 
-    const style = this.inputElement.style;
-    style.position = "fixed"; // 保证在屏幕上显示
-    style.left = "10px"; // 放在屏幕内，避免点击无效
-    style.top = "10px";
-    style.width = "1px"; // 最小尺寸避免遮挡内容
-    style.height = "1px";
-    style.opacity = "0.01"; // 非 0，否则 iOS 阻止焦点
-    style.zIndex = "9999"; // 保证在 WebGL 上层
-    style.background = "transparent";
-    style.border = "none";
-    style.outline = "none";
-    style.resize = "none";
-    style.fontSize = "16px";
-    style.pointerEvents = "auto";
+    Object.assign(this.inputElement.style, {
+      position: "fixed",
+      left: "20px", // 你应根据输入框位置调整
+      top: "200px", // 你应根据输入框位置调整
+      width: "300px",
+      height: "40px",
+      zIndex: "9999",
+      fontSize: "16px",
+      background: "#ffffff",
+      color: "#000000",
+      border: "1px solid #aaa",
+      padding: "8px",
+      boxSizing: "border-box",
+      outline: "none",
+      resize: "none",
+      borderRadius: "6px",
+    });
 
     this.inputElement.value = this.content;
-    document.body.appendChild(this.inputElement);
 
-    // 注册事件
+    // 需要真实点击后 focus 才能在 Telegram 中弹出输入法
     this.inputElement.addEventListener("input", this.onInput.bind(this));
-    this.inputElement.addEventListener(
-      "compositionstart",
-      () => (this.isComposing = true)
-    );
+    this.inputElement.addEventListener("compositionstart", () => {
+      this.isComposing = true;
+    });
     this.inputElement.addEventListener("compositionend", () => {
       this.isComposing = false;
       this.onInput();
     });
     this.inputElement.addEventListener("blur", this.onBlur.bind(this));
+
+    document.body.appendChild(this.inputElement);
+    setTimeout(() => this.inputElement?.focus(), 0); // 放在 timeout 内更安全
   }
 
   private removeInputElement() {
@@ -177,7 +177,7 @@ export class CustomInputBox extends Component {
 
     this.cursor.node.setPosition(
       lastLineWidth + 5,
-      -this.richText.node.getComponent(UITransform)!.height / 2
+      -this.richText.node.getComponent(UITransform).height / 2
     );
     this.cursor.node.active = true;
   }
