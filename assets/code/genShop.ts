@@ -62,6 +62,8 @@ export class GenShop extends Component {
 
   // 生成推荐列表
   createShopLayout() {
+    const globalData = GlobalData.getInstance();
+
     // 获取预制体的宽度和高度
     const sectionHeight =
       this.USeedSection.getChildByName("Bg").getComponent(UITransform)
@@ -183,6 +185,20 @@ export class GenShop extends Component {
           .getChildByName("Button")
           .getChildByName("Label")
           .getComponent(Label).string = i18n.notUnlocked;
+
+        button.getChildByName("Icon").active = false;
+      } else if (seed.price > globalData.userInfo.points_balance) {
+        button
+          .getChildByName("Border")
+          .getComponent(DrawRoundedRect).fillColor = new Color(212, 213, 215);
+        button
+          .getChildByName("Border")
+          .getComponent(DrawRoundedRect)
+          .reRender();
+        seedSection
+          .getChildByName("Button")
+          .getChildByName("Label")
+          .getComponent(Label).string = i18n.insufficientCoins1;
 
         button.getChildByName("Icon").active = false;
       } else {

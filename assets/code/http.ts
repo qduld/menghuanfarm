@@ -13,10 +13,12 @@ export interface HttpResponseData {
   code: number;
   data: any;
   ok: boolean;
+  msg?: string;
 }
 export interface HttpResponse {
   status: number;
   data: HttpResponseData;
+  msg: string;
   ok: boolean;
 }
 

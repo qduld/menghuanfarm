@@ -33,13 +33,13 @@ export class GenPlant extends Component {
       .getChildByName("Countdown")
       .getChildByName("Icon");
 
+    block.getChildByName("Plant").getChildByName("Receivehand").active = false;
+
     if (data.farm_status === 0) {
       // 未种植
       this.plantSpritePath = "awaitingSowing";
       this.plantLevel = 0;
       block.getChildByName("Countdown").active = false;
-      block.getChildByName("Plant").getChildByName("Receivehand").active =
-        false;
       block.getChildByName("Plant").getChildByName("Expand").active = false;
     } else {
       const currentTime = new Date().getTime();
@@ -242,6 +242,9 @@ export class GenPlant extends Component {
           default:
             this.plantSpritePath = "胡萝卜3";
         }
+
+        block.getChildByName("Plant").getChildByName("Receivehand").active =
+          true;
       }
     }
 

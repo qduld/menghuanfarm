@@ -10,12 +10,16 @@ import {
   SpriteAtlas,
   AudioClip,
   AudioSource,
+  Color,
 } from "cc";
 import { httpRequest } from "./http";
 import { Dialog } from "./dialog";
 import { GenInfo } from "./genInfo";
 import { AudioMgr } from "./audioManager";
 import { formatNumberShortDynamic, formatSecondsImprove } from "./utils";
+import { GlobalData } from "./globalData";
+import { i18n } from "./loadData";
+import { DrawRoundedRect } from "./drawRoundedRect";
 
 const { ccclass, property } = _decorator;
 @ccclass("BuySeed")
@@ -45,6 +49,9 @@ export class BuySeed extends Component {
   USeedMinimize: Node = null; // 种子减少
 
   @property
+  UBuySeedButton: Node = null; // 购买种子Button
+
+  @property
   seedNumber: number = 1; // 种子减少
 
   private static _instance: BuySeed;
@@ -71,6 +78,7 @@ export class BuySeed extends Component {
     this.USeedMinimize = find(
       "popBox/Canvas/BuySeed/Content/Options/Content/Minimize"
     );
+    this.UBuySeedButton = find("popBox/Canvas/BuySeed/Content/Options/Button");
   }
 
   updateBuySeedInfo(seed) {
@@ -148,34 +156,91 @@ export class BuySeed extends Component {
   }
 
   increaseEmit() {
+    const globalData = GlobalData.getInstance();
     const dialog = Dialog.getInstance();
+
     this.seedNumber++;
     this.USeedNumber.getChildByName("Value").getComponent(Label).string =
       this.seedNumber + "";
 
+    const totalCost = dialog.targetBuySeedInfo.price * this.seedNumber;
+
     this.USeedTotalCost.getChildByName("Value").getComponent(Label).string =
-      formatNumberShortDynamic(
-        dialog.targetBuySeedInfo.price * this.seedNumber
-      );
+      formatNumberShortDynamic(totalCost);
+
+    if (totalCost > globalData.userInfo.points_balance) {
+      this.UBuySeedButton.getChildByName("Border").getComponent(
+        DrawRoundedRect
+      ).fillColor = new Color(212, 213, 215);
+      this.UBuySeedButton.getChildByName("Border")
+        .getComponent(DrawRoundedRect)
+        .reRender();
+
+      this.UBuySeedButton.getChildByName("Label").getComponent(Label).string =
+        i18n.insufficientCoins1;
+    } else {
+      this.UBuySeedButton.getChildByName("Border").getComponent(
+        DrawRoundedRect
+      ).fillColor = new Color(255, 205, 92);
+      this.UBuySeedButton.getChildByName("Border")
+        .getComponent(DrawRoundedRect)
+        .reRender();
+
+      this.UBuySeedButton.getChildByName("Label").getComponent(Label).string =
+        "Buy";
+    }
   }
 
   minimizeEmit() {
     if (this.seedNumber === 1) return;
+
+    const globalData = GlobalData.getInstance();
     const dialog = Dialog.getInstance();
     this.seedNumber--;
     this.USeedNumber.getChildByName("Value").getComponent(Label).string =
       this.seedNumber + "";
 
+    const totalCost = dialog.targetBuySeedInfo.price * this.seedNumber;
+
     this.USeedTotalCost.getChildByName("Value").getComponent(Label).string =
       formatNumberShortDynamic(
         dialog.targetBuySeedInfo.price * this.seedNumber
       );
+
+    if (totalCost > globalData.userInfo.points_balance) {
+      this.UBuySeedButton.getChildByName("Border").getComponent(
+        DrawRoundedRect
+      ).fillColor = new Color(212, 213, 215);
+      this.UBuySeedButton.getChildByName("Border")
+        .getComponent(DrawRoundedRect)
+        .reRender();
+
+      this.UBuySeedButton.getChildByName("Label").getComponent(Label).string =
+        i18n.insufficientCoins1;
+    } else {
+      this.UBuySeedButton.getChildByName("Border").getComponent(
+        DrawRoundedRect
+      ).fillColor = new Color(255, 205, 92);
+      this.UBuySeedButton.getChildByName("Border")
+        .getComponent(DrawRoundedRect)
+        .reRender();
+
+      this.UBuySeedButton.getChildByName("Label").getComponent(Label).string =
+        "Buy";
+    }
   }
 
   // 购买种子
   async buySeed() {
+    const globalData = GlobalData.getInstance();
     const genInfo = GenInfo.getInstance();
     const dialog = Dialog.getInstance();
+
+    const totalCost = dialog.targetBuySeedInfo.price * this.seedNumber;
+    if (totalCost > globalData.userInfo.points_balance) {
+      globalData.setTipsLabel(i18n.insufficientCoins);
+      return;
+    }
     try {
       const response = await httpRequest("/api/v1/seed/buy", {
         method: "POST",

@@ -3,6 +3,7 @@ import { IFarmland } from "./interface";
 import { Dialog } from "./dialog";
 import { BuySeed } from "./buySeed";
 import { GlobalData } from "./globalData";
+import { i18n } from "./loadData";
 const { ccclass } = _decorator;
 
 @ccclass("BuySeedEffect")
@@ -38,6 +39,12 @@ export class BuySeedEffect extends Component {
         );
         return;
       }
+
+      if (this.targetData.price > globalData.userInfo.points_balance) {
+        globalData.setTipsLabel(i18n.insufficientCoins);
+        return;
+      }
+
       dialog.showDialog(null, "BuySeed");
       dialog.setTargetBuySeed(this.targetData);
       buySeed.updateBuySeedInfo(this.targetData);

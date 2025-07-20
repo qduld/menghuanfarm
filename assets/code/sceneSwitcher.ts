@@ -3,6 +3,7 @@ import { GenBlock } from "./genBlock";
 import { GlobalData } from "./globalData";
 import { GenInfo } from "./genInfo";
 import { AudioMgr } from "./audioManager";
+import { i18n } from "./loadData";
 const { ccclass, property } = _decorator;
 
 @ccclass("SceneSwitcher")
@@ -38,6 +39,10 @@ export class SceneSwitcher extends Component {
         if (globalData.isStolen) {
           globalData.stolenId = this.node["userId"];
         }
+      }
+      if (this.sceneName === "airdrop") {
+        globalData.setMessageLabel(i18n.stayTuned);
+        return;
       }
       director.loadScene(this.sceneName, (err) => {
         if (err) {

@@ -267,6 +267,8 @@ export class GenBlock extends Component {
   async unLockBlock() {
     const globalData = GlobalData.getInstance();
     const dialog = Dialog.getInstance();
+    const genInfo = GenInfo.getInstance();
+
     try {
       const response = await httpRequest("/api/v1/farm/farmland/extend", {
         method: "POST",
@@ -339,6 +341,7 @@ export class GenBlock extends Component {
           .getComponent(Label).string = i18n.seed[seedInfo.level];
 
         this.requestFarmLand();
+        genInfo.requestUserInfo(); // 买完之后更新用户信息
         dialog.closeDialog(null, "LockBlock");
         AudioMgr.inst.playOneShot("sounds/unlock", 1);
         dialog.showDialog(null, "SeedUnlock");

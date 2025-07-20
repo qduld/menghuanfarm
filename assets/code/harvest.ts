@@ -234,12 +234,31 @@ export class harvest extends Component {
     dialog.buySucceededBox
       .getChildByName("Card")
       .getChildByName("Name")
-      .getComponent(Label).string = this.currentCard.name;
+      .getComponent(Label).string = i18n.harvest[this.currentCard.id];
 
     dialog.buySucceededBox
       .getChildByName("Button")
       .getChildByName("Label")
       .getComponent(Label).string = `+ ${this.currentCard.ratio}%`;
+
+    resources.load("iconList", SpriteAtlas, (err, atlas) => {
+      if (err) {
+        console.error("Failed to load sprite:", err);
+        return;
+      }
+
+      const harvestSprite = dialog.buySucceededBox
+        .getChildByName("Card")
+        .getChildByName("Photo");
+
+      harvestSprite.getComponent(Sprite).spriteFrame = atlas.getSpriteFrame(
+        harvestMap[this.currentCard.id]
+      );
+
+      harvestSprite.getComponent(UITransform).width = 100;
+      harvestSprite.getComponent(UITransform).height = 100;
+      harvestSprite.setPosition(0, 0, 0);
+    });
 
     setTimeout(() => {
       dialog.closeDialog(null, "BuySucceeded");
@@ -292,12 +311,13 @@ export class harvest extends Component {
           id: this.currentCard.id,
         },
       });
-      if (response.ok) {
+      if (response.ok && response.data.code === 0) {
         this.requestUserInfo();
-        // globalData.setMessageLabel(i18n.buySuccess);
         dialog.closeDialog(null, "BuyProps");
         this.setBuySucceededShow();
       } else {
+        dialog.closeDialog(null, "BuyProps");
+        globalData.setMessageLabel(response.data.msg);
         console.error("Request failed with status:", response.status);
       }
     } catch (error) {

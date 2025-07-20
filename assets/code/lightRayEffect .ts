@@ -51,8 +51,8 @@ export class LightRayEffect extends Component {
       const isLight = i % 2 === 0; // 偶数是淡黄色，奇数是暗灰色
       let colorStart: math.Color, colorEnd: math.Color;
       if (isLight) {
-        colorStart = new math.Color(243, 241, 173, 128); // 圆心透明
-        colorEnd = new math.Color(243, 241, 173, 0); // 边缘半透明
+        colorStart = new math.Color(247, 245, 178, 128); // 圆心透明
+        colorEnd = new math.Color(247, 245, 178, 0); // 边缘半透明
       } else {
         colorStart = new math.Color(120, 120, 120, 128); // 圆心透明
         colorEnd = new math.Color(120, 120, 120, 0); // 边缘半透明
