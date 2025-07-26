@@ -26,6 +26,8 @@ export class GenPlant extends Component {
   updatePlantStatus(block, data) {
     if (block.children === null || data.status === 0) return; // 不可种植未解锁
 
+    const globalData = GlobalData.getInstance();
+
     this.plantSprite = block.getChildByName("Plant");
     this.plantSprite.active = true;
     // 倒计时标记改为植物标记
@@ -243,8 +245,10 @@ export class GenPlant extends Component {
             this.plantSpritePath = "胡萝卜3";
         }
 
-        block.getChildByName("Plant").getChildByName("Receivehand").active =
-          true;
+        if (!globalData.isStolen) {
+          block.getChildByName("Plant").getChildByName("Receivehand").active =
+            true;
+        }
       }
     }
 
@@ -260,7 +264,6 @@ export class GenPlant extends Component {
       });
     }
 
-    const globalData = GlobalData.getInstance();
     // 偷取时作物成熟且可偷取
     if (
       globalData.isStolen &&

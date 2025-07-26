@@ -81,7 +81,7 @@ export class HoverEffect extends Component {
     const globalData = GlobalData.getInstance();
     if (globalData.isStolen) return;
     if (!this.animating) {
-      this.targetNode.getChildByName("Receivehand").active = false;
+      // this.targetNode.getChildByName("Receivehand").active = false;
       this.targetNode.getChildByName("Expand").active = false;
     }
   }

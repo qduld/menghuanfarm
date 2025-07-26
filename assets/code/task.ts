@@ -10,6 +10,7 @@ import {
   Sprite,
   Color,
   ScrollView,
+  Widget,
 } from "cc";
 import { taskList, dayList, i18n } from "./loadData";
 import {
@@ -105,86 +106,119 @@ export class task extends Component {
       return;
     }
 
-    // 计算当前时间与第一次签到的时间间隔（单位：天）
-    const firstCheckInDay = checkInDays[0];
-    const currentBetweenDays = isDifferenceBetweenTimes(
+    // 只要不是连续签到就重置
+    const lastCheckInDay = checkInDays[checkInDays.length - 1]; // 签到历史里最后一次签到
+    const currentLastBetweenDays = isDifferenceBetweenTimes(
       currentDay,
-      firstCheckInDay
+      lastCheckInDay
     );
 
-    // 如果时间间隔大于30天，直接返回默认的 dayList
-    if (currentBetweenDays > 30) {
+    // 只要签到时间大于一天就重置   isDifferenceBetweenTimes计算天数时加了1
+    if (currentLastBetweenDays > 2) {
       this.dayList = dayList;
       return;
     }
 
-    // 转换签到日期为相对天数
-    const relativeDays = this.convertToRelativeDays(checkInDays);
+    // 连续签到 更新签到状态
+    const firstCheckInDay = checkInDays[0];
+    let currentFirstBetweenDays = isDifferenceBetweenTimes(
+      currentDay,
+      firstCheckInDay
+    );
 
-    let currentTimestamp = 0;
+    this._currentDayIndex = currentFirstBetweenDays - 1;
 
     if (this._checkInStatus.has_checked_in_today) {
-      currentTimestamp = this._checkInHistory.current_day * 1000;
-    } else {
-      currentTimestamp =
-        this._checkInHistory.current_day * 1000 - 24 * 60 * 60 * 1000;
+      currentFirstBetweenDays++;
     }
+    dayList.forEach((item, index) => {
+      if (index < currentFirstBetweenDays - 1) {
+        item.checkIn = 1;
+      }
+    });
 
-    // 处理前缀天数列表
-    const prefixDayList = this.processDays(
-      relativeDays,
-      dayList,
-      currentTimestamp,
-      checkInDays[0]
-    );
+    this.dayList = dayList;
 
-    const continusDays = this.calculateContinuousDays(
-      relativeDays,
-      new Date(currentTimestamp),
-      new Date(checkInDays[0])
-    );
+    // 计算当前时间与第一次签到的时间间隔（单位：天）
+    // const firstCheckInDay = checkInDays[0];
+    // const currentBetweenDays = isDifferenceBetweenTimes(
+    //   currentDay,
+    //   firstCheckInDay
+    // );
 
-    this.UDayTitle.getChildByName("Main")
-      .getChildByName("Number")
-      .getComponent(Label).string = continusDays + "";
+    // // 如果时间间隔大于30天，直接返回默认的 dayList
+    // if (currentBetweenDays > 30) {
+    //   this.dayList = dayList;
+    //   return;
+    // }
 
-    // 计算前缀天数和后缀天数
-    let prefixDays, suffixDays;
-    if (this._checkInStatus.has_checked_in_today) {
-      prefixDays = currentBetweenDays - continusDays;
-      this._currentDayIndex = prefixDayList.length - 1;
-    } else {
-      prefixDays = currentBetweenDays - continusDays - 1;
-      this._currentDayIndex = prefixDayList.length;
-    }
-    suffixDays = 30 - prefixDayList.length;
+    // // 转换签到日期为相对天数
+    // const relativeDays = this.convertToRelativeDays(checkInDays);
 
-    // 截取后缀天数列表
-    const suffixDayList = dayList.slice(
-      continusDays,
-      continusDays + suffixDays
-    );
+    // let currentTimestamp = 0;
 
-    let currentDayItem = null;
-    if (this._checkInStatus.has_checked_in_today) {
-      currentDayItem = dayList.slice(continusDays - 1)[0];
-    } else {
-      currentDayItem = dayList.slice(continusDays)[0];
-    }
+    // if (this._checkInStatus.has_checked_in_today) {
+    //   currentTimestamp = this._checkInHistory.current_day * 1000;
+    // } else {
+    //   currentTimestamp =
+    //     this._checkInHistory.current_day * 1000 - 24 * 60 * 60 * 1000;
+    // }
 
-    const nextBigReward = this.getNextBigRewardFromSuffix(
-      currentDayItem.id,
-      suffixDayList
-    );
+    // // 处理前缀天数列表
+    // const prefixDayList = this.processDays(
+    //   relativeDays,
+    //   dayList,
+    //   currentTimestamp,
+    //   checkInDays[0]
+    // );
 
-    if (nextBigReward) {
-      this.UDayTitle.getChildByName("Sub")
-        .getChildByName("Number")
-        .getComponent(Label).string = nextBigReward.daysUntilReward + "";
-    }
+    // const continusDays = this.calculateContinuousDays(
+    //   relativeDays,
+    //   new Date(currentTimestamp),
+    //   new Date(checkInDays[0])
+    // );
 
-    // 拼接前缀和后缀天数列表
-    this.dayList = prefixDayList.concat(suffixDayList);
+    // this.UDayTitle.getChildByName("Main")
+    //   .getChildByName("Number")
+    //   .getComponent(Label).string = continusDays + "";
+
+    // // 计算前缀天数和后缀天数
+    // let prefixDays, suffixDays;
+    // if (this._checkInStatus.has_checked_in_today) {
+    //   prefixDays = currentBetweenDays - continusDays;
+    //   this._currentDayIndex = prefixDayList.length - 1;
+    // } else {
+    //   prefixDays = currentBetweenDays - continusDays - 1;
+    //   this._currentDayIndex = prefixDayList.length;
+    // }
+    // suffixDays = 30 - prefixDayList.length;
+
+    // // 截取后缀天数列表
+    // const suffixDayList = dayList.slice(
+    //   continusDays,
+    //   continusDays + suffixDays
+    // );
+
+    // let currentDayItem = null;
+    // if (this._checkInStatus.has_checked_in_today) {
+    //   currentDayItem = dayList.slice(continusDays - 1)[0];
+    // } else {
+    //   currentDayItem = dayList.slice(continusDays)[0];
+    // }
+
+    // const nextBigReward = this.getNextBigRewardFromSuffix(
+    //   currentDayItem.id,
+    //   suffixDayList
+    // );
+
+    // if (nextBigReward) {
+    //   this.UDayTitle.getChildByName("Sub")
+    //     .getChildByName("Number")
+    //     .getComponent(Label).string = nextBigReward.daysUntilReward + "";
+    // }
+
+    // // 拼接前缀和后缀天数列表
+    // this.dayList = prefixDayList.concat(suffixDayList);
   }
 
   getNextBigRewardFromSuffix(currentDay, suffixDayList) {
@@ -463,32 +497,53 @@ export class task extends Component {
       const progressbarWidth =
         UProgressBar.getComponent(UITransform).contentSize.width;
 
-      const button = taskSection
-        .getChildByName("Content")
-        .getChildByName("Right")
-        .getChildByName("Button");
-
-      button[`task_id`] = taskItem.id;
-
       if (taskItem.status === 1) {
-        button
-          .getChildByName("Border")
-          .getComponent(DrawRoundedRect).fillColor = new Color(212, 213, 215);
-        button
-          .getChildByName("Border")
-          .getComponent(DrawRoundedRect)
-          .reRender();
-        button.getChildByName("Label").getComponent(Label).string =
-          i18n.completed;
+        taskSection
+          .getChildByName("Content")
+          .getChildByName("Right")
+          .getChildByName("Claim").active = true;
+        taskSection
+          .getChildByName("Content")
+          .getChildByName("Right")
+          .getChildByName("InProgress").active = false;
+        taskSection
+          .getChildByName("Content")
+          .getChildByName("Right")
+          .getChildByName("Completed").active = false;
+
+        const button = taskSection
+          .getChildByName("Content")
+          .getChildByName("Right")
+          .getChildByName("Claim")
+          .getChildByName("Button");
+
+        button[`task_id`] = taskItem.id;
+      } else if (taskItem.status === 0) {
+        taskSection
+          .getChildByName("Content")
+          .getChildByName("Right")
+          .getChildByName("Claim").active = false;
+        taskSection
+          .getChildByName("Content")
+          .getChildByName("Right")
+          .getChildByName("InProgress").active = true;
+        taskSection
+          .getChildByName("Content")
+          .getChildByName("Right")
+          .getChildByName("Completed").active = false;
       } else {
-        button
-          .getChildByName("Border")
-          .getComponent(DrawRoundedRect).fillColor = new Color(255, 205, 92);
-        button
-          .getChildByName("Border")
-          .getComponent(DrawRoundedRect)
-          .reRender();
-        button.getChildByName("Label").getComponent(Label).string = i18n.claim;
+        taskSection
+          .getChildByName("Content")
+          .getChildByName("Right")
+          .getChildByName("Claim").active = false;
+        taskSection
+          .getChildByName("Content")
+          .getChildByName("Right")
+          .getChildByName("InProgress").active = false;
+        taskSection
+          .getChildByName("Content")
+          .getChildByName("Right")
+          .getChildByName("Completed").active = true;
       }
 
       UProgressBar.getChildByName("Label").getComponent(
@@ -599,14 +654,6 @@ export class task extends Component {
   // 完成任务
   async completeTask(event) {
     const globalData = GlobalData.getInstance();
-    if (
-      this.taskList.find((item) => item.id === event.target.task_id).status ===
-      1
-    ) {
-      //任务已完成
-      globalData.setMessageLabel(i18n.rewardClaimed);
-      return;
-    }
     try {
       const response = await httpRequest(`/api/v1/task/claim`, {
         method: "POST",
@@ -616,6 +663,24 @@ export class task extends Component {
       });
       if (response.ok) {
         globalData.setMessageLabel(i18n.taskCompleted);
+        const taskItemIdx = this.taskList.findIndex(
+          (item) => item.id === event.target.task_id
+        );
+
+        const taskSection = this.UTaskList.children[taskItemIdx + 1];
+
+        taskSection
+          .getChildByName("Content")
+          .getChildByName("Right")
+          .getChildByName("Claim").active = false;
+        taskSection
+          .getChildByName("Content")
+          .getChildByName("Right")
+          .getChildByName("InProgress").active = false;
+        taskSection
+          .getChildByName("Content")
+          .getChildByName("Right")
+          .getChildByName("Completed").active = true;
       } else {
         globalData.setMessageLabel(i18n.taskUnCompleted);
         console.error("Request failed with status:", response.status);

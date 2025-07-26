@@ -311,6 +311,7 @@ export class harvest extends Component {
           id: this.currentCard.id,
         },
       });
+      debugger;
       if (response.ok && response.data.code === 0) {
         this.requestUserInfo();
         dialog.closeDialog(null, "BuyProps");
