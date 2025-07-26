@@ -1,5 +1,5 @@
 import { _decorator, Component, Node } from "cc";
-import { tokenMock, userFilter, authFilter, tokenSort } from "./loadData";
+// import { tokenMock, userFilter, authFilter, tokenSort } from "./loadData";
 import { retrieveLaunchParams } from "@telegram-apps/sdk";
 
 export class WebSocketManager {
