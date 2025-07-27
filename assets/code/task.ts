@@ -92,6 +92,8 @@ export class task extends Component {
   }
 
   orgDayList() {
+    const dayListClone = [...dayList];
+
     // 获取签到历史并按时间从小到大排序
     const checkInDays = this._checkInHistory.checkin_days
       .map(getStartOfDayTimestamp)
@@ -102,7 +104,7 @@ export class task extends Component {
 
     // 如果签到历史为空，直接返回默认的 dayList
     if (checkInDays.length === 0) {
-      this.dayList = dayList;
+      this.dayList = dayListClone;
       return;
     }
 
@@ -115,7 +117,7 @@ export class task extends Component {
 
     // 只要签到时间大于一天就重置   isDifferenceBetweenTimes计算天数时加了1
     if (currentLastBetweenDays > 2) {
-      this.dayList = dayList;
+      this.dayList = dayListClone;
       return;
     }
 
@@ -131,13 +133,13 @@ export class task extends Component {
     if (this._checkInStatus.has_checked_in_today) {
       currentFirstBetweenDays++;
     }
-    dayList.forEach((item, index) => {
+    dayListClone.forEach((item, index) => {
       if (index < currentFirstBetweenDays - 1) {
         item.checkIn = 1;
       }
     });
 
-    this.dayList = dayList;
+    this.dayList = dayListClone;
 
     // 计算当前时间与第一次签到的时间间隔（单位：天）
     // const firstCheckInDay = checkInDays[0];
@@ -622,6 +624,8 @@ export class task extends Component {
           currentDayItem.getChildByName("Mask").getChildByName("Error").active =
             false;
         }
+        this.UTaskList.removeAllChildren();
+        this.getTaskList();
       } else {
         globalData.setMessageLabel(i18n.todayChecked);
       }
