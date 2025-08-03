@@ -523,10 +523,127 @@ export class task extends Component {
     });
   }
 
+  findNextDayNumber(currentDay) {
+    const dayNumbers = [3, 7, 12, 20, 30];
+
+    // 查找第一个大于 currentDay 的数字
+    const found = dayNumbers.find((num) => num > currentDay);
+
+    // 如果没找到（即 currentDay >= 30），返回 33
+    // 否则返回找到的数字
+    return found !== undefined
+      ? found
+      : dayNumbers[0] + dayNumbers[dayNumbers.length - 1];
+  }
+
   // 更新天数Tips
   updateDayTips() {
-    if (this._isFirstLoop) {
+    this.UDayTitle.getChildByName("Main")
+      .getChildByName("Number")
+      .getComponent(Label).string = this._currentDayIndex + 1 + "";
+
+    let currentDay = this._currentDayIndex;
+    if (this._checkInStatus.has_checked_in_today) {
+      currentDay += 1;
     }
+    const firstRewardDay = this.findNextDayNumber(currentDay);
+    const betweenDays =
+      firstRewardDay < 30
+        ? firstRewardDay - currentDay
+        : firstRewardDay - currentDay - 30;
+    const subNode = this.UDayTitle.getChildByName("Sub");
+    subNode.getChildByName("Number").getComponent(Label).string =
+      betweenDays + "";
+    const rewardNode = subNode.getChildByName("Reward");
+
+    let spritePath = "";
+    let rewardLabel = "";
+    switch (firstRewardDay) {
+      case 3:
+        spritePath = "gold";
+        rewardLabel = "150";
+        break;
+      case 7:
+        if (this._isFirstLoop) {
+          spritePath = "oneKeyHarvest";
+          rewardLabel = "on-click harvest";
+        } else {
+          spritePath = "gold";
+          rewardLabel = "300";
+        }
+        break;
+      case 12:
+        if (this._isFirstLoop) {
+          spritePath = "scarecrow";
+          rewardLabel = "scarecrow";
+        } else {
+          spritePath = "gold";
+          rewardLabel = "500";
+        }
+        break;
+      case 20:
+        spritePath = "gold";
+        rewardLabel = "1000";
+        break;
+      case 30:
+        spritePath = "gold";
+        rewardLabel = "5%";
+        break;
+    }
+
+    rewardNode.getChildByName("Label").getComponent(Label).string = rewardLabel;
+    resources.load("iconList", SpriteAtlas, (err, atlas) => {
+      if (err) {
+        console.error("Failed to load sprite:", err);
+        return;
+      }
+
+      rewardNode.getChildByName("Icon").getComponent(Sprite).spriteFrame =
+        atlas.getSpriteFrame(spritePath);
+
+      // 调整Title字位置
+      this.scheduleOnce(() => {
+        const mainNode = this.UDayTitle.getChildByName("Main");
+
+        mainNode
+          .getChildByName("Suffix")
+          .setPosition(
+            mainNode.getChildByName("Prefix").position.x +
+              mainNode.getChildByName("Prefix").getComponent(UITransform)
+                .width +
+              mainNode.getChildByName("Number").getComponent(UITransform)
+                .width +
+              50,
+            mainNode.getChildByName("Suffix").position.y
+          );
+
+        const numberWidth = subNode
+          .getChildByName("Number")
+          .getComponent(UITransform).contentSize.width;
+        const prefixX = subNode.getChildByName("Prefix").position.x;
+        const prefixWidth = subNode
+          .getChildByName("Prefix")
+          .getComponent(UITransform).width;
+        subNode.getChildByName("Number");
+        subNode
+          .getChildByName("Suffix")
+          .setPosition(
+            prefixX + prefixWidth + numberWidth + 30,
+            subNode.getChildByName("Suffix").position.y
+          );
+
+        subNode
+          .getChildByName("Reward")
+          .setPosition(
+            prefixX +
+              prefixWidth +
+              numberWidth +
+              66 +
+              subNode.getChildByName("Suffix").getComponent(UITransform).width,
+            subNode.getChildByName("Reward").position.y
+          );
+      }, 0);
+    });
   }
 
   createTaskList() {
@@ -647,9 +764,9 @@ export class task extends Component {
       // 获取用户信息中的items，根据是否有道具判断是否是首轮签到
       if (userInfoResponse.ok && userInfoResponse.data.code === 0) {
         if (userInfoResponse.data.data.items.length > 0) {
-          this._isFirstLoop = true;
-        } else {
           this._isFirstLoop = false;
+        } else {
+          this._isFirstLoop = true;
         }
       } else {
         console.error(
@@ -696,31 +813,35 @@ export class task extends Component {
             (item, index) => index === this._currentDayIndex + 1
           );
 
-          // if (currentDayItem["hasExtra"]) {
-          dialog.extraRewardBox
-            .getChildByName("Reward")
-            .getChildByName("Name")
-            .getComponent(Label).string = currentDayItem["extraContent"];
-          resources.load("iconList", SpriteAtlas, (err, atlas) => {
-            if (err) {
-              console.error("Failed to load sprite:", err);
-              return;
-            }
-
+          if (currentDayItem["hasExtra"]) {
             dialog.extraRewardBox
               .getChildByName("Reward")
-              .getChildByName("Photo")
-              .getComponent(Sprite).spriteFrame = atlas.getSpriteFrame(
-              currentDayItem["spritePath"]
-            );
-          });
+              .getChildByName("Name")
+              .getComponent(Label).string = currentDayItem["extraContent"];
+            resources.load("iconList", SpriteAtlas, (err, atlas) => {
+              if (err) {
+                console.error("Failed to load sprite:", err);
+                return;
+              }
 
-          dialog.showDialog(null, "ExtraReward");
+              dialog.extraRewardBox
+                .getChildByName("Reward")
+                .getChildByName("Photo")
+                .getComponent(Sprite).spriteFrame = atlas.getSpriteFrame(
+                currentDayItem["spritePath"]
+              );
+            });
 
-          setTimeout(() => {
-            dialog.closeDialog(null, "ExtraReward");
-          }, 2000);
-          // }
+            dialog.showDialog(null, "ExtraReward");
+
+            setTimeout(() => {
+              dialog.closeDialog(null, "ExtraReward");
+            }, 2000);
+          }
+
+          // 签到更新tips
+          this._checkInStatus.has_checked_in_today = true;
+          this.updateDayTips();
 
           currentDayItem.getChildByName("Mask").active = true;
           currentDayItem

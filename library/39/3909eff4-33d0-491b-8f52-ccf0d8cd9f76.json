@@ -7325,7 +7325,7 @@
     "_lpos": {
       "__type__": "cc.Vec3",
       "x": -331.003,
-      "y": 28,
+      "y": 44,
       "z": 0
     },
     "_lrot": {
@@ -7363,8 +7363,8 @@
     "__prefab": null,
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 660,
-      "height": 80
+      "width": 0,
+      "height": 64.26
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -7400,7 +7400,7 @@
     "_fontSize": 38,
     "_fontFamily": "Arial",
     "_lineHeight": 51,
-    "_overflow": 1,
+    "_overflow": 0,
     "_enableWrapText": true,
     "_font": {
       "__uuid__": "a23bf510-4f33-449d-ba46-53f0d71d2a99",
@@ -7684,7 +7684,7 @@
     "_prefab": null,
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": 26,
+      "x": 20,
       "y": 2,
       "z": 0
     },
@@ -7728,7 +7728,7 @@
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
-      "x": 0.5,
+      "x": 0,
       "y": 0.5
     },
     "_id": "baUaA8CG5PoKlQcm/6dfS2"
@@ -7878,7 +7878,7 @@
     "_prefab": null,
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": -41,
+      "x": -20,
       "y": 0,
       "z": 0
     },
@@ -8038,7 +8038,7 @@
     "_prefab": null,
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": 35,
+      "x": 16,
       "y": -17,
       "z": 0
     },
@@ -8082,7 +8082,7 @@
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
-      "x": 0.5,
+      "x": 0,
       "y": 0.5
     },
     "_id": "5bITxwG/pEfYZ8RUgLYso3"
@@ -8232,7 +8232,7 @@
     "_prefab": null,
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": 79,
+      "x": 100,
       "y": 0,
       "z": 0
     },
@@ -8280,7 +8280,7 @@
     "_prefab": null,
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": -12,
+      "x": 0,
       "y": -18,
       "z": 0
     },
@@ -8392,7 +8392,7 @@
     "_prefab": null,
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": 67,
+      "x": 32,
       "y": -17,
       "z": 0
     },
@@ -8436,7 +8436,7 @@
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
-      "x": 0.5,
+      "x": 0,
       "y": 0.5
     },
     "_id": "40aJY5UuFNTJU/ajIf2U7d"
@@ -24805,7 +24805,12 @@
     "richText": {
       "__id__": 630
     },
-    "labelPlaceholder": null,
+    "placeHolder": {
+      "__id__": 648
+    },
+    "labelPlaceholder": {
+      "__id__": 650
+    },
     "cursor": {
       "__id__": 633
     },

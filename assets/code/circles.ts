@@ -397,6 +397,11 @@ export class circles extends Component {
     } else {
       dialog.createCircleBox.getChildByName("UpdateMode").active = true;
       dialog.createCircleBox.getChildByName("CreateMode").active = false;
+      dialog.createCircleBox
+        .getChildByName("UpdateMode")
+        .getChildByName("Name")
+        .getChildByName("EditBox")
+        .getComponent(EditBox).string = this.squadInfo.name;
     }
 
     dialog.showDialog(null, "CreateCircle");
