@@ -24,6 +24,7 @@ import { httpRequest } from "./http";
 import { LoadingUI } from "./loadingUI";
 import { DrawRoundedRect } from "./drawRoundedRect";
 import { getStartOfDayTimestamp, isDifferenceBetweenTimes } from "./utils";
+import { Dialog } from "./dialog";
 
 const { ccclass, property } = _decorator;
 
@@ -77,6 +78,7 @@ export class task extends Component {
   private _checkInHistory: ICheckInHistory;
   private _checkInStatus: ICheckInStatus;
   private _currentDayIndex: number = 0;
+  private _isFirstLoop: boolean = true;
   protected onLoad(): void {
     this.init();
   }
@@ -383,7 +385,7 @@ export class task extends Component {
       if (this._currentDayIndex === index) {
         daySection
           .getChildByName("Border")
-          .getComponent(DrawRoundedRect).strokeColor = new Color(225, 92, 28);
+          .getComponent(DrawRoundedRect).fillColor = new Color(255, 205, 92);
         daySection
           .getChildByName("Border")
           .getComponent(DrawRoundedRect)
@@ -409,31 +411,85 @@ export class task extends Component {
         daySection.getChildByName("Mask").active = false;
       }
 
-      var spritePath = "";
-      switch (dayItem.rewardType) {
-        case 1:
-          spritePath = "gold";
-          break;
-        case 2:
-          spritePath = "gold";
-          break;
-        case 3:
-          spritePath = "oneKeyHarvest";
-          break;
-        case 4:
-          spritePath = "scarecrow";
-          break;
-        case 5:
-          spritePath = "gold";
-          break;
-        case 6:
-          spritePath = "gold";
-          break;
-        default:
-          spritePath = "gold";
+      if (dayItem.extra) {
+        daySection.getChildByName("Extra").active = true;
+        daySection
+          .getChildByName("Extra")
+          .getChildByName("Label")
+          .getComponent(Label).string = `+${dayItem.extra}`;
+
+        this.scheduleOnce(() => {
+          const labelWidth = daySection
+            .getChildByName("Extra")
+            .getChildByName("Label")
+            .getComponent(UITransform).width;
+
+          daySection
+            .getChildByName("Extra")
+            .getChildByName("Border")
+            .getComponent(DrawRoundedRect).rectWidth = labelWidth + 10;
+          daySection
+            .getChildByName("Extra")
+            .getChildByName("Border")
+            .getComponent(DrawRoundedRect)
+            .reRender();
+        }, 0);
+
+        daySection["hasExtra"] = true;
+
+        if (this._isFirstLoop) {
+          if (dayItem.rewardType === 3 || dayItem.rewardType === 4) {
+            daySection.getChildByName("Extra").active = false;
+          }
+        }
+      } else {
+        daySection.getChildByName("Extra").active = false;
       }
 
-      const showNumberList = [1, 2, 5, 6];
+      var spritePath = "";
+      var showNumberList = [1, 2, 5, 6];
+      var extraContent = "";
+      if (this._isFirstLoop) {
+        showNumberList = [1, 2, 5, 6];
+        switch (dayItem.rewardType) {
+          case 1:
+            spritePath = "gold";
+            break;
+          case 2:
+            spritePath = "gold";
+            extraContent = `+${dayItem.extra}`;
+            break;
+          case 3:
+            spritePath = "oneKeyHarvest";
+            extraContent = "one-click harvest";
+            break;
+          case 4:
+            spritePath = "scarecrow";
+            extraContent = "scarecrow";
+            break;
+          case 5:
+            spritePath = "gold";
+            extraContent = `+${dayItem.extra}`;
+            break;
+          case 6:
+            spritePath = "gold";
+            extraContent = `+${dayItem.extra}`;
+            break;
+          default:
+            spritePath = "gold";
+        }
+      } else {
+        if (dayItem.rewardType !== 1) {
+          extraContent = `+${dayItem.extra}`;
+        }
+        spritePath = "gold";
+        showNumberList = [1, 2, 3, 4, 5, 6];
+      }
+
+      daySection["extraContent"] = extraContent;
+
+      daySection["spritePath"] = spritePath;
+
       resources.load("iconList", SpriteAtlas, (err, atlas) => {
         if (err) {
           console.error("Failed to load sprite:", err);
@@ -454,7 +510,7 @@ export class task extends Component {
           daySection.getChildByName("Number").active = true;
           daySection
             .getChildByName("Number")
-            .getComponent(Label).string = `x${dayItem.reward}`;
+            .getComponent(Label).string = `+${dayItem.reward}`;
         } else {
           daySection.getChildByName("Icon").setPosition(-2, -12, 0);
           spriteUITransform.width = 60;
@@ -465,6 +521,12 @@ export class task extends Component {
           atlas.getSpriteFrame(spritePath);
       });
     });
+  }
+
+  // 更新天数Tips
+  updateDayTips() {
+    if (this._isFirstLoop) {
+    }
   }
 
   createTaskList() {
@@ -563,13 +625,14 @@ export class task extends Component {
   }
 
   async getCheckInData() {
-    const globalData = GlobalData.getInstance();
     try {
       // 使用 Promise.all 并行执行两个请求
-      const [historyResponse, statusResponse] = await Promise.all([
-        httpRequest("/api/v1/task/checkin/history", { method: "GET" }),
-        httpRequest("/api/v1/task/checkin/status", { method: "GET" }),
-      ]);
+      const [historyResponse, statusResponse, userInfoResponse] =
+        await Promise.all([
+          httpRequest("/api/v1/task/checkin/history", { method: "GET" }),
+          httpRequest("/api/v1/task/checkin/status", { method: "GET" }),
+          httpRequest("/api/v1/farm/u/userInfo", { method: "GET" }),
+        ]);
 
       // 处理 check-in status 请求结果
       if (statusResponse.ok && statusResponse.data.code === 200) {
@@ -581,10 +644,25 @@ export class task extends Component {
         );
       }
 
+      // 获取用户信息中的items，根据是否有道具判断是否是首轮签到
+      if (userInfoResponse.ok && userInfoResponse.data.code === 0) {
+        if (userInfoResponse.data.data.items.length > 0) {
+          this._isFirstLoop = true;
+        } else {
+          this._isFirstLoop = false;
+        }
+      } else {
+        console.error(
+          "Get userinfo request failed with status:",
+          userInfoResponse.status
+        );
+      }
+
       // 处理 check-in history 请求结果
       if (historyResponse.ok && historyResponse.data.code === 200) {
         this._checkInHistory = historyResponse.data.data as ICheckInHistory;
         this.createDayList(); // 确保 createDayList 方法被调用
+        this.updateDayTips();
 
         const loadingUI = this.UDayContainer.getComponent(LoadingUI);
         loadingUI.hide();
@@ -605,17 +683,44 @@ export class task extends Component {
 
   async checkIn() {
     const globalData = GlobalData.getInstance();
+    const dialog = Dialog.getInstance();
     try {
       const response = await httpRequest("/api/v1/task/checkin", {
         method: "POST",
       });
       if (response.ok) {
         if (response.data.code === 200) {
-          globalData.setMessageLabel(i18n.checkInSuccess);
+          globalData.setTipsLabel(i18n.checkInSuccess);
 
           const currentDayItem = this.UDayList.children.find(
             (item, index) => index === this._currentDayIndex + 1
           );
+
+          // if (currentDayItem["hasExtra"]) {
+          dialog.extraRewardBox
+            .getChildByName("Reward")
+            .getChildByName("Name")
+            .getComponent(Label).string = currentDayItem["extraContent"];
+          resources.load("iconList", SpriteAtlas, (err, atlas) => {
+            if (err) {
+              console.error("Failed to load sprite:", err);
+              return;
+            }
+
+            dialog.extraRewardBox
+              .getChildByName("Reward")
+              .getChildByName("Photo")
+              .getComponent(Sprite).spriteFrame = atlas.getSpriteFrame(
+              currentDayItem["spritePath"]
+            );
+          });
+
+          dialog.showDialog(null, "ExtraReward");
+
+          setTimeout(() => {
+            dialog.closeDialog(null, "ExtraReward");
+          }, 2000);
+          // }
 
           currentDayItem.getChildByName("Mask").active = true;
           currentDayItem
@@ -627,10 +732,10 @@ export class task extends Component {
         this.UTaskList.removeAllChildren();
         this.getTaskList();
       } else {
-        globalData.setMessageLabel(i18n.todayChecked);
+        globalData.setTipsLabel(i18n.todayChecked);
       }
     } catch (error) {
-      globalData.setMessageLabel(i18n.todayChecked);
+      globalData.setTipsLabel(i18n.todayChecked);
       console.error("Error:", error);
     }
   }
@@ -666,7 +771,7 @@ export class task extends Component {
         },
       });
       if (response.ok) {
-        globalData.setMessageLabel(i18n.taskCompleted);
+        globalData.setTipsLabel(i18n.taskCompleted);
         const taskItemIdx = this.taskList.findIndex(
           (item) => item.id === event.target.task_id
         );
@@ -686,11 +791,11 @@ export class task extends Component {
           .getChildByName("Right")
           .getChildByName("Completed").active = true;
       } else {
-        globalData.setMessageLabel(i18n.taskUnCompleted);
+        globalData.setTipsLabel(i18n.taskUnCompleted);
         console.error("Request failed with status:", response.status);
       }
     } catch (error) {
-      globalData.setMessageLabel(i18n.taskUnCompleted);
+      globalData.setTipsLabel(i18n.taskUnCompleted);
       console.error("Error:", error);
     }
   }

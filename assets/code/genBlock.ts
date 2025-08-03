@@ -150,7 +150,7 @@ export class GenBlock extends Component {
           (item) => item.farmland_price > 0 && item.status === 0
         );
         if (blockData.id !== this.blockList[unLockBlockIdx].id) {
-          globalData.setMessageLabel(i18n.pleaseUnlockPrevious);
+          globalData.setTipsLabel(i18n.pleaseUnlockPrevious);
           return;
         }
 
@@ -275,7 +275,7 @@ export class GenBlock extends Component {
       });
       if (response.ok) {
         if (response.data.code === 2003) {
-          globalData.setMessageLabel(i18n.goldNotEnough);
+          globalData.setTipsLabel(i18n.goldNotEnough);
           dialog.closeDialog(null, "LockBlock");
           return;
         }
@@ -394,13 +394,13 @@ export class GenBlock extends Component {
         },
       });
       if (response.ok && response.data.code === 0) {
-        globalData.setMessageLabel(i18n.stealSuccess);
+        globalData.setTipsLabel(i18n.stealSuccess);
         this.updateFarmLand(farmland_id);
       } else {
-        globalData.setMessageLabel(errTips[response.data.code]);
+        globalData.setTipsLabel(errTips[response.data.code]);
       }
     } catch (error) {
-      globalData.setMessageLabel(i18n.stealFailed);
+      globalData.setTipsLabel(i18n.stealFailed);
       console.error("Error:", error);
     }
   }

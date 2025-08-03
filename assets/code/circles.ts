@@ -547,7 +547,7 @@ export class circles extends Component {
         const dialog = Dialog.getInstance();
         // if (response.data.code === 1003) {
         //   dialog.closeDialog(null, "CreateCircle");
-        //   globalData.setMessageLabel(i18n.noticeLimit);
+        //   globalData.setTipsLabel(i18n.noticeLimit);
         //   return;
         // }
         this.requestSquadInfo(globalData.userInfo.squad_id);

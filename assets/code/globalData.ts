@@ -109,7 +109,17 @@ export class GlobalData extends Component {
   setTipsLabel(tips, timer = 2) {
     const UTipsFind = find("popBox/Canvas/Tips");
     UTipsFind.active = true;
-    UTipsFind.getChildByName("Label").getComponent(Label).string = tips;
+
+    const label = UTipsFind.getChildByName("Label").getComponent(Label);
+    label.string = tips;
+
+    this.scheduleOnce(() => {
+      const bgBorder =
+        UTipsFind.getChildByName("BgBorder").getComponent(DrawRoundedRect);
+      bgBorder.rectHeight = label.getComponent(UITransform).height + 10;
+
+      bgBorder.reRender();
+    }, 0);
 
     setTimeout(() => {
       UTipsFind.active = false;

@@ -184,7 +184,7 @@ export class harvest extends Component {
   setCurrentSelectHarvestCard(event) {
     const globalData = GlobalData.getInstance();
     if (globalData.userInfo.expansion_card) {
-      globalData.setMessageLabel(i18n.expansionCardAvailable);
+      globalData.setTipsLabel(i18n.expansionCardAvailable);
       return;
     }
     const dialog = Dialog.getInstance();
@@ -318,7 +318,7 @@ export class harvest extends Component {
         this.setBuySucceededShow();
       } else {
         dialog.closeDialog(null, "BuyProps");
-        globalData.setMessageLabel(response.data.msg);
+        globalData.setTipsLabel(response.data.msg);
         console.error("Request failed with status:", response.status);
       }
     } catch (error) {

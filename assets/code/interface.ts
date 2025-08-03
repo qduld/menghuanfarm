@@ -266,4 +266,5 @@ export interface IDayItem {
   rewardType: number;
   reward: string;
   checkIn: number;
+  extra?: string;
 }

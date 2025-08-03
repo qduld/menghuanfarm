@@ -735,8 +735,9 @@ export const dayList = [
     id: 3,
     title: "Day 3",
     rewardType: 2,
-    reward: "150",
+    reward: "50",
     checkIn: 0,
+    extra: "150",
   },
   {
     id: 4,
@@ -765,6 +766,7 @@ export const dayList = [
     rewardType: 3,
     reward: "50",
     checkIn: 0,
+    extra: "300",
   },
   {
     id: 8,
@@ -800,6 +802,7 @@ export const dayList = [
     rewardType: 4,
     reward: "50",
     checkIn: 0,
+    extra: "500",
   },
   {
     id: 13,
@@ -854,8 +857,9 @@ export const dayList = [
     id: 20,
     title: "Day 20",
     rewardType: 5,
-    reward: "1000",
+    reward: "50",
     checkIn: 0,
+    extra: "1000",
   },
   {
     id: 21,
@@ -924,7 +928,8 @@ export const dayList = [
     id: 30,
     title: "Day 30",
     rewardType: 6,
-    reward: "+5%",
+    reward: "50",
     checkIn: 0,
+    extra: "5%",
   },
 ];

@@ -19,7 +19,7 @@ export class EditName extends Component {
 
     let nickname = this.UNickname.string;
     if (!nickname) {
-      globalData.setMessageLabel(i18n.nicknameEmpty);
+      globalData.setTipsLabel(i18n.nicknameEmpty);
       return;
     }
     try {
@@ -32,7 +32,7 @@ export class EditName extends Component {
       if (response.ok) {
         globalData.userInfo.nickname = nickname;
         genInfo.updateUserInfo();
-        globalData.setMessageLabel(i18n.modifyNicknameSuccess);
+        globalData.setTipsLabel(i18n.modifyNicknameSuccess);
         dialog.closeDialog(null, "EditName");
       } else {
         console.error("Request failed with status:", response.status);

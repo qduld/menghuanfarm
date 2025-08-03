@@ -41,7 +41,7 @@ export class SceneSwitcher extends Component {
         }
       }
       if (this.sceneName === "airdrop") {
-        globalData.setMessageLabel(i18n.stayTuned);
+        globalData.setTipsLabel(i18n.stayTuned);
         return;
       }
       director.loadScene(this.sceneName, (err) => {

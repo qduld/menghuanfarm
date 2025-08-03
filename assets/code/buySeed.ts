@@ -250,6 +250,7 @@ export class BuySeed extends Component {
         },
       });
       if (response.ok) {
+        globalData.setTipsLabel(i18n.buySuccess);
         dialog.closeDialog(null, "BuySeed");
         AudioMgr.inst.playOneShot("sounds/goldReduce");
         genInfo.requestUserInfo(); // 买完之后更新用户信息
