@@ -27,8 +27,8 @@ export let token = "";
 export const proxyUrl = "https://www.we-farming.com/node/proxy";
 // export const proxyUrl = "http://localhost:8989/proxy";
 // 服务器默认ip和地址
-const defaultServer = "https://bf.tomocloud.com";
-// const defaultServer = "https://www.we-farming.com";
+// const defaultServer = "https://bf.tomocloud.com";
+const defaultServer = "https://www.we-farming.com";
 // const defaultServer = "http://39.108.156.78:20180";
 // const defaultServer = "http://182.92.142.17:18000";
 export async function httpRequest<T>(

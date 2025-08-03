@@ -125,7 +125,7 @@ export class circles extends Component {
     );
     this.USquadInfo = find("Canvas/Joined/Tips");
     this.UCurrentUser = find("Canvas/Joined/Content/CurrentUser");
-    this.UEditButton = find("Canvas/Joined/Options/Edit");
+    this.UEditButton = find("Canvas/Joined/Tips/Top/Options/Edit");
     this.UCircleTitle = find("Canvas/UnJoined/Content/Title");
     this.USearchCircleTitle = find("Canvas/UnJoined/Content/SearchTitle");
     this.USearchCircle.getComponent(InputHandler).callback = this.searchCircle;
@@ -348,8 +348,9 @@ export class circles extends Component {
   }
 
   updateSquadInfo() {
-    this.USquadInfo.getChildByName("Name").getComponent(Label).string =
-      this.squadInfo.name;
+    this.USquadInfo.getChildByName("Top")
+      .getChildByName("Name")
+      .getComponent(Label).string = this.squadInfo.name;
 
     this.USquadInfo.getChildByName("Detail")
       .getChildByName("People")
