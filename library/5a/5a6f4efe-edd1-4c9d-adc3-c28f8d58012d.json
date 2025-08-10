@@ -1504,6 +1504,7 @@
     "buyPropsBox": null,
     "buyCoinsBox": null,
     "createCircleBox": null,
+    "updateCircleBox": null,
     "settingBox": null,
     "quitCircleBox": null,
     "paymentMethodBox": null,
@@ -3163,6 +3164,7 @@
     "buyPropsBox": null,
     "buyCoinsBox": null,
     "createCircleBox": null,
+    "updateCircleBox": null,
     "settingBox": null,
     "quitCircleBox": null,
     "paymentMethodBox": null,
@@ -35869,7 +35871,7 @@
         "__id__": 975
       }
     ],
-    "_active": false,
+    "_active": true,
     "_components": [
       {
         "__id__": 988
@@ -51499,6 +51501,7 @@
     "buyPropsBox": null,
     "buyCoinsBox": null,
     "createCircleBox": null,
+    "updateCircleBox": null,
     "settingBox": null,
     "quitCircleBox": null,
     "paymentMethodBox": null,
