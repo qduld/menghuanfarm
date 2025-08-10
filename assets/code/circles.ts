@@ -180,7 +180,7 @@ export class circles extends Component {
         .getChildByName("Label")
         .getComponent(Label).string = squad.member_count + "";
       squadSection.getChildByName("Name").getComponent(Label).string =
-        squad.name;
+        squad.name + "";
 
       squadSection.getChildByName("Button")["squad_id"] = squad.id;
 
