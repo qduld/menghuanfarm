@@ -739,21 +739,65 @@ export class task extends Component {
           UProgressBar.getComponent(UITransform).contentSize.height
         );
 
-      taskSection
-        .getChildByName("Content")
-        .getChildByName("Right")
-        .getChildByName("Claim")
-        .getChildByName("Gold")
-        .getChildByName("Number")
-        .getComponent(Label).string = taskItem.reward_value + "";
+      if (taskItem.reward_type === "POINTS") {
+        taskSection
+          .getChildByName("Content")
+          .getChildByName("Right")
+          .getChildByName("Claim")
+          .getChildByName("Gold").active = true;
+        taskSection
+          .getChildByName("Content")
+          .getChildByName("Right")
+          .getChildByName("Claim")
+          .getChildByName("Sprite").active = false;
+        taskSection
+          .getChildByName("Content")
+          .getChildByName("Right")
+          .getChildByName("InProgress")
+          .getChildByName("Gold").active = true;
+        taskSection
+          .getChildByName("Content")
+          .getChildByName("Right")
+          .getChildByName("InProgress")
+          .getChildByName("Sprite").active = false;
 
-      taskSection
-        .getChildByName("Content")
-        .getChildByName("Right")
-        .getChildByName("InProgress")
-        .getChildByName("Gold")
-        .getChildByName("Number")
-        .getComponent(Label).string = taskItem.reward_value + "";
+        taskSection
+          .getChildByName("Content")
+          .getChildByName("Right")
+          .getChildByName("Claim")
+          .getChildByName("Gold")
+          .getChildByName("Number")
+          .getComponent(Label).string = taskItem.reward_value + "";
+
+        taskSection
+          .getChildByName("Content")
+          .getChildByName("Right")
+          .getChildByName("InProgress")
+          .getChildByName("Gold")
+          .getChildByName("Number")
+          .getComponent(Label).string = taskItem.reward_value + "";
+      } else if (taskItem.reward_type === "ITEM") {
+        taskSection
+          .getChildByName("Content")
+          .getChildByName("Right")
+          .getChildByName("Claim")
+          .getChildByName("Gold").active = false;
+        taskSection
+          .getChildByName("Content")
+          .getChildByName("Right")
+          .getChildByName("Claim")
+          .getChildByName("Sprite").active = true;
+        taskSection
+          .getChildByName("Content")
+          .getChildByName("Right")
+          .getChildByName("InProgress")
+          .getChildByName("Gold").active = false;
+        taskSection
+          .getChildByName("Content")
+          .getChildByName("Right")
+          .getChildByName("InProgress")
+          .getChildByName("Sprite").active = true;
+      }
     });
   }
 

@@ -302,6 +302,7 @@ export class GenPlant extends Component {
           return;
         }
 
+        if (!this.plantSprite) return;
         this.plantSprite.getComponent(Sprite).spriteFrame =
           atlas.getSpriteFrame(this.plantSpritePath);
 
@@ -326,6 +327,7 @@ export class GenPlant extends Component {
           return;
         }
 
+        if (!this.plantSprite) return;
         this.plantSprite.getComponent(Sprite).spriteFrame =
           atlas.getSpriteFrame(this.plantSpritePath);
         if (this.plantLevel === 1) {
