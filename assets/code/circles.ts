@@ -554,7 +554,7 @@ export class circles extends Component {
         this.requestSquadInfo(globalData.userInfo.squad_id);
 
         if (response.data.code !== 1001 && response.data.code !== 1003) {
-          dialog.closeDialog(null, "CreateCircle");
+          dialog.closeDialog(null, "UpdateCircle");
         }
       } else {
         console.error("Request failed with status:", response.status);
