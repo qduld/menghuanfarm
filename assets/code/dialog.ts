@@ -40,6 +40,9 @@ export class Dialog extends Component {
   createCircleBox: Node = null; // createCircleBox
 
   @property(Node)
+  updateCircleBox: Node = null; // updateCircleBox
+
+  @property(Node)
   settingBox: Node = null; // settingBox
 
   @property(Node)
@@ -103,6 +106,7 @@ export class Dialog extends Component {
     this.buyPropsBox = find("popBox/Canvas/BuyProps");
     this.buyCoinsBox = find("popBox/Canvas/BuyCoins");
     this.createCircleBox = find("popBox/Canvas/CreateCircle");
+    this.updateCircleBox = find("popBox/Canvas/UpdateCircle");
     this.settingBox = find("popBox/Canvas/Setting");
     this.quitCircleBox = find("popBox/Canvas/QuitCircle");
     this.paymentMethodBox = find("popBox/Canvas/PaymentMethod");
@@ -123,6 +127,7 @@ export class Dialog extends Component {
     this.buyPropsBox ? (this.buyPropsBox.active = false) : "";
     this.buyCoinsBox ? (this.buyCoinsBox.active = false) : "";
     this.createCircleBox ? (this.createCircleBox.active = false) : "";
+    this.updateCircleBox ? (this.updateCircleBox.active = false) : "";
     this.settingBox ? (this.settingBox.active = false) : "";
     this.quitCircleBox ? (this.quitCircleBox.active = false) : "";
     this.paymentMethodBox ? (this.paymentMethodBox.active = false) : "";
@@ -167,6 +172,9 @@ export class Dialog extends Component {
         break;
       case "CreateCircle":
         this.createCircleBox.active = true;
+        break;
+      case "UpdateCircle":
+        this.updateCircleBox.active = true;
         break;
       case "Setting":
         this.settingBox.active = true;
@@ -237,6 +245,10 @@ export class Dialog extends Component {
         break;
       case "CreateCircle":
         this.createCircleBox.active = false;
+        this.overlayMask.active = false;
+        break;
+      case "UpdateCircle":
+        this.updateCircleBox.active = false;
         this.overlayMask.active = false;
         break;
       case "Setting":

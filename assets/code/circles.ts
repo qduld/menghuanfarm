@@ -393,29 +393,25 @@ export class circles extends Component {
 
     const dialog = Dialog.getInstance();
     if (flag === "false") {
-      dialog.createCircleBox.getChildByName("UpdateMode").active = false;
-      dialog.createCircleBox.getChildByName("CreateMode").active = true;
+      dialog.showDialog(null, "CreateCircle");
     } else {
-      dialog.createCircleBox.getChildByName("UpdateMode").active = true;
-      dialog.createCircleBox.getChildByName("CreateMode").active = false;
       dialog.createCircleBox
         .getChildByName("UpdateMode")
         .getChildByName("Name")
         .getChildByName("EditBox")
         .getComponent(EditBox).string = this.squadInfo.name;
+      dialog.showDialog(null, "UpdateCircle");
     }
-
-    dialog.showDialog(null, "CreateCircle");
   }
 
   squadDialogConfirm(event) {
     if (this.isUpdateCircle === "true") {
       const criclesName = find(
-        "popBox/Canvas/CreateCircle/UpdateMode/Name/EditBox/TEXT_LABEL"
+        "popBox/Canvas/UpdateCircle/Name/EditBox/TEXT_LABEL"
       ).getComponent(Label).string;
 
       const criclesNotice = find(
-        "popBox/Canvas/CreateCircle/UpdateMode/Notice/CustomInputBox"
+        "popBox/Canvas/UpdateCircle/Notice/CustomInputBox"
       ).getComponent(CustomInputBox).validText;
 
       this.requestUpdateSquadInfo({
@@ -424,7 +420,7 @@ export class circles extends Component {
       });
     } else {
       const criclesName = find(
-        "popBox/Canvas/CreateCircle/CreateMode/Name/EditBox/TEXT_LABEL"
+        "popBox/Canvas/CreateCircle/Name/EditBox/TEXT_LABEL"
       ).getComponent(Label).string;
 
       this.createSquad(criclesName);
@@ -644,7 +640,7 @@ export class circles extends Component {
 
         dialog.closeDialog(null, "CreateCircle");
         const globalData = GlobalData.getInstance();
-        globalData.userInfo.squad_id = response.data.data.id;
+        globalData.userInfo.squad_id = response.data?.data?.id;
         this.UMembers.active = true;
         this.USquad.active = false;
         this.requestMembersList();
