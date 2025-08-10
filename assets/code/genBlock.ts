@@ -25,6 +25,7 @@ import { GlobalData } from "./globalData";
 import { i18n, errTips } from "./loadData";
 import { AudioMgr } from "./audioManager";
 import { HoverEffect } from "./hoverEffect";
+import { debounceMethod } from "./utils";
 const { ccclass, property } = _decorator;
 
 @ccclass("GenBlock")
@@ -264,6 +265,7 @@ export class GenBlock extends Component {
   }
 
   // 解锁土地
+  @debounceMethod(1000)
   async unLockBlock() {
     const globalData = GlobalData.getInstance();
     const dialog = Dialog.getInstance();

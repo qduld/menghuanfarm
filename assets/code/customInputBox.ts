@@ -9,21 +9,20 @@ import {
   ScrollView,
   UITransform,
   Input,
-  Vec2,
 } from "cc";
+
 const { ccclass, property } = _decorator;
 
 @ccclass("CustomInputBox")
 export class CustomInputBox extends Component {
   @property(RichText) richText: RichText = null!;
-  @property(Node) placeHolder: RichText = null!;
   @property(Label) labelPlaceholder: Label = null!;
   @property(Graphics) cursor: Graphics = null!;
   @property(EditBox) editBox: EditBox = null!;
   @property(ScrollView) scrollView: ScrollView = null!;
 
   private content: string = "";
-  private maxLength: number = 1000;
+  private maxLength: number = 100;
   private isFocused: boolean = false;
   private cursorInterval: number = 0;
   public validText: string = "";
@@ -36,6 +35,7 @@ export class CustomInputBox extends Component {
     if (parentTransform) {
       parentTransform.width = 570; // 限制最大宽度
     }
+
     // 确保 RichText 正确换行
     this.richText.maxWidth = 570;
     this.richText.lineHeight = 36; // 行高调整
@@ -44,8 +44,8 @@ export class CustomInputBox extends Component {
     this.editBox.node.active = false;
     this.editBox.string = "";
     this.editBox.node.on("text-changed", this.onEditBoxChanged, this);
+
     this.editBox.node.on("editing-did-ended", this.onEditBoxEnd, this);
-    this.editBox.node.on("editing-did-began", this.onEditBoxFocus, this);
 
     // 监听点击事件
     this.node.on(Input.EventType.TOUCH_END, this.onFocus, this);
@@ -58,227 +58,149 @@ export class CustomInputBox extends Component {
   }
 
   private setupRichText() {
+    this.richText.verticalAlign = 1; // 顶部对齐
+    this.richText.node.getComponent(UITransform)!.anchorY = 1;
+    this.richText.node.getComponent(UITransform)!.setContentSize(570, 330);
+
+    // 2. 确保 ScrollView 可以滚动
     this.scrollView.vertical = true;
+    this.scrollView.elastic = true;
   }
 
+  // **输入完成后隐藏 EditBox**
   private onEditBoxEnd() {
     this.editBox.node.active = false; // 隐藏 EditBox
     this.isFocused = false;
     this.cursor.node.active = false; // 隐藏光标
     this.richText.node.active = true;
-    this.labelPlaceholder.node.active = this.content.length === 0;
   }
 
+  // 监听 EditBox 输入
   private onEditBoxChanged(editBox: EditBox) {
     this.content = editBox.string;
-    this.labelPlaceholder.node.active = false;
     this.updateRichText();
   }
 
+  // 更新 RichText 显示内容
   private updateRichText() {
+    // 如果内容长度小于 maxLength，则直接显示全部内容
     if (this.content.length <= this.maxLength) {
       this.richText.string = this.content.replace(/\n/g, ""); // 移除所有换行符
       this.validText = this.richText.string;
-      this.calculateTotalLinesByCanvas(this.richText.string, 530);
+      this.calculateTotalLines(this.richText.string); // 计算总行数并更新 this.totalLines
       return;
     }
 
+    // 截取有效文本和溢出文本
     const validTextRaw = this.content.substring(0, this.maxLength);
     const overflowTextRaw = this.content.substring(this.maxLength);
+
+    // 移除所有换行符
     this.validText = validTextRaw.replace(/\n/g, "");
     const overflowText = overflowTextRaw.replace(/\n/g, "");
 
+    // 拼接最终文本，白色部分 + 红色部分
     const displayedText = `${this.validText}<color=#ff0000>${overflowText}</color>`;
-    this.richText.string = displayedText;
-    this.calculateTotalLinesByCanvas(displayedText, 530);
 
+    this.richText.string = displayedText;
+    this.calculateTotalLines(displayedText); // 计算总行数并更新 this.totalLines
+    // 更新 RichText 内容
     this.scheduleOnce(() => {
-      const textHeight = 45.1 * this.totalLines;
-      this.richText.node
-        .getComponent(UITransform)!
-        .setContentSize(570, textHeight);
+      let textHeight = this.richText.node.getComponent(UITransform)!.height;
+
+      // **动态设置 content 高度**
       this.richText.node.parent.getComponent(UITransform)!.height = Math.max(
         textHeight,
         this.scrollView.node.getComponent(UITransform)!.height
       );
-      this.adjustScrollViewHeight();
+
+      // **滚动到底部**
+      this.scrollView.scrollToBottom(0.2);
     }, 0.1);
 
+    // 显示或隐藏占位符
+    this.labelPlaceholder.node.active = this.content.length === 0;
+
+    // 更新光标
     this.updateCursor();
+
+    // 适配 ScrollView
+    this.adjustScrollViewHeight();
+
+    // 滚动到底部
+    this.autoScrollToBottom();
   }
 
-  private calculateTotalLinesByCanvas(text: string, maxWidth: number): number {
-    const canvas = document.createElement("canvas");
-    const ctx = canvas.getContext("2d");
-    if (!ctx) {
-      console.error("无法创建 CanvasRenderingContext2D");
-      return 1;
-    }
-    ctx.font = `${this.richText.fontSize}px ${this.richText.fontFamily}`;
-    let currentLineWidth = 0;
-    let totalLines = 1;
-    const plainText = this.extractPlainText(text);
+  /**
+   * 计算总行数并更新 this.totalLines
+   * @param text 当前显示的文本内容
+   */
+  private calculateTotalLines(text: string) {
+    // 统计换行符数量（包括 <br/> 和原始 \n）
+    const lineBreaks = (text.match(/<br\/>|\n/g) || []).length;
 
-    for (let i = 0; i < plainText.length; i++) {
-      const char = plainText[i];
-      const charWidth = ctx.measureText(char).width;
-      currentLineWidth += charWidth;
+    // 总行数 = 换行符数量 + 1
+    this.totalLines = lineBreaks + 1;
 
-      if (currentLineWidth > maxWidth) {
-        totalLines++;
-        currentLineWidth = charWidth;
-      }
-    }
-
-    this.totalLines = totalLines;
+    console.log(`当前总行数: ${this.totalLines}`); // 打印总行数
   }
 
-  private extractPlainText(richText: string): string {
-    return richText.replace(/<[^>]+>/g, "");
-  }
-
-  private onEditBoxFocus() {
-    this.labelPlaceholder.node.active = false;
-  }
-
+  // 处理聚焦事件
   private onFocus() {
     this.isFocused = true;
     this.cursor.node.active = true;
     this.startCursorBlink();
+
     this.richText.node.active = false;
+    this.labelPlaceholder.node.active = false;
+    // 显示 EditBox 让用户输入
     this.editBox.node.active = true;
     this.editBox.focus();
-
-    this.scheduleOnce(() => {
-      this.editBox.focus();
-      this.scheduleOnce(() => {
-        if (this.content.length > this.maxLength) {
-          this.editBox.string = this.content;
-          this.setEditBoxCursorPosition(this.maxLength);
-        }
-        this.scheduleOnce(() => {
-          if (this.content.length > this.maxLength) {
-            this.setEditBoxCursorPosition(this.maxLength);
-          }
-        }, 0.05);
-      }, 0.05);
-    }, 0.05);
   }
 
+  // 更新光标位置
   private updateCursor() {
     const textHeight = this.richText.node.getComponent(UITransform).height;
     const lastLineWidth = this.calculateLastLineWidth(this.content);
+
+    // 让光标位于最后一行末尾
     this.cursor.node.setPosition(lastLineWidth + 5, -textHeight / 2);
   }
 
+  // 计算最后一行宽度
   private calculateLastLineWidth(text: string): number {
     const lines = text.split("\n");
     const lastLine = lines[lines.length - 1];
+
+    // 假设每个字符宽度为 10px（根据实际情况调整）
     return Math.min(lastLine.length * 10, this.richText.maxWidth);
   }
 
+  // 光标闪烁
   private startCursorBlink() {
-    clearInterval(this.cursorInterval);
+    clearInterval(this.cursorInterval); // 清除上次定时器
     this.cursorInterval = setInterval(() => {
       this.cursor.node.active = !this.cursor.node.active;
     }, 500);
   }
 
+  // **适配 ScrollView 高度**
   private adjustScrollViewHeight() {
-    const textHeight = 45.1 * this.totalLines;
-    this.richText.node
-      .getComponent(UITransform)!
-      .setContentSize(570, textHeight);
+    const textHeight = this.richText.node.getComponent(UITransform).height;
     const contentTransform = this.scrollView.node
       .getChildByName("view")
       .getChildByName("content")
       .getComponent(UITransform);
+
+    // 设置最小高度，防止文本过短导致无法滚动
     contentTransform.height = Math.max(
       textHeight + 20,
       this.scrollView.node.getComponent(UITransform).height
     );
   }
 
-  private setEditBoxCursorPosition(position: number) {
-    position = Math.min(position, this.content.length);
-    this.editBox.string = this.content;
-
-    const attemptSetCursor = (retryCount: number) => {
-      setTimeout(() => {
-        this.editBox.focus();
-        const nativeInput = this.getNativeInput();
-        if (
-          nativeInput &&
-          typeof nativeInput.setSelectionRange === "function"
-        ) {
-          nativeInput.value = this.content;
-          try {
-            nativeInput.setSelectionRange(position, position);
-            this.ensureCursorVisible(nativeInput, position);
-            console.log(`Cursor set successfully at position: ${position}`);
-          } catch (error) {
-            if (retryCount < 3) {
-              console.warn(`Retrying cursor set... Attempt ${retryCount + 1}`);
-              attemptSetCursor(retryCount + 1);
-            } else {
-              console.error(
-                "Failed to set cursor after multiple attempts:",
-                error
-              );
-            }
-          }
-        }
-      }, 100 * (retryCount + 1));
-    };
-
-    attemptSetCursor(0);
-  }
-
-  private ensureCursorVisible(
-    input: HTMLInputElement | HTMLTextAreaElement,
-    position: number
-  ) {
-    if (typeof (input as any).scrollIntoViewIfNeeded === "function") {
-      setTimeout(() => {
-        (input as any).scrollIntoViewIfNeeded();
-      }, 1000);
-      return;
-    }
-
-    if (input.tagName === "TEXTAREA") {
-      const textBeforeCursor = input.value.substring(0, position);
-      const lines = textBeforeCursor.split("\n");
-      const lineHeight = parseInt(getComputedStyle(input).lineHeight, 10) || 20;
-      const verticalScroll = lines.length * lineHeight;
-      input.scrollTop = verticalScroll - input.clientHeight / 2;
-    }
-
-    input.style.overflow = "hidden";
-    requestAnimationFrame(() => {
-      input.style.overflow = "";
-    });
-  }
-
-  private getNativeInput(): HTMLInputElement | HTMLTextAreaElement | null {
-    const editBoxNode = this.editBox.node;
-    if (!editBoxNode || !editBoxNode.activeInHierarchy) {
-      return null;
-    }
-
-    const editBoxImpl = (this.editBox as any)._impl;
-    if (editBoxImpl && editBoxImpl._edTxt) {
-      return editBoxImpl._edTxt;
-    }
-
-    const inputElements = document.querySelectorAll<
-      HTMLInputElement | HTMLTextAreaElement
-    >("input, textarea");
-    for (const input of inputElements) {
-      if (input === document.activeElement) {
-        return input;
-      }
-    }
-
-    return null;
+  // **滚动到底部**
+  private autoScrollToBottom() {
+    this.scrollView.scrollToBottom(0.2);
   }
 }

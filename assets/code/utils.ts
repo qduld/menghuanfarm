@@ -216,3 +216,69 @@ export function isDifferenceBetweenTimes(timestamp1, timestamp2) {
 
   return differenceInDays;
 }
+
+/**
+ * 防抖函数
+ * @param func 要执行的函数
+ * @param delay 防抖延迟时间(毫秒)
+ * @returns 包装后的防抖函数
+ */
+export function debounce<T extends (...args: any[]) => Promise<any>>(
+  func: T,
+  delay: number
+): (...args: Parameters<T>) => Promise<ReturnType<T>> {
+  let timer: ReturnType<typeof setTimeout>;
+  let pendingPromise: Promise<any> | null = null;
+  let resolveFn: ((value: any) => void) | null = null;
+
+  return function (...args: Parameters<T>): Promise<ReturnType<T>> {
+    // 清除之前的定时器
+    clearTimeout(timer);
+
+    // 如果已经有pending的Promise，继续使用它
+    if (!pendingPromise) {
+      pendingPromise = new Promise((resolve) => {
+        resolveFn = resolve;
+      });
+    }
+
+    // 设置新的定时器
+    timer = setTimeout(async () => {
+      try {
+        const result = await func.apply(this, args);
+        if (resolveFn) {
+          resolveFn(result);
+        }
+      } finally {
+        pendingPromise = null;
+        resolveFn = null;
+      }
+    }, delay);
+
+    return pendingPromise;
+  };
+}
+
+// 定义一个防抖装饰器
+export function debounceMethod(delay: number) {
+  return function (
+    target: any,
+    propertyKey: string,
+    descriptor: PropertyDescriptor
+  ) {
+    const originalMethod = descriptor.value;
+    let timer: number = null;
+
+    descriptor.value = function (...args: any[]) {
+      if (timer) {
+        clearTimeout(timer);
+      }
+      timer = setTimeout(() => {
+        originalMethod.apply(this, args);
+        timer = null;
+      }, delay);
+    };
+
+    return descriptor;
+  };
+}

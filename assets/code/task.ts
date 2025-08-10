@@ -738,6 +738,22 @@ export class task extends Component {
             Number(taskItem.target_progress),
           UProgressBar.getComponent(UITransform).contentSize.height
         );
+
+      taskSection
+        .getChildByName("Content")
+        .getChildByName("Right")
+        .getChildByName("Claim")
+        .getChildByName("Gold")
+        .getChildByName("Number")
+        .getComponent(Label).string = taskItem.reward_value + "";
+
+      taskSection
+        .getChildByName("Content")
+        .getChildByName("Right")
+        .getChildByName("InProgress")
+        .getChildByName("Gold")
+        .getChildByName("Number")
+        .getComponent(Label).string = taskItem.reward_value + "";
     });
   }
 
@@ -754,6 +770,33 @@ export class task extends Component {
       // 处理 check-in status 请求结果
       if (statusResponse.ok && statusResponse.data.code === 200) {
         this._checkInStatus = statusResponse.data.data as ICheckInStatus;
+        if (this._checkInStatus.has_checked_in_today) {
+          this.UDayContainer.getChildByName("Button")
+            .getChildByName("Label")
+            .getComponent(Label).string = i18n.checkedIn;
+
+          this.UDayContainer.getChildByName("Button")
+            .getChildByName("Border")
+            .getComponent(DrawRoundedRect).fillColor = new Color(212, 213, 215);
+
+          this.UDayContainer.getChildByName("Button")
+            .getChildByName("Border")
+            .getComponent(DrawRoundedRect)
+            .reRender();
+        } else {
+          this.UDayContainer.getChildByName("Button")
+            .getChildByName("Label")
+            .getComponent(Label).string = i18n.checkIn;
+
+          this.UDayContainer.getChildByName("Button")
+            .getChildByName("Border")
+            .getComponent(DrawRoundedRect).fillColor = new Color(255, 205, 92);
+
+          this.UDayContainer.getChildByName("Button")
+            .getChildByName("Border")
+            .getComponent(DrawRoundedRect)
+            .reRender();
+        }
       } else {
         console.error(
           "Check-in status request failed with status:",
@@ -809,6 +852,19 @@ export class task extends Component {
         if (response.data.code === 200) {
           globalData.setTipsLabel(i18n.checkInSuccess);
 
+          this.UDayContainer.getChildByName("Button")
+            .getChildByName("Label")
+            .getComponent(Label).string = i18n.checkedIn;
+
+          this.UDayContainer.getChildByName("Button")
+            .getChildByName("Border")
+            .getComponent(DrawRoundedRect).fillColor = new Color(212, 213, 215);
+
+          this.UDayContainer.getChildByName("Button")
+            .getChildByName("Border")
+            .getComponent(DrawRoundedRect)
+            .reRender();
+
           const currentDayItem = this.UDayList.children.find(
             (item, index) => index === this._currentDayIndex + 1
           );
@@ -817,7 +873,8 @@ export class task extends Component {
             dialog.extraRewardBox
               .getChildByName("Reward")
               .getChildByName("Name")
-              .getComponent(Label).string = currentDayItem["extraContent"];
+              .getComponent(Label).string =
+              i18n.extraContent + currentDayItem["extraContent"];
             resources.load("iconList", SpriteAtlas, (err, atlas) => {
               if (err) {
                 console.error("Failed to load sprite:", err);
@@ -836,7 +893,7 @@ export class task extends Component {
 
             setTimeout(() => {
               dialog.closeDialog(null, "ExtraReward");
-            }, 2000);
+            }, 3000);
           }
 
           // 签到更新tips

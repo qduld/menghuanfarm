@@ -176,8 +176,8 @@ export class BuySeed extends Component {
         .getComponent(DrawRoundedRect)
         .reRender();
 
-      this.UBuySeedButton.getChildByName("Label").getComponent(Label).string =
-        i18n.insufficientCoins1;
+      // this.UBuySeedButton.getChildByName("Label").getComponent(Label).string =
+      //   i18n.insufficientCoins1;
     } else {
       this.UBuySeedButton.getChildByName("Border").getComponent(
         DrawRoundedRect
@@ -215,8 +215,8 @@ export class BuySeed extends Component {
         .getComponent(DrawRoundedRect)
         .reRender();
 
-      this.UBuySeedButton.getChildByName("Label").getComponent(Label).string =
-        i18n.insufficientCoins1;
+      // this.UBuySeedButton.getChildByName("Label").getComponent(Label).string =
+      //   i18n.insufficientCoins1;
     } else {
       this.UBuySeedButton.getChildByName("Border").getComponent(
         DrawRoundedRect

@@ -1,45 +1,3 @@
-export const param = {
-  //生长周期单位秒
-  levelTime: 30,
-  //昵称
-  avata: "box1/spriteFrame",
-  //头像
-  nickname: "甜蜜蜜",
-  //初始金钱
-  money: 900,
-  //看广告单次奖励金币数量
-  adGiveMoney: 50,
-};
-//排行榜数据
-export const paiHang = [
-  { nickName: "甜蜜蜜", top: 1, userAvata: "ppp/spriteFrame" },
-  { nickName: "举高高", top: 2, userAvata: "ddd/spriteFrame" },
-  { nickName: "打屁屁", top: 3, userAvata: "bbb/spriteFrame" },
-];
-
-export const wechatAd = [
-  //login场景顶部banner广告
-  { type: "banner", adid: "adunit-8235b2e7c8415834" },
-  //main场景底部banner广告
-  { type: "banner", adid: "adunit-fa55e6aad38cde96" },
-  //main场景插屏广告
-  { type: "chapin", adid: "adunit-5ebac372a08f34a7" },
-  //main场景点击激励视频广告
-  { type: "video", adid: "adunit-05671e3e1cff80a2" },
-  //种子背包点击激励视频广告
-  { type: "video1", adid: "adunit-792cb1dd9f9dc143" },
-  //果实背包点击激励视频广告
-  { type: "video2", adid: "adunit-f55d5b037708a34f" },
-  //农贸市场点击激励视频广告
-  { type: "video3", adid: "adunit-935505da4d930fd5" },
-  //排行榜点击激励视频广告
-  { type: "video4", adid: "adunit-1a236fbeb155b427" },
-  //种子背包原生模板广告
-  { type: "custom ", adid: "adunit-a75a38bf1901f5b5" },
-  //果实背包原生模板广告
-  { type: "custom ", adid: "adunit-8e9a24da85808431" },
-];
-
 export const userFilter = [
   "id",
   "firstName",
@@ -115,10 +73,12 @@ export const i18n = {
     13: "First-time purchase of gold coins",
     14: "Accumulated purchase of gold coins exceeds 50,000",
     15: "Unlock the first plot of land",
-    16: "Unlock the last plot of land",
-    17: "Complete the first purchase of an inflation card",
+    16: "Complete the first purchase of an inflation card",
+    17: "Unlock the last plot of land",
   },
   checkInSuccess: "Check In Succeed",
+  checkedIn: "Checked in",
+  checkIn: "Check in",
   todayChecked: "Signed in today",
   claim: "Claim",
   completed: "Completed",
@@ -127,6 +87,7 @@ export const i18n = {
   taskUnCompleted: "Task not completed",
   requestError: "Request error",
   stayTuned: "Stay tuned",
+  extraContent: "Congratulations! You've earned an extra ",
 };
 
 export const errTips = {
@@ -135,9 +96,12 @@ export const errTips = {
 };
 
 export const tokenMock =
-  // "query_id=AAFNCHk7AAAAAE0IeTtP7RMw&user=%7B%22id%22%3A997787740%2C%22first_name%22%3A%22Franklin%22%2C%22last_name%22%3A%22Zelo%22%2C%22username%22%3A%22franklinSeventeen%22%2C%22language_code%22%3A%22zh-hans%22%2C%22allows_write_to_pm%22%3Atrue%2C%22photo_url%22%3A%22https%3A%5C%2F%5C%2Ft.me%5C%2Fi%5C%2Fuserpic%5C%2F320%5C%2FVPWnV7PoxyMCwkPeMUnbj5ISWwjyAf0W0d1i8cKqjGk.svg%22%7D&auth_date=1734449112&signature=opXIYnBU_2ZOnJeRIpEqjwgUFzMpYGv5b-vDK2u3YE7ojcnhPvAzQ5UtEluRwTuEPflKqC8bcTnqnJpWc2KCAg&hash=0c5a480bdf6dc2a33c0f8d7d94779ca91442078ee409ed5f2bcb37e531489785";
-  // "query_id=AAFNCHk7AAAAAE0IeTtP7RMw&user=%7B%22id%22%3A997787739%2C%22first_name%22%3A%22Franklin%22%2C%22last_name%22%3A%22Zelo%22%2C%22username%22%3A%22franklinSixteen%22%2C%22language_code%22%3A%22zh-hans%22%2C%22allows_write_to_pm%22%3Atrue%2C%22photo_url%22%3A%22https%3A%5C%2F%5C%2Ft.me%5C%2Fi%5C%2Fuserpic%5C%2F320%5C%2FVPWnV7PoxyMCwkPeMUnbj5ISWwjyAf0W0d1i8cKqjGk.svg%22%7D&auth_date=1734449112&signature=opXIYnBU_2ZOnJeRIpEqjwgUFzMpYGv5b-vDK2u3YE7ojcnhPvAzQ5UtEluRwTuEPflKqC8bcTnqnJpWc2KCAg&hash=0c5a480bdf6dc2a33c0f8d7d94779ca91442078ee409ed5f2bcb37e531489785";
-  "query_id=AAFNCHk7AAAAAE0IeTtP7RMw&user=%7B%22id%22%3A997787738%2C%22first_name%22%3A%22Franklin%22%2C%22last_name%22%3A%22Zelo%22%2C%22username%22%3A%22franklinFifteen%22%2C%22language_code%22%3A%22zh-hans%22%2C%22allows_write_to_pm%22%3Atrue%2C%22photo_url%22%3A%22https%3A%5C%2F%5C%2Ft.me%5C%2Fi%5C%2Fuserpic%5C%2F320%5C%2FVPWnV7PoxyMCwkPeMUnbj5ISWwjyAf0W0d1i8cKqjGk.svg%22%7D&auth_date=1734449112&signature=opXIYnBU_2ZOnJeRIpEqjwgUFzMpYGv5b-vDK2u3YE7ojcnhPvAzQ5UtEluRwTuEPflKqC8bcTnqnJpWc2KCAg&hash=0c5a480bdf6dc2a33c0f8d7d94779ca91442078ee409ed5f2bcb37e531489785";
+  // "query_id=AAFNCHk7AAAAAE0IeTtP7RMw&user=%7B%22id%22%3A997787743%2C%22first_name%22%3A%22Franklin%22%2C%22last_name%22%3A%22Zelo%22%2C%22username%22%3A%22franklinTwenty%22%2C%22language_code%22%3A%22zh-hans%22%2C%22allows_write_to_pm%22%3Atrue%2C%22photo_url%22%3A%22https%3A%5C%2F%5C%2Ft.me%5C%2Fi%5C%2Fuserpic%5C%2F320%5C%2FVPWnV7PoxyMCwkPeMUnbj5ISWwjyAf0W0d1i8cKqjGk.svg%22%7D&auth_date=1734449112&signature=opXIYnBU_2ZOnJeRIpEqjwgUFzMpYGv5b-vDK2u3YE7ojcnhPvAzQ5UtEluRwTuEPflKqC8bcTnqnJpWc2KCAg&hash=0c5a480bdf6dc2a33c0f8d7d94779ca91442078ee409ed5f2bcb37e531489785";
+  "query_id=AAFNCHk7AAAAAE0IeTtP7RMw&user=%7B%22id%22%3A997787742%2C%22first_name%22%3A%22Franklin%22%2C%22last_name%22%3A%22Zelo%22%2C%22username%22%3A%22franklinNineteen%22%2C%22language_code%22%3A%22zh-hans%22%2C%22allows_write_to_pm%22%3Atrue%2C%22photo_url%22%3A%22https%3A%5C%2F%5C%2Ft.me%5C%2Fi%5C%2Fuserpic%5C%2F320%5C%2FVPWnV7PoxyMCwkPeMUnbj5ISWwjyAf0W0d1i8cKqjGk.svg%22%7D&auth_date=1734449112&signature=opXIYnBU_2ZOnJeRIpEqjwgUFzMpYGv5b-vDK2u3YE7ojcnhPvAzQ5UtEluRwTuEPflKqC8bcTnqnJpWc2KCAg&hash=0c5a480bdf6dc2a33c0f8d7d94779ca91442078ee409ed5f2bcb37e531489785";
+// "query_id=AAFNCHk7AAAAAE0IeTtP7RMw&user=%7B%22id%22%3A997787741%2C%22first_name%22%3A%22Franklin%22%2C%22last_name%22%3A%22Zelo%22%2C%22username%22%3A%22franklinEighteen%22%2C%22language_code%22%3A%22zh-hans%22%2C%22allows_write_to_pm%22%3Atrue%2C%22photo_url%22%3A%22https%3A%5C%2F%5C%2Ft.me%5C%2Fi%5C%2Fuserpic%5C%2F320%5C%2FVPWnV7PoxyMCwkPeMUnbj5ISWwjyAf0W0d1i8cKqjGk.svg%22%7D&auth_date=1734449112&signature=opXIYnBU_2ZOnJeRIpEqjwgUFzMpYGv5b-vDK2u3YE7ojcnhPvAzQ5UtEluRwTuEPflKqC8bcTnqnJpWc2KCAg&hash=0c5a480bdf6dc2a33c0f8d7d94779ca91442078ee409ed5f2bcb37e531489785";
+// "query_id=AAFNCHk7AAAAAE0IeTtP7RMw&user=%7B%22id%22%3A997787740%2C%22first_name%22%3A%22Franklin%22%2C%22last_name%22%3A%22Zelo%22%2C%22username%22%3A%22franklinSeventeen%22%2C%22language_code%22%3A%22zh-hans%22%2C%22allows_write_to_pm%22%3Atrue%2C%22photo_url%22%3A%22https%3A%5C%2F%5C%2Ft.me%5C%2Fi%5C%2Fuserpic%5C%2F320%5C%2FVPWnV7PoxyMCwkPeMUnbj5ISWwjyAf0W0d1i8cKqjGk.svg%22%7D&auth_date=1734449112&signature=opXIYnBU_2ZOnJeRIpEqjwgUFzMpYGv5b-vDK2u3YE7ojcnhPvAzQ5UtEluRwTuEPflKqC8bcTnqnJpWc2KCAg&hash=0c5a480bdf6dc2a33c0f8d7d94779ca91442078ee409ed5f2bcb37e531489785";
+// "query_id=AAFNCHk7AAAAAE0IeTtP7RMw&user=%7B%22id%22%3A997787739%2C%22first_name%22%3A%22Franklin%22%2C%22last_name%22%3A%22Zelo%22%2C%22username%22%3A%22franklinSixteen%22%2C%22language_code%22%3A%22zh-hans%22%2C%22allows_write_to_pm%22%3Atrue%2C%22photo_url%22%3A%22https%3A%5C%2F%5C%2Ft.me%5C%2Fi%5C%2Fuserpic%5C%2F320%5C%2FVPWnV7PoxyMCwkPeMUnbj5ISWwjyAf0W0d1i8cKqjGk.svg%22%7D&auth_date=1734449112&signature=opXIYnBU_2ZOnJeRIpEqjwgUFzMpYGv5b-vDK2u3YE7ojcnhPvAzQ5UtEluRwTuEPflKqC8bcTnqnJpWc2KCAg&hash=0c5a480bdf6dc2a33c0f8d7d94779ca91442078ee409ed5f2bcb37e531489785";
+// "query_id=AAFNCHk7AAAAAE0IeTtP7RMw&user=%7B%22id%22%3A997787738%2C%22first_name%22%3A%22Franklin%22%2C%22last_name%22%3A%22Zelo%22%2C%22username%22%3A%22franklinFifteen%22%2C%22language_code%22%3A%22zh-hans%22%2C%22allows_write_to_pm%22%3Atrue%2C%22photo_url%22%3A%22https%3A%5C%2F%5C%2Ft.me%5C%2Fi%5C%2Fuserpic%5C%2F320%5C%2FVPWnV7PoxyMCwkPeMUnbj5ISWwjyAf0W0d1i8cKqjGk.svg%22%7D&auth_date=1734449112&signature=opXIYnBU_2ZOnJeRIpEqjwgUFzMpYGv5b-vDK2u3YE7ojcnhPvAzQ5UtEluRwTuEPflKqC8bcTnqnJpWc2KCAg&hash=0c5a480bdf6dc2a33c0f8d7d94779ca91442078ee409ed5f2bcb37e531489785";
 // "query_id=AAFNCHk7AAAAAE0IeTtP7RMw&user=%7B%22id%22%3A997787737%2C%22first_name%22%3A%22Franklin%22%2C%22last_name%22%3A%22Zelo%22%2C%22username%22%3A%22franklinFourteen%22%2C%22language_code%22%3A%22zh-hans%22%2C%22allows_write_to_pm%22%3Atrue%2C%22photo_url%22%3A%22https%3A%5C%2F%5C%2Ft.me%5C%2Fi%5C%2Fuserpic%5C%2F320%5C%2FVPWnV7PoxyMCwkPeMUnbj5ISWwjyAf0W0d1i8cKqjGk.svg%22%7D&auth_date=1734449112&signature=opXIYnBU_2ZOnJeRIpEqjwgUFzMpYGv5b-vDK2u3YE7ojcnhPvAzQ5UtEluRwTuEPflKqC8bcTnqnJpWc2KCAg&hash=0c5a480bdf6dc2a33c0f8d7d94779ca91442078ee409ed5f2bcb37e531489785";
 // "query_id=AAFNCHk7AAAAAE0IeTtP7RMw&user=%7B%22id%22%3A997787736%2C%22first_name%22%3A%22Franklin%22%2C%22last_name%22%3A%22Zelo%22%2C%22username%22%3A%22franklinThirteen%22%2C%22language_code%22%3A%22zh-hans%22%2C%22allows_write_to_pm%22%3Atrue%2C%22photo_url%22%3A%22https%3A%5C%2F%5C%2Ft.me%5C%2Fi%5C%2Fuserpic%5C%2F320%5C%2FVPWnV7PoxyMCwkPeMUnbj5ISWwjyAf0W0d1i8cKqjGk.svg%22%7D&auth_date=1734449112&signature=opXIYnBU_2ZOnJeRIpEqjwgUFzMpYGv5b-vDK2u3YE7ojcnhPvAzQ5UtEluRwTuEPflKqC8bcTnqnJpWc2KCAg&hash=0c5a480bdf6dc2a33c0f8d7d94779ca91442078ee409ed5f2bcb37e531489785";
 // "query_id=AAFNCHk7AAAAAE0IeTtP7RMw&user=%7B%22id%22%3A997787735%2C%22first_name%22%3A%22Franklin%22%2C%22last_name%22%3A%22Zelo%22%2C%22username%22%3A%22franklinTwelve%22%2C%22language_code%22%3A%22zh-hans%22%2C%22allows_write_to_pm%22%3Atrue%2C%22photo_url%22%3A%22https%3A%5C%2F%5C%2Ft.me%5C%2Fi%5C%2Fuserpic%5C%2F320%5C%2FVPWnV7PoxyMCwkPeMUnbj5ISWwjyAf0W0d1i8cKqjGk.svg%22%7D&auth_date=1734449112&signature=opXIYnBU_2ZOnJeRIpEqjwgUFzMpYGv5b-vDK2u3YE7ojcnhPvAzQ5UtEluRwTuEPflKqC8bcTnqnJpWc2KCAg&hash=0c5a480bdf6dc2a33c0f8d7d94779ca91442078ee409ed5f2bcb37e531489785";

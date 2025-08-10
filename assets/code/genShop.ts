@@ -195,10 +195,10 @@ export class GenShop extends Component {
           .getChildByName("Border")
           .getComponent(DrawRoundedRect)
           .reRender();
-        seedSection
-          .getChildByName("Button")
-          .getChildByName("Label")
-          .getComponent(Label).string = i18n.insufficientCoins1;
+        // seedSection
+        //   .getChildByName("Button")
+        //   .getChildByName("Label")
+        //   .getComponent(Label).string = i18n.insufficientCoins1;
 
         button.getChildByName("Icon").active = false;
       } else {
