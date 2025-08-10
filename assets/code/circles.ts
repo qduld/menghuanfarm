@@ -395,8 +395,7 @@ export class circles extends Component {
     if (flag === "false") {
       dialog.showDialog(null, "CreateCircle");
     } else {
-      dialog.createCircleBox
-        .getChildByName("UpdateMode")
+      dialog.updateCircleBox
         .getChildByName("Name")
         .getChildByName("EditBox")
         .getComponent(EditBox).string = this.squadInfo.name;
