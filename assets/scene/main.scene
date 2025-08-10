@@ -48254,7 +48254,7 @@
     "_id": "71G/mxzUBGH64xfeBqEARz"
   },
   {
-    "__type__": "0831c4LmoRAg43knIqECtKi",
+    "__type__": "cc.Button",
     "_name": "",
     "_objFlags": 0,
     "__editorExtras__": {},
@@ -48263,10 +48263,45 @@
     },
     "_enabled": true,
     "__prefab": null,
-    "editBox": {
-      "__id__": 1273
+    "clickEvents": [],
+    "_interactable": true,
+    "_transition": 0,
+    "_normalColor": {
+      "__type__": "cc.Color",
+      "r": 255,
+      "g": 255,
+      "b": 255,
+      "a": 255
     },
-    "_id": "dbceZtAOlINJoizOfdWwnJ"
+    "_hoverColor": {
+      "__type__": "cc.Color",
+      "r": 211,
+      "g": 211,
+      "b": 211,
+      "a": 255
+    },
+    "_pressedColor": {
+      "__type__": "cc.Color",
+      "r": 255,
+      "g": 255,
+      "b": 255,
+      "a": 255
+    },
+    "_disabledColor": {
+      "__type__": "cc.Color",
+      "r": 124,
+      "g": 124,
+      "b": 124,
+      "a": 255
+    },
+    "_normalSprite": null,
+    "_hoverSprite": null,
+    "_pressedSprite": null,
+    "_disabledSprite": null,
+    "_duration": 0.1,
+    "_zoomScale": 1.2,
+    "_target": null,
+    "_id": "b6XYRzvSRBwI01FnVQk9f1"
   },
   {
     "__type__": "cc.UITransform",
