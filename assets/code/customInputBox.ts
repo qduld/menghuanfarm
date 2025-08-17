@@ -42,7 +42,7 @@ export class CustomInputBox extends Component {
 
     // 隐藏 EditBox 并监听输入事件
     this.editBox.node.active = false;
-    this.editBox.string = "";
+    // this.editBox.string = "";
     this.editBox.node.on("text-changed", this.onEditBoxChanged, this);
 
     this.editBox.node.on("editing-did-ended", this.onEditBoxEnd, this);
@@ -147,6 +147,7 @@ export class CustomInputBox extends Component {
 
   // 处理聚焦事件
   private onFocus() {
+    debugger;
     this.isFocused = true;
     this.cursor.node.active = true;
     this.startCursorBlink();

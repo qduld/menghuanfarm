@@ -43,6 +43,9 @@ export class GenPlant extends Component {
       this.plantLevel = 0;
       block.getChildByName("Countdown").active = false;
       block.getChildByName("Plant").getChildByName("Expand").active = false;
+      if (globalData.isStolen) {
+        this.plantSprite.active = false;
+      }
     } else {
       const currentTime = new Date().getTime();
       const maturity_time = data.seed.plant_at + data.seed.maturity_time * 1000;

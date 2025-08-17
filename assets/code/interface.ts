@@ -143,6 +143,8 @@ export interface ISquadList {
   id: number;
   name: string;
   member_count: number;
+  created_at: number;
+  total_points: number;
 }
 
 export interface IMembersList {

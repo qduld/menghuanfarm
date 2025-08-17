@@ -61,7 +61,13 @@ export class circles extends Component {
   UMembersSection: Node = null; // 成员列表Section
 
   @property
-  UEditButton: Node = null;
+  UEditNameButton: Node = null;
+
+  @property
+  UQuitButton: Node = null;
+
+  @property
+  UEditNoticeButton: Node = null;
 
   @property
   squadSpacingY: number = 15; // 推荐间距
@@ -125,7 +131,9 @@ export class circles extends Component {
     );
     this.USquadInfo = find("Canvas/Joined/Tips");
     this.UCurrentUser = find("Canvas/Joined/Content/CurrentUser");
-    this.UEditButton = find("Canvas/Joined/Tips/Top/Options/Edit");
+    this.UEditNameButton = find("Canvas/Joined/Tips/Top/Options/Edit");
+    this.UQuitButton = find("Canvas/Joined/Tips/Top/Options/Quit");
+    this.UEditNoticeButton = find("Canvas/Joined/Tips/Bulletin/Edit");
     this.UCircleTitle = find("Canvas/UnJoined/Content/Title");
     this.USearchCircleTitle = find("Canvas/UnJoined/Content/SearchTitle");
     this.USearchCircle.getComponent(InputHandler).callback = this.searchCircle;
@@ -179,10 +187,23 @@ export class circles extends Component {
         .getChildByName("People")
         .getChildByName("Label")
         .getComponent(Label).string = squad.member_count + "";
+
+      squadSection
+        .getChildByName("Money")
+        .getChildByName("Label")
+        .getComponent(Label).string =
+        formatNumberShortDynamic(squad.total_points) + "";
+
+      squadSection
+        .getChildByName("Timer")
+        .getChildByName("Label")
+        .getComponent(Label).string =
+        formatTimestampToDate(squad.created_at) + "";
       squadSection.getChildByName("Name").getComponent(Label).string =
         squad.name + "";
 
       squadSection.getChildByName("Button")["squad_id"] = squad.id;
+      squadSection["squad_id"] = squad.id;
 
       squadSection["squad"] = squad;
     });
@@ -214,12 +235,14 @@ export class circles extends Component {
       this.membersList[memberIndex].points_balance + "";
 
     if (this.membersList[memberIndex].is_leader) {
-      this.UEditButton.active = true;
+      this.UEditNameButton.active = true;
+      this.UEditNoticeButton.active = true;
       this.UCurrentUser.getChildByName("Middle")
         .getChildByName("Name")
         .getChildByName("Icon").active = true;
     } else {
-      this.UEditButton.active = false;
+      this.UEditNameButton.active = false;
+      this.UEditNoticeButton.active = false;
       this.UCurrentUser.getChildByName("Middle")
         .getChildByName("Name")
         .getChildByName("Icon").active = false;
@@ -241,8 +264,15 @@ export class circles extends Component {
     if (this.isView) {
       position.y -= sectionHeight;
       this.UCurrentUser.active = false;
+      this.UEditNameButton.active = false;
+      this.UEditNoticeButton.active = false;
+      this.UQuitButton.active = false;
     } else {
       this.updateCurrentUser();
+      this.UMembers.getChildByName("Footer").getChildByName("Share").active =
+        true;
+      this.UMembers.getChildByName("Footer").getChildByName("Join").active =
+        false;
     }
     this.UScrollView.setPosition(position);
 
@@ -384,6 +414,12 @@ export class circles extends Component {
     this.isView = true;
     this.UMembers.active = true;
     this.USquad.active = false;
+    this.UQuitButton.active = false;
+    this.UEditNameButton.active = false;
+    this.UEditNoticeButton.active = false;
+    this.UMembers.getChildByName("Footer").getChildByName("Share").active =
+      false;
+    this.UMembers.getChildByName("Footer").getChildByName("Join").active = true;
     this.requestMembersList(squad_id);
     this.requestSquadInfo(squad_id);
   }
@@ -392,25 +428,24 @@ export class circles extends Component {
     this.isUpdateCircle = flag;
 
     const dialog = Dialog.getInstance();
-    if (flag === "false") {
-      dialog.showDialog(null, "CreateCircle");
-    } else {
-      dialog.updateCircleBox
+
+    if (flag === "true") {
+      dialog.createCircleBox
         .getChildByName("Name")
         .getChildByName("EditBox")
         .getComponent(EditBox).string = this.squadInfo.name;
-      dialog.showDialog(null, "UpdateCircle");
     }
+    dialog.showDialog(null, "CreateCircle");
   }
 
   squadDialogConfirm(event) {
-    if (this.isUpdateCircle === "true") {
-      const criclesName = find(
-        "popBox/Canvas/UpdateCircle/Name/EditBox/TEXT_LABEL"
-      ).getComponent(Label).string;
+    const criclesName = find(
+      "popBox/Canvas/CreateCircle/Name/EditBox/TEXT_LABEL"
+    ).getComponent(Label).string;
 
+    if (this.isUpdateCircle === "true") {
       const criclesNotice = find(
-        "popBox/Canvas/UpdateCircle/Notice/CustomInputBox"
+        "popBox/Canvas/UpdateNotice/Notice/CustomInputBox"
       ).getComponent(CustomInputBox).validText;
 
       this.requestUpdateSquadInfo({
@@ -418,17 +453,48 @@ export class circles extends Component {
         notice: criclesNotice,
       });
     } else {
-      const criclesName = find(
-        "popBox/Canvas/CreateCircle/Name/EditBox/TEXT_LABEL"
-      ).getComponent(Label).string;
-
       this.createSquad(criclesName);
     }
   }
 
+  showNoticeDialog() {
+    const dialog = Dialog.getInstance();
+
+    debugger;
+    dialog.updateNoticeBox
+      .getChildByName("Notice")
+      .getChildByName("CustomInputBox")
+      .getChildByName("EditBox")
+      .getComponent(EditBox).string = this.squadInfo.notice;
+
+    if (this.squadInfo.notice) {
+      dialog.updateNoticeBox
+        .getChildByName("Notice")
+        .getChildByName("CustomInputBox")
+        .getComponent(CustomInputBox).labelPlaceholder.string = "";
+    }
+    dialog.updateNoticeBox
+      .getChildByName("Notice")
+      .getChildByName("CustomInputBox")
+      .getComponent(CustomInputBox).richText.string = this.squadInfo.notice;
+
+    dialog.showDialog(null, "UpdateNotice");
+  }
+
+  updateNoticeConfirm() {
+    const criclesNotice = find(
+      "popBox/Canvas/UpdateNotice/Notice/CustomInputBox"
+    ).getComponent(CustomInputBox).validText;
+
+    this.requestUpdateSquadInfo({
+      name: this.squadInfo.name,
+      notice: criclesNotice,
+    });
+  }
+
   anotherBatchSquad() {
     if (this.hasMore) {
-      this.currentPage++;
+      this.currentPage = this.currentPage + 5;
     } else {
       this.currentPage = 0;
     }
@@ -554,7 +620,7 @@ export class circles extends Component {
         this.requestSquadInfo(globalData.userInfo.squad_id);
 
         if (response.data.code !== 1001 && response.data.code !== 1003) {
-          dialog.closeDialog(null, "UpdateCircle");
+          dialog.closeDialog(null, "CreateCircle");
         }
       } else {
         console.error("Request failed with status:", response.status);

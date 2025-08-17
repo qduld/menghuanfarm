@@ -8,6 +8,7 @@ import {
   AudioClip,
   AudioSource,
   Label,
+  director,
 } from "cc";
 import { GenBag } from "./genBag";
 import { GenShop } from "./genShop";
@@ -40,7 +41,7 @@ export class Dialog extends Component {
   createCircleBox: Node = null; // createCircleBox
 
   @property(Node)
-  updateCircleBox: Node = null; // updateCircleBox
+  updateNoticeBox: Node = null; // updateNoticeBox
 
   @property(Node)
   settingBox: Node = null; // settingBox
@@ -106,7 +107,7 @@ export class Dialog extends Component {
     this.buyPropsBox = find("popBox/Canvas/BuyProps");
     this.buyCoinsBox = find("popBox/Canvas/BuyCoins");
     this.createCircleBox = find("popBox/Canvas/CreateCircle");
-    this.updateCircleBox = find("popBox/Canvas/UpdateCircle");
+    this.updateNoticeBox = find("popBox/Canvas/UpdateNotice");
     this.settingBox = find("popBox/Canvas/Setting");
     this.quitCircleBox = find("popBox/Canvas/QuitCircle");
     this.paymentMethodBox = find("popBox/Canvas/PaymentMethod");
@@ -127,7 +128,7 @@ export class Dialog extends Component {
     this.buyPropsBox ? (this.buyPropsBox.active = false) : "";
     this.buyCoinsBox ? (this.buyCoinsBox.active = false) : "";
     this.createCircleBox ? (this.createCircleBox.active = false) : "";
-    this.updateCircleBox ? (this.updateCircleBox.active = false) : "";
+    this.updateNoticeBox ? (this.updateNoticeBox.active = false) : "";
     this.settingBox ? (this.settingBox.active = false) : "";
     this.quitCircleBox ? (this.quitCircleBox.active = false) : "";
     this.paymentMethodBox ? (this.paymentMethodBox.active = false) : "";
@@ -167,14 +168,14 @@ export class Dialog extends Component {
         this.buyPropsBox.active = true;
         break;
       case "BuyCoins":
-        this.lockBlockBox.active = false;
+        this.lockBlockBox ? (this.lockBlockBox.active = false) : "";
         this.buyCoinsBox.active = true;
         break;
       case "CreateCircle":
         this.createCircleBox.active = true;
         break;
-      case "UpdateCircle":
-        this.updateCircleBox.active = true;
+      case "UpdateNotice":
+        this.updateNoticeBox.active = true;
         break;
       case "Setting":
         this.settingBox.active = true;
@@ -183,7 +184,12 @@ export class Dialog extends Component {
         this.quitCircleBox.active = true;
         break;
       case "PaymentMethod":
-        this.overlayMask.setSiblingIndex(9);
+        if (director.getScene().name === "main") {
+          this.overlayMask.setSiblingIndex(8);
+        } else {
+          this.overlayMask.setSiblingIndex(4);
+        }
+
         this.paymentMethodBox.active = true;
         break;
       case "EditName":
@@ -247,8 +253,8 @@ export class Dialog extends Component {
         this.createCircleBox.active = false;
         this.overlayMask.active = false;
         break;
-      case "UpdateCircle":
-        this.updateCircleBox.active = false;
+      case "UpdateNotice":
+        this.updateNoticeBox.active = false;
         this.overlayMask.active = false;
         break;
       case "Setting":
@@ -262,7 +268,6 @@ export class Dialog extends Component {
       case "PaymentMethod":
         this.overlayMask.setSiblingIndex(1);
         this.paymentMethodBox.active = false;
-        this.overlayMask.active = false;
         break;
       case "EditName":
         this.editNameBox.active = false;
