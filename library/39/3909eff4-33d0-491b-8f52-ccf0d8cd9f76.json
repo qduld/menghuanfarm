@@ -16419,9 +16419,9 @@
       "__id__": 2
     },
     "component": "",
-    "_componentId": "02964fGKTRAZLPQ0OcOdX+l",
-    "handler": "showDialog",
-    "customEventData": "ShareLink"
+    "_componentId": "f96f6E8O1ZPkIiiE+Qk4gVz",
+    "handler": "viewModeJoinSquad",
+    "customEventData": ""
   },
   {
     "__type__": "6effe7WgmlGOLMr1liuvasK",
@@ -21090,7 +21090,7 @@
     "_anchorPoint": {
       "__type__": "cc.Vec2",
       "x": 0,
-      "y": 1
+      "y": 0.7
     },
     "_id": "29Khx3gFlAw5fxK+T6HUM3"
   },
@@ -22231,7 +22231,7 @@
         "__id__": 650
       }
     ],
-    "_active": true,
+    "_active": false,
     "_components": [
       {
         "__id__": 663

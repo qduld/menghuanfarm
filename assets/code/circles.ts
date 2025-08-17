@@ -262,7 +262,7 @@ export class circles extends Component {
     // 未加入修改scrollview位置
     const position = new Vec3(0, -410, 0);
     if (this.isView) {
-      position.y -= sectionHeight;
+      position.y += sectionHeight;
       this.UCurrentUser.active = false;
       this.UEditNameButton.active = false;
       this.UEditNoticeButton.active = false;
@@ -319,7 +319,8 @@ export class circles extends Component {
       // 可偷且不是自己显示偷取图标
       if (
         member.steal_available === 1 &&
-        member.id !== globalData.userInfo.id
+        member.id !== globalData.userInfo.id &&
+        !this.isView
       ) {
         membersSection.getChildByName("Button").active = true;
       } else {
@@ -660,21 +661,38 @@ export class circles extends Component {
     }
   }
 
+  viewModeJoinSquad() {
+    this.joinSquad(null, this.squadInfo.id);
+  }
+
   // 加入队伍
-  async joinSquad(event: EventTouch) {
+  async joinSquad(event: EventTouch, squad_id) {
     const globalData = GlobalData.getInstance();
+    const squadId = event?.currentTarget?.squad_id
+      ? event?.currentTarget?.squad_id
+      : squad_id;
 
     try {
       const response = await httpRequest("/api/v1/squad/join", {
         method: "POST",
         body: {
-          squad_id: event.currentTarget.squad_id,
+          squad_id: squadId,
         },
       });
       if (response.ok) {
-        globalData.userInfo.squad_id = event.currentTarget.squad_id;
+        globalData.userInfo.squad_id = squadId;
         this.UMembers.active = true;
         this.USquad.active = false;
+        if (this.isView) {
+          globalData.setTipsLabel(i18n.joinedSucceed);
+          this.isView = false;
+          this.UQuitButton.active = true;
+          this.UMembers.getChildByName("Footer").getChildByName(
+            "Share"
+          ).active = true;
+          this.UMembers.getChildByName("Footer").getChildByName("Join").active =
+            false;
+        }
         this.requestMembersList();
         this.requestSquadInfo();
       } else {
