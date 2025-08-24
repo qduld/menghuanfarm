@@ -23,7 +23,11 @@ import { GlobalData } from "./globalData";
 import { httpRequest } from "./http";
 import { LoadingUI } from "./loadingUI";
 import { DrawRoundedRect } from "./drawRoundedRect";
-import { getStartOfDayTimestamp, isDifferenceBetweenTimes } from "./utils";
+import {
+  debounceMethod,
+  getStartOfDayTimestamp,
+  isDifferenceBetweenTimes,
+} from "./utils";
 import { Dialog } from "./dialog";
 
 const { ccclass, property } = _decorator;
@@ -983,6 +987,7 @@ export class task extends Component {
   }
 
   // 完成任务
+  @debounceMethod(1000)
   async completeTask(event) {
     const globalData = GlobalData.getInstance();
     try {

@@ -21,12 +21,12 @@
         "uuid": "817d097a-2e5d-438b-bbd5-f5b7e22be5ae"
       },
       {
-        "url": "db://assets/scene/main.scene",
-        "uuid": "5a6f4efe-edd1-4c9d-adc3-c28f8d58012d"
-      },
-      {
         "url": "db://assets/scene/load.scene",
         "uuid": "cf4dc34b-8c49-4fc8-b329-7c0faa4a4a85"
+      },
+      {
+        "url": "db://assets/scene/main.scene",
+        "uuid": "5a6f4efe-edd1-4c9d-adc3-c28f8d58012d"
       },
       {
         "url": "db://assets/scene/task.scene",
@@ -47,8 +47,8 @@
         "progress": 1,
         "state": "success",
         "stage": "build",
-        "message": "2025-8-17 21:56:49 build success in 12 s!",
-        "detailMessage": "// ---- build task cocos-service：onAfterBuild ----\r",
+        "message": "2025-8-24 21:47:11 build success in 11 s!",
+        "detailMessage": "// ---- build task cocos-service：onBeforeCompressSettings ----\r",
         "options": {
           "name": "PlantStore",
           "platform": "web-mobile",
@@ -77,12 +77,12 @@
               "uuid": "817d097a-2e5d-438b-bbd5-f5b7e22be5ae"
             },
             {
-              "url": "db://assets/scene/main.scene",
-              "uuid": "5a6f4efe-edd1-4c9d-adc3-c28f8d58012d"
-            },
-            {
               "url": "db://assets/scene/load.scene",
               "uuid": "cf4dc34b-8c49-4fc8-b329-7c0faa4a4a85"
+            },
+            {
+              "url": "db://assets/scene/main.scene",
+              "uuid": "5a6f4efe-edd1-4c9d-adc3-c28f8d58012d"
             },
             {
               "url": "db://assets/scene/task.scene",
@@ -121,7 +121,7 @@
           "replaceSplashScreen": true,
           "logDest": "project://temp/builder/log/web-mobile2022-11-9 11-49.log"
         },
-        "time": "2025-8-17 21:56:37",
+        "time": "2025-8-24 21:46:59",
         "dirty": false
       },
       "1668068042719": {

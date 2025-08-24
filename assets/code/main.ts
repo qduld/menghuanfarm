@@ -20,6 +20,7 @@ import { LoadingUI } from "./loadingUI";
 import { SceneSwitcher } from "./sceneSwitcher";
 import { WebSocketManager } from "./websocketManager";
 import { Dialog } from "./dialog";
+import { GenericObjectPool } from "./genericObjectPool";
 
 const { ccclass, property } = _decorator;
 //0 橘子香蕉西红柿幼苗，1 红富士苹果幼苗,2 紫金冠茄幼苗,3 红森胡萝卜幼苗
@@ -61,6 +62,7 @@ export class main extends Component {
     if (!AudioMgr.inst.audioSource.state) {
       AudioMgr.inst.play("sounds/bgm", 1);
     }
+
     this.userLogin();
 
     this.topContent.active = false;
@@ -83,6 +85,14 @@ export class main extends Component {
   async init() {
     const genInfo = GenInfo.getInstance();
     const genBlock = GenBlock.getInstance();
+
+    GenericObjectPool.instance.reInit();
+    GenericObjectPool.instance.registerPool("block", {
+      prefab: find("Canvas/Block/Unlock"),
+      initialSize: 12,
+      maxSize: 12,
+      autoPrewarm: true,
+    });
 
     await Promise.all([genInfo.init(), genBlock.init()]);
 

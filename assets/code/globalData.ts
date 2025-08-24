@@ -1,5 +1,13 @@
 // GlobalData.ts
-import { _decorator, Component, find, Label, Node, UITransform } from "cc";
+import {
+  _decorator,
+  Component,
+  director,
+  find,
+  Label,
+  Node,
+  UITransform,
+} from "cc";
 import { IUserInfo } from "./interface";
 import { DrawRoundedRect } from "./drawRoundedRect";
 const { ccclass, property } = _decorator;

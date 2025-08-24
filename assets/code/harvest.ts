@@ -9,6 +9,7 @@ import {
   resources,
   SpriteAtlas,
   Sprite,
+  director,
 } from "cc";
 import { harvestList, i18n } from "./loadData";
 import { httpRequest } from "./http";

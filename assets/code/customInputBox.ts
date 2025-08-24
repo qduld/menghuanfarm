@@ -147,7 +147,6 @@ export class CustomInputBox extends Component {
 
   // 处理聚焦事件
   private onFocus() {
-    debugger;
     this.isFocused = true;
     this.cursor.node.active = true;
     this.startCursorBlink();

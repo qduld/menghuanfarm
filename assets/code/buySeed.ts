@@ -62,6 +62,7 @@ export class BuySeed extends Component {
 
   protected onLoad(): void {
     BuySeed._instance = this;
+    this.seedNumber = 1;
     this.USeedName = find("popBox/Canvas/BuySeed/Content/Name");
     this.USeedSprite = find("popBox/Canvas/BuySeed/Content/Fruit");
     this.USeedProfit = find("popBox/Canvas/BuySeed/Content/Effect/Profit");

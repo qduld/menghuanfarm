@@ -10,6 +10,7 @@ import {
   UITransform,
   Label,
   SpriteAtlas,
+  director,
 } from "cc";
 import { httpRequest } from "./http";
 import { ISeedList } from "./interface";

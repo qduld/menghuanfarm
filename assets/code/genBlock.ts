@@ -3,14 +3,10 @@ import {
   Component,
   Node,
   find,
-  Layers,
   UITransform,
   instantiate,
   EventTouch,
   resources,
-  AudioClip,
-  AudioSource,
-  Vec3,
   Label,
   SpriteAtlas,
   Sprite,
@@ -26,15 +22,13 @@ import { i18n, errTips } from "./loadData";
 import { AudioMgr } from "./audioManager";
 import { HoverEffect } from "./hoverEffect";
 import { debounceMethod } from "./utils";
+import { GenericObjectPool } from "./genericObjectPool";
 const { ccclass, property } = _decorator;
 
 @ccclass("GenBlock")
 export class GenBlock extends Component {
   @property(Node)
   blockContainer: Node = null; // 容器节点
-
-  @property(Node)
-  lockBlock: Node = null; // 容器节点
 
   @property(Node)
   unlockBlock: Node = null; // 容器节点
@@ -58,6 +52,7 @@ export class GenBlock extends Component {
   row: number = 4;
 
   private static _instance: GenBlock;
+  private _isExtendRequest: Boolean = false;
 
   static getInstance(): GenBlock {
     return GenBlock._instance;
@@ -74,7 +69,6 @@ export class GenBlock extends Component {
       this.requestFarmLand();
     }
     this.blockContainer = find("Canvas/Block/List");
-    this.lockBlock = find("Canvas/Block/Lock");
     this.unlockBlock = find("Canvas/Block/Unlock");
     this.sprite = find("Canvas/Block/Lock/Sprite");
   }
@@ -96,15 +90,31 @@ export class GenBlock extends Component {
         const posX = startX + j * (blockWidth + this.spacingX);
         const posY = startY - i * (blockHeight + this.spacingY); // Y轴向下
 
-        let newblock = null;
+        let newblock = GenericObjectPool.instance.get("block");
+        let spritePath = "soil";
         // 0-不可种植1-可种植
         const blockIndex = i * this.column + j;
         if (this.blockList[blockIndex].status) {
           // addPlants
-          newblock = instantiate(this.unlockBlock);
+          spritePath = "soil";
+          newblock.getChildByName("Countdown").active = true;
+          newblock.getChildByName("Plant").active = true;
         } else {
-          newblock = instantiate(this.lockBlock);
+          spritePath = "soillocked";
+          newblock.getChildByName("Countdown").active = false;
+          newblock.getChildByName("Plant").active = false;
         }
+
+        resources.load("iconList", SpriteAtlas, (err, atlas) => {
+          if (err) {
+            console.error("Failed to load sprite:", err);
+            return;
+          }
+
+          newblock.getChildByName("Sprite").getComponent(Sprite).spriteFrame =
+            atlas.getSpriteFrame(spritePath);
+        });
+
         newblock.active = true;
         // 创建每块土地
         this.blockContainer.addChild(newblock);
@@ -146,6 +156,8 @@ export class GenBlock extends Component {
     const dialog = Dialog.getInstance();
     if (dialog) {
       if (blockData.status === 0) {
+        // 不能解锁别人土地
+        if (globalData.isStolen) return;
         // 找到当前将会解锁的土地
         const unLockBlockIdx = this.blockList.findIndex(
           (item) => item.farmland_price > 0 && item.status === 0
@@ -270,11 +282,14 @@ export class GenBlock extends Component {
     const globalData = GlobalData.getInstance();
     const dialog = Dialog.getInstance();
     const genInfo = GenInfo.getInstance();
+    if (this._isExtendRequest) return; // 增加标记位避免重复解锁
 
+    this._isExtendRequest = true;
     try {
       const response = await httpRequest("/api/v1/farm/farmland/extend", {
         method: "POST",
       });
+      this._isExtendRequest = false;
       if (response.ok) {
         if (response.data.code === 2003) {
           globalData.setTipsLabel(i18n.goldNotEnough);

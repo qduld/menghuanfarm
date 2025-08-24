@@ -13,6 +13,7 @@ import {
   SpriteAtlas,
   Vec3,
   EditBox,
+  director,
 } from "cc";
 import { httpRequest } from "./http";
 import { IMembersList, ISquadList, ISquadInfo, IUserInfo } from "./interface";
@@ -461,7 +462,6 @@ export class circles extends Component {
   showNoticeDialog() {
     const dialog = Dialog.getInstance();
 
-    debugger;
     dialog.updateNoticeBox
       .getChildByName("Notice")
       .getChildByName("CustomInputBox")
@@ -622,6 +622,7 @@ export class circles extends Component {
 
         if (response.data.code !== 1001 && response.data.code !== 1003) {
           dialog.closeDialog(null, "CreateCircle");
+          dialog.closeDialog(null, "UpdateNotice");
         }
       } else {
         console.error("Request failed with status:", response.status);

@@ -7,6 +7,7 @@ import {
   UITransform,
   Label,
   sys,
+  director,
 } from "cc";
 import { coinList } from "./loadData";
 import { httpRequest } from "./http";

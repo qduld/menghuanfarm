@@ -20,6 +20,9 @@ const { ccclass, property } = _decorator;
 @ccclass("Dialog")
 export class Dialog extends Component {
   @property(Node)
+  popBox: Node = null; // bag
+
+  @property(Node)
   bagBox: Node = null; // bag
 
   @property(Node)
@@ -100,26 +103,65 @@ export class Dialog extends Component {
   protected onLoad(): void {
     Dialog._instance = this;
 
-    this.bagBox = find("popBox/Canvas/Bag");
-    this.shopBox = find("popBox/Canvas/Shop");
-    this.lockBlockBox = find("popBox/Canvas/LockBlock");
-    this.buySeedBox = find("popBox/Canvas/BuySeed");
-    this.buyPropsBox = find("popBox/Canvas/BuyProps");
-    this.buyCoinsBox = find("popBox/Canvas/BuyCoins");
-    this.createCircleBox = find("popBox/Canvas/CreateCircle");
-    this.updateNoticeBox = find("popBox/Canvas/UpdateNotice");
-    this.settingBox = find("popBox/Canvas/Setting");
-    this.quitCircleBox = find("popBox/Canvas/QuitCircle");
-    this.paymentMethodBox = find("popBox/Canvas/PaymentMethod");
-    this.editNameBox = find("popBox/Canvas/EditName");
-    this.shareLinkBox = find("popBox/Canvas/ShareLink");
-    this.noticeListBox = find("popBox/Canvas/NoticeList");
-    this.noticeDetailBox = find("popBox/Canvas/NoticeDetail");
-    this.seedUnlockBox = find("popBox/Canvas/SeedUnlock");
-    this.buySucceededBox = find("popBox/Canvas/BuySucceeded");
-    this.buyCoinsSuccessBox = find("popBox/Canvas/BuyCoinsSuccess");
-    this.extraRewardBox = find("popBox/Canvas/ExtraReward");
-    this.overlayMask = find("popBox/Canvas/OverlayMask");
+    this.popBox = find("popBox");
+    // director.addPersistRootNode(this.popBox);
+
+    this.bagBox = this.popBox.getChildByName("Canvas").getChildByName("Bag");
+    this.shopBox = this.popBox.getChildByName("Canvas").getChildByName("Shop");
+    this.lockBlockBox = this.popBox
+      .getChildByName("Canvas")
+      .getChildByName("LockBlock");
+    this.buySeedBox = this.popBox
+      .getChildByName("Canvas")
+      .getChildByName("BuySeed");
+    this.buyPropsBox = this.popBox
+      .getChildByName("Canvas")
+      .getChildByName("BuyProps");
+    this.buyCoinsBox = this.popBox
+      .getChildByName("Canvas")
+      .getChildByName("BuyCoins");
+    this.createCircleBox = this.popBox
+      .getChildByName("Canvas")
+      .getChildByName("CreateCircle");
+    this.updateNoticeBox = this.popBox
+      .getChildByName("Canvas")
+      .getChildByName("UpdateNotice");
+    this.settingBox = this.popBox
+      .getChildByName("Canvas")
+      .getChildByName("Setting");
+    this.quitCircleBox = this.popBox
+      .getChildByName("Canvas")
+      .getChildByName("QuitCircle");
+    this.paymentMethodBox = this.popBox
+      .getChildByName("Canvas")
+      .getChildByName("PaymentMethod");
+    this.editNameBox = this.popBox
+      .getChildByName("Canvas")
+      .getChildByName("EditName");
+    this.shareLinkBox = this.popBox
+      .getChildByName("Canvas")
+      .getChildByName("ShareLink");
+    this.noticeListBox = this.popBox
+      .getChildByName("Canvas")
+      .getChildByName("NoticeList");
+    this.noticeDetailBox = this.popBox
+      .getChildByName("Canvas")
+      .getChildByName("NoticeDetail");
+    this.seedUnlockBox = this.popBox
+      .getChildByName("Canvas")
+      .getChildByName("SeedUnlock");
+    this.buySucceededBox = this.popBox
+      .getChildByName("Canvas")
+      .getChildByName("BuySucceeded");
+    this.buyCoinsSuccessBox = this.popBox
+      .getChildByName("Canvas")
+      .getChildByName("BuyCoinsSuccess");
+    this.extraRewardBox = this.popBox
+      .getChildByName("Canvas")
+      .getChildByName("ExtraReward");
+    this.overlayMask = this.popBox
+      .getChildByName("Canvas")
+      .getChildByName("OverlayMask");
 
     this.bagBox ? (this.bagBox.active = false) : "";
     this.shopBox ? (this.shopBox.active = false) : "";

@@ -10,6 +10,7 @@ import {
   Label,
   SpriteAtlas,
   Color,
+  director,
 } from "cc";
 import { httpRequest } from "./http";
 import { ISeedList } from "./interface";
