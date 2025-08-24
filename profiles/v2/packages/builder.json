@@ -47,8 +47,8 @@
         "progress": 1,
         "state": "success",
         "stage": "build",
-        "message": "2025-8-24 22:15:39 build success in 11 s!",
-        "detailMessage": "builder:build-project-total (10964ms)\r",
+        "message": "2025-8-24 22:19:31 build success in 11 s!",
+        "detailMessage": "// ---- build task web-mobile：onBeforeCopyBuildTemplate ----\r",
         "options": {
           "name": "PlantStore",
           "platform": "web-mobile",
@@ -121,7 +121,7 @@
           "replaceSplashScreen": true,
           "logDest": "project://temp/builder/log/web-mobile2022-11-9 11-49.log"
         },
-        "time": "2025-8-24 22:15:28",
+        "time": "2025-8-24 22:19:19",
         "dirty": false
       },
       "1668068042719": {
