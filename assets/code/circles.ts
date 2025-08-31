@@ -106,6 +106,9 @@ export class circles extends Component {
   @property(Node)
   USquadScrollView: Node = null;
 
+  @property(Node)
+  UMemberScrollView: Node = null;
+
   @property
   shareLink: string = null;
 
@@ -123,12 +126,12 @@ export class circles extends Component {
     this.UMembers = find("Canvas/Joined");
     this.USquadList = find("Canvas/UnJoined/Content/ScrollView/view/content");
     this.USquadSection = find(
-      "Canvas/UnJoined/Content/ScrollView/view/content/Section"
+      "Canvas/UnJoined/Content/ScrollView/view/content/SquadSection"
     );
     this.UScrollView = find("Canvas/Joined/Content/ScrollView");
     this.UMembersList = find("Canvas/Joined/Content/ScrollView/view/content");
     this.UMembersSection = find(
-      "Canvas/Joined/Content/ScrollView/view/content/Section"
+      "Canvas/Joined/Content/ScrollView/view/content/MemberSection"
     );
     this.USquadInfo = find("Canvas/Joined/Tips");
     this.UCurrentUser = find("Canvas/Joined/Content/CurrentUser");
@@ -250,6 +253,14 @@ export class circles extends Component {
     }
   }
 
+  updateMemberScrollViewHeight(sectionNum) {
+    const scrollHeight = sectionNum * 180;
+
+    this.UMemberScrollView.getChildByName("view")
+      .getChildByName("content")
+      .getComponent(UITransform).height = scrollHeight;
+  }
+
   // 生成成员列表
   createMembersLayout() {
     const globalData = GlobalData.getInstance();
@@ -259,6 +270,8 @@ export class circles extends Component {
 
     // 未加入不显示当前用户
     this.UCurrentUser.active = !this.isView;
+
+    this.updateMemberScrollViewHeight(this.membersList.length + 1);
 
     // 未加入修改scrollview位置
     const position = new Vec3(0, -410, 0);

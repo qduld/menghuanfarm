@@ -143,6 +143,9 @@ export class GenBlock extends Component {
       (block) => block.id === farmland_Id
     );
 
+    if (!this.blockContainer) {
+      this.blockContainer = find("Canvas/Block/List");
+    }
     plant.resetNode(this.blockContainer.children[blockIndex]);
 
     plant.updatePlantStatus(

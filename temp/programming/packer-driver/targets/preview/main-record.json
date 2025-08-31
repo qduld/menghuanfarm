@@ -1,7 +1,7 @@
 {
   "modules": {
     "cce:/internal/x/cc": {
-      "mTimestamp": 18306.17839999497,
+      "mTimestamp": 124074624.35820007,
       "chunkId": "93ba276ea7b26ffcdc433fab14afc1ed6f05647b",
       "imports": [
         {
@@ -103,7 +103,7 @@
           }
         },
         {
-          "value": "cce:/internal/x/cc-fu/gfx-webgl2",
+          "value": "cce:/internal/x/cc-fu/legacy-pipeline",
           "resolved": "__unresolved_7",
           "loc": {
             "start": {
@@ -112,12 +112,12 @@
             },
             "end": {
               "line": 8,
-              "column": 48
+              "column": 53
             }
           }
         },
         {
-          "value": "cce:/internal/x/cc-fu/intersection-2d",
+          "value": "cce:/internal/x/cc-fu/tween",
           "resolved": "__unresolved_8",
           "loc": {
             "start": {
@@ -126,12 +126,12 @@
             },
             "end": {
               "line": 9,
-              "column": 53
+              "column": 43
             }
           }
         },
         {
-          "value": "cce:/internal/x/cc-fu/legacy-pipeline",
+          "value": "cce:/internal/x/cc-fu/ui",
           "resolved": "__unresolved_9",
           "loc": {
             "start": {
@@ -140,132 +140,6 @@
             },
             "end": {
               "line": 10,
-              "column": 53
-            }
-          }
-        },
-        {
-          "value": "cce:/internal/x/cc-fu/particle-2d",
-          "resolved": "__unresolved_10",
-          "loc": {
-            "start": {
-              "line": 11,
-              "column": 14
-            },
-            "end": {
-              "line": 11,
-              "column": 49
-            }
-          }
-        },
-        {
-          "value": "cce:/internal/x/cc-fu/physics-2d-box2d",
-          "resolved": "__unresolved_11",
-          "loc": {
-            "start": {
-              "line": 12,
-              "column": 14
-            },
-            "end": {
-              "line": 12,
-              "column": 54
-            }
-          }
-        },
-        {
-          "value": "cce:/internal/x/cc-fu/physics-2d-framework",
-          "resolved": "__unresolved_12",
-          "loc": {
-            "start": {
-              "line": 13,
-              "column": 14
-            },
-            "end": {
-              "line": 13,
-              "column": 58
-            }
-          }
-        },
-        {
-          "value": "cce:/internal/x/cc-fu/profiler",
-          "resolved": "__unresolved_13",
-          "loc": {
-            "start": {
-              "line": 14,
-              "column": 14
-            },
-            "end": {
-              "line": 14,
-              "column": 46
-            }
-          }
-        },
-        {
-          "value": "cce:/internal/x/cc-fu/skeletal-animation",
-          "resolved": "__unresolved_14",
-          "loc": {
-            "start": {
-              "line": 15,
-              "column": 14
-            },
-            "end": {
-              "line": 15,
-              "column": 56
-            }
-          }
-        },
-        {
-          "value": "cce:/internal/x/cc-fu/spine",
-          "resolved": "__unresolved_15",
-          "loc": {
-            "start": {
-              "line": 16,
-              "column": 14
-            },
-            "end": {
-              "line": 16,
-              "column": 43
-            }
-          }
-        },
-        {
-          "value": "cce:/internal/x/cc-fu/tiled-map",
-          "resolved": "__unresolved_16",
-          "loc": {
-            "start": {
-              "line": 17,
-              "column": 14
-            },
-            "end": {
-              "line": 17,
-              "column": 47
-            }
-          }
-        },
-        {
-          "value": "cce:/internal/x/cc-fu/tween",
-          "resolved": "__unresolved_17",
-          "loc": {
-            "start": {
-              "line": 18,
-              "column": 14
-            },
-            "end": {
-              "line": 18,
-              "column": 43
-            }
-          }
-        },
-        {
-          "value": "cce:/internal/x/cc-fu/ui",
-          "resolved": "__unresolved_18",
-          "loc": {
-            "start": {
-              "line": 19,
-              "column": 14
-            },
-            "end": {
-              "line": 19,
               "column": 40
             }
           }
@@ -325,70 +199,7 @@
         {
           "resolved": {
             "type": "external",
-            "specifierOrURL": "cce:/internal/x/cc-fu/gfx-webgl2"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "external",
-            "specifierOrURL": "cce:/internal/x/cc-fu/intersection-2d"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "external",
             "specifierOrURL": "cce:/internal/x/cc-fu/legacy-pipeline"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "external",
-            "specifierOrURL": "cce:/internal/x/cc-fu/particle-2d"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "external",
-            "specifierOrURL": "cce:/internal/x/cc-fu/physics-2d-box2d"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "external",
-            "specifierOrURL": "cce:/internal/x/cc-fu/physics-2d-framework"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "external",
-            "specifierOrURL": "cce:/internal/x/cc-fu/profiler"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "external",
-            "specifierOrURL": "cce:/internal/x/cc-fu/skeletal-animation"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "external",
-            "specifierOrURL": "cce:/internal/x/cc-fu/spine"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "external",
-            "specifierOrURL": "cce:/internal/x/cc-fu/tiled-map"
           },
           "messages": []
         },
@@ -409,7 +220,7 @@
       ]
     },
     "cce:/internal/x/prerequisite-imports": {
-      "mTimestamp": 635581236.6872001,
+      "mTimestamp": 124073801.88900018,
       "chunkId": "6d8fd2b0177941b032ddc0733af48a561fb60657",
       "imports": [
         {
@@ -1141,7 +952,7 @@
           }
         },
         {
-          "value": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/showTelegramInfo.ts",
+          "value": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/soundControl.ts",
           "resolved": "__unresolved_52",
           "loc": {
             "start": {
@@ -1150,12 +961,12 @@
             },
             "end": {
               "line": 56,
-              "column": 90
+              "column": 86
             }
           }
         },
         {
-          "value": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/soundControl.ts",
+          "value": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/switchButton.ts",
           "resolved": "__unresolved_53",
           "loc": {
             "start": {
@@ -1169,7 +980,7 @@
           }
         },
         {
-          "value": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/switchButton.ts",
+          "value": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/task.ts",
           "resolved": "__unresolved_54",
           "loc": {
             "start": {
@@ -1178,12 +989,12 @@
             },
             "end": {
               "line": 58,
-              "column": 86
+              "column": 78
             }
           }
         },
         {
-          "value": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/task.ts",
+          "value": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/telegram.ts",
           "resolved": "__unresolved_55",
           "loc": {
             "start": {
@@ -1192,12 +1003,12 @@
             },
             "end": {
               "line": 59,
-              "column": 78
+              "column": 82
             }
           }
         },
         {
-          "value": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/telegram.ts",
+          "value": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/utils.ts",
           "resolved": "__unresolved_56",
           "loc": {
             "start": {
@@ -1206,12 +1017,12 @@
             },
             "end": {
               "line": 60,
-              "column": 82
+              "column": 79
             }
           }
         },
         {
-          "value": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/utils.ts",
+          "value": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/websocketManager.ts",
           "resolved": "__unresolved_57",
           "loc": {
             "start": {
@@ -1220,20 +1031,6 @@
             },
             "end": {
               "line": 61,
-              "column": 79
-            }
-          }
-        },
-        {
-          "value": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/websocketManager.ts",
-          "resolved": "__unresolved_58",
-          "loc": {
-            "start": {
-              "line": 62,
-              "column": 7
-            },
-            "end": {
-              "line": 62,
               "column": 90
             }
           }
@@ -1608,13 +1405,6 @@
         {
           "resolved": {
             "type": "module",
-            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/showTelegramInfo.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
             "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/soundControl.ts"
           },
           "messages": []
@@ -1761,7 +1551,7 @@
       ]
     },
     "cce:/internal/code-quality/cr.mjs": {
-      "mTimestamp": 1755409336910,
+      "mTimestamp": 1756514307038,
       "chunkId": "6a5019a719a9014c047e67aa1cf34453ab8392ce",
       "imports": [],
       "type": "esm",
@@ -2752,7 +2542,7 @@
     },
     "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/http.ts": {
       "mTimestamp": {
-        "mtime": 1756044895843.5415,
+        "mtime": 1756638362191.4614,
         "uuid": "c04de095-1da8-424a-8757-d86c10b4d537"
       },
       "chunkId": "d4b8c1b1aa284d2ff86f93e4a2e0f36c05147c62",
@@ -2847,7 +2637,7 @@
     },
     "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/loadData.ts": {
       "mTimestamp": {
-        "mtime": 1756043147429.3271,
+        "mtime": 1756637228449.9116,
         "uuid": "23eafa10-d97f-4874-812a-16c12e0efced"
       },
       "chunkId": "ee3ea0dbc7200eb3f105c40cf8623b70665adc41",
@@ -3332,7 +3122,7 @@
     },
     "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/genBlock.ts": {
       "mTimestamp": {
-        "mtime": 1756042321492.5361,
+        "mtime": 1756633023557.8982,
         "uuid": "d531bfae-33e5-4dc0-b5e6-ece4850922b3"
       },
       "chunkId": "31e7ed6474cbe1cffb111624e6d74d2c31107af8",
@@ -4925,7 +4715,7 @@
     },
     "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/circles.ts": {
       "mTimestamp": {
-        "mtime": 1756037244651.132,
+        "mtime": 1756638330954.1008,
         "uuid": "f96f613c-3b56-4f90-88a2-13e424e20573"
       },
       "chunkId": "9845a5bdb8c882dfaec000dc71eb0ed683f921f5",
@@ -6177,7 +5967,7 @@
     },
     "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/main.ts": {
       "mTimestamp": {
-        "mtime": 1756041451633.5217,
+        "mtime": 1756633545239.532,
         "uuid": "ad534c45-313f-494a-9f0a-10a9c7f79cb4"
       },
       "chunkId": "a1ce2b8ee2c71c9f0feb362b14caabc88a58b0f1",
@@ -6429,7 +6219,7 @@
     },
     "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/websocketManager.ts": {
       "mTimestamp": {
-        "mtime": 1756044899682.0994,
+        "mtime": 1756638369965.7097,
         "uuid": "01f4fe5d-7118-4a11-a185-a71fdcae2531"
       },
       "chunkId": "a37215805077840e1bb97db18b822d86532a72c2",
@@ -7049,58 +6839,6 @@
           "resolved": {
             "type": "module",
             "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/loadData.ts"
-          },
-          "messages": []
-        }
-      ]
-    },
-    "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/showTelegramInfo.ts": {
-      "mTimestamp": {
-        "mtime": 1740298354438.46,
-        "uuid": "5605442c-f367-49e2-bce9-55b01d78c92b"
-      },
-      "chunkId": "c1e4780d07edb65d4712665fd2a8574c1da3e20e",
-      "imports": [
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc",
-          "loc": {
-            "start": {
-              "line": 1,
-              "column": 57
-            },
-            "end": {
-              "line": 1,
-              "column": 61
-            }
-          }
-        }
-      ],
-      "type": "esm",
-      "resolutions": [
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
           },
           "messages": []
         }

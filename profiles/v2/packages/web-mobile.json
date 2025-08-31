@@ -15,7 +15,7 @@
         "asyncFunctions": false,
         "coreJs": false
       },
-      "mainBundleCompressionType": "none",
+      "mainBundleCompressionType": "merge_all_json",
       "platform": "web-mobile",
       "replaceSplashScreen": true,
       "scenes": [

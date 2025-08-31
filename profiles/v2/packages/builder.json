@@ -8,7 +8,7 @@
       "coreJs": false
     },
     "outputName": "wechatgame",
-    "mainBundleCompressionType": "subpackage",
+    "mainBundleCompressionType": "merge_all_json",
     "platform": "wechatgame",
     "replaceSplashScreen": true,
     "scenes": [
@@ -47,8 +47,8 @@
         "progress": 1,
         "state": "success",
         "stage": "build",
-        "message": "2025-8-24 22:19:31 build success in 11 s!",
-        "detailMessage": "// ---- build task web-mobile：onBeforeCopyBuildTemplate ----\r",
+        "message": "2025-8-31 19:06:40 build success in 12 s!",
+        "detailMessage": "// ---- build task cocos-service：onAfterCompressSettings ----\r",
         "options": {
           "name": "PlantStore",
           "platform": "web-mobile",
@@ -64,7 +64,7 @@
           "experimentalEraseModules": false,
           "useBuiltinServer": false,
           "mainBundleIsRemote": false,
-          "mainBundleCompressionType": "none",
+          "mainBundleCompressionType": "merge_all_json",
           "startScene": "cf4dc34b-8c49-4fc8-b329-7c0faa4a4a85",
           "outputName": "web-mobile",
           "scenes": [
@@ -121,7 +121,7 @@
           "replaceSplashScreen": true,
           "logDest": "project://temp/builder/log/web-mobile2022-11-9 11-49.log"
         },
-        "time": "2025-8-24 22:19:19",
+        "time": "2025-8-31 19:06:27",
         "dirty": false
       },
       "1668068042719": {

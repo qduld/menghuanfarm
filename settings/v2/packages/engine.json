@@ -9,7 +9,7 @@
         "_value": true
       },
       "gfx-webgl2": {
-        "_value": true
+        "_value": false
       },
       "gfx-webgpu": {
         "_value": false
@@ -18,7 +18,7 @@
         "_value": true
       },
       "skeletal-animation": {
-        "_value": true
+        "_value": false
       },
       "3d": {
         "_value": false
@@ -55,7 +55,7 @@
         "_value": false
       },
       "physics-2d": {
-        "_value": true,
+        "_value": false,
         "_option": "physics-2d-box2d"
       },
       "physics-2d-box2d": {
@@ -65,13 +65,13 @@
         "_value": false
       },
       "intersection-2d": {
-        "_value": true
+        "_value": false
       },
       "primitive": {
         "_value": false
       },
       "profiler": {
-        "_value": true
+        "_value": false
       },
       "occlusion-query": {
         "_value": false
@@ -83,7 +83,7 @@
         "_value": false
       },
       "particle-2d": {
-        "_value": true
+        "_value": false
       },
       "audio": {
         "_value": true
@@ -110,16 +110,16 @@
         "_value": false
       },
       "tiled-map": {
-        "_value": true
+        "_value": false
       },
       "spine": {
-        "_value": true
+        "_value": false
       },
       "dragon-bones": {
         "_value": true
       },
       "marionette": {
-        "_value": true
+        "_value": false
       },
       "procedural-animation": {
         "_value": false
@@ -148,16 +148,7 @@
       "base",
       "dragon-bones",
       "gfx-webgl",
-      "gfx-webgl2",
-      "intersection-2d",
       "legacy-pipeline",
-      "marionette",
-      "particle-2d",
-      "physics-2d-box2d",
-      "profiler",
-      "skeletal-animation",
-      "spine",
-      "tiled-map",
       "tween",
       "ui"
     ],

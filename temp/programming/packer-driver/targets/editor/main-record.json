@@ -1,7 +1,7 @@
 {
   "modules": {
     "cce:/internal/x/cc": {
-      "mTimestamp": 18236.014199994504,
+      "mTimestamp": 35063.68000006676,
       "chunkId": "93ba276ea7b26ffcdc433fab14afc1ed6f05647b",
       "imports": [
         {
@@ -703,7 +703,7 @@
       ]
     },
     "cce:/internal/x/prerequisite-imports": {
-      "mTimestamp": 635580953.599,
+      "mTimestamp": 124073198.34969997,
       "chunkId": "6d8fd2b0177941b032ddc0733af48a561fb60657",
       "imports": [
         {
@@ -1435,7 +1435,7 @@
           }
         },
         {
-          "value": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/showTelegramInfo.ts",
+          "value": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/soundControl.ts",
           "resolved": "__unresolved_52",
           "loc": {
             "start": {
@@ -1444,91 +1444,77 @@
             },
             "end": {
               "line": 5,
-              "column": 5250
-            }
-          }
-        },
-        {
-          "value": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/soundControl.ts",
-          "resolved": "__unresolved_53",
-          "loc": {
-            "start": {
-              "line": 5,
-              "column": 5266
-            },
-            "end": {
-              "line": 5,
-              "column": 5345
+              "column": 5246
             }
           }
         },
         {
           "value": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/switchButton.ts",
-          "resolved": "__unresolved_54",
+          "resolved": "__unresolved_53",
           "loc": {
             "start": {
               "line": 5,
-              "column": 5361
+              "column": 5262
             },
             "end": {
               "line": 5,
-              "column": 5440
+              "column": 5341
             }
           }
         },
         {
           "value": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/task.ts",
-          "resolved": "__unresolved_55",
+          "resolved": "__unresolved_54",
           "loc": {
             "start": {
               "line": 5,
-              "column": 5456
+              "column": 5357
             },
             "end": {
               "line": 5,
-              "column": 5527
+              "column": 5428
             }
           }
         },
         {
           "value": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/telegram.ts",
-          "resolved": "__unresolved_56",
+          "resolved": "__unresolved_55",
           "loc": {
             "start": {
               "line": 5,
-              "column": 5543
+              "column": 5444
             },
             "end": {
               "line": 5,
-              "column": 5618
+              "column": 5519
             }
           }
         },
         {
           "value": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/utils.ts",
-          "resolved": "__unresolved_57",
+          "resolved": "__unresolved_56",
           "loc": {
             "start": {
               "line": 5,
-              "column": 5634
+              "column": 5535
             },
             "end": {
               "line": 5,
-              "column": 5706
+              "column": 5607
             }
           }
         },
         {
           "value": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/websocketManager.ts",
-          "resolved": "__unresolved_58",
+          "resolved": "__unresolved_57",
           "loc": {
             "start": {
               "line": 5,
-              "column": 5722
+              "column": 5623
             },
             "end": {
               "line": 5,
-              "column": 5805
+              "column": 5706
             }
           }
         }
@@ -1902,13 +1888,6 @@
         {
           "resolved": {
             "type": "module",
-            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/showTelegramInfo.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
             "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/soundControl.ts"
           },
           "messages": []
@@ -2055,7 +2034,7 @@
       ]
     },
     "cce:/internal/code-quality/cr.mjs": {
-      "mTimestamp": 1755409336910,
+      "mTimestamp": 1756514307038,
       "chunkId": "6a5019a719a9014c047e67aa1cf34453ab8392ce",
       "imports": [],
       "type": "esm",
@@ -3046,7 +3025,7 @@
     },
     "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/http.ts": {
       "mTimestamp": {
-        "mtime": 1756044895843.5415,
+        "mtime": 1756638362191.4614,
         "uuid": "c04de095-1da8-424a-8757-d86c10b4d537"
       },
       "chunkId": "d4b8c1b1aa284d2ff86f93e4a2e0f36c05147c62",
@@ -3141,7 +3120,7 @@
     },
     "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/loadData.ts": {
       "mTimestamp": {
-        "mtime": 1756043147429.3271,
+        "mtime": 1756637228449.9116,
         "uuid": "23eafa10-d97f-4874-812a-16c12e0efced"
       },
       "chunkId": "ee3ea0dbc7200eb3f105c40cf8623b70665adc41",
@@ -3626,7 +3605,7 @@
     },
     "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/genBlock.ts": {
       "mTimestamp": {
-        "mtime": 1756042321492.5361,
+        "mtime": 1756633023557.8982,
         "uuid": "d531bfae-33e5-4dc0-b5e6-ece4850922b3"
       },
       "chunkId": "31e7ed6474cbe1cffb111624e6d74d2c31107af8",
@@ -5219,7 +5198,7 @@
     },
     "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/circles.ts": {
       "mTimestamp": {
-        "mtime": 1756037244651.132,
+        "mtime": 1756638330954.1008,
         "uuid": "f96f613c-3b56-4f90-88a2-13e424e20573"
       },
       "chunkId": "9845a5bdb8c882dfaec000dc71eb0ed683f921f5",
@@ -6471,7 +6450,7 @@
     },
     "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/main.ts": {
       "mTimestamp": {
-        "mtime": 1756041451633.5217,
+        "mtime": 1756633545239.532,
         "uuid": "ad534c45-313f-494a-9f0a-10a9c7f79cb4"
       },
       "chunkId": "a1ce2b8ee2c71c9f0feb362b14caabc88a58b0f1",
@@ -6723,7 +6702,7 @@
     },
     "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/websocketManager.ts": {
       "mTimestamp": {
-        "mtime": 1756044899682.0994,
+        "mtime": 1756638369965.7097,
         "uuid": "01f4fe5d-7118-4a11-a185-a71fdcae2531"
       },
       "chunkId": "a37215805077840e1bb97db18b822d86532a72c2",
@@ -7343,58 +7322,6 @@
           "resolved": {
             "type": "module",
             "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/loadData.ts"
-          },
-          "messages": []
-        }
-      ]
-    },
-    "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/showTelegramInfo.ts": {
-      "mTimestamp": {
-        "mtime": 1740298354438.46,
-        "uuid": "5605442c-f367-49e2-bce9-55b01d78c92b"
-      },
-      "chunkId": "c1e4780d07edb65d4712665fd2a8574c1da3e20e",
-      "imports": [
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc",
-          "loc": {
-            "start": {
-              "line": 1,
-              "column": 57
-            },
-            "end": {
-              "line": 1,
-              "column": 61
-            }
-          }
-        }
-      ],
-      "type": "esm",
-      "resolutions": [
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
           },
           "messages": []
         }
