@@ -1,7 +1,7 @@
 {
   "modules": {
     "cce:/internal/x/cc": {
-      "mTimestamp": 124074624.35820007,
+      "mTimestamp": 288154212.4841001,
       "chunkId": "93ba276ea7b26ffcdc433fab14afc1ed6f05647b",
       "imports": [
         {
@@ -117,7 +117,7 @@
           }
         },
         {
-          "value": "cce:/internal/x/cc-fu/tween",
+          "value": "cce:/internal/x/cc-fu/profiler",
           "resolved": "__unresolved_8",
           "loc": {
             "start": {
@@ -126,12 +126,12 @@
             },
             "end": {
               "line": 9,
-              "column": 43
+              "column": 46
             }
           }
         },
         {
-          "value": "cce:/internal/x/cc-fu/ui",
+          "value": "cce:/internal/x/cc-fu/tween",
           "resolved": "__unresolved_9",
           "loc": {
             "start": {
@@ -140,6 +140,20 @@
             },
             "end": {
               "line": 10,
+              "column": 43
+            }
+          }
+        },
+        {
+          "value": "cce:/internal/x/cc-fu/ui",
+          "resolved": "__unresolved_10",
+          "loc": {
+            "start": {
+              "line": 11,
+              "column": 14
+            },
+            "end": {
+              "line": 11,
               "column": 40
             }
           }
@@ -206,6 +220,13 @@
         {
           "resolved": {
             "type": "external",
+            "specifierOrURL": "cce:/internal/x/cc-fu/profiler"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "external",
             "specifierOrURL": "cce:/internal/x/cc-fu/tween"
           },
           "messages": []
@@ -220,7 +241,7 @@
       ]
     },
     "cce:/internal/x/prerequisite-imports": {
-      "mTimestamp": 124073801.88900018,
+      "mTimestamp": 492834446.11020017,
       "chunkId": "6d8fd2b0177941b032ddc0733af48a561fb60657",
       "imports": [
         {
@@ -2542,7 +2563,7 @@
     },
     "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/http.ts": {
       "mTimestamp": {
-        "mtime": 1756638362191.4614,
+        "mtime": 1757007119347.752,
         "uuid": "c04de095-1da8-424a-8757-d86c10b4d537"
       },
       "chunkId": "d4b8c1b1aa284d2ff86f93e4a2e0f36c05147c62",
@@ -6219,7 +6240,7 @@
     },
     "file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/websocketManager.ts": {
       "mTimestamp": {
-        "mtime": 1756638369965.7097,
+        "mtime": 1757007123628.104,
         "uuid": "01f4fe5d-7118-4a11-a185-a71fdcae2531"
       },
       "chunkId": "a37215805077840e1bb97db18b822d86532a72c2",

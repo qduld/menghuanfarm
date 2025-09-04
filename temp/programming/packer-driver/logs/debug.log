@@ -7630,3 +7630,197 @@ Feature changed: true
 19:06:16 debug: Resolve cce:/internal/x/cc-fu/tween from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/tween.
 19:06:16 debug: Resolve cce:/internal/x/cc-fu/ui from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/ui.
 19:06:16 debug: Target(preview) ends with cost 82.66849994659424ms.
+15:58:56 debug: Dispatch build request for time accumulated 2 asset changes.
+15:58:56 debug: Build iteration starts.
+Number of accumulated asset changes: 2
+Feature changed: false
+15:58:56 debug: Target(editor) build started.
+15:58:56 debug: Detected change: cce:/internal/x/prerequisite-imports. Last mtime: Fri Jan 02 1970 18:27:53 GMT+0800 (中国标准时间), Current mtime: Sun Jan 04 1970 15:20:37 GMT+0800 (中国标准时间)
+15:58:56 debug: Inspect cce:/internal/x/prerequisite-imports
+15:58:56 debug: Resolve file:///D:/cocos-dashboard-editors/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts from cce:/internal/x/prerequisite-imports as file:///D:/cocos-dashboard-editors/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts.
+15:58:56 debug: Resolve file:///D:/cocos-dashboard-editors/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts from cce:/internal/x/prerequisite-imports as file:///D:/cocos-dashboard-editors/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts.
+15:58:56 debug: Resolve file:///D:/cocos-dashboard-editors/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts from cce:/internal/x/prerequisite-imports as file:///D:/cocos-dashboard-editors/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts.
+15:58:56 debug: Resolve file:///D:/cocos-dashboard-editors/Creator/3.8.4/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts from cce:/internal/x/prerequisite-imports as file:///D:/cocos-dashboard-editors/Creator/3.8.4/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts.
+15:58:56 debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/adaptiveCanvas.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/adaptiveCanvas.ts.
+15:58:56 debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/audioControl.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/audioControl.ts.
+15:58:56 debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/audioManager.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/audioManager.ts.
+15:58:56 debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/autoScaleImage.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/autoScaleImage.ts.
+15:58:56 debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/buttonClickSoundMgr.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/buttonClickSoundMgr.ts.
+15:58:56 debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/buttonGradient.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/buttonGradient.ts.
+15:58:56 debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/buyCoins.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/buyCoins.ts.
+15:58:56 debug: Detected change: file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/http.ts. Last mtime: Sun Aug 31 2025 19:06:02 GMT+0800 (中国标准时间)@c04de095-1da8-424a-8757-d86c10b4d537, Current mtime: Tue Sep 02 2025 15:58:51 GMT+0800 (中国标准时间)@c04de095-1da8-424a-8757-d86c10b4d537
+15:58:56 debug: Inspect file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/http.ts
+15:58:56 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/http.ts as cce:/internal/code-quality/cr.mjs.
+15:58:56 debug: Resolve cc from file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/http.ts as cce:/internal/x/cc.
+15:58:56 debug: Resolve ./globalData from file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/http.ts as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/globalData.ts.
+15:58:56 debug: Resolve ./loadData from file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/http.ts as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/loadData.ts.
+15:58:56 debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/buySeed.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/buySeed.ts.
+15:58:56 debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/buySeedEffect.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/buySeedEffect.ts.
+15:58:56 debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/circles.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/circles.ts.
+15:58:56 debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/customInputBox.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/customInputBox.ts.
+15:58:56 debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/customProgressBar.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/customProgressBar.ts.
+15:58:56 debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/dashedRectangle.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/dashedRectangle.ts.
+15:58:56 debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/dialog.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/dialog.ts.
+15:58:56 debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/drawRoundedRect.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/drawRoundedRect.ts.
+15:58:56 debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/drawer.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/drawer.ts.
+15:58:56 debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/dynamicLabel.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/dynamicLabel.ts.
+15:58:56 debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/editName.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/editName.ts.
+15:58:56 debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/expandNoticeWithArrow.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/expandNoticeWithArrow.ts.
+15:58:56 debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/genBag.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/genBag.ts.
+15:58:56 debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/genBlock.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/genBlock.ts.
+15:58:56 debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/genInfo.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/genInfo.ts.
+15:58:56 debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/genPlant.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/genPlant.ts.
+15:58:56 debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/genShop.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/genShop.ts.
+15:58:56 debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/genericObjectPool.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/genericObjectPool.ts.
+15:58:56 debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/globalData.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/globalData.ts.
+15:58:56 debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/harvest.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/harvest.ts.
+15:58:56 debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/hideScrollbar.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/hideScrollbar.ts.
+15:58:56 debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/hoverEffect.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/hoverEffect.ts.
+15:58:56 debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/http.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/http.ts.
+15:58:56 debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/iconRotation.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/iconRotation.ts.
+15:58:56 debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/inputHandler.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/inputHandler.ts.
+15:58:56 debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/interface.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/interface.ts.
+15:58:56 debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/lightRayEffect%20.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/lightRayEffect%20.ts.
+15:58:56 debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/loadData.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/loadData.ts.
+15:58:56 debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/loadingScreen%20.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/loadingScreen%20.ts.
+15:58:56 debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/loadingUI.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/loadingUI.ts.
+15:58:56 debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/main.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/main.ts.
+15:58:56 debug: Detected change: file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/websocketManager.ts. Last mtime: Sun Aug 31 2025 19:06:09 GMT+0800 (中国标准时间)@01f4fe5d-7118-4a11-a185-a71fdcae2531, Current mtime: Tue Sep 02 2025 15:58:52 GMT+0800 (中国标准时间)@01f4fe5d-7118-4a11-a185-a71fdcae2531
+15:58:56 debug: Inspect file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/websocketManager.ts
+15:58:56 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/websocketManager.ts as cce:/internal/code-quality/cr.mjs.
+15:58:56 debug: Resolve cc from file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/websocketManager.ts as cce:/internal/x/cc.
+15:58:56 debug: Resolve cc from file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/websocketManager.ts as cce:/internal/x/cc.
+15:58:56 debug: Resolve ./loadData from file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/websocketManager.ts as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/loadData.ts.
+15:58:56 debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/noticeList.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/noticeList.ts.
+15:58:56 debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/overlayMask.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/overlayMask.ts.
+15:58:56 debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/popupStop.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/popupStop.ts.
+15:58:56 debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/progressbar.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/progressbar.ts.
+15:58:56 debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/roundBox.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/roundBox.ts.
+15:58:56 debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/roundedRect.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/roundedRect.ts.
+15:58:56 debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/roundedRectMask.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/roundedRectMask.ts.
+15:58:56 debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/scaleAction.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/scaleAction.ts.
+15:58:56 debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/sceneSwitcher.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/sceneSwitcher.ts.
+15:58:56 debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/seedEffect.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/seedEffect.ts.
+15:58:56 debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/soundControl.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/soundControl.ts.
+15:58:56 debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/switchButton.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/switchButton.ts.
+15:58:56 debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/task.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/task.ts.
+15:58:56 debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/telegram.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/telegram.ts.
+15:58:56 debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/utils.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/utils.ts.
+15:58:56 debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/websocketManager.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/websocketManager.ts.
+15:58:56 debug: Target(editor) ends with cost 379.9290997982025ms.
+15:58:56 debug: Target(preview) build started.
+15:58:56 debug: Detected change: cce:/internal/x/prerequisite-imports. Last mtime: Fri Jan 02 1970 18:27:53 GMT+0800 (中国标准时间), Current mtime: Sun Jan 04 1970 15:20:37 GMT+0800 (中国标准时间)
+15:58:56 debug: Inspect cce:/internal/x/prerequisite-imports
+15:58:56 debug: Resolve file:///D:/cocos-dashboard-editors/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts from cce:/internal/x/prerequisite-imports as file:///D:/cocos-dashboard-editors/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts.
+15:58:57 debug: Resolve file:///D:/cocos-dashboard-editors/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts from cce:/internal/x/prerequisite-imports as file:///D:/cocos-dashboard-editors/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts.
+15:58:57 debug: Resolve file:///D:/cocos-dashboard-editors/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts from cce:/internal/x/prerequisite-imports as file:///D:/cocos-dashboard-editors/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts.
+15:58:57 debug: Resolve file:///D:/cocos-dashboard-editors/Creator/3.8.4/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts from cce:/internal/x/prerequisite-imports as file:///D:/cocos-dashboard-editors/Creator/3.8.4/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts.
+15:58:57 debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/adaptiveCanvas.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/adaptiveCanvas.ts.
+15:58:57 debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/audioControl.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/audioControl.ts.
+15:58:57 debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/audioManager.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/audioManager.ts.
+15:58:57 debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/autoScaleImage.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/autoScaleImage.ts.
+15:58:57 debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/buttonClickSoundMgr.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/buttonClickSoundMgr.ts.
+15:58:57 debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/buttonGradient.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/buttonGradient.ts.
+15:58:57 debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/buyCoins.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/buyCoins.ts.
+15:58:57 debug: Detected change: file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/http.ts. Last mtime: Sun Aug 31 2025 19:06:02 GMT+0800 (中国标准时间)@c04de095-1da8-424a-8757-d86c10b4d537, Current mtime: Tue Sep 02 2025 15:58:51 GMT+0800 (中国标准时间)@c04de095-1da8-424a-8757-d86c10b4d537
+15:58:57 debug: Inspect file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/http.ts
+15:58:57 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/http.ts as cce:/internal/code-quality/cr.mjs.
+15:58:57 debug: Resolve cc from file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/http.ts as cce:/internal/x/cc.
+15:58:57 debug: Resolve ./globalData from file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/http.ts as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/globalData.ts.
+15:58:57 debug: Resolve ./loadData from file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/http.ts as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/loadData.ts.
+15:58:57 debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/buySeed.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/buySeed.ts.
+15:58:57 debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/buySeedEffect.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/buySeedEffect.ts.
+15:58:57 debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/circles.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/circles.ts.
+15:58:57 debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/customInputBox.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/customInputBox.ts.
+15:58:57 debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/customProgressBar.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/customProgressBar.ts.
+15:58:57 debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/dashedRectangle.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/dashedRectangle.ts.
+15:58:57 debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/dialog.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/dialog.ts.
+15:58:57 debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/drawRoundedRect.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/drawRoundedRect.ts.
+15:58:57 debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/drawer.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/drawer.ts.
+15:58:57 debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/dynamicLabel.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/dynamicLabel.ts.
+15:58:57 debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/editName.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/editName.ts.
+15:58:57 debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/expandNoticeWithArrow.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/expandNoticeWithArrow.ts.
+15:58:57 debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/genBag.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/genBag.ts.
+15:58:57 debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/genBlock.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/genBlock.ts.
+15:58:57 debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/genInfo.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/genInfo.ts.
+15:58:57 debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/genPlant.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/genPlant.ts.
+15:58:57 debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/genShop.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/genShop.ts.
+15:58:57 debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/genericObjectPool.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/genericObjectPool.ts.
+15:58:57 debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/globalData.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/globalData.ts.
+15:58:57 debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/harvest.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/harvest.ts.
+15:58:57 debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/hideScrollbar.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/hideScrollbar.ts.
+15:58:57 debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/hoverEffect.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/hoverEffect.ts.
+15:58:57 debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/http.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/http.ts.
+15:58:57 debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/iconRotation.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/iconRotation.ts.
+15:58:57 debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/inputHandler.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/inputHandler.ts.
+15:58:57 debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/interface.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/interface.ts.
+15:58:57 debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/lightRayEffect%20.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/lightRayEffect%20.ts.
+15:58:57 debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/loadData.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/loadData.ts.
+15:58:57 debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/loadingScreen%20.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/loadingScreen%20.ts.
+15:58:57 debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/loadingUI.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/loadingUI.ts.
+15:58:57 debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/main.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/main.ts.
+15:58:57 debug: Detected change: file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/websocketManager.ts. Last mtime: Sun Aug 31 2025 19:06:09 GMT+0800 (中国标准时间)@01f4fe5d-7118-4a11-a185-a71fdcae2531, Current mtime: Tue Sep 02 2025 15:58:52 GMT+0800 (中国标准时间)@01f4fe5d-7118-4a11-a185-a71fdcae2531
+15:58:57 debug: Inspect file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/websocketManager.ts
+15:58:57 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/websocketManager.ts as cce:/internal/code-quality/cr.mjs.
+15:58:57 debug: Resolve cc from file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/websocketManager.ts as cce:/internal/x/cc.
+15:58:57 debug: Resolve cc from file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/websocketManager.ts as cce:/internal/x/cc.
+15:58:57 debug: Resolve ./loadData from file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/websocketManager.ts as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/loadData.ts.
+15:58:57 debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/noticeList.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/noticeList.ts.
+15:58:57 debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/overlayMask.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/overlayMask.ts.
+15:58:57 debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/popupStop.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/popupStop.ts.
+15:58:57 debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/progressbar.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/progressbar.ts.
+15:58:57 debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/roundBox.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/roundBox.ts.
+15:58:57 debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/roundedRect.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/roundedRect.ts.
+15:58:57 debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/roundedRectMask.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/roundedRectMask.ts.
+15:58:57 debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/scaleAction.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/scaleAction.ts.
+15:58:57 debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/sceneSwitcher.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/sceneSwitcher.ts.
+15:58:57 debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/seedEffect.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/seedEffect.ts.
+15:58:57 debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/soundControl.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/soundControl.ts.
+15:58:57 debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/switchButton.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/switchButton.ts.
+15:58:57 debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/task.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/task.ts.
+15:58:57 debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/telegram.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/telegram.ts.
+15:58:57 debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/utils.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/utils.ts.
+15:58:57 debug: Resolve file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/websocketManager.ts from cce:/internal/x/prerequisite-imports as file:///E:/lianlukeji/frontend/cocos/menghuanfarm/assets/code/websocketManager.ts.
+15:58:57 debug: Target(preview) ends with cost 287.4511001110077ms.
+16:00:02 debug: Build iteration starts.
+Number of accumulated asset changes: 0
+Feature changed: true
+16:00:02 debug: Sync engine features: 2d,animation,audio,base,dragon-bones,gfx-webgl,legacy-pipeline,profiler,tween,ui
+16:00:02 debug: Target(editor) build started.
+16:00:03 debug: Target(editor) ends with cost 114.1292998790741ms.
+16:00:03 debug: Target(preview) build started.
+16:00:03 debug: Detected change: cce:/internal/x/cc. Last mtime: Fri Jan 02 1970 18:27:54 GMT+0800 (中国标准时间), Current mtime: Sun Jan 04 1970 15:21:43 GMT+0800 (中国标准时间)
+16:00:03 debug: Inspect cce:/internal/x/cc
+16:00:03 debug: Resolve cce:/internal/x/cc-fu/2d from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/2d.
+16:00:03 debug: Resolve cce:/internal/x/cc-fu/sorting from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/sorting.
+16:00:03 debug: Resolve cce:/internal/x/cc-fu/animation from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/animation.
+16:00:03 debug: Resolve cce:/internal/x/cc-fu/audio from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/audio.
+16:00:03 debug: Resolve cce:/internal/x/cc-fu/base from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/base.
+16:00:03 debug: Resolve cce:/internal/x/cc-fu/dragon-bones from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/dragon-bones.
+16:00:03 debug: Resolve cce:/internal/x/cc-fu/gfx-webgl from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/gfx-webgl.
+16:00:03 debug: Resolve cce:/internal/x/cc-fu/legacy-pipeline from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/legacy-pipeline.
+16:00:03 debug: Resolve cce:/internal/x/cc-fu/profiler from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/profiler.
+16:00:03 debug: Resolve cce:/internal/x/cc-fu/tween from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/tween.
+16:00:03 debug: Resolve cce:/internal/x/cc-fu/ui from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/ui.
+16:00:03 debug: Target(preview) ends with cost 99.46370005607605ms.
+16:27:44 debug: Build iteration starts.
+Number of accumulated asset changes: 0
+Feature changed: true
+16:27:44 debug: Sync engine features: 2d,animation,audio,base,debug-renderer,dragon-bones,gfx-webgl,legacy-pipeline,profiler,tween,ui
+16:27:44 debug: Target(editor) build started.
+16:27:44 debug: Target(editor) ends with cost 74.31480002403259ms.
+16:27:44 debug: Target(preview) build started.
+16:27:44 debug: Detected change: cce:/internal/x/cc. Last mtime: Sun Jan 04 1970 15:21:43 GMT+0800 (中国标准时间), Current mtime: Sun Jan 04 1970 15:49:25 GMT+0800 (中国标准时间)
+16:27:44 debug: Inspect cce:/internal/x/cc
+16:27:44 debug: Resolve cce:/internal/x/cc-fu/2d from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/2d.
+16:27:44 debug: Resolve cce:/internal/x/cc-fu/sorting from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/sorting.
+16:27:44 debug: Resolve cce:/internal/x/cc-fu/animation from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/animation.
+16:27:44 debug: Resolve cce:/internal/x/cc-fu/audio from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/audio.
+16:27:44 debug: Resolve cce:/internal/x/cc-fu/base from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/base.
+16:27:44 debug: Resolve cce:/internal/x/cc-fu/dragon-bones from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/dragon-bones.
+16:27:44 debug: Resolve cce:/internal/x/cc-fu/gfx-webgl from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/gfx-webgl.
+16:27:44 debug: Resolve cce:/internal/x/cc-fu/legacy-pipeline from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/legacy-pipeline.
+16:27:44 debug: Resolve cce:/internal/x/cc-fu/profiler from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/profiler.
+16:27:44 debug: Resolve cce:/internal/x/cc-fu/tween from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/tween.
+16:27:44 debug: Resolve cce:/internal/x/cc-fu/ui from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/ui.
+16:27:45 debug: Target(preview) ends with cost 107.09089994430542ms.

@@ -71,7 +71,7 @@
         "_value": false
       },
       "profiler": {
-        "_value": false
+        "_value": true
       },
       "occlusion-query": {
         "_value": false
@@ -149,6 +149,7 @@
       "dragon-bones",
       "gfx-webgl",
       "legacy-pipeline",
+      "profiler",
       "tween",
       "ui"
     ],
