@@ -4854,32 +4854,6 @@
       },
       "timestamp": 1757244472570
     },
-    "b56d14c65ade4a2c85fa11e6ed9e63533b8b44ce": {
-      "imports": {
-        "__unresolved_0": {
-          "resolved": {
-            "type": "chunk",
-            "id": "6a5019a719a9014c047e67aa1cf34453ab8392ce"
-          },
-          "messages": []
-        },
-        "__unresolved_1": {
-          "resolved": {
-            "type": "chunk",
-            "id": "53e47fef7ee0042c188bc97e9d53a57e9c617e1a"
-          },
-          "messages": []
-        },
-        "cc": {
-          "resolved": {
-            "type": "chunk",
-            "id": "93ba276ea7b26ffcdc433fab14afc1ed6f05647b"
-          },
-          "messages": []
-        }
-      },
-      "timestamp": 1757244472609
-    },
     "5f8ac48da803f66f866578a5ef66802d67ee673e": {
       "imports": {
         "__unresolved_0": {
@@ -5921,6 +5895,84 @@
       },
       "timestamp": 1757244471933
     },
+    "2e76c4597b9d0b7c905d73ba444b42cb1be598f5": {
+      "imports": {
+        "@telegram-apps/sdk": {
+          "resolved": {
+            "type": "chunk",
+            "id": "b87113f5fae9d6800b66f042e9d07353c1f4753d"
+          },
+          "messages": []
+        },
+        "__unresolved_0": {
+          "resolved": {
+            "type": "chunk",
+            "id": "6a5019a719a9014c047e67aa1cf34453ab8392ce"
+          },
+          "messages": []
+        },
+        "__unresolved_1": {
+          "resolved": {
+            "type": "chunk",
+            "id": "879684f53377472df83951b53c474abe6044ee16"
+          },
+          "messages": []
+        },
+        "__unresolved_2": {
+          "resolved": {
+            "type": "chunk",
+            "id": "fe502966e79c485f068eb96221fcdb0f5c5360b2"
+          },
+          "messages": []
+        },
+        "cc": {
+          "resolved": {
+            "type": "chunk",
+            "id": "93ba276ea7b26ffcdc433fab14afc1ed6f05647b"
+          },
+          "messages": []
+        }
+      },
+      "timestamp": 1757244473266
+    },
+    "fe502966e79c485f068eb96221fcdb0f5c5360b2": {
+      "imports": {
+        "cc": {
+          "resolved": {
+            "type": "chunk",
+            "id": "93ba276ea7b26ffcdc433fab14afc1ed6f05647b"
+          },
+          "messages": []
+        }
+      },
+      "timestamp": 1757244473440
+    },
+    "660dc228e796fd4f38ed3d026df065dad4b06442": {
+      "imports": {
+        "@telegram-apps/sdk": {
+          "resolved": {
+            "type": "chunk",
+            "id": "b87113f5fae9d6800b66f042e9d07353c1f4753d"
+          },
+          "messages": []
+        },
+        "__unresolved_0": {
+          "resolved": {
+            "type": "chunk",
+            "id": "6a5019a719a9014c047e67aa1cf34453ab8392ce"
+          },
+          "messages": []
+        },
+        "cc": {
+          "resolved": {
+            "type": "chunk",
+            "id": "93ba276ea7b26ffcdc433fab14afc1ed6f05647b"
+          },
+          "messages": []
+        }
+      },
+      "timestamp": 1757244474288
+    },
     "6d8fd2b0177941b032ddc0733af48a561fb60657": {
       "imports": {
         "__unresolved_0": {
@@ -6344,17 +6396,10 @@
           "messages": []
         }
       },
-      "timestamp": 1757244471070
+      "timestamp": 1757253717630
     },
-    "2e76c4597b9d0b7c905d73ba444b42cb1be598f5": {
+    "b56d14c65ade4a2c85fa11e6ed9e63533b8b44ce": {
       "imports": {
-        "@telegram-apps/sdk": {
-          "resolved": {
-            "type": "chunk",
-            "id": "b87113f5fae9d6800b66f042e9d07353c1f4753d"
-          },
-          "messages": []
-        },
         "__unresolved_0": {
           "resolved": {
             "type": "chunk",
@@ -6365,14 +6410,7 @@
         "__unresolved_1": {
           "resolved": {
             "type": "chunk",
-            "id": "879684f53377472df83951b53c474abe6044ee16"
-          },
-          "messages": []
-        },
-        "__unresolved_2": {
-          "resolved": {
-            "type": "chunk",
-            "id": "fe502966e79c485f068eb96221fcdb0f5c5360b2"
+            "id": "53e47fef7ee0042c188bc97e9d53a57e9c617e1a"
           },
           "messages": []
         },
@@ -6384,45 +6422,7 @@
           "messages": []
         }
       },
-      "timestamp": 1757244473266
-    },
-    "fe502966e79c485f068eb96221fcdb0f5c5360b2": {
-      "imports": {
-        "cc": {
-          "resolved": {
-            "type": "chunk",
-            "id": "93ba276ea7b26ffcdc433fab14afc1ed6f05647b"
-          },
-          "messages": []
-        }
-      },
-      "timestamp": 1757244473440
-    },
-    "660dc228e796fd4f38ed3d026df065dad4b06442": {
-      "imports": {
-        "@telegram-apps/sdk": {
-          "resolved": {
-            "type": "chunk",
-            "id": "b87113f5fae9d6800b66f042e9d07353c1f4753d"
-          },
-          "messages": []
-        },
-        "__unresolved_0": {
-          "resolved": {
-            "type": "chunk",
-            "id": "6a5019a719a9014c047e67aa1cf34453ab8392ce"
-          },
-          "messages": []
-        },
-        "cc": {
-          "resolved": {
-            "type": "chunk",
-            "id": "93ba276ea7b26ffcdc433fab14afc1ed6f05647b"
-          },
-          "messages": []
-        }
-      },
-      "timestamp": 1757244474288
+      "timestamp": 1757253717745
     }
   },
   "entries": {

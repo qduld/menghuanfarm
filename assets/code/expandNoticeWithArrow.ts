@@ -137,7 +137,9 @@ export class ExpandNoticeWithArrow extends Component {
       tween(startEuler)
         .to(0.3, new Vec3(0, 0, 0), {
           onUpdate: (value) => {
-            this.arrowButton.eulerAngles = value;
+            if (this.arrowButton) {
+              this.arrowButton.eulerAngles = value;
+            }
           },
         })
         .start();
