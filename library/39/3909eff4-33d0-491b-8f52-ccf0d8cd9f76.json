@@ -20425,7 +20425,9 @@
   },
   {
     "__type__": "cc.ClickEvent",
-    "target": null,
+    "target": {
+      "__id__": 2
+    },
     "component": "",
     "_componentId": "02964fGKTRAZLPQ0OcOdX+l",
     "handler": "closeDialog",
