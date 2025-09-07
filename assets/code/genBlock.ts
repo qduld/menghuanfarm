@@ -146,7 +146,10 @@ export class GenBlock extends Component {
     if (!this.blockContainer) {
       this.blockContainer = find("Canvas/Block/List");
     }
-    plant.resetNode(this.blockContainer.children[blockIndex]);
+
+    if (!this.blockContainer.children[blockIndex]) {
+      plant.resetNode(this.blockContainer.children[blockIndex]);
+    }
 
     plant.updatePlantStatus(
       this.blockContainer.children[blockIndex],
