@@ -133,10 +133,10 @@
             "_value": true
           },
           "websocket": {
-            "_value": false
+            "_value": true
           },
           "websocket-server": {
-            "_value": false
+            "_value": true
           },
           "terrain": {
             "_value": false
@@ -204,7 +204,9 @@
           "mask",
           "rich-text",
           "tween",
-          "ui"
+          "ui",
+          "websocket",
+          "websocket-server"
         ],
         "noDeprecatedFeatures": {
           "value": false,
