@@ -122,6 +122,7 @@ export class GlobalData extends Component {
     label.string = tips;
 
     this.scheduleOnce(() => {
+      if (!UTipsFind.getChildByName("BgBorder")) return;
       const bgBorder =
         UTipsFind.getChildByName("BgBorder").getComponent(DrawRoundedRect);
       bgBorder.rectHeight = label.getComponent(UITransform).height + 10;

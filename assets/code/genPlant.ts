@@ -415,6 +415,8 @@ export class GenPlant extends Component {
   }
 
   resetNode(block) {
-    block.getChildByName("Countdown")["hasSchedule"] = false;
+    if (block.getChildByName("Countdown")) {
+      block.getChildByName("Countdown")["hasSchedule"] = false;
+    }
   }
 }
