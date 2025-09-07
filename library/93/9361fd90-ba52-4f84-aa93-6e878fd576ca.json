@@ -385,7 +385,8 @@
                 "CC_USE_MORPH",
                 "CC_MORPH_TARGET_HAS_POSITION"
               ],
-              "stageFlags": 1
+              "stageFlags": 1,
+              "sampleType": 0
             },
             {
               "tags": {
@@ -399,7 +400,8 @@
                 "CC_USE_MORPH",
                 "CC_MORPH_TARGET_HAS_NORMAL"
               ],
-              "stageFlags": 1
+              "stageFlags": 1,
+              "sampleType": 0
             },
             {
               "tags": {
@@ -413,7 +415,8 @@
                 "CC_USE_MORPH",
                 "CC_MORPH_TARGET_HAS_TANGENT"
               ],
-              "stageFlags": 1
+              "stageFlags": 1,
+              "sampleType": 0
             },
             {
               "tags": {
@@ -428,7 +431,8 @@
                 "CC_USE_SKINNING",
                 "CC_USE_BAKED_ANIMATION"
               ],
-              "stageFlags": 1
+              "stageFlags": 1,
+              "sampleType": 0
             },
             {
               "tags": {
@@ -444,7 +448,8 @@
                 "!CC_USE_BAKED_ANIMATION",
                 "CC_USE_REAL_TIME_JOINT_TEXTURE"
               ],
-              "stageFlags": 1
+              "stageFlags": 1,
+              "sampleType": 0
             }
           ],
           "samplers": [],

@@ -6,16 +6,16 @@
     "strict": true,
     "types": [
       "./temp/declarations/cc.custom-macro",
-      "./temp/declarations/jsb",
       "./temp/declarations/cc",
+      "./temp/declarations/jsb",
       "./temp/declarations/cc.env"
     ],
     "paths": {
       "db://internal/*": [
-        "D:\\cocos-dashboard-editors\\Creator\\3.8.4\\resources\\resources\\3d\\engine\\editor\\assets\\*"
+        "D:\\cocos-dashboard-editors\\Creator\\3.8.6\\resources\\resources\\3d\\engine\\editor\\assets\\*"
       ],
       "db://assets/*": [
-        "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm\\assets\\*"
+        "E:\\lianlukeji\\frontend\\cocos\\menghuanfarm1\\menghuanfarm\\assets\\*"
       ]
     },
     "experimentalDecorators": true,

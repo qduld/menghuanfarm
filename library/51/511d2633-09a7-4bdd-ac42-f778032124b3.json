@@ -50,6 +50,7 @@
           "count": 1,
           "defines": [],
           "stageFlags": 16,
+          "sampleType": 0,
           "binding": 0
         }
       ],
@@ -245,6 +246,7 @@
               "count": 1,
               "defines": [],
               "stageFlags": 16,
+              "sampleType": 0,
               "binding": 0
             }
           ],
@@ -466,7 +468,8 @@
               "type": 31,
               "count": 1,
               "defines": [],
-              "stageFlags": 16
+              "stageFlags": 16,
+              "sampleType": 0
             }
           ],
           "samplers": [],

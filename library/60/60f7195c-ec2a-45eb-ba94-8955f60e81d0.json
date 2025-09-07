@@ -197,7 +197,8 @@
               "defines": [
                 "USE_TEXTURE"
               ],
-              "stageFlags": 16
+              "stageFlags": 16,
+              "sampleType": 0
             }
           ],
           "samplers": [],

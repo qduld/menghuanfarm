@@ -4,7 +4,7 @@
   "version": "3.6.1",
   "type": "module",
   "creator": {
-    "version": "3.8.4"
+    "version": "3.8.6"
   },
   "scripts": {
     "build": "gulp cp-src concat-css htmlmin resRev default"

@@ -140,7 +140,7 @@
     {
       "bufferView": 5,
       "componentType": 5123,
-      "count": 216,
+      "count": 276,
       "name": "cone/INDICES",
       "type": "SCALAR"
     },
@@ -428,14 +428,14 @@
     },
     {
       "buffer": 0,
-      "byteLength": 432,
+      "byteLength": 552,
       "byteOffset": 76368,
       "target": 34963
     },
     {
       "buffer": 0,
       "byteLength": 51880,
-      "byteOffset": 76800,
+      "byteOffset": 76920,
       "byteStride": 40,
       "name": "torus",
       "target": 34962
@@ -443,13 +443,13 @@
     {
       "buffer": 0,
       "byteLength": 12288,
-      "byteOffset": 128680,
+      "byteOffset": 128800,
       "target": 34963
     },
     {
       "buffer": 0,
       "byteLength": 51760,
-      "byteOffset": 140968,
+      "byteOffset": 141088,
       "byteStride": 40,
       "name": "sphere",
       "target": 34962
@@ -457,13 +457,13 @@
     {
       "buffer": 0,
       "byteLength": 14280,
-      "byteOffset": 192728,
+      "byteOffset": 192848,
       "target": 34963
     },
     {
       "buffer": 0,
       "byteLength": 160,
-      "byteOffset": 207008,
+      "byteOffset": 207128,
       "byteStride": 40,
       "name": "quad",
       "target": 34962
@@ -471,13 +471,13 @@
     {
       "buffer": 0,
       "byteLength": 12,
-      "byteOffset": 207168,
+      "byteOffset": 207288,
       "target": 34963
     },
     {
       "buffer": 0,
       "byteLength": 10400,
-      "byteOffset": 207180,
+      "byteOffset": 207300,
       "byteStride": 40,
       "name": "cylinder",
       "target": 34962
@@ -485,13 +485,13 @@
     {
       "buffer": 0,
       "byteLength": 768,
-      "byteOffset": 217580,
+      "byteOffset": 217700,
       "target": 34963
     },
     {
       "buffer": 0,
       "byteLength": 960,
-      "byteOffset": 218348,
+      "byteOffset": 218468,
       "byteStride": 40,
       "name": "box",
       "target": 34962
@@ -499,13 +499,13 @@
     {
       "buffer": 0,
       "byteLength": 72,
-      "byteOffset": 219308,
+      "byteOffset": 219428,
       "target": 34963
     }
   ],
   "buffers": [
     {
-      "byteLength": 219380,
+      "byteLength": 219500,
       "uri": "out.bin"
     }
   ],

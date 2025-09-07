@@ -8,7 +8,7 @@
       "coreJs": false
     },
     "outputName": "wechatgame",
-    "mainBundleCompressionType": "merge_all_json",
+    "mainBundleCompressionType": "merge_dep",
     "platform": "wechatgame",
     "replaceSplashScreen": true,
     "scenes": [
@@ -37,7 +37,8 @@
     "mainBundleIsRemote": false,
     "skipCompressTexture": true,
     "experimentalEraseModules": false,
-    "md5Cache": true
+    "md5Cache": true,
+    "mangleProperties": true
   },
   "BuildTaskManager": {
     "taskMap": {
@@ -47,8 +48,8 @@
         "progress": 1,
         "state": "success",
         "stage": "build",
-        "message": "2025-9-5 01:32:58 build success in 47 s!",
-        "detailMessage": "// ---- build task web-mobile：onBeforeCopyBuildTemplate ----\r",
+        "message": "2025-9-7 19:28:21 build success in 9 s!",
+        "detailMessage": "// ---- build task Fill script data to settings ----\r",
         "options": {
           "name": "PlantStore",
           "platform": "web-mobile",
@@ -64,7 +65,7 @@
           "experimentalEraseModules": false,
           "useBuiltinServer": false,
           "mainBundleIsRemote": false,
-          "mainBundleCompressionType": "merge_all_json",
+          "mainBundleCompressionType": "merge_dep",
           "startScene": "cf4dc34b-8c49-4fc8-b329-7c0faa4a4a85",
           "outputName": "web-mobile",
           "scenes": [
@@ -119,9 +120,13 @@
           "packAutoAtlas": true,
           "wasmCompressionMode": false,
           "replaceSplashScreen": true,
-          "logDest": "project://temp/builder/log/web-mobile2022-11-9 11-49.log"
+          "logDest": "project://temp/builder/log/web-mobile2022-11-9 11-49.log",
+          "buildMode": "normal",
+          "engineModulesConfigKey": "migrationsConfig",
+          "mangleProperties": true,
+          "inlineEnum": true
         },
-        "time": "2025-9-5 01:32:11",
+        "time": "2025-9-7 19:28:11",
         "dirty": false
       },
       "1668068042719": {
@@ -172,12 +177,13 @@
             }
           },
           "nativeCodeBundleMode": "wasm",
-          "packages": {}
+          "packages": {},
+          "buildMode": "normal"
         },
         "time": "2022-11-11 17:55",
         "dirty": false
       }
     }
   },
-  "__version__": "1.3.8"
+  "__version__": "1.3.9"
 }

@@ -8,6 +8,9 @@ import {
   Label,
   sys,
   director,
+  resources,
+  SpriteAtlas,
+  Sprite,
 } from "cc";
 import { coinList } from "./loadData";
 import { httpRequest } from "./http";
@@ -90,6 +93,40 @@ export class BuyCoins extends Component {
         .getChildByName("Button")
         .getChildByName("Label")
         .getComponent(Label).string = "$" + coin.price;
+
+      resources.load("iconList", SpriteAtlas, (err, atlas) => {
+        if (err) {
+          console.error("Failed to load sprite:", err);
+          return;
+        }
+
+        const spriteCoin = coinSection
+          .getChildByName("Picture")
+          .getChildByName("Sprite");
+
+        spriteCoin.getComponent(Sprite).spriteFrame = atlas.getSpriteFrame(
+          coin.points + ""
+        );
+
+        switch (coin.points) {
+          case 10000:
+            spriteCoin.getComponent(UITransform).width = 60;
+            spriteCoin.getComponent(UITransform).height = 60;
+            break;
+          case 88900:
+            spriteCoin.getComponent(UITransform).width = 90;
+            spriteCoin.getComponent(UITransform).height = 90;
+            break;
+          case 350000:
+            spriteCoin.getComponent(UITransform).width = 90;
+            spriteCoin.getComponent(UITransform).height = 80;
+            break;
+          case 1400000:
+            spriteCoin.getComponent(UITransform).width = 100;
+            spriteCoin.getComponent(UITransform).height = 80;
+            break;
+        }
+      });
     });
   }
 
