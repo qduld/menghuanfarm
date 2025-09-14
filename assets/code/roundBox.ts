@@ -83,6 +83,10 @@ export class RoundBox extends cc.UIRenderer {
     this.createBuffer();
     this.markForUpdateRenderData();
   }
+
+  // 添加索引数据存储
+  private _iData: Uint16Array = null;
+
   public __preload() {
     super.__preload();
     this._assembler = {
@@ -159,13 +163,14 @@ export class RoundBox extends cc.UIRenderer {
     }
     let vid = chunk.vertexOffset;
     let meshBuffer = chunk.meshBuffer;
-    let iData = meshBuffer.iData;
     let ib = chunk.ib;
     for (
       let i = 0, len = renderData.indexCount, offset = meshBuffer.indexOffset;
       i < len;
-      iData[offset++] = vid + ib[i++]
-    );
+      i++
+    ) {
+      meshBuffer.iData[offset++] = vid + ib[i];
+    }
     meshBuffer.indexOffset += renderData.indexCount;
   }
   //如果材质为空，则设置为默认材质
@@ -365,28 +370,56 @@ export class RoundBox extends cc.UIRenderer {
   }
   //计算顶点索引
   private updateIData() {
-    let iData = this._renderData.chunk["_ib"];
-    for (let i = CENTER_IDATA.length - 1; i > -1; iData[i] = CENTER_IDATA[i--]);
+    let renderData = this._renderData;
+    let indexCount = renderData.indexCount;
+
+    // 创建或更新索引数据
+    if (!this._iData || this._iData.length !== indexCount) {
+      this._iData = new Uint16Array(indexCount);
+    }
+
+    // 复制中心区域索引
+    for (let i = 0; i < CENTER_IDATA.length; i++) {
+      this._iData[i] = CENTER_IDATA[i];
+    }
+
     let offset = CENTER_IDATA.length;
     let visible = this._corner.visible;
     let id = 36;
+
     for (let i = 0; i < 4; ++i) {
       if (!visible[i]) continue;
       let o = 3 * i;
       let a = o + 1;
       let b = id / 3;
+
       for (let j = 0, len = this._segment - 1; j < len; ++j) {
-        iData[offset++] = o;
-        iData[offset++] = a;
-        iData[offset++] = b;
+        this._iData[offset++] = o;
+        this._iData[offset++] = a;
+        this._iData[offset++] = b;
         a = b++;
         id += 3;
       }
-      iData[offset++] = o;
-      iData[offset++] = a;
-      iData[offset++] = o + 2;
+
+      this._iData[offset++] = o;
+      this._iData[offset++] = a;
+      this._iData[offset++] = o + 2;
     }
-    JSB && this._renderData.chunk.setIndexBuffer(iData);
+
+    // 使用setIndexBuffer方法设置索引数据
+    if (JSB) {
+      renderData.chunk.setIndexBuffer(this._iData);
+    } else {
+      // 在Web平台，我们需要通过其他方式设置索引数据
+      // 这里我们直接修改meshBuffer的iData
+      let chunk = renderData.chunk;
+      let meshBuffer = chunk.meshBuffer;
+      let vid = chunk.vertexOffset;
+
+      for (let i = 0; i < indexCount; i++) {
+        meshBuffer.iData[meshBuffer.indexOffset + i] = vid + this._iData[i];
+      }
+    }
   }
   protected _render(render: any) {
     render.commitComp(
