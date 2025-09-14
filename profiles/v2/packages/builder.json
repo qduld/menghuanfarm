@@ -38,7 +38,8 @@
     "skipCompressTexture": true,
     "experimentalEraseModules": false,
     "md5Cache": true,
-    "mangleProperties": true
+    "mangleProperties": true,
+    "inlineEnum": true
   },
   "BuildTaskManager": {
     "taskMap": {
@@ -48,8 +49,8 @@
         "progress": 1,
         "state": "success",
         "stage": "build",
-        "message": "2025-9-7 22:53:52 build success in 10 s!",
-        "detailMessage": "// ---- build task adsense-h5g-plugin：onAfterBuild ----\r",
+        "message": "2025-9-14 20:46:31 build success in 18 s!",
+        "detailMessage": "web-mobile:(onBeforeCopyBuildTemplate) in 98 ms ✓, progress: 45%\r",
         "options": {
           "name": "PlantStore",
           "platform": "web-mobile",
@@ -126,7 +127,7 @@
           "mangleProperties": true,
           "inlineEnum": true
         },
-        "time": "2025-9-7 22:53:42",
+        "time": "2025-9-14 20:46:12",
         "dirty": false
       },
       "1668068042719": {

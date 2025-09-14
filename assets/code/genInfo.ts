@@ -132,6 +132,11 @@ export class GenInfo extends Component {
   updateUserInfo() {
     const globalData = GlobalData.getInstance();
 
+    if (globalData.isStolen) {
+      this.UAddition.active = false;
+    } else {
+      this.UAddition.active = true;
+    }
     let userInfo = this.friendInfo ? this.friendInfo : globalData.userInfo;
 
     this.UUserName.getComponent(DynamicLabel).setText(
@@ -205,9 +210,9 @@ export class GenInfo extends Component {
     this.UHarvest.getChildByName("Value").getComponent(Label).string =
       this.uagg.me_point_sum + "";
     this.UStolenFrom.getChildByName("Value").getComponent(Label).string =
-      this.uagg.friend_point_sum + "";
-    this.UBeStolen.getChildByName("Value").getComponent(Label).string =
       this.uagg.steal_point_sum + "";
+    this.UBeStolen.getChildByName("Value").getComponent(Label).string =
+      this.uagg.friend_point_sum + "";
   }
 
   // 获取今日统计信息
