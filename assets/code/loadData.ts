@@ -74,7 +74,7 @@ export const i18n = {
     14: "Accumulated purchase of gold coins exceeds 50,000",
     15: "Complete the first purchase of an inflation card",
     16: "Unlock the first plot of land",
-    17: "Unlock the last plot of land",
+    17: "Unlock all land",
   },
   checkInSuccess: "Check In Succeed",
   checkedIn: "Checked in",
