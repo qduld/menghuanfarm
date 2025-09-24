@@ -65,8 +65,8 @@
   },
   "scopes": {
     "./chunks/66/660dc228e796fd4f38ed3d026df065dad4b06442.js": {
-      "@telegram-apps/sdk": "./chunks/b8/b87113f5fae9d6800b66f042e9d07353c1f4753d.js",
       "__unresolved_0": "./chunks/6a/6a5019a719a9014c047e67aa1cf34453ab8392ce.js",
+      "__unresolved_1": "./chunks/fe/fe502966e79c485f068eb96221fcdb0f5c5360b2.js",
       "cc": "./chunks/93/93ba276ea7b26ffcdc433fab14afc1ed6f05647b.js"
     },
     "./chunks/93/93ba276ea7b26ffcdc433fab14afc1ed6f05647b.js": {
@@ -116,6 +116,9 @@
       "__unresolved_7": "cce:/internal/x/cc-fu/skeletal-animation",
       "__unresolved_8": "cce:/internal/x/cc-fu/2d",
       "__unresolved_9": "cce:/internal/x/cc-fu/sorting"
+    },
+    "./chunks/fe/fe502966e79c485f068eb96221fcdb0f5c5360b2.js": {
+      "cc": "./chunks/93/93ba276ea7b26ffcdc433fab14afc1ed6f05647b.js"
     },
     "./chunks/a4/a436465a18457708188cbb77414c739eb0cb62d6.js": {
       "cc": "./chunks/93/93ba276ea7b26ffcdc433fab14afc1ed6f05647b.js"
@@ -179,9 +182,6 @@
     "./chunks/6b/6b489aeb961f2a791287b2a79e08891c05bbb1a2.js": {
       "cc": "./chunks/93/93ba276ea7b26ffcdc433fab14afc1ed6f05647b.js"
     },
-    "./chunks/fe/fe502966e79c485f068eb96221fcdb0f5c5360b2.js": {
-      "cc": "./chunks/93/93ba276ea7b26ffcdc433fab14afc1ed6f05647b.js"
-    },
     "./chunks/6e/6edfc78e220f8a8b581eb12a475bc0e3b44293fb.js": {
       "__unresolved_0": "./chunks/6a/6a5019a719a9014c047e67aa1cf34453ab8392ce.js",
       "__unresolved_1": "./chunks/28/285f0a0b889a2dc5d6f6d4690c55f2d809f4bf74.js",
@@ -220,7 +220,6 @@
       "cc": "./chunks/93/93ba276ea7b26ffcdc433fab14afc1ed6f05647b.js"
     },
     "./chunks/2e/2e76c4597b9d0b7c905d73ba444b42cb1be598f5.js": {
-      "@telegram-apps/sdk": "./chunks/b8/b87113f5fae9d6800b66f042e9d07353c1f4753d.js",
       "__unresolved_0": "./chunks/6a/6a5019a719a9014c047e67aa1cf34453ab8392ce.js",
       "__unresolved_1": "./chunks/87/879684f53377472df83951b53c474abe6044ee16.js",
       "__unresolved_2": "./chunks/fe/fe502966e79c485f068eb96221fcdb0f5c5360b2.js",

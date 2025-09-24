@@ -1,6 +1,6 @@
 import { _decorator, Component, Node } from "cc";
 import { tokenMock, userFilter, authFilter, tokenSort } from "./loadData";
-import { retrieveLaunchParams } from "@telegram-apps/sdk";
+// import { retrieveLaunchParams } from "@telegram-apps/sdk";
 
 export class WebSocketManager {
   private static _instance: WebSocketManager;
@@ -27,10 +27,10 @@ export class WebSocketManager {
    * @param token 认证令牌
    */
   public connect(url: string): void {
-    const { initDataRaw } = retrieveLaunchParams();
+    // const { initDataRaw } = retrieveLaunchParams();
 
-    // this.token = tokenMock;
-    this.token = initDataRaw;
+    this.token = tokenMock;
+    // this.token = initDataRaw;
 
     if (!this.token) {
       console.error("Token is required for WebSocket connection.");
