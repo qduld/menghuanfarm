@@ -1,7 +1,7 @@
 {
   "modules": {
     "cce:/internal/x/cc": {
-      "mTimestamp": 9886.3434,
+      "mTimestamp": 8303.1982,
       "chunkId": "93ba276ea7b26ffcdc433fab14afc1ed6f05647b",
       "imports": [
         {
@@ -976,7 +976,7 @@
       ]
     },
     "cce:/internal/x/prerequisite-imports": {
-      "mTimestamp": 882430351.7001,
+      "mTimestamp": 1578012.4604,
       "chunkId": "6d8fd2b0177941b032ddc0733af48a561fb60657",
       "imports": [
         {
@@ -6330,7 +6330,7 @@
     },
     "file:///E:/lianlukeji/frontend/cocos/menghuanfarm1/menghuanfarm/assets/code/http.ts": {
       "mTimestamp": {
-        "mtime": 1758734783205.734,
+        "mtime": 1760277397729.4138,
         "uuid": "c04de095-1da8-424a-8757-d86c10b4d537"
       },
       "chunkId": "2e76c4597b9d0b7c905d73ba444b42cb1be598f5",
@@ -6369,6 +6369,19 @@
               "column": 79
             }
           }
+        },
+        {
+          "value": "@telegram-apps/sdk",
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 37
+            },
+            "end": {
+              "line": 3,
+              "column": 57
+            }
+          }
         }
       ],
       "type": "esm",
@@ -6398,6 +6411,13 @@
           "resolved": {
             "type": "module",
             "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm1/menghuanfarm/assets/code/loadData.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm1/menghuanfarm/node_modules/@telegram-apps/sdk/dist/index.js"
           },
           "messages": []
         }
@@ -8185,7 +8205,7 @@
     },
     "file:///E:/lianlukeji/frontend/cocos/menghuanfarm1/menghuanfarm/assets/code/websocketManager.ts": {
       "mTimestamp": {
-        "mtime": 1758734803900.5574,
+        "mtime": 1760277408055.7515,
         "uuid": "01f4fe5d-7118-4a11-a185-a71fdcae2531"
       },
       "chunkId": "660dc228e796fd4f38ed3d026df065dad4b06442",
@@ -8201,16 +8221,15 @@
           "value": "cc"
         },
         {
-          "value": "./loadData",
-          "resolved": "__unresolved_1",
+          "value": "@telegram-apps/sdk",
           "loc": {
             "start": {
-              "line": 2,
-              "column": 61
+              "line": 3,
+              "column": 37
             },
             "end": {
-              "line": 2,
-              "column": 73
+              "line": 3,
+              "column": 57
             }
           }
         }
@@ -8241,14 +8260,14 @@
         {
           "resolved": {
             "type": "module",
-            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm1/menghuanfarm/assets/code/loadData.ts"
+            "url": "file:///E:/lianlukeji/frontend/cocos/menghuanfarm1/menghuanfarm/node_modules/@telegram-apps/sdk/dist/index.js"
           },
           "messages": []
         }
       ]
     },
     "cce:/internal/code-quality/cr.mjs": {
-      "mTimestamp": 1757852399617,
+      "mTimestamp": 1760275833013,
       "chunkId": "6a5019a719a9014c047e67aa1cf34453ab8392ce",
       "imports": [],
       "type": "esm",

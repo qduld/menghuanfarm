@@ -5524,113 +5524,6 @@
       },
       "timestamp": 1757255332908
     },
-    "93ba276ea7b26ffcdc433fab14afc1ed6f05647b": {
-      "imports": {
-        "__unresolved_0": {
-          "resolved": {
-            "type": "external",
-            "specifierOrURL": "cce:/internal/x/cc-fu/2d"
-          },
-          "messages": []
-        },
-        "__unresolved_1": {
-          "resolved": {
-            "type": "external",
-            "specifierOrURL": "cce:/internal/x/cc-fu/sorting"
-          },
-          "messages": []
-        },
-        "__unresolved_10": {
-          "resolved": {
-            "type": "external",
-            "specifierOrURL": "cce:/internal/x/cc-fu/mask"
-          },
-          "messages": []
-        },
-        "__unresolved_11": {
-          "resolved": {
-            "type": "external",
-            "specifierOrURL": "cce:/internal/x/cc-fu/rich-text"
-          },
-          "messages": []
-        },
-        "__unresolved_12": {
-          "resolved": {
-            "type": "external",
-            "specifierOrURL": "cce:/internal/x/cc-fu/tween"
-          },
-          "messages": []
-        },
-        "__unresolved_13": {
-          "resolved": {
-            "type": "external",
-            "specifierOrURL": "cce:/internal/x/cc-fu/ui"
-          },
-          "messages": []
-        },
-        "__unresolved_2": {
-          "resolved": {
-            "type": "external",
-            "specifierOrURL": "cce:/internal/x/cc-fu/affine-transform"
-          },
-          "messages": []
-        },
-        "__unresolved_3": {
-          "resolved": {
-            "type": "external",
-            "specifierOrURL": "cce:/internal/x/cc-fu/animation"
-          },
-          "messages": []
-        },
-        "__unresolved_4": {
-          "resolved": {
-            "type": "external",
-            "specifierOrURL": "cce:/internal/x/cc-fu/audio"
-          },
-          "messages": []
-        },
-        "__unresolved_5": {
-          "resolved": {
-            "type": "external",
-            "specifierOrURL": "cce:/internal/x/cc-fu/base"
-          },
-          "messages": []
-        },
-        "__unresolved_6": {
-          "resolved": {
-            "type": "external",
-            "specifierOrURL": "cce:/internal/x/cc-fu/dragon-bones"
-          },
-          "messages": []
-        },
-        "__unresolved_7": {
-          "resolved": {
-            "type": "external",
-            "specifierOrURL": "cce:/internal/x/cc-fu/gfx-webgl"
-          },
-          "messages": []
-        },
-        "__unresolved_8": {
-          "resolved": {
-            "type": "external",
-            "specifierOrURL": "cce:/internal/x/cc-fu/graphics"
-          },
-          "messages": []
-        },
-        "__unresolved_9": {
-          "resolved": {
-            "type": "external",
-            "specifierOrURL": "cce:/internal/x/cc-fu/legacy-pipeline"
-          },
-          "messages": []
-        }
-      },
-      "timestamp": 1757852409877
-    },
-    "6a5019a719a9014c047e67aa1cf34453ab8392ce": {
-      "imports": {},
-      "timestamp": 1757852409955
-    },
     "af4e6180fabc40dc038f8295de598c2c26abac1d": {
       "imports": {
         "__unresolved_0": {
@@ -5696,6 +5589,132 @@
         }
       },
       "timestamp": 1757858947401
+    },
+    "50d9434504cdb067c5aa26526d1079e60b20e65c": {
+      "imports": {
+        "cc": {
+          "resolved": {
+            "type": "chunk",
+            "id": "93ba276ea7b26ffcdc433fab14afc1ed6f05647b"
+          },
+          "messages": []
+        }
+      },
+      "timestamp": 1758734809367
+    },
+    "93ba276ea7b26ffcdc433fab14afc1ed6f05647b": {
+      "imports": {
+        "__unresolved_0": {
+          "resolved": {
+            "type": "external",
+            "specifierOrURL": "cce:/internal/x/cc-fu/2d"
+          },
+          "messages": []
+        },
+        "__unresolved_1": {
+          "resolved": {
+            "type": "external",
+            "specifierOrURL": "cce:/internal/x/cc-fu/sorting"
+          },
+          "messages": []
+        },
+        "__unresolved_10": {
+          "resolved": {
+            "type": "external",
+            "specifierOrURL": "cce:/internal/x/cc-fu/mask"
+          },
+          "messages": []
+        },
+        "__unresolved_11": {
+          "resolved": {
+            "type": "external",
+            "specifierOrURL": "cce:/internal/x/cc-fu/profiler"
+          },
+          "messages": []
+        },
+        "__unresolved_12": {
+          "resolved": {
+            "type": "external",
+            "specifierOrURL": "cce:/internal/x/cc-fu/rich-text"
+          },
+          "messages": []
+        },
+        "__unresolved_13": {
+          "resolved": {
+            "type": "external",
+            "specifierOrURL": "cce:/internal/x/cc-fu/tween"
+          },
+          "messages": []
+        },
+        "__unresolved_14": {
+          "resolved": {
+            "type": "external",
+            "specifierOrURL": "cce:/internal/x/cc-fu/ui"
+          },
+          "messages": []
+        },
+        "__unresolved_2": {
+          "resolved": {
+            "type": "external",
+            "specifierOrURL": "cce:/internal/x/cc-fu/affine-transform"
+          },
+          "messages": []
+        },
+        "__unresolved_3": {
+          "resolved": {
+            "type": "external",
+            "specifierOrURL": "cce:/internal/x/cc-fu/animation"
+          },
+          "messages": []
+        },
+        "__unresolved_4": {
+          "resolved": {
+            "type": "external",
+            "specifierOrURL": "cce:/internal/x/cc-fu/audio"
+          },
+          "messages": []
+        },
+        "__unresolved_5": {
+          "resolved": {
+            "type": "external",
+            "specifierOrURL": "cce:/internal/x/cc-fu/base"
+          },
+          "messages": []
+        },
+        "__unresolved_6": {
+          "resolved": {
+            "type": "external",
+            "specifierOrURL": "cce:/internal/x/cc-fu/dragon-bones"
+          },
+          "messages": []
+        },
+        "__unresolved_7": {
+          "resolved": {
+            "type": "external",
+            "specifierOrURL": "cce:/internal/x/cc-fu/gfx-webgl"
+          },
+          "messages": []
+        },
+        "__unresolved_8": {
+          "resolved": {
+            "type": "external",
+            "specifierOrURL": "cce:/internal/x/cc-fu/graphics"
+          },
+          "messages": []
+        },
+        "__unresolved_9": {
+          "resolved": {
+            "type": "external",
+            "specifierOrURL": "cce:/internal/x/cc-fu/legacy-pipeline"
+          },
+          "messages": []
+        }
+      },
+      "timestamp": 1760275841651
+    },
+    "6a5019a719a9014c047e67aa1cf34453ab8392ce": {
+      "imports": {},
+      "timestamp": 1760275841712
     },
     "6d8fd2b0177941b032ddc0733af48a561fb60657": {
       "imports": {
@@ -6120,10 +6139,17 @@
           "messages": []
         }
       },
-      "timestamp": 1758734809129
+      "timestamp": 1760277411252
     },
     "2e76c4597b9d0b7c905d73ba444b42cb1be598f5": {
       "imports": {
+        "@telegram-apps/sdk": {
+          "resolved": {
+            "type": "chunk",
+            "id": "b87113f5fae9d6800b66f042e9d07353c1f4753d"
+          },
+          "messages": []
+        },
         "__unresolved_0": {
           "resolved": {
             "type": "chunk",
@@ -6153,22 +6179,17 @@
           "messages": []
         }
       },
-      "timestamp": 1758734809225
-    },
-    "50d9434504cdb067c5aa26526d1079e60b20e65c": {
-      "imports": {
-        "cc": {
-          "resolved": {
-            "type": "chunk",
-            "id": "93ba276ea7b26ffcdc433fab14afc1ed6f05647b"
-          },
-          "messages": []
-        }
-      },
-      "timestamp": 1758734809367
+      "timestamp": 1760277411341
     },
     "660dc228e796fd4f38ed3d026df065dad4b06442": {
       "imports": {
+        "@telegram-apps/sdk": {
+          "resolved": {
+            "type": "chunk",
+            "id": "b87113f5fae9d6800b66f042e9d07353c1f4753d"
+          },
+          "messages": []
+        },
         "__unresolved_0": {
           "resolved": {
             "type": "chunk",
@@ -6176,13 +6197,6 @@
           },
           "messages": []
         },
-        "__unresolved_1": {
-          "resolved": {
-            "type": "chunk",
-            "id": "fe502966e79c485f068eb96221fcdb0f5c5360b2"
-          },
-          "messages": []
-        },
         "cc": {
           "resolved": {
             "type": "chunk",
@@ -6191,7 +6205,7 @@
           "messages": []
         }
       },
-      "timestamp": 1758734809412
+      "timestamp": 1760277411403
     }
   },
   "entries": {

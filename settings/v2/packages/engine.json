@@ -106,7 +106,7 @@
             "_value": false
           },
           "profiler": {
-            "_value": false
+            "_value": true
           },
           "occlusion-query": {
             "_value": false
@@ -202,6 +202,7 @@
           "graphics",
           "legacy-pipeline",
           "mask",
+          "profiler",
           "rich-text",
           "tween",
           "ui",
