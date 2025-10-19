@@ -365,11 +365,20 @@ export class RoundBox extends cc.UIRenderer {
   }
   //计算顶点索引
   private updateIData() {
-    let iData = this._renderData.chunk["_ib"];
-    for (let i = CENTER_IDATA.length - 1; i > -1; iData[i] = CENTER_IDATA[i--]);
+    let renderData = this._renderData;
+    // 修改为：
+    const iData = new Uint16Array(renderData.indexCount);
+
+    // 然后继续填充 iData 数据...
+    for (let i = 0; i < CENTER_IDATA.length; i++) {
+      iData[i] = CENTER_IDATA[i];
+    }
+
+    // 原有循环不变
     let offset = CENTER_IDATA.length;
     let visible = this._corner.visible;
     let id = 36;
+
     for (let i = 0; i < 4; ++i) {
       if (!visible[i]) continue;
       let o = 3 * i;
@@ -386,7 +395,9 @@ export class RoundBox extends cc.UIRenderer {
       iData[offset++] = a;
       iData[offset++] = o + 2;
     }
-    JSB && this._renderData.chunk.setIndexBuffer(iData);
+
+    // 最后提交索引数据
+    renderData.chunk.setIndexBuffer(iData);
   }
   protected _render(render: any) {
     render.commitComp(
