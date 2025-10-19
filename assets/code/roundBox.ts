@@ -366,15 +366,15 @@ export class RoundBox extends cc.UIRenderer {
   //计算顶点索引
   private updateIData() {
     let renderData = this._renderData;
-    // 修改为：
+    // 使用新的 Uint16Array 而不是直接访问私有属性
     const iData = new Uint16Array(renderData.indexCount);
 
-    // 然后继续填充 iData 数据...
+    // 填充中心区域的索引数据
     for (let i = 0; i < CENTER_IDATA.length; i++) {
       iData[i] = CENTER_IDATA[i];
     }
 
-    // 原有循环不变
+    // 填充圆角区域的索引数据
     let offset = CENTER_IDATA.length;
     let visible = this._corner.visible;
     let id = 36;
@@ -383,7 +383,7 @@ export class RoundBox extends cc.UIRenderer {
       if (!visible[i]) continue;
       let o = 3 * i;
       let a = o + 1;
-      let b = id / 3;
+      let b = Math.floor(id / 3); // 使用 Math.floor 确保得到整数
       for (let j = 0, len = this._segment - 1; j < len; ++j) {
         iData[offset++] = o;
         iData[offset++] = a;
@@ -396,8 +396,10 @@ export class RoundBox extends cc.UIRenderer {
       iData[offset++] = o + 2;
     }
 
-    // 最后提交索引数据
-    renderData.chunk.setIndexBuffer(iData);
+    // 使用公开的 API 提交索引数据，无论在什么平台都有效
+    this._renderData.chunk.setIndexBuffer(iData);
+
+    console.log("更新索引数据：", iData);
   }
   protected _render(render: any) {
     render.commitComp(
