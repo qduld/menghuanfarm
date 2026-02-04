@@ -53,6 +53,7 @@
     "file:///E:/lianlukeji/frontend/cocos/menghuanfarm1/menghuanfarm/assets/code/roundBox.ts": "./chunks/50/50d9434504cdb067c5aa26526d1079e60b20e65c.js",
     "file:///E:/lianlukeji/frontend/cocos/menghuanfarm1/menghuanfarm/assets/code/roundedRect.ts": "./chunks/3e/3eef3973e4bb4db6152343c23a757790548260c6.js",
     "file:///E:/lianlukeji/frontend/cocos/menghuanfarm1/menghuanfarm/assets/code/roundedRectMask.ts": "./chunks/0a/0ab0a04f8865327603741aa4154a842656c415a3.js",
+    "file:///E:/lianlukeji/frontend/cocos/menghuanfarm1/menghuanfarm/assets/code/roundedSprite.ts": "./chunks/0f/0f60d6e2550822522afe67dd40643936f2ad3c7a.js",
     "file:///E:/lianlukeji/frontend/cocos/menghuanfarm1/menghuanfarm/assets/code/scaleAction.ts": "./chunks/18/18112ff00ac417d1399007831fe2973fc3c5f352.js",
     "file:///E:/lianlukeji/frontend/cocos/menghuanfarm1/menghuanfarm/assets/code/sceneSwitcher.ts": "./chunks/d9/d9984a2f60e3629cb4d1b9d585527355cc4e01a8.js",
     "file:///E:/lianlukeji/frontend/cocos/menghuanfarm1/menghuanfarm/assets/code/seedEffect.ts": "./chunks/46/468a24f0e6bc1b28cf4106f2b40e508133409ef3.js",
@@ -65,8 +66,8 @@
   },
   "scopes": {
     "./chunks/66/660dc228e796fd4f38ed3d026df065dad4b06442.js": {
-      "@telegram-apps/sdk": "./chunks/b8/b87113f5fae9d6800b66f042e9d07353c1f4753d.js",
       "__unresolved_0": "./chunks/6a/6a5019a719a9014c047e67aa1cf34453ab8392ce.js",
+      "__unresolved_1": "./chunks/fe/fe502966e79c485f068eb96221fcdb0f5c5360b2.js",
       "cc": "./chunks/93/93ba276ea7b26ffcdc433fab14afc1ed6f05647b.js"
     },
     "./chunks/93/93ba276ea7b26ffcdc433fab14afc1ed6f05647b.js": {
@@ -116,6 +117,9 @@
       "__unresolved_7": "cce:/internal/x/cc-fu/skeletal-animation",
       "__unresolved_8": "cce:/internal/x/cc-fu/2d",
       "__unresolved_9": "cce:/internal/x/cc-fu/sorting"
+    },
+    "./chunks/fe/fe502966e79c485f068eb96221fcdb0f5c5360b2.js": {
+      "cc": "./chunks/93/93ba276ea7b26ffcdc433fab14afc1ed6f05647b.js"
     },
     "./chunks/a4/a436465a18457708188cbb77414c739eb0cb62d6.js": {
       "cc": "./chunks/93/93ba276ea7b26ffcdc433fab14afc1ed6f05647b.js"
@@ -179,9 +183,6 @@
     "./chunks/6b/6b489aeb961f2a791287b2a79e08891c05bbb1a2.js": {
       "cc": "./chunks/93/93ba276ea7b26ffcdc433fab14afc1ed6f05647b.js"
     },
-    "./chunks/fe/fe502966e79c485f068eb96221fcdb0f5c5360b2.js": {
-      "cc": "./chunks/93/93ba276ea7b26ffcdc433fab14afc1ed6f05647b.js"
-    },
     "./chunks/6e/6edfc78e220f8a8b581eb12a475bc0e3b44293fb.js": {
       "__unresolved_0": "./chunks/6a/6a5019a719a9014c047e67aa1cf34453ab8392ce.js",
       "__unresolved_1": "./chunks/28/285f0a0b889a2dc5d6f6d4690c55f2d809f4bf74.js",
@@ -220,7 +221,6 @@
       "cc": "./chunks/93/93ba276ea7b26ffcdc433fab14afc1ed6f05647b.js"
     },
     "./chunks/2e/2e76c4597b9d0b7c905d73ba444b42cb1be598f5.js": {
-      "@telegram-apps/sdk": "./chunks/b8/b87113f5fae9d6800b66f042e9d07353c1f4753d.js",
       "__unresolved_0": "./chunks/6a/6a5019a719a9014c047e67aa1cf34453ab8392ce.js",
       "__unresolved_1": "./chunks/87/879684f53377472df83951b53c474abe6044ee16.js",
       "__unresolved_2": "./chunks/fe/fe502966e79c485f068eb96221fcdb0f5c5360b2.js",
@@ -293,6 +293,9 @@
       "cc": "./chunks/93/93ba276ea7b26ffcdc433fab14afc1ed6f05647b.js"
     },
     "./chunks/18/18112ff00ac417d1399007831fe2973fc3c5f352.js": {
+      "cc": "./chunks/93/93ba276ea7b26ffcdc433fab14afc1ed6f05647b.js"
+    },
+    "./chunks/0f/0f60d6e2550822522afe67dd40643936f2ad3c7a.js": {
       "cc": "./chunks/93/93ba276ea7b26ffcdc433fab14afc1ed6f05647b.js"
     },
     "./chunks/0a/0ab0a04f8865327603741aa4154a842656c415a3.js": {
@@ -495,16 +498,17 @@
       "__unresolved_49": "./chunks/3e/3eef3973e4bb4db6152343c23a757790548260c6.js",
       "__unresolved_5": "./chunks/44/440f8f1cf66335e073ab86a145ba88eacffd4427.js",
       "__unresolved_50": "./chunks/0a/0ab0a04f8865327603741aa4154a842656c415a3.js",
-      "__unresolved_51": "./chunks/18/18112ff00ac417d1399007831fe2973fc3c5f352.js",
-      "__unresolved_52": "./chunks/d9/d9984a2f60e3629cb4d1b9d585527355cc4e01a8.js",
-      "__unresolved_53": "./chunks/46/468a24f0e6bc1b28cf4106f2b40e508133409ef3.js",
-      "__unresolved_54": "./chunks/3c/3cd009950a43803cd675cdace256699b83d35e30.js",
-      "__unresolved_55": "./chunks/d2/d23f71df5dba598ec1d9e48bea79ba807fd969ee.js",
-      "__unresolved_56": "./chunks/cc/cc65d647cff89082b91b138cab4d44919e0990ca.js",
-      "__unresolved_57": "./chunks/4a/4a058beff246f252469fdd9b976bb0f1693a6440.js",
-      "__unresolved_58": "./chunks/a4/a436465a18457708188cbb77414c739eb0cb62d6.js",
-      "__unresolved_59": "./chunks/66/660dc228e796fd4f38ed3d026df065dad4b06442.js",
+      "__unresolved_51": "./chunks/0f/0f60d6e2550822522afe67dd40643936f2ad3c7a.js",
+      "__unresolved_52": "./chunks/18/18112ff00ac417d1399007831fe2973fc3c5f352.js",
+      "__unresolved_53": "./chunks/d9/d9984a2f60e3629cb4d1b9d585527355cc4e01a8.js",
+      "__unresolved_54": "./chunks/46/468a24f0e6bc1b28cf4106f2b40e508133409ef3.js",
+      "__unresolved_55": "./chunks/3c/3cd009950a43803cd675cdace256699b83d35e30.js",
+      "__unresolved_56": "./chunks/d2/d23f71df5dba598ec1d9e48bea79ba807fd969ee.js",
+      "__unresolved_57": "./chunks/cc/cc65d647cff89082b91b138cab4d44919e0990ca.js",
+      "__unresolved_58": "./chunks/4a/4a058beff246f252469fdd9b976bb0f1693a6440.js",
+      "__unresolved_59": "./chunks/a4/a436465a18457708188cbb77414c739eb0cb62d6.js",
       "__unresolved_6": "./chunks/25/254a235f1594ca09fd8b82f2b22acf9c014e94cd.js",
+      "__unresolved_60": "./chunks/66/660dc228e796fd4f38ed3d026df065dad4b06442.js",
       "__unresolved_7": "./chunks/e0/e0c9198dbc0dff2f87b5e664ebaaac912e5e1c63.js",
       "__unresolved_8": "./chunks/5b/5be28257e0413ff4fcf94eb0ee237be35e38ec74.js",
       "__unresolved_9": "./chunks/87/879aad9211020f673d65fb1a33541bba55193950.js"

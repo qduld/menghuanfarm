@@ -1,6 +1,6 @@
 import { GlobalData } from "./globalData";
 import { tokenMock, userFilter, authFilter, tokenSort, i18n } from "./loadData";
-import { retrieveLaunchParams } from "@telegram-apps/sdk";
+// import { retrieveLaunchParams } from "@telegram-apps/sdk";
 
 export interface HttpRequestOptions {
   method?: "GET" | "POST" | "PUT" | "DELETE"; // 请求方法
@@ -28,7 +28,9 @@ export const proxyUrl = "https://www.we-farming.com/node/proxy";
 // export const proxyUrl = "http://localhost:8989/proxy";
 // 服务器默认ip和地址
 // const defaultServer = "https://bf.tomocloud.com";
-const defaultServer = "https://www.we-farming.com";
+// const defaultServer = "https://www.we-farming.com";
+const defaultServerApi = "/node/api";
+const defaultServer = "http:/98.81.21.160:20180";
 // const defaultServer = "http://39.108.156.78:20180";
 // const defaultServer = "http://182.92.142.17:18000";
 export async function httpRequest<T>(
@@ -38,10 +40,10 @@ export async function httpRequest<T>(
   timeout: number = 10000 // 超时时间，默认 5000 毫秒（5 秒）
 ): Promise<HttpResponse> {
   if (!token) {
-    const { initDataRaw } = retrieveLaunchParams();
+    // const { initDataRaw } = retrieveLaunchParams();
 
-    // token = tokenMock;
-    token = initDataRaw;
+    token = tokenMock;
+    // token = initDataRaw;
   }
 
   const {
@@ -107,7 +109,7 @@ function objectToQueryString(params?: Record<string, any>): string {
   if (!params) return "";
   return (
     "?" +
-    Object.entries(params)
+    Object.keys(params).map(key => [key, params[key]])
       .map(
         ([key, value]) =>
           `${encodeURIComponent(key)}=${encodeURIComponent(value ?? "")}`
