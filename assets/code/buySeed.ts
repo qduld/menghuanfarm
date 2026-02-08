@@ -55,12 +55,13 @@ export class BuySeed extends Component {
   seedNumber: number = 1; // 种子减少
 
   private static _instance: BuySeed;
+  private seedAtlas: SpriteAtlas = null;
 
   static getInstance(): BuySeed {
     return BuySeed._instance;
   }
 
-  protected onLoad(): void {
+  protected async onLoad() {
     BuySeed._instance = this;
     this.seedNumber = 1;
     this.USeedName = find("popBox/Canvas/BuySeed/Content/Name");
@@ -80,6 +81,15 @@ export class BuySeed extends Component {
       "popBox/Canvas/BuySeed/Content/Options/Content/Minimize"
     );
     this.UBuySeedButton = find("popBox/Canvas/BuySeed/Content/Options/Button");
+
+    await new Promise<void>((resolve) => {
+      resources.load("seedPlant", SpriteAtlas, (err, atlas) => {
+        if (!err) {
+          this.seedAtlas = atlas;
+        }
+        resolve();
+      });
+    });
   }
 
   updateBuySeedInfo(seed) {
@@ -125,16 +135,11 @@ export class BuySeed extends Component {
         spritePath = "Carrot";
     }
 
-    resources.load("seedPlant", SpriteAtlas, (err, atlas) => {
-      if (err) {
-        console.error("Failed to load sprite:", err);
-        return;
-      }
-
+    if (this.seedAtlas) {
       this.USeedSprite.getChildByName("Picture").getComponent(
         Sprite
-      ).spriteFrame = atlas.getSpriteFrame(spritePath);
-    });
+      ).spriteFrame = this.seedAtlas.getSpriteFrame(spritePath);
+    }
 
     this.USeedSprite.getChildByName("Number")
       .getChildByName("Label")

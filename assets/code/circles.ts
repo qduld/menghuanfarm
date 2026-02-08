@@ -26,6 +26,7 @@ import { ExpandNoticeWithArrow } from "./expandNoticeWithArrow";
 import { InputHandler } from "./inputHandler";
 import { initUtils } from "@telegram-apps/sdk";
 import { LoadingUI } from "./loadingUI";
+import { GenericObjectPool } from "./genericObjectPool";
 import { CustomInputBox } from "./customInputBox";
 
 const { ccclass, property } = _decorator;
@@ -116,11 +117,46 @@ export class circles extends Component {
   private currentPage: number = 0;
   private hasMore: boolean = false;
   private isSearchMode: boolean = false;
+  private iconAtlas: SpriteAtlas = null;
 
   protected async onLoad() {
     const globalData = GlobalData.getInstance();
     const loadingUI = this.node.getComponent(LoadingUI);
     loadingUI.show();
+
+    // 预加载图集
+    await new Promise<void>((resolve) => {
+      resources.load("iconList", SpriteAtlas, (err, atlas) => {
+        if (!err) {
+          this.iconAtlas = atlas;
+        }
+        resolve();
+      });
+    });
+
+    // 注册对象池 // <pool_1> <pool_2>
+    if (!GenericObjectPool.instance.hasPool("squad")) {
+      GenericObjectPool.instance.registerPool("squad", {
+        prefab: this.USquadSection,
+        initialSize: 5,
+        maxSize: 50,
+      });
+    }
+
+    if (!GenericObjectPool.instance.hasPool("member")) {
+      GenericObjectPool.instance.registerPool("member", {
+        prefab: this.UMembersSection,
+        initialSize: 10,
+        maxSize: 100,
+      });
+    }
+
+    if (this.USquadSection) {
+        this.USquadSection.active = false;
+    }
+    if (this.UMembersSection) {
+        this.UMembersSection.active = false;
+    }
 
     this.USquad = find("Canvas/UnJoined");
     this.UMembers = find("Canvas/Joined");
@@ -182,7 +218,8 @@ export class circles extends Component {
       const posY =
         startY - index * (sectionHeight + (this.squadSpacingY * 3) / 2);
 
-      let squadSection = instantiate(this.USquadSection);
+      // let squadSection = instantiate(this.USquadSection); // <pool_1>
+      let squadSection = GenericObjectPool.instance.get("squad"); // <pool_1>
       this.USquadList.addChild(squadSection);
 
       squadSection.active = true;
@@ -297,7 +334,8 @@ export class circles extends Component {
     this.membersList.forEach((member, index) => {
       const posY = startY - index * (sectionHeight + this.memberSpacingY);
 
-      let membersSection = instantiate(this.UMembersSection);
+      // let membersSection = instantiate(this.UMembersSection); // <pool_2>
+      let membersSection = GenericObjectPool.instance.get("member"); // <pool_2>
       this.UMembersList.addChild(membersSection);
 
       membersSection.active = true;
@@ -353,18 +391,13 @@ export class circles extends Component {
           iconPath = "third";
         }
 
-        resources.load("iconList", SpriteAtlas, (err, atlas) => {
-          if (err) {
-            console.error("Failed to load sprite:", err);
-            return;
-          }
-
+        if (this.iconAtlas) {
           membersSection.getChildByName("Ranking").active = false;
 
           membersSection
             .getChildByName("Icon")
-            .getComponent(Sprite).spriteFrame = atlas.getSpriteFrame(iconPath);
-        });
+            .getComponent(Sprite).spriteFrame = this.iconAtlas.getSpriteFrame(iconPath);
+        }
       } else {
         membersSection.getChildByName("Icon").active = false;
         membersSection.getChildByName("Ranking").active = true;
@@ -379,7 +412,14 @@ export class circles extends Component {
   async checkSquadList() {
     const globalData = GlobalData.getInstance();
 
-    this.UMembersList.removeAllChildren();
+    // this.UMembersList.removeAllChildren(); // <pool_2>
+    const children = [...this.UMembersList.children];
+    children.forEach((child) => {
+        if (child !== this.UMembersSection) {
+            GenericObjectPool.instance.put("member", child);
+        }
+    });
+
     if (globalData.userInfo.squad_id === null) {
       this.UMembers.active = false;
       this.USquad.active = true;
@@ -535,7 +575,13 @@ export class circles extends Component {
           ? response.data.data.list
           : ([] as ISquadList[]);
         if (this.USquadList) {
-          this.USquadList.removeAllChildren();
+          // this.USquadList.removeAllChildren(); // <pool_1>
+          const children = [...this.USquadList.children];
+          children.forEach((child) => {
+              if (child !== this.USquadSection) {
+                GenericObjectPool.instance.put("squad", child);
+              }
+          });
         }
         this.createSquadLayout();
 
@@ -571,7 +617,13 @@ export class circles extends Component {
         this.membersList = response.data.data.list
           ? response.data.data.list
           : ([] as IMembersList[]);
-        this.UMembersList.removeAllChildren();
+        // this.UMembersList.removeAllChildren(); // <pool_2>
+        const children = [...this.UMembersList.children];
+        children.forEach((child) => {
+            if (child !== this.UMembersSection) {
+                GenericObjectPool.instance.put("member", child);
+            }
+        });
         this.createMembersLayout();
 
         const loadingUI = this.node.getComponent(LoadingUI);
@@ -665,7 +717,13 @@ export class circles extends Component {
         genInfo.requestUserInfo();
         this.UMembers.active = false;
         this.USquad.active = true;
-        this.UMembersList.removeAllChildren();
+        // this.UMembersList.removeAllChildren(); // <pool_2>
+        const children = [...this.UMembersList.children];
+        children.forEach((child) => {
+            if (child !== this.UMembersSection) {
+                GenericObjectPool.instance.put("member", child);
+            }
+        });
         this.requestSquadList();
       } else {
         console.error("Request failed with status:", response.status);
@@ -753,7 +811,13 @@ export class circles extends Component {
   switchSearchAndPatch(event, mode) {
     this.isSearchMode = mode;
     if (this.isSearchMode === true) {
-      this.USquadList.removeAllChildren();
+      // this.USquadList.removeAllChildren(); // <pool_1>
+      const children = [...this.USquadList.children];
+      children.forEach((child) => {
+          if (child !== this.USquadSection) {
+            GenericObjectPool.instance.put("squad", child);
+          }
+      });
       this.UBatchAnother.active = false;
       this.UCloseSearch.active = true;
       this.UCircleTitle.active = false;
@@ -800,7 +864,13 @@ export class circles extends Component {
           ? response.data.data.data
           : ([] as ISquadList[]);
         squadListLen = this.squadList.length;
-        this.USquadList.removeAllChildren();
+        // this.USquadList.removeAllChildren(); // <pool_1>
+        const children = [...this.USquadList.children];
+        children.forEach((child) => {
+            if (child !== this.USquadSection) {
+                GenericObjectPool.instance.put("squad", child);
+            }
+        });
         this.USearchCircleTitle.active = true;
         this.createSquadLayout();
       } else {

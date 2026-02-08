@@ -21,6 +21,8 @@ import { formatToUSDInteger } from "./utils";
 import { GenInfo } from "./genInfo";
 import { LoadingUI } from "./loadingUI";
 
+import { GenericObjectPool } from "./genericObjectPool";
+
 const { ccclass, property } = _decorator;
 
 const harvestMap = {
@@ -61,10 +63,35 @@ export class harvest extends Component {
   column: number = 3;
 
   private currentCard: IHarvestListItem = null;
+  private iconAtlas: SpriteAtlas = null;
 
   protected async onLoad() {
     const loadingUI = this.node.getComponent(LoadingUI);
     loadingUI.show();
+
+    // 预加载图集
+    await new Promise<void>((resolve) => {
+      resources.load("iconList", SpriteAtlas, (err, atlas) => {
+        if (!err) {
+          this.iconAtlas = atlas;
+        }
+        resolve();
+      });
+    });
+
+    // 注册对象池 // <pool_6>
+    if (!GenericObjectPool.instance.hasPool("harvestItem")) {
+      GenericObjectPool.instance.registerPool("harvestItem", {
+        prefab: this.UHarvestSection,
+        initialSize: 6,
+        maxSize: 30,
+      });
+    }
+    
+    // 隐藏模板节点
+    if (this.UHarvestSection) {
+        this.UHarvestSection.active = false;
+    }
 
     this.harvestSpacingY = 40;
     this.UHarvestList = find("Canvas/Content/ScrollView/view/content");
@@ -101,7 +128,8 @@ export class harvest extends Component {
       const posY =
         startY - xCoordinate * (sectionHeight + this.harvestSpacingY);
 
-      let harvestSection = instantiate(this.UHarvestSection);
+      // let harvestSection = instantiate(this.UHarvestSection); // <pool_6>
+      let harvestSection = GenericObjectPool.instance.get("harvestItem"); // <pool_6>
       this.UHarvestList.addChild(harvestSection);
 
       harvestSection.active = true;
@@ -242,24 +270,19 @@ export class harvest extends Component {
       .getChildByName("Label")
       .getComponent(Label).string = `+ ${this.currentCard.ratio}%`;
 
-    resources.load("iconList", SpriteAtlas, (err, atlas) => {
-      if (err) {
-        console.error("Failed to load sprite:", err);
-        return;
-      }
-
+    if (this.iconAtlas) {
       const harvestSprite = dialog.buySucceededBox
         .getChildByName("Card")
         .getChildByName("Photo");
 
-      harvestSprite.getComponent(Sprite).spriteFrame = atlas.getSpriteFrame(
+      harvestSprite.getComponent(Sprite).spriteFrame = this.iconAtlas.getSpriteFrame(
         harvestMap[this.currentCard.id]
       );
 
       harvestSprite.getComponent(UITransform).width = 100;
       harvestSprite.getComponent(UITransform).height = 100;
       harvestSprite.setPosition(0, 0, 0);
-    });
+    }
 
     setTimeout(() => {
       dialog.closeDialog(null, "BuySucceeded");
@@ -274,6 +297,19 @@ export class harvest extends Component {
       });
       if (response.ok) {
         this.harvestList = response.data.data.list as IHarvestListItem[];
+        // this.UHarvestList.removeAllChildren(); // <pool_6>
+        // 注意：原代码似乎没有 clear，但通常请求列表前应该 clear 或 diff
+        // 假设这里需要 clear，或者这是一个初始化过程。如果只是初始化一次，不需要 put。
+        // 但如果可以多次请求刷新，则需要。这里加上 put 逻辑以防万一。
+        if (this.UHarvestList.children.length > 0) {
+           const children = [...this.UHarvestList.children];
+           children.forEach((child) => {
+               if (child !== this.UHarvestSection) {
+                 GenericObjectPool.instance.put("harvestItem", child);
+               }
+           });
+        }
+        
         this.createHarvestLayout();
       } else {
         console.error("Request failed with status:", response.status);

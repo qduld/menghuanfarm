@@ -22,6 +22,8 @@ import { Dialog } from "./dialog";
 import { GlobalData } from "./globalData";
 import { LoadingUI } from "./loadingUI";
 
+import { GenericObjectPool } from "./genericObjectPool";
+
 const { ccclass, property } = _decorator;
 @ccclass("GenShop")
 export class GenShop extends Component {
@@ -41,6 +43,7 @@ export class GenShop extends Component {
   seedSpacingX: number = 20; // 种子X间距
 
   private static _instance: GenShop;
+  private seedAtlas: SpriteAtlas = null;
 
   static getInstance(): GenShop {
     return GenShop._instance;
@@ -56,6 +59,30 @@ export class GenShop extends Component {
     this.USeedSection = find(
       "popBox/Canvas/Shop/ScrollView/view/content/Section"
     );
+
+    // 预加载图集
+    await new Promise<void>((resolve) => {
+      resources.load("seedPlant", SpriteAtlas, (err, atlas) => {
+        if (!err) {
+          this.seedAtlas = atlas;
+        }
+        resolve();
+      });
+    });
+
+    // 注册对象池 // <pool_3>
+    if (!GenericObjectPool.instance.hasPool("shopItem")) {
+      GenericObjectPool.instance.registerPool("shopItem", {
+        prefab: this.USeedSection,
+        initialSize: 6,
+        maxSize: 30,
+      });
+    }
+    
+    // 隐藏模板节点，防止其参与布局或被错误回收
+    if (this.USeedSection) {
+        this.USeedSection.active = false;
+    }
 
     await this.requestShopList();
     loadingUI.hide();
@@ -82,7 +109,8 @@ export class GenShop extends Component {
         startY - Math.floor(index / 3) * (sectionHeight + this.seedSpacingY);
       const posX = startX + (index % 3) * (sectionWidth + this.seedSpacingX);
 
-      let seedSection = instantiate(this.USeedSection);
+      // let seedSection = instantiate(this.USeedSection); // <pool_3>
+      let seedSection = GenericObjectPool.instance.get("shopItem"); // <pool_3>
       this.USeedList.addChild(seedSection);
 
       seedSection.active = true;
@@ -160,17 +188,12 @@ export class GenShop extends Component {
           spritePath = "Carrot";
       }
 
-      resources.load("seedPlant", SpriteAtlas, (err, atlas) => {
-        if (err) {
-          console.error("Failed to load sprite:", err);
-          return;
-        }
-
+      if (this.seedAtlas) {
         seedSection
           .getChildByName("Fruit")
           .getChildByName("Picture")
-          .getComponent(Sprite).spriteFrame = atlas.getSpriteFrame(spritePath);
-      });
+          .getComponent(Sprite).spriteFrame = this.seedAtlas.getSpriteFrame(spritePath);
+      }
 
       const button = seedSection.getChildByName("Button");
 
@@ -229,7 +252,14 @@ export class GenShop extends Component {
       );
       if (response.ok) {
         this.seedList = response.data.data as ISeedList[];
-        this.USeedList.removeAllChildren();
+        // this.USeedList.removeAllChildren(); // <pool_3>
+        const children = [...this.USeedList.children];
+        children.forEach((child) => {
+            // 不要回收模板节点
+            if (child !== this.USeedSection) {
+                GenericObjectPool.instance.put("shopItem", child);
+            }
+        });
         this.createShopLayout();
       } else {
         console.error("Request failed with status:", response.status);

@@ -22,6 +22,8 @@ import { GenBlock } from "./genBlock";
 import { LoadingUI } from "./loadingUI";
 import { i18n } from "./loadData";
 
+import { GenericObjectPool } from "./genericObjectPool";
+
 const { ccclass, property } = _decorator;
 @ccclass("GenBag")
 export class GenBag extends Component {
@@ -50,6 +52,7 @@ export class GenBag extends Component {
   seedSpacingX: number = 20; // 种子X间距
 
   private static _instance: GenBag;
+  private seedAtlas: SpriteAtlas = null;
 
   static getInstance(): GenBag {
     return GenBag._instance;
@@ -68,6 +71,30 @@ export class GenBag extends Component {
     );
     this.UEmptyContent = find("popBox/Canvas/Bag/Empty");
     this.UClickTipsLabel = find("popBox/Canvas/Bag/Title");
+
+    // 预加载图集
+    await new Promise<void>((resolve) => {
+      resources.load("seedPlant", SpriteAtlas, (err, atlas) => {
+        if (!err) {
+          this.seedAtlas = atlas;
+        }
+        resolve();
+      });
+    });
+
+    // 注册对象池 // <pool_4>
+    if (!GenericObjectPool.instance.hasPool("bagItem")) {
+      GenericObjectPool.instance.registerPool("bagItem", {
+        prefab: this.USeedSection,
+        initialSize: 6,
+        maxSize: 30,
+      });
+    }
+    
+    // 隐藏模板节点
+    if (this.USeedSection) {
+        this.USeedSection.active = false;
+    }
 
     await this.requestPackageList();
     loadingUI.hide();
@@ -101,7 +128,8 @@ export class GenBag extends Component {
         startY - Math.floor(index / 3) * (sectionHeight + this.seedSpacingY);
       const posX = startX + (index % 3) * (sectionWidth + this.seedSpacingX);
 
-      let seedSection = instantiate(this.USeedSection);
+      // let seedSection = instantiate(this.USeedSection); // <pool_4>
+      let seedSection = GenericObjectPool.instance.get("bagItem"); // <pool_4>
       this.USeedList.addChild(seedSection);
 
       seedSection.active = true;
@@ -168,20 +196,15 @@ export class GenBag extends Component {
           spritePath = "Carrot";
       }
 
-      resources.load("seedPlant", SpriteAtlas, (err, atlas) => {
-        if (err) {
-          console.error("Failed to load sprite:", err);
-          return;
-        }
-
+      if (this.seedAtlas) {
         seedSection
           .getChildByName("Fruit")
           .getChildByName("Picture")
-          .getComponent(Sprite).spriteFrame = atlas.getSpriteFrame(spritePath);
+          .getComponent(Sprite).spriteFrame = this.seedAtlas.getSpriteFrame(spritePath);
 
         const seedEffect = seedSection.addComponent(SeedEffect);
         seedEffect.setTargetNode(seedSection, seed);
-      });
+      }
     });
   }
 
@@ -213,7 +236,13 @@ export class GenBag extends Component {
           this.seedList = [];
         }
 
-        this.USeedList.removeAllChildren();
+        // this.USeedList.removeAllChildren(); // <pool_4>
+        const children = [...this.USeedList.children];
+        children.forEach((child) => {
+            if (child !== this.USeedSection) {
+                GenericObjectPool.instance.put("bagItem", child);
+            }
+        });
         this.createPackageLayout();
       } else {
         console.error("Request failed with status:", response.status);

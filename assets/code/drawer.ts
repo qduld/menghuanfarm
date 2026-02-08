@@ -26,6 +26,17 @@ export class Drawer extends Component {
   @property(Vec3)
   openPosition: Vec3 = new Vec3(0, 0, 0); // 打开位置
 
+  private iconAtlas: SpriteAtlas = null;
+
+  onLoad() {
+    // 预加载图集
+    resources.load("iconList", SpriteAtlas, (err, atlas) => {
+      if (!err) {
+        this.iconAtlas = atlas;
+      }
+    });
+  }
+
   toggleDrawer() {
     const drawerBtn = find("Canvas/TopContent/Income/Drawer");
     this.isOpen = !this.isOpen;
@@ -33,12 +44,7 @@ export class Drawer extends Component {
       ? this.closedPosition
       : this.openPosition;
 
-    resources.load("iconList", SpriteAtlas, (err, atlas) => {
-      if (err) {
-        console.error("Failed to load sprite:", err);
-        return;
-      }
-
+    if (this.iconAtlas) {
       let atlasName = "";
       if (this.isOpen) {
         atlasName = "drawerclose";
@@ -47,8 +53,8 @@ export class Drawer extends Component {
       }
 
       drawerBtn.getChildByName("Sprite").getComponent(Sprite).spriteFrame =
-        atlas.getSpriteFrame(atlasName);
-    });
+        this.iconAtlas.getSpriteFrame(atlasName);
+    }
 
     // 使用 tween 实现位置移动
     tween(this.drawer)

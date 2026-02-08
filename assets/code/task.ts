@@ -30,6 +30,8 @@ import {
 } from "./utils";
 import { Dialog } from "./dialog";
 
+import { GenericObjectPool } from "./genericObjectPool";
+
 const { ccclass, property } = _decorator;
 
 const taskTypes = [
@@ -83,10 +85,46 @@ export class task extends Component {
   private _checkInStatus: ICheckInStatus;
   private _currentDayIndex: number = 0;
   private _isFirstLoop: boolean = true;
+  private iconAtlas: SpriteAtlas = null;
+
   protected onLoad(): void {
     this.init();
   }
   async init() {
+    // 预加载图集
+    await new Promise<void>((resolve) => {
+      resources.load("iconList", SpriteAtlas, (err, atlas) => {
+        if (!err) {
+          this.iconAtlas = atlas;
+        }
+        resolve();
+      });
+    });
+
+    // 注册对象池 // <pool_5>
+    if (!GenericObjectPool.instance.hasPool("dayItem")) {
+      GenericObjectPool.instance.registerPool("dayItem", {
+        prefab: this.UDayItem,
+        initialSize: 7,
+        maxSize: 31,
+      });
+    }
+
+    if (!GenericObjectPool.instance.hasPool("taskItem")) {
+      GenericObjectPool.instance.registerPool("taskItem", {
+        prefab: this.UTaskItem,
+        initialSize: 5,
+        maxSize: 50,
+      });
+    }
+
+    if (this.UDayItem) {
+        this.UDayItem.active = false;
+    }
+    if (this.UTaskItem) {
+        this.UTaskItem.active = false;
+    }
+
     this.getCheckInData();
     this.getTaskList();
 
@@ -377,7 +415,8 @@ export class task extends Component {
     this.dayList.forEach((dayItem, index) => {
       const posX = startX + index * (sectionWidth + this.daySpacingX);
 
-      let daySection = instantiate(this.UDayItem);
+      // let daySection = instantiate(this.UDayItem); // <pool_5>
+      let daySection = GenericObjectPool.instance.get("dayItem"); // <pool_5>
       this.UDayList.addChild(daySection);
 
       daySection.active = true;
@@ -494,12 +533,7 @@ export class task extends Component {
 
       daySection["spritePath"] = spritePath;
 
-      resources.load("iconList", SpriteAtlas, (err, atlas) => {
-        if (err) {
-          console.error("Failed to load sprite:", err);
-          return;
-        }
-
+      if (this.iconAtlas) {
         const spriteUITransform = daySection
           .getChildByName("Icon")
           .getComponent(Sprite)
@@ -522,8 +556,8 @@ export class task extends Component {
           daySection.getChildByName("Number").active = false;
         }
         daySection.getChildByName("Icon").getComponent(Sprite).spriteFrame =
-          atlas.getSpriteFrame(spritePath);
-      });
+          this.iconAtlas.getSpriteFrame(spritePath);
+      }
     });
   }
 
@@ -596,14 +630,10 @@ export class task extends Component {
     }
 
     rewardNode.getChildByName("Label").getComponent(Label).string = rewardLabel;
-    resources.load("iconList", SpriteAtlas, (err, atlas) => {
-      if (err) {
-        console.error("Failed to load sprite:", err);
-        return;
-      }
-
+    
+    if (this.iconAtlas) {
       rewardNode.getChildByName("Icon").getComponent(Sprite).spriteFrame =
-        atlas.getSpriteFrame(spritePath);
+        this.iconAtlas.getSpriteFrame(spritePath);
 
       // 调整Title字位置
       this.scheduleOnce(() => {
@@ -647,7 +677,7 @@ export class task extends Component {
             subNode.getChildByName("Reward").position.y
           );
       }, 0);
-    });
+    }
   }
 
   createTaskList() {
@@ -662,7 +692,8 @@ export class task extends Component {
     this.taskList.forEach((taskItem, index) => {
       const posY = startY - index * (sectionHeight + this.taskSpacingY);
 
-      let taskSection = instantiate(this.UTaskItem);
+      // let taskSection = instantiate(this.UTaskItem); // <pool_5>
+      let taskSection = GenericObjectPool.instance.get("taskItem"); // <pool_5>
       this.UTaskList.addChild(taskSection);
 
       taskSection.active = true;
@@ -869,6 +900,16 @@ export class task extends Component {
       // 处理 check-in history 请求结果
       if (historyResponse.ok && historyResponse.data.code === 200) {
         this._checkInHistory = historyResponse.data.data as ICheckInHistory;
+        
+        if (this.UDayList.children.length > 0) {
+           const children = [...this.UDayList.children];
+           children.forEach((child) => {
+               if (child !== this.UDayItem) {
+                 GenericObjectPool.instance.put("dayItem", child);
+               }
+           });
+        }
+
         this.createDayList(); // 确保 createDayList 方法被调用
         this.updateDayTips();
 
@@ -923,19 +964,15 @@ export class task extends Component {
               .getChildByName("Name")
               .getComponent(Label).string =
               i18n.extraContent + currentDayItem["extraContent"];
-            resources.load("iconList", SpriteAtlas, (err, atlas) => {
-              if (err) {
-                console.error("Failed to load sprite:", err);
-                return;
-              }
-
+            
+            if (this.iconAtlas) {
               dialog.extraRewardBox
                 .getChildByName("Reward")
                 .getChildByName("Photo")
-                .getComponent(Sprite).spriteFrame = atlas.getSpriteFrame(
+                .getComponent(Sprite).spriteFrame = this.iconAtlas.getSpriteFrame(
                 currentDayItem["spritePath"]
               );
-            });
+            }
 
             dialog.showDialog(null, "ExtraReward");
 
@@ -955,7 +992,13 @@ export class task extends Component {
           currentDayItem.getChildByName("Mask").getChildByName("Error").active =
             false;
         }
-        this.UTaskList.removeAllChildren();
+        // this.UTaskList.removeAllChildren(); // <pool_5>
+        const children = [...this.UTaskList.children];
+        children.forEach((child) => {
+            if (child !== this.UTaskItem) {
+                GenericObjectPool.instance.put("taskItem", child);
+            }
+        });
         this.getTaskList();
       } else {
         globalData.setTipsLabel(i18n.todayChecked);

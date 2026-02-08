@@ -37,6 +37,7 @@ export class BuyCoins extends Component {
   coinSpacingX: number = 30; // CoinX间距
 
   private static _instance: BuyCoins;
+  private iconAtlas: SpriteAtlas = null;
 
   static getInstance(): BuyCoins {
     return BuyCoins._instance;
@@ -50,6 +51,15 @@ export class BuyCoins extends Component {
     this.coinSpacingY = 40;
     this.UCoinList = find("popBox/Canvas/BuyCoins/List");
     this.UCoinSection = find("popBox/Canvas/BuyCoins/Section");
+
+    await new Promise<void>((resolve) => {
+      resources.load("iconList", SpriteAtlas, (err, atlas) => {
+        if (!err) {
+          this.iconAtlas = atlas;
+        }
+        resolve();
+      });
+    });
 
     await this.buyCoinsList();
     loadingUI.hide();
@@ -94,17 +104,12 @@ export class BuyCoins extends Component {
         .getChildByName("Label")
         .getComponent(Label).string = "$" + coin.price;
 
-      resources.load("iconList", SpriteAtlas, (err, atlas) => {
-        if (err) {
-          console.error("Failed to load sprite:", err);
-          return;
-        }
-
+      if (this.iconAtlas) {
         const spriteCoin = coinSection
           .getChildByName("Picture")
           .getChildByName("Sprite");
 
-        spriteCoin.getComponent(Sprite).spriteFrame = atlas.getSpriteFrame(
+        spriteCoin.getComponent(Sprite).spriteFrame = this.iconAtlas.getSpriteFrame(
           coin.points + ""
         );
 
@@ -126,7 +131,7 @@ export class BuyCoins extends Component {
             spriteCoin.getComponent(UITransform).height = 80;
             break;
         }
-      });
+      }
     });
   }
 

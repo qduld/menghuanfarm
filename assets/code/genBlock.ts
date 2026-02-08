@@ -60,6 +60,17 @@ export class GenBlock extends Component {
 
   onLoad() {
     GenBlock._instance = this;
+    // 预加载图集
+    resources.load("iconList", SpriteAtlas, (err, atlas) => {
+      if (!err) {
+        GenPlant.iconAtlas = atlas;
+      }
+    });
+    resources.load("seedPlant", SpriteAtlas, (err, atlas) => {
+      if (!err) {
+        GenPlant.seedAtlas = atlas;
+      }
+    });
   }
 
   async init() {
@@ -105,15 +116,10 @@ export class GenBlock extends Component {
           newblock.getChildByName("Plant").active = false;
         }
 
-        resources.load("iconList", SpriteAtlas, (err, atlas) => {
-          if (err) {
-            console.error("Failed to load sprite:", err);
-            return;
-          }
-
+        if (GenPlant.iconAtlas) {
           newblock.getChildByName("Sprite").getComponent(Sprite).spriteFrame =
-            atlas.getSpriteFrame(spritePath);
-        });
+            GenPlant.iconAtlas.getSpriteFrame(spritePath);
+        }
 
         newblock.active = true;
         // 创建每块土地
@@ -345,18 +351,13 @@ export class GenBlock extends Component {
             spritePath = "Carrot";
         }
 
-        resources.load("seedPlant", SpriteAtlas, (err, atlas) => {
-          if (err) {
-            console.error("Failed to load sprite:", err);
-            return;
-          }
-
+        if (GenPlant.seedAtlas) {
           dialog.seedUnlockBox
             .getChildByName("Seed")
             .getChildByName("Photo")
             .getComponent(Sprite).spriteFrame =
-            atlas.getSpriteFrame(spritePath);
-        });
+            GenPlant.seedAtlas.getSpriteFrame(spritePath);
+        }
 
         dialog.seedUnlockBox
           .getChildByName("Seed")

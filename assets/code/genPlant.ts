@@ -17,6 +17,9 @@ import { GlobalData } from "./globalData";
 const { ccclass, property } = _decorator;
 @ccclass("GenPlant")
 export class GenPlant extends Component {
+  public static iconAtlas: SpriteAtlas = null;
+  public static seedAtlas: SpriteAtlas = null;
+
   private plantSprite: Node | null = null;
   private plantMarkingSprite: Node | null = null;
   private plantSpritePath: string | null = null;
@@ -255,16 +258,9 @@ export class GenPlant extends Component {
       }
     }
 
-    if (this.plantMarkingsPath) {
-      resources.load("seedPlant", SpriteAtlas, (err, atlas) => {
-        if (err) {
-          console.error("Failed to load sprite:", err);
-          return;
-        }
-
-        this.plantMarkingSprite.getComponent(Sprite).spriteFrame =
-          atlas.getSpriteFrame(this.plantMarkingsPath);
-      });
+    if (this.plantMarkingsPath && GenPlant.seedAtlas) {
+       this.plantMarkingSprite.getComponent(Sprite).spriteFrame =
+          GenPlant.seedAtlas.getSpriteFrame(this.plantMarkingsPath);
     }
 
     // 偷取时作物成熟且可偷取
@@ -299,14 +295,9 @@ export class GenPlant extends Component {
     block.getChildByName("Plant")["plantLevel"] = this.plantLevel;
 
     if (this.plantLevel === 0) {
-      resources.load("iconList", SpriteAtlas, (err, atlas) => {
-        if (err) {
-          console.error("Failed to load sprite:", err);
-          return;
-        }
-
+      if (GenPlant.iconAtlas) {
         this.plantSprite.getComponent(Sprite).spriteFrame =
-          atlas.getSpriteFrame(this.plantSpritePath);
+          GenPlant.iconAtlas.getSpriteFrame(this.plantSpritePath);
 
         this.plantSprite.getComponent(UITransform).width = 90;
         this.plantSprite.getComponent(UITransform).height = 105;
@@ -321,16 +312,11 @@ export class GenPlant extends Component {
             .getComponent(HoverEffect)
             .setTargetNode(this.plantSprite, data, this.plantLevel);
         }
-      });
+      }
     } else {
-      resources.load("seedPlant", SpriteAtlas, (err, atlas) => {
-        if (err) {
-          console.error("Failed to load sprite:", err);
-          return;
-        }
-
+      if (GenPlant.seedAtlas) {
         this.plantSprite.getComponent(Sprite).spriteFrame =
-          atlas.getSpriteFrame(this.plantSpritePath);
+          GenPlant.seedAtlas.getSpriteFrame(this.plantSpritePath);
         if (this.plantLevel === 1) {
           if (data.seed.level >= 11) {
             this.plantSprite.getComponent(UITransform).width = 120;
@@ -379,7 +365,7 @@ export class GenPlant extends Component {
             .getComponent(HoverEffect)
             .setTargetNode(this.plantSprite, data, this.plantLevel);
         }
-      });
+      }
     }
   }
 
